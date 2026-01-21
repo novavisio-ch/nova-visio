@@ -10,6 +10,12 @@ const services = [
       "Pour présenter votre activité, attirer des prospects et transformer vos visiteurs en clients, avec une interface professionnelle et facile à naviguer.",
   },
   {
+    customIcon: serviceWebIcon,
+    title: "Des sites web clairs",
+    description:
+      "Pour présenter votre activité, attirer des prospects et transformer vos visiteurs en clients, avec une interface professionnelle et facile à naviguer.",
+  },
+  {
     customIcon: serviceBrandIcon,
     title: "Une identité de marque professionnelle",
     description:
@@ -36,7 +42,7 @@ export function ServicesSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-4 gap-6">
           {services.map((service, index) => (
             <div
               key={index}
