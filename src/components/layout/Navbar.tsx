@@ -34,7 +34,7 @@ export function Navbar() {
   return <header className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300", isScrolled ? "glass py-3" : "py-5 bg-transparent")}>
       <nav className="container flex items-center justify-between">
         <Link to="/" className="text-white hover:text-[#c1b58e] transition-colors">
-          <img src={novavisioLogo} alt="NOVA VISIO" className="h-8 w-auto [&]:text-inherit" style={{ filter: 'brightness(0) invert(1)' }} 
+          <img src={novavisioLogo} alt="NOVA VISIO" className="h-10 w-auto [&]:text-inherit" style={{ filter: 'brightness(0) invert(1)' }} 
             onMouseEnter={(e) => e.currentTarget.style.filter = 'brightness(0) saturate(100%) invert(76%) sepia(14%) saturate(746%) hue-rotate(9deg) brightness(91%) contrast(88%)'}
             onMouseLeave={(e) => e.currentTarget.style.filter = 'brightness(0) invert(1)'}
           />
