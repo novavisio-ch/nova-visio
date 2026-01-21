@@ -46,7 +46,7 @@ export function ServicesSection() {
             >
               <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
                 {service.customIcon ? (
-                  <img src={service.customIcon} alt="" className="w-7 h-7" />
+                  <img src={service.customIcon} alt="" className="w-7 h-7 object-contain" />
                 ) : (
                   service.icon && <service.icon className="w-7 h-7 text-primary" />
                 )}
