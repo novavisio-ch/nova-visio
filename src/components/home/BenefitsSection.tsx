@@ -1,4 +1,4 @@
-import { Check } from "lucide-react";
+import benefitIcon from "@/assets/benefit-icon.svg";
 
 const benefits = [
   "Vos clients comprennent immédiatement ce que vous proposez.",
@@ -29,9 +29,7 @@ export function BenefitsSection() {
                   key={index}
                   className="flex items-start gap-4"
                 >
-                  <div className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="w-5 h-5 text-primary" />
-                  </div>
+                  <img src={benefitIcon} alt="" className="w-8 h-8 flex-shrink-0 mt-0.5" />
                   <p className="text-body-md text-foreground/90">{benefit}</p>
                 </div>
               ))}
