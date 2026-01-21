@@ -1,5 +1,6 @@
-import { Palette, Instagram } from "lucide-react";
+import { Instagram } from "lucide-react";
 import serviceWebIcon from "@/assets/service-web-icon.svg";
+import serviceBrandIcon from "@/assets/service-brand-icon.svg";
 
 const services = [
   {
@@ -10,8 +11,8 @@ const services = [
       "Pour présenter votre activité, attirer des prospects et transformer vos visiteurs en clients, avec une interface professionnelle et facile à naviguer.",
   },
   {
-    icon: Palette,
-    customIcon: null,
+    icon: null,
+    customIcon: serviceBrandIcon,
     title: "Une identité de marque professionnelle",
     description:
       "Pour un positionnement unique, un logo mémorable et une charte visuelle qui inspire confiance et que vous pourrez décliner partout.",
