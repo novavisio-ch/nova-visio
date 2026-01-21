@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import novavisioLogo from "@/assets/novavisio-logo.svg";
 const navLinks = [{
   href: "/",
   label: "Accueil"
@@ -32,8 +33,8 @@ export function Navbar() {
   }, [location.pathname]);
   return <header className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300", isScrolled ? "glass py-3" : "py-5 bg-transparent")}>
       <nav className="container flex items-center justify-between">
-        <Link to="/" className="text-display-sm text-foreground hover:text-primary transition-colors">
-          NOVA
+        <Link to="/" className="hover:opacity-80 transition-opacity">
+          <img src={novavisioLogo} alt="NOVA VISIO" className="h-8 w-auto" />
         </Link>
 
         {/* Desktop Navigation */}
