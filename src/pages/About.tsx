@@ -1,7 +1,7 @@
 import { Layout } from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Eye, Heart, Sparkles, Users, Rocket, Calendar } from "lucide-react";
+import { ArrowRight, Eye, Feather, Sparkles, Users, Rocket, Calendar } from "lucide-react";
 const values = [{
   icon: Sparkles,
   title: "Clarté",
@@ -11,7 +11,7 @@ const values = [{
   title: "Structure",
   description: "Une approche méthodique et organisée."
 }, {
-  icon: Heart,
+  icon: Feather,
   title: "Simplicité",
   description: "L'essentiel, sans superflu."
 }, {
