@@ -30,8 +30,8 @@ export function HeroSection() {
               animationDelay: "0.2s",
             }}
           >
-            Simplifiez votre présence en ligne avec NOVA VISIO : un site clair, une identité professionnelle et des
-            réseaux sociaux cohérents pour que vos clients vous comprennent et achètent sans effort.
+            Simplifiez votre présence en ligne avec NOVA VISIO : un site web clair et une identité visuelle
+            professionnelle cohérente pour que vos clients vous comprennent et achètent sans effort.
           </p>
 
           <div
