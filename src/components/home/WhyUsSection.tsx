@@ -1,44 +1,32 @@
 import { MessageCircle, Users, Shield, Star } from "lucide-react";
-
-const reasons = [
-  {
-    icon: MessageCircle,
-    title: "Langage simple",
-    description: "Sans jargon technique, nous vous expliquons tout clairement.",
-  },
-  {
-    icon: Users,
-    title: "Accompagnement pas à pas",
-    description: "Nous vous guidons à chaque étape de votre transformation digitale.",
-  },
-  {
-    icon: Shield,
-    title: "Clarté et durabilité",
-    description: "La priorité à la clarté et à la durabilité, pas aux solutions miracles.",
-  },
-  {
-    icon: Star,
-    title: "Qualité maximale",
-    description: "Un nombre limité de projets simultanés pour une attention totale.",
-  },
-];
-
+const reasons = [{
+  icon: MessageCircle,
+  title: "Langage simple",
+  description: "Sans jargon technique, nous vous expliquons tout clairement."
+}, {
+  icon: Users,
+  title: "Accompagnement pas à pas",
+  description: "Nous vous guidons à chaque étape de votre transformation digitale."
+}, {
+  icon: Shield,
+  title: "Clarté et durabilité",
+  description: "La priorité à la clarté et à la durabilité, pas aux solutions miracles."
+}, {
+  icon: Star,
+  title: "Qualité maximale",
+  description: "Un nombre limité de projets simultanés pour une attention totale."
+}];
 export function WhyUsSection() {
-  return (
-    <section className="section-padding">
+  return <section className="section-padding">
       <div className="container">
         <div className="text-center mb-16">
-          <h2 className="text-display-md mb-4">
+          <h2 className="mb-4 text-display-lg">
             Pourquoi choisir <span className="text-gradient-gold">NOVA VISIO</span> ?
           </h2>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {reasons.map((reason, index) => (
-            <div
-              key={index}
-              className="text-center p-6"
-            >
+          {reasons.map((reason, index) => <div key={index} className="text-center p-6">
               <div className="w-16 h-16 rounded-2xl glass-card flex items-center justify-center mx-auto mb-5">
                 <reason.icon className="w-8 h-8 text-primary" />
               </div>
@@ -46,10 +34,8 @@ export function WhyUsSection() {
               <p className="text-body-sm text-muted-foreground">
                 {reason.description}
               </p>
-            </div>
-          ))}
+            </div>)}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
