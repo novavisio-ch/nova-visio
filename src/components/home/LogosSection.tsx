@@ -3,7 +3,7 @@ export function LogosSection() {
 
   // Duplicate logos for seamless loop
   const duplicatedLogos = [...logos, ...logos];
-  return <section className="py-12 md:py-16 overflow-hidden">
+  return <section className="py-12 md:py-16 overflow-hidden bg-transparent">
       
 
       {/* Marquee container - 75% width on desktop, 95% on mobile */}
@@ -15,14 +15,14 @@ export function LogosSection() {
         <div className="flex overflow-hidden">
           <div className="flex gap-8 md:gap-12 animate-marquee">
             {duplicatedLogos.map((logo, index) => <div key={index} className="flex items-center justify-center h-16 md:h-20 px-6 shrink-0">
-                <span className="text-[#D1D5DB] text-xl md:text-2xl font-display font-medium whitespace-nowrap opacity-60 hover:opacity-100 transition-opacity">
+                <span className="text-black text-xl md:text-2xl font-display font-medium whitespace-nowrap opacity-60 hover:opacity-100 transition-opacity">
                   {logo}
                 </span>
               </div>)}
           </div>
           <div className="flex gap-8 md:gap-12 animate-marquee" aria-hidden="true">
             {duplicatedLogos.map((logo, index) => <div key={`duplicate-${index}`} className="flex items-center justify-center h-16 md:h-20 px-6 shrink-0">
-                <span className="text-[#D1D5DB] text-xl md:text-2xl font-display font-medium whitespace-nowrap opacity-60 hover:opacity-100 transition-opacity">
+                <span className="text-black text-xl md:text-2xl font-display font-medium whitespace-nowrap opacity-60 hover:opacity-100 transition-opacity">
                   {logo}
                 </span>
               </div>)}
