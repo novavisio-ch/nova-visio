@@ -34,11 +34,11 @@ const Services = () => {
       {/* Content Section - White background (includes LogosSection) */}
       <WebCreationContent />
 
-      {/* Services Overview - Split layout */}
-      <ServicesOverviewSection />
-
       {/* Showcase Carousel */}
       <ShowcaseSection />
+
+      {/* Services Overview - Split layout */}
+      <ServicesOverviewSection />
 
       {/* Additional Services */}
       <section className="section-padding border-t border-border/30">
