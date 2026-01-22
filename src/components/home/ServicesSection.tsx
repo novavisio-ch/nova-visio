@@ -54,7 +54,7 @@ export function ServicesSection() {
       <div className="container">
         {/* Section header */}
         <div className="text-center mb-16">
-          <h2 className="text-display-md mb-4">
+          <h2 className="mb-4 text-display-lg">
             Deux services pour structurer votre{" "}
             <span className="text-gradient-gold">présence en ligne</span>
           </h2>
