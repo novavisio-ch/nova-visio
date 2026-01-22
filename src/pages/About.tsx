@@ -85,7 +85,7 @@ Nous accompagnons les marques locales et internationales dans la création d’i
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
             {values.map((value, index) => <div key={index} className="glass-card p-6 text-center border border-[#2D284D] transition-all duration-500 hover:border-[#C3B68F] hover:shadow-[0_0_40px_-10px_#C3B68F]">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <value.icon className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="text-display-sm mb-2">{value.title}</h3>
