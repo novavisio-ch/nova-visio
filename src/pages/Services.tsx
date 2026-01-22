@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Zap, BookOpen, ShoppingBag, Settings } from "lucide-react";
 import { WebCreationHero } from "@/components/services/WebCreationHero";
+import { WebCreationContent } from "@/components/services/WebCreationContent";
 import { LogosSection } from "@/components/home/LogosSection";
 
 const additionalServices = [{
@@ -31,6 +32,11 @@ const Services = () => {
 
       {/* Logos Marquee */}
       <LogosSection />
+
+      {/* Content Section - White background */}
+      <WebCreationContent />
+
+      {/* Additional Services */}
       <section className="section-padding border-t border-border/30">
         <div className="container">
           <div className="text-center mb-12">
