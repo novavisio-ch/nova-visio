@@ -89,7 +89,7 @@ Nous accompagnons les marques locales et internationales dans la création d’i
                   <value.icon className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="text-display-sm mb-2">{value.title}</h3>
-                <p className="text-body-sm text-muted-foreground">{value.description}</p>
+                <p className="text-muted-foreground text-display-sm">{value.description}</p>
               </div>)}
           </div>
         </div>
