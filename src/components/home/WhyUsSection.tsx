@@ -3,7 +3,7 @@ import { MessageCircle, Users, Shield, Star } from "lucide-react";
 const reasons = [
   {
     icon: MessageCircle,
-    title: "Un langage simple",
+    title: "Langage simple",
     description: "Sans jargon technique, nous vous expliquons tout clairement.",
   },
   {
