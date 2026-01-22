@@ -40,6 +40,12 @@ const About = () => {
             <p className="text-body-lg text-foreground/90 leading-relaxed mb-6">NOVA VISIO est né d'un constat simple : beaucoup d'entrepreneurs se sentent perdus face au digital. Entre les multiples plateformes, les tendances changeantes et le jargon technique, créer une présence en ligne cohérente peut sembler insurmontable.
 
 Nous accompagnons les marques locales et internationales dans la création d’identités fortes, de contenus impactants et de sites web performants. Chaque projet est une collaboration unique, et notre mission est de le sublimer.</p>
+            <p className="text-body-lg text-foreground/90 leading-relaxed mb-6">
+              Nous sommes là pour{" "}
+              <span className="text-primary font-semibold">simplifier, structurer et éclaircir</span> votre présence en
+              ligne. Notre mission est de vous permettre de vous concentrer sur ce que vous faites le mieux, pendant que
+              nous prenons soin de votre image digitale.
+            </p>
             <p className="text-body-lg text-foreground/90 leading-relaxed">
               Nous sommes là pour{" "}
               <span className="text-primary font-semibold">simplifier, structurer et éclaircir</span> votre présence en
