@@ -84,7 +84,7 @@ export const ShowcaseSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="py-20 md:py-28 bg-white"
+      className="py-20 md:py-28"
     >
       <div className="container">
         {/* Header */}
