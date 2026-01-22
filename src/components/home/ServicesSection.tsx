@@ -29,7 +29,7 @@ function ServiceCard({
       </h3>
 
       {/* Description */}
-      <p className="text-body-md mb-8 max-w-sm text-white">
+      <p className="mb-8 max-w-sm text-white text-display-sm">
         {description}
       </p>
 
@@ -37,7 +37,7 @@ function ServiceCard({
       <ul className="space-y-3 mb-8 text-left w-full max-w-sm">
         {benefits.map((benefit, index) => <li key={index} className="flex items-start gap-3">
             <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-            <span className="text-body-sm text-muted-foreground">{benefit}</span>
+            <span className="text-muted-foreground text-2xl">{benefit}</span>
           </li>)}
       </ul>
 
@@ -54,7 +54,7 @@ export function ServicesSection() {
       <div className="container">
         {/* Section header */}
         <div className="text-center mb-16">
-          <h2 className="mb-4 text-display-lg">
+          <h2 className="text-display-md mb-4">
             Deux services pour structurer votre{" "}
             <span className="text-gradient-gold">présence en ligne</span>
           </h2>
