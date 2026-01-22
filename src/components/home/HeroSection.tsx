@@ -2,8 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
 export function HeroSection() {
-  return (
-    <section className="section-padding relative overflow-hidden">
+  return <section className="section-padding relative overflow-hidden">
       {/* Ambient glow */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
 
@@ -14,32 +13,23 @@ export function HeroSection() {
             <span className="text-body-sm text-muted-foreground">Made in Switzerland</span>
           </div>
 
-          <h1
-            className="text-display-lg md:text-display-xl mb-6 animate-fade-up"
-            style={{
-              animationDelay: "0.1s",
-            }}
-          >
+          <h1 className="text-display-lg md:text-display-xl mb-6 animate-fade-up" style={{
+          animationDelay: "0.1s"
+        }}>
             Nous créons votre site et votre image de marque pour vous aider à{" "}
             <span className="text-gradient-gold">vendre plus simplement</span>.
           </h1>
 
-          <p
-            className="text-body-lg text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-up"
-            style={{
-              animationDelay: "0.2s",
-            }}
-          >
+          <p className="text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-up text-display-sm font-sans font-normal" style={{
+          animationDelay: "0.2s"
+        }}>
             Simplifiez votre présence en ligne avec NOVA VISIO : un site web clair et une identité visuelle
             professionnelle cohérente pour que vos clients vous comprennent et achètent sans effort.
           </p>
 
-          <div
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up"
-            style={{
-              animationDelay: "0.3s",
-            }}
-          >
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up" style={{
+          animationDelay: "0.3s"
+        }}>
             <Button variant="gold" size="lg" asChild>
               <Link to="/contact">
                 Parler de votre projet
@@ -52,6 +42,5 @@ export function HeroSection() {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
