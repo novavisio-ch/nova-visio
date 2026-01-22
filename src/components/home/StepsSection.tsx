@@ -61,8 +61,8 @@ export function StepsSection() {
                 }`}
               >
                 {/* Number circle - positioned on the line */}
-                <div className="absolute left-6 md:left-1/2 transform -translate-x-1/2 z-10">
-                  <div className="w-12 h-12 rounded-full bg-background border-2 border-primary flex items-center justify-center glow-gold">
+                <div className="absolute left-6 md:left-1/2 transform -translate-x-1/2 z-10 group cursor-pointer">
+                  <div className="w-12 h-12 rounded-full bg-background border-2 border-primary flex items-center justify-center transition-all duration-300 group-hover:shadow-[0_0_30px_-5px_#C3B68F] group-hover:scale-110">
                     <span className="text-primary font-bold text-lg">{step.number}</span>
                   </div>
                 </div>
