@@ -20,17 +20,34 @@ function ServiceCard({
   return <div className="group relative flex flex-col items-center text-center p-8 md:p-10 rounded-2xl border border-[#2D284D] bg-transparent backdrop-blur-sm transition-all duration-500 hover:border-[#C3B68F] hover:shadow-[0_0_40px_-10px_#C3B68F]">
       {/* Badge */}
       <span className="inline-block px-4 py-1.5 rounded-full bg-[#1a1535] text-white text-xs font-medium tracking-wide mb-6">
-        ARTISANS, PME, FREELANCES, STARTUP 
+        POUR : ARTISANS, PME, FREELANCES
       </span>
 
       {/* Title */}
-      <h3 className="text-display-sm md:text-display-md text-white mb-4">
-        {title}
+      <h3 className="text-display-sm md:text-display-md text-white mb-4 text-center">
+        {title.includes("et") ? (
+          <>
+            {title.split(" et ")[0]}
+            <br />
+            et {title.split(" et ")[1]}
+          </>
+        ) : title}
       </h3>
 
       {/* Description */}
-      <p className="mb-8 max-w-sm text-white text-display-sm">
-        {description}
+      <p className="mb-8 max-w-sm text-white text-display-sm text-center">
+        {description.split(" ").reduce((acc: string[][], word, i, arr) => {
+          const third = Math.ceil(arr.length / 3);
+          const lineIndex = Math.min(Math.floor(i / third), 2);
+          if (!acc[lineIndex]) acc[lineIndex] = [];
+          acc[lineIndex].push(word);
+          return acc;
+        }, []).map((line, i, arr) => (
+          <span key={i}>
+            {line.join(" ")}
+            {i < arr.length - 1 && <br />}
+          </span>
+        ))}
       </p>
 
       {/* Benefits list */}
