@@ -12,15 +12,15 @@ export function LogosSection() {
       WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)'
     }}>
         {/* Scrolling track */}
-        <div className="flex overflow-hidden group">
-          <div className="flex gap-8 md:gap-12 animate-marquee group-hover:[animation-play-state:paused]">
+        <div className="flex overflow-hidden">
+          <div className="flex gap-8 md:gap-12 animate-marquee">
             {duplicatedLogos.map((logo, index) => <div key={index} className="flex items-center justify-center h-16 md:h-20 px-6 shrink-0">
                 <span className="text-[#D1D5DB] text-xl md:text-2xl font-display font-medium whitespace-nowrap opacity-60 hover:opacity-100 transition-opacity">
                   {logo}
                 </span>
               </div>)}
           </div>
-          <div className="flex gap-8 md:gap-12 animate-marquee group-hover:[animation-play-state:paused]" aria-hidden="true">
+          <div className="flex gap-8 md:gap-12 animate-marquee" aria-hidden="true">
             {duplicatedLogos.map((logo, index) => <div key={`duplicate-${index}`} className="flex items-center justify-center h-16 md:h-20 px-6 shrink-0">
                 <span className="text-[#D1D5DB] text-xl md:text-2xl font-display font-medium whitespace-nowrap opacity-60 hover:opacity-100 transition-opacity">
                   {logo}
