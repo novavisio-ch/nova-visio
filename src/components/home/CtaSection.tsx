@@ -25,10 +25,12 @@ export function CtaSection() {
           </h2>
 
           {/* Subtitle */}
-          <p className="text-body text-lg md:text-xl leading-relaxed mb-10 text-muted-foreground">
-            Vous avez un projet ou une activité, mais votre site, votre image ou vos réseaux 
-            ne reflètent pas encore votre valeur. Prenons un moment pour faire le point, 
-            calmement, et voir ce qui peut être simplifié.
+          <p className="text-body text-lg md:text-xl leading-relaxed mb-10 text-muted-foreground max-w-xl mx-auto text-center">
+            Vous avez un projet ou une activité, mais votre site, votre image
+            <br className="hidden md:block" />
+            ou vos réseaux ne reflètent pas encore votre valeur. Prenons un moment
+            <br className="hidden md:block" />
+            pour faire le point, calmement, et voir ce qui peut être simplifié.
           </p>
 
           {/* Reassurance bullets */}
