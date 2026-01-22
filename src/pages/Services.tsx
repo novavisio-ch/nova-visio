@@ -30,11 +30,11 @@ const Services = () => {
       {/* Hero Section */}
       <WebCreationHero />
 
-      {/* Logos Marquee */}
-      <LogosSection />
-
       {/* Content Section - White background */}
       <WebCreationContent />
+
+      {/* Logos Marquee */}
+      <LogosSection />
 
       {/* Additional Services */}
       <section className="section-padding border-t border-border/30">
