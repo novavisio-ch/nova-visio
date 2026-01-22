@@ -1,54 +1,100 @@
-import { Globe, Palette, Instagram } from "lucide-react";
+import { Check } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
-const services = [
-  {
-    icon: Globe,
-    title: "Des sites web clairs",
-    description:
-      "Pour présenter votre activité, attirer des prospects et transformer vos visiteurs en clients, avec une interface professionnelle et facile à naviguer.",
-  },
-  {
-    icon: Palette,
-    title: "Une identité de marque professionnelle",
-    description:
-      "Pour un positionnement unique, un logo mémorable et une charte visuelle qui inspire confiance et que vous pourrez décliner partout.",
-  },
-  {
-    icon: Instagram,
-    title: "Des réseaux sociaux cohérents",
-    description:
-      "Pour construire votre communauté sur Instagram et TikTok, avec un style visuel aligné à votre marque et des idées de contenu qui captivent votre audience.",
-  },
+const webBenefits = [
+  "Structure claire pour présenter vos offres et guider vos visiteurs.",
+  "Design professionnel qui renforce votre crédibilité.",
+  "Pages pensées pour transformer vos visiteurs en clients.",
+  "Site modifiable par vous, sans compétences techniques.",
+  "Optimisé pour être facilement trouvé sur les moteurs de recherche.",
 ];
+
+const brandBenefits = [
+  "Un logo simple et lisible, adapté au web et à l'impression.",
+  "Une palette de couleurs cohérente avec votre activité et vos valeurs.",
+  "Des typographies choisies pour renforcer votre crédibilité.",
+  "Une charte graphique claire pour garder la même image partout.",
+  "Des exemples d'utilisation pour appliquer votre identité au quotidien.",
+];
+
+interface ServiceCardProps {
+  title: string;
+  description: string;
+  benefits: string[];
+  ctaText: string;
+  ctaLink: string;
+}
+
+function ServiceCard({ title, description, benefits, ctaText, ctaLink }: ServiceCardProps) {
+  return (
+    <div className="group relative flex flex-col items-center text-center p-8 md:p-10 rounded-2xl border border-[#2D284D] bg-transparent backdrop-blur-sm transition-all duration-500 hover:border-[#C3B68F] hover:shadow-[0_0_40px_-10px_#C3B68F]">
+      {/* Badge */}
+      <span className="inline-block px-4 py-1.5 rounded-full bg-[#1a1535] text-white text-xs font-medium tracking-wide mb-6">
+        POUR : ARTISANS, PME, FREELANCES
+      </span>
+
+      {/* Title */}
+      <h3 className="text-display-sm md:text-display-md text-white mb-4">
+        {title}
+      </h3>
+
+      {/* Description */}
+      <p className="text-body-md text-muted-foreground mb-8 max-w-sm">
+        {description}
+      </p>
+
+      {/* Benefits list */}
+      <ul className="space-y-3 mb-8 text-left w-full max-w-sm">
+        {benefits.map((benefit, index) => (
+          <li key={index} className="flex items-start gap-3">
+            <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+            <span className="text-body-sm text-muted-foreground">{benefit}</span>
+          </li>
+        ))}
+      </ul>
+
+      {/* CTA Button */}
+      <div className="mt-auto">
+        <Button variant="gold-outline" size="lg" asChild>
+          <Link to={ctaLink}>{ctaText}</Link>
+        </Button>
+      </div>
+    </div>
+  );
+}
 
 export function ServicesSection() {
   return (
     <section className="section-padding">
       <div className="container">
+        {/* Section header */}
         <div className="text-center mb-16">
           <h2 className="text-display-md mb-4">
-            Ce que nous <span className="text-gradient-gold">créons</span> pour vous
+            Deux services pour structurer votre{" "}
+            <span className="text-gradient-gold">présence en ligne</span>
           </h2>
           <p className="text-body-lg text-muted-foreground max-w-2xl mx-auto">
-            Trois piliers essentiels pour une présence digitale qui inspire confiance et convertit.
+            NOVA VISIO vous accompagne sur les deux bases essentielles de votre image en ligne : un site clair et une identité visuelle professionnelle.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="glass-card p-8 group hover:glow-gold transition-all duration-500"
-            >
-              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                <service.icon className="w-7 h-7 text-primary" />
-              </div>
-              <h3 className="text-display-sm mb-4">{service.title}</h3>
-              <p className="text-body-md text-muted-foreground leading-relaxed">
-                {service.description}
-              </p>
-            </div>
-          ))}
+        {/* Cards grid */}
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <ServiceCard
+            title="Site vitrine et landing page"
+            description="Un site web pensé pour renforcer votre crédibilité et établir la confiance de vos prospects."
+            benefits={webBenefits}
+            ctaText="Parler de votre projet de site"
+            ctaLink="/contact"
+          />
+          <ServiceCard
+            title="Identité visuelle & logo"
+            description="Une identité visuelle professionnelle pour être reconnu et inspirer confiance au premier regard."
+            benefits={brandBenefits}
+            ctaText="Parler de votre identité visuelle"
+            ctaLink="/contact"
+          />
         </div>
       </div>
     </section>
