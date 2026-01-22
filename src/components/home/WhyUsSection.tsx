@@ -8,7 +8,7 @@ const reasons = [
   },
   {
     icon: Users,
-    title: "Un accompagnement pas à pas",
+    title: "Accompagnement pas à pas",
     description: "Nous vous guidons à chaque étape de votre transformation digitale.",
   },
   {
