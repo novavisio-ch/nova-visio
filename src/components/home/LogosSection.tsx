@@ -37,9 +37,9 @@ export function LogosSection() {
             {duplicatedLogos.map((logo, index) => (
               <div
                 key={index}
-                className="flex items-center justify-center h-10 md:h-12 px-4 shrink-0"
+                className="flex items-center justify-center h-16 md:h-20 px-6 shrink-0"
               >
-                <span className="text-[#D1D5DB] text-lg md:text-xl font-display font-medium whitespace-nowrap opacity-60 hover:opacity-100 transition-opacity">
+                <span className="text-[#D1D5DB] text-xl md:text-2xl font-display font-medium whitespace-nowrap opacity-60 hover:opacity-100 transition-opacity">
                   {logo}
                 </span>
               </div>
@@ -49,9 +49,9 @@ export function LogosSection() {
             {duplicatedLogos.map((logo, index) => (
               <div
                 key={`duplicate-${index}`}
-                className="flex items-center justify-center h-10 md:h-12 px-4 shrink-0"
+                className="flex items-center justify-center h-16 md:h-20 px-6 shrink-0"
               >
-                <span className="text-[#D1D5DB] text-lg md:text-xl font-display font-medium whitespace-nowrap opacity-60 hover:opacity-100 transition-opacity">
+                <span className="text-[#D1D5DB] text-xl md:text-2xl font-display font-medium whitespace-nowrap opacity-60 hover:opacity-100 transition-opacity">
                   {logo}
                 </span>
               </div>
