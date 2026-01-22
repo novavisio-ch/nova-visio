@@ -31,7 +31,7 @@ export function WhyUsSection() {
                 <reason.icon className="w-8 h-8 text-primary transition-transform duration-300 group-hover:scale-125" />
               </div>
               <h3 className="text-display-sm mb-3">{reason.title}</h3>
-              <p className="text-body-sm text-muted-foreground">
+              <p className="text-muted-foreground text-body-lg">
                 {reason.description}
               </p>
             </div>)}
