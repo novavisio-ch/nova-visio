@@ -1,17 +1,11 @@
 import { Link } from "react-router-dom";
-
 export function Footer() {
   const currentYear = new Date().getFullYear();
-
-  return (
-    <footer className="border-t border-border/30 py-12 mt-auto">
+  return <footer className="border-t border-border/30 py-12 mt-auto">
       <div className="container">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <Link
-            to="/"
-            className="text-display-sm text-foreground hover:text-primary transition-colors"
-          >
-            NOVA<span className="text-gradient-gold">VISIO</span>
+          <Link to="/" className="text-display-sm text-foreground hover:text-primary transition-colors">
+            NOVA
           </Link>
 
           <div className="flex items-center gap-8 text-body-sm text-muted-foreground">
@@ -31,6 +25,5 @@ export function Footer() {
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 }
