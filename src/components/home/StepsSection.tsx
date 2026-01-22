@@ -1,39 +1,26 @@
-const steps = [
-  {
-    number: "01",
-    title: "Clarification du projet",
-    description:
-      "Un premier échange approfondi pour comprendre votre activité, vos objectifs, votre positionnement et vos contraintes. Nous posons les bases du projet et identifions ce qui doit être clarifié avant toute création.",
-  },
-  {
-    number: "02",
-    title: "Diagnostic stratégique",
-    description:
-      "Nous analysons votre situation actuelle : image de marque, site existant, cohérence visuelle, messages et parcours utilisateur. Cette étape permet d'identifier les leviers pertinents et d'éliminer les éléments inutiles ou contre-productifs.",
-  },
-  {
-    number: "03",
-    title: "Fondations de marque & identité",
-    description:
-      "Nous définissons ou consolidons les fondations de votre marque : positionnement, identité visuelle, tonalité et structure des messages. L'objectif est de créer une base claire et cohérente avant la conception du site et des supports.",
-  },
-  {
-    number: "04",
-    title: "Conception web & parcours utilisateur",
-    description:
-      "Nous concevons un site web structuré, lisible et orienté crédibilité : architecture des pages, hiérarchie de l'information, expérience utilisateur et design. Chaque élément est pensé pour rassurer, clarifier et faciliter la décision.",
-  },
-  {
-    number: "05",
-    title: "Déploiement & accompagnement",
-    description:
-      "Nous finalisons la mise en ligne et vous accompagnons dans la prise en main : ajustements, évolutions et cohérence dans le temps. Le site et l'identité deviennent des outils durables, pas des supports figés.",
-  },
-];
-
+const steps = [{
+  number: "01",
+  title: "Clarification du projet",
+  description: "Un premier échange approfondi pour comprendre votre activité, vos objectifs, votre positionnement et vos contraintes. Nous posons les bases du projet et identifions ce qui doit être clarifié avant toute création."
+}, {
+  number: "02",
+  title: "Diagnostic stratégique",
+  description: "Nous analysons votre situation actuelle : image de marque, site existant, cohérence visuelle, messages et parcours utilisateur. Cette étape permet d'identifier les leviers pertinents et d'éliminer les éléments inutiles ou contre-productifs."
+}, {
+  number: "03",
+  title: "Fondations de marque & identité",
+  description: "Nous définissons ou consolidons les fondations de votre marque : positionnement, identité visuelle, tonalité et structure des messages. L'objectif est de créer une base claire et cohérente avant la conception du site et des supports."
+}, {
+  number: "04",
+  title: "Conception web & parcours utilisateur",
+  description: "Nous concevons un site web structuré, lisible et orienté crédibilité : architecture des pages, hiérarchie de l'information, expérience utilisateur et design. Chaque élément est pensé pour rassurer, clarifier et faciliter la décision."
+}, {
+  number: "05",
+  title: "Déploiement & accompagnement",
+  description: "Nous finalisons la mise en ligne et vous accompagnons dans la prise en main : ajustements, évolutions et cohérence dans le temps. Le site et l'identité deviennent des outils durables, pas des supports figés."
+}];
 export function StepsSection() {
-  return (
-    <section className="section-padding">
+  return <section className="section-padding">
       <div className="container-narrow">
         {/* Header */}
         <div className="text-center mb-16 md:mb-20">
@@ -53,13 +40,7 @@ export function StepsSection() {
 
           {/* Steps */}
           <div className="space-y-12 md:space-y-16">
-            {steps.map((step, index) => (
-              <div
-                key={step.number}
-                className={`group relative flex flex-col md:flex-row items-start gap-6 md:gap-12 transition-all duration-300 hover:scale-[1.02] ${
-                  index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                }`}
-              >
+            {steps.map((step, index) => <div key={step.number} className={`group relative flex flex-col md:flex-row items-start gap-6 md:gap-12 transition-all duration-300 hover:scale-[1.02] ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}>
                 {/* Number circle - positioned on the line */}
                 <div className="absolute left-6 md:left-1/2 transform -translate-x-1/2 z-10 group cursor-pointer">
                   <div className="w-12 h-12 rounded-full bg-background border-2 border-primary flex items-center justify-center transition-all duration-300 group-hover:shadow-[0_0_30px_-5px_#C3B68F] group-hover:scale-110">
@@ -71,26 +52,20 @@ export function StepsSection() {
                 <div className="w-12 md:hidden" />
 
                 {/* Content card */}
-                <div
-                  className={`flex-1 ml-12 md:ml-0 ${
-                    index % 2 === 0 ? "md:pr-16 md:text-right" : "md:pl-16 md:text-left"
-                  }`}
-                >
+                <div className={`flex-1 ml-12 md:ml-0 ${index % 2 === 0 ? "md:pr-16 md:text-right" : "md:pl-16 md:text-left"}`}>
                   <div className="glass-card p-6 md:p-8 transition-all duration-300 group-hover:border-primary/40 group-hover:shadow-[0_0_40px_-10px_#C3B68F]">
                     <h3 className="text-xl md:text-2xl font-bold text-foreground mb-3">
                       {step.title}
                     </h3>
-                    <p className="text-body leading-relaxed">{step.description}</p>
+                    <p className="text-body leading-relaxed text-body-lg">{step.description}</p>
                   </div>
                 </div>
 
                 {/* Empty space for alternating layout on desktop */}
                 <div className="hidden md:block flex-1" />
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
