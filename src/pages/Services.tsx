@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Zap, BookOpen, ShoppingBag, Settings } from "lucide-react";
 import { WebCreationHero } from "@/components/services/WebCreationHero";
 import { WebCreationContent } from "@/components/services/WebCreationContent";
-import { LogosSection } from "@/components/home/LogosSection";
 
 const additionalServices = [{
   icon: Zap,
@@ -30,11 +29,8 @@ const Services = () => {
       {/* Hero Section */}
       <WebCreationHero />
 
-      {/* Content Section - White background */}
+      {/* Content Section - White background (includes LogosSection) */}
       <WebCreationContent />
-
-      {/* Logos Marquee */}
-      <LogosSection />
 
       {/* Additional Services */}
       <section className="section-padding border-t border-border/30">
