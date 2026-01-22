@@ -27,7 +27,7 @@ const blogPosts = [
 
 export function BlogSection() {
   return (
-    <section className="section-padding bg-gradient-to-br from-[#030827] to-[#2D284D]">
+    <section className="section-padding">
       <div className="container-narrow">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
