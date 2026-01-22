@@ -21,9 +21,7 @@ const About = () => {
             <h1 className="text-display-lg md:text-display-xl mb-6">
               À <span className="text-gradient-gold">Propos</span>
             </h1>
-            <p className="text-body-lg text-muted-foreground">
-              Au-delà de la confusion digitale, il y a la clarté.
-            </p>
+            <p className="text-body-lg text-muted-foreground">Au-delà de la confusion digitale, il y a la clarté.</p>
           </div>
         </div>
       </section>
@@ -33,10 +31,17 @@ const About = () => {
         <div className="container">
           <div className="glass-card p-8 md:p-12 max-w-4xl mx-auto">
             <p className="text-body-lg text-foreground/90 leading-relaxed mb-6">
-              NOVA VISIO est né d'un constat simple : beaucoup d'entrepreneurs se sentent perdus face au digital. Entre les multiples plateformes, les tendances changeantes et le jargon technique, créer une présence en ligne cohérente peut sembler insurmontable.
+              NOVA VISIO est né d'un constat simple : beaucoup d'entrepreneurs se sentent perdus face au digital. Entre
+              les multiples plateformes, les tendances changeantes et le jargon technique, créer une présence en ligne
+              cohérente peut sembler insurmontable. Nous accompagnons les marques locales et internationales dans la
+              création d’identités fortes, de contenus impactants et de sites web performants. Chaque projet est une
+              collaboration unique, et notre mission est de le sublimer.
             </p>
             <p className="text-body-lg text-foreground/90 leading-relaxed">
-              Nous sommes là pour <span className="text-primary font-semibold">simplifier, structurer et éclaircir</span> votre présence en ligne. Notre mission est de vous permettre de vous concentrer sur ce que vous faites le mieux, pendant que nous prenons soin de votre image digitale.
+              Nous sommes là pour{" "}
+              <span className="text-primary font-semibold">simplifier, structurer et éclaircir</span> votre présence en
+              ligne. Notre mission est de vous permettre de vous concentrer sur ce que vous faites le mieux, pendant que
+              nous prenons soin de votre image digitale.
             </p>
           </div>
         </div>
@@ -53,7 +58,9 @@ const About = () => {
             </div>
             <div className="glass-card p-8 md:p-12 glow-gold">
               <p className="text-body-lg text-foreground/90 text-center leading-relaxed">
-                Créer des sites web, des identités et des présences sociales qui sont <span className="text-primary font-semibold">sobres, clairs et durables</span>. Nous nous concentrons sur la compréhension mutuelle et la continuité pour des résultats qui tiennent dans le temps.
+                Créer des sites web, des identités et des présences sociales qui sont{" "}
+                <span className="text-primary font-semibold">sobres, clairs et durables</span>. Nous nous concentrons
+                sur la compréhension mutuelle et la continuité pour des résultats qui tiennent dans le temps.
               </p>
             </div>
           </div>
@@ -94,10 +101,13 @@ const About = () => {
             </div>
             <div className="glass-card p-8 md:p-12">
               <p className="text-body-lg text-foreground/90 leading-relaxed mb-6">
-                Nous travaillons avec des <span className="text-primary font-semibold">explications simples</span>, un processus étape par étape et une <span className="text-primary font-semibold">transparence totale</span>.
+                Nous travaillons avec des <span className="text-primary font-semibold">explications simples</span>, un
+                processus étape par étape et une <span className="text-primary font-semibold">transparence totale</span>
+                .
               </p>
               <p className="text-body-lg text-foreground/90 leading-relaxed mb-8">
-                Notre relation se construit sur la confiance et l'absence de toute pression commerciale. Votre succès est notre boussole.
+                Notre relation se construit sur la confiance et l'absence de toute pression commerciale. Votre succès
+                est notre boussole.
               </p>
               <div className="text-center">
                 <Button variant="gold" size="lg" asChild>
