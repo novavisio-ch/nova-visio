@@ -34,8 +34,8 @@ export function BlogSection() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
             Explorer nos <span className="text-gradient-gold">ressources et articles</span>
           </h2>
-          <p className="text-body text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-            Une sélection de contenus pour vous aider à clarifier votre présence en ligne,
+          <p className="text-body text-lg md:text-xl max-w-3xl mx-auto leading-relaxed text-center">
+            Une sélection de contenus pour vous aider à clarifier votre présence en ligne,<br className="hidden md:block" />
             structurer vos offres et mieux utiliser le digital.
           </p>
         </div>
