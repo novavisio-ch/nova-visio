@@ -20,7 +20,7 @@ export function BenefitsSection() {
           </h2>
           
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-slate-600 mb-12 md:mb-16 max-w-3xl leading-relaxed text-center mx-auto">
+          <p className="text-xl md:text-2xl text-slate-600 mb-12 md:mb-16 max-w-3xl leading-relaxed text-center mx-auto font-bold">
             Ce que vous gagnez en clarifiant votre image<br />
             et votre présence en ligne avec NOVA VISIO.
           </p>
