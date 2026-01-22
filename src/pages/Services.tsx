@@ -7,37 +7,20 @@ import { ComplementaryServicesSection } from "@/components/services/Complementar
 const Services = () => {
   return (
     <Layout>
-      <div
-        className="min-h-screen"
-        style={{ background: "linear-gradient(135deg, #030827 0%, #2D284D 100%)" }}
-      >
-        {/* Hero Section - transparent, on gradient */}
-        <WebCreationHero />
+      {/* Hero Section */}
+      <WebCreationHero />
 
-        {/* Content Section - White card */}
-        <div className="container px-4 md:px-8">
-          <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
-            <WebCreationContent />
-          </div>
-        </div>
+      {/* Content Section - White background (includes LogosSection) */}
+      <WebCreationContent />
 
-        {/* Showcase Carousel - White card */}
-        <div className="container px-4 md:px-8 mt-8 md:mt-12">
-          <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
-            <ShowcaseSection />
-          </div>
-        </div>
+      {/* Showcase Carousel */}
+      <ShowcaseSection />
 
-        {/* Services Overview - White card */}
-        <div className="container px-4 md:px-8 mt-8 md:mt-12">
-          <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
-            <ServicesOverviewSection />
-          </div>
-        </div>
+      {/* Services Overview - Split layout */}
+      <ServicesOverviewSection />
 
-        {/* Complementary Services - transparent, on gradient */}
-        <ComplementaryServicesSection />
-      </div>
+      {/* Complementary Services */}
+      <ComplementaryServicesSection />
     </Layout>
   );
 };

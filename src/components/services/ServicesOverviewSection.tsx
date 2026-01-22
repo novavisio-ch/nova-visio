@@ -38,7 +38,7 @@ export const ServicesOverviewSection = () => {
     : null;
 
   return (
-    <section className="py-20 md:py-28">
+    <section className="py-20 md:py-28 bg-gray-50">
       <div className="container">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column - Text & List */}
