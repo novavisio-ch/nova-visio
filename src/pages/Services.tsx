@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Zap, BookOpen, ShoppingBag, Settings } from "lucide-react";
 import { WebCreationHero } from "@/components/services/WebCreationHero";
 import { WebCreationContent } from "@/components/services/WebCreationContent";
-
+import { ShowcaseSection } from "@/components/services/ShowcaseSection";
 const additionalServices = [{
   icon: Zap,
   title: "Tunnels de Vente Simples",
@@ -31,6 +31,9 @@ const Services = () => {
 
       {/* Content Section - White background (includes LogosSection) */}
       <WebCreationContent />
+
+      {/* Showcase Carousel */}
+      <ShowcaseSection />
 
       {/* Additional Services */}
       <section className="section-padding border-t border-border/30">
