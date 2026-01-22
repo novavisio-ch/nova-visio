@@ -3,7 +3,7 @@ const benefits = ["Vos clients comprennent immédiatement ce que vous proposez."
 export function BenefitsSection() {
   return <section className="section-padding bg-white">
       <div className="container">
-        <div className="glass-card p-10 md:p-16 max-w-4xl mx-auto relative overflow-hidden border-0 border-none bg-white">
+        <div className="p-10 md:p-16 max-w-4xl mx-auto relative overflow-hidden bg-white rounded-2xl">
           {/* Decorative gradient */}
           <div className="absolute -top-20 -right-20 w-60 h-60 bg-primary/10 blur-[80px] rounded-full" />
           
