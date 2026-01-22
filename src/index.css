@@ -8,8 +8,8 @@
 @layer base {
   :root {
     /* Dark premium palette */
-    --background: 230 78% 9%;
-    --background-end: 252 30% 23%;
+    --background: 0 0% 0%;
+    --background-end: 249 40% 17%;
     --foreground: 0 0% 94%;
 
     --card: 252 30% 15%;
@@ -48,7 +48,7 @@
   }
 
   .dark {
-    --background: 230 78% 9%;
+    --background: 0 0% 0%;
     --foreground: 0 0% 94%;
   }
 }
@@ -64,7 +64,7 @@
 
   body {
     @apply font-body text-body antialiased;
-    background: linear-gradient(135deg, hsl(230 78% 9%) 0%, hsl(252 30% 23%) 100%);
+    background: linear-gradient(135deg, #000000 0%, #1F1A3D 100%);
     background-attachment: fixed;
     min-height: 100vh;
   }
