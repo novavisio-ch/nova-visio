@@ -20,8 +20,9 @@ export function BenefitsSection() {
           </h2>
           
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-slate-600 mb-12 md:mb-16 max-w-3xl leading-relaxed">
-            Ce que vous gagnez en clarifiant votre image et votre présence en ligne avec NOVA VISIO.
+          <p className="text-xl md:text-2xl text-slate-600 mb-12 md:mb-16 max-w-3xl leading-relaxed text-center mx-auto">
+            Ce que vous gagnez en clarifiant votre image<br />
+            et votre présence en ligne avec NOVA VISIO.
           </p>
 
           {/* Benefits Grid */}
