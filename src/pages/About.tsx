@@ -1,7 +1,7 @@
 import { Layout } from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Eye, Feather, Sparkles, Handshake, Clock, Calendar } from "lucide-react";
+import { ArrowRight, Eye, Feather, Sparkles, Handshake, Calendar } from "lucide-react";
 const values = [{
   icon: Sparkles,
   title: "Clarté",
@@ -18,10 +18,6 @@ const values = [{
   icon: Handshake,
   title: "Pédagogie",
   description: "Nous vous accompagnons et vous formons."
-}, {
-  icon: Clock,
-  title: "Respect",
-  description: "Nous avançons à votre rythme."
 }];
 const About = () => {
   return <Layout>
