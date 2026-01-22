@@ -27,8 +27,8 @@ export function StepsSection() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
             Notre méthode, <span className="text-gradient-gold">étape par étape</span>
           </h2>
-          <p className="text-body text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-            Chaque projet suit un processus clair. L'objectif : réduire la complexité, 
+          <p className="text-body text-lg md:text-xl max-w-3xl mx-auto leading-relaxed text-center">
+            Chaque projet suit un processus clair. L'objectif : réduire la complexité,<br className="hidden md:block" />
             structurer vos idées et créer des supports durables.
           </p>
         </div>
