@@ -1,7 +1,7 @@
 import benefitIcon from "@/assets/benefit-icon.svg";
 const benefits = ["Vos clients comprennent immédiatement ce que vous proposez.", "Vous bénéficiez d'une image professionnelle et cohérente partout.", "Vous vendez plus facilement, sans y passer tout votre temps.", "Votre charge mentale liée au digital diminue considérablement."];
 export function BenefitsSection() {
-  return <section className="section-padding">
+  return <section className="section-padding bg-white">
       <div className="container">
         <div className="glass-card p-10 md:p-16 max-w-4xl mx-auto relative overflow-hidden">
           {/* Decorative gradient */}
