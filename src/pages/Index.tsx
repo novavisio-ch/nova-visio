@@ -4,6 +4,7 @@ import { ServicesSection } from "@/components/home/ServicesSection";
 import { BenefitsSection } from "@/components/home/BenefitsSection";
 import { WhyUsSection } from "@/components/home/WhyUsSection";
 import { StepsSection } from "@/components/home/StepsSection";
+import { CtaSection } from "@/components/home/CtaSection";
 
 const Index = () => {
   return (
@@ -13,6 +14,7 @@ const Index = () => {
       <BenefitsSection />
       <WhyUsSection />
       <StepsSection />
+      <CtaSection />
     </Layout>
   );
 };
