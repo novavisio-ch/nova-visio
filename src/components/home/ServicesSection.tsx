@@ -35,8 +35,19 @@ function ServiceCard({
       </h3>
 
       {/* Description */}
-      <p className="mb-8 max-w-sm text-white text-display-sm">
-        {description}
+      <p className="mb-8 max-w-sm text-white text-display-sm text-center">
+        {description.split(" ").reduce((acc: string[][], word, i, arr) => {
+          const third = Math.ceil(arr.length / 3);
+          const lineIndex = Math.min(Math.floor(i / third), 2);
+          if (!acc[lineIndex]) acc[lineIndex] = [];
+          acc[lineIndex].push(word);
+          return acc;
+        }, []).map((line, i, arr) => (
+          <span key={i}>
+            {line.join(" ")}
+            {i < arr.length - 1 && <br />}
+          </span>
+        ))}
       </p>
 
       {/* Benefits list */}
