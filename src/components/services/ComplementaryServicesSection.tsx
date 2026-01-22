@@ -61,7 +61,7 @@ const services = [
 
 export const ComplementaryServicesSection = () => {
   return (
-    <section className="py-20 md:py-28" style={{ background: "linear-gradient(135deg, #030827 0%, #2D284D 100%)" }}>
+    <section className="py-20 md:py-28">
       <div className="container mx-auto px-4 md:px-8">
         {/* Section Header */}
         <div className="text-center mb-12 md:mb-16">
