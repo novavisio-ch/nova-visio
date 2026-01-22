@@ -1,9 +1,9 @@
 import { Layout } from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Eye, Feather, Sparkles, Handshake, Calendar } from "lucide-react";
+import { ArrowRight, Eye, Heart, Lightbulb, Users, Rocket } from "lucide-react";
 const values = [{
-  icon: Sparkles,
+  icon: Lightbulb,
   title: "Clarté",
   description: "Des solutions simples et compréhensibles."
 }, {
@@ -11,20 +11,24 @@ const values = [{
   title: "Structure",
   description: "Une approche méthodique et organisée."
 }, {
-  icon: Feather,
+  icon: Heart,
   title: "Simplicité",
   description: "L'essentiel, sans superflu."
 }, {
-  icon: Handshake,
+  icon: Users,
   title: "Pédagogie",
   description: "Nous vous accompagnons et vous formons."
+}, {
+  icon: Rocket,
+  title: "Respect",
+  description: "Nous avançons à votre rythme."
 }];
 const About = () => {
   return <Layout>
       {/* Hero */}
       <section className="section-padding">
         <div className="container">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-3xl mx-auto text-center text-white text-2xl">
             <h1 className="text-display-lg md:text-display-xl mb-6">
               À <span className="text-gradient-gold">Propos</span>
             </h1>
@@ -36,19 +40,7 @@ const About = () => {
       {/* Introduction */}
       <section className="pb-20">
         <div className="container">
-          <div className="glass-card p-8 md:p-12 max-w-4xl mx-auto">
-            <p className="text-body-lg text-foreground/90 leading-relaxed mb-6">NOVA VISIO est né d'un constat simple : beaucoup d'entrepreneurs se sentent perdus face au digital. Entre les multiples plateformes, les tendances changeantes et le jargon technique, créer une présence en ligne cohérente peut sembler insurmontable.
-
-Nous accompagnons les marques locales et internationales dans la création d’identités fortes, de contenus impactants et de sites web performants. Chaque projet est une collaboration unique, et notre mission est de le sublimer.</p>
-            <p className="text-body-lg text-foreground/90 leading-relaxed mb-6">NOVA VISIO est né d'un constat simple : beaucoup d'entrepreneurs se sentent perdus face au digital. Entre les multiples plateformes, les tendances changeantes et le jargon technique, créer une présence en ligne cohérente peut sembler insurmontable.</p>
-            <p className="text-body-lg text-foreground/90 leading-relaxed mb-6">Nous accompagnons les marques locales et internationales dans la création d'identités fortes, de contenus impactants et de sites web performants. Chaque projet est une collaboration unique, et notre mission est de le sublimer.</p>
-            <p className="text-body-lg text-foreground/90 leading-relaxed">
-              Nous sommes là pour{" "}
-              <span className="text-primary font-semibold">simplifier, structurer et éclaircir</span> votre présence en
-              ligne. Notre mission est de vous permettre de vous concentrer sur ce que vous faites le mieux, pendant que
-              nous prenons soin de votre image digitale.
-            </p>
-          </div>
+          
         </div>
       </section>
 
@@ -81,7 +73,7 @@ Nous accompagnons les marques locales et internationales dans la création d’i
             </h2>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
             {values.map((value, index) => <div key={index} className="glass-card p-6 text-center border border-[#2D284D] transition-all duration-500 hover:border-[#C3B68F] hover:shadow-[0_0_40px_-10px_#C3B68F] group">
                 <div className="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <value.icon className="w-6 h-6 text-primary transition-transform duration-300 group-hover:scale-125" />
