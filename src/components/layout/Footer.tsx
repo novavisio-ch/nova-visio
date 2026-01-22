@@ -6,12 +6,14 @@ export function Footer() {
   return <footer className="border-t border-border/30 py-12 mt-auto">
       <div className="container">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <Link to="/" className="hover:opacity-80 transition-opacity">
+          <Link to="/" className="transition-all">
             <img 
               src={novavisioLogo} 
               alt="NOVA VISIO" 
-              className="h-8 w-auto"
+              className="h-8 w-auto transition-all duration-300"
               style={{ filter: 'brightness(0) invert(1)' }}
+              onMouseEnter={(e) => e.currentTarget.style.filter = 'brightness(0) saturate(100%) invert(76%) sepia(14%) saturate(746%) hue-rotate(9deg) brightness(91%) contrast(88%)'}
+              onMouseLeave={(e) => e.currentTarget.style.filter = 'brightness(0) invert(1)'}
             />
           </Link>
 
