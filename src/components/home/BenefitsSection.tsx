@@ -1,28 +1,44 @@
-import benefitIcon from "@/assets/benefit-icon.svg";
-const benefits = ["Vos clients comprennent immédiatement ce que vous proposez.", "Vous bénéficiez d'une image professionnelle et cohérente partout.", "Vous vendez plus facilement, sans y passer tout votre temps.", "Votre charge mentale liée au digital diminue considérablement."];
-export function BenefitsSection() {
-  return <section className="section-padding bg-white">
-      <div className="container">
-        <div className="p-10 md:p-16 max-w-4xl mx-auto relative overflow-hidden bg-white rounded-2xl">
-          {/* Decorative gradient */}
-          <div className="absolute -top-20 -right-20 w-60 h-60 bg-primary/10 blur-[80px] rounded-full" />
-          
-          <div className="relative">
-            <h2 className="text-display-md mb-4 text-primary-foreground">
-              Vos bénéfices <span className="text-gradient-gold">concrets</span>
-            </h2>
-            <p className="text-body-lg mb-10 text-primary-foreground">
-              Ce que vous obtenez en travaillant avec nous.
-            </p>
+import { CheckCircle } from "lucide-react";
 
-            <div className="grid sm:grid-cols-2 gap-6">
-              {benefits.map((benefit, index) => <div key={index} className="flex items-start gap-4">
-                  <img src={benefitIcon} alt="" className="w-8 h-8 flex-shrink-0 mt-0.5" />
-                  <p className="text-body-md text-primary-foreground">{benefit}</p>
-                </div>)}
-            </div>
+const benefits = [
+  "Vos clients comprennent en quelques secondes ce que vous faites et comment travailler avec vous.",
+  "Vous bénéficiez d'une image professionnelle, cohérente et alignée sur toutes vos plateformes.",
+  "Vous vendez plus facilement, sans devoir passer tout votre temps à \"gérer le digital\".",
+  "Votre charge mentale liée au digital diminue, vous pouvez vous concentrer sur votre cœur de métier."
+];
+
+export function BenefitsSection() {
+  return (
+    <section className="bg-white py-20 md:py-28">
+      <div className="container max-w-6xl">
+        <div className="text-left">
+          {/* Title */}
+          <h2 className="text-display-lg md:text-display-xl font-bold mb-6">
+            <span className="text-slate-900">Vos </span>
+            <span className="text-accent">bénéfices</span>
+            <span className="text-slate-900"> concrets</span>
+          </h2>
+          
+          {/* Subtitle */}
+          <p className="text-xl md:text-2xl text-slate-600 mb-12 md:mb-16 max-w-3xl leading-relaxed">
+            Ce que vous gagnez en clarifiant votre image et votre présence en ligne avec NOVA VISIO.
+          </p>
+
+          {/* Benefits Grid */}
+          <div className="grid md:grid-cols-2 gap-8 md:gap-10">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start gap-4">
+                <div className="flex-shrink-0 mt-1">
+                  <CheckCircle className="w-7 h-7 text-accent" strokeWidth={2} />
+                </div>
+                <p className="text-lg md:text-xl text-slate-800 leading-relaxed">
+                  {benefit}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 }
