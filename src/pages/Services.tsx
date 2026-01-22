@@ -5,6 +5,8 @@ import { ArrowRight, Zap, BookOpen, ShoppingBag, Settings } from "lucide-react";
 import { WebCreationHero } from "@/components/services/WebCreationHero";
 import { WebCreationContent } from "@/components/services/WebCreationContent";
 import { ShowcaseSection } from "@/components/services/ShowcaseSection";
+import { ServicesOverviewSection } from "@/components/services/ServicesOverviewSection";
+
 const additionalServices = [{
   icon: Zap,
   title: "Tunnels de Vente Simples",
@@ -31,6 +33,9 @@ const Services = () => {
 
       {/* Content Section - White background (includes LogosSection) */}
       <WebCreationContent />
+
+      {/* Services Overview - Split layout */}
+      <ServicesOverviewSection />
 
       {/* Showcase Carousel */}
       <ShowcaseSection />
