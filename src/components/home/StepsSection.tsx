@@ -56,7 +56,7 @@ export function StepsSection() {
             {steps.map((step, index) => (
               <div
                 key={step.number}
-                className={`relative flex flex-col md:flex-row items-start gap-6 md:gap-12 ${
+                className={`group relative flex flex-col md:flex-row items-start gap-6 md:gap-12 transition-all duration-300 hover:scale-[1.02] ${
                   index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                 }`}
               >
@@ -76,7 +76,7 @@ export function StepsSection() {
                     index % 2 === 0 ? "md:pr-16 md:text-right" : "md:pl-16 md:text-left"
                   }`}
                 >
-                  <div className="glass-card p-6 md:p-8 transition-all duration-300 hover:border-primary/40 hover:glow-gold">
+                  <div className="glass-card p-6 md:p-8 transition-all duration-300 group-hover:border-primary/40 group-hover:shadow-[0_0_40px_-10px_#C3B68F]">
                     <h3 className="text-xl md:text-2xl font-bold text-foreground mb-3">
                       {step.title}
                     </h3>
