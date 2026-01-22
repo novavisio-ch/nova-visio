@@ -27,7 +27,7 @@ export function WhyUsSection() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {reasons.map((reason, index) => <div key={index} className="text-center p-6">
-              <div className="w-16 h-16 rounded-2xl glass-card flex items-center justify-center mx-auto mb-5">
+              <div className="w-16 h-16 flex items-center justify-center mx-auto mb-5">
                 <reason.icon className="w-8 h-8 text-primary" />
               </div>
               <h3 className="text-display-sm mb-3">{reason.title}</h3>
