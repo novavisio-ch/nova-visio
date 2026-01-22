@@ -1,7 +1,7 @@
 import { Layout } from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Eye, Heart, Lightbulb, Users, Rocket } from "lucide-react";
+import { ArrowRight, Eye, Heart, Lightbulb, Users, Rocket, Calendar } from "lucide-react";
 const values = [{
   icon: Lightbulb,
   title: "Clarté",
