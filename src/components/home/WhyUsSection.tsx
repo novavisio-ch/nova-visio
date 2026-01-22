@@ -26,9 +26,9 @@ export function WhyUsSection() {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {reasons.map((reason, index) => <div key={index} className="text-center p-6">
-              <div className="w-16 h-16 flex items-center justify-center mx-auto mb-5">
-                <reason.icon className="w-8 h-8 text-primary" />
+          {reasons.map((reason, index) => <div key={index} className="group text-center p-6">
+              <div className="w-16 h-16 flex items-center justify-center mx-auto mb-5 transition-all duration-300 group-hover:shadow-[0_0_30px_-5px_#C3B68F]">
+                <reason.icon className="w-8 h-8 text-primary transition-transform duration-300 group-hover:scale-125" />
               </div>
               <h3 className="text-display-sm mb-3">{reason.title}</h3>
               <p className="text-body-sm text-muted-foreground">
