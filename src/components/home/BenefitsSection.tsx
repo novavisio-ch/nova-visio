@@ -13,7 +13,7 @@ export function BenefitsSection() {
       <div className="container max-w-6xl">
         <div className="text-left">
           {/* Title */}
-          <h2 className="text-display-lg md:text-display-xl font-bold mb-6">
+          <h2 className="text-display-lg md:text-display-xl font-bold mb-6 text-center">
             <span className="text-slate-900">Vos </span>
             <span className="text-accent">bénéfices</span>
             <span className="text-slate-900"> concrets</span>
