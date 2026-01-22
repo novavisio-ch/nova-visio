@@ -26,8 +26,8 @@ export function LogosSection() {
       {/* Marquee container - 75% width on desktop, 95% on mobile */}
       <div className="relative w-[95%] md:w-[75%] mx-auto">
         {/* Fade masks */}
-        <div className="absolute left-0 top-0 bottom-0 w-16 md:w-24 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-16 md:w-24 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-16 md:w-24 bg-gradient-to-r from-[#0a0718] to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-16 md:w-24 bg-gradient-to-l from-[#0f0b20] to-transparent z-10 pointer-events-none" />
 
         {/* Scrolling track */}
         <div className="flex overflow-hidden group">
