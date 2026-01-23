@@ -15,7 +15,7 @@ export default {
     extend: {
       fontFamily: {
         display: ['"Bricolage Grotesque"', 'system-ui', 'sans-serif'],
-        body: ['"Darker Grotesque"', 'system-ui', 'sans-serif'],
+        body: ['"Raleway"', 'system-ui', 'sans-serif'],
       },
       fontSize: {
         'display-xl': ['5.2rem', { lineHeight: '1.1', letterSpacing: '-0.02em', fontWeight: '700' }],
