@@ -211,7 +211,7 @@ const About = () => {
                 <h2 className="text-display-md mb-6">
                   Notre façon de <span className="text-gradient-gold">travailler</span>
                 </h2>
-                <p className="text-body-lg text-foreground/90 leading-relaxed mb-8">
+                <p className="text-body-lg leading-relaxed mb-8 text-accent">
                   De l'identité visuelle à la création de votre site internet, nous offrons des solutions complètes et modulables.
                 </p>
                 <Button variant="gold" size="lg" asChild>
