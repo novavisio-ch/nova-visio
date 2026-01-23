@@ -7,6 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Send, Clock, MessageSquare } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -161,8 +162,15 @@ const Contact = () => {
 
             {/* What happens next */}
             <div className="mt-12 grid sm:grid-cols-2 gap-6">
-              <div className="glass-card p-6 flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                whileHover={{ y: -6, boxShadow: "0 20px 40px -15px hsl(var(--primary) / 0.2)" }}
+                className="glass-card p-6 flex items-start gap-4 cursor-pointer"
+              >
+                <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Clock className="w-5 h-5 text-primary" />
                 </div>
                 <div>
@@ -171,9 +179,16 @@ const Contact = () => {
                     Nous vous répondrons sous 24 à 48 heures.
                   </p>
                 </div>
-              </div>
-              <div className="glass-card p-6 flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+              </motion.div>
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                whileHover={{ y: -6, boxShadow: "0 20px 40px -15px hsl(var(--primary) / 0.2)" }}
+                className="glass-card p-6 flex items-start gap-4 cursor-pointer"
+              >
+                <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0">
                   <MessageSquare className="w-5 h-5 text-primary" />
                 </div>
                 <div>
@@ -182,7 +197,7 @@ const Contact = () => {
                     Discussion constructive, solutions adaptées.
                   </p>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
