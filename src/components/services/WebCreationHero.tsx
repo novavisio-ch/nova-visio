@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle } from "lucide-react";
+import { ArrowRight, CheckCircle, Code } from "lucide-react";
 import figmaIcon from "@/assets/icons/figma.png";
 import webflowIcon from "@/assets/icons/webflow.png";
 import {
@@ -60,6 +60,10 @@ export function WebCreationHero() {
             <div className="inline-flex items-center px-3 py-2 rounded-full glass-card gap-2">
               <img src={figmaIcon} alt="Figma" className="w-5 h-5" />
               <span className="text-body-sm text-muted-foreground">Figma</span>
+            </div>
+            <div className="inline-flex items-center px-3 py-2 rounded-full glass-card gap-2">
+              <Code className="w-5 h-5 text-primary" />
+              <span className="text-body-sm text-muted-foreground">Code</span>
             </div>
           </div>
 
