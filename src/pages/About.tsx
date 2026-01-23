@@ -94,7 +94,7 @@ const About = () => {
               className="md:col-span-2 lg:col-span-2 p-8 md:p-10 rounded-3xl bg-gradient-to-br from-secondary/80 to-secondary/40 border border-border/30 backdrop-blur-sm cursor-pointer"
             >
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center">
                   <Heart className="w-5 h-5 text-primary" />
                 </div>
                 <span className="text-sm font-medium text-primary uppercase tracking-wider">Notre histoire</span>
