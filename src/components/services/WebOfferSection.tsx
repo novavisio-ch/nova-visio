@@ -2,32 +2,49 @@ import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
-const siteBenefits = [
-  "Présentation claire de votre activité, vos offres et vos valeurs.",
-  "Design professionnel qui renforce votre crédibilité.",
-  "Plusieurs pages structurées (accueil, services, à propos, contact…).",
-  "Site modifiable par vous, sans compétences techniques.",
-  "Optimisé pour le référencement naturel (SEO).",
-  "Responsive : parfaitement lisible sur tous les écrans.",
+interface BenefitItem {
+  text: string;
+  bold: string;
+}
+
+const siteBenefits: BenefitItem[] = [
+  { text: "Présentation claire de votre activité, vos offres et vos valeurs.", bold: "Présentation claire" },
+  { text: "Design professionnel qui renforce votre crédibilité.", bold: "Design professionnel" },
+  { text: "Plusieurs pages structurées (accueil, services, à propos, contact…).", bold: "pages structurées" },
+  { text: "Site modifiable par vous, sans compétences techniques.", bold: "modifiable par vous" },
+  { text: "Optimisé pour le référencement naturel (SEO).", bold: "référencement naturel" },
+  { text: "Responsive : parfaitement lisible sur tous les écrans.", bold: "Responsive" },
 ];
 
-const landingBenefits = [
-  "Une seule page, un seul objectif : convertir.",
-  "Message ultra-clair orienté vers l'action immédiate.",
-  "Idéale pour une offre spécifique, un lancement ou une campagne.",
-  "Structure optimisée pour capter l'attention et guider vers le CTA.",
-  "Parfaite pour tester une idée ou générer des leads rapidement.",
-  "Intégration facile avec vos outils marketing (emailing, ads…).",
+const landingBenefits: BenefitItem[] = [
+  { text: "Une seule page, un seul objectif : convertir.", bold: "un seul objectif" },
+  { text: "Message ultra-clair orienté vers l'action immédiate.", bold: "action immédiate" },
+  { text: "Idéale pour une offre spécifique, un lancement ou une campagne.", bold: "offre spécifique" },
+  { text: "Structure optimisée pour capter l'attention et guider vers le CTA.", bold: "capter l'attention" },
+  { text: "Parfaite pour tester une idée ou générer des leads rapidement.", bold: "générer des leads" },
+  { text: "Intégration facile avec vos outils marketing (emailing, ads…).", bold: "outils marketing" },
 ];
 
 interface OfferCardProps {
   title: string;
   subtitle: string;
   description: string;
-  benefits: string[];
+  benefits: BenefitItem[];
   ctaText: string;
   variant: "gold" | "purple";
 }
+
+const formatBenefit = (item: BenefitItem) => {
+  const parts = item.text.split(item.bold);
+  if (parts.length === 2) {
+    return (
+      <>
+        {parts[0]}<strong className="font-semibold">{item.bold}</strong>{parts[1]}
+      </>
+    );
+  }
+  return item.text;
+};
 
 const OfferCard = ({ title, subtitle, description, benefits, ctaText, variant }: OfferCardProps) => {
   const isGold = variant === "gold";
@@ -87,7 +104,9 @@ const OfferCard = ({ title, subtitle, description, benefits, ctaText, variant }:
         {benefits.map((benefit, index) => (
           <li key={index} className="flex items-start gap-3">
             <Check className="w-6 h-6 mt-0.5 flex-shrink-0" style={{ color: accentColor }} />
-            <span className="text-base leading-relaxed" style={{ color: "#2D284D", opacity: 0.85 }}>{benefit}</span>
+            <span className="text-base leading-relaxed" style={{ color: "#2D284D", opacity: 0.85 }}>
+              {formatBenefit(benefit)}
+            </span>
           </li>
         ))}
       </ul>
@@ -112,6 +131,18 @@ export const WebOfferSection = () => {
   return (
     <section className="py-24 md:py-32 bg-white">
       <div className="container max-w-6xl mx-auto px-4">
+        {/* Section Title */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4" style={{ color: "#2D284D" }}>
+            Nos offres web
+          </h2>
+          <p className="text-lg md:text-xl max-w-2xl mx-auto" style={{ color: "#2D284D", opacity: 0.7 }}>
+            Deux formats adaptés à vos objectifs,
+            <br className="hidden md:block" />
+            une même exigence de qualité.
+          </p>
+        </div>
+
         <div className="grid md:grid-cols-2 gap-10">
           <OfferCard
             title="Site vitrine"
