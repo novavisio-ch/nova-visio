@@ -14,7 +14,8 @@ export const FinalCtaSection = () => {
         <div className="mx-auto max-w-3xl text-center">
           {/* Title */}
           <h2 className="mb-6 font-bricolage text-3xl font-bold leading-tight text-white md:text-4xl lg:text-5xl">
-            Faites de votre présence en ligne un catalyseur de croissance.
+            Faites de votre présence en ligne un{" "}
+            <span style={{ color: "#C3B68F" }}>catalyseur de croissance.</span>
           </h2>
 
           {/* Subtitle */}
