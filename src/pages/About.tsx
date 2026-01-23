@@ -1,116 +1,191 @@
 import { Layout } from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Eye, Feather, Sparkles, Handshake, Calendar } from "lucide-react";
-const values = [{
-  icon: Sparkles,
-  title: "Clarté",
-  description: "Des solutions simples et compréhensibles."
-}, {
-  icon: Eye,
-  title: "Structure",
-  description: "Une approche méthodique et organisée."
-}, {
-  icon: Feather,
-  title: "Simplicité",
-  description: "L'essentiel, sans superflu."
-}, {
-  icon: Handshake,
-  title: "Pédagogie",
-  description: "Nous vous accompagnons et vous formons."
-}];
+import { ArrowRight, Eye, Feather, Sparkles, Handshake, Target, Heart } from "lucide-react";
+import { motion } from "framer-motion";
+
+const values = [
+  {
+    icon: Sparkles,
+    title: "Clarté",
+    description: "Des solutions simples et compréhensibles.",
+  },
+  {
+    icon: Eye,
+    title: "Structure",
+    description: "Une approche méthodique et organisée.",
+  },
+  {
+    icon: Feather,
+    title: "Simplicité",
+    description: "L'essentiel, sans superflu.",
+  },
+  {
+    icon: Handshake,
+    title: "Pédagogie",
+    description: "Nous vous accompagnons et vous formons.",
+  },
+];
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut" as const,
+    },
+  },
+};
+
 const About = () => {
-  return <Layout>
+  return (
+    <Layout>
       {/* Hero */}
-      <section className="section-padding">
+      <section className="section-padding pb-12">
         <div className="container">
-          <div className="max-w-3xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="max-w-3xl mx-auto text-center"
+          >
             <h1 className="text-display-lg md:text-display-xl mb-6">
               À <span className="text-gradient-gold">Propos</span>
             </h1>
-            <p className="text-body-lg text-muted-foreground">Au-delà de la confusion digitale, il y a la clarté.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Introduction */}
-      <section className="pb-20">
-        <div className="container">
-          <div className="glass-card p-8 md:p-12 max-w-4xl mx-auto">
-            
-            <p className="text-body-lg text-foreground/90 leading-relaxed mb-6">NOVA VISIO est né d'un constat simple : beaucoup d'entrepreneurs se sentent perdus face au digital. Entre les multiples plateformes, les tendances changeantes et le jargon technique, créer une présence en ligne cohérente peut sembler insurmontable.</p>
-            <p className="text-body-lg text-foreground/90 leading-relaxed mb-6">Nous accompagnons les marques locales et internationales dans la création d'identités fortes, de contenus impactants et de sites web performants. Chaque projet est une collaboration unique, et notre mission est de le sublimer.</p>
-            <p className="text-body-lg text-foreground/90 leading-relaxed">
-              Nous sommes là pour{" "}
-              <span className="text-primary font-semibold">simplifier, structurer et éclaircir</span> votre présence en
-              ligne. Notre mission est de vous permettre de vous concentrer sur ce que vous faites le mieux, pendant que
-              nous prenons soin de votre image digitale.
+            <p className="text-body-lg text-muted-foreground">
+              Au-delà de la confusion digitale, il y a la clarté.
             </p>
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Vision */}
-      <section className="section-padding border-t border-border/30">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-display-md mb-4">
-                Notre <span className="text-gradient-gold">Vision</span>
-              </h2>
-            </div>
-            <div className="glass-card p-8 md:p-12 glow-gold">
-              <p className="text-body-lg text-foreground/90 text-center leading-relaxed">
-                Créer des sites web, des identités et des présences sociales qui sont{" "}
-                <span className="text-primary font-semibold">sobres, clairs et durables</span>. Nous nous concentrons
-                sur la compréhension mutuelle et la continuité pour des résultats qui tiennent dans le temps.
+      {/* Bento Grid */}
+      <section className="pb-20">
+        <div className="container max-w-6xl">
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
+          >
+            {/* Introduction Block - Large */}
+            <motion.div
+              variants={itemVariants}
+              className="md:col-span-2 lg:col-span-2 p-8 md:p-10 rounded-3xl bg-gradient-to-br from-secondary/80 to-secondary/40 border border-border/30 backdrop-blur-sm"
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center">
+                  <Heart className="w-5 h-5 text-primary" />
+                </div>
+                <span className="text-sm font-medium text-primary uppercase tracking-wider">Notre histoire</span>
+              </div>
+              <p className="text-body-lg text-foreground/90 leading-relaxed mb-4">
+                NOVA VISIO est né d'un constat simple : beaucoup d'entrepreneurs se sentent perdus face au digital.
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
+              <p className="text-foreground/70 leading-relaxed">
+                Entre les multiples plateformes, les tendances changeantes et le jargon technique, créer une présence en ligne cohérente peut sembler insurmontable. Nous sommes là pour simplifier tout cela.
+              </p>
+            </motion.div>
 
-      {/* Values */}
-      <section className="section-padding">
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-display-md mb-4">
-              Nos <span className="text-gradient-gold">Valeurs</span>
-            </h2>
-          </div>
+            {/* Vision Block - Small */}
+            <motion.div
+              variants={itemVariants}
+              className="p-8 rounded-3xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/20 backdrop-blur-sm"
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-xl bg-primary/30 flex items-center justify-center">
+                  <Target className="w-5 h-5 text-primary" />
+                </div>
+                <span className="text-sm font-medium text-primary uppercase tracking-wider">Vision</span>
+              </div>
+              <p className="text-foreground/90 leading-relaxed">
+                Créer des sites web et des identités qui sont{" "}
+                <span className="text-primary font-semibold">sobres, clairs et durables</span>.
+              </p>
+            </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            {values.map((value, index) => <div key={index} className="glass-card p-6 text-center border border-[#2D284D] transition-all duration-500 hover:border-[#C3B68F] hover:shadow-[0_0_40px_-10px_#C3B68F] group">
-                <div className="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <value.icon className="w-6 h-6 text-primary transition-transform duration-300 group-hover:scale-125" />
+            {/* Values Grid - 2x2 inside */}
+            {values.map((value, index) => (
+              <motion.div
+                key={index}
+                variants={itemVariants}
+                className={`p-6 rounded-3xl border border-border/30 backdrop-blur-sm transition-all duration-500 hover:border-primary/40 hover:shadow-[0_0_30px_-10px_hsl(var(--primary)/0.3)] group ${
+                  index === 0
+                    ? "bg-gradient-to-br from-[#2a2550]/80 to-[#1a1535]/60"
+                    : index === 1
+                    ? "bg-gradient-to-br from-[#252040]/80 to-[#15122a]/60"
+                    : index === 2
+                    ? "bg-gradient-to-br from-[#1f1a3d]/80 to-[#12101f]/60"
+                    : "bg-gradient-to-br from-[#2d2855]/80 to-[#1c1838]/60"
+                }`}
+              >
+                <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110">
+                  <value.icon className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="text-display-sm mb-2">{value.title}</h3>
-                <p className="text-muted-foreground text-lg">{value.description}</p>
-              </div>)}
-          </div>
-        </div>
-      </section>
+                <p className="text-muted-foreground">{value.description}</p>
+              </motion.div>
+            ))}
 
-      {/* Workflow */}
-      <section className="section-padding border-t border-border/30">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-display-md mb-4">
-                Notre façon de <span className="text-gradient-gold">travailler</span>
-              </h2>
-            </div>
-            <div className="glass-card p-8 md:p-12">
-              <p className="text-body-lg text-foreground/90 leading-relaxed mb-6">
-                Nous travaillons avec des <span className="text-primary font-semibold">explications simples</span>, un
-                processus étape par étape et une <span className="text-primary font-semibold">transparence totale</span>
-                .
+            {/* Mission Block - Wide */}
+            <motion.div
+              variants={itemVariants}
+              className="md:col-span-2 p-8 md:p-10 rounded-3xl bg-gradient-to-br from-[#1e1a35]/90 to-[#0f0d1a]/70 border border-border/30 backdrop-blur-sm"
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center">
+                  <Sparkles className="w-5 h-5 text-primary" />
+                </div>
+                <span className="text-sm font-medium text-primary uppercase tracking-wider">Notre mission</span>
+              </div>
+              <p className="text-body-lg text-foreground/90 leading-relaxed">
+                Nous accompagnons les marques locales et internationales dans la création d'identités fortes, de contenus impactants et de sites web performants.{" "}
+                <span className="text-primary font-semibold">Chaque projet est une collaboration unique</span>, et notre mission est de le sublimer.
               </p>
-              <p className="text-body-lg text-foreground/90 leading-relaxed mb-8">
-                Notre relation se construit sur la confiance et l'absence de toute pression commerciale. Votre succès
-                est notre boussole.
-              </p>
-              <div className="text-center">
+            </motion.div>
+
+            {/* Quote Block */}
+            <motion.div
+              variants={itemVariants}
+              className="p-8 rounded-3xl bg-gradient-to-br from-primary/15 to-primary/5 border border-primary/20 backdrop-blur-sm flex items-center justify-center"
+            >
+              <blockquote className="text-center">
+                <p className="text-xl md:text-2xl font-display text-foreground/90 italic leading-relaxed">
+                  "Votre succès est notre boussole."
+                </p>
+              </blockquote>
+            </motion.div>
+
+            {/* Workflow Block - Full Width */}
+            <motion.div
+              variants={itemVariants}
+              className="md:col-span-2 lg:col-span-3 p-8 md:p-12 rounded-3xl bg-gradient-to-r from-secondary/60 via-secondary/40 to-primary/10 border border-border/30 backdrop-blur-sm"
+            >
+              <div className="max-w-3xl mx-auto text-center">
+                <h2 className="text-display-md mb-6">
+                  Notre façon de <span className="text-gradient-gold">travailler</span>
+                </h2>
+                <p className="text-body-lg text-foreground/90 leading-relaxed mb-8">
+                  Nous travaillons avec des{" "}
+                  <span className="text-primary font-semibold">explications simples</span>, un processus étape par étape
+                  et une <span className="text-primary font-semibold">transparence totale</span>. Notre relation se
+                  construit sur la confiance et l'absence de toute pression commerciale.
+                </p>
                 <Button variant="gold" size="lg" asChild>
                   <Link to="/contact">
                     Parlons de votre projet
@@ -118,10 +193,12 @@ const About = () => {
                   </Link>
                 </Button>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
-    </Layout>;
+    </Layout>
+  );
 };
+
 export default About;
