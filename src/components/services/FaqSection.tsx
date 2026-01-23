@@ -66,7 +66,9 @@ export const FaqSection = () => {
               className="mb-4 font-bricolage text-2xl font-bold md:text-3xl lg:text-4xl"
               style={{ color: "#2D284D" }}
             >
-              Des réponses à vos questions sur la création de site web
+              Des réponses à vos questions
+              <br />
+              sur la création de site web
             </h2>
             <p
               className="mx-auto max-w-2xl text-base md:text-lg"
