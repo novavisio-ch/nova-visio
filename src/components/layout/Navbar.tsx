@@ -126,7 +126,27 @@ export function Navbar() {
             Blog
           </Link>
 
-          {/* Contact - removed from center, only in CTA */}
+          {/* À propos */}
+          <Link
+            to="/a-propos"
+            className={cn(
+              "font-medium transition-colors hover:text-primary text-display-sm",
+              location.pathname === "/a-propos" ? "text-primary" : "text-foreground/70"
+            )}
+          >
+            À propos
+          </Link>
+
+          {/* Contact */}
+          <Link
+            to="/contact"
+            className={cn(
+              "font-medium transition-colors hover:text-primary text-display-sm",
+              location.pathname === "/contact" ? "text-primary" : "text-foreground/70"
+            )}
+          >
+            Contact
+          </Link>
         </div>
 
         {/* CTA Button - Right */}
@@ -205,6 +225,17 @@ export function Navbar() {
               )}
             >
               Blog
+            </Link>
+
+            {/* À propos */}
+            <Link
+              to="/a-propos"
+              className={cn(
+                "text-body-md font-medium transition-colors py-2",
+                location.pathname === "/a-propos" ? "text-primary" : "text-foreground/70"
+              )}
+            >
+              À propos
             </Link>
 
             {/* Contact */}
