@@ -181,7 +181,7 @@ export const WebStepsSection = () => {
               ${visibleSteps[0] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}
             `}
           >
-            Notre méthode pour{" "}
+            Notre méthode pour<br className="hidden md:block" />
             <span className="text-gradient-gold">votre site web</span>
           </h2>
           
