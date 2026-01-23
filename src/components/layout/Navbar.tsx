@@ -26,6 +26,7 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
+  const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -79,38 +80,40 @@ export function Navbar() {
             Accueil
           </Link>
 
-          {/* Services Dropdown */}
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <button
-                className={cn(
-                  "font-medium transition-colors hover:text-primary text-display-sm inline-flex items-center gap-1 outline-none",
-                  isServicesActive ? "text-primary" : "text-foreground/70"
-                )}
-              >
-                Services
-                <ChevronDown className="h-4 w-4" />
-              </button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent
-              align="center"
-              className="bg-card border-border/50 min-w-[200px]"
+          {/* Services Dropdown - Hover */}
+          <div
+            className="relative"
+            onMouseEnter={() => setIsServicesDropdownOpen(true)}
+            onMouseLeave={() => setIsServicesDropdownOpen(false)}
+          >
+            <button
+              className={cn(
+                "font-medium transition-colors hover:text-primary text-display-sm inline-flex items-center gap-1 outline-none",
+                isServicesActive ? "text-primary" : "text-foreground/70"
+              )}
             >
-              {servicesLinks.map((link) => (
-                <DropdownMenuItem key={link.href} asChild>
-                  <Link
-                    to={link.href}
-                    className={cn(
-                      "w-full cursor-pointer",
-                      location.pathname === link.href ? "text-primary" : ""
-                    )}
-                  >
-                    {link.label}
-                  </Link>
-                </DropdownMenuItem>
-              ))}
-            </DropdownMenuContent>
-          </DropdownMenu>
+              Services
+              <ChevronDown className={cn("h-4 w-4 transition-transform", isServicesDropdownOpen && "rotate-180")} />
+            </button>
+            {isServicesDropdownOpen && (
+              <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2">
+                <div className="bg-card border border-border/50 rounded-md min-w-[200px] py-1 shadow-lg animate-fade-in">
+                  {servicesLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      to={link.href}
+                      className={cn(
+                        "block px-4 py-2 text-sm font-medium transition-colors hover:bg-accent/10 hover:text-primary",
+                        location.pathname === link.href ? "text-primary" : "text-foreground/70"
+                      )}
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
 
           {/* Blog */}
           <Link
