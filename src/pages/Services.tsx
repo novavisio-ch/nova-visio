@@ -4,6 +4,8 @@ import { WebCreationContent } from "@/components/services/WebCreationContent";
 import { ShowcaseSection } from "@/components/services/ShowcaseSection";
 import { ServicesOverviewSection } from "@/components/services/ServicesOverviewSection";
 import { ComplementaryServicesSection } from "@/components/services/ComplementaryServicesSection";
+import { FaqSection } from "@/components/services/FaqSection";
+
 const Services = () => {
   return (
     <Layout>
@@ -21,7 +23,11 @@ const Services = () => {
 
       {/* Complementary Services */}
       <ComplementaryServicesSection />
+
+      {/* FAQ Section */}
+      <FaqSection />
     </Layout>
   );
 };
+
 export default Services;
