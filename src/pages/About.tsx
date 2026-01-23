@@ -155,7 +155,7 @@ const About = () => {
                   <value.icon className="w-6 h-6 text-primary" />
                 </motion.div>
                 <h3 className="text-display-sm mb-2">{value.title}</h3>
-                <p className="text-muted-foreground">{value.description}</p>
+                <p className="text-muted-foreground text-xl">{value.description}</p>
               </motion.div>)}
 
             {/* Mission Block - Wide - Slide up & Border glow */}
