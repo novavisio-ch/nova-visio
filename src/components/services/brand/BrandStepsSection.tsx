@@ -200,6 +200,7 @@ export const BrandStepsSection = () => {
             `}
           >
             Un processus créatif structuré, de la découverte de votre marque
+            <br className="hidden md:block" />
             jusqu'à la livraison de votre identité complète.
           </p>
         </div>
