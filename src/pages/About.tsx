@@ -179,25 +179,7 @@ const About = () => {
             </motion.div>
 
             {/* Quote Block - Pulse & Scale */}
-            <motion.div variants={itemVariants} whileHover={{
-            scale: 1.05,
-            boxShadow: "0 0 30px -5px hsl(var(--primary) / 0.4)",
-            transition: {
-              duration: 0.4,
-              ease: "easeOut"
-            }
-          }} className="p-8 rounded-3xl bg-gradient-to-br from-primary/15 to-primary/5 border border-primary/20 backdrop-blur-sm flex items-center justify-center cursor-pointer">
-              <blockquote className="text-center">
-                <motion.p className="text-xl md:text-2xl font-display text-foreground/90 italic leading-relaxed" whileHover={{
-                scale: 1.05,
-                transition: {
-                  duration: 0.3
-                }
-              }}>
-                  "Votre succès est notre boussole."
-                </motion.p>
-              </blockquote>
-            </motion.div>
+            
 
             {/* Workflow Block - Full Width - Subtle lift */}
             <motion.div variants={itemVariants} whileHover={{
