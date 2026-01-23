@@ -50,12 +50,7 @@ const faqItems = [
 
 export const FaqSection = () => {
   return (
-    <section
-      className="py-20 md:py-28"
-      style={{
-        background: "linear-gradient(135deg, #000000 0%, #1f1a3d 100%)",
-      }}
-    >
+    <section className="bg-white py-20 md:py-28">
       <div className="container mx-auto px-4">
         {/* Central FAQ Container */}
         <div
