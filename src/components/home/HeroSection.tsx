@@ -20,7 +20,7 @@ export function HeroSection() {
             <span className="text-gradient-gold">vendre plus simplement</span>.
           </h1>
 
-          <p className="text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-up text-display-sm font-sans font-normal" style={{
+          <p className="max-w-2xl mx-auto mb-10 animate-fade-up font-sans text-2xl font-light text-white" style={{
           animationDelay: "0.2s"
         }}>
             Simplifiez votre présence en ligne avec NOVA VISIO : un site web clair et une identité visuelle
