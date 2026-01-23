@@ -7,7 +7,7 @@ export const FinalCtaSection = () => {
     <section
       className="py-24 md:py-32"
       style={{
-        background: "linear-gradient(135deg, #030827 0%, #2D284D 100%)",
+        background: "linear-gradient(135deg, #000000 0%, #1f1a3d 100%)",
       }}
     >
       <div className="container mx-auto px-4">
