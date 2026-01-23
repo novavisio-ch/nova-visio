@@ -5,6 +5,7 @@ import { ShowcaseSection } from "@/components/services/ShowcaseSection";
 import { ServicesOverviewSection } from "@/components/services/ServicesOverviewSection";
 import { ComplementaryServicesSection } from "@/components/services/ComplementaryServicesSection";
 import { FaqSection } from "@/components/services/FaqSection";
+import { FinalCtaSection } from "@/components/services/FinalCtaSection";
 
 const Services = () => {
   return (
@@ -26,6 +27,9 @@ const Services = () => {
 
       {/* FAQ Section */}
       <FaqSection />
+
+      {/* Final CTA Section */}
+      <FinalCtaSection />
     </Layout>
   );
 };
