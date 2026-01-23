@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import figmaIcon from "@/assets/icons/figma.png";
+import webflowIcon from "@/assets/icons/webflow.png";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -53,9 +54,7 @@ export function WebCreationHero() {
               </span>
             </div>
             <div className="inline-flex items-center px-3 py-2 rounded-full glass-card gap-2">
-              <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none">
-                <path d="M17.802 8.56c-.04.156-.168.27-.324.27h-1.584c-.312 0-.6.132-.78.36-.18.216-.24.504-.168.78l1.188 4.224c.048.168-.024.348-.168.444-.144.108-.336.108-.48.012L12.93 12.6c-.276-.18-.636-.18-.912 0l-2.556 2.052c-.144.096-.336.096-.48-.012-.144-.096-.216-.276-.168-.444l1.188-4.224c.072-.276.012-.564-.168-.78-.18-.228-.468-.36-.78-.36H7.47c-.156 0-.284-.114-.324-.27L6.03 4.668c-.048-.18.024-.372.18-.48.156-.096.348-.084.492.036l3.696 2.964c.276.228.66.264.972.084l2.1-1.2c.276-.156.612-.156.888 0l2.1 1.2c.312.18.696.144.972-.084l3.696-2.964c.144-.12.336-.132.492-.036.156.108.228.3.18.48l-1.116 3.892z" fill="#4353FF"/>
-              </svg>
+              <img src={webflowIcon} alt="Webflow" className="w-5 h-5" />
               <span className="text-body-sm text-muted-foreground">Webflow</span>
             </div>
             <div className="inline-flex items-center px-3 py-2 rounded-full glass-card gap-2">
