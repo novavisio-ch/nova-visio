@@ -154,7 +154,7 @@ const About = () => {
                 }`}
               >
                 <motion.div 
-                  className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4"
+                  className="w-12 h-12 rounded-2xl flex items-center justify-center mb-4"
                   whileHover={{ rotate: 360, transition: { duration: 0.5 } }}
                 >
                   <value.icon className="w-6 h-6 text-primary" />
@@ -175,7 +175,7 @@ const About = () => {
               className="md:col-span-2 p-8 md:p-10 rounded-3xl bg-gradient-to-br from-[#1e1a35]/90 to-[#0f0d1a]/70 border border-border/30 backdrop-blur-sm cursor-pointer"
             >
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center">
                   <Sparkles className="w-5 h-5 text-primary" />
                 </div>
                 <span className="text-sm font-medium text-primary uppercase tracking-wider">Notre mission</span>
