@@ -82,8 +82,8 @@ export function ServicesSection() {
 
         {/* Cards grid */}
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          <ServiceCard title="Site vitrine et landing page" description="Un site web pensé pour renforcer votre crédibilité et établir la confiance de vos prospects." benefits={webBenefits} ctaText="Parler de votre projet de site" ctaLink="/contact" />
-          <ServiceCard title="Identité visuelle & logo" description="Une identité visuelle professionnelle pour être reconnu et inspirer confiance au premier regard." benefits={brandBenefits} ctaText="Parler de votre identité visuelle" ctaLink="/contact" />
+          <ServiceCard title="Site vitrine et landing page" description="Un site web pensé pour renforcer votre crédibilité et établir la confiance de vos prospects." benefits={webBenefits} ctaText="Parler de votre projet de site" ctaLink="/site-web" />
+          <ServiceCard title="Identité visuelle & logo" description="Une identité visuelle professionnelle pour être reconnu et inspirer confiance au premier regard." benefits={brandBenefits} ctaText="Parler de votre identité visuelle" ctaLink="/identite-visuelle" />
         </div>
       </div>
     </section>;

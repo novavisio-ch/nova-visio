@@ -17,12 +17,15 @@ export function Footer() {
             />
           </Link>
 
-          <div className="flex items-center gap-8 text-body-sm text-muted-foreground">
+          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8 text-body-sm text-muted-foreground">
+            <Link to="/site-web" className="hover:text-primary transition-colors">
+              Site web
+            </Link>
+            <Link to="/identite-visuelle" className="hover:text-primary transition-colors">
+              Logo & identité
+            </Link>
             <Link to="/a-propos" className="hover:text-primary transition-colors">
               À Propos
-            </Link>
-            <Link to="/services" className="hover:text-primary transition-colors">
-              Services
             </Link>
             <Link to="/contact" className="hover:text-primary transition-colors">
               Contact

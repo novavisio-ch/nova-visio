@@ -3,11 +3,12 @@ import { WebCreationHero } from "@/components/services/WebCreationHero";
 import { WebCreationContent } from "@/components/services/WebCreationContent";
 import { ShowcaseSection } from "@/components/services/ShowcaseSection";
 import { ServicesOverviewSection } from "@/components/services/ServicesOverviewSection";
-import { ComplementaryServicesSection } from "@/components/services/ComplementaryServicesSection";
+import { WebOfferSection } from "@/components/services/WebOfferSection";
+import { WebStepsSection } from "@/components/services/WebStepsSection";
 import { FaqSection } from "@/components/services/FaqSection";
 import { FinalCtaSection } from "@/components/services/FinalCtaSection";
 
-const Services = () => {
+const SiteWeb = () => {
   return (
     <Layout>
       {/* Hero Section */}
@@ -22,8 +23,11 @@ const Services = () => {
       {/* Services Overview - Split layout */}
       <ServicesOverviewSection />
 
-      {/* Complementary Services */}
-      <ComplementaryServicesSection />
+      {/* Web Offer Section */}
+      <WebOfferSection />
+
+      {/* Web Steps / Timeline */}
+      <WebStepsSection />
 
       {/* FAQ Section */}
       <FaqSection />
@@ -34,4 +38,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default SiteWeb;
