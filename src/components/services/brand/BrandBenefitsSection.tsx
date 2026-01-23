@@ -26,7 +26,7 @@ export const BrandBenefitsSection = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-display-md text-gray-900 mb-4">
-            Vos bénéfices avec une{" "}
+            Vos bénéfices avec une<br className="hidden md:block" />
             <span className="text-gradient-gold">identité visuelle claire</span>
           </h2>
           <p className="text-body-lg text-gray-600 max-w-2xl mx-auto">
