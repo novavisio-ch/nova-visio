@@ -187,7 +187,8 @@ export const BrandStepsSection = () => {
               ${visibleSteps[0] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}
             `}
           >
-            Notre méthode pour{" "}
+            Notre méthode pour
+            <br />
             <span className="text-gradient-gold">votre identité visuelle</span>
           </h2>
           
