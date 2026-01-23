@@ -83,10 +83,15 @@ const About = () => {
             viewport={{ once: true, margin: "-50px" }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
           >
-            {/* Introduction Block - Large */}
+            {/* Introduction Block - Large - Lift & Glow */}
             <motion.div
               variants={itemVariants}
-              className="md:col-span-2 lg:col-span-2 p-8 md:p-10 rounded-3xl bg-gradient-to-br from-secondary/80 to-secondary/40 border border-border/30 backdrop-blur-sm"
+              whileHover={{ 
+                y: -8, 
+                boxShadow: "0 20px 40px -15px hsl(var(--primary) / 0.2)",
+                transition: { duration: 0.3 }
+              }}
+              className="md:col-span-2 lg:col-span-2 p-8 md:p-10 rounded-3xl bg-gradient-to-br from-secondary/80 to-secondary/40 border border-border/30 backdrop-blur-sm cursor-pointer"
             >
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center">
@@ -102,10 +107,15 @@ const About = () => {
               </p>
             </motion.div>
 
-            {/* Vision Block - Small */}
+            {/* Vision Block - Small - Scale & Rotate */}
             <motion.div
               variants={itemVariants}
-              className="p-8 rounded-3xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/20 backdrop-blur-sm"
+              whileHover={{ 
+                scale: 1.03, 
+                rotate: 1,
+                transition: { duration: 0.3 }
+              }}
+              className="p-8 rounded-3xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/20 backdrop-blur-sm cursor-pointer"
             >
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 rounded-xl bg-primary/30 flex items-center justify-center">
@@ -119,12 +129,21 @@ const About = () => {
               </p>
             </motion.div>
 
-            {/* Values Grid - 2x2 inside */}
+            {/* Values Grid - Different animations for each */}
             {values.map((value, index) => (
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className={`p-6 rounded-3xl border border-border/30 backdrop-blur-sm transition-all duration-500 hover:border-primary/40 hover:shadow-[0_0_30px_-10px_hsl(var(--primary)/0.3)] group ${
+                whileHover={
+                  index === 0
+                    ? { scale: 1.05, transition: { duration: 0.3 } }
+                    : index === 1
+                    ? { y: -10, x: 5, transition: { duration: 0.3 } }
+                    : index === 2
+                    ? { rotate: -2, scale: 1.02, transition: { duration: 0.3 } }
+                    : { y: -6, boxShadow: "0 25px 50px -12px hsl(var(--primary) / 0.25)", transition: { duration: 0.3 } }
+                }
+                className={`p-6 rounded-3xl border border-border/30 backdrop-blur-sm cursor-pointer transition-colors duration-300 hover:border-primary/40 group ${
                   index === 0
                     ? "bg-gradient-to-br from-[#2a2550]/80 to-[#1a1535]/60"
                     : index === 1
@@ -134,18 +153,26 @@ const About = () => {
                     : "bg-gradient-to-br from-[#2d2855]/80 to-[#1c1838]/60"
                 }`}
               >
-                <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110">
+                <motion.div 
+                  className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4"
+                  whileHover={{ rotate: 360, transition: { duration: 0.5 } }}
+                >
                   <value.icon className="w-6 h-6 text-primary" />
-                </div>
+                </motion.div>
                 <h3 className="text-display-sm mb-2">{value.title}</h3>
                 <p className="text-muted-foreground">{value.description}</p>
               </motion.div>
             ))}
 
-            {/* Mission Block - Wide */}
+            {/* Mission Block - Wide - Slide up & Border glow */}
             <motion.div
               variants={itemVariants}
-              className="md:col-span-2 p-8 md:p-10 rounded-3xl bg-gradient-to-br from-[#1e1a35]/90 to-[#0f0d1a]/70 border border-border/30 backdrop-blur-sm"
+              whileHover={{ 
+                y: -6,
+                borderColor: "hsl(var(--primary) / 0.5)",
+                transition: { duration: 0.3 }
+              }}
+              className="md:col-span-2 p-8 md:p-10 rounded-3xl bg-gradient-to-br from-[#1e1a35]/90 to-[#0f0d1a]/70 border border-border/30 backdrop-blur-sm cursor-pointer"
             >
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center">
@@ -159,22 +186,35 @@ const About = () => {
               </p>
             </motion.div>
 
-            {/* Quote Block */}
+            {/* Quote Block - Pulse & Scale */}
             <motion.div
               variants={itemVariants}
-              className="p-8 rounded-3xl bg-gradient-to-br from-primary/15 to-primary/5 border border-primary/20 backdrop-blur-sm flex items-center justify-center"
+              whileHover={{ 
+                scale: 1.05,
+                boxShadow: "0 0 30px -5px hsl(var(--primary) / 0.4)",
+                transition: { duration: 0.4, ease: "easeOut" }
+              }}
+              className="p-8 rounded-3xl bg-gradient-to-br from-primary/15 to-primary/5 border border-primary/20 backdrop-blur-sm flex items-center justify-center cursor-pointer"
             >
               <blockquote className="text-center">
-                <p className="text-xl md:text-2xl font-display text-foreground/90 italic leading-relaxed">
+                <motion.p 
+                  className="text-xl md:text-2xl font-display text-foreground/90 italic leading-relaxed"
+                  whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
+                >
                   "Votre succès est notre boussole."
-                </p>
+                </motion.p>
               </blockquote>
             </motion.div>
 
-            {/* Workflow Block - Full Width */}
+            {/* Workflow Block - Full Width - Subtle lift */}
             <motion.div
               variants={itemVariants}
-              className="md:col-span-2 lg:col-span-3 p-8 md:p-12 rounded-3xl bg-gradient-to-r from-secondary/60 via-secondary/40 to-primary/10 border border-border/30 backdrop-blur-sm"
+              whileHover={{ 
+                y: -4,
+                boxShadow: "0 30px 60px -20px hsl(var(--primary) / 0.15)",
+                transition: { duration: 0.4 }
+              }}
+              className="md:col-span-2 lg:col-span-3 p-8 md:p-12 rounded-3xl bg-gradient-to-r from-secondary/60 via-secondary/40 to-primary/10 border border-border/30 backdrop-blur-sm cursor-pointer"
             >
               <div className="max-w-3xl mx-auto text-center">
                 <h2 className="text-display-md mb-6">
