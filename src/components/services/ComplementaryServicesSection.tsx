@@ -62,9 +62,8 @@ export const ComplementaryServicesSection = () => {
               </a>
             </div>
             {/* Image */}
-            <div className="relative h-64 md:h-auto">
+            <div className="relative h-64 md:h-auto bg-white">
               <img src={identityMockup} alt="Moodboard identité visuelle" className="absolute inset-0 w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-transparent" />
             </div>
           </div>
         </div>
