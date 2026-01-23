@@ -64,7 +64,7 @@ export const ComplementaryServicesSection = () => {
             {/* Image */}
             <div className="relative h-64 md:h-auto">
               <img src={identityMockup} alt="Moodboard identité visuelle" className="absolute inset-0 w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-l from-transparent to-[#0a0f2c]/30 md:bg-gradient-to-r bg-transparent" />
+              <div className="absolute inset-0 bg-transparent" />
             </div>
           </div>
         </div>
