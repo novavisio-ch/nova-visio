@@ -72,7 +72,7 @@ export const ComplementaryServicesSection = () => {
         <div className="grid md:grid-cols-3 gap-6">
           {secondaryServices.map(service => {
           const Icon = service.icon;
-          return <div key={service.id} className="group rounded-xl border border-[#C3B68F]/30 bg-[#0a0f2c]/60 backdrop-blur-sm p-6 md:p-8 transition-all duration-300 hover:shadow-[0_0_25px_rgba(195,182,143,0.2)] hover:scale-[1.02] hover:border-[#C3B68F]/50">
+          return <div key={service.id} className="group rounded-xl border border-[#C3B68F]/30 backdrop-blur-sm p-6 md:p-8 transition-all duration-300 hover:shadow-[0_0_25px_rgba(195,182,143,0.2)] hover:scale-[1.02] hover:border-[#C3B68F]/50" style={{ background: "linear-gradient(135deg, #000000 0%, #1f1a3d 100%)" }}>
                 <div className="w-12 h-12 rounded-lg bg-[#C3B68F]/10 flex items-center justify-center mb-5 group-hover:bg-[#C3B68F]/20 transition-colors duration-300">
                   <Icon className="w-6 h-6 text-[#C3B68F]" />
                 </div>
