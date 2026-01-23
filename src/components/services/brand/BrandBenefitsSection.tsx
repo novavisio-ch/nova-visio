@@ -30,8 +30,7 @@ export const BrandBenefitsSection = () => {
             <span className="text-gradient-gold">identité visuelle claire</span>
           </h2>
           <p className="text-body-lg text-gray-600 max-w-2xl mx-auto">
-            Une identité visuelle professionnelle simplifie votre quotidien
-            <br className="hidden md:block" />
+            Une identité visuelle professionnelle simplifie votre quotidien<br className="hidden md:block" />{" "}
             et renforce la perception de votre marque.
           </p>
         </div>
