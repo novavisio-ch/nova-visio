@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle } from "lucide-react";
+import figmaIcon from "@/assets/icons/figma.png";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -58,14 +59,7 @@ export function WebCreationHero() {
               <span className="text-body-sm text-muted-foreground">Webflow</span>
             </div>
             <div className="inline-flex items-center px-3 py-2 rounded-full glass-card gap-2">
-              <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none">
-                <path d="M5.5 8.5a3 3 0 1 1 0-6h3v6h-3z" fill="#F24E1E"/>
-                <path d="M8.5 2.5h3a3 3 0 1 1 0 6h-3v-6z" fill="#FF7262"/>
-                <path d="M14.5 5.5a3 3 0 1 0 6 0 3 3 0 0 0-6 0z" fill="#1ABCFE"/>
-                <path d="M5.5 11.5a3 3 0 1 1 0-6h3v6h-3z" fill="#A259FF"/>
-                <path d="M8.5 8.5h3a3 3 0 1 1 0 6h-3v-6z" fill="#A259FF"/>
-                <path d="M5.5 17.5a3 3 0 0 1 3-3h3v3a3 3 0 1 1-6 0z" fill="#0ACF83"/>
-              </svg>
+              <img src={figmaIcon} alt="Figma" className="w-5 h-5" />
               <span className="text-body-sm text-muted-foreground">Figma</span>
             </div>
           </div>
