@@ -53,17 +53,20 @@ export function WebCreationHero() {
             </div>
             <div className="inline-flex items-center px-3 py-2 rounded-full glass-card gap-2">
               <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none">
-                <rect width="24" height="24" rx="4" fill="#330000"/>
-                <text x="12" y="16" textAnchor="middle" fontSize="10" fontWeight="bold" fill="#FF9A00">Ai</text>
+                <path d="M17.802 8.56c-.04.156-.168.27-.324.27h-1.584c-.312 0-.6.132-.78.36-.18.216-.24.504-.168.78l1.188 4.224c.048.168-.024.348-.168.444-.144.108-.336.108-.48.012L12.93 12.6c-.276-.18-.636-.18-.912 0l-2.556 2.052c-.144.096-.336.096-.48-.012-.144-.096-.216-.276-.168-.444l1.188-4.224c.072-.276.012-.564-.168-.78-.18-.228-.468-.36-.78-.36H7.47c-.156 0-.284-.114-.324-.27L6.03 4.668c-.048-.18.024-.372.18-.48.156-.096.348-.084.492.036l3.696 2.964c.276.228.66.264.972.084l2.1-1.2c.276-.156.612-.156.888 0l2.1 1.2c.312.18.696.144.972-.084l3.696-2.964c.144-.12.336-.132.492-.036.156.108.228.3.18.48l-1.116 3.892z" fill="#4353FF"/>
               </svg>
-              <span className="text-body-sm text-muted-foreground">Illustrator</span>
+              <span className="text-body-sm text-muted-foreground">Webflow</span>
             </div>
             <div className="inline-flex items-center px-3 py-2 rounded-full glass-card gap-2">
               <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none">
-                <rect width="24" height="24" rx="4" fill="#001E36"/>
-                <text x="12" y="16" textAnchor="middle" fontSize="10" fontWeight="bold" fill="#31A8FF">Ps</text>
+                <path d="M5.5 8.5a3 3 0 1 1 0-6h3v6h-3z" fill="#F24E1E"/>
+                <path d="M8.5 2.5h3a3 3 0 1 1 0 6h-3v-6z" fill="#FF7262"/>
+                <path d="M14.5 5.5a3 3 0 1 0 6 0 3 3 0 0 0-6 0z" fill="#1ABCFE"/>
+                <path d="M5.5 11.5a3 3 0 1 1 0-6h3v6h-3z" fill="#A259FF"/>
+                <path d="M8.5 8.5h3a3 3 0 1 1 0 6h-3v-6z" fill="#A259FF"/>
+                <path d="M5.5 17.5a3 3 0 0 1 3-3h3v3a3 3 0 1 1-6 0z" fill="#0ACF83"/>
               </svg>
-              <span className="text-body-sm text-muted-foreground">Photoshop</span>
+              <span className="text-body-sm text-muted-foreground">Figma</span>
             </div>
           </div>
 
