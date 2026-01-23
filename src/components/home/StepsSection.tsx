@@ -20,15 +20,16 @@ const steps = [{
   description: "Nous finalisons la mise en ligne et vous accompagnons dans la prise en main : ajustements, évolutions et cohérence dans le temps. Le site et l'identité deviennent des outils durables, pas des supports figés."
 }];
 export function StepsSection() {
-  return <section className="section-padding">
-      <div className="container-narrow">
+  return <section className="py-16 md:py-20 lg:py-28 px-4">
+      <div className="container max-w-5xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16 md:mb-20">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+        <div className="text-center mb-10 md:mb-16 lg:mb-20">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 leading-tight">
             Notre méthode, <span className="text-gradient-gold">étape par étape</span>
           </h2>
-          <p className="text-body text-lg md:text-xl max-w-3xl mx-auto leading-relaxed text-center">
-            Chaque projet suit un processus clair. L'objectif : réduire la complexité,<br className="hidden md:block" />
+          <p className="text-body text-sm sm:text-base md:text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed text-center">
+            Chaque projet suit un processus clair. L'objectif : réduire la complexité,
+            <br className="hidden md:block" />
             structurer vos idées et créer des supports durables.
           </p>
         </div>
@@ -36,28 +37,28 @@ export function StepsSection() {
         {/* Timeline */}
         <div className="relative">
           {/* Vertical connector line - visible on all screens */}
-          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary/50 via-primary/30 to-primary/10 transform md:-translate-x-1/2" />
+          <div className="absolute left-4 sm:left-6 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary/50 via-primary/30 to-primary/10 transform md:-translate-x-1/2" />
 
           {/* Steps */}
-          <div className="space-y-12 md:space-y-16">
-            {steps.map((step, index) => <div key={step.number} className={`group relative flex flex-col md:flex-row items-start gap-6 md:gap-12 transition-all duration-300 hover:scale-[1.02] ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}>
+          <div className="space-y-8 md:space-y-12 lg:space-y-16">
+            {steps.map((step, index) => <div key={step.number} className={`group relative flex flex-col md:flex-row items-start gap-4 md:gap-12 transition-all duration-300 hover:scale-[1.02] ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}>
                 {/* Number circle - positioned on the line */}
-                <div className="absolute left-6 md:left-1/2 transform -translate-x-1/2 z-10 group cursor-pointer">
-                  <div className="w-12 h-12 rounded-full bg-background border-2 border-primary flex items-center justify-center transition-all duration-300 group-hover:shadow-[0_0_30px_-5px_#C3B68F] group-hover:scale-110">
-                    <span className="text-primary font-bold text-lg">{step.number}</span>
+                <div className="absolute left-4 sm:left-6 md:left-1/2 transform -translate-x-1/2 z-10 group cursor-pointer">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-background border-2 border-primary flex items-center justify-center transition-all duration-300 group-hover:shadow-[0_0_30px_-5px_#C3B68F] group-hover:scale-110">
+                    <span className="text-primary font-bold text-xs sm:text-sm md:text-lg">{step.number}</span>
                   </div>
                 </div>
 
                 {/* Spacer for mobile layout */}
-                <div className="w-12 md:hidden" />
+                <div className="w-8 sm:w-10 md:hidden" />
 
                 {/* Content card */}
-                <div className={`flex-1 ml-12 md:ml-0 ${index % 2 === 0 ? "md:pr-16 md:text-right" : "md:pl-16 md:text-left"}`}>
-                  <div className="glass-card p-6 md:p-8 transition-all duration-300 group-hover:border-primary/40 group-hover:shadow-[0_0_40px_-10px_#C3B68F]">
-                    <h3 className="text-xl md:text-2xl font-bold text-foreground mb-3">
+                <div className={`flex-1 ml-10 sm:ml-12 md:ml-0 ${index % 2 === 0 ? "md:pr-16 md:text-right" : "md:pl-16 md:text-left"}`}>
+                  <div className="glass-card p-4 sm:p-5 md:p-6 lg:p-8 transition-all duration-300 group-hover:border-primary/40 group-hover:shadow-[0_0_40px_-10px_#C3B68F]">
+                    <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-foreground mb-2 md:mb-3">
                       {step.title}
                     </h3>
-                    <p className="text-body leading-relaxed text-body-lg">{step.description}</p>
+                    <p className="text-body leading-relaxed text-sm sm:text-base md:text-body-lg">{step.description}</p>
                   </div>
                 </div>
 

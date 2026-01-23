@@ -45,13 +45,13 @@ const Contact = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="section-padding">
+      <section className="py-12 md:py-16 lg:py-20 px-4">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-display-lg md:text-display-xl mb-6">
+            <h1 className="text-2xl sm:text-3xl md:text-display-lg lg:text-display-xl mb-4 md:mb-6 leading-tight">
               Parlons de votre <span className="text-gradient-gold">projet</span>
             </h1>
-            <p className="text-body-lg text-muted-foreground">
+            <p className="text-sm sm:text-base md:text-body-lg text-muted-foreground leading-relaxed">
               Un premier échange, sans engagement de votre part, est le meilleur moyen de débuter. Nous sommes là pour écouter et vous proposer des pistes concrètes.
             </p>
           </div>
@@ -59,13 +59,13 @@ const Contact = () => {
       </section>
 
       {/* Contact Form */}
-      <section className="pb-20">
+      <section className="pb-12 md:pb-16 lg:pb-20 px-4">
         <div className="container">
           <div className="max-w-2xl mx-auto">
-            <form onSubmit={handleSubmit} className="glass-card p-8 md:p-10 space-y-6">
-              <div className="grid sm:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <Label htmlFor="firstName" className="text-body-sm text-foreground">
+            <form onSubmit={handleSubmit} className="glass-card p-5 sm:p-6 md:p-8 lg:p-10 space-y-4 md:space-y-6">
+              <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
+                <div className="space-y-1.5 md:space-y-2">
+                  <Label htmlFor="firstName" className="text-xs sm:text-body-sm text-foreground">
                     Prénom
                   </Label>
                   <Input
@@ -73,12 +73,12 @@ const Contact = () => {
                     value={formData.firstName}
                     onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
                     required
-                    className="bg-input/50 border-border/50 focus:border-primary text-foreground placeholder:text-muted-foreground"
+                    className="bg-input/50 border-border/50 focus:border-primary text-foreground placeholder:text-muted-foreground text-sm md:text-base"
                     placeholder="Votre prénom"
                   />
                 </div>
-                <div className="space-y-2">
-                  <Label htmlFor="lastName" className="text-body-sm text-foreground">
+                <div className="space-y-1.5 md:space-y-2">
+                  <Label htmlFor="lastName" className="text-xs sm:text-body-sm text-foreground">
                     Nom
                   </Label>
                   <Input
@@ -86,14 +86,14 @@ const Contact = () => {
                     value={formData.lastName}
                     onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
                     required
-                    className="bg-input/50 border-border/50 focus:border-primary text-foreground placeholder:text-muted-foreground"
+                    className="bg-input/50 border-border/50 focus:border-primary text-foreground placeholder:text-muted-foreground text-sm md:text-base"
                     placeholder="Votre nom"
                   />
                 </div>
               </div>
 
-              <div className="space-y-2">
-                <Label htmlFor="email" className="text-body-sm text-foreground">
+              <div className="space-y-1.5 md:space-y-2">
+                <Label htmlFor="email" className="text-xs sm:text-body-sm text-foreground">
                   Email
                 </Label>
                 <Input
@@ -102,20 +102,20 @@ const Contact = () => {
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   required
-                  className="bg-input/50 border-border/50 focus:border-primary text-foreground placeholder:text-muted-foreground"
+                  className="bg-input/50 border-border/50 focus:border-primary text-foreground placeholder:text-muted-foreground text-sm md:text-base"
                   placeholder="votre@email.com"
                 />
               </div>
 
-              <div className="space-y-2">
-                <Label htmlFor="projectType" className="text-body-sm text-foreground">
+              <div className="space-y-1.5 md:space-y-2">
+                <Label htmlFor="projectType" className="text-xs sm:text-body-sm text-foreground">
                   Type de projet
                 </Label>
                 <Select
                   value={formData.projectType}
                   onValueChange={(value) => setFormData({ ...formData, projectType: value })}
                 >
-                  <SelectTrigger className="bg-input/50 border-border/50 focus:border-primary text-foreground">
+                  <SelectTrigger className="bg-input/50 border-border/50 focus:border-primary text-foreground text-sm md:text-base">
                     <SelectValue placeholder="Sélectionnez un type de projet" />
                   </SelectTrigger>
                   <SelectContent>
@@ -127,8 +127,8 @@ const Contact = () => {
                 </Select>
               </div>
 
-              <div className="space-y-2">
-                <Label htmlFor="message" className="text-body-sm text-foreground">
+              <div className="space-y-1.5 md:space-y-2">
+                <Label htmlFor="message" className="text-xs sm:text-body-sm text-foreground">
                   Message
                 </Label>
                 <Textarea
@@ -136,8 +136,8 @@ const Contact = () => {
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   required
-                  rows={5}
-                  className="bg-input/50 border-border/50 focus:border-primary text-foreground placeholder:text-muted-foreground resize-none"
+                  rows={4}
+                  className="bg-input/50 border-border/50 focus:border-primary text-foreground placeholder:text-muted-foreground resize-none text-sm md:text-base"
                   placeholder="Décrivez votre projet et vos objectifs..."
                 />
               </div>
@@ -154,28 +154,28 @@ const Contact = () => {
                 ) : (
                   <>
                     Envoyer mon message
-                    <Send className="w-5 h-5 ml-2" />
+                    <Send className="w-4 h-4 md:w-5 md:h-5 ml-2" />
                   </>
                 )}
               </Button>
             </form>
 
             {/* What happens next */}
-            <div className="mt-12 grid sm:grid-cols-2 gap-6">
+            <div className="mt-8 md:mt-12 grid sm:grid-cols-2 gap-4 md:gap-6">
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 }}
                 whileHover={{ y: -6, boxShadow: "0 20px 40px -15px hsl(var(--primary) / 0.2)" }}
-                className="glass-card p-6 flex items-start gap-4 cursor-pointer"
+                className="glass-card p-4 md:p-6 flex items-start gap-3 md:gap-4 cursor-pointer"
               >
-                <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Clock className="w-5 h-5 text-primary" />
+                <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Clock className="w-4 h-4 md:w-5 md:h-5 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-display-sm mb-1">Réponse rapide</h3>
-                  <p className="text-body-sm text-muted-foreground">
+                  <h3 className="text-base md:text-display-sm mb-0.5 md:mb-1">Réponse rapide</h3>
+                  <p className="text-xs sm:text-body-sm text-muted-foreground">
                     Nous vous répondrons sous 24 à 48 heures.
                   </p>
                 </div>
@@ -186,14 +186,14 @@ const Contact = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
                 whileHover={{ y: -6, boxShadow: "0 20px 40px -15px hsl(var(--primary) / 0.2)" }}
-                className="glass-card p-6 flex items-start gap-4 cursor-pointer"
+                className="glass-card p-4 md:p-6 flex items-start gap-3 md:gap-4 cursor-pointer"
               >
-                <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <MessageSquare className="w-5 h-5 text-primary" />
+                <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <MessageSquare className="w-4 h-4 md:w-5 md:h-5 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-display-sm mb-1">Sans pression</h3>
-                  <p className="text-body-sm text-muted-foreground">
+                  <h3 className="text-base md:text-display-sm mb-0.5 md:mb-1">Sans pression</h3>
+                  <p className="text-xs sm:text-body-sm text-muted-foreground">
                     Discussion constructive, solutions adaptées.
                   </p>
                 </div>

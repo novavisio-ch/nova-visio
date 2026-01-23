@@ -48,16 +48,16 @@ export function Navbar() {
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled ? "glass py-3" : "py-5 bg-transparent"
+        isScrolled ? "glass py-2 md:py-3" : "py-3 md:py-5 bg-transparent"
       )}
     >
-      <nav className="w-full px-6 lg:px-12 flex items-center justify-between">
+      <nav className="w-full px-4 md:px-6 lg:px-12 flex items-center justify-between">
         {/* Logo - Left */}
         <Link to="/" className="text-white hover:text-[#c1b58e] transition-colors flex-shrink-0">
           <img
             src={novavisioLogo}
             alt="NOVA VISIO"
-            className="h-10 w-auto"
+            className="h-7 md:h-10 w-auto"
             style={{ filter: "brightness(0) invert(1)" }}
             onMouseEnter={(e) =>
               (e.currentTarget.style.filter =
@@ -168,13 +168,13 @@ export function Navbar() {
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <div className="md:hidden glass-card mx-4 mt-2 p-6 animate-fade-in">
-          <div className="flex flex-col gap-4">
+        <div className="md:hidden glass-card mx-3 mt-2 p-4 sm:p-6 animate-fade-in max-h-[calc(100vh-80px)] overflow-y-auto">
+          <div className="flex flex-col gap-2 sm:gap-4">
             {/* Accueil */}
             <Link
               to="/"
               className={cn(
-                "text-body-md font-medium transition-colors py-2",
+                "text-sm sm:text-body-md font-medium transition-colors py-2",
                 location.pathname === "/" ? "text-primary" : "text-foreground/70"
               )}
             >
@@ -186,7 +186,7 @@ export function Navbar() {
               <button
                 onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
                 className={cn(
-                  "text-body-md font-medium transition-colors py-2 flex items-center justify-between",
+                  "text-sm sm:text-body-md font-medium transition-colors py-2 flex items-center justify-between",
                   isServicesActive ? "text-primary" : "text-foreground/70"
                 )}
               >
@@ -199,13 +199,13 @@ export function Navbar() {
                 />
               </button>
               {isMobileServicesOpen && (
-                <div className="flex flex-col pl-4 mt-2 gap-2 border-l border-border/30">
+                <div className="flex flex-col pl-4 mt-2 gap-1.5 sm:gap-2 border-l border-border/30">
                   {servicesLinks.map((link) => (
                     <Link
                       key={link.href}
                       to={link.href}
                       className={cn(
-                        "text-body-sm font-medium transition-colors py-2",
+                        "text-xs sm:text-body-sm font-medium transition-colors py-1.5 sm:py-2",
                         location.pathname === link.href ? "text-primary" : "text-foreground/70"
                       )}
                     >
@@ -220,7 +220,7 @@ export function Navbar() {
             <Link
               to="/blog"
               className={cn(
-                "text-body-md font-medium transition-colors py-2",
+                "text-sm sm:text-body-md font-medium transition-colors py-2",
                 location.pathname === "/blog" ? "text-primary" : "text-foreground/70"
               )}
             >
@@ -231,7 +231,7 @@ export function Navbar() {
             <Link
               to="/a-propos"
               className={cn(
-                "text-body-md font-medium transition-colors py-2",
+                "text-sm sm:text-body-md font-medium transition-colors py-2",
                 location.pathname === "/a-propos" ? "text-primary" : "text-foreground/70"
               )}
             >
@@ -242,14 +242,14 @@ export function Navbar() {
             <Link
               to="/contact"
               className={cn(
-                "text-body-md font-medium transition-colors py-2",
+                "text-sm sm:text-body-md font-medium transition-colors py-2",
                 location.pathname === "/contact" ? "text-primary" : "text-foreground/70"
               )}
             >
               Contact
             </Link>
 
-            <Button variant="gold" size="lg" className="mt-4" asChild>
+            <Button variant="gold" size="default" className="mt-3 sm:mt-4 w-full" asChild>
               <Link to="/contact">Parlons de votre projet</Link>
             </Button>
           </div>
