@@ -15,7 +15,16 @@ export const FinalCtaSection = () => {
           {/* Title */}
           <h2 className="mb-6 font-bricolage text-3xl font-bold leading-tight text-white md:text-4xl lg:text-5xl">
             Faites de votre présence en ligne un{" "}
-            <span style={{ color: "#C3B68F" }}>catalyseur de croissance.</span>
+            <span
+              style={{
+                background: "linear-gradient(180deg, #DCCB99 0%, #C3B68F 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+            >
+              catalyseur de croissance.
+            </span>
           </h2>
 
           {/* Subtitle */}
