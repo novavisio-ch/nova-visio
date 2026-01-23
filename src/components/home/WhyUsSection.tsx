@@ -152,7 +152,7 @@ export function WhyUsSection() {
                   </h3>
                   
                   {/* Description */}
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <p className="text-muted-foreground text-lg leading-relaxed">
                     {reason.description}
                   </p>
                 </div>
