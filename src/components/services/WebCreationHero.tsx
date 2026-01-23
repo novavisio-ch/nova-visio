@@ -41,14 +41,30 @@ export function WebCreationHero() {
             </BreadcrumbList>
           </Breadcrumb>
 
-          {/* Sur-titre / Label */}
+          {/* Sur-titre / Labels */}
           <div 
-            className="inline-flex items-center px-4 py-2 rounded-full glass-card mb-6 animate-fade-up"
+            className="flex flex-wrap items-center gap-3 mb-6 animate-fade-up"
             style={{ animationDelay: "0.05s" }}
           >
-            <span className="text-body-sm text-primary">
-              Création de sites web & landing pages
-            </span>
+            <div className="inline-flex items-center px-4 py-2 rounded-full glass-card">
+              <span className="text-body-sm text-primary">
+                Création de sites web & landing pages
+              </span>
+            </div>
+            <div className="inline-flex items-center px-3 py-2 rounded-full glass-card gap-2">
+              <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none">
+                <rect width="24" height="24" rx="4" fill="#330000"/>
+                <text x="12" y="16" textAnchor="middle" fontSize="10" fontWeight="bold" fill="#FF9A00">Ai</text>
+              </svg>
+              <span className="text-body-sm text-muted-foreground">Illustrator</span>
+            </div>
+            <div className="inline-flex items-center px-3 py-2 rounded-full glass-card gap-2">
+              <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none">
+                <rect width="24" height="24" rx="4" fill="#001E36"/>
+                <text x="12" y="16" textAnchor="middle" fontSize="10" fontWeight="bold" fill="#31A8FF">Ps</text>
+              </svg>
+              <span className="text-body-sm text-muted-foreground">Photoshop</span>
+            </div>
           </div>
 
           {/* Main Title */}
