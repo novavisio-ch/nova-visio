@@ -56,7 +56,7 @@ export const ComplementaryServicesSection = () => {
                   <span className="text-[#1f1a3d]/70">Déclinaisons pour votre site, vos réseaux sociaux et vos supports imprimés.</span>
                 </li>
               </ul>
-              <a href="#" className="inline-flex items-center gap-2 text-[#C3B68F] font-medium group/link hover:gap-3 transition-all duration-300">
+              <a href="/identite-visuelle" className="inline-flex items-center gap-2 text-[#C3B68F] font-medium group/link hover:gap-3 transition-all duration-300">
                 En savoir plus sur l'identité visuelle
                 <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
               </a>

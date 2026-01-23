@@ -11,12 +11,12 @@ import {
 } from "@/components/ui/breadcrumb";
 
 const bulletPoints = [
-  "Architecture claire de vos pages et de vos offres.",
-  "Contenus structurés pour rassurer et guider vos visiteurs.",
-  "Un site modifiable par vous, sans jargon technique.",
+  "Un logo clair et mémorable, adapté à tous vos supports.",
+  "Une palette de couleurs cohérente avec votre positionnement.",
+  "Des règles d'usage simples pour une image constante.",
 ];
 
-export function WebCreationHero() {
+export function BrandIdentityHero() {
   return (
     <section className="section-padding relative overflow-hidden">
       {/* Ambient glow */}
@@ -36,42 +36,41 @@ export function WebCreationHero() {
               </BreadcrumbItem>
               <BreadcrumbSeparator className="text-muted-foreground/50" />
               <BreadcrumbItem>
-                <BreadcrumbPage className="text-foreground">Site web</BreadcrumbPage>
+                <BreadcrumbPage className="text-foreground">Logo & identité visuelle</BreadcrumbPage>
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
 
           {/* Sur-titre / Label */}
-          <div 
+          <div
             className="inline-flex items-center px-4 py-2 rounded-full glass-card mb-6 animate-fade-up"
             style={{ animationDelay: "0.05s" }}
           >
             <span className="text-body-sm text-primary">
-              Création de sites web & landing pages
+              Logo & identité visuelle sur mesure
             </span>
           </div>
 
           {/* Main Title */}
-          <h1 
+          <h1
             className="text-display-lg md:text-display-xl mb-8 animate-fade-up leading-tight"
             style={{ animationDelay: "0.1s" }}
           >
-            Des sites web clairs{" "}
-            <span className="text-gradient-gold">au service de vos objectifs.</span>
+            Une identité visuelle claire pour{" "}
+            <span className="text-gradient-gold">rendre votre marque mémorable.</span>
           </h1>
 
           {/* Intro Paragraph */}
-          <p 
+          <p
             className="text-body-lg text-muted-foreground max-w-3xl mb-8 animate-fade-up leading-relaxed"
             style={{ animationDelay: "0.15s" }}
           >
-            NOVA VISIO conçoit des sites vitrines et des landing pages pensés pour clarifier votre offre, 
-            renforcer votre crédibilité et rendre la décision simple pour vos prospects. 
-            Pas de surenchère d'effets : un design sobre, lisible et orienté résultats.
+            Nous créons des identités visuelles sur mesure : logo, couleurs, typographies et règles d'usage,
+            pour que votre marque soit cohérente sur votre site, vos réseaux sociaux et vos supports.
           </p>
 
           {/* Bullet Points */}
-          <ul 
+          <ul
             className="space-y-4 mb-10 animate-fade-up"
             style={{ animationDelay: "0.2s" }}
           >
@@ -84,13 +83,13 @@ export function WebCreationHero() {
           </ul>
 
           {/* CTA */}
-          <div 
+          <div
             className="animate-fade-up"
             style={{ animationDelay: "0.25s" }}
           >
             <Button variant="gold" size="lg" asChild>
               <Link to="/contact">
-                Discutons de votre projet
+                Parler de votre identité visuelle
                 <ArrowRight className="w-5 h-5 ml-1" />
               </Link>
             </Button>

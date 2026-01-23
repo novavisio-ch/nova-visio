@@ -1,0 +1,41 @@
+import { Layout } from "@/components/layout/Layout";
+import { BrandIdentityHero } from "@/components/services/brand/BrandIdentityHero";
+import { BrandIdentityContent } from "@/components/services/brand/BrandIdentityContent";
+import { BrandBenefitsSection } from "@/components/services/brand/BrandBenefitsSection";
+import { BrandOfferSection } from "@/components/services/brand/BrandOfferSection";
+import { BrandStepsSection } from "@/components/services/brand/BrandStepsSection";
+import { BrandComplementarySection } from "@/components/services/brand/BrandComplementarySection";
+import { BrandFaqSection } from "@/components/services/brand/BrandFaqSection";
+import { BrandFinalCtaSection } from "@/components/services/brand/BrandFinalCtaSection";
+
+const IdentiteVisuelle = () => {
+  return (
+    <Layout>
+      {/* Hero Section */}
+      <BrandIdentityHero />
+
+      {/* Content Section - Why custom identity */}
+      <BrandIdentityContent />
+
+      {/* Benefits Section */}
+      <BrandBenefitsSection />
+
+      {/* Offer Section - What's included */}
+      <BrandOfferSection />
+
+      {/* Steps / Timeline */}
+      <BrandStepsSection />
+
+      {/* Complementary Services */}
+      <BrandComplementarySection />
+
+      {/* FAQ Section */}
+      <BrandFaqSection />
+
+      {/* Final CTA Section */}
+      <BrandFinalCtaSection />
+    </Layout>
+  );
+};
+
+export default IdentiteVisuelle;
