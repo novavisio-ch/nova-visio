@@ -1,5 +1,27 @@
 import { CheckCircle } from "lucide-react";
-const benefits = ["Vos clients comprennent en quelques secondes ce que vous faites et comment travailler avec vous.", "Vous bénéficiez d'une image professionnelle, cohérente et alignée sur toutes vos plateformes.", "Vous vendez plus facilement, sans devoir passer tout votre temps à \"gérer le digital\".", "Votre charge mentale liée au digital diminue, vous pouvez vous concentrer sur votre cœur de métier."];
+
+const benefits = [
+  {
+    text: "Vos clients comprennent ",
+    highlight: "en quelques secondes",
+    rest: " ce que vous faites et comment travailler avec vous."
+  },
+  {
+    text: "Vous bénéficiez d'une ",
+    highlight: "image professionnelle, cohérente et alignée",
+    rest: " sur toutes vos plateformes."
+  },
+  {
+    text: "Vous ",
+    highlight: "vendez plus facilement",
+    rest: ", sans devoir passer tout votre temps à \"gérer le digital\"."
+  },
+  {
+    text: "Votre ",
+    highlight: "charge mentale liée au digital diminue",
+    rest: ", vous pouvez vous concentrer sur votre cœur de métier."
+  }
+];
 export function BenefitsSection() {
   return <section className="bg-white py-20 md:py-28">
       <div className="container max-w-6xl">
@@ -24,7 +46,7 @@ export function BenefitsSection() {
                   <CheckCircle className="w-7 h-7 text-accent" strokeWidth={2} />
                 </div>
                 <p className="text-lg md:text-xl text-slate-800 leading-relaxed">
-                  {benefit}
+                  {benefit.text}<span className="font-bold text-slate-900">{benefit.highlight}</span>{benefit.rest}
                 </p>
               </div>)}
           </div>
