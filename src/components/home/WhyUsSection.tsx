@@ -58,11 +58,11 @@ const cardVariants = {
 
 export function WhyUsSection() {
   return (
-    <section className="section-padding relative overflow-hidden">
+    <section className="py-16 md:py-20 lg:py-28 relative overflow-hidden px-4">
       {/* Decorative background elements */}
       <div className="absolute inset-0 pointer-events-none">
         <motion.div 
-          className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl"
+          className="absolute top-20 left-10 w-40 md:w-72 h-40 md:h-72 bg-primary/5 rounded-full blur-3xl"
           animate={{ 
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.5, 0.3]
@@ -70,7 +70,7 @@ export function WhyUsSection() {
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div 
-          className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"
+          className="absolute bottom-20 right-10 w-48 md:w-96 h-48 md:h-96 bg-purple-500/5 rounded-full blur-3xl"
           animate={{ 
             scale: [1.2, 1, 1.2],
             opacity: [0.3, 0.5, 0.3]
@@ -82,31 +82,31 @@ export function WhyUsSection() {
       <div className="container relative z-10">
         {/* Header with animated accent */}
         <motion.div 
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
           <motion.div
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6"
+            className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-primary/10 border border-primary/20 mb-4 md:mb-6"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            <Star className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-primary">Notre différence</span>
+            <Star className="w-3.5 h-3.5 md:w-4 md:h-4 text-primary" />
+            <span className="text-xs md:text-sm font-medium text-primary">Notre différence</span>
           </motion.div>
           
-          <h2 className="mb-4 text-display-lg">
+          <h2 className="text-2xl sm:text-3xl md:text-display-lg mb-3 md:mb-4 leading-tight">
             Pourquoi choisir <span className="text-gradient-gold">NOVA VISIO</span> ?
           </h2>
         </motion.div>
 
         {/* Cards Grid */}
         <motion.div 
-          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -120,7 +120,7 @@ export function WhyUsSection() {
             >
               {/* Card */}
               <motion.div 
-                className="relative h-full p-8 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/50 overflow-hidden transition-all duration-500"
+                className="relative h-full p-5 sm:p-6 md:p-8 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/50 overflow-hidden transition-all duration-500"
                 whileHover={{ 
                   y: -8,
                   boxShadow: "0 20px 40px -15px rgba(195, 182, 143, 0.3)"
@@ -130,29 +130,29 @@ export function WhyUsSection() {
                 <div className={`absolute inset-0 bg-gradient-to-br ${reason.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
                 
                 {/* Decorative corner accent */}
-                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-primary/10 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute top-0 right-0 w-16 md:w-20 h-16 md:h-20 bg-gradient-to-br from-primary/10 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 
                 {/* Content */}
                 <div className="relative z-10 text-center">
                   {/* Icon with animated ring */}
-                  <div className="relative w-16 h-16 mx-auto mb-6">
+                  <div className="relative w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 md:mb-6">
                     <motion.div 
                       className="absolute inset-0 rounded-full border-2 border-primary/20"
                       animate={{ scale: [1, 1.2, 1], opacity: [0.5, 0, 0.5] }}
                       transition={{ duration: 3, repeat: Infinity, delay: index * 0.5 }}
                     />
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <reason.icon className="w-8 h-8 text-primary transition-transform duration-300 group-hover:scale-125" />
+                      <reason.icon className="w-6 h-6 md:w-8 md:h-8 text-primary transition-transform duration-300 group-hover:scale-125" />
                     </div>
                   </div>
                   
                   {/* Title */}
-                  <h3 className="text-lg font-bold mb-3 group-hover:text-primary transition-colors duration-300 whitespace-pre-line">
+                  <h3 className="text-base md:text-lg font-bold mb-2 md:mb-3 group-hover:text-primary transition-colors duration-300 whitespace-pre-line">
                     {reason.title}
                   </h3>
                   
                   {/* Description */}
-                  <p className="text-muted-foreground text-lg leading-relaxed">
+                  <p className="text-muted-foreground text-sm md:text-base lg:text-lg leading-relaxed">
                     {reason.description}
                   </p>
                 </div>
@@ -168,7 +168,7 @@ export function WhyUsSection() {
               
               {/* Number badge */}
               <motion.div 
-                className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-primary text-background flex items-center justify-center text-sm font-bold shadow-lg"
+                className="absolute -top-2 -left-2 md:-top-3 md:-left-3 w-6 h-6 md:w-8 md:h-8 rounded-full bg-primary text-background flex items-center justify-center text-xs md:text-sm font-bold shadow-lg"
                 initial={{ scale: 0, rotate: -180 }}
                 whileInView={{ scale: 1, rotate: 0 }}
                 viewport={{ once: true }}
