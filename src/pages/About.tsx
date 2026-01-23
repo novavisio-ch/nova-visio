@@ -212,10 +212,7 @@ const About = () => {
                   Notre façon de <span className="text-gradient-gold">travailler</span>
                 </h2>
                 <p className="text-body-lg text-foreground/90 leading-relaxed mb-8">
-                  Nous travaillons avec des{" "}
-                  <span className="text-primary font-semibold">explications simples</span>, un processus étape par étape
-                  et une <span className="text-primary font-semibold">transparence totale</span>. Notre relation se
-                  construit sur la confiance et l'absence de toute pression commerciale.
+                  De l'identité visuelle à la création de votre site internet, nous offrons des solutions complètes et modulables.
                 </p>
                 <Button variant="gold" size="lg" asChild>
                   <Link to="/contact">
