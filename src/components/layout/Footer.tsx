@@ -35,7 +35,7 @@ export function Footer() {
             </Link>
           </div>
 
-          <p className="text-body-sm text-muted-foreground">
+          <p className="text-sm text-muted-foreground">
             © {currentYear} NOVA VISIO. Tous droits réservés.
           </p>
         </div>
