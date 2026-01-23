@@ -19,7 +19,7 @@ function ServiceCard({
 }: ServiceCardProps) {
   return <div className="group relative flex flex-col items-center text-center p-8 md:p-10 rounded-2xl border border-[#2D284D] bg-transparent backdrop-blur-sm transition-all duration-500 hover:border-[#C3B68F] hover:shadow-[0_0_40px_-10px_#C3B68F]">
       {/* Badge */}
-      <span className="inline-block px-4 py-1.5 rounded-full bg-[#1a1535] text-white text-xs font-medium tracking-wide mb-6">
+      <span className="inline-block px-4 py-1.5 rounded-full btn-gradient-gold text-xs font-medium tracking-wide mb-6">
         POUR : ARTISANS, PME, FREELANCES, STARTUP
       </span>
 
