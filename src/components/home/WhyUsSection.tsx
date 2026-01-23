@@ -10,7 +10,7 @@ const reasons = [
   },
   {
     icon: Users,
-    title: "Accompagnement pas à pas",
+    title: "Accompagnement\npas à pas",
     description: "Nous vous guidons à chaque étape de votre transformation digitale.",
     gradient: "from-purple-500/20 to-purple-500/5"
   },
@@ -147,7 +147,7 @@ export function WhyUsSection() {
                   </div>
                   
                   {/* Title */}
-                  <h3 className="text-lg font-bold mb-3 group-hover:text-primary transition-colors duration-300">
+                  <h3 className="text-lg font-bold mb-3 group-hover:text-primary transition-colors duration-300 whitespace-pre-line">
                     {reason.title}
                   </h3>
                   
