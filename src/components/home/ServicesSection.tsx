@@ -25,10 +25,14 @@ function ServiceCard({
 
       {/* Title */}
       <h3 className="text-display-sm md:text-display-md text-white mb-4 text-center">
-        {title.includes("et") ? <>
+        {title.includes(" et ") ? <>
             {title.split(" et ")[0]}
             <br />
             et {title.split(" et ")[1]}
+          </> : title.includes(" & ") ? <>
+            {title.split(" & ")[0]}
+            <br />
+            & {title.split(" & ")[1]}
           </> : title}
       </h3>
 
