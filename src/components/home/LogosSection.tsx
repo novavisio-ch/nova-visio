@@ -8,6 +8,13 @@ import logoSynergyLodges from "@/assets/logos/synergylodges.png";
 import logoSyngraph from "@/assets/logos/syngraph.png";
 import logoVam from "@/assets/logos/vam.png";
 import logoWinsihams from "@/assets/logos/winsihams.png";
+import logoSimplia from "@/assets/logos/simplia.png";
+import logoMlkNutrition from "@/assets/logos/mlk-nutrition.png";
+import logoAuFilDAllinges from "@/assets/logos/aufildallinges.png";
+import logoCapillusAcademy from "@/assets/logos/capillus-academy.png";
+import logoGastonLastes from "@/assets/logos/gaston-lastes.png";
+import logoHobbyz from "@/assets/logos/hobbyz.png";
+import logoHobbyWebAcademy from "@/assets/logos/hobbyweb-academy.png";
 
 export function LogosSection() {
   const logos = [
@@ -21,6 +28,13 @@ export function LogosSection() {
     { src: logoSyngraph, alt: "Synergie Graphic" },
     { src: logoVam, alt: "Vivre au Maroc" },
     { src: logoWinsihams, alt: "Winsihams" },
+    { src: logoSimplia, alt: "Simplia" },
+    { src: logoMlkNutrition, alt: "MLK Nutrition" },
+    { src: logoAuFilDAllinges, alt: "Au Fil d'Allinges" },
+    { src: logoCapillusAcademy, alt: "Capillus Academy" },
+    { src: logoGastonLastes, alt: "Gaston Lastes" },
+    { src: logoHobbyz, alt: "Hobbyz" },
+    { src: logoHobbyWebAcademy, alt: "HobbyWeb Academy" },
   ];
 
   return (
