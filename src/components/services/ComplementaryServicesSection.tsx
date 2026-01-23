@@ -26,7 +26,7 @@ export const ComplementaryServicesSection = () => {
   return (
     <section 
       className="py-20 md:py-28"
-      style={{ background: "linear-gradient(135deg, #030827 0%, #2D284D 100%)" }}
+      style={{ background: "linear-gradient(135deg, #000000 0%, #1f1a3d 100%)" }}
     >
       <div className="container mx-auto px-4 max-w-6xl">
         {/* Section Header */}
