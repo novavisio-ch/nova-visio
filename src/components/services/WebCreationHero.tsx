@@ -64,8 +64,8 @@ export function WebCreationHero() {
             className="text-display-lg md:text-display-xl mb-8 animate-fade-up leading-tight"
             style={{ animationDelay: "0.1s" }}
           >
-            Des sites web clairs{" "}
-            <span className="text-gradient-gold">au service de vos objectifs</span>
+            Votre site web{" "}
+            <span className="text-gradient-gold">au service de vos objectifs.</span>
           </h1>
 
           {/* Intro Paragraph */}
