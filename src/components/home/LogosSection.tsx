@@ -23,9 +23,6 @@ export function LogosSection() {
     { src: logoWinsihams, alt: "Winsihams" },
   ];
 
-  // Duplicate logos for seamless loop
-  const duplicatedLogos = [...logos, ...logos];
-
   return (
     <section className="py-12 md:py-16 overflow-hidden bg-transparent">
       {/* Marquee container - 75% width on desktop, 95% on mobile */}
@@ -40,8 +37,8 @@ export function LogosSection() {
       >
         {/* Scrolling track */}
         <div className="flex overflow-hidden">
-          <div className="flex gap-8 md:gap-12 animate-marquee">
-            {duplicatedLogos.map((logo, index) => (
+          <div className="flex shrink-0 gap-8 md:gap-12 animate-marquee">
+            {logos.map((logo, index) => (
               <div
                 key={index}
                 className="flex items-center justify-center h-16 md:h-20 px-6 shrink-0"
@@ -49,16 +46,16 @@ export function LogosSection() {
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className="h-10 md:h-14 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity"
+                  className="h-10 md:h-14 w-auto max-w-[150px] md:max-w-[180px] object-contain opacity-60 hover:opacity-100 transition-opacity"
                 />
               </div>
             ))}
           </div>
           <div
-            className="flex gap-8 md:gap-12 animate-marquee"
+            className="flex shrink-0 gap-8 md:gap-12 animate-marquee"
             aria-hidden="true"
           >
-            {duplicatedLogos.map((logo, index) => (
+            {logos.map((logo, index) => (
               <div
                 key={`duplicate-${index}`}
                 className="flex items-center justify-center h-16 md:h-20 px-6 shrink-0"
@@ -66,7 +63,7 @@ export function LogosSection() {
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className="h-10 md:h-14 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity"
+                  className="h-10 md:h-14 w-auto max-w-[150px] md:max-w-[180px] object-contain opacity-60 hover:opacity-100 transition-opacity"
                 />
               </div>
             ))}
