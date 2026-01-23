@@ -118,7 +118,7 @@ const About = () => {
               className="p-8 rounded-3xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/20 backdrop-blur-sm cursor-pointer"
             >
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-xl bg-primary/30 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center">
                   <Target className="w-5 h-5 text-primary" />
                 </div>
                 <span className="text-sm font-medium text-primary uppercase tracking-wider">Vision</span>
