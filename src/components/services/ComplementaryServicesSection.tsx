@@ -35,25 +35,25 @@ export const ComplementaryServicesSection = () => {
         <div className="group mb-10 md:mb-14 rounded-2xl border border-[#C3B68F]/40 bg-[#0a0f2c]/80 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_rgba(195,182,143,0.25)] hover:scale-[1.01]">
           <div className="grid md:grid-cols-2 gap-0">
             {/* Text Content */}
-            <div className="p-8 md:p-10 lg:p-12 flex flex-col justify-center bg-transparent">
-              <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-4">
+            <div className="p-8 md:p-10 lg:p-12 flex flex-col justify-center bg-white">
+              <h3 className="font-display text-2xl md:text-3xl font-bold text-[#1f1a3d] mb-4">
                 Identité visuelle
               </h3>
-              <p className="text-white/80 mb-6 leading-relaxed">
+              <p className="text-[#1f1a3d]/80 mb-6 leading-relaxed">
                 Nous concevons ou faisons évoluer votre identité visuelle pour qu'elle soit claire, reconnaissable et cohérente sur votre site, vos réseaux sociaux et vos supports de communication.
               </p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#C3B68F] mt-2 flex-shrink-0" />
-                  <span className="text-white/70">Logo, palette de couleurs et typographies adaptés à votre univers.</span>
+                  <span className="text-[#1f1a3d]/70">Logo, palette de couleurs et typographies adaptés à votre univers.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#C3B68F] mt-2 flex-shrink-0" />
-                  <span className="text-white/70">Charte graphique et règles d'usage pour garder la même image partout.</span>
+                  <span className="text-[#1f1a3d]/70">Charte graphique et règles d'usage pour garder la même image partout.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#C3B68F] mt-2 flex-shrink-0" />
-                  <span className="text-white/70">Déclinaisons pour votre site, vos réseaux sociaux et vos supports imprimés.</span>
+                  <span className="text-[#1f1a3d]/70">Déclinaisons pour votre site, vos réseaux sociaux et vos supports imprimés.</span>
                 </li>
               </ul>
               <a href="#" className="inline-flex items-center gap-2 text-[#C3B68F] font-medium group/link hover:gap-3 transition-all duration-300">
