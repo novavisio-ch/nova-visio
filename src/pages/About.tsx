@@ -37,9 +37,7 @@ const About = () => {
       <section className="pb-20">
         <div className="container">
           <div className="glass-card p-8 md:p-12 max-w-4xl mx-auto">
-            <p className="text-body-lg text-foreground/90 leading-relaxed mb-6">NOVA VISIO est né d'un constat simple : beaucoup d'entrepreneurs se sentent perdus face au digital. Entre les multiples plateformes, les tendances changeantes et le jargon technique, créer une présence en ligne cohérente peut sembler insurmontable.
-
-Nous accompagnons les marques locales et internationales dans la création d’identités fortes, de contenus impactants et de sites web performants. Chaque projet est une collaboration unique, et notre mission est de le sublimer.</p>
+            
             <p className="text-body-lg text-foreground/90 leading-relaxed mb-6">NOVA VISIO est né d'un constat simple : beaucoup d'entrepreneurs se sentent perdus face au digital. Entre les multiples plateformes, les tendances changeantes et le jargon technique, créer une présence en ligne cohérente peut sembler insurmontable.</p>
             <p className="text-body-lg text-foreground/90 leading-relaxed mb-6">Nous accompagnons les marques locales et internationales dans la création d'identités fortes, de contenus impactants et de sites web performants. Chaque projet est une collaboration unique, et notre mission est de le sublimer.</p>
             <p className="text-body-lg text-foreground/90 leading-relaxed">
@@ -87,7 +85,7 @@ Nous accompagnons les marques locales et internationales dans la création d’i
                   <value.icon className="w-6 h-6 text-primary transition-transform duration-300 group-hover:scale-125" />
                 </div>
                 <h3 className="text-display-sm mb-2">{value.title}</h3>
-                <p className="text-muted-foreground text-display-sm">{value.description}</p>
+                <p className="text-muted-foreground text-lg">{value.description}</p>
               </div>)}
           </div>
         </div>
