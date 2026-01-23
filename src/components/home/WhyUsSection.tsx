@@ -147,7 +147,7 @@ export function WhyUsSection() {
                   </div>
                   
                   {/* Title */}
-                  <h3 className="text-display-sm mb-3 group-hover:text-primary transition-colors duration-300">
+                  <h3 className="text-lg font-bold mb-3 group-hover:text-primary transition-colors duration-300">
                     {reason.title}
                   </h3>
                   
