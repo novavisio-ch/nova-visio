@@ -38,7 +38,10 @@ export const FinalCtaSection = () => {
           <Button
             asChild
             size="lg"
-            className="group rounded-lg bg-white px-8 py-6 text-base font-semibold text-[#2D284D] shadow-lg transition-all duration-300 hover:bg-gray-100 hover:shadow-xl md:text-lg"
+            className="group rounded-lg px-8 py-6 text-base font-semibold text-[#2D284D] shadow-lg transition-all duration-300 hover:shadow-xl md:text-lg"
+            style={{
+              background: "linear-gradient(180deg, #DCCB99 0%, #C3B68F 100%)",
+            }}
           >
             <Link to="/contact">
               Devenir votre catalyseur
