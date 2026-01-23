@@ -1,4 +1,4 @@
-import { Check } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 const webBenefits = ["Structure claire pour présenter vos offres et guider vos visiteurs.", "Design professionnel qui renforce votre crédibilité.", "Pages pensées pour transformer vos visiteurs en clients.", "Site modifiable par vous, sans compétences techniques.", "Optimisé pour être facilement trouvé sur les moteurs de recherche."];
@@ -25,35 +25,31 @@ function ServiceCard({
 
       {/* Title */}
       <h3 className="text-display-sm md:text-display-md text-white mb-4 text-center">
-        {title.includes("et") ? (
-          <>
+        {title.includes("et") ? <>
             {title.split(" et ")[0]}
             <br />
             et {title.split(" et ")[1]}
-          </>
-        ) : title}
+          </> : title}
       </h3>
 
       {/* Description */}
       <p className="mb-8 max-w-sm text-white text-display-sm text-center">
         {description.split(" ").reduce((acc: string[][], word, i, arr) => {
-          const third = Math.ceil(arr.length / 3);
-          const lineIndex = Math.min(Math.floor(i / third), 2);
-          if (!acc[lineIndex]) acc[lineIndex] = [];
-          acc[lineIndex].push(word);
-          return acc;
-        }, []).map((line, i, arr) => (
-          <span key={i}>
+        const third = Math.ceil(arr.length / 3);
+        const lineIndex = Math.min(Math.floor(i / third), 2);
+        if (!acc[lineIndex]) acc[lineIndex] = [];
+        acc[lineIndex].push(word);
+        return acc;
+      }, []).map((line, i, arr) => <span key={i}>
             {line.join(" ")}
             {i < arr.length - 1 && <br />}
-          </span>
-        ))}
+          </span>)}
       </p>
 
       {/* Benefits list */}
       <ul className="space-y-3 mb-8 text-left w-full max-w-sm">
         {benefits.map((benefit, index) => <li key={index} className="flex items-start gap-3">
-            <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+            <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
             <span className="text-muted-foreground text-2xl">{benefit}</span>
           </li>)}
       </ul>
