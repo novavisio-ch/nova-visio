@@ -54,19 +54,24 @@ export const FaqSection = () => {
       <div className="container mx-auto px-4">
         {/* Central FAQ Container */}
         <div
-          className="mx-auto max-w-4xl rounded-3xl px-6 py-12 md:px-12 md:py-16"
+          className="mx-auto max-w-4xl rounded-3xl border-2 bg-white px-6 py-12 md:px-12 md:py-16"
           style={{
-            background: "rgba(30, 30, 35, 0.8)",
-            boxShadow:
-              "0 25px 50px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05)",
+            borderColor: "#C3B68F",
+            boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.1)",
           }}
         >
           {/* Title */}
           <div className="mb-12 text-center">
-            <h2 className="mb-4 font-bricolage text-2xl font-bold text-white md:text-3xl lg:text-4xl">
+            <h2
+              className="mb-4 font-bricolage text-2xl font-bold md:text-3xl lg:text-4xl"
+              style={{ color: "#2D284D" }}
+            >
               Des réponses à vos questions sur la création de site web
             </h2>
-            <p className="mx-auto max-w-2xl text-base text-gray-400 md:text-lg">
+            <p
+              className="mx-auto max-w-2xl text-base md:text-lg"
+              style={{ color: "#2D284D", opacity: 0.7 }}
+            >
               Une sélection de questions que l'on nous pose souvent avant de
               lancer un projet avec NOVA VISIO.
             </p>
@@ -78,12 +83,19 @@ export const FaqSection = () => {
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="border-b border-white/10 last:border-b-0"
+                className="last:border-b-0"
+                style={{ borderColor: "rgba(195, 182, 143, 0.3)" }}
               >
-                <AccordionTrigger className="py-5 text-left font-bricolage text-base font-medium text-white hover:no-underline md:text-lg [&[data-state=open]>svg]:rotate-45">
+                <AccordionTrigger
+                  className="py-5 text-left font-bricolage text-base font-medium hover:no-underline md:text-lg [&[data-state=open]>svg]:rotate-45"
+                  style={{ color: "#2D284D" }}
+                >
                   {item.question}
                 </AccordionTrigger>
-                <AccordionContent className="pb-5 text-sm leading-relaxed text-gray-400 md:text-base">
+                <AccordionContent
+                  className="pb-5 text-sm leading-relaxed md:text-base"
+                  style={{ color: "#2D284D", opacity: 0.8 }}
+                >
                   {item.answer}
                 </AccordionContent>
               </AccordionItem>
