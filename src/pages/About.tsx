@@ -124,8 +124,8 @@ const About = () => {
                 <span className="text-sm font-medium text-primary uppercase tracking-wider">Vision</span>
               </div>
               <p className="text-foreground/90 leading-relaxed">
-                Créer des sites web et des identités qui sont{" "}
-                <span className="text-primary font-semibold">sobres, clairs et durables</span>.
+                Créer des solutions visuelles qui marquent les esprits, en offrant une approche sur-mesure, pensée et centrée sur une idée forte :{" "}
+                <span className="text-primary font-semibold">nos clients sont nos partenaires</span>.
               </p>
             </motion.div>
 
