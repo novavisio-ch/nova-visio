@@ -1,72 +1,214 @@
-const steps = [{
-  number: "01",
-  title: "Clarification du projet",
-  description: "Un premier échange approfondi pour comprendre votre activité, vos objectifs, votre positionnement et vos contraintes. Nous posons les bases du projet et identifions ce qui doit être clarifié avant toute création."
-}, {
-  number: "02",
-  title: "Diagnostic stratégique",
-  description: "Nous analysons votre situation actuelle : image de marque, site existant, cohérence visuelle, messages et parcours utilisateur. Cette étape permet d'identifier les leviers pertinents et d'éliminer les éléments inutiles ou contre-productifs."
-}, {
-  number: "03",
-  title: "Fondations de marque & identité",
-  description: "Nous définissons ou consolidons les fondations de votre marque : positionnement, identité visuelle, tonalité et structure des messages. L'objectif est de créer une base claire et cohérente avant la conception du site et des supports."
-}, {
-  number: "04",
-  title: "Conception web & parcours utilisateur",
-  description: "Nous concevons un site web structuré, lisible et orienté crédibilité : architecture des pages, hiérarchie de l'information, expérience utilisateur et design. Chaque élément est pensé pour rassurer, clarifier et faciliter la décision."
-}, {
-  number: "05",
-  title: "Déploiement & accompagnement",
-  description: "Nous finalisons la mise en ligne et vous accompagnons dans la prise en main : ajustements, évolutions et cohérence dans le temps. Le site et l'identité deviennent des outils durables, pas des supports figés."
-}];
+import { motion } from "framer-motion";
+import { MessageCircle, Search, Palette, Layout, Rocket } from "lucide-react";
+
+const steps = [
+  {
+    number: "01",
+    title: "Clarification",
+    subtitle: "du projet",
+    description: "Un premier échange pour comprendre votre activité, vos objectifs et vos contraintes.",
+    icon: MessageCircle,
+    color: "from-primary/20 to-primary/5",
+  },
+  {
+    number: "02",
+    title: "Diagnostic",
+    subtitle: "stratégique",
+    description: "Analyse de votre situation actuelle : image de marque, cohérence visuelle et messages.",
+    icon: Search,
+    color: "from-purple-500/20 to-purple-500/5",
+  },
+  {
+    number: "03",
+    title: "Fondations",
+    subtitle: "de marque",
+    description: "Définition du positionnement, identité visuelle, tonalité et structure des messages.",
+    icon: Palette,
+    color: "from-primary/20 to-primary/5",
+  },
+  {
+    number: "04",
+    title: "Conception",
+    subtitle: "web & UX",
+    description: "Site structuré, lisible et orienté crédibilité avec une expérience utilisateur optimale.",
+    icon: Layout,
+    color: "from-purple-500/20 to-purple-500/5",
+  },
+  {
+    number: "05",
+    title: "Déploiement",
+    subtitle: "& suivi",
+    description: "Mise en ligne et accompagnement pour des outils durables et évolutifs.",
+    icon: Rocket,
+    color: "from-primary/20 to-primary/5",
+  },
+];
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 40, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      type: "spring" as const,
+      stiffness: 100,
+      damping: 15,
+    },
+  },
+};
+
 export function StepsSection() {
-  return <section className="py-16 md:py-20 lg:py-28 px-4">
-      <div className="container max-w-5xl mx-auto">
+  return (
+    <section className="py-16 md:py-20 lg:py-28 px-4 overflow-hidden">
+      <div className="container max-w-6xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-10 md:mb-16 lg:mb-20">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12 md:mb-16 lg:mb-20"
+        >
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 leading-tight">
             Notre méthode, <span className="text-gradient-gold">étape par étape</span>
           </h2>
-          <p className="text-body text-sm sm:text-base md:text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed text-center">
+          <p className="text-body text-sm sm:text-base md:text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed">
             Chaque projet suit un processus clair. L'objectif : réduire la complexité,
             <br className="hidden md:block" />
             structurer vos idées et créer des supports durables.
           </p>
-        </div>
+        </motion.div>
 
-        {/* Timeline */}
-        <div className="relative">
-          {/* Vertical connector line - visible on all screens */}
-          <div className="absolute left-4 sm:left-6 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary/50 via-primary/30 to-primary/10 transform md:-translate-x-1/2" />
-
-          {/* Steps */}
-          <div className="space-y-8 md:space-y-12 lg:space-y-16">
-            {steps.map((step, index) => <div key={step.number} className={`group relative flex flex-col md:flex-row items-start gap-4 md:gap-12 transition-all duration-300 hover:scale-[1.02] ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}>
-                {/* Number circle - positioned on the line */}
-                <div className="absolute left-4 sm:left-6 md:left-1/2 transform -translate-x-1/2 z-10 group cursor-pointer">
-                  <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-background border-2 border-primary flex items-center justify-center transition-all duration-300 group-hover:shadow-[0_0_30px_-5px_#C3B68F] group-hover:scale-110">
-                    <span className="text-primary font-bold text-xs sm:text-sm md:text-lg">{step.number}</span>
-                  </div>
-                </div>
-
-                {/* Spacer for mobile layout */}
-                <div className="w-8 sm:w-10 md:hidden" />
-
-                {/* Content card */}
-                <div className={`flex-1 ml-10 sm:ml-12 md:ml-0 ${index % 2 === 0 ? "md:pr-16 md:text-right" : "md:pl-16 md:text-left"}`}>
-                  <div className="glass-card p-4 sm:p-5 md:p-6 lg:p-8 transition-all duration-300 group-hover:border-primary/40 group-hover:shadow-[0_0_40px_-10px_#C3B68F]">
-                    <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-foreground mb-2 md:mb-3">
-                      {step.title}
-                    </h3>
-                    <p className="text-body leading-relaxed text-sm sm:text-base md:text-body-lg">{step.description}</p>
-                  </div>
-                </div>
-
-                {/* Empty space for alternating layout on desktop */}
-                <div className="hidden md:block flex-1" />
-              </div>)}
+        {/* Creative Timeline */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          className="relative"
+        >
+          {/* Horizontal progress line - desktop only */}
+          <div className="hidden lg:block absolute top-[72px] left-[10%] right-[10%] h-px">
+            <div className="w-full h-full bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
+            <motion.div
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.5, delay: 0.5, ease: "easeOut" }}
+              className="absolute inset-0 bg-gradient-to-r from-primary/60 via-primary to-primary/60 origin-left"
+            />
           </div>
-        </div>
+
+          {/* Steps Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6">
+            {steps.map((step, index) => {
+              const Icon = step.icon;
+              return (
+                <motion.div
+                  key={step.number}
+                  variants={cardVariants}
+                  className="group relative"
+                >
+                  {/* Card */}
+                  <div className="relative h-full">
+                    {/* Floating number badge */}
+                    <motion.div
+                      whileHover={{ scale: 1.15, rotate: -5 }}
+                      className="absolute -top-3 -left-2 z-20 w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center shadow-lg shadow-primary/30"
+                    >
+                      <span className="text-background font-bold text-sm">{step.number}</span>
+                    </motion.div>
+
+                    {/* Main card */}
+                    <div
+                      className={`relative h-full pt-8 pb-6 px-5 rounded-2xl border border-white/10 bg-gradient-to-b ${step.color} backdrop-blur-sm transition-all duration-500 group-hover:border-primary/50 group-hover:shadow-[0_0_50px_-12px_#C3B68F] group-hover:-translate-y-2`}
+                    >
+                      {/* Icon container */}
+                      <div className="mb-4 relative">
+                        <div className="w-12 h-12 rounded-xl bg-background/50 border border-white/10 flex items-center justify-center transition-all duration-300 group-hover:border-primary/30 group-hover:bg-primary/10">
+                          <Icon className="w-6 h-6 text-primary transition-transform duration-300 group-hover:scale-110" />
+                        </div>
+                        {/* Decorative glow */}
+                        <div className="absolute inset-0 w-12 h-12 rounded-xl bg-primary/20 blur-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                      </div>
+
+                      {/* Title */}
+                      <h3 className="text-lg md:text-xl font-bold text-foreground mb-1 leading-tight">
+                        {step.title}
+                      </h3>
+                      <p className="text-primary text-sm font-medium mb-3">{step.subtitle}</p>
+
+                      {/* Description */}
+                      <p className="text-body text-sm leading-relaxed">
+                        {step.description}
+                      </p>
+
+                      {/* Connector arrow - desktop only */}
+                      {index < steps.length - 1 && (
+                        <div className="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 z-10">
+                          <motion.div
+                            initial={{ opacity: 0, x: -10 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.3 + index * 0.15 }}
+                            className="w-6 h-6 rounded-full bg-background border border-primary/30 flex items-center justify-center"
+                          >
+                            <svg
+                              className="w-3 h-3 text-primary"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M9 5l7 7-7 7"
+                              />
+                            </svg>
+                          </motion.div>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Mobile connector line */}
+                  {index < steps.length - 1 && (
+                    <div className="lg:hidden flex justify-center py-2">
+                      <div className="w-px h-8 bg-gradient-to-b from-primary/50 to-transparent" />
+                    </div>
+                  )}
+                </motion.div>
+              );
+            })}
+          </div>
+        </motion.div>
+
+        {/* Bottom accent */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.8, duration: 0.5 }}
+          className="mt-12 md:mt-16 flex justify-center"
+        >
+          <div className="flex items-center gap-3 px-6 py-3 rounded-full border border-primary/30 bg-primary/5 backdrop-blur-sm">
+            <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+            <span className="text-body text-sm">Processus transparent et collaboratif</span>
+          </div>
+        </motion.div>
       </div>
-    </section>;
+    </section>
+  );
 }
