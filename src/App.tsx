@@ -8,6 +8,7 @@ import SiteWeb from "./pages/SiteWeb";
 import IdentiteVisuelle from "./pages/IdentiteVisuelle";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/identite-visuelle" element={<IdentiteVisuelle />} />
           <Route path="/a-propos" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/blog" element={<Blog />} />
           {/* Redirect old /services route to /site-web */}
           <Route path="/services" element={<SiteWeb />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
