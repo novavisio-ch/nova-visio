@@ -122,7 +122,24 @@ const About = () => {
             </motion.div>
 
             {/* Vision Block - Small - Scale & Rotate */}
-            
+            <motion.div variants={itemVariants} whileHover={{
+            scale: 1.03,
+            rotate: 1,
+            transition: {
+              duration: 0.3
+            }
+          }} className="p-8 rounded-3xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/20 backdrop-blur-sm cursor-pointer">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center">
+                  <Target className="w-5 h-5 text-primary" />
+                </div>
+                <span className="text-sm font-medium text-primary uppercase tracking-wider">Vision</span>
+              </div>
+              <p className="text-foreground/90 leading-relaxed text-xl">
+                Créer des solutions visuelles qui marquent les esprits, en offrant une approche sur-mesure, pensée et centrée sur une idée forte :{" "}
+                <span className="text-primary font-semibold">nos clients sont nos partenaires</span>.
+              </p>
+            </motion.div>
 
             {/* Values Grid - Different animations for each */}
             {values.map((value, index) => <motion.div key={index} variants={itemVariants} whileHover={index === 0 ? {
