@@ -59,7 +59,7 @@ const handler = async (req: Request): Promise<Response> => {
     // Send notification email to the business
     const emailResponse = await resend.emails.send({
       from: "NovaVisio <noreply@novavisio.ch>",
-      to: ["contact@novavisio.ch"],
+      to: ["hello@novavisio.ch"],
       subject: `Nouvelle demande de contact - ${safeFirstName} ${safeLastName}`,
       html: `
         <h1>Nouvelle demande de contact</h1>
