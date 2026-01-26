@@ -3,14 +3,6 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Code } from "lucide-react";
 import figmaIcon from "@/assets/icons/figma.png";
 import webflowIcon from "@/assets/icons/webflow.png";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
 
 const bulletPoints = [
   "Architecture claire de vos pages et de vos offres.",
@@ -26,23 +18,6 @@ export function WebCreationHero() {
 
       <div className="container relative">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Breadcrumb */}
-          <Breadcrumb className="mb-8 animate-fade-up justify-center">
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink asChild>
-                  <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">
-                    Accueil
-                  </Link>
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator className="text-muted-foreground/50" />
-              <BreadcrumbItem>
-                <BreadcrumbPage className="text-foreground">Site web</BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
-
           {/* Sur-titre / Labels */}
           <div 
             className="flex flex-wrap items-center justify-center gap-2 mb-6 animate-fade-up"

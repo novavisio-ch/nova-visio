@@ -1,14 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle } from "lucide-react";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
 import illustratorIcon from "@/assets/icons/illustrator.svg";
 import photoshopIcon from "@/assets/icons/photoshop.svg";
 
@@ -26,23 +18,6 @@ export function BrandIdentityHero() {
 
       <div className="container relative">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Breadcrumb */}
-          <Breadcrumb className="mb-8 animate-fade-up justify-center">
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink asChild>
-                  <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">
-                    Accueil
-                  </Link>
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator className="text-muted-foreground/50" />
-              <BreadcrumbItem>
-                <BreadcrumbPage className="text-foreground">Logo & identité visuelle</BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
-
           {/* Sur-titre / Label with tool badges */}
           <div
             className="flex flex-wrap items-center justify-center gap-2 mb-6 animate-fade-up"
