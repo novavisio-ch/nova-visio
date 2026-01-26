@@ -55,7 +55,7 @@ const BlogArticle5Erreurs = () => {
                 Avoir un site web ne suffit plus. Beaucoup d'entreprises ont déjà une présence en ligne, mais leur site ne génère ni demandes de contact, ni rendez-vous, ni demandes de devis. Il reste là, comme une carte de visite figée, alors qu'il pourrait devenir un véritable levier de développement.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Dans cet article, on passe en revue 5 erreurs très fréquentes que je vois sur les sites de TPE/PME et de studios, et surtout comment les éviter pour que votre site commence enfin à travailler pour vous.
+                Dans cet article, nous passons en revue 5 erreurs très fréquentes que nous voyons sur les sites de TPE/PME et de studios, et surtout comment les éviter pour que votre site commence enfin à travailler pour vous.
               </p>
             </div>
             
@@ -285,7 +285,7 @@ const BlogArticle5Erreurs = () => {
                 Un site web efficace n'est pas forcément le plus spectaculaire visuellement. C'est celui qui est clair, centré sur vos clients, agréable à utiliser, et qui les guide naturellement vers la prise de contact. En évitant ces 5 erreurs, vous faites déjà un grand pas vers un site qui vous aide vraiment à développer votre activité.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                Si, en lisant cet article, vous vous êtes reconnu dans plusieurs de ces points, c'est probablement le bon moment de revoir les bases : clarifier votre offre, simplifier votre message, repenser la structure de vos pages clés. Chez Nova Visio, j'accompagne les studios, indépendant·es et petites entreprises à concevoir un site et une identité qui donnent envie de vous contacter – et pas seulement de vous regarder.
+                Si, en lisant cet article, vous vous êtes reconnu dans plusieurs de ces points, c'est probablement le bon moment de revoir les bases : clarifier votre offre, simplifier votre message, repenser la structure de vos pages clés. Chez Nova Visio, nous accompagnons les studios, indépendant·es et petites entreprises à concevoir un site et une identité qui donnent envie de vous contacter – et pas seulement de vous regarder.
               </p>
             </div>
             
