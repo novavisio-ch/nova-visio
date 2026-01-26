@@ -299,7 +299,7 @@ const BlogArticle5Erreurs = () => {
                 <Link to="/contact">Parler de votre projet</Link>
               </Button>
               <p className="text-xs text-gray-400">
-                Je vous réponds sous 24–48h avec une première réponse personnalisée, sans engagement.
+                Nous vous répondons sous 24–48h avec une première réponse personnalisée, sans engagement.
               </p>
             </motion.div>
           </section>
