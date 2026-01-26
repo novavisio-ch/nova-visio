@@ -98,9 +98,9 @@ const StepCard = ({ step, index, isActive, onHover, onLeave }: StepCardProps) =>
       />
 
       <div className="relative flex items-center gap-6 md:gap-10">
-        {/* Left: Large number without background */}
+        {/* Left: Large number without background - fixed width for alignment */}
         <motion.div
-          className="flex-shrink-0 relative"
+          className="flex-shrink-0 relative w-16 md:w-24 lg:w-28 flex items-center justify-center"
           whileHover={{ scale: 1.1 }}
           transition={{ duration: 0.3 }}
         >
