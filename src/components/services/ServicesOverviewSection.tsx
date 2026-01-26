@@ -308,6 +308,91 @@ export const ServicesOverviewSection = () => {
           })}
         </motion.div>
 
+        {/* Synthesis Block */}
+        <motion.div
+          className="mt-12 md:mt-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          <div 
+            className="relative rounded-2xl md:rounded-3xl overflow-hidden"
+            style={{
+              background: "linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%)",
+            }}
+          >
+            {/* Decorative glow */}
+            <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#C3B68F]/10 to-transparent pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-1/3 h-1/2 bg-gradient-to-tr from-[#C3B68F]/5 to-transparent pointer-events-none" />
+            
+            <div className="relative z-10 p-8 md:p-12 lg:p-16">
+              <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                {/* Left - Text content */}
+                <div className="lg:col-span-7">
+                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#C3B68F]/20 border border-[#C3B68F]/30 mb-6">
+                    <Sparkles className="w-3.5 h-3.5 text-[#C3B68F]" />
+                    <span className="text-xs font-medium text-[#C3B68F] uppercase tracking-wider">En résumé</span>
+                  </div>
+                  
+                  <h3 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 leading-tight">
+                    Un accompagnement complet,{" "}
+                    <span className="text-[#C3B68F]">de la stratégie à la conversion</span>
+                  </h3>
+                  
+                  <p className="text-gray-400 text-base md:text-lg leading-relaxed mb-6">
+                    Nous ne créons pas simplement des sites web. Nous concevons des outils de croissance 
+                    pensés pour clarifier votre message, rassurer vos prospects et les transformer en clients fidèles.
+                  </p>
+                  
+                  <a 
+                    href="/contact" 
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-gray-900 transition-all duration-300 hover:gap-3 hover:shadow-lg hover:shadow-[#C3B68F]/25"
+                    style={{
+                      background: "linear-gradient(135deg, #DCCB99 0%, #C3B68F 100%)",
+                    }}
+                  >
+                    Discuter de votre projet
+                    <ArrowRight className="w-4 h-4" />
+                  </a>
+                </div>
+                
+                {/* Right - Stats */}
+                <div className="lg:col-span-5">
+                  <div className="grid grid-cols-2 gap-4 md:gap-6">
+                    {[
+                      { value: "5", label: "Expertises complémentaires" },
+                      { value: "100%", label: "Sites sur-mesure" },
+                      { value: "+50", label: "Projets réalisés" },
+                      { value: "24h", label: "Réponse garantie" },
+                    ].map((stat, index) => (
+                      <motion.div
+                        key={index}
+                        className="text-center p-4 md:p-6 rounded-2xl bg-white/5 border border-white/10"
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.4 + index * 0.1 }}
+                        whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.08)" }}
+                      >
+                        <div className="font-display text-3xl md:text-4xl font-bold text-[#C3B68F] mb-1">
+                          {stat.value}
+                        </div>
+                        <div className="text-xs md:text-sm text-gray-400">
+                          {stat.label}
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Bottom decorative border */}
+            <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#C3B68F]/50 to-transparent" />
+          </div>
+        </motion.div>
+
         {/* Bottom accent line */}
         <motion.div 
           className="mt-16 flex justify-center"
