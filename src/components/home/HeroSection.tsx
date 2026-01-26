@@ -17,7 +17,7 @@ export function HeroSection() {
           animationDelay: "0.1s"
         }}>
             Nous créons votre site et votre image de marque pour vous aider à{" "}
-            <span className="text-gradient-gold">vendre plus simplement</span>.
+            <span className="text-gradient-gold">vendre + & simplement</span>.
           </h1>
 
           <p className="max-w-2xl mx-auto mb-8 md:mb-10 animate-fade-up font-sans text-base sm:text-lg md:text-xl lg:text-2xl font-light text-white/90 leading-relaxed" style={{
