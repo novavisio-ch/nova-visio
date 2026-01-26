@@ -130,9 +130,9 @@ export const ShowcaseSection = () => {
                           <span className="w-3 h-3 rounded-full bg-green-500" />
                         </div>
                         <div className="flex-1 mx-4">
-                          <div className="bg-gray-800 rounded-md px-3 py-1.5 text-gray-400 text-xs md:text-sm truncate max-w-md mx-auto">
-                            www.novavisio.fr
-                          </div>
+                        <div className="bg-gray-800 rounded-md px-3 py-1.5 text-gray-400 text-xs md:text-sm truncate max-w-md mx-auto">
+                          www.novavisio.ch
+                        </div>
                         </div>
                       </div>
                     </div>
