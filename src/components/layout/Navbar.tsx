@@ -47,8 +47,10 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled ? "glass py-2 md:py-3" : "py-3 md:py-5 bg-transparent"
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
+        isScrolled 
+          ? "py-2 md:py-3 bg-background/70 backdrop-blur-xl border-b border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.3)]" 
+          : "py-3 md:py-5 bg-transparent"
       )}
     >
       <nav className="w-full px-4 md:px-6 lg:px-12 flex items-center justify-between">
