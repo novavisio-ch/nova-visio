@@ -1,9 +1,6 @@
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Plus, Sparkles } from "lucide-react";
 
 const faqItems = [
   {
@@ -38,61 +35,274 @@ const faqItems = [
   },
 ];
 
-export const BrandFaqSection = () => {
-  return (
-    <section className="bg-white py-20 md:py-28">
-      <div className="container mx-auto px-4">
-        {/* Central FAQ Container */}
-        <div
-          className="mx-auto max-w-4xl rounded-3xl border-2 bg-white px-6 py-12 md:px-12 md:py-16"
-          style={{
-            borderColor: "#C3B68F",
-            boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.1)",
-          }}
-        >
-          {/* Title */}
-          <div className="mb-12 text-center">
-            <h2
-              className="mb-4 font-bricolage text-2xl font-bold md:text-3xl lg:text-4xl"
-              style={{ color: "#2D284D" }}
-            >
-              Des réponses à vos questions
-              <br />
-              sur l'identité visuelle
-            </h2>
-            <p
-              className="mx-auto max-w-2xl text-base md:text-lg"
-              style={{ color: "#2D284D", opacity: 0.7 }}
-            >
-              Questions fréquentes sur la création de logo et d'identité visuelle avec NOVA VISIO.
-            </p>
-          </div>
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.08,
+      delayChildren: 0.2,
+    },
+  },
+};
 
-          {/* Accordion */}
-          <Accordion type="single" collapsible className="w-full">
-            {faqItems.map((item, index) => (
-              <AccordionItem
+const itemVariants = {
+  hidden: { opacity: 0, x: -30 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.5,
+      ease: [0.25, 0.46, 0.45, 0.94] as const,
+    },
+  },
+};
+
+interface FaqItemProps {
+  item: { question: string; answer: string };
+  index: number;
+  isOpen: boolean;
+  onToggle: () => void;
+}
+
+const FaqItem = ({ item, index, isOpen, onToggle }: FaqItemProps) => {
+  return (
+    <motion.div
+      variants={itemVariants}
+      className="group relative"
+    >
+      {/* Animated background glow on hover */}
+      <motion.div
+        className="absolute -inset-2 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+        style={{
+          background: "linear-gradient(135deg, rgba(195, 182, 143, 0.1), rgba(124, 106, 232, 0.05))",
+          filter: "blur(20px)",
+        }}
+      />
+      
+      <motion.div
+        className="relative overflow-hidden rounded-xl border transition-all duration-300"
+        style={{
+          borderColor: isOpen ? "#C3B68F" : "rgba(195, 182, 143, 0.2)",
+          background: isOpen 
+            ? "linear-gradient(135deg, rgba(255,255,255,0.98), rgba(195, 182, 143, 0.05))" 
+            : "rgba(255,255,255,0.6)",
+          boxShadow: isOpen 
+            ? "0 20px 40px -15px rgba(195, 182, 143, 0.3)" 
+            : "0 4px 20px -10px rgba(0, 0, 0, 0.1)",
+        }}
+        whileHover={{ 
+          scale: 1.01,
+          boxShadow: "0 20px 40px -15px rgba(195, 182, 143, 0.25)",
+        }}
+        transition={{ duration: 0.3 }}
+      >
+        {/* Question button */}
+        <button
+          onClick={onToggle}
+          className="w-full px-6 py-5 flex items-center gap-4 text-left"
+        >
+          {/* Number badge */}
+          <motion.div
+            className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm"
+            style={{
+              background: isOpen 
+                ? "linear-gradient(135deg, #C3B68F, #a89860)" 
+                : "linear-gradient(135deg, rgba(195, 182, 143, 0.2), rgba(195, 182, 143, 0.1))",
+              color: isOpen ? "#fff" : "#C3B68F",
+            }}
+            animate={{ 
+              rotate: isOpen ? 360 : 0,
+              scale: isOpen ? 1.1 : 1,
+            }}
+            transition={{ duration: 0.4, ease: "easeInOut" }}
+          >
+            {String(index + 1).padStart(2, "0")}
+          </motion.div>
+
+          {/* Question text */}
+          <span
+            className="flex-1 font-bricolage text-base md:text-lg font-medium transition-colors duration-300"
+            style={{ color: isOpen ? "#C3B68F" : "#2D284D" }}
+          >
+            {item.question}
+          </span>
+
+          {/* Animated plus icon */}
+          <motion.div
+            className="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center"
+            style={{
+              background: isOpen 
+                ? "linear-gradient(135deg, #C3B68F, #a89860)" 
+                : "transparent",
+              border: isOpen ? "none" : "2px solid rgba(195, 182, 143, 0.3)",
+            }}
+            animate={{ rotate: isOpen ? 45 : 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+          >
+            <Plus 
+              className="w-4 h-4 transition-colors duration-300" 
+              style={{ color: isOpen ? "#fff" : "#C3B68F" }}
+            />
+          </motion.div>
+        </button>
+
+        {/* Answer content */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] as const }}
+            >
+              <div className="px-6 pb-6 pl-20">
+                <motion.div
+                  initial={{ y: -10, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: -10, opacity: 0 }}
+                  transition={{ duration: 0.3, delay: 0.1 }}
+                  className="relative"
+                >
+                  {/* Decorative line */}
+                  <motion.div
+                    className="absolute -left-6 top-0 bottom-0 w-0.5 rounded-full"
+                    style={{ background: "linear-gradient(to bottom, #C3B68F, transparent)" }}
+                    initial={{ scaleY: 0 }}
+                    animate={{ scaleY: 1 }}
+                    transition={{ duration: 0.4, delay: 0.2 }}
+                  />
+                  
+                  <p
+                    className="text-sm md:text-base leading-relaxed"
+                    style={{ color: "rgba(45, 40, 77, 0.8)" }}
+                  >
+                    {item.answer}
+                  </p>
+                </motion.div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </motion.div>
+    </motion.div>
+  );
+};
+
+export const BrandFaqSection = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const handleToggle = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  return (
+    <section className="relative py-20 md:py-28 overflow-hidden" style={{ background: "linear-gradient(180deg, #fff 0%, #faf9f7 100%)" }}>
+      {/* Decorative background elements */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <motion.div
+          className="absolute -top-40 -right-40 w-80 h-80 rounded-full"
+          style={{
+            background: "radial-gradient(circle, rgba(195, 182, 143, 0.15) 0%, transparent 70%)",
+          }}
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.5, 0.8, 0.5],
+          }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full"
+          style={{
+            background: "radial-gradient(circle, rgba(124, 106, 232, 0.1) 0%, transparent 70%)",
+          }}
+          animate={{
+            scale: [1.2, 1, 1.2],
+            opacity: [0.3, 0.6, 0.3],
+          }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+        />
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        {/* Header */}
+        <motion.div
+          className="text-center mb-12 md:mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          {/* Badge */}
+          <motion.div
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6"
+            style={{
+              background: "linear-gradient(135deg, rgba(195, 182, 143, 0.15), rgba(195, 182, 143, 0.05))",
+              border: "1px solid rgba(195, 182, 143, 0.3)",
+            }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+          >
+            <Sparkles className="w-4 h-4" style={{ color: "#C3B68F" }} />
+            <span className="text-sm font-medium" style={{ color: "#C3B68F" }}>
+              Questions fréquentes
+            </span>
+          </motion.div>
+
+          {/* Title */}
+          <h2
+            className="font-bricolage text-2xl md:text-3xl lg:text-4xl font-bold mb-4"
+            style={{ color: "#2D284D" }}
+          >
+            Des réponses à vos questions
+            <br />
+            <span className="text-gradient-gold">sur l'identité visuelle</span>
+          </h2>
+          
+          <p
+            className="max-w-2xl mx-auto text-base md:text-lg"
+            style={{ color: "rgba(45, 40, 77, 0.7)" }}
+          >
+            Questions fréquentes sur la création de logo et d'identité visuelle avec NOVA VISIO.
+          </p>
+        </motion.div>
+
+        {/* FAQ Grid - Two columns on desktop */}
+        <motion.div
+          className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+        >
+          {/* Left column */}
+          <div className="space-y-4">
+            {faqItems.slice(0, 3).map((item, index) => (
+              <FaqItem
                 key={index}
-                value={`item-${index}`}
-                className="last:border-b-0"
-                style={{ borderColor: "rgba(195, 182, 143, 0.3)" }}
-              >
-                <AccordionTrigger
-                  className="py-5 text-left font-bricolage text-base font-medium hover:no-underline md:text-lg [&[data-state=open]>svg]:rotate-45"
-                  style={{ color: "#2D284D" }}
-                >
-                  {item.question}
-                </AccordionTrigger>
-                <AccordionContent
-                  className="pb-5 text-sm leading-relaxed md:text-base"
-                  style={{ color: "#2D284D", opacity: 0.8 }}
-                >
-                  {item.answer}
-                </AccordionContent>
-              </AccordionItem>
+                item={item}
+                index={index}
+                isOpen={openIndex === index}
+                onToggle={() => handleToggle(index)}
+              />
             ))}
-          </Accordion>
-        </div>
+          </div>
+          
+          {/* Right column */}
+          <div className="space-y-4">
+            {faqItems.slice(3).map((item, index) => (
+              <FaqItem
+                key={index + 3}
+                item={item}
+                index={index + 3}
+                isOpen={openIndex === index + 3}
+                onToggle={() => handleToggle(index + 3)}
+              />
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );
