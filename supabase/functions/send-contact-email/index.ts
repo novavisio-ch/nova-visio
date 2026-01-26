@@ -1,6 +1,7 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { Resend } from "https://esm.sh/resend@2.0.0";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.49.1";
+import { z } from "https://esm.sh/zod@3.23.8";
 
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 
@@ -10,13 +11,14 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type",
 };
 
-interface ContactFormRequest {
-  firstName: string;
-  lastName: string;
-  email: string;
-  projectType: string;
-  message: string;
-}
+// Validation schema (defense-in-depth)
+const contactSchema = z.object({
+  firstName: z.string().min(1).max(50).trim(),
+  lastName: z.string().min(1).max(50).trim(),
+  email: z.string().email().max(100),
+  projectType: z.string().optional(),
+  message: z.string().min(10).max(2000).trim(),
+});
 
 // HTML escape function to prevent XSS attacks
 function escapeHtml(text: string): string {
@@ -59,18 +61,21 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
-    const { firstName, lastName, email, projectType, message }: ContactFormRequest = await req.json();
-
-    // Validate required fields
-    if (!firstName || !lastName || !email || !message) {
+    const rawData = await req.json();
+    
+    // Validate input with zod schema
+    const parseResult = contactSchema.safeParse(rawData);
+    if (!parseResult.success) {
       return new Response(
-        JSON.stringify({ error: "Champs requis manquants" }),
+        JSON.stringify({ error: "Données invalides" }),
         {
           status: 400,
           headers: { "Content-Type": "application/json", ...corsHeaders },
         }
       );
     }
+    
+    const { firstName, lastName, email, projectType, message } = parseResult.data;
 
     // Check rate limit
     const withinLimit = await checkRateLimit(email);
