@@ -10,32 +10,22 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 
 // Import project images
-import projectVitrine from "@/assets/showcase/project-vitrine.jpg";
-import projectLanding from "@/assets/showcase/project-landing.jpg";
-import projectEcommerce from "@/assets/showcase/project-ecommerce.jpg";
-import projectWebapp from "@/assets/showcase/project-webapp.jpg";
-import projectSales from "@/assets/showcase/project-sales.jpg";
+import projectHobbyz from "@/assets/showcase/carousel-hobbyz.png";
+import projectSimplia from "@/assets/showcase/carousel-simplia.png";
+import projectSynergieGraphic from "@/assets/showcase/carousel-synergiegraphic.png";
 
 const projects = [
   {
-    image: projectVitrine,
-    label: "Site vitrine",
+    image: projectHobbyz,
+    label: "Hobbyz",
   },
   {
-    image: projectLanding,
-    label: "Landing page",
+    image: projectSimplia,
+    label: "Simplia",
   },
   {
-    image: projectEcommerce,
-    label: "Boutique en ligne",
-  },
-  {
-    image: projectWebapp,
-    label: "Application web",
-  },
-  {
-    image: projectSales,
-    label: "Page de vente",
+    image: projectSynergieGraphic,
+    label: "Synergie Graphic",
   },
 ];
 
