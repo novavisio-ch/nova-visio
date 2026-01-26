@@ -1,41 +1,44 @@
 import { useState } from "react";
-import webMockupHomepage from "@/assets/mockups/web-mockup-homepage.jpg";
-import mobileMockup from "@/assets/mockups/mobile-mockup.jpg";
+import strategyMockup from "@/assets/services/strategy-mockup.jpg";
+import identityWebMockup from "@/assets/services/identity-web-mockup.jpg";
+import webdesignMockup from "@/assets/services/webdesign-mockup.jpg";
+import landingMockup from "@/assets/services/landing-mockup.jpg";
+import conversionMockup from "@/assets/services/conversion-mockup.jpg";
 
 const services = [
   {
     id: "strategy",
     title: "Stratégie & architecture de site",
-    visual: "desktop",
+    image: strategyMockup,
   },
   {
     id: "identity",
     title: "Identité visuelle appliquée au web",
-    visual: "mobile",
+    image: identityWebMockup,
   },
   {
     id: "webdesign",
     title: "Webdesign & UX/UI",
-    visual: "desktop",
+    image: webdesignMockup,
   },
   {
     id: "landing",
     title: "Pages de vente & landing pages",
-    visual: "mobile",
+    image: landingMockup,
   },
   {
     id: "conversion",
     title: "Systèmes et parcours de conversion",
-    visual: "desktop",
+    image: conversionMockup,
   },
 ];
 
 export const ServicesOverviewSection = () => {
   const [hoveredService, setHoveredService] = useState<string | null>(null);
 
-  const currentVisual = hoveredService
-    ? services.find((s) => s.id === hoveredService)?.visual
-    : null;
+  const currentImage = hoveredService
+    ? services.find((s) => s.id === hoveredService)?.image
+    : strategyMockup;
 
   return (
     <section className="py-20 md:py-28 bg-gray-50">
@@ -115,57 +118,45 @@ export const ServicesOverviewSection = () => {
             </div>
           </div>
 
-          {/* Right Column - Visuals */}
+          {/* Right Column - Dynamic Visual */}
           <div className="lg:col-span-5">
             <div className="relative">
-              {/* Desktop Mockup - Main */}
-              <div
-                className={`
-                  relative z-10 rounded-xl overflow-hidden shadow-2xl
-                  transition-all duration-500 ease-out
-                  ${
-                    currentVisual === "mobile"
-                      ? "opacity-60 scale-95"
-                      : "opacity-100 scale-100"
-                  }
-                `}
-              >
-                <img
-                  src={webMockupHomepage}
-                  alt="Maquette de site web"
-                  className="w-full h-auto"
-                  loading="lazy"
-                />
-              </div>
-
-              {/* Mobile Mockup - Overlapping */}
-              <div
-                className={`
-                  absolute -bottom-8 -right-4 md:-right-8 w-1/2 max-w-[200px] z-20
-                  rounded-2xl overflow-hidden shadow-2xl
-                  transition-all duration-500 ease-out
-                  ${
-                    currentVisual === "mobile"
-                      ? "opacity-100 scale-110"
-                      : "opacity-80 scale-100"
-                  }
-                `}
-              >
-                <img
-                  src={mobileMockup}
-                  alt="Maquette mobile"
-                  className="w-full h-auto"
-                  loading="lazy"
-                />
+              {/* Main Visual with smooth transition */}
+              <div className="relative z-10 rounded-xl overflow-hidden shadow-2xl">
+                {services.map((service) => (
+                  <img
+                    key={service.id}
+                    src={service.image}
+                    alt={service.title}
+                    className={`
+                      w-full h-auto transition-all duration-500 ease-out
+                      ${
+                        (hoveredService === service.id) || 
+                        (!hoveredService && service.id === "strategy")
+                          ? "opacity-100 scale-100"
+                          : "opacity-0 scale-95 absolute inset-0"
+                      }
+                    `}
+                    loading="lazy"
+                  />
+                ))}
               </div>
 
               {/* Decorative elements */}
               <div
-                className="absolute -top-4 -left-4 w-24 h-24 rounded-full opacity-30 blur-2xl"
+                className={`
+                  absolute -top-4 -left-4 w-24 h-24 rounded-full blur-2xl
+                  transition-all duration-500
+                  ${hoveredService ? "opacity-50" : "opacity-30"}
+                `}
                 style={{ backgroundColor: "#C3B68F" }}
               />
               <div
-                className="absolute -bottom-4 -right-12 w-32 h-32 rounded-full opacity-20 blur-3xl"
+                className={`
+                  absolute -bottom-4 -right-12 w-32 h-32 rounded-full blur-3xl
+                  transition-all duration-500
+                  ${hoveredService ? "opacity-40" : "opacity-20"}
+                `}
                 style={{ backgroundColor: "#C3B68F" }}
               />
             </div>
