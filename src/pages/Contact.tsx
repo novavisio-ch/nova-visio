@@ -9,10 +9,23 @@ import { useToast } from "@/hooks/use-toast";
 import { Send, Clock, MessageSquare } from "lucide-react";
 import { motion } from "framer-motion";
 import { supabase } from "@/integrations/supabase/client";
+import { z } from "zod";
+
+// Validation schema
+const contactSchema = z.object({
+  firstName: z.string().min(1, "Prénom requis").max(50, "50 caractères max").trim(),
+  lastName: z.string().min(1, "Nom requis").max(50, "50 caractères max").trim(),
+  email: z.string().email("Email invalide").max(100, "100 caractères max"),
+  projectType: z.string().optional(),
+  message: z.string().min(10, "Minimum 10 caractères").max(2000, "2000 caractères max").trim(),
+});
+
+type ContactFormData = z.infer<typeof contactSchema>;
 
 const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errors, setErrors] = useState<Partial<Record<keyof ContactFormData, string>>>({});
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -23,30 +36,50 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setErrors({});
+    
+    // Validate form data
+    const result = contactSchema.safeParse(formData);
+    if (!result.success) {
+      const fieldErrors: Partial<Record<keyof ContactFormData, string>> = {};
+      result.error.errors.forEach((err) => {
+        const field = err.path[0] as keyof ContactFormData;
+        fieldErrors[field] = err.message;
+      });
+      setErrors(fieldErrors);
+      toast({
+        title: "Erreur de validation",
+        description: "Veuillez corriger les erreurs du formulaire.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
+      const validatedData = result.data;
+      
       // Save to database
       const { error: dbError } = await supabase
         .from("contact_submissions")
         .insert({
-          first_name: formData.firstName,
-          last_name: formData.lastName,
-          email: formData.email,
-          project_type: formData.projectType || null,
-          message: formData.message,
+          first_name: validatedData.firstName,
+          last_name: validatedData.lastName,
+          email: validatedData.email,
+          project_type: validatedData.projectType || null,
+          message: validatedData.message,
         });
 
       if (dbError) throw dbError;
 
       // Send email notification
       const { error: emailError } = await supabase.functions.invoke("send-contact-email", {
-        body: formData,
+        body: validatedData,
       });
 
       if (emailError) {
         console.warn("Email notification failed:", emailError);
-        // Don't throw - the submission was saved, just email failed
       }
 
       toast({
