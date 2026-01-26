@@ -1,28 +1,14 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const blogPosts = [
-  {
-    id: 1,
-    tag: "Article",
-    title: "Clarifier votre offre avant de créer votre site",
-    linkText: "Lire l'article",
-    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&h=400&fit=crop&q=80",
-  },
-  {
-    id: 2,
-    tag: "Guide",
-    title: "Structurer une page d'accueil claire et efficace",
-    linkText: "Découvrir le guide",
-    image: "https://images.unsplash.com/photo-1557683316-973673baf926?w=600&h=400&fit=crop&q=80",
-  },
-  {
-    id: 3,
-    tag: "Article",
-    title: "Construire une identité visuelle cohérente sur le long terme",
-    linkText: "Lire l'article",
-    image: "https://images.unsplash.com/photo-1634017839464-5c339bbe3c3c?w=600&h=400&fit=crop&q=80",
-  },
+const blogPosts: Array<{
+  id: number;
+  tag: string;
+  title: string;
+  linkText: string;
+  image: string;
+}> = [
+  // Articles à ajouter ici
 ];
 
 export function BlogSection() {
