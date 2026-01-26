@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import identityMockup from "@/assets/services/identity-mockup.jpg";
+import identityMockup from "@/assets/services/brand-identity-mockup.png";
 import { LogosSection } from "@/components/home/LogosSection";
 
 export const BrandIdentityContent = () => {
