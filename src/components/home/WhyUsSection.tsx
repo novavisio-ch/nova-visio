@@ -134,16 +134,14 @@ export function WhyUsSection() {
                 
                 {/* Content */}
                 <div className="relative z-10 text-center">
-                  {/* Icon with animated ring */}
-                  <div className="relative w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 md:mb-6">
-                    <motion.div 
-                      className="absolute inset-0 rounded-full border-2 border-primary/20"
-                      animate={{ scale: [1, 1.2, 1], opacity: [0.5, 0, 0.5] }}
-                      transition={{ duration: 3, repeat: Infinity, delay: index * 0.5 }}
-                    />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <reason.icon className="w-6 h-6 md:w-8 md:h-8 text-primary transition-transform duration-300 group-hover:scale-125" />
-                    </div>
+                  {/* Large number */}
+                  <span className="text-4xl md:text-5xl font-bold text-primary/80 leading-none mb-4 block">
+                    {index + 1}
+                  </span>
+
+                  {/* Icon */}
+                  <div className="mb-4 md:mb-6">
+                    <reason.icon className="w-8 h-8 md:w-10 md:h-10 text-primary mx-auto transition-transform duration-300 group-hover:scale-125" />
                   </div>
                   
                   {/* Title */}
@@ -164,17 +162,6 @@ export function WhyUsSection() {
                   whileHover={{ scaleX: 1 }}
                   transition={{ duration: 0.4 }}
                 />
-              </motion.div>
-              
-              {/* Number badge */}
-              <motion.div 
-                className="absolute -top-2 -left-2 md:-top-3 md:-left-3 w-6 h-6 md:w-8 md:h-8 rounded-full bg-primary text-background flex items-center justify-center text-xs md:text-sm font-bold shadow-lg"
-                initial={{ scale: 0, rotate: -180 }}
-                whileInView={{ scale: 1, rotate: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.4 + index * 0.1, type: "spring", stiffness: 200 }}
-              >
-                {index + 1}
               </motion.div>
             </motion.div>
           ))}
