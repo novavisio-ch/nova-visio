@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 
 const blogPosts = [
   {
-    id: 2,
-    slug: "/blog/clarifier-offre-avant-site-web",
+    id: 3,
+    slug: "/blog/choisir-couleurs-marque",
     tag: "Article",
-    title: "Clarifier votre offre avant de créer votre site web",
+    title: "Comment choisir les couleurs de votre marque",
     linkText: "Lire l'article",
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=600&h=400&fit=crop&q=80",
   },
   {
     id: 1,

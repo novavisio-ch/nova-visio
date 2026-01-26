@@ -4,6 +4,15 @@ import { ArrowRight, Calendar } from "lucide-react";
 
 const blogPosts = [
   {
+    id: 3,
+    slug: "choisir-couleurs-marque",
+    tag: "Article",
+    title: "Comment choisir les couleurs de votre marque",
+    excerpt: "Des couleurs bien choisies rendent votre marque plus mémorable, plus lisible… et plus désirable.",
+    date: "5 Jan 2026",
+    image: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=600&h=400&fit=crop&q=80",
+  },
+  {
     id: 1,
     slug: "5-erreurs-site-web",
     tag: "Article",
