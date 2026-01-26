@@ -17,15 +17,15 @@ import projectSynergieGraphic from "@/assets/showcase/carousel-synergiegraphic.p
 const projects = [
   {
     image: projectHobbyz,
-    label: "Hobbyz",
+    label: "Plateforme e-learning",
   },
   {
     image: projectSimplia,
-    label: "Simplia",
+    label: "Landing page",
   },
   {
     image: projectSynergieGraphic,
-    label: "Synergie Graphic",
+    label: "Site vitrine",
   },
 ];
 
@@ -120,16 +120,38 @@ export const ShowcaseSection = () => {
               <CarouselContent className="-ml-0">
                 {projects.map((project, index) => (
                   <CarouselItem key={index} className="pl-0">
-                    <div className="relative aspect-video">
+                    {/* Browser mockup frame */}
+                    <div className="bg-gray-900 rounded-t-lg">
+                      {/* Browser top bar */}
+                      <div className="flex items-center gap-2 px-4 py-3 border-b border-gray-700">
+                        <div className="flex gap-1.5">
+                          <span className="w-3 h-3 rounded-full bg-red-500" />
+                          <span className="w-3 h-3 rounded-full bg-yellow-500" />
+                          <span className="w-3 h-3 rounded-full bg-green-500" />
+                        </div>
+                        <div className="flex-1 mx-4">
+                          <div className="bg-gray-800 rounded-md px-3 py-1.5 text-gray-400 text-xs md:text-sm truncate max-w-md mx-auto">
+                            www.novavisio.fr
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    {/* Screenshot content */}
+                    <div className="relative aspect-video bg-gray-100">
                       <img
                         src={project.image}
                         alt={project.label}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover object-top"
                         loading="lazy"
                       />
-                      {/* Project label */}
+                      {/* Project label badge */}
                       <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6">
-                        <span className="inline-flex items-center px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-black/70 backdrop-blur-sm text-white text-sm md:text-base font-medium">
+                        <span 
+                          className="inline-flex items-center px-4 py-2 md:px-5 md:py-2.5 rounded-full text-gray-900 text-sm md:text-base font-semibold shadow-lg"
+                          style={{
+                            background: "linear-gradient(135deg, #DCCB99 0%, #C3B68F 100%)",
+                          }}
+                        >
                           {project.label}
                         </span>
                       </div>
