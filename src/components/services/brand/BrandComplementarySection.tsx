@@ -6,7 +6,11 @@ const services = [
     id: "social",
     icon: Layout,
     title: "Templates réseaux sociaux",
-    description: "Posts, stories et bannières aux couleurs de votre marque, prêts à être personnalisés dans Canva ou Figma. Idéal pour garder une communication régulière, cohérente et professionnelle sans repartir de zéro à chaque publication.",
+    description: (
+      <>
+        <strong className="text-white font-semibold">Posts, stories et bannières</strong> aux couleurs de votre marque, prêts à être personnalisés dans <strong className="text-[#C3B68F] font-medium">Canva ou Figma</strong>. Idéal pour garder une <strong className="text-white font-semibold">communication régulière et cohérente</strong> sans repartir de zéro.
+      </>
+    ),
     accentColor: "#C3B68F",
     delay: 0,
   },
@@ -14,7 +18,11 @@ const services = [
     id: "print",
     icon: Printer,
     title: "Supports imprimés",
-    description: "Cartes de visite (design et impression) et supports papier essentiels pour vos rendez‑vous : flyers A5, dépliants A4, documents de présentation. Tout est aligné sur votre identité visuelle pour une expérience de marque cohérente, du web au physique.",
+    description: (
+      <>
+        <strong className="text-white font-semibold">Cartes de visite</strong> (design et impression) et supports papier essentiels : <strong className="text-[#9D8DF0] font-medium">flyers A5, dépliants A4, documents de présentation</strong>. Une <strong className="text-white font-semibold">expérience de marque cohérente</strong>, du web au physique.
+      </>
+    ),
     accentColor: "#9D8DF0",
     delay: 0.1,
   },
@@ -22,7 +30,11 @@ const services = [
     id: "brandkit",
     icon: Package,
     title: "Brand kit digital & contenus",
-    description: "Photo de profil, bannières, templates de posts et stories, visuels de newsletter et d'articles de blog, réunis dans un kit clé en main. Accompagné d'un mini guide PDF et d'un accompagnement éditorial pour des textes clairs et alignés à votre nouvelle identité.",
+    description: (
+      <>
+        Photo de profil, bannières, templates de posts et stories, visuels de newsletter, réunis dans un <strong className="text-white font-semibold">kit clé en main</strong>. Avec un <strong className="text-[#C3B68F] font-medium">mini guide PDF</strong> et un <strong className="text-white font-semibold">accompagnement éditorial</strong> pour des textes alignés à votre identité.
+      </>
+    ),
     accentColor: "#C3B68F",
     delay: 0.2,
   },
