@@ -4,22 +4,22 @@ import { ArrowRight, Calendar } from "lucide-react";
 
 const blogPosts = [
   {
-    id: 2,
-    slug: "clarifier-offre-avant-site-web",
-    tag: "Article",
-    title: "Clarifier votre offre avant de créer votre site web",
-    excerpt: "Un site efficace commence bien avant le design : il commence avec une offre claire. Découvrez les 5 étapes essentielles.",
-    date: "26 Jan 2025",
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop&q=80",
-  },
-  {
     id: 1,
     slug: "5-erreurs-site-web",
     tag: "Article",
     title: "5 erreurs courantes qui plombent votre site web (et comment les éviter)",
     excerpt: "Ces erreurs peuvent nuire à votre crédibilité et faire fuir vos visiteurs. Apprenez à les identifier et les corriger.",
-    date: "20 Jan 2025",
+    date: "1 Déc 2025",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&q=80",
+  },
+  {
+    id: 2,
+    slug: "clarifier-offre-avant-site-web",
+    tag: "Article",
+    title: "Clarifier votre offre avant de créer votre site web",
+    excerpt: "Un site efficace commence bien avant le design : il commence avec une offre claire. Découvrez les 5 étapes essentielles.",
+    date: "3 Nov 2025",
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop&q=80",
   },
 ];
 
