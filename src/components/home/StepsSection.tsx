@@ -121,66 +121,56 @@ export function StepsSection() {
                   className="group relative"
                 >
                   {/* Card */}
-                  <div className="relative h-full">
-                    {/* Floating number badge */}
-                    <motion.div
-                      whileHover={{ scale: 1.15, rotate: -5 }}
-                      className="absolute -top-3 -left-2 z-20 w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center shadow-lg shadow-primary/30"
-                    >
-                      <span className="text-background font-bold text-sm">{step.number}</span>
-                    </motion.div>
+                  <div
+                    className={`relative h-full p-6 rounded-2xl border border-white/10 bg-gradient-to-b ${step.color} backdrop-blur-sm transition-all duration-500 group-hover:border-primary/50 group-hover:shadow-[0_0_50px_-12px_#C3B68F] group-hover:-translate-y-2`}
+                  >
+                    {/* Large number */}
+                    <span className="text-5xl md:text-6xl font-bold text-primary/80 leading-none mb-4 block">
+                      {step.number}
+                    </span>
 
-                    {/* Main card */}
-                    <div
-                      className={`relative h-full pt-8 pb-6 px-5 rounded-2xl border border-white/10 bg-gradient-to-b ${step.color} backdrop-blur-sm transition-all duration-500 group-hover:border-primary/50 group-hover:shadow-[0_0_50px_-12px_#C3B68F] group-hover:-translate-y-2`}
-                    >
-                      {/* Icon container */}
-                      <div className="mb-4 relative">
-                        <div className="w-12 h-12 rounded-xl bg-background/50 border border-white/10 flex items-center justify-center transition-all duration-300 group-hover:border-primary/30 group-hover:bg-primary/10">
-                          <Icon className="w-6 h-6 text-primary transition-transform duration-300 group-hover:scale-110" />
-                        </div>
-                        {/* Decorative glow */}
-                        <div className="absolute inset-0 w-12 h-12 rounded-xl bg-primary/20 blur-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                      </div>
-
-                      {/* Title */}
-                      <h3 className="text-lg md:text-xl font-bold text-foreground mb-1 leading-tight">
-                        {step.title}
-                      </h3>
-                      <p className="text-primary text-sm font-medium mb-3">{step.subtitle}</p>
-
-                      {/* Description */}
-                      <p className="text-body text-sm leading-relaxed">
-                        {step.description}
-                      </p>
-
-                      {/* Connector arrow - desktop only */}
-                      {index < steps.length - 1 && (
-                        <div className="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 z-10">
-                          <motion.div
-                            initial={{ opacity: 0, x: -10 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: 0.3 + index * 0.15 }}
-                            className="w-6 h-6 rounded-full bg-background border border-primary/30 flex items-center justify-center"
-                          >
-                            <svg
-                              className="w-3 h-3 text-primary"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke="currentColor"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M9 5l7 7-7 7"
-                              />
-                            </svg>
-                          </motion.div>
-                        </div>
-                      )}
+                    {/* Icon */}
+                    <div className="mb-4">
+                      <Icon className="w-8 h-8 text-primary transition-transform duration-300 group-hover:scale-125" />
                     </div>
+
+                    {/* Title */}
+                    <h3 className="text-lg md:text-xl font-bold text-foreground mb-1 leading-tight">
+                      {step.title}
+                    </h3>
+                    <p className="text-primary text-sm font-medium mb-3">{step.subtitle}</p>
+
+                    {/* Description */}
+                    <p className="text-body text-sm leading-relaxed">
+                      {step.description}
+                    </p>
+
+                    {/* Connector arrow - desktop only */}
+                    {index < steps.length - 1 && (
+                      <div className="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 z-10">
+                        <motion.div
+                          initial={{ opacity: 0, x: -10 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ delay: 0.3 + index * 0.15 }}
+                          className="w-6 h-6 rounded-full bg-background border border-primary/30 flex items-center justify-center"
+                        >
+                          <svg
+                            className="w-3 h-3 text-primary"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M9 5l7 7-7 7"
+                            />
+                          </svg>
+                        </motion.div>
+                      </div>
+                    )}
                   </div>
 
                   {/* Mobile connector line */}
