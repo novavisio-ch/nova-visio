@@ -1,14 +1,15 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const blogPosts: Array<{
-  id: number;
-  tag: string;
-  title: string;
-  linkText: string;
-  image: string;
-}> = [
-  // Articles à ajouter ici
+const blogPosts = [
+  {
+    id: 1,
+    slug: "/blog/5-erreurs-site-web",
+    tag: "Article",
+    title: "5 erreurs courantes qui plombent votre site web (et comment les éviter)",
+    linkText: "Lire l'article",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&q=80",
+  },
 ];
 
 export function BlogSection() {
@@ -29,9 +30,10 @@ export function BlogSection() {
         {/* Blog Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-10">
           {blogPosts.map((post) => (
-            <article
+            <Link
               key={post.id}
-              className="group glass-card overflow-hidden transition-all duration-300 hover:border-primary/40 hover:shadow-[0_0_40px_-10px_#C3B68F] cursor-pointer"
+              to={post.slug}
+              className="group glass-card overflow-hidden transition-all duration-300 hover:border-primary/40 hover:shadow-[0_0_40px_-10px_#C3B68F] cursor-pointer block"
             >
               {/* Image Container */}
               <div className="relative aspect-[16/10] overflow-hidden">
@@ -56,7 +58,7 @@ export function BlogSection() {
                   <ArrowRight className="w-4 h-4" />
                 </span>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
 
