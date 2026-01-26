@@ -348,7 +348,7 @@ export const ServicesOverviewSection = () => {
                   {[
                     { value: "5", label: "Expertises" },
                     { value: "100%", label: "Sur-mesure" },
-                    { value: "+50", label: "Projets" },
+                    { value: "0", label: "Template" },
                     { value: "24h", label: "Réponse" },
                   ].map((stat, index) => (
                     <motion.div
