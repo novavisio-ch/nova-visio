@@ -1,20 +1,13 @@
 import { useState } from "react";
-import strategyMockup from "@/assets/services/strategy-mockup.jpg";
-import identityWebMockup from "@/assets/services/identity-web-mockup.jpg";
-import webdesignMockup from "@/assets/services/webdesign-mockup.jpg";
-import landingMockup from "@/assets/services/landing-mockup.jpg";
-import conversionMockup from "@/assets/services/conversion-mockup.jpg";
+import strategyMockup from "@/assets/services/service-strategy.png";
+import webdesignMockup from "@/assets/services/service-webdesign.png";
+import landingMockup from "@/assets/services/service-landing.png";
 
 const services = [
   {
     id: "strategy",
     title: "Stratégie & architecture de site",
     image: strategyMockup,
-  },
-  {
-    id: "identity",
-    title: "Identité visuelle appliquée au web",
-    image: identityWebMockup,
   },
   {
     id: "webdesign",
@@ -25,11 +18,6 @@ const services = [
     id: "landing",
     title: "Pages de vente & landing pages",
     image: landingMockup,
-  },
-  {
-    id: "conversion",
-    title: "Systèmes et parcours de conversion",
-    image: conversionMockup,
   },
 ];
 
