@@ -15,6 +15,7 @@ const services = [
     id: "strategy", 
     title: "Stratégie & architecture", 
     subtitle: "de site",
+    description: "Définition de vos objectifs, structure des pages et parcours utilisateur pensés pour guider vos visiteurs vers l'action.",
     icon: LayoutGrid,
     number: "01",
     gradient: "from-amber-500/20 via-yellow-500/10 to-transparent"
@@ -23,6 +24,7 @@ const services = [
     id: "identity", 
     title: "Identité visuelle", 
     subtitle: "appliquée au web",
+    description: "Déclinaison de votre charte graphique sur le web : couleurs, typographies et éléments visuels cohérents.",
     icon: Palette,
     number: "02",
     gradient: "from-rose-500/20 via-pink-500/10 to-transparent"
@@ -31,6 +33,7 @@ const services = [
     id: "webdesign", 
     title: "Webdesign", 
     subtitle: "& UX/UI",
+    description: "Interfaces modernes et intuitives, conçues pour offrir une expérience fluide sur tous les écrans.",
     icon: Layers,
     number: "03",
     gradient: "from-violet-500/20 via-purple-500/10 to-transparent"
@@ -39,6 +42,7 @@ const services = [
     id: "landing", 
     title: "Pages de vente", 
     subtitle: "& landing pages",
+    description: "Pages optimisées pour la conversion, avec des arguments clairs et des appels à l'action stratégiques.",
     icon: Rocket,
     number: "04",
     gradient: "from-cyan-500/20 via-blue-500/10 to-transparent"
@@ -47,6 +51,7 @@ const services = [
     id: "conversion", 
     title: "Systèmes", 
     subtitle: "de conversion",
+    description: "Tunnels de vente, formulaires et automatisations pour transformer vos visiteurs en clients.",
     icon: TrendingUp,
     number: "05",
     gradient: "from-emerald-500/20 via-green-500/10 to-transparent"
@@ -217,7 +222,7 @@ export const ServicesOverviewSection = () => {
                     </motion.div>
                   </div>
 
-                  {/* Title */}
+                  {/* Title & Description */}
                   <div className="mb-6">
                     <h3 
                       className={`
@@ -235,6 +240,16 @@ export const ServicesOverviewSection = () => {
                     >
                       {service.subtitle}
                     </span>
+                    
+                    {/* Description */}
+                    <p 
+                      className={`
+                        mt-4 text-sm md:text-base leading-relaxed transition-colors duration-300
+                        ${isHovered ? "text-gray-300" : "text-gray-500"}
+                      `}
+                    >
+                      {service.description}
+                    </p>
                   </div>
 
                   {/* Arrow CTA */}
