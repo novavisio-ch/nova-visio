@@ -25,9 +25,9 @@ export function BrandIdentityHero() {
       <div className="absolute top-1/3 right-0 w-[500px] h-[400px] bg-primary/5 blur-[150px] rounded-full pointer-events-none" />
 
       <div className="container relative">
-        <div className="max-w-4xl">
+        <div className="max-w-4xl mx-auto text-center">
           {/* Breadcrumb */}
-          <Breadcrumb className="mb-8 animate-fade-up">
+          <Breadcrumb className="mb-8 animate-fade-up justify-center">
             <BreadcrumbList>
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
@@ -45,25 +45,25 @@ export function BrandIdentityHero() {
 
           {/* Sur-titre / Label with tool badges */}
           <div
-            className="flex flex-wrap items-center gap-3 mb-6 animate-fade-up"
+            className="flex flex-wrap items-center justify-center gap-2 mb-6 animate-fade-up"
             style={{ animationDelay: "0.05s" }}
           >
-            <div className="inline-flex items-center px-4 py-2 rounded-full glass-card">
-              <span className="text-body-sm text-primary">
+            <div className="inline-flex items-center px-3 py-1.5 rounded-full glass-card">
+              <span className="text-xs text-primary">
                 Logo & identité visuelle sur mesure
               </span>
             </div>
             
             {/* Adobe Illustrator Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-[#FF7C00]/10 border border-[#FF7C00]/30">
-              <img src={illustratorIcon} alt="Adobe Illustrator" className="w-5 h-5" />
-              <span className="text-xs font-medium text-[#FF7C00]">Illustrator 2026</span>
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-full bg-[#FF7C00]/10 border border-[#FF7C00]/30">
+              <img src={illustratorIcon} alt="Adobe Illustrator" className="w-4 h-4" />
+              <span className="text-xs font-medium text-[#FF7C00]">Illustrator</span>
             </div>
             
             {/* Adobe Photoshop Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-[#31A8FF]/10 border border-[#31A8FF]/30">
-              <img src={photoshopIcon} alt="Adobe Photoshop" className="w-5 h-5" />
-              <span className="text-xs font-medium text-[#31A8FF]">Photoshop 2026</span>
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-full bg-[#31A8FF]/10 border border-[#31A8FF]/30">
+              <img src={photoshopIcon} alt="Adobe Photoshop" className="w-4 h-4" />
+              <span className="text-xs font-medium text-[#31A8FF]">Photoshop</span>
             </div>
           </div>
 
@@ -78,7 +78,7 @@ export function BrandIdentityHero() {
 
           {/* Intro Paragraph */}
           <p
-            className="text-body-lg text-muted-foreground max-w-3xl mb-8 animate-fade-up leading-relaxed"
+            className="text-body-lg text-muted-foreground max-w-3xl mx-auto mb-8 animate-fade-up leading-relaxed"
             style={{ animationDelay: "0.15s" }}
           >
             Nous créons des identités visuelles sur mesure : logo, couleurs, typographies et règles d'usage,
@@ -87,7 +87,7 @@ export function BrandIdentityHero() {
 
           {/* Bullet Points */}
           <ul
-            className="space-y-4 mb-10 animate-fade-up"
+            className="space-y-3 mb-10 animate-fade-up inline-block text-left"
             style={{ animationDelay: "0.2s" }}
           >
             {bulletPoints.map((point, index) => (
