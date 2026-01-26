@@ -95,7 +95,7 @@ const BlogArticle5Erreurs = () => {
               </p>
             </div>
             
-            <h3 className="text-lg md:text-xl font-semibold mb-4 text-gray-900">Comment corriger cette erreur</h3>
+            <h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900">Comment corriger cette erreur</h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" />
@@ -130,7 +130,7 @@ const BlogArticle5Erreurs = () => {
               </p>
             </div>
             
-            <h3 className="text-lg md:text-xl font-semibold mb-4 text-gray-900">Comment corriger cette erreur</h3>
+            <h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900">Comment corriger cette erreur</h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" />
@@ -165,7 +165,7 @@ const BlogArticle5Erreurs = () => {
               </p>
             </div>
             
-            <h3 className="text-lg md:text-xl font-semibold mb-4 text-gray-900">Comment corriger cette erreur</h3>
+            <h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900">Comment corriger cette erreur</h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" />
@@ -200,7 +200,7 @@ const BlogArticle5Erreurs = () => {
               </p>
             </div>
             
-            <h3 className="text-lg md:text-xl font-semibold mb-4 text-gray-900">Comment corriger cette erreur</h3>
+            <h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900">Comment corriger cette erreur</h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" />
@@ -235,7 +235,7 @@ const BlogArticle5Erreurs = () => {
               </p>
             </div>
             
-            <h3 className="text-lg md:text-xl font-semibold mb-4 text-gray-900">Comment corriger cette erreur</h3>
+            <h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900">Comment corriger cette erreur</h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" />
