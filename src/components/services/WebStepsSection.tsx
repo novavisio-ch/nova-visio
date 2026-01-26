@@ -143,7 +143,7 @@ const StepCard = ({ step, index, isActive, onHover, onLeave }: StepCardProps) =>
             transition={{ duration: 0.3 }}
           />
 
-          <div className="p-6 md:p-8 flex items-center gap-6">
+          <div className="p-6 md:p-8 flex items-center gap-6 min-h-[120px] md:min-h-[140px]">
             {/* Content */}
             <div className="flex-1">
               <motion.h3
@@ -152,7 +152,7 @@ const StepCard = ({ step, index, isActive, onHover, onLeave }: StepCardProps) =>
               >
                 {step.title}
               </motion.h3>
-              <p className="text-white/60 leading-relaxed text-base md:text-lg group-hover:text-white/80 transition-colors duration-300">
+              <p className="text-white/60 leading-relaxed text-base md:text-lg group-hover:text-white/80 transition-colors duration-300 line-clamp-2">
                 {step.description}
               </p>
             </div>
