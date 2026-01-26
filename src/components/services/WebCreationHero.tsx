@@ -25,9 +25,9 @@ export function WebCreationHero() {
       <div className="absolute top-1/3 right-0 w-[500px] h-[400px] bg-primary/5 blur-[150px] rounded-full pointer-events-none" />
 
       <div className="container relative">
-        <div className="max-w-4xl">
+        <div className="max-w-4xl mx-auto text-center">
           {/* Breadcrumb */}
-          <Breadcrumb className="mb-8 animate-fade-up">
+          <Breadcrumb className="mb-8 animate-fade-up justify-center">
             <BreadcrumbList>
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
@@ -45,25 +45,25 @@ export function WebCreationHero() {
 
           {/* Sur-titre / Labels */}
           <div 
-            className="flex flex-wrap items-center gap-3 mb-6 animate-fade-up"
+            className="flex flex-wrap items-center justify-center gap-2 mb-6 animate-fade-up"
             style={{ animationDelay: "0.05s" }}
           >
-            <div className="inline-flex items-center px-4 py-2 rounded-full glass-card">
-              <span className="text-body-sm text-primary">
+            <div className="inline-flex items-center px-3 py-1.5 rounded-full glass-card">
+              <span className="text-xs text-primary">
                 Création de sites web & landing pages
               </span>
             </div>
-            <div className="inline-flex items-center px-3 py-2 rounded-full glass-card gap-2">
-              <img src={webflowIcon} alt="Webflow" className="w-5 h-5" />
-              <span className="text-body-sm text-muted-foreground">Webflow</span>
+            <div className="inline-flex items-center px-2.5 py-1.5 rounded-full glass-card gap-1.5">
+              <img src={webflowIcon} alt="Webflow" className="w-4 h-4" />
+              <span className="text-xs text-muted-foreground">Webflow</span>
             </div>
-            <div className="inline-flex items-center px-3 py-2 rounded-full glass-card gap-2">
-              <img src={figmaIcon} alt="Figma" className="w-5 h-5" />
-              <span className="text-body-sm text-muted-foreground">Figma</span>
+            <div className="inline-flex items-center px-2.5 py-1.5 rounded-full glass-card gap-1.5">
+              <img src={figmaIcon} alt="Figma" className="w-4 h-4" />
+              <span className="text-xs text-muted-foreground">Figma</span>
             </div>
-            <div className="inline-flex items-center px-3 py-2 rounded-full glass-card gap-2">
-              <Code className="w-5 h-5 text-primary" />
-              <span className="text-body-sm text-muted-foreground">Code</span>
+            <div className="inline-flex items-center px-2.5 py-1.5 rounded-full glass-card gap-1.5">
+              <Code className="w-4 h-4 text-primary" />
+              <span className="text-xs text-muted-foreground">Code</span>
             </div>
           </div>
 
@@ -78,7 +78,7 @@ export function WebCreationHero() {
 
           {/* Intro Paragraph */}
           <p 
-            className="text-body-lg text-muted-foreground max-w-3xl mb-8 animate-fade-up leading-relaxed"
+            className="text-body-lg text-muted-foreground max-w-3xl mx-auto mb-8 animate-fade-up leading-relaxed"
             style={{ animationDelay: "0.15s" }}
           >
             NOVA VISIO conçoit des sites vitrines et des landing pages pensés pour clarifier votre offre, 
@@ -88,7 +88,7 @@ export function WebCreationHero() {
 
           {/* Bullet Points */}
           <ul 
-            className="space-y-4 mb-10 animate-fade-up"
+            className="space-y-3 mb-10 animate-fade-up inline-block text-left"
             style={{ animationDelay: "0.2s" }}
           >
             {bulletPoints.map((point, index) => (
