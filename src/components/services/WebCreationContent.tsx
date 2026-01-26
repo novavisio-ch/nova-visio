@@ -46,10 +46,10 @@ export const WebCreationContent = () => {
             </div>
 
             <Link
-              to="/realisations"
+              to="/contact"
               className="inline-flex items-center gap-2 text-primary font-semibold text-lg hover:gap-3 transition-all duration-300 group mt-4"
             >
-              Voir des exemples de projets
+              Parler de votre projet
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
