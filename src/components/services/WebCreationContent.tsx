@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import webMockup from "@/assets/web-mockup-creative.jpg";
+import webMockup from "@/assets/services/web-creation-mockup.png";
 import { LogosSection } from "@/components/home/LogosSection";
 
 export const WebCreationContent = () => {
