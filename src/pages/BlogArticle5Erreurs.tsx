@@ -83,7 +83,7 @@ const BlogArticle5Erreurs = () => {
 
           {/* Section 2 - Erreur 1 */}
           <section className="mb-12 md:mb-16">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#D1C084' }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#D1C084' }}>
               Erreur 1 – Créer un site sans objectif clair
             </h2>
             <div className="prose prose-lg max-w-none">
@@ -118,7 +118,7 @@ const BlogArticle5Erreurs = () => {
 
           {/* Section 3 - Erreur 2 */}
           <section className="mb-12 md:mb-16">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#D1C084' }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#D1C084' }}>
               Erreur 2 – Une page d'accueil surchargée et confuse
             </h2>
             <div className="prose prose-lg max-w-none">
@@ -153,7 +153,7 @@ const BlogArticle5Erreurs = () => {
 
           {/* Section 4 - Erreur 3 */}
           <section className="mb-12 md:mb-16">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#D1C084' }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#D1C084' }}>
               Erreur 3 – Ignorer l'expérience mobile et la performance
             </h2>
             <div className="prose prose-lg max-w-none">
@@ -188,7 +188,7 @@ const BlogArticle5Erreurs = () => {
 
           {/* Section 5 - Erreur 4 */}
           <section className="mb-12 md:mb-16">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#D1C084' }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#D1C084' }}>
               Erreur 4 – Un contenu flou, centré sur vous plutôt que sur le client
             </h2>
             <div className="prose prose-lg max-w-none">
@@ -223,7 +223,7 @@ const BlogArticle5Erreurs = () => {
 
           {/* Section 6 - Erreur 5 */}
           <section className="mb-12 md:mb-16">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#D1C084' }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#D1C084' }}>
               Erreur 5 – Ne pas guider clairement vers la prise de contact
             </h2>
             <div className="prose prose-lg max-w-none">
