@@ -1,5 +1,6 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { Resend } from "https://esm.sh/resend@2.0.0";
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2.49.1";
 
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 
@@ -29,6 +30,28 @@ function escapeHtml(text: string): string {
   return text.replace(/[&<>"']/g, (char) => htmlEntities[char] || char);
 }
 
+// Rate limiting: max 5 submissions per email per hour
+async function checkRateLimit(email: string): Promise<boolean> {
+  const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
+  const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+  const supabase = createClient(supabaseUrl, supabaseServiceKey);
+
+  const oneHourAgo = new Date(Date.now() - 3600000).toISOString();
+  
+  const { count, error } = await supabase
+    .from("contact_submissions")
+    .select("*", { count: "exact", head: true })
+    .eq("email", email)
+    .gte("created_at", oneHourAgo);
+
+  if (error) {
+    console.error("Rate limit check error:", error);
+    return true; // Allow on error to not block legitimate users
+  }
+
+  return (count || 0) < 5;
+}
+
 const handler = async (req: Request): Promise<Response> => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
@@ -44,6 +67,18 @@ const handler = async (req: Request): Promise<Response> => {
         JSON.stringify({ error: "Champs requis manquants" }),
         {
           status: 400,
+          headers: { "Content-Type": "application/json", ...corsHeaders },
+        }
+      );
+    }
+
+    // Check rate limit
+    const withinLimit = await checkRateLimit(email);
+    if (!withinLimit) {
+      return new Response(
+        JSON.stringify({ error: "Trop de demandes. Veuillez réessayer plus tard." }),
+        {
+          status: 429,
           headers: { "Content-Type": "application/json", ...corsHeaders },
         }
       );
@@ -83,8 +118,9 @@ const handler = async (req: Request): Promise<Response> => {
     });
   } catch (error: unknown) {
     console.error("Error in send-contact-email function:", error);
+    // Return generic error message to avoid exposing internal details
     return new Response(
-      JSON.stringify({ error: "Une erreur est survenue lors de l'envoi" }),
+      JSON.stringify({ error: "Une erreur est survenue. Veuillez réessayer plus tard." }),
       {
         status: 500,
         headers: { "Content-Type": "application/json", ...corsHeaders },
