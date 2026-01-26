@@ -97,122 +97,102 @@ const StepCard = ({ step, index, isActive, onHover, onLeave }: StepCardProps) =>
         }}
       />
 
-      {/* Main card */}
-      <motion.div
-        className="relative overflow-hidden rounded-2xl border backdrop-blur-sm"
-        style={{
-          background: "linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%)",
-          borderColor: isActive ? step.color : "rgba(255,255,255,0.08)",
-        }}
-        whileHover={{
-          scale: 1.02,
-          rotateY: isEven ? 2 : -2,
-          boxShadow: `0 30px 60px -20px ${step.color}40`,
-        }}
-        transition={{ duration: 0.4, ease: "easeOut" }}
-      >
-        {/* Top gradient bar */}
+      <div className="relative flex items-center gap-6 md:gap-10">
+        {/* Left: Large number without background */}
         <motion.div
-          className="absolute top-0 left-0 right-0 h-1"
-          style={{
-            background: `linear-gradient(90deg, transparent, ${step.color}, transparent)`,
-            opacity: isActive ? 1 : 0,
-          }}
-          animate={{ opacity: isActive ? 1 : 0 }}
+          className="flex-shrink-0 relative"
+          whileHover={{ scale: 1.1 }}
           transition={{ duration: 0.3 }}
-        />
-
-        <div className="p-6 md:p-8 flex flex-col md:flex-row items-start gap-6">
-          {/* Left: Number + Icon */}
-          <div className="flex items-center gap-4 md:flex-col md:items-center md:gap-3">
-            {/* Floating number badge */}
-            <motion.div
-              className="relative w-14 h-14 md:w-16 md:h-16 rounded-2xl flex items-center justify-center font-bold text-lg overflow-hidden"
-              style={{
-                background: `linear-gradient(135deg, ${step.color}20, ${step.color}05)`,
-                border: `1px solid ${step.color}40`,
-              }}
-              whileHover={{ scale: 1.1, rotate: 5 }}
-              transition={{ duration: 0.3 }}
-            >
-              {/* Animated shimmer */}
-              <motion.div
-                className="absolute inset-0"
-                style={{
-                  background: `linear-gradient(45deg, transparent 30%, ${step.color}20 50%, transparent 70%)`,
-                }}
-                animate={{
-                  x: ["-100%", "200%"],
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  repeatDelay: 2,
-                }}
-              />
-              <span style={{ color: step.color }}>{step.number}</span>
-            </motion.div>
-
-            {/* Icon */}
-            <motion.div
-              className="w-10 h-10 rounded-xl flex items-center justify-center"
-              style={{
-                background: `linear-gradient(135deg, ${step.color}15, transparent)`,
-              }}
-              whileHover={{ scale: 1.2, rotate: -5 }}
-              transition={{ duration: 0.3 }}
-            >
-              <Icon className="w-5 h-5" style={{ color: step.color }} />
-            </motion.div>
-          </div>
-
-          {/* Right: Content */}
-          <div className="flex-1">
-            <motion.h3
-              className="text-xl md:text-2xl font-display font-bold text-white mb-3 transition-colors duration-300"
-              style={{ color: isActive ? step.color : "#fff" }}
-            >
-              {step.title}
-            </motion.h3>
-            <p className="text-white/60 leading-relaxed text-base md:text-lg group-hover:text-white/80 transition-colors duration-300">
-              {step.description}
-            </p>
-          </div>
-
-          {/* Arrow indicator */}
-          <motion.div
-            className="hidden md:flex items-center justify-center w-10 h-10 rounded-full self-center"
+        >
+          <motion.span
+            className="font-display font-bold text-6xl md:text-7xl lg:text-8xl"
             style={{
-              background: `${step.color}15`,
-              border: `1px solid ${step.color}30`,
+              color: isActive ? step.color : "rgba(255,255,255,0.15)",
+              textShadow: isActive ? `0 0 40px ${step.color}50` : "none",
             }}
             animate={{
-              x: isActive ? [0, 5, 0] : 0,
+              color: isActive ? step.color : "rgba(255,255,255,0.15)",
             }}
-            transition={{
-              duration: 1,
-              repeat: isActive ? Infinity : 0,
-            }}
+            transition={{ duration: 0.3 }}
           >
-            <ArrowRight className="w-4 h-4" style={{ color: step.color }} />
-          </motion.div>
-        </div>
+            {step.number}
+          </motion.span>
+        </motion.div>
 
-        {/* Decorative corner elements */}
-        <div
-          className="absolute bottom-0 right-0 w-32 h-32 pointer-events-none opacity-20"
+        {/* Main card */}
+        <motion.div
+          className="flex-1 relative overflow-hidden rounded-2xl border backdrop-blur-sm"
           style={{
-            background: `radial-gradient(circle at bottom right, ${step.color}30, transparent 70%)`,
+            background: "linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%)",
+            borderColor: isActive ? step.color : "rgba(255,255,255,0.08)",
           }}
-        />
-      </motion.div>
+          whileHover={{
+            scale: 1.02,
+            rotateY: isEven ? 2 : -2,
+            boxShadow: `0 30px 60px -20px ${step.color}40`,
+          }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+        >
+          {/* Top gradient bar */}
+          <motion.div
+            className="absolute top-0 left-0 right-0 h-1"
+            style={{
+              background: `linear-gradient(90deg, transparent, ${step.color}, transparent)`,
+            }}
+            animate={{ opacity: isActive ? 1 : 0 }}
+            transition={{ duration: 0.3 }}
+          />
+
+          <div className="p-6 md:p-8 flex items-center gap-6">
+            {/* Content */}
+            <div className="flex-1">
+              <motion.h3
+                className="text-xl md:text-2xl font-display font-bold mb-3 transition-colors duration-300"
+                style={{ color: isActive ? step.color : "#fff" }}
+              >
+                {step.title}
+              </motion.h3>
+              <p className="text-white/60 leading-relaxed text-base md:text-lg group-hover:text-white/80 transition-colors duration-300">
+                {step.description}
+              </p>
+            </div>
+
+            {/* Right: Icon without background, animated */}
+            <motion.div
+              className="flex-shrink-0"
+              animate={{
+                rotate: isActive ? [0, 10, -10, 0] : 0,
+                scale: isActive ? 1.25 : 1,
+              }}
+              transition={{
+                duration: 0.5,
+                ease: "easeInOut",
+              }}
+              whileHover={{ scale: 1.3 }}
+            >
+              <Icon
+                className="w-8 h-8 md:w-10 md:h-10 transition-colors duration-300"
+                style={{ color: isActive ? step.color : "rgba(255,255,255,0.4)" }}
+              />
+            </motion.div>
+          </div>
+
+          {/* Decorative corner elements */}
+          <div
+            className="absolute bottom-0 right-0 w-32 h-32 pointer-events-none opacity-20"
+            style={{
+              background: `radial-gradient(circle at bottom right, ${step.color}30, transparent 70%)`,
+            }}
+          />
+        </motion.div>
+      </div>
 
       {/* Connector line to next card */}
       {index < steps.length - 1 && (
         <motion.div
-          className="hidden md:block absolute left-8 -bottom-8 w-0.5 h-8"
+          className="absolute left-7 md:left-10 -bottom-6 md:-bottom-8 w-0.5 h-6 md:h-8"
           style={{
-            background: `linear-gradient(to bottom, ${step.color}50, ${steps[index + 1].color}50)`,
+            background: `linear-gradient(to bottom, ${step.color}40, ${steps[index + 1].color}40)`,
           }}
           initial={{ scaleY: 0 }}
           whileInView={{ scaleY: 1 }}
