@@ -169,4 +169,57 @@
       opacity: 1;
     }
   }
+
+  /* Cross-browser marquee animation */
+  .marquee-mask {
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  }
+
+  .marquee-track {
+    display: flex;
+    flex-shrink: 0;
+    gap: 2rem;
+    -webkit-animation: marquee-scroll 40s linear infinite;
+    animation: marquee-scroll 40s linear infinite;
+    will-change: transform;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+
+  @media (min-width: 768px) {
+    .marquee-track {
+      gap: 3rem;
+    }
+  }
+
+  @-webkit-keyframes marquee-scroll {
+    0% {
+      -webkit-transform: translateX(0) translateZ(0);
+      transform: translateX(0) translateZ(0);
+    }
+    100% {
+      -webkit-transform: translateX(-100%) translateZ(0);
+      transform: translateX(-100%) translateZ(0);
+    }
+  }
+
+  @keyframes marquee-scroll {
+    0% {
+      -webkit-transform: translateX(0) translateZ(0);
+      transform: translateX(0) translateZ(0);
+    }
+    100% {
+      -webkit-transform: translateX(-100%) translateZ(0);
+      transform: translateX(-100%) translateZ(0);
+    }
+  }
+
+  /* Pause animation on hover for accessibility */
+  .marquee-track:hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+  }
 }
