@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Eye, Feather, Sparkles, Handshake, Target, Heart } from "lucide-react";
 import { motion } from "framer-motion";
+import { SkillsSection } from "@/components/about/SkillsSection";
 const values = [{
   icon: Sparkles,
   title: "Clarté",
@@ -179,9 +180,6 @@ const About = () => {
               </p>
             </motion.div>
 
-            {/* Quote Block - Pulse & Scale */}
-            
-
             {/* Workflow Block - Full Width - Subtle lift */}
             <motion.div variants={itemVariants} whileHover={{
             y: -4,
@@ -208,6 +206,9 @@ const About = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Skills & Certifications Section */}
+      <SkillsSection />
     </Layout>;
 };
 export default About;
