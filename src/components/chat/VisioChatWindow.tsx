@@ -1,14 +1,21 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
-import { Send, Bot, User, Loader2, Sparkles } from "lucide-react";
+import { Send, Bot, User, Loader2, Sparkles, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import ReactMarkdown from "react-markdown";
+import { Link } from "react-router-dom";
+
+interface CtaButton {
+  label: string;
+  url: string;
+}
 
 interface Message {
   id: string;
   role: "user" | "assistant";
   content: string;
+  ctaButtons?: CtaButton[];
 }
 
 interface VisioChatWindowProps {
@@ -16,6 +23,23 @@ interface VisioChatWindowProps {
 }
 
 const CHAT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/visio-chat`;
+
+// Parse CTA buttons from message content
+const parseCtaButtons = (content: string): { cleanContent: string; ctaButtons: CtaButton[] } => {
+  const ctaRegex = /\[CTA:([^\|]+)\|([^\]]+)\]/g;
+  const ctaButtons: CtaButton[] = [];
+  let match;
+  
+  while ((match = ctaRegex.exec(content)) !== null) {
+    ctaButtons.push({
+      label: match[1].trim(),
+      url: match[2].trim(),
+    });
+  }
+  
+  const cleanContent = content.replace(ctaRegex, "").trim();
+  return { cleanContent, ctaButtons };
+};
 
 export function VisioChatWindow({ onClose }: VisioChatWindowProps) {
   const [messages, setMessages] = useState<Message[]>([]);
@@ -136,17 +160,22 @@ export function VisioChatWindow({ onClose }: VisioChatWindowProps) {
             const content = parsed.choices?.[0]?.delta?.content;
             if (content) {
               assistantContent += content;
-              setMessages((prev) =>
-                prev.map((m) =>
-                  m.id === assistantId ? { ...m, content: assistantContent } : m
-                )
-              );
             }
           } catch {
             // Ignore partial leftovers
           }
         }
       }
+
+      // Parse CTA buttons from final content
+      const { cleanContent, ctaButtons } = parseCtaButtons(assistantContent);
+      setMessages((prev) =>
+        prev.map((m) =>
+          m.id === assistantId
+            ? { ...m, content: cleanContent, ctaButtons }
+            : m
+        )
+      );
     } catch (error) {
       console.error("Chat error:", error);
       const errorMessage =
@@ -297,39 +326,61 @@ export function VisioChatWindow({ onClose }: VisioChatWindowProps) {
               )}
             >
               {message.role === "assistant" ? (
-                <div className="prose prose-sm prose-invert max-w-none text-sm leading-relaxed">
-                  <ReactMarkdown
-                    components={{
-                      p: ({ children }) => (
-                        <p className="mb-2 last:mb-0">{children}</p>
-                      ),
-                      ul: ({ children }) => (
-                        <ul className="list-disc pl-4 mb-2">{children}</ul>
-                      ),
-                      ol: ({ children }) => (
-                        <ol className="list-decimal pl-4 mb-2">{children}</ol>
-                      ),
-                      li: ({ children }) => <li className="mb-1">{children}</li>,
-                      strong: ({ children }) => (
-                        <strong className="text-primary font-semibold">
-                          {children}
-                        </strong>
-                      ),
-                      a: ({ href, children }) => (
-                        <a
-                          href={href}
-                          className="text-primary underline hover:text-primary/80"
-                          target="_blank"
-                          rel="noopener noreferrer"
+                <>
+                  <div className="prose prose-sm prose-invert max-w-none text-sm leading-relaxed">
+                    <ReactMarkdown
+                      components={{
+                        p: ({ children }) => (
+                          <p className="mb-2 last:mb-0">{children}</p>
+                        ),
+                        ul: ({ children }) => (
+                          <ul className="list-disc pl-4 mb-2">{children}</ul>
+                        ),
+                        ol: ({ children }) => (
+                          <ol className="list-decimal pl-4 mb-2">{children}</ol>
+                        ),
+                        li: ({ children }) => <li className="mb-1">{children}</li>,
+                        strong: ({ children }) => (
+                          <strong className="text-primary font-semibold">
+                            {children}
+                          </strong>
+                        ),
+                        a: ({ href, children }) => (
+                          <a
+                            href={href}
+                            className="text-primary underline hover:text-primary/80"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {children}
+                          </a>
+                        ),
+                      }}
+                    >
+                      {message.content}
+                    </ReactMarkdown>
+                  </div>
+                  {/* CTA Buttons */}
+                  {message.ctaButtons && message.ctaButtons.length > 0 && (
+                    <div className="flex flex-wrap gap-2 mt-3 pt-3 border-t border-border/30">
+                      {message.ctaButtons.map((cta, index) => (
+                        <Link
+                          key={index}
+                          to={cta.url}
+                          onClick={onClose}
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-full transition-all duration-200 hover:scale-105"
+                          style={{
+                            background: "linear-gradient(135deg, hsl(43 35% 67%), hsl(40 28% 55%))",
+                            color: "hsl(230 78% 9%)",
+                          }}
                         >
-                          {children}
-                        </a>
-                      ),
-                    }}
-                  >
-                    {message.content}
-                  </ReactMarkdown>
-                </div>
+                          {cta.label}
+                          <ArrowRight className="w-3 h-3" />
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </>
               ) : (
                 <p className="text-sm leading-relaxed">{message.content}</p>
               )}
