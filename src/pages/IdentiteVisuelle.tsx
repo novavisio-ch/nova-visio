@@ -3,6 +3,7 @@ import { BrandIdentityHero } from "@/components/services/brand/BrandIdentityHero
 import { BrandIdentityContent } from "@/components/services/brand/BrandIdentityContent";
 import { BrandBenefitsSection } from "@/components/services/brand/BrandBenefitsSection";
 import { BrandOfferSection } from "@/components/services/brand/BrandOfferSection";
+import { BrandOfferDetailsSection } from "@/components/services/brand/BrandOfferDetailsSection";
 import { BrandStepsSection } from "@/components/services/brand/BrandStepsSection";
 import { BrandComplementarySection } from "@/components/services/brand/BrandComplementarySection";
 import { BrandFaqSection } from "@/components/services/brand/BrandFaqSection";
@@ -22,6 +23,9 @@ const IdentiteVisuelle = () => {
 
       {/* Offer Section - What's included */}
       <BrandOfferSection />
+
+      {/* Offer Details Section - Full breakdown */}
+      <BrandOfferDetailsSection />
 
       {/* Steps / Timeline */}
       <BrandStepsSection />
