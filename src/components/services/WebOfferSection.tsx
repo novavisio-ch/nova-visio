@@ -129,87 +129,36 @@ const OfferCard = ({
       background: `${glowColor}30`
     }} />
 
-      <div className="relative flex flex-col items-center text-center p-8 md:p-10 rounded-3xl border-2 bg-white transition-all duration-500 h-full overflow-hidden" style={{
+      <div className="relative flex flex-col items-start text-left p-8 md:p-10 rounded-3xl border-2 bg-white transition-all duration-500 h-full overflow-hidden" style={{
       borderColor,
       backgroundImage: bgGradient
     }}>
-        {/* Floating icon */}
+        {/* Title + Badge row */}
         <motion.div initial={{
-        scale: 0,
-        rotate: -180
+        opacity: 0,
+        y: 20
       }} whileInView={{
-        scale: 1,
-        rotate: 0
+        opacity: 1,
+        y: 0
       }} viewport={{
         once: true
       }} transition={{
-        duration: 0.6,
+        duration: 0.5,
         delay: 0.3 + index * 0.2
-      }} className="relative mb-6">
-          <div className="absolute inset-0 blur-xl opacity-50" style={{
-          background: buttonGradient
-        }} />
-          <div className="relative w-16 h-16 rounded-2xl flex items-center justify-center" style={{
-          background: buttonGradient
-        }}>
-            {icon}
-          </div>
+      }} className="flex items-center gap-3 mb-4">
+          <h3 className="text-3xl md:text-4xl font-display font-bold" style={{
+            color: "#2D284D"
+          }}>
+            {title}
+          </h3>
+          <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide" style={{
+            background: badgeGradient,
+            color: "#2D284D"
+          }}>
+            <Sparkles className="w-3 h-3" />
+            {isGold ? "Premium" : "Starter"}
+          </span>
         </motion.div>
-
-        {/* Badge */}
-        <motion.span initial={{
-        opacity: 0,
-        scale: 0.8
-      }} whileInView={{
-        opacity: 1,
-        scale: 1
-      }} viewport={{
-        once: true
-      }} transition={{
-        duration: 0.5,
-        delay: 0.4 + index * 0.2
-      }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold tracking-wide mb-6" style={{
-        background: badgeGradient,
-        color: "#2D284D"
-      }}>
-          <Sparkles className="w-3.5 h-3.5" />
-          POUR : ARTISANS, PME, FREELANCES, STARTUP
-        </motion.span>
-
-        {/* Title */}
-        <motion.h3 initial={{
-        opacity: 0,
-        y: 20
-      }} whileInView={{
-        opacity: 1,
-        y: 0
-      }} viewport={{
-        once: true
-      }} transition={{
-        duration: 0.5,
-        delay: 0.5 + index * 0.2
-      }} className="text-3xl md:text-4xl font-display font-bold mb-2" style={{
-        color: "#2D284D"
-      }}>
-          {title}
-        </motion.h3>
-        
-        <motion.p initial={{
-        opacity: 0,
-        y: 20
-      }} whileInView={{
-        opacity: 1,
-        y: 0
-      }} viewport={{
-        once: true
-      }} transition={{
-        duration: 0.5,
-        delay: 0.55 + index * 0.2
-      }} className="text-xl font-medium mb-5" style={{
-        color: accentColor
-      }}>
-          {subtitle}
-        </motion.p>
 
         {/* Description */}
         <motion.p initial={{
@@ -222,22 +171,65 @@ const OfferCard = ({
         once: true
       }} transition={{
         duration: 0.5,
-        delay: 0.6 + index * 0.2
-      }} className="mb-8 max-w-md text-base leading-relaxed" style={{
+        delay: 0.4 + index * 0.2
+      }} className="mb-6 text-base leading-relaxed" style={{
         color: "#2D284D",
-        opacity: 0.8
+        opacity: 0.7
       }}>
           {description}
         </motion.p>
 
+        {/* Price display */}
+        {price && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.5 + index * 0.2 }}
+            className="mb-6"
+          >
+            <span className="text-sm" style={{ color: "#2D284D", opacity: 0.6 }}>
+              à partir de
+            </span>
+            <div className="text-4xl md:text-5xl font-bold" style={{ color: accentColor }}>
+              {price}
+            </div>
+            <span className="text-sm" style={{ color: "#2D284D", opacity: 0.6 }}>
+              Projet clé en main
+            </span>
+          </motion.div>
+        )}
+
+        {/* Divider */}
+        <div className="w-full h-px mb-6" style={{ background: `${accentColor}30` }} />
+
+        {/* Section title */}
+        <motion.p initial={{
+        opacity: 0,
+        y: 20
+      }} whileInView={{
+        opacity: 1,
+        y: 0
+      }} viewport={{
+        once: true
+      }} transition={{
+        duration: 0.5,
+        delay: 0.55 + index * 0.2
+      }} className="text-xs font-semibold tracking-wider uppercase mb-5" style={{
+        color: "#2D284D",
+        opacity: 0.5
+      }}>
+          INCLUS DANS CE FORFAIT :
+        </motion.p>
+
         {/* Benefits list */}
-        <motion.ul className="space-y-3 mb-10 text-left w-full flex-grow" initial="hidden" whileInView="visible" viewport={{
+        <motion.ul className="space-y-4 mb-10 w-full flex-grow" initial="hidden" whileInView="visible" viewport={{
         once: true
       }} variants={{
         visible: {
           transition: {
             staggerChildren: 0.08,
-            delayChildren: 0.7 + index * 0.2
+            delayChildren: 0.6 + index * 0.2
           }
         }
       }}>
@@ -256,22 +248,6 @@ const OfferCard = ({
             </motion.li>)}
         </motion.ul>
 
-        {/* Price display */}
-        {price && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.9 + index * 0.2 }}
-            className="mb-8 px-6 py-4 rounded-2xl"
-            style={{ background: `${accentColor}15` }}
-          >
-            <span className="text-2xl md:text-3xl font-bold" style={{ color: accentColor }}>
-              {price}
-            </span>
-          </motion.div>
-        )}
-
         {/* CTA Button */}
         <motion.div initial={{
         opacity: 0,
@@ -283,10 +259,11 @@ const OfferCard = ({
         once: true
       }} transition={{
         duration: 0.5,
-        delay: 1 + index * 0.2
+        delay: 0.9 + index * 0.2
       }} className="mt-auto w-full">
-          <Button asChild size="lg" className="w-full rounded-xl px-8 py-6 text-base font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg" style={{
-          background: buttonGradient,
+          <Button asChild size="lg" className="w-full rounded-xl px-8 py-6 text-base font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg border-2" style={{
+          background: "transparent",
+          borderColor: accentColor,
           color: "#2D284D"
         }}>
             <Link to="/contact">{ctaText}</Link>
@@ -356,8 +333,8 @@ export const WebOfferSection = () => {
 
         {/* Cards Grid */}
         <div className="grid md:grid-cols-2 gap-8 md:gap-10">
-          <OfferCard title="Site vitrine" subtitle="Votre vitrine digitale" description="Une présence en ligne complète pour asseoir votre crédibilité et présenter l'ensemble de votre activité." benefits={siteBenefits} ctaText="Créer mon site vitrine" variant="gold" icon={<Monitor className="w-8 h-8 text-[#2D284D]" />} index={0} price="dès 1'800 CHF" />
-          <OfferCard title="Landing page" subtitle="Une page, un objectif" description="Une page unique et percutante pour convertir vos visiteurs en prospects ou clients." benefits={landingBenefits} ctaText="Créer ma landing page" variant="purple" icon={<Rocket className="w-8 h-8 text-[#2D284D]" />} index={1} />
+          <OfferCard title="Site vitrine" subtitle="Votre vitrine digitale" description="Une présence en ligne complète pour asseoir votre crédibilité et présenter l'ensemble de votre activité." benefits={siteBenefits} ctaText="Choisir cette offre" variant="gold" icon={<Monitor className="w-8 h-8 text-[#2D284D]" />} index={0} price="1'800 CHF" />
+          <OfferCard title="Landing page" subtitle="Une page, un objectif" description="Une page unique et percutante pour convertir vos visiteurs en prospects ou clients." benefits={landingBenefits} ctaText="Choisir cette offre" variant="purple" icon={<Rocket className="w-8 h-8 text-[#2D284D]" />} index={1} price="900 CHF" />
         </div>
 
         {/* Bottom decorative element */}
