@@ -184,7 +184,7 @@ export function VisioChatWindow({ onClose }: VisioChatWindowProps) {
       exit={{ opacity: 0, y: 20, scale: 0.95 }}
       transition={{ type: "spring", stiffness: 300, damping: 30 }}
       className={cn(
-        "fixed z-50 bg-card border border-border/50 shadow-2xl overflow-hidden flex flex-col",
+        "fixed z-50 backdrop-blur-2xl bg-card/70 border border-white/15 shadow-[0_8px_32px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.1)] overflow-hidden flex flex-col",
         // Desktop: floating window anchored to right
         "md:bottom-24 md:right-6 md:left-auto md:top-auto md:w-[380px] md:h-[550px] md:max-h-[80vh] md:rounded-2xl",
         // Mobile: anchored to right with max width
