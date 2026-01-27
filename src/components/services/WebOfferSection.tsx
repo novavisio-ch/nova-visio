@@ -32,23 +32,23 @@ const siteBenefits: BenefitItem[] = [{
   bold: "Base évolutive"
 }];
 const landingBenefits: BenefitItem[] = [{
-  text: "Une seule page, un seul objectif : convertir.",
-  bold: "un seul objectif"
+  text: "Brief structuré pour clarifier votre offre, votre cible et l'objectif de la page.",
+  bold: "Brief structuré"
 }, {
-  text: "Message ultra-clair orienté vers l'action immédiate.",
-  bold: "action immédiate"
+  text: "Structure et rédaction complètes de la landing, optimisées pour la conversion.",
+  bold: "optimisées pour la conversion"
 }, {
-  text: "Idéale pour une offre spécifique, un lancement ou une campagne.",
-  bold: "offre spécifique"
+  text: "Design sur‑mesure, responsive, aligné avec votre identité visuelle.",
+  bold: "Design sur‑mesure"
 }, {
-  text: "Structure optimisée pour capter l'attention et guider vers le CTA.",
-  bold: "capter l'attention"
+  text: "Formulaire intégré + suivi des conversions pour mesurer vos résultats.",
+  bold: "suivi des conversions"
 }, {
-  text: "Parfaite pour tester une idée ou générer des leads rapidement.",
-  bold: "générer des leads"
+  text: "Mise en ligne clé en main + mini guide PDF + 30 jours de support inclus.",
+  bold: "30 jours de support"
 }, {
-  text: "Intégration facile avec vos outils marketing (emailing, ads…).",
-  bold: "outils marketing"
+  text: "Variante A/B sur l'accroche ou le bloc héro pour tester et améliorer vos performances.",
+  bold: "Variante A/B"
 }];
 interface OfferCardProps {
   title: string;
