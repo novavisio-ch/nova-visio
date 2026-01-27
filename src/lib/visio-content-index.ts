@@ -132,27 +132,28 @@ export const siteContent: ContentSection[] = [
     id: "service-web-vitrine",
     title: "Site vitrine",
     category: "services",
-    content: `Site vitrine - Ce qu'il comprend :
+    content: `Site vitrine (dès 1'800 CHF) - Ce qu'il comprend :
 - Présentation claire de votre activité, vos offres et vos valeurs.
 - Design professionnel qui renforce votre crédibilité.
-- Plusieurs pages structurées (accueil, services, à propos, contact…).
+- 6 à 8 pages structurées (accueil, services, à propos, contact…).
 - Site modifiable par vous, sans compétences techniques.
 - Optimisé pour le référencement naturel (SEO).
-- Responsive : parfaitement lisible sur tous les écrans.`,
-    keywords: ["site vitrine", "site", "pages", "entreprise", "présentation"]
+- Responsive : parfaitement lisible sur tous les écrans.
+- 12 mois de support inclus.`,
+    keywords: ["site vitrine", "site", "pages", "entreprise", "présentation", "prix", "tarif", "coût", "1800", "chf"]
   },
   {
     id: "service-web-landing",
     title: "Landing page",
     category: "services",
-    content: `Landing page - Ce qu'elle comprend :
-- Une seule page, un seul objectif : convertir.
+    content: `Landing page (dès 900 CHF) - Ce qu'elle comprend :
+- Une page unique et percutante, conçue sur-mesure sur votre offre pour convertir vos visiteurs en prospects ou clients.
 - Message ultra-clair orienté vers l'action immédiate.
 - Idéale pour une offre spécifique, un lancement ou une campagne.
 - Structure optimisée pour capter l'attention et guider vers le CTA.
 - Parfaite pour tester une idée ou générer des leads rapidement.
 - Intégration facile avec vos outils marketing (emailing, ads…).`,
-    keywords: ["landing page", "page de vente", "conversion", "leads", "campagne"]
+    keywords: ["landing page", "page de vente", "conversion", "leads", "campagne", "prix", "tarif", "coût", "900", "chf"]
   },
 
   // === SERVICES IDENTITÉ VISUELLE ===
@@ -160,21 +161,35 @@ export const siteContent: ContentSection[] = [
     id: "service-identity-overview",
     title: "Identité visuelle",
     category: "services",
-    content: `Identité visuelle : Nous créons des identités visuelles complètes et cohérentes. Une identité visuelle professionnelle vous permet d'être reconnu, de renforcer votre crédibilité et de vous démarquer de la concurrence.`,
-    keywords: ["identité visuelle", "branding", "image de marque", "logo"]
+    content: `Identité visuelle (dès 1'100 CHF) : Nous créons des identités visuelles complètes et cohérentes. Une identité visuelle professionnelle vous permet d'être reconnu, de renforcer votre crédibilité et de vous démarquer de la concurrence.`,
+    keywords: ["identité visuelle", "branding", "image de marque", "logo", "prix", "tarif", "coût", "1100", "chf"]
   },
   {
     id: "service-identity-deliverables",
     title: "Livrables identité visuelle",
     category: "services",
-    content: `Ce que comprend le pack identité visuelle :
-- Logo principal et variantes (horizontale, verticale, icône).
-- Palette de couleurs complète avec usages recommandés.
-- Typographies titres et textes avec recommandations.
-- Charte graphique synthétique (PDF) avec exemples d'utilisation.
-- Déclinaisons pour le web et les réseaux sociaux.
-- Fichiers sources et exports dans tous les formats nécessaires.`,
-    keywords: ["logo", "charte graphique", "couleurs", "typographie", "livrables"]
+    content: `Ce que comprend le pack identité visuelle (dès 1'100 CHF) :
+- Clarification de votre positionnement et de votre univers pour une identité qui vous ressemble.
+- Moodboard et 2 directions créatives pour choisir l'ambiance qui vous correspond vraiment.
+- Logo sur-mesure + déclinaisons + icône pour une utilisation fluide sur tous vos supports.
+- Palette de couleurs, typographies et éléments graphiques pour un univers cohérent et facile à appliquer.
+- Brandboard + charte graphique pour savoir exactement comment utiliser votre identité.
+- Fichiers prêts à l'emploi + 250 cartes de visite, signature email et visuels pour un réseau social inclus.`,
+    keywords: ["logo", "charte graphique", "couleurs", "typographie", "livrables", "prix", "tarif", "coût", "1100", "chf"]
+  },
+
+  // === TARIFS ===
+  {
+    id: "pricing-overview",
+    title: "Tarifs Nova Visio",
+    category: "services",
+    content: `Nos tarifs :
+- Site vitrine : dès 1'800 CHF (6 à 8 pages, design sur-mesure, SEO, 12 mois de support)
+- Landing page : dès 900 CHF (page unique orientée conversion)
+- Identité visuelle complète : dès 1'100 CHF (logo, déclinaisons, charte graphique, 250 cartes de visite incluses)
+
+Ces tarifs sont des points de départ. Le prix final dépend de la complexité et des spécificités de votre projet. Contactez-nous pour obtenir un devis personnalisé.`,
+    keywords: ["prix", "tarif", "coût", "combien", "budget", "devis", "chf", "francs", "1800", "900", "1100"]
   },
 
   // === SERVICES COMPLÉMENTAIRES ===
