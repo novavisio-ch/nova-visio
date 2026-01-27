@@ -1,20 +1,34 @@
 import { Brain, Sparkles, Search, Share2, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
+import { CertificationBadge } from "./CertificationLogos";
 
-const skills = [
+type LogoType = "ibm" | "google" | "google-cloud" | "coursera" | "vanderbilt" | "ucdavis" | "meta" | "adobe";
+
+interface Skill {
+  id: string;
+  icon: typeof Brain;
+  title: string;
+  description: React.ReactNode;
+  accentColor: string;
+  delay: number;
+  certifications: LogoType[];
+}
+
+const skills: Skill[] = [
   {
     id: "ia-strategy",
     icon: Brain,
     title: "IA & stratégie digitale",
     description: (
       <>
-        Parcours certifiants autour de <strong className="text-white font-semibold">l'IA générative</strong> et de son usage en marketing digital (IBM, Google Cloud, Coursera).
+        Parcours certifiants autour de <strong className="text-white font-semibold">l'IA générative</strong> et de son usage en marketing digital.
         <br className="hidden sm:block" />
-        <span className="text-white/60">Concrètement : utiliser l'IA pour analyser, optimiser et structurer vos contenus, sans jamais remplacer le regard humain.</span>
+        <span className="text-white/60">Utiliser l'IA pour analyser, optimiser et structurer vos contenus, sans jamais remplacer le regard humain.</span>
       </>
     ),
     accentColor: "#C3B68F",
     delay: 0,
+    certifications: ["ibm", "google-cloud", "coursera"],
   },
   {
     id: "prompting",
@@ -24,11 +38,12 @@ const skills = [
       <>
         Formations dédiées au <strong className="text-white font-semibold">prompting avancé</strong> et à la création d'<strong className="text-[#C3B68F] font-medium">assistants IA sur mesure</strong>.
         <br className="hidden sm:block" />
-        <span className="text-white/60">Objectif : poser les bonnes questions aux bons outils pour gagner en clarté, en vitesse et en qualité.</span>
+        <span className="text-white/60">Poser les bonnes questions aux bons outils pour gagner en clarté, en vitesse et en qualité.</span>
       </>
     ),
     accentColor: "#9D8DF0",
     delay: 0.1,
+    certifications: ["google", "vanderbilt", "coursera"],
   },
   {
     id: "seo",
@@ -38,11 +53,12 @@ const skills = [
       <>
         Certifications en <strong className="text-white font-semibold">stratégie de content marketing</strong> et en croissance organique.
         <br className="hidden sm:block" />
-        <span className="text-white/60">Résultat : des textes pensés pour vos clients, structurés pour les moteurs de recherche et les outils d'IA.</span>
+        <span className="text-white/60">Des textes pensés pour vos clients, structurés pour les moteurs de recherche et les outils d'IA.</span>
       </>
     ),
     accentColor: "#C3B68F",
     delay: 0.2,
+    certifications: ["ucdavis", "ibm", "coursera"],
   },
   {
     id: "social",
@@ -57,6 +73,7 @@ const skills = [
     ),
     accentColor: "#9D8DF0",
     delay: 0.3,
+    certifications: ["meta", "adobe", "coursera"],
   },
   {
     id: "responsible",
@@ -71,6 +88,7 @@ const skills = [
     ),
     accentColor: "#C3B68F",
     delay: 0.4,
+    certifications: ["google", "ibm", "coursera"],
   },
 ];
 
@@ -259,6 +277,9 @@ export const SkillsSection = () => {
                     {skill.description}
                   </p>
 
+                  {/* Certification Logos */}
+                  <CertificationBadge logos={skill.certifications} />
+
                   {/* Bottom Accent Line */}
                   <motion.div
                     className="absolute bottom-0 left-8 right-8 h-[2px] rounded-full"
@@ -275,6 +296,17 @@ export const SkillsSection = () => {
             );
           })}
         </div>
+
+        {/* Disclaimer */}
+        <motion.p
+          className="text-center text-xs text-white/30 mt-10 md:mt-14 max-w-2xl mx-auto leading-relaxed"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+        >
+          Les logos cités font référence aux programmes de formation suivis. Nova Visio n'est pas affilié officiellement à ces marques.
+        </motion.p>
       </div>
     </section>
   );
