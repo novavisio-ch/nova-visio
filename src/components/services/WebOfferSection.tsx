@@ -325,7 +325,7 @@ export const WebOfferSection = () => {
 
         {/* Cards Grid */}
         <div className="grid md:grid-cols-2 gap-8 md:gap-10">
-          <OfferCard title="Site vitrine" subtitle="Votre vitrine digitale" description="Une présence en ligne complète pour asseoir votre crédibilité et présenter l'ensemble de votre activité." benefits={siteBenefits} ctaText="Choisir cette offre" variant="gold" icon={<Monitor className="w-8 h-8 text-[#2D284D]" />} index={0} price="1'800 CHF" />
+          <OfferCard title="Site vitrine" subtitle="Votre vitrine digitale" description="Une présence en ligne sur‑mesure, pensée pour vos objectifs, qui donne confiance à vos clients et vous génère plus de demandes qualifiées." benefits={siteBenefits} ctaText="Choisir cette offre" variant="gold" icon={<Monitor className="w-8 h-8 text-[#2D284D]" />} index={0} price="1'800 CHF" />
           <OfferCard title="Landing page" subtitle="Une page, un objectif" description="Une page unique et percutante pour convertir vos visiteurs en prospects ou clients." benefits={landingBenefits} ctaText="Choisir cette offre" variant="purple" icon={<Rocket className="w-8 h-8 text-[#2D284D]" />} index={1} price="900 CHF" />
         </div>
 
