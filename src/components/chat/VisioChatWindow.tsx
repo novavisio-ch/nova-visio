@@ -184,11 +184,12 @@ export function VisioChatWindow({ onClose }: VisioChatWindowProps) {
       exit={{ opacity: 0, y: 20, scale: 0.95 }}
       transition={{ type: "spring", stiffness: 300, damping: 30 }}
       className={cn(
-        "fixed z-50 bg-card border border-border/50 shadow-2xl overflow-hidden",
-        // Desktop: floating window
-        "md:bottom-24 md:right-6 md:w-[420px] md:h-[600px] md:max-h-[80vh] md:rounded-2xl",
-        // Mobile: full screen panel
-        "bottom-0 right-0 left-0 top-20 md:top-auto md:left-auto rounded-t-2xl md:rounded-2xl"
+        "fixed z-50 bg-card border border-border/50 shadow-2xl overflow-hidden flex flex-col",
+        // Desktop: floating window anchored to right
+        "md:bottom-24 md:right-6 md:left-auto md:top-auto md:w-[380px] md:h-[550px] md:max-h-[80vh] md:rounded-2xl",
+        // Mobile: anchored to right with max width
+        "bottom-20 right-4 left-4 top-auto h-[70vh] max-h-[500px] rounded-2xl",
+        "sm:left-auto sm:w-[360px]"
       )}
     >
       {/* Header */}
@@ -221,9 +222,8 @@ export function VisioChatWindow({ onClose }: VisioChatWindowProps) {
 
       {/* Messages */}
       <div
-        className="flex-1 overflow-y-auto p-4 space-y-4"
+        className="flex-1 overflow-y-auto p-4 space-y-4 min-h-0"
         style={{
-          height: "calc(100% - 140px)",
           background:
             "linear-gradient(180deg, hsl(252 30% 15% / 0.5), hsl(252 30% 10% / 0.5))",
         }}
