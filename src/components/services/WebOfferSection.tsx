@@ -203,12 +203,7 @@ const OfferCard = ({
         }}>
               {price}
             </div>
-            <span className="text-sm" style={{
-          color: "#2D284D",
-          opacity: 0.6
-        }}>
-              Projet clé en main
-            </span>
+            
           </motion.div>}
 
         {/* Divider */}
