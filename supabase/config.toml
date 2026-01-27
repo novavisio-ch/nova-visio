@@ -1,1 +1,7 @@
 project_id = "gtjfhjdkbebmnblatzix"
+
+[functions.send-contact-email]
+verify_jwt = false
+
+[functions.visio-chat]
+verify_jwt = false
