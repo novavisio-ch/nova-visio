@@ -49,6 +49,12 @@ const landingBenefits: BenefitItem[] = [{
 }, {
   text: "Variante A/B sur l'accroche ou le bloc héro pour tester et améliorer vos performances.",
   bold: "Variante A/B"
+}, {
+  text: "Intégration avec vos outils marketing (emailing, publicités, CRM…).",
+  bold: "outils marketing"
+}, {
+  text: "Chargement ultra-rapide et SEO optimisé pour maximiser votre visibilité.",
+  bold: "SEO optimisé"
 }];
 interface OfferCardProps {
   title: string;
