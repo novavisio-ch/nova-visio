@@ -85,7 +85,7 @@ export const BrandOfferSection = () => {
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="absolute -top-4 left-1/2 -translate-x-1/2 z-10"
+            className="absolute -top-4 inset-x-0 z-10 flex justify-center"
           >
             <div 
               className="flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold tracking-wide shadow-lg"
