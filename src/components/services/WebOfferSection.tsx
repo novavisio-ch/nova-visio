@@ -147,14 +147,14 @@ const OfferCard = ({
         delay: 0.3 + index * 0.2
       }} className="flex items-center gap-3 mb-4">
           <h3 className="text-3xl md:text-4xl font-display font-bold" style={{
-            color: "#2D284D"
-          }}>
+          color: "#2D284D"
+        }}>
             {title}
           </h3>
           <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide" style={{
-            background: badgeGradient,
-            color: "#2D284D"
-          }}>
+          background: badgeGradient,
+          color: "#2D284D"
+        }}>
             <Sparkles className="w-3 h-3" />
             {isGold ? "Premium" : "Starter"}
           </span>
@@ -180,31 +180,7 @@ const OfferCard = ({
         </motion.p>
 
         {/* Price display */}
-        {price && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.5 + index * 0.2 }}
-            className="mb-6"
-          >
-            <span className="text-sm" style={{ color: "#2D284D", opacity: 0.6 }}>
-              à partir de
-            </span>
-            <div className="text-4xl md:text-5xl font-bold" style={{ color: accentColor }}>
-              {price}
-            </div>
-            <span className="text-sm" style={{ color: "#2D284D", opacity: 0.6 }}>
-              Projet clé en main
-            </span>
-          </motion.div>
-        )}
-
-        {/* Divider */}
-        <div className="w-full h-px mb-6" style={{ background: `${accentColor}30` }} />
-
-        {/* Section title */}
-        <motion.p initial={{
+        {price && <motion.div initial={{
         opacity: 0,
         y: 20
       }} whileInView={{
@@ -214,13 +190,34 @@ const OfferCard = ({
         once: true
       }} transition={{
         duration: 0.5,
-        delay: 0.55 + index * 0.2
-      }} className="text-xs font-semibold tracking-wider uppercase mb-5" style={{
-        color: "#2D284D",
-        opacity: 0.5
-      }}>
-          INCLUS DANS CE FORFAIT :
-        </motion.p>
+        delay: 0.5 + index * 0.2
+      }} className="mb-6">
+            <span className="text-sm" style={{
+          color: "#2D284D",
+          opacity: 0.6
+        }}>
+              dès
+            </span>
+            <div className="text-4xl md:text-5xl font-bold" style={{
+          color: accentColor
+        }}>
+              {price}
+            </div>
+            <span className="text-sm" style={{
+          color: "#2D284D",
+          opacity: 0.6
+        }}>
+              Projet clé en main
+            </span>
+          </motion.div>}
+
+        {/* Divider */}
+        <div className="w-full h-px mb-6" style={{
+        background: `${accentColor}30`
+      }} />
+
+        {/* Section title */}
+        
 
         {/* Benefits list */}
         <motion.ul className="space-y-4 mb-10 w-full flex-grow" initial="hidden" whileInView="visible" viewport={{
