@@ -135,9 +135,9 @@ const OfferCard = ({
     }}>
         {/* Floating top-right badge for gold variant */}
         {isGold && (
-          <div className="absolute top-4 right-4 px-4 py-1.5 rounded-full text-xs font-semibold" style={{
-            background: "linear-gradient(135deg, #9B8AFF 0%, #7C6AE8 100%)",
-            color: "white"
+          <div className="absolute -top-3 right-6 px-4 py-1.5 rounded-full text-xs font-semibold shadow-md" style={{
+            background: "linear-gradient(135deg, #DCCB99 0%, #C3B68F 100%)",
+            color: "#2D284D"
           }}>
             Best-seller
           </div>
