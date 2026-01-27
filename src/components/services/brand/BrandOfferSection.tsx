@@ -1,15 +1,15 @@
-import { Check, Sparkles } from "lucide-react";
+import { Check, Sparkles, Crown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const deliverables = [
-  { text: "Logo principal et variantes", highlight: "(horizontale, verticale, icône)." },
-  { text: "Palette de couleurs complète", highlight: "avec usages recommandés." },
-  { text: "Typographies titres et textes", highlight: "avec recommandations." },
-  { text: "Charte graphique synthétique", highlight: "(PDF) avec exemples d'utilisation." },
-  { text: "Déclinaisons pour le web", highlight: "et les réseaux sociaux." },
-  { text: "Fichiers sources et exports", highlight: "dans tous les formats nécessaires." },
+  { text: "Clarification de votre positionnement et de votre univers", highlight: "pour une identité qui vous ressemble." },
+  { text: "Moodboard et 2 directions créatives", highlight: "pour choisir l'ambiance qui vous correspond vraiment." },
+  { text: "Logo sur-mesure + déclinaisons + icône", highlight: "pour une utilisation fluide sur tous vos supports." },
+  { text: "Palette de couleurs, typographies et éléments graphiques", highlight: "pour un univers cohérent et facile à appliquer." },
+  { text: "Brandboard + charte graphique", highlight: "pour savoir exactement comment utiliser votre identité." },
+  { text: "Fichiers prêts à l'emploi + 250 cartes de visite", highlight: "signature email et visuels pour un réseau social inclus." },
 ];
 
 const containerVariants = {
@@ -79,6 +79,26 @@ export const BrandOfferSection = () => {
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
           />
 
+          {/* Best-seller style badge overlapping border */}
+          <motion.div
+            initial={{ opacity: 0, y: -20, scale: 0.8 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="absolute -top-4 left-8 z-10"
+          >
+            <div 
+              className="flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold tracking-wide shadow-lg"
+              style={{ 
+                background: "linear-gradient(135deg, #DCCB99 0%, #C3B68F 100%)",
+                color: "#2D284D" 
+              }}
+            >
+              <Crown className="w-4 h-4" />
+              SUR-MESURE
+            </div>
+          </motion.div>
+
           <div
             className="group relative flex flex-col md:flex-row gap-8 md:gap-12 items-stretch p-8 md:p-12 rounded-3xl border-2 bg-white transition-all duration-500 hover:shadow-[0_0_60px_-15px_#C3B68F]"
             style={{ borderColor: "#C3B68F" }}
@@ -126,12 +146,36 @@ export const BrandOfferSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="mb-8 text-lg md:text-xl leading-relaxed"
+                className="mb-6 text-lg md:text-xl leading-relaxed"
                 style={{ color: "#2D284D", opacity: 0.8 }}
               >
                 Une identité visuelle professionnelle pour être reconnu
                 et inspirer <strong style={{ color: "#C3B68F" }}>confiance au premier regard</strong>.
               </motion.p>
+
+              {/* Price */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.45 }}
+                className="mb-8"
+              >
+                <span className="text-sm" style={{ color: "#2D284D", opacity: 0.6 }}>
+                  dès
+                </span>
+                <span
+                  className="ml-2 text-4xl md:text-5xl font-display font-bold"
+                  style={{
+                    background: "linear-gradient(135deg, #C3B68F 0%, #a89860 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
+                  }}
+                >
+                  1'100 CHF
+                </span>
+              </motion.div>
 
               {/* CTA Button - Desktop */}
               <motion.div
@@ -150,7 +194,7 @@ export const BrandOfferSection = () => {
                     color: "#2D284D",
                   }}
                 >
-                  <Link to="/contact">Parler de votre identité visuelle</Link>
+                  <Link to="/contact">Créer mon identité visuelle</Link>
                 </Button>
               </motion.div>
             </div>
@@ -214,7 +258,7 @@ export const BrandOfferSection = () => {
                   color: "#2D284D",
                 }}
               >
-                <Link to="/contact">Parler de votre identité visuelle</Link>
+                <Link to="/contact">Créer mon identité visuelle</Link>
               </Button>
             </motion.div>
           </div>
