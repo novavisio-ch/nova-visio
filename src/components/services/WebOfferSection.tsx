@@ -253,9 +253,8 @@ const OfferCard = ({
         duration: 0.5,
         delay: 0.9 + index * 0.2
       }} className="mt-auto w-full">
-          <Button asChild size="lg" className="w-full rounded-xl px-8 py-6 text-base font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg border-2" style={{
-          background: "transparent",
-          borderColor: accentColor,
+          <Button asChild size="lg" className="w-full rounded-xl px-8 py-6 text-base font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg border-0" style={{
+          background: buttonGradient,
           color: "#2D284D"
         }}>
             <Link to="/contact">{ctaText}</Link>
@@ -325,8 +324,8 @@ export const WebOfferSection = () => {
 
         {/* Cards Grid */}
         <div className="grid md:grid-cols-2 gap-8 md:gap-10">
-          <OfferCard title="Site vitrine" subtitle="Votre vitrine digitale" description="Une présence en ligne sur‑mesure, pensée pour vos objectifs, qui donne confiance à vos clients et vous génère plus de demandes qualifiées." benefits={siteBenefits} ctaText="Choisir cette offre" variant="gold" icon={<Monitor className="w-8 h-8 text-[#2D284D]" />} index={0} price="1'800 CHF" />
-          <OfferCard title="Landing page" subtitle="Une page, un objectif" description="Une page unique et percutante pour convertir vos visiteurs en prospects ou clients." benefits={landingBenefits} ctaText="Choisir cette offre" variant="purple" icon={<Rocket className="w-8 h-8 text-[#2D284D]" />} index={1} price="900 CHF" />
+          <OfferCard title="Site vitrine" subtitle="Votre vitrine digitale" description="Une présence en ligne sur‑mesure, pensée pour vos objectifs, qui donne confiance à vos clients et vous génère plus de demandes qualifiées." benefits={siteBenefits} ctaText="Créer mon site vitrine" variant="gold" icon={<Monitor className="w-8 h-8 text-[#2D284D]" />} index={0} price="1'800 CHF" />
+          <OfferCard title="Landing page" subtitle="Une page, un objectif" description="Une page unique et percutante pour convertir vos visiteurs en prospects ou clients." benefits={landingBenefits} ctaText="Créer ma landing page" variant="purple" icon={<Rocket className="w-8 h-8 text-[#2D284D]" />} index={1} price="900 CHF" />
         </div>
 
         {/* Bottom decorative element */}
