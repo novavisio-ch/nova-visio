@@ -133,6 +133,15 @@ const OfferCard = ({
       borderColor,
       backgroundImage: bgGradient
     }}>
+        {/* Floating top-right badge for gold variant */}
+        {isGold && (
+          <div className="absolute top-4 right-4 px-4 py-1.5 rounded-full text-xs font-semibold" style={{
+            background: "linear-gradient(135deg, #9B8AFF 0%, #7C6AE8 100%)",
+            color: "white"
+          }}>
+            Best-seller
+          </div>
+        )}
         {/* Title + Badge row */}
         <motion.div initial={{
         opacity: 0,
@@ -156,7 +165,7 @@ const OfferCard = ({
           color: "#2D284D"
         }}>
             <Sparkles className="w-3 h-3" />
-            {isGold ? "Premium" : "Starter"}
+            Starter
           </span>
         </motion.div>
 
