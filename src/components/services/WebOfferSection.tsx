@@ -129,19 +129,20 @@ const OfferCard = ({
       background: `${glowColor}30`
     }} />
 
+      {/* Floating top-right badge for gold variant - outside card for visibility */}
+      {isGold && (
+        <div className="absolute -top-3 right-6 z-10 px-4 py-1.5 rounded-full text-xs font-semibold shadow-md" style={{
+          background: "linear-gradient(135deg, #DCCB99 0%, #C3B68F 100%)",
+          color: "#2D284D"
+        }}>
+          Best-seller
+        </div>
+      )}
+
       <div className="relative flex flex-col items-start text-left p-8 md:p-10 rounded-3xl border-2 bg-white transition-all duration-500 h-full overflow-hidden" style={{
       borderColor,
       backgroundImage: bgGradient
     }}>
-        {/* Floating top-right badge for gold variant */}
-        {isGold && (
-          <div className="absolute -top-3 right-6 px-4 py-1.5 rounded-full text-xs font-semibold shadow-md" style={{
-            background: "linear-gradient(135deg, #DCCB99 0%, #C3B68F 100%)",
-            color: "#2D284D"
-          }}>
-            Best-seller
-          </div>
-        )}
         {/* Title + Badge row */}
         <motion.div initial={{
         opacity: 0,
