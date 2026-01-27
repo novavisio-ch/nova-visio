@@ -2,15 +2,35 @@ import { CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
-const webBenefits = ["Structure claire pour présenter vos offres et guider vos visiteurs.", "Design professionnel qui renforce votre crédibilité.", "Pages pensées pour transformer vos visiteurs en clients.", "Site modifiable par vous, sans compétences techniques.", "Optimisé pour être facilement trouvé sur les moteurs de recherche."];
-const brandBenefits = ["Un logo simple et lisible, adapté au web et à l'impression.", "Une palette de couleurs cohérente avec votre activité et vos valeurs.", "Des typographies choisies pour renforcer votre crédibilité.", "Une charte graphique claire pour garder la même image partout.", "Des exemples d'utilisation pour appliquer votre identité au quotidien."];
+interface Benefit {
+  text: string;
+  highlight: string;
+}
+
+const webBenefits: Benefit[] = [
+  { text: "Gagnez en crédibilité", highlight: "dès les premières secondes" },
+  { text: "Convertissez vos visiteurs", highlight: "en clients qualifiés" },
+  { text: "Présentez vos offres", highlight: "avec clarté et impact" },
+  { text: "Soyez visible sur Google", highlight: "grâce au référencement naturel" },
+  { text: "Modifiez votre contenu", highlight: "en toute autonomie" },
+  { text: "Un site rapide et fluide", highlight: "sur mobile comme sur ordinateur" },
+];
+
+const brandBenefits: Benefit[] = [
+  { text: "Soyez reconnu", highlight: "au premier coup d'œil" },
+  { text: "Inspirez confiance", highlight: "avant même de parler" },
+  { text: "Une image cohérente", highlight: "sur tous vos supports" },
+  { text: "Démarquez-vous", highlight: "de vos concurrents" },
+  { text: "Un logo professionnel", highlight: "déclinable partout" },
+  { text: "Une charte graphique", highlight: "simple à appliquer" },
+];
 
 type ColorTheme = "gold" | "purple";
 
 interface ServiceCardProps {
   title: string;
   description: string;
-  benefits: string[];
+  benefits: Benefit[];
   ctaText: string;
   ctaLink: string;
   theme: ColorTheme;
@@ -81,7 +101,9 @@ function ServiceCard({
         {benefits.map((benefit, index) => (
           <li key={index} className="flex items-start gap-2 md:gap-3">
             <CheckCircle className={`w-4 h-4 md:w-5 md:h-5 ${styles.iconColor} mt-0.5 flex-shrink-0`} />
-            <span className="text-muted-foreground text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">{benefit}</span>
+            <span className="text-muted-foreground text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">
+              {benefit.text} <strong className="text-foreground">{benefit.highlight}</strong>
+            </span>
           </li>
         ))}
       </ul>
@@ -116,8 +138,22 @@ export function ServicesSection() {
 
         {/* Cards grid */}
         <div className="grid md:grid-cols-2 gap-4 md:gap-6 lg:gap-8 max-w-5xl mx-auto">
-          <ServiceCard title="Site vitrine et landing page" description="Un site web pensé pour renforcer votre crédibilité et établir la confiance de vos prospects." benefits={webBenefits} ctaText="Parler de votre projet de site" ctaLink="/site-web" theme="gold" />
-          <ServiceCard title="Identité visuelle & logo" description="Une identité visuelle professionnelle pour être reconnu et inspirer confiance au premier regard." benefits={brandBenefits} ctaText="Parler de votre identité visuelle" ctaLink="/identite-visuelle" theme="purple" />
+          <ServiceCard 
+            title="Site vitrine et landing page" 
+            description="Un site web pensé pour renforcer votre crédibilité et établir la confiance de vos prospects." 
+            benefits={webBenefits} 
+            ctaText="Découvrir nos créations web →" 
+            ctaLink="/site-web" 
+            theme="gold" 
+          />
+          <ServiceCard 
+            title="Identité visuelle & logo" 
+            description="Une identité visuelle professionnelle pour être reconnu et inspirer confiance au premier regard." 
+            benefits={brandBenefits} 
+            ctaText="Voir nos identités visuelles →" 
+            ctaLink="/identite-visuelle" 
+            theme="purple" 
+          />
         </div>
       </div>
     </section>;
