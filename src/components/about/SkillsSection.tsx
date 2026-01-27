@@ -272,15 +272,14 @@ export const SkillsSection = () => {
         >
           {skills.map((skill, index) => {
             const Icon = skill.icon;
-            // Make first and last cards span 2 columns on large screens
+            // First card spans 2 columns on large screens
             const isLarge = index === 0;
-            const isCenter = index === 4;
             
             return (
               <motion.div
                 key={skill.id}
                 variants={cardVariants}
-                className={`group relative ${isLarge ? "lg:col-span-2" : ""} ${isCenter ? "lg:col-span-3 lg:max-w-2xl lg:mx-auto" : ""}`}
+                className={`group relative ${isLarge ? "lg:col-span-2" : ""}`}
                 style={{ transformStyle: "preserve-3d" }}
                 whileHover={{ 
                   y: -8,
