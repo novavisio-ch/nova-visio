@@ -166,7 +166,7 @@ const OfferCard = ({
           color: "#2D284D"
         }}>
             <Sparkles className="w-3 h-3" />
-            Starter
+            {isGold ? "Complet" : "Starter"}
           </span>
         </motion.div>
 
