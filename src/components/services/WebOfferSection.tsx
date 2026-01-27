@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { CheckCircle, Monitor, Rocket, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -101,6 +102,7 @@ const OfferCard = ({
   index,
   price
 }: OfferCardProps) => {
+  const [isHovered, setIsHovered] = useState(false);
   const isGold = variant === "gold";
   const borderColor = isGold ? "#C3B68F" : "#7C6AE8";
   const accentColor = isGold ? "#C3B68F" : "#7C6AE8";
@@ -108,28 +110,44 @@ const OfferCard = ({
   const badgeGradient = isGold ? "linear-gradient(135deg, #DCCB99 0%, #C3B68F 100%)" : "linear-gradient(135deg, #9B8AFF 0%, #7C6AE8 100%)";
   const buttonGradient = isGold ? "linear-gradient(135deg, #DCCB99 0%, #C3B68F 100%)" : "linear-gradient(135deg, #9B8AFF 0%, #7C6AE8 100%)";
   const bgGradient = isGold ? "radial-gradient(ellipse at top right, rgba(195,182,143,0.08) 0%, transparent 50%)" : "radial-gradient(ellipse at top right, rgba(124,106,232,0.08) 0%, transparent 50%)";
-  return <motion.div initial={{
-    opacity: 0,
-    y: 50,
-    rotateY: index === 0 ? -5 : 5
-  }} whileInView={{
-    opacity: 1,
-    y: 0,
-    rotateY: 0
-  }} viewport={{
-    once: true
-  }} transition={{
-    duration: 0.7,
-    delay: index * 0.2,
-    ease: "easeOut"
-  }} whileHover={{
-    y: -8,
-    transition: {
-      duration: 0.3
-    }
-  }} className="group relative h-full" style={{
-    perspective: "1000px"
-  }}>
+  
+  // Couleurs dynamiques selon hover
+  const textColor = isHovered ? "#FFFFFF" : "#2D284D";
+  const textMutedColor = isHovered ? "rgba(255,255,255,0.7)" : "rgba(45,40,77,0.7)";
+  const cardBg = isHovered ? "linear-gradient(135deg, #000000 0%, #1F1A3D 100%)" : "white";
+  
+  return <motion.div 
+    initial={{
+      opacity: 0,
+      y: 50,
+      rotateY: index === 0 ? -5 : 5
+    }} 
+    whileInView={{
+      opacity: 1,
+      y: 0,
+      rotateY: 0
+    }} 
+    viewport={{
+      once: true
+    }} 
+    transition={{
+      duration: 0.7,
+      delay: index * 0.2,
+      ease: "easeOut"
+    }} 
+    whileHover={{
+      y: -8,
+      transition: {
+        duration: 0.3
+      }
+    }} 
+    className="group relative h-full" 
+    style={{
+      perspective: "1000px"
+    }}
+    onMouseEnter={() => setIsHovered(true)}
+    onMouseLeave={() => setIsHovered(false)}
+  >
       {/* Glow effect */}
       <div className="absolute -inset-1 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl" style={{
       background: `${glowColor}30`
@@ -145,10 +163,13 @@ const OfferCard = ({
         </div>
       )}
 
-      <div className="relative flex flex-col items-start text-left p-8 md:p-10 rounded-3xl border-2 bg-white transition-all duration-500 h-full overflow-hidden" style={{
-      borderColor,
-      backgroundImage: bgGradient
-    }}>
+      <div 
+        className="relative flex flex-col items-start text-left p-8 md:p-10 rounded-3xl border-2 transition-all duration-500 h-full overflow-hidden" 
+        style={{
+          borderColor,
+          background: cardBg
+        }}
+      >
         {/* Title + Badge row */}
         <motion.div initial={{
         opacity: 0,
@@ -162,8 +183,8 @@ const OfferCard = ({
         duration: 0.5,
         delay: 0.3 + index * 0.2
       }} className="flex items-center gap-3 mb-4">
-          <h3 className="text-3xl md:text-4xl font-display font-bold" style={{
-          color: "#2D284D"
+          <h3 className="text-3xl md:text-4xl font-display font-bold transition-colors duration-500" style={{
+          color: textColor
         }}>
             {title}
           </h3>
@@ -188,9 +209,8 @@ const OfferCard = ({
       }} transition={{
         duration: 0.5,
         delay: 0.4 + index * 0.2
-      }} className="mb-6 text-base leading-relaxed" style={{
-        color: "#2D284D",
-        opacity: 0.7
+      }} className="mb-6 text-base leading-relaxed transition-colors duration-500" style={{
+        color: textMutedColor
       }}>
           {description}
         </motion.p>
@@ -208,9 +228,8 @@ const OfferCard = ({
         duration: 0.5,
         delay: 0.5 + index * 0.2
       }} className="mb-6">
-            <span className="text-sm" style={{
-          color: "#2D284D",
-          opacity: 0.6
+            <span className="text-sm transition-colors duration-500" style={{
+          color: textMutedColor
         }}>
               dès
             </span>
@@ -247,9 +266,8 @@ const OfferCard = ({
           }}>
                 <CheckCircle className="w-4 h-4 text-[#2D284D]" />
               </div>
-              <span className="text-sm leading-relaxed" style={{
-            color: "#2D284D",
-            opacity: 0.85
+              <span className="text-sm leading-relaxed transition-colors duration-500" style={{
+            color: isHovered ? "rgba(255,255,255,0.85)" : "rgba(45,40,77,0.85)"
           }}>
                 {formatBenefit(benefit)}
               </span>
