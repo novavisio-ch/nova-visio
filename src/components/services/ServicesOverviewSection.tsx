@@ -191,15 +191,15 @@ export const ServicesOverviewSection = () => {
                     
                     {/* Icon */}
                     <motion.div className={`
-                        p-3 md:p-4 rounded-2xl transition-all duration-300
-                        ${isHovered ? "bg-[#C3B68F] text-gray-900" : "bg-gray-50 text-gray-600"}
+                        transition-all duration-300
+                        ${isHovered ? "text-[#C3B68F]" : "text-gray-600"}
                       `} animate={{
                   rotate: isHovered ? 12 : 0,
-                  scale: isHovered ? 1.1 : 1
+                  scale: isHovered ? 1.25 : 1
                 }} transition={{
                   duration: 0.3
                 }}>
-                      <Icon className="w-6 h-6 md:w-7 md:h-7" />
+                      <Icon className="w-7 h-7 md:w-8 md:h-8" />
                     </motion.div>
                   </div>
 
@@ -227,30 +227,6 @@ export const ServicesOverviewSection = () => {
                     </p>
                   </div>
 
-                  {/* Arrow CTA */}
-                  <motion.div className="flex items-center gap-2" animate={{
-                x: isHovered ? 8 : 0,
-                opacity: isHovered ? 1 : 0.6
-              }} transition={{
-                duration: 0.3
-              }}>
-                    <span className={`
-                        text-sm font-medium transition-colors duration-300
-                        ${isHovered ? "text-white" : "text-gray-500"}
-                      `}>
-                      En savoir plus
-                    </span>
-                    <motion.div animate={{
-                  x: isHovered ? 4 : 0
-                }} transition={{
-                  duration: 0.2
-                }}>
-                      <ArrowRight className={`
-                          w-4 h-4 transition-colors duration-300
-                          ${isHovered ? "text-[#C3B68F]" : "text-gray-400"}
-                        `} />
-                    </motion.div>
-                  </motion.div>
                 </div>
 
                 {/* Decorative corner accent */}
