@@ -193,7 +193,7 @@ export function VisioChatWindow({ onClose }: VisioChatWindowProps) {
     >
       {/* Header */}
       <div
-        className="px-5 py-4 border-b border-border/30"
+        className="px-4 py-3 border-b border-border/30 flex-shrink-0"
         style={{
           background:
             "linear-gradient(135deg, hsl(252 30% 18% / 0.95), hsl(252 30% 12% / 0.95))",
@@ -201,18 +201,18 @@ export function VisioChatWindow({ onClose }: VisioChatWindowProps) {
       >
         <div className="flex items-center gap-3">
           <div
-            className="w-10 h-10 rounded-full flex items-center justify-center"
+            className="w-9 h-9 rounded-full flex-shrink-0 flex items-center justify-center"
             style={{
               background: "linear-gradient(135deg, hsl(43 35% 67%), hsl(40 28% 55%))",
             }}
           >
-            <Sparkles className="w-5 h-5 text-background" />
+            <Sparkles className="w-4 h-4 text-background" />
           </div>
-          <div>
-            <h3 className="font-display text-lg font-semibold text-foreground">
+          <div className="min-w-0 flex-1">
+            <h3 className="font-display text-base font-semibold text-foreground truncate">
               Parler avec Visio
             </h3>
-            <p className="text-xs text-muted-foreground">
+            <p className="text-xs text-muted-foreground line-clamp-2">
               Questions sur Nova Visio, les offres ou le fonctionnement du studio ?
             </p>
           </div>
