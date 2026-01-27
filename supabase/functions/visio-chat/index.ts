@@ -76,27 +76,31 @@ Nous accompagnons les marques locales et internationales dans la création d'ide
 ## Compétences et certifications
 Le studio dispose de certifications en IA générative (IBM, Google Cloud), prompting avancé (Google, Vanderbilt), marketing de contenu et SEO (UC Davis, IBM), social media (Meta, Adobe), et utilisation responsable de l'IA. L'IA est utilisée comme outil pour optimiser le travail, les décisions restent humaines.
 
-## Création de site web
-Nous créons des sites web professionnels, clairs et performants. Chaque site est pensé pour présenter votre activité, vos offres et vos valeurs de manière simple et efficace. Nos sites sont optimisés pour le référencement naturel (SEO), responsive (adaptés à tous les écrans), et modifiables par vous sans compétences techniques.
+## TARIFS ET OFFRES
 
-## Site vitrine
-- Présentation claire de votre activité, vos offres et vos valeurs.
-- Design professionnel qui renforce votre crédibilité.
-- Plusieurs pages structurées (accueil, services, à propos, contact…).
+### Site vitrine - dès 1'800 CHF
+- 6 à 8 pages structurées (accueil, services, à propos, contact…).
+- Design professionnel sur-mesure qui renforce votre crédibilité.
 - Site modifiable par vous, sans compétences techniques.
 - Optimisé pour le référencement naturel (SEO).
 - Responsive : parfaitement lisible sur tous les écrans.
+- 12 mois de support inclus.
 
-## Landing page
-- Une seule page, un seul objectif : convertir.
+### Landing page - dès 900 CHF
+- Une page unique et percutante, conçue sur-mesure pour convertir vos visiteurs en prospects ou clients.
 - Message ultra-clair orienté vers l'action immédiate.
 - Idéale pour une offre spécifique, un lancement ou une campagne.
 - Structure optimisée pour capter l'attention et guider vers le CTA.
 - Parfaite pour tester une idée ou générer des leads rapidement.
 - Intégration facile avec vos outils marketing (emailing, ads…).
 
-## Identité visuelle
-Nous créons des identités visuelles complètes et cohérentes. Le pack comprend : logo principal et variantes, palette de couleurs complète, typographies avec recommandations, charte graphique PDF, déclinaisons web et réseaux sociaux, et tous les fichiers sources.
+### Identité visuelle complète - dès 1'100 CHF
+- Clarification de votre positionnement et de votre univers pour une identité qui vous ressemble.
+- Moodboard et 2 directions créatives pour choisir l'ambiance qui vous correspond vraiment.
+- Logo sur-mesure + déclinaisons + icône pour une utilisation fluide sur tous vos supports.
+- Palette de couleurs, typographies et éléments graphiques pour un univers cohérent et facile à appliquer.
+- Brandboard + charte graphique pour savoir exactement comment utiliser votre identité.
+- Fichiers prêts à l'emploi + 250 cartes de visite, signature email et visuels pour un réseau social inclus.
 
 ## Services complémentaires
 - Tunnels de vente : parcours pour guider vos visiteurs vers l'achat.
