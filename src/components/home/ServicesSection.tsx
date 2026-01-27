@@ -8,14 +8,12 @@ interface Benefit {
 }
 
 const webBenefits: Benefit[] = [
-  { text: "Site vitrine", highlight: "6 à 8 pages en ligne sur votre nom de domaine" },
-  { text: "Structure claire", highlight: "orientée conversion (prise de contact, devis, réservation)" },
-  { text: "Rédaction complète", highlight: "de vos pages clés + FAQ pour répondre aux questions essentielles" },
-  { text: "Design sur-mesure", highlight: "aligné avec votre identité visuelle et vos photos" },
-  { text: "Site responsive", highlight: "optimisé pour le SEO et le chargement rapide" },
-  { text: "Mise en ligne clé en main", highlight: "+ guide d'utilisation + 12 mois de support inclus" },
-  { text: "Suivi des performances", highlight: "statistiques de visites pour prendre de meilleures décisions" },
-  { text: "Base évolutive", highlight: "faites évoluer votre site sans tout recommencer" },
+  { text: "Gagnez en crédibilité", highlight: "dès les premières secondes" },
+  { text: "Convertissez vos visiteurs", highlight: "en clients qualifiés" },
+  { text: "Présentez vos offres", highlight: "avec clarté et impact" },
+  { text: "Soyez visible sur Google", highlight: "grâce au référencement naturel" },
+  { text: "Modifiez votre contenu", highlight: "en toute autonomie" },
+  { text: "Un site rapide et fluide", highlight: "sur mobile comme sur ordinateur" },
 ];
 
 const brandBenefits: Benefit[] = [
@@ -36,7 +34,6 @@ interface ServiceCardProps {
   ctaText: string;
   ctaLink: string;
   theme: ColorTheme;
-  price?: string;
 }
 
 const themeStyles = {
@@ -64,8 +61,7 @@ function ServiceCard({
   benefits,
   ctaText,
   ctaLink,
-  theme,
-  price
+  theme
 }: ServiceCardProps) {
   const styles = themeStyles[theme];
   
@@ -112,15 +108,6 @@ function ServiceCard({
         ))}
       </ul>
 
-      {/* Price display */}
-      {price && (
-        <div className={`mb-6 md:mb-8 px-4 py-3 rounded-xl ${styles.badgeGradient} bg-opacity-10`}>
-          <span className={`text-xl md:text-2xl font-bold ${theme === "gold" ? "text-[#C3B68F]" : "text-[#7C6AE8]"}`}>
-            {price}
-          </span>
-        </div>
-      )}
-
       {/* CTA Button */}
       <div className="mt-auto w-full sm:w-auto">
         <Button 
@@ -157,8 +144,7 @@ export function ServicesSection() {
             benefits={webBenefits} 
             ctaText="Découvrir nos créations web →" 
             ctaLink="/site-web" 
-            theme="gold"
-            price="dès 1'800 CHF"
+            theme="gold" 
           />
           <ServiceCard 
             title="Identité visuelle & logo" 

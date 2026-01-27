@@ -7,23 +7,29 @@ interface BenefitItem {
   bold: string;
 }
 const siteBenefits: BenefitItem[] = [{
-  text: "Présentation claire de votre activité, vos offres et vos valeurs.",
-  bold: "Présentation claire"
+  text: "Site vitrine 6 à 8 pages en ligne sur votre nom de domaine.",
+  bold: "6 à 8 pages"
 }, {
-  text: "Design professionnel qui renforce votre crédibilité.",
-  bold: "Design professionnel"
+  text: "Structure claire orientée conversion (prise de contact, devis, réservation).",
+  bold: "orientée conversion"
 }, {
-  text: "Plusieurs pages structurées (accueil, services, à propos, contact…).",
-  bold: "pages structurées"
+  text: "Rédaction complète de vos pages clés + FAQ pour répondre aux questions essentielles.",
+  bold: "Rédaction complète"
 }, {
-  text: "Site modifiable par vous, sans compétences techniques.",
-  bold: "modifiable par vous"
+  text: "Design sur-mesure, aligné avec votre identité visuelle et vos photos.",
+  bold: "Design sur-mesure"
 }, {
-  text: "Optimisé pour le référencement naturel (SEO).",
-  bold: "référencement naturel"
+  text: "Site responsive, optimisé pour le SEO et le chargement rapide.",
+  bold: "optimisé pour le SEO"
 }, {
-  text: "Responsive : parfaitement lisible sur tous les écrans.",
-  bold: "Responsive"
+  text: "Mise en ligne clé en main + guide d'utilisation + 12 mois de support inclus.",
+  bold: "12 mois de support"
+}, {
+  text: "Suivi des performances (statistiques de visites) pour prendre de meilleures décisions.",
+  bold: "Suivi des performances"
+}, {
+  text: "Base évolutive : faites évoluer votre site sans tout recommencer.",
+  bold: "Base évolutive"
 }];
 const landingBenefits: BenefitItem[] = [{
   text: "Une seule page, un seul objectif : convertir.",
@@ -53,6 +59,7 @@ interface OfferCardProps {
   variant: "gold" | "purple";
   icon: React.ReactNode;
   index: number;
+  price?: string;
 }
 const formatBenefit = (item: BenefitItem) => {
   const parts = item.text.split(item.bold);
@@ -85,7 +92,8 @@ const OfferCard = ({
   ctaText,
   variant,
   icon,
-  index
+  index,
+  price
 }: OfferCardProps) => {
   const isGold = variant === "gold";
   const borderColor = isGold ? "#C3B68F" : "#7C6AE8";
@@ -248,6 +256,22 @@ const OfferCard = ({
             </motion.li>)}
         </motion.ul>
 
+        {/* Price display */}
+        {price && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.9 + index * 0.2 }}
+            className="mb-8 px-6 py-4 rounded-2xl"
+            style={{ background: `${accentColor}15` }}
+          >
+            <span className="text-2xl md:text-3xl font-bold" style={{ color: accentColor }}>
+              {price}
+            </span>
+          </motion.div>
+        )}
+
         {/* CTA Button */}
         <motion.div initial={{
         opacity: 0,
@@ -332,7 +356,7 @@ export const WebOfferSection = () => {
 
         {/* Cards Grid */}
         <div className="grid md:grid-cols-2 gap-8 md:gap-10">
-          <OfferCard title="Site vitrine" subtitle="Votre vitrine digitale" description="Une présence en ligne complète pour asseoir votre crédibilité et présenter l'ensemble de votre activité." benefits={siteBenefits} ctaText="Créer mon site vitrine" variant="gold" icon={<Monitor className="w-8 h-8 text-[#2D284D]" />} index={0} />
+          <OfferCard title="Site vitrine" subtitle="Votre vitrine digitale" description="Une présence en ligne complète pour asseoir votre crédibilité et présenter l'ensemble de votre activité." benefits={siteBenefits} ctaText="Créer mon site vitrine" variant="gold" icon={<Monitor className="w-8 h-8 text-[#2D284D]" />} index={0} price="dès 1'800 CHF" />
           <OfferCard title="Landing page" subtitle="Une page, un objectif" description="Une page unique et percutante pour convertir vos visiteurs en prospects ou clients." benefits={landingBenefits} ctaText="Créer ma landing page" variant="purple" icon={<Rocket className="w-8 h-8 text-[#2D284D]" />} index={1} />
         </div>
 
