@@ -276,7 +276,11 @@ export function VisioChatWindow({ onClose }: VisioChatWindowProps) {
                 <button
                   key={suggestion}
                   onClick={() => streamChat(suggestion)}
-                  className="px-3 py-2 text-sm font-semibold rounded-full border border-amber-600/50 text-amber-700 hover:bg-amber-50 transition-colors"
+                  className="px-3 py-2 text-sm font-semibold rounded-full transition-colors hover:opacity-80"
+                  style={{ 
+                    border: "1px solid #C3B68F",
+                    color: "#C3B68F"
+                  }}
                 >
                   {suggestion}
                 </button>
@@ -311,9 +315,13 @@ export function VisioChatWindow({ onClose }: VisioChatWindowProps) {
               className={cn(
                 "max-w-[80%] rounded-2xl px-4 py-3",
                 message.role === "user"
-                  ? "bg-amber-600 text-white rounded-br-md"
+                  ? "rounded-br-md"
                   : "bg-white text-gray-800 rounded-bl-md shadow-sm border border-gray-100"
               )}
+              style={message.role === "user" ? {
+                background: "linear-gradient(135deg, #DCCB99, #C3B68F)",
+                color: "#1a1a2e"
+              } : undefined}
             >
               {message.role === "assistant" ? (
                 <>
@@ -331,14 +339,15 @@ export function VisioChatWindow({ onClose }: VisioChatWindowProps) {
                         ),
                         li: ({ children }) => <li className="mb-1 text-gray-800 text-base">{children}</li>,
                         strong: ({ children }) => (
-                          <strong className="text-amber-700 font-bold text-base">
+                          <strong className="font-bold text-base" style={{ color: "#C3B68F" }}>
                             {children}
                           </strong>
                         ),
                         a: ({ href, children }) => (
                           <a
                             href={href}
-                            className="text-amber-600 underline hover:text-amber-700 font-semibold"
+                            className="underline font-semibold"
+                            style={{ color: "#C3B68F" }}
                             target="_blank"
                             rel="noopener noreferrer"
                           >
@@ -377,8 +386,11 @@ export function VisioChatWindow({ onClose }: VisioChatWindowProps) {
             </div>
 
             {message.role === "user" && (
-              <div className="w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center bg-amber-100">
-                <User className="w-4 h-4 text-amber-700" />
+              <div 
+                className="w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center"
+                style={{ background: "linear-gradient(135deg, #DCCB99, #C3B68F)" }}
+              >
+                <User className="w-4 h-4 text-gray-900" />
               </div>
             )}
           </motion.div>
