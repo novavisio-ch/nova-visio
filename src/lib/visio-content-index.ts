@@ -183,13 +183,71 @@ export const siteContent: ContentSection[] = [
     id: "pricing-overview",
     title: "Tarifs Nova Visio",
     category: "services",
-    content: `Nos tarifs :
+    content: `Nos tarifs principaux :
 - Site vitrine : dès 1'500 CHF (6 à 8 pages, design sur-mesure, SEO, 12 mois de support)
 - Landing page : dès 900 CHF (page unique orientée conversion)
 - Identité visuelle complète : dès 900 CHF (logo, déclinaisons, charte graphique, 250 cartes de visite incluses)
 
+Nos packs combinés :
+- Pack Digital & Branding : 2'200 CHF (identité visuelle complète + site web 6-8 pages)
+- Pack Refonte Globale : 2'600 CHF (audit + repositionnement de marque + modernisation du site)
+
+Services complémentaires : sur devis (tunnels de vente, blog, e-commerce, templates réseaux sociaux, supports imprimés, brand kit digital).
+
 Ces tarifs sont des points de départ. Le prix final dépend de la complexité et des spécificités de votre projet. Contactez-nous pour obtenir un devis personnalisé.`,
-    keywords: ["prix", "tarif", "coût", "combien", "budget", "devis", "chf", "francs", "1500", "900"]
+    keywords: ["prix", "tarif", "coût", "combien", "budget", "devis", "chf", "francs", "1500", "900", "2200", "2600", "pack"]
+  },
+  {
+    id: "pack-digital-branding",
+    title: "Pack Digital & Branding",
+    category: "services",
+    content: `Pack Digital & Branding (2'200 CHF) - Solution complète pour lancer votre activité avec une image cohérente :
+
+Ce pack combine identité visuelle et création web pour les indépendants, studios et petites entreprises qui veulent une image professionnelle unifiée.
+
+Volet Identité visuelle inclus :
+- Clarification de votre positionnement et de votre univers
+- Moodboard et directions créatives
+- Logo sur-mesure + déclinaisons
+- Palette de couleurs et typographies
+- Brandboard + mini charte graphique
+
+Volet Site web inclus :
+- Site vitrine complet de 6 à 8 pages
+- Webdesign aligné sur votre nouvelle identité
+- Responsive et optimisé pour le référencement (SEO)
+- Mise en ligne + accompagnement post-lancement
+
+Idéal pour : indépendants, studios, petites entreprises qui lancent ou rafraîchissent leur image.`,
+    keywords: ["pack digital branding", "pack combiné", "identité site", "lancement", "2200", "chf", "bundle"]
+  },
+  {
+    id: "pack-refonte-globale",
+    title: "Pack Refonte Globale",
+    category: "services",
+    content: `Pack Refonte Globale (2'600 CHF) - Reprenez le contrôle de votre image :
+
+Une refonte cohérente de votre identité visuelle et de votre site web pour aligner votre image avec le niveau réel de votre activité.
+
+À qui s'adresse ce pack :
+- Marques déjà lancées qui ne se reconnaissent plus dans leur identité actuelle
+- Sites en ligne depuis plusieurs années, devenus peu lisibles, datés ou peu efficaces
+- Entreprises qui ont évolué (positionnement, offres, cible) et ont besoin d'une mise à jour globale cohérente
+
+Volet Refonte de marque :
+- Audit de votre identité actuelle
+- Logo refondu + déclinaisons
+- Palette & typographies mises à jour
+- Moodboard de refonte
+- Brandboard & mini charte graphique
+
+Volet Modernisation digitale :
+- Audit de votre site actuel
+- Refonte 6 à 8 pages sur nouvelle structure
+- Webdesign aligné sur nouvelle identité
+- Site responsive + bases SEO
+- Mise en ligne + support post-refonte`,
+    keywords: ["pack refonte", "refonte globale", "modernisation", "audit", "repositionnement", "2600", "chf"]
   },
 
   // === SERVICES COMPLÉMENTAIRES ===
