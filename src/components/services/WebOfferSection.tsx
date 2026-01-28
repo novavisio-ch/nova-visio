@@ -147,19 +147,22 @@ const OfferCard = ({
         transition={{ duration: 0.4 }}
       />
 
-      {/* Floating top-right badge for gold variant */}
+      {/* Centered top badge for gold variant - "cut" by border */}
       {isGold && (
         <motion.div 
-          className="absolute -top-3 right-6 z-10 px-4 py-1.5 rounded-full text-xs font-semibold shadow-lg"
+          className="absolute left-1/2 -translate-x-1/2 -top-4 z-10 px-5 py-2 rounded-b-xl text-xs font-semibold shadow-lg"
           style={{
             background: "linear-gradient(135deg, #DCCB99 0%, #C3B68F 100%)",
-            color: "#2D284D"
+            color: "#2D284D",
+            borderBottomLeftRadius: "12px",
+            borderBottomRightRadius: "12px",
+            borderTopLeftRadius: "0",
+            borderTopRightRadius: "0"
           }}
-          initial={{ y: -10, opacity: 0 }}
+          initial={{ y: -20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5, duration: 0.5, type: "spring" }}
-          whileHover={!isMobile ? { scale: 1.1, y: -2 } : undefined}
         >
           Best-seller
         </motion.div>
