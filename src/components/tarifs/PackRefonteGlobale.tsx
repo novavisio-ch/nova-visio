@@ -191,9 +191,10 @@ export function PackRefonteGlobale() {
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
+                    whileHover={{ y: -4, boxShadow: "0 10px 30px -10px rgba(124, 106, 232, 0.25)" }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
-                    className="p-4 rounded-xl border border-[#9D8DF0]/20"
+                    className="p-4 rounded-xl border border-[#9D8DF0]/20 hover:border-[#9D8DF0]/40 transition-colors duration-300"
                     style={{ background: "rgba(124, 106, 232, 0.03)" }}
                   >
                     <Icon className="w-6 h-6 text-[#9D8DF0] mb-3" />
@@ -205,8 +206,9 @@ export function PackRefonteGlobale() {
           </div>
 
           {/* Summary bullets */}
-          <div
-            className="mb-8 md:mb-10 p-5 md:p-6 rounded-xl border"
+          <motion.div
+            className="mb-8 md:mb-10 p-5 md:p-6 rounded-xl border hover:border-[#9D8DF0]/40 transition-colors duration-300"
+            whileHover={{ y: -4, boxShadow: "0 15px 40px -10px rgba(124, 106, 232, 0.2)" }}
             style={{
               background: "linear-gradient(135deg, rgba(124, 106, 232, 0.05) 0%, rgba(195, 182, 143, 0.05) 100%)",
               borderColor: "rgba(124, 106, 232, 0.2)",
@@ -231,13 +233,14 @@ export function PackRefonteGlobale() {
                 </motion.li>
               ))}
             </ul>
-          </div>
+          </motion.div>
 
           {/* Two columns: Branding & Web */}
           <div className="grid md:grid-cols-2 gap-4 md:gap-6 mb-8 md:mb-10">
             {/* Branding Section */}
-            <div
-              className="p-5 md:p-6 rounded-xl border border-[#C3B68F]/30"
+            <motion.div
+              whileHover={{ y: -4, boxShadow: "0 15px 40px -10px rgba(195, 182, 143, 0.2)" }}
+              className="p-5 md:p-6 rounded-xl border border-[#C3B68F]/30 hover:border-[#C3B68F]/50 transition-colors duration-300"
               style={{ background: "rgba(195, 182, 143, 0.03)" }}
             >
               <div className="flex items-center gap-3 mb-4">
@@ -259,11 +262,12 @@ export function PackRefonteGlobale() {
                   </motion.li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
 
             {/* Web Section */}
-            <div
-              className="p-5 md:p-6 rounded-xl border border-[#9D8DF0]/30"
+            <motion.div
+              whileHover={{ y: -4, boxShadow: "0 15px 40px -10px rgba(124, 106, 232, 0.2)" }}
+              className="p-5 md:p-6 rounded-xl border border-[#9D8DF0]/30 hover:border-[#9D8DF0]/50 transition-colors duration-300"
               style={{ background: "rgba(124, 106, 232, 0.03)" }}
             >
               <div className="flex items-center gap-3 mb-4">
@@ -285,7 +289,7 @@ export function PackRefonteGlobale() {
                   </motion.li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
           </div>
 
           {/* CTA with shine effect */}
