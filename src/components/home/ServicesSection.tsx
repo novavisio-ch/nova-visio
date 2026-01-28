@@ -85,14 +85,33 @@ function ServiceCard({
   isMobile
 }: ServiceCardProps) {
   const styles = themeStyles[theme];
+  const borderColor = theme === "gold" ? "#C3B68F" : "#7C6AE8";
+  const shadowColor = theme === "gold" ? "rgba(195, 182, 143, 0.4)" : "rgba(124, 106, 232, 0.4)";
   
   return (
     <motion.div 
-      className={`group relative flex flex-col items-center text-center p-4 sm:p-6 md:p-8 lg:p-10 rounded-xl md:rounded-2xl ${styles.border} bg-gradient-to-br ${styles.accentGradient} backdrop-blur-sm transition-all duration-500 ${isMobile ? `${styles.activeBorder} ${styles.activeShadow}` : `${styles.hoverBorder} ${styles.hoverShadow}`}`}
+      className={`group relative flex flex-col items-center text-center p-4 sm:p-6 md:p-8 lg:p-10 rounded-xl md:rounded-2xl bg-gradient-to-br ${styles.accentGradient} backdrop-blur-sm border`}
       variants={cardVariants}
-      initial="hidden"
-      whileInView="visible"
+      initial={{ 
+        opacity: 0, 
+        y: 40, 
+        scale: 0.95,
+        borderColor: `${borderColor}4D`,
+        boxShadow: "none"
+      }}
+      whileInView={{ 
+        opacity: 1, 
+        y: 0, 
+        scale: 1,
+        borderColor: isMobile ? borderColor : `${borderColor}4D`,
+        boxShadow: isMobile ? `0 0 30px -10px ${shadowColor}` : "none"
+      }}
+      whileHover={!isMobile ? {
+        borderColor: borderColor,
+        boxShadow: `0 0 40px -10px ${shadowColor}`
+      } : undefined}
       viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
     >
       {/* Badge */}
       <span className={`inline-block px-2 py-1 md:px-4 md:py-1.5 rounded-full ${styles.badgeGradient} text-background text-[8px] md:text-xs font-semibold tracking-wide mb-3 md:mb-6`}>

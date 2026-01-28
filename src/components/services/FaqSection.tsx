@@ -83,31 +83,44 @@ const FaqItem = ({ item, index, isOpen, onToggle, isMobile }: FaqItemProps) => {
       variants={itemVariants}
       className="group relative"
     >
-      {/* Animated background glow - always visible on mobile */}
+      {/* Animated background glow */}
       <motion.div
-        className={`absolute -inset-2 rounded-2xl transition-opacity duration-500 ${isMobile ? 'opacity-50' : 'opacity-0 group-hover:opacity-100'}`}
+        className="absolute -inset-2 rounded-2xl"
         style={{
           background: "linear-gradient(135deg, rgba(195, 182, 143, 0.1), rgba(124, 106, 232, 0.05))",
           filter: "blur(20px)",
         }}
+        initial={{ opacity: 0 }}
+        whileInView={isMobile ? { opacity: 0.5 } : undefined}
+        whileHover={!isMobile ? { opacity: 1 } : undefined}
+        viewport={isMobile ? { once: true, margin: "-30px" } : undefined}
+        transition={{ duration: 0.5 }}
       />
       
       <motion.div
-        className="relative overflow-hidden rounded-xl border transition-all duration-300"
-        style={{
-          borderColor: isOpen ? "#C3B68F" : "rgba(195, 182, 143, 0.2)",
-          background: isOpen 
-            ? "linear-gradient(135deg, rgba(255,255,255,0.98), rgba(195, 182, 143, 0.05))" 
-            : "rgba(255,255,255,0.6)",
-          boxShadow: isOpen 
-            ? "0 20px 40px -15px rgba(195, 182, 143, 0.3)" 
-            : (isMobile ? "0 10px 25px -10px rgba(195, 182, 143, 0.2)" : "0 4px 20px -10px rgba(0, 0, 0, 0.1)"),
+        className="relative overflow-hidden rounded-xl border"
+        initial={{ 
+          borderColor: "rgba(195, 182, 143, 0.2)",
+          boxShadow: "0 4px 20px -10px rgba(0, 0, 0, 0.1)"
         }}
+        whileInView={isMobile ? { 
+          boxShadow: "0 10px 25px -10px rgba(195, 182, 143, 0.25)"
+        } : undefined}
         whileHover={!isMobile ? { 
           scale: 1.01,
           boxShadow: "0 20px 40px -15px rgba(195, 182, 143, 0.25)",
         } : undefined}
+        animate={isOpen ? {
+          borderColor: "#C3B68F",
+          boxShadow: "0 20px 40px -15px rgba(195, 182, 143, 0.3)"
+        } : undefined}
+        viewport={isMobile ? { once: true, margin: "-30px" } : undefined}
         transition={{ duration: 0.3 }}
+        style={{
+          background: isOpen 
+            ? "linear-gradient(135deg, rgba(255,255,255,0.98), rgba(195, 182, 143, 0.05))" 
+            : "rgba(255,255,255,0.6)",
+        }}
       >
         {/* Question button */}
         <button

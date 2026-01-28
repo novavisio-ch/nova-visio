@@ -114,13 +114,10 @@ const OfferCard = ({
   const buttonGradient = isGold ? "linear-gradient(135deg, #DCCB99 0%, #C3B68F 100%)" : "linear-gradient(135deg, #9B8AFF 0%, #7C6AE8 100%)";
   const bgGradient = isGold ? "radial-gradient(ellipse at top right, rgba(195,182,143,0.08) 0%, transparent 50%)" : "radial-gradient(ellipse at top right, rgba(124,106,232,0.08) 0%, transparent 50%)";
   
-  // On mobile, always show active state
-  const showActive = isMobile || isHovered;
-  
   // Couleurs dynamiques selon hover/mobile
-  const textColor = showActive ? "#FFFFFF" : "#2D284D";
-  const textMutedColor = showActive ? "rgba(255,255,255,0.7)" : "rgba(45,40,77,0.7)";
-  const cardBg = showActive ? "linear-gradient(135deg, #000000 0%, #1F1A3D 100%)" : "white";
+  const textColor = isMobile ? "#FFFFFF" : (isHovered ? "#FFFFFF" : "#2D284D");
+  const textMutedColor = isMobile ? "rgba(255,255,255,0.7)" : (isHovered ? "rgba(255,255,255,0.7)" : "rgba(45,40,77,0.7)");
+  const cardBg = isMobile ? "linear-gradient(135deg, #000000 0%, #1F1A3D 100%)" : (isHovered ? "linear-gradient(135deg, #000000 0%, #1F1A3D 100%)" : "white");
   
   return <motion.div 
     initial={{
@@ -134,7 +131,8 @@ const OfferCard = ({
       rotateY: 0
     }} 
     viewport={{
-      once: true
+      once: true,
+      margin: "-50px"
     }} 
     transition={{
       duration: 0.7,
@@ -273,7 +271,7 @@ const OfferCard = ({
                 <CheckCircle className="w-4 h-4 text-[#2D284D]" />
               </div>
               <span className="text-sm leading-relaxed transition-colors duration-500" style={{
-            color: isHovered ? "rgba(255,255,255,0.85)" : "rgba(45,40,77,0.85)"
+            color: isMobile ? "rgba(255,255,255,0.85)" : (isHovered ? "rgba(255,255,255,0.85)" : "rgba(45,40,77,0.85)")
           }}>
                 {formatBenefit(benefit)}
               </span>
