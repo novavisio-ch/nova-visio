@@ -3,6 +3,7 @@ import { CheckCircle, Monitor, Rocket, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useIsMobile } from "@/hooks/use-mobile";
 interface BenefitItem {
   text: string;
   bold: string;
@@ -67,6 +68,7 @@ interface OfferCardProps {
   icon: React.ReactNode;
   index: number;
   price?: string;
+  isMobile: boolean;
 }
 const formatBenefit = (item: BenefitItem) => {
   const parts = item.text.split(item.bold);
@@ -100,7 +102,8 @@ const OfferCard = ({
   variant,
   icon,
   index,
-  price
+  price,
+  isMobile
 }: OfferCardProps) => {
   const [isHovered, setIsHovered] = useState(false);
   const isGold = variant === "gold";
@@ -111,10 +114,13 @@ const OfferCard = ({
   const buttonGradient = isGold ? "linear-gradient(135deg, #DCCB99 0%, #C3B68F 100%)" : "linear-gradient(135deg, #9B8AFF 0%, #7C6AE8 100%)";
   const bgGradient = isGold ? "radial-gradient(ellipse at top right, rgba(195,182,143,0.08) 0%, transparent 50%)" : "radial-gradient(ellipse at top right, rgba(124,106,232,0.08) 0%, transparent 50%)";
   
-  // Couleurs dynamiques selon hover
-  const textColor = isHovered ? "#FFFFFF" : "#2D284D";
-  const textMutedColor = isHovered ? "rgba(255,255,255,0.7)" : "rgba(45,40,77,0.7)";
-  const cardBg = isHovered ? "linear-gradient(135deg, #000000 0%, #1F1A3D 100%)" : "white";
+  // On mobile, always show active state
+  const showActive = isMobile || isHovered;
+  
+  // Couleurs dynamiques selon hover/mobile
+  const textColor = showActive ? "#FFFFFF" : "#2D284D";
+  const textMutedColor = showActive ? "rgba(255,255,255,0.7)" : "rgba(45,40,77,0.7)";
+  const cardBg = showActive ? "linear-gradient(135deg, #000000 0%, #1F1A3D 100%)" : "white";
   
   return <motion.div 
     initial={{
@@ -135,18 +141,18 @@ const OfferCard = ({
       delay: index * 0.2,
       ease: "easeOut"
     }} 
-    whileHover={{
+    whileHover={!isMobile ? {
       y: -8,
       transition: {
         duration: 0.3
       }
-    }} 
+    } : undefined} 
     className="group relative h-full" 
     style={{
       perspective: "1000px"
     }}
-    onMouseEnter={() => setIsHovered(true)}
-    onMouseLeave={() => setIsHovered(false)}
+    onMouseEnter={!isMobile ? () => setIsHovered(true) : undefined}
+    onMouseLeave={!isMobile ? () => setIsHovered(false) : undefined}
   >
       {/* Glow effect */}
       <div className="absolute -inset-1 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl" style={{
@@ -306,7 +312,9 @@ const OfferCard = ({
     </motion.div>;
 };
 export const WebOfferSection = () => {
-  return <section className="py-24 md:py-32 bg-white overflow-hidden">
+  const isMobile = useIsMobile();
+
+  return <section className="py-16 md:py-32 bg-white overflow-hidden">
       <div className="container max-w-6xl mx-auto px-4">
         {/* Section Title */}
         <motion.div initial={{
@@ -319,7 +327,7 @@ export const WebOfferSection = () => {
         once: true
       }} transition={{
         duration: 0.6
-      }} className="text-center mb-16">
+      }} className="text-center mb-10 md:mb-16">
           <motion.div initial={{
           scale: 0
         }} whileInView={{
@@ -329,22 +337,22 @@ export const WebOfferSection = () => {
         }} transition={{
           duration: 0.5,
           delay: 0.1
-        }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-6" style={{
+        }} className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full glass-card mb-4 md:mb-6" style={{
           background: "rgba(45,40,77,0.05)"
         }}>
-            <span className="text-sm font-medium" style={{
+            <span className="text-xs md:text-sm font-medium" style={{
             color: "#2D284D"
           }}>
               💎 Offres sur mesure
             </span>
           </motion.div>
           
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4" style={{
+          <h2 className="text-xl md:text-4xl lg:text-5xl font-display font-bold mb-3 md:mb-4" style={{
           color: "#2D284D"
         }}>
             Nos offres web
           </h2>
-          <p className="text-lg md:text-xl max-w-2xl mx-auto" style={{
+          <p className="text-sm md:text-xl max-w-2xl mx-auto" style={{
           color: "#2D284D",
           opacity: 0.7
         }}>
@@ -357,9 +365,9 @@ export const WebOfferSection = () => {
         </motion.div>
 
         {/* Cards Grid */}
-        <div className="grid md:grid-cols-2 gap-8 md:gap-10">
-          <OfferCard title="Site vitrine" subtitle="Votre vitrine digitale" description="Une présence en ligne sur‑mesure, pensée pour vos objectifs, qui donne confiance à vos clients et vous génère plus de demandes qualifiées." benefits={siteBenefits} ctaText="Créer mon site vitrine" variant="gold" icon={<Monitor className="w-8 h-8 text-[#2D284D]" />} index={0} price="1'800 CHF" />
-          <OfferCard title="Landing page" subtitle="Une page, un objectif" description="Une page unique et percutante, conçue sur‑mesure sur votre offre pour convertir vos visiteurs en prospects ou clients." benefits={landingBenefits} ctaText="Créer ma landing page" variant="purple" icon={<Rocket className="w-8 h-8 text-[#2D284D]" />} index={1} price="900 CHF" />
+        <div className="grid md:grid-cols-2 gap-6 md:gap-10">
+          <OfferCard title="Site vitrine" subtitle="Votre vitrine digitale" description="Une présence en ligne sur‑mesure, pensée pour vos objectifs, qui donne confiance à vos clients et vous génère plus de demandes qualifiées." benefits={siteBenefits} ctaText="Créer mon site vitrine" variant="gold" icon={<Monitor className="w-6 h-6 md:w-8 md:h-8 text-[#2D284D]" />} index={0} price="1'800 CHF" isMobile={isMobile} />
+          <OfferCard title="Landing page" subtitle="Une page, un objectif" description="Une page unique et percutante, conçue sur‑mesure sur votre offre pour convertir vos visiteurs en prospects ou clients." benefits={landingBenefits} ctaText="Créer ma landing page" variant="purple" icon={<Rocket className="w-6 h-6 md:w-8 md:h-8 text-[#2D284D]" />} index={1} price="900 CHF" isMobile={isMobile} />
         </div>
 
         {/* Bottom decorative element */}

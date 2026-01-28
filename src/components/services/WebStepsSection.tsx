@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { MessageCircle, Search, Layers, Palette, Rocket, Sparkles, ArrowRight } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const steps = [
   {
@@ -75,43 +76,49 @@ interface StepCardProps {
   isActive: boolean;
   onHover: () => void;
   onLeave: () => void;
+  isMobile: boolean;
 }
 
-const StepCard = ({ step, index, isActive, onHover, onLeave }: StepCardProps) => {
+const StepCard = ({ step, index, isActive, onHover, onLeave, isMobile }: StepCardProps) => {
   const Icon = step.icon;
   const isEven = index % 2 === 0;
+  
+  // On mobile, always show as active
+  const showActive = isMobile || isActive;
   
   return (
     <motion.div
       variants={cardVariants}
       className="relative group"
-      onMouseEnter={onHover}
-      onMouseLeave={onLeave}
+      onMouseEnter={!isMobile ? onHover : undefined}
+      onMouseLeave={!isMobile ? onLeave : undefined}
       style={{ perspective: "1000px" }}
+      whileInView={isMobile ? { opacity: 1, y: 0 } : undefined}
+      viewport={isMobile ? { once: true, margin: "-30px" } : undefined}
     >
-      {/* Glow effect behind card */}
+      {/* Glow effect behind card - always visible on mobile */}
       <motion.div
-        className="absolute -inset-4 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl"
+        className={`absolute -inset-4 rounded-3xl transition-opacity duration-500 blur-2xl ${isMobile ? 'opacity-50' : 'opacity-0 group-hover:opacity-100'}`}
         style={{
           background: `radial-gradient(circle at center, ${step.color}30 0%, transparent 70%)`,
         }}
       />
 
-      <div className="relative flex items-center gap-6 md:gap-10">
+      <div className="relative flex items-center gap-4 md:gap-10">
         {/* Left: Large number without background - fixed width for alignment */}
         <motion.div
-          className="flex-shrink-0 relative w-16 md:w-24 lg:w-28 flex items-center justify-center"
-          whileHover={{ scale: 1.1 }}
+          className="flex-shrink-0 relative w-12 md:w-24 lg:w-28 flex items-center justify-center"
+          whileHover={!isMobile ? { scale: 1.1 } : undefined}
           transition={{ duration: 0.3 }}
         >
           <motion.span
-            className="font-display font-bold text-6xl md:text-7xl lg:text-8xl"
+            className="font-display font-bold text-4xl md:text-7xl lg:text-8xl"
             style={{
-              color: isActive ? step.color : "rgba(255,255,255,0.15)",
-              textShadow: isActive ? `0 0 40px ${step.color}50` : "none",
+              color: showActive ? step.color : "rgba(255,255,255,0.15)",
+              textShadow: showActive ? `0 0 40px ${step.color}50` : "none",
             }}
             animate={{
-              color: isActive ? step.color : "rgba(255,255,255,0.15)",
+              color: showActive ? step.color : "rgba(255,255,255,0.15)",
             }}
             transition={{ duration: 0.3 }}
           >
@@ -121,18 +128,64 @@ const StepCard = ({ step, index, isActive, onHover, onLeave }: StepCardProps) =>
 
         {/* Main card */}
         <motion.div
-          className="flex-1 relative overflow-hidden rounded-2xl border backdrop-blur-sm"
+          className="flex-1 relative overflow-hidden rounded-xl md:rounded-2xl border backdrop-blur-sm"
           style={{
             background: "linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%)",
-            borderColor: isActive ? step.color : "rgba(255,255,255,0.08)",
+            borderColor: showActive ? step.color : "rgba(255,255,255,0.08)",
           }}
-          whileHover={{
+          whileHover={!isMobile ? {
             scale: 1.02,
             rotateY: isEven ? 2 : -2,
             boxShadow: `0 30px 60px -20px ${step.color}40`,
-          }}
+          } : undefined}
+          animate={isMobile ? {
+            boxShadow: `0 15px 40px -15px ${step.color}30`,
+          } : undefined}
           transition={{ duration: 0.4, ease: "easeOut" }}
         >
+          {/* Top gradient bar */}
+          <motion.div
+            className="absolute top-0 left-0 right-0 h-0.5 md:h-1"
+            style={{
+              background: `linear-gradient(90deg, transparent, ${step.color}, transparent)`,
+            }}
+            animate={{ opacity: showActive ? 1 : 0 }}
+            transition={{ duration: 0.3 }}
+          />
+
+          <div className="p-4 md:p-8 flex items-center gap-4 md:gap-6 min-h-[80px] md:min-h-[140px]">
+            {/* Content */}
+            <div className="flex-1">
+              <motion.h3
+                className="text-base md:text-2xl font-display font-bold mb-1 md:mb-3 transition-colors duration-300"
+                style={{ color: showActive ? step.color : "#fff" }}
+              >
+                {step.title}
+              </motion.h3>
+              <p className={`text-white/60 leading-relaxed text-xs md:text-lg ${isMobile ? 'text-white/70' : 'group-hover:text-white/80'} transition-colors duration-300 line-clamp-2`}>
+                {step.description}
+              </p>
+            </div>
+
+            {/* Right: Icon without background, animated */}
+            <motion.div
+              className="flex-shrink-0"
+              animate={{
+                rotate: showActive && !isMobile ? [0, 10, -10, 0] : 0,
+                scale: showActive ? (isMobile ? 1.1 : 1.25) : 1,
+              }}
+              transition={{
+                duration: 0.5,
+                ease: "easeInOut",
+              }}
+              whileHover={!isMobile ? { scale: 1.3 } : undefined}
+            >
+              <Icon
+                className="w-6 h-6 md:w-10 md:h-10 transition-colors duration-300"
+                style={{ color: showActive ? step.color : "rgba(255,255,255,0.4)" }}
+              />
+            </motion.div>
+          </div>
           {/* Top gradient bar */}
           <motion.div
             className="absolute top-0 left-0 right-0 h-1"
@@ -206,6 +259,7 @@ const StepCard = ({ step, index, isActive, onHover, onLeave }: StepCardProps) =>
 
 export const WebStepsSection = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const isMobile = useIsMobile();
 
   return (
     <section
@@ -255,7 +309,7 @@ export const WebStepsSection = () => {
       <div className="container max-w-5xl mx-auto px-4 relative z-10">
         {/* Header */}
         <motion.div
-          className="text-center mb-16 md:mb-20"
+          className="text-center mb-10 md:mb-20"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -263,7 +317,7 @@ export const WebStepsSection = () => {
         >
           {/* Badge */}
           <motion.div
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6"
+            className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full mb-4 md:mb-6"
             style={{
               background: "linear-gradient(135deg, rgba(195, 182, 143, 0.1), rgba(195, 182, 143, 0.02))",
               border: "1px solid rgba(195, 182, 143, 0.2)",
@@ -273,15 +327,15 @@ export const WebStepsSection = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            <Sparkles className="w-4 h-4" style={{ color: "#C3B68F" }} />
-            <span className="text-sm font-medium" style={{ color: "#C3B68F" }}>
+            <Sparkles className="w-3 h-3 md:w-4 md:h-4" style={{ color: "#C3B68F" }} />
+            <span className="text-xs md:text-sm font-medium" style={{ color: "#C3B68F" }}>
               Processus de création
             </span>
           </motion.div>
 
           {/* Title */}
           <motion.h2
-            className="text-display-md md:text-display-lg text-white mb-6"
+            className="text-xl md:text-display-lg text-white mb-4 md:mb-6"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -289,12 +343,12 @@ export const WebStepsSection = () => {
           >
             Notre méthode pour
             <br className="hidden md:block" />
-            <span className="text-gradient-gold">votre site web</span>
+            <span className="text-gradient-gold"> votre site web</span>
           </motion.h2>
 
           {/* Description */}
           <motion.p
-            className="text-body-lg text-white/60 max-w-2xl mx-auto leading-relaxed"
+            className="text-sm md:text-body-lg text-white/60 max-w-2xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -321,6 +375,7 @@ export const WebStepsSection = () => {
               isActive={activeIndex === index}
               onHover={() => setActiveIndex(index)}
               onLeave={() => setActiveIndex(null)}
+              isMobile={isMobile}
             />
           ))}
         </motion.div>

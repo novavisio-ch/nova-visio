@@ -1,4 +1,5 @@
 import { CheckCircle } from "lucide-react";
+import { motion } from "framer-motion";
 
 const benefits = [
   {
@@ -22,34 +23,69 @@ const benefits = [
     rest: ", vous pouvez vous concentrer sur votre cœur de métier."
   }
 ];
+
+const itemVariants = {
+  hidden: { opacity: 0, x: -20 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.5,
+      ease: [0.25, 0.46, 0.45, 0.94] as const,
+    },
+  },
+};
+
 export function BenefitsSection() {
-  return <section className="bg-white py-16 md:py-20 lg:py-28 px-4">
+  return <section className="bg-white py-12 md:py-20 lg:py-28 px-4">
       <div className="container max-w-6xl">
         <div className="text-left">
           {/* Title */}
-          <h2 className="text-2xl sm:text-3xl md:text-display-lg lg:text-display-xl font-bold mb-4 md:mb-6 text-center leading-tight">
+          <motion.h2 
+            className="text-xl sm:text-2xl md:text-display-lg lg:text-display-xl font-bold mb-3 md:mb-6 text-center leading-tight"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             <span className="text-slate-900">Vos </span>
             <span className="text-accent">bénéfices</span>
             
-          </h2>
+          </motion.h2>
           
           {/* Subtitle */}
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-600 mb-8 md:mb-12 lg:mb-16 max-w-3xl leading-relaxed text-center mx-auto font-bold">
+          <motion.p 
+            className="text-sm sm:text-base md:text-xl lg:text-2xl text-slate-600 mb-6 md:mb-12 lg:mb-16 max-w-3xl leading-relaxed text-center mx-auto font-bold"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
             Ce que vous gagnez en clarifiant votre image
             <br className="hidden sm:block" />
             et votre présence en ligne avec NOVA VISIO.
-          </p>
+          </motion.p>
 
           {/* Benefits Grid */}
-          <div className="grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-10">
-            {benefits.map((benefit, index) => <div key={index} className="flex items-start gap-3 md:gap-4">
+          <div className="grid md:grid-cols-2 gap-3 sm:gap-5 md:gap-8 lg:gap-10">
+            {benefits.map((benefit, index) => (
+              <motion.div 
+                key={index} 
+                className="flex items-start gap-2 md:gap-4"
+                variants={itemVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-30px" }}
+                transition={{ delay: index * 0.1 }}
+              >
                 <div className="flex-shrink-0 mt-0.5 md:mt-1">
-                  <CheckCircle className="w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 text-accent" strokeWidth={2} />
+                  <CheckCircle className="w-4 h-4 md:w-6 md:h-6 lg:w-7 lg:h-7 text-accent" strokeWidth={2} />
                 </div>
-                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-slate-800 leading-relaxed">
+                <p className="text-xs sm:text-sm md:text-lg lg:text-xl text-slate-800 leading-relaxed">
                   {benefit.text}<span className="font-bold text-slate-900">{benefit.highlight}</span>{benefit.rest}
                 </p>
-              </div>)}
+              </motion.div>
+            ))}
           </div>
         </div>
       </div>
