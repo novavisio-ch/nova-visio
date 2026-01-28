@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { MessageCircle, Search, Palette, Layout, Rocket } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const steps = [
   {
@@ -68,9 +69,24 @@ const cardVariants = {
   },
 };
 
+const mobileCardVariants = {
+  hidden: { opacity: 0, y: 30, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.5,
+      ease: [0.25, 0.46, 0.45, 0.94] as const,
+    },
+  },
+};
+
 export function StepsSection() {
+  const isMobile = useIsMobile();
+
   return (
-    <section className="py-16 md:py-20 lg:py-28 px-4 overflow-hidden">
+    <section className="py-12 md:py-20 lg:py-28 px-4 overflow-hidden">
       <div className="container max-w-6xl mx-auto">
         {/* Header */}
         <motion.div
@@ -78,12 +94,12 @@ export function StepsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12 md:mb-16 lg:mb-20"
+          className="text-center mb-8 md:mb-16 lg:mb-20"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 leading-tight">
+          <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-6 leading-tight">
             Notre méthode, <span className="text-gradient-gold">étape par étape</span>
           </h2>
-          <p className="text-body text-sm sm:text-base md:text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed">
+          <p className="text-body text-xs sm:text-sm md:text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed">
             Chaque projet suit un processus clair. L'objectif : réduire la complexité,
             <br className="hidden md:block" />
             structurer vos idées et créer des supports durables.
@@ -111,37 +127,39 @@ export function StepsSection() {
           </div>
 
           {/* Steps Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-5 gap-3 md:gap-6">
             {steps.map((step, index) => {
               const Icon = step.icon;
               return (
                 <motion.div
                   key={step.number}
-                  variants={cardVariants}
+                  variants={isMobile ? mobileCardVariants : cardVariants}
                   className="group relative"
+                  whileInView={isMobile ? "visible" : undefined}
+                  viewport={isMobile ? { once: true, margin: "-20px" } : undefined}
                 >
                   {/* Card */}
                   <div
-                    className={`relative h-full p-6 rounded-2xl border border-white/10 bg-gradient-to-b ${step.color} backdrop-blur-sm transition-all duration-500 group-hover:border-primary/50 group-hover:shadow-[0_0_50px_-12px_#C3B68F] group-hover:-translate-y-2`}
+                    className={`relative h-full p-4 md:p-6 rounded-xl md:rounded-2xl border border-white/10 bg-gradient-to-b ${step.color} backdrop-blur-sm transition-all duration-500 ${isMobile ? 'border-primary/30 shadow-[0_0_30px_-10px_#C3B68F]' : 'group-hover:border-primary/50 group-hover:shadow-[0_0_50px_-12px_#C3B68F] group-hover:-translate-y-2'}`}
                   >
                     {/* Large number */}
-                    <span className="text-5xl md:text-6xl font-bold text-primary/80 leading-none mb-4 block">
+                    <span className="text-3xl md:text-6xl font-bold text-primary/80 leading-none mb-2 md:mb-4 block">
                       {step.number}
                     </span>
 
                     {/* Icon */}
-                    <div className="mb-4">
-                      <Icon className="w-8 h-8 text-primary transition-transform duration-300 group-hover:scale-125" />
+                    <div className="mb-2 md:mb-4">
+                      <Icon className={`w-6 h-6 md:w-8 md:h-8 text-primary transition-transform duration-300 ${isMobile ? 'scale-110' : 'group-hover:scale-125'}`} />
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-lg md:text-xl font-bold text-foreground mb-1 leading-tight">
+                    <h3 className="text-sm md:text-xl font-bold text-foreground mb-0.5 md:mb-1 leading-tight">
                       {step.title}
                     </h3>
-                    <p className="text-primary text-sm font-medium mb-3">{step.subtitle}</p>
+                    <p className="text-primary text-[10px] md:text-sm font-medium mb-2 md:mb-3">{step.subtitle}</p>
 
                     {/* Description */}
-                    <p className="text-body text-sm leading-relaxed">
+                    <p className="text-body text-[10px] md:text-sm leading-relaxed line-clamp-3 md:line-clamp-none">
                       {step.description}
                     </p>
 
@@ -173,10 +191,10 @@ export function StepsSection() {
                     )}
                   </div>
 
-                  {/* Mobile connector line */}
-                  {index < steps.length - 1 && (
-                    <div className="lg:hidden flex justify-center py-2">
-                      <div className="w-px h-8 bg-gradient-to-b from-primary/50 to-transparent" />
+                  {/* Mobile connector line - hidden on 2-col grid */}
+                  {index < steps.length - 1 && index % 2 === 1 && (
+                    <div className="hidden flex justify-center py-2">
+                      <div className="w-px h-6 bg-gradient-to-b from-primary/50 to-transparent" />
                     </div>
                   )}
                 </motion.div>
@@ -191,11 +209,11 @@ export function StepsSection() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.8, duration: 0.5 }}
-          className="mt-12 md:mt-16 flex justify-center"
+          className="mt-8 md:mt-16 flex justify-center"
         >
-          <div className="flex items-center gap-3 px-6 py-3 rounded-full border border-primary/30 bg-primary/5 backdrop-blur-sm">
-            <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span className="text-body text-sm">Processus transparent et collaboratif</span>
+          <div className="flex items-center gap-2 md:gap-3 px-4 md:px-6 py-2 md:py-3 rounded-full border border-primary/30 bg-primary/5 backdrop-blur-sm">
+            <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-primary animate-pulse" />
+            <span className="text-body text-[10px] md:text-sm">Processus transparent et collaboratif</span>
           </div>
         </motion.div>
       </div>

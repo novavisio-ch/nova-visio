@@ -10,6 +10,7 @@ import { Send, Clock, MessageSquare } from "lucide-react";
 import { motion } from "framer-motion";
 import { supabase } from "@/integrations/supabase/client";
 import { z } from "zod";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 // Validation schema
 const contactSchema = z.object({
@@ -24,6 +25,7 @@ type ContactFormData = z.infer<typeof contactSchema>;
 
 const Contact = () => {
   const { toast } = useToast();
+  const isMobile = useIsMobile();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<Partial<Record<keyof ContactFormData, string>>>({});
   const [formData, setFormData] = useState({
@@ -231,15 +233,16 @@ const Contact = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                whileHover={{ y: -6, boxShadow: "0 20px 40px -15px hsl(var(--primary) / 0.2)" }}
+                whileHover={!isMobile ? { y: -6, boxShadow: "0 20px 40px -15px hsl(var(--primary) / 0.2)" } : undefined}
+                animate={isMobile ? { boxShadow: "0 15px 30px -10px hsl(var(--primary) / 0.15)" } : undefined}
                 className="glass-card p-4 md:p-6 flex items-start gap-3 md:gap-4 cursor-pointer"
               >
                 <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Clock className="w-4 h-4 md:w-5 md:h-5 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-base md:text-display-sm mb-0.5 md:mb-1">Réponse rapide</h3>
-                  <p className="text-xs sm:text-body-sm text-muted-foreground">
+                  <h3 className="text-sm md:text-display-sm mb-0.5 md:mb-1">Réponse rapide</h3>
+                  <p className="text-[11px] sm:text-body-sm text-muted-foreground">
                     Nous vous répondrons sous 24 à 48 heures.
                   </p>
                 </div>
@@ -249,15 +252,16 @@ const Contact = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                whileHover={{ y: -6, boxShadow: "0 20px 40px -15px hsl(var(--primary) / 0.2)" }}
+                whileHover={!isMobile ? { y: -6, boxShadow: "0 20px 40px -15px hsl(var(--primary) / 0.2)" } : undefined}
+                animate={isMobile ? { boxShadow: "0 15px 30px -10px hsl(var(--primary) / 0.15)" } : undefined}
                 className="glass-card p-4 md:p-6 flex items-start gap-3 md:gap-4 cursor-pointer"
               >
                 <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg flex items-center justify-center flex-shrink-0">
                   <MessageSquare className="w-4 h-4 md:w-5 md:h-5 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-base md:text-display-sm mb-0.5 md:mb-1">Sans pression</h3>
-                  <p className="text-xs sm:text-body-sm text-muted-foreground">
+                  <h3 className="text-sm md:text-display-sm mb-0.5 md:mb-1">Sans pression</h3>
+                  <p className="text-[11px] sm:text-body-sm text-muted-foreground">
                     Discussion constructive, solutions adaptées.
                   </p>
                 </div>

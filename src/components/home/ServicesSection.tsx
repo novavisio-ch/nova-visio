@@ -1,6 +1,8 @@
 import { CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface Benefit {
   text: string;
@@ -34,13 +36,16 @@ interface ServiceCardProps {
   ctaText: string;
   ctaLink: string;
   theme: ColorTheme;
+  isMobile: boolean;
 }
 
 const themeStyles = {
   gold: {
     border: "border-[#C3B68F]/30",
     hoverBorder: "hover:border-[#C3B68F]",
+    activeBorder: "border-[#C3B68F]",
     hoverShadow: "hover:shadow-[0_0_40px_-10px_#C3B68F]",
+    activeShadow: "shadow-[0_0_30px_-10px_#C3B68F]",
     badgeGradient: "bg-gradient-to-r from-[#DCCB99] to-[#C3B68F]",
     iconColor: "text-[#C3B68F]",
     accentGradient: "from-[#C3B68F]/10 to-transparent",
@@ -48,10 +53,25 @@ const themeStyles = {
   purple: {
     border: "border-[#7C6AE8]/30",
     hoverBorder: "hover:border-[#7C6AE8]",
+    activeBorder: "border-[#7C6AE8]",
     hoverShadow: "hover:shadow-[0_0_40px_-10px_#7C6AE8]",
+    activeShadow: "shadow-[0_0_30px_-10px_#7C6AE8]",
     badgeGradient: "bg-gradient-to-r from-[#9D8DF0] to-[#7C6AE8]",
     iconColor: "text-[#7C6AE8]",
     accentGradient: "from-[#7C6AE8]/10 to-transparent",
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 40, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.6,
+      ease: [0.25, 0.46, 0.45, 0.94] as const,
+    },
   },
 };
 
@@ -61,19 +81,26 @@ function ServiceCard({
   benefits,
   ctaText,
   ctaLink,
-  theme
+  theme,
+  isMobile
 }: ServiceCardProps) {
   const styles = themeStyles[theme];
   
   return (
-    <div className={`group relative flex flex-col items-center text-center p-5 sm:p-6 md:p-8 lg:p-10 rounded-2xl ${styles.border} bg-gradient-to-br ${styles.accentGradient} backdrop-blur-sm transition-all duration-500 ${styles.hoverBorder} ${styles.hoverShadow}`}>
+    <motion.div 
+      className={`group relative flex flex-col items-center text-center p-4 sm:p-6 md:p-8 lg:p-10 rounded-xl md:rounded-2xl ${styles.border} bg-gradient-to-br ${styles.accentGradient} backdrop-blur-sm transition-all duration-500 ${isMobile ? `${styles.activeBorder} ${styles.activeShadow}` : `${styles.hoverBorder} ${styles.hoverShadow}`}`}
+      variants={cardVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-50px" }}
+    >
       {/* Badge */}
-      <span className={`inline-block px-3 py-1 md:px-4 md:py-1.5 rounded-full ${styles.badgeGradient} text-background text-[10px] md:text-xs font-semibold tracking-wide mb-4 md:mb-6`}>
+      <span className={`inline-block px-2 py-1 md:px-4 md:py-1.5 rounded-full ${styles.badgeGradient} text-background text-[8px] md:text-xs font-semibold tracking-wide mb-3 md:mb-6`}>
         POUR : ARTISANS, PME, FREELANCES, STARTUP
       </span>
 
       {/* Title */}
-      <h3 className="text-xl sm:text-2xl md:text-display-sm lg:text-display-md text-white mb-3 md:mb-4 text-center leading-tight">
+      <h3 className="text-lg sm:text-xl md:text-display-sm lg:text-display-md text-white mb-2 md:mb-4 text-center leading-tight">
         {title.includes(" et ") ? (
           <>
             {title.split(" et ")[0]}
@@ -92,16 +119,16 @@ function ServiceCard({
       </h3>
 
       {/* Description */}
-      <p className="mb-6 md:mb-8 max-w-sm text-white text-base sm:text-lg md:text-display-sm text-center leading-relaxed">
+      <p className="mb-4 md:mb-8 max-w-sm text-white text-sm sm:text-base md:text-display-sm text-center leading-relaxed">
         {description}
       </p>
 
       {/* Benefits list */}
-      <ul className="space-y-2 md:space-y-3 mb-6 md:mb-8 text-left w-full max-w-sm">
+      <ul className="space-y-1.5 md:space-y-3 mb-4 md:mb-8 text-left w-full max-w-sm">
         {benefits.map((benefit, index) => (
           <li key={index} className="flex items-start gap-2 md:gap-3">
             <CheckCircle className={`w-4 h-4 md:w-5 md:h-5 ${styles.iconColor} mt-0.5 flex-shrink-0`} />
-            <span className="text-muted-foreground text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">
+            <span className="text-muted-foreground text-xs sm:text-sm md:text-lg lg:text-xl leading-relaxed">
               {benefit.text} <strong className="text-foreground">{benefit.highlight}</strong>
             </span>
           </li>
@@ -113,28 +140,36 @@ function ServiceCard({
         <Button 
           variant={theme === "gold" ? "gold-outline" : "outline"} 
           size="lg" 
-          className={`w-full sm:w-auto ${theme === "purple" ? "border-[#7C6AE8] text-[#7C6AE8] hover:bg-[#7C6AE8] hover:text-white" : ""}`}
+          className={`w-full sm:w-auto text-sm md:text-base ${theme === "purple" ? "border-[#7C6AE8] text-[#7C6AE8] hover:bg-[#7C6AE8] hover:text-white" : ""}`}
           asChild
         >
           <Link to={ctaLink}>{ctaText}</Link>
         </Button>
       </div>
-    </div>
+    </motion.div>
   );
 }
 export function ServicesSection() {
-  return <section className="py-16 md:py-20 lg:py-28 px-4">
+  const isMobile = useIsMobile();
+
+  return <section className="py-12 md:py-20 lg:py-28 px-4">
       <div className="container">
         {/* Section header */}
-        <div className="text-center mb-10 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-display-md mb-3 md:mb-4 leading-tight">
+        <motion.div 
+          className="text-center mb-8 md:mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="text-xl sm:text-2xl md:text-display-md mb-2 md:mb-4 leading-tight">
             Deux services pour structurer votre{" "}
             <span className="text-gradient-gold">présence en ligne</span>
           </h2>
-          <p className="text-sm sm:text-base md:text-body-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xs sm:text-sm md:text-body-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             NOVA VISIO vous accompagne sur les deux bases essentielles de votre image en ligne : un site clair et une identité visuelle professionnelle.
           </p>
-        </div>
+        </motion.div>
 
         {/* Cards grid */}
         <div className="grid md:grid-cols-2 gap-4 md:gap-6 lg:gap-8 max-w-5xl mx-auto">
@@ -144,7 +179,8 @@ export function ServicesSection() {
             benefits={webBenefits} 
             ctaText="Découvrir nos créations web →" 
             ctaLink="/site-web" 
-            theme="gold" 
+            theme="gold"
+            isMobile={isMobile}
           />
           <ServiceCard 
             title="Identité visuelle & logo" 
@@ -152,7 +188,8 @@ export function ServicesSection() {
             benefits={brandBenefits} 
             ctaText="Voir nos identités visuelles →" 
             ctaLink="/identite-visuelle" 
-            theme="purple" 
+            theme="purple"
+            isMobile={isMobile}
           />
         </div>
       </div>

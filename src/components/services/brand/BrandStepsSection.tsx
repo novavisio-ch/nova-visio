@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { MessageCircle, Search, Lightbulb, PenTool, Package, HeartHandshake, Sparkles, ArrowRight } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const steps = [
   {
@@ -83,21 +84,23 @@ interface StepCardProps {
   isActive: boolean;
   onHover: () => void;
   onLeave: () => void;
+  isMobile: boolean;
 }
 
-const StepCard = ({ step, index, isActive, onHover, onLeave }: StepCardProps) => {
+const StepCard = ({ step, index, isActive, onHover, onLeave, isMobile }: StepCardProps) => {
   const Icon = step.icon;
   const isEven = index % 2 === 0;
+  const showActive = isMobile || isActive;
   
   return (
     <motion.div
       variants={cardVariants}
       className="relative group"
-      onMouseEnter={onHover}
-      onMouseLeave={onLeave}
+      onMouseEnter={!isMobile ? onHover : undefined}
+      onMouseLeave={!isMobile ? onLeave : undefined}
       style={{ perspective: "1000px" }}
     >
-      {/* Glow effect behind card */}
+      {/* Glow effect behind card - always visible on mobile */}
       <motion.div
         className="absolute -inset-4 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl"
         style={{
@@ -214,6 +217,7 @@ const StepCard = ({ step, index, isActive, onHover, onLeave }: StepCardProps) =>
 
 export const BrandStepsSection = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const isMobile = useIsMobile();
 
   return (
     <section
@@ -329,6 +333,7 @@ export const BrandStepsSection = () => {
               isActive={activeIndex === index}
               onHover={() => setActiveIndex(index)}
               onLeave={() => setActiveIndex(null)}
+              isMobile={isMobile}
             />
           ))}
         </motion.div>
