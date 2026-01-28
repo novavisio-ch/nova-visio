@@ -212,8 +212,10 @@ const ServiceCard = ({
       delay: index * 0.15 + 0.3,
       duration: 0.4
     }}>
-          <Badge className="flex items-center gap-1.5 uppercase tracking-wider shadow-lg">
+          <Badge className="flex items-center gap-1.5 uppercase tracking-wider shadow-lg px-3 py-1">
             {service.badge === "Best-seller" && <Crown className="w-3 h-3" />}
+            {service.badge === "Starter" && <Rocket className="w-3 h-3" />}
+            {service.badge === "Sur-mesure" && <Palette className="w-3 h-3" />}
             {service.badge}
           </Badge>
         </motion.div>}
