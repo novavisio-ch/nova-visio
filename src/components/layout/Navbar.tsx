@@ -70,12 +70,12 @@ export function Navbar() {
         </Link>
 
         {/* Desktop Navigation - Center */}
-        <div className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
+        <div className="hidden lg:flex items-center gap-6 xl:gap-8 absolute left-1/2 -translate-x-1/2">
           {/* Accueil */}
           <Link
             to="/"
             className={cn(
-              "font-medium transition-colors hover:text-primary text-display-sm",
+              "font-medium transition-colors hover:text-primary text-sm xl:text-display-sm whitespace-nowrap",
               location.pathname === "/" ? "text-primary" : "text-foreground/70"
             )}
           >
@@ -90,7 +90,7 @@ export function Navbar() {
           >
             <button
               className={cn(
-                "font-medium transition-colors hover:text-primary text-display-sm inline-flex items-center gap-1 outline-none",
+                "font-medium transition-colors hover:text-primary text-sm xl:text-display-sm inline-flex items-center gap-1 outline-none whitespace-nowrap",
                 isServicesActive ? "text-primary" : "text-foreground/70"
               )}
             >
@@ -121,7 +121,7 @@ export function Navbar() {
           <Link
             to="/blog"
             className={cn(
-              "font-medium transition-colors hover:text-primary text-display-sm",
+              "font-medium transition-colors hover:text-primary text-sm xl:text-display-sm whitespace-nowrap",
               location.pathname === "/blog" ? "text-primary" : "text-foreground/70"
             )}
           >
@@ -132,7 +132,7 @@ export function Navbar() {
           <Link
             to="/a-propos"
             className={cn(
-              "font-medium transition-colors hover:text-primary text-display-sm",
+              "font-medium transition-colors hover:text-primary text-sm xl:text-display-sm whitespace-nowrap",
               location.pathname === "/a-propos" ? "text-primary" : "text-foreground/70"
             )}
           >
@@ -143,7 +143,7 @@ export function Navbar() {
           <Link
             to="/contact"
             className={cn(
-              "font-medium transition-colors hover:text-primary text-display-sm",
+              "font-medium transition-colors hover:text-primary text-sm xl:text-display-sm whitespace-nowrap",
               location.pathname === "/contact" ? "text-primary" : "text-foreground/70"
             )}
           >
@@ -152,15 +152,15 @@ export function Navbar() {
         </div>
 
         {/* CTA Button - Right */}
-        <div className="hidden md:block flex-shrink-0">
+        <div className="hidden lg:block flex-shrink-0">
           <Button variant="gold" size="default" asChild>
             <Link to="/contact">Parlons de votre projet</Link>
           </Button>
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile/Tablet Menu Button */}
         <button
-          className="md:hidden text-foreground p-2"
+          className="lg:hidden text-foreground p-2"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -170,7 +170,7 @@ export function Navbar() {
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <div className="md:hidden glass-card mx-3 mt-2 p-4 sm:p-6 animate-fade-in max-h-[calc(100vh-80px)] overflow-y-auto">
+        <div className="lg:hidden glass-card mx-3 mt-2 p-4 sm:p-6 animate-fade-in max-h-[calc(100vh-80px)] overflow-y-auto">
           <div className="flex flex-col gap-2 sm:gap-4">
             {/* Accueil */}
             <Link

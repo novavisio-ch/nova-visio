@@ -130,7 +130,7 @@ export const ServicesOverviewSection = () => {
         </motion.div>
 
         {/* Services Grid - Bento Style */}
-        <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{
+        <motion.div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{
         once: true,
         margin: "-100px"
       }}>
@@ -151,7 +151,7 @@ export const ServicesOverviewSection = () => {
             delay: index * 0.1
           }} className={`
                   group relative rounded-2xl md:rounded-3xl overflow-hidden cursor-pointer
-                  ${isLarge ? "lg:col-span-2" : ""}
+                  ${isLarge ? "xl:col-span-2" : ""}
                 `} onMouseEnter={() => {
             setHoveredService(service.id);
             setActiveIndex(index);
@@ -248,7 +248,7 @@ export const ServicesOverviewSection = () => {
         })}
           
           {/* Synthesis Block - Inside Grid */}
-          <motion.div className="lg:col-span-2 rounded-2xl md:rounded-3xl overflow-hidden" initial={{
+          <motion.div className="md:col-span-2 xl:col-span-2 rounded-2xl md:rounded-3xl overflow-hidden" initial={{
           opacity: 0,
           y: 30
         }} whileInView={{
