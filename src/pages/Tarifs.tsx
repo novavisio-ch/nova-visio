@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { PackDigitalBranding } from "@/components/tarifs/PackDigitalBranding";
+import { PackRefonteGlobale } from "@/components/tarifs/PackRefonteGlobale";
 
 const mainServices = [{
   id: "site-vitrine",
@@ -524,8 +525,13 @@ const Tarifs = () => {
           </motion.div>
 
           {/* Pack Digital & Branding */}
-          <div className="mb-20 md:mb-28">
+          <div className="mb-10 md:mb-14">
             <PackDigitalBranding />
+          </div>
+
+          {/* Pack Refonte Globale */}
+          <div className="mb-20 md:mb-28">
+            <PackRefonteGlobale />
           </div>
 
           {/* Complementary Services */}
