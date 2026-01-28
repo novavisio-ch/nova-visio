@@ -4,6 +4,7 @@ import { WebCreationContent } from "@/components/services/WebCreationContent";
 import { ShowcaseSection } from "@/components/services/ShowcaseSection";
 import { ServicesOverviewSection } from "@/components/services/ServicesOverviewSection";
 import { WebOfferSection } from "@/components/services/WebOfferSection";
+import { PacksPromoSection } from "@/components/services/PacksPromoSection";
 import { WebStepsSection } from "@/components/services/WebStepsSection";
 import { FaqSection } from "@/components/services/FaqSection";
 import { FinalCtaSection } from "@/components/services/FinalCtaSection";
@@ -25,6 +26,9 @@ const SiteWeb = () => {
 
       {/* Web Offer Section */}
       <WebOfferSection />
+
+      {/* Packs Promo Section */}
+      <PacksPromoSection />
 
       {/* Web Steps / Timeline */}
       <WebStepsSection />
