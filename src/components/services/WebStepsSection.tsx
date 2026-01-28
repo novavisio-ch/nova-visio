@@ -83,8 +83,8 @@ const StepCard = ({ step, index, isActive, onHover, onLeave, isMobile }: StepCar
   const Icon = step.icon;
   const isEven = index % 2 === 0;
   
-  // On mobile, always show as active
-  const showActive = isMobile || isActive;
+  // Desktop uses hover state, mobile uses whileInView
+  const desktopActive = !isMobile && isActive;
   
   return (
     <motion.div
@@ -93,15 +93,19 @@ const StepCard = ({ step, index, isActive, onHover, onLeave, isMobile }: StepCar
       onMouseEnter={!isMobile ? onHover : undefined}
       onMouseLeave={!isMobile ? onLeave : undefined}
       style={{ perspective: "1000px" }}
-      whileInView={isMobile ? { opacity: 1, y: 0 } : undefined}
-      viewport={isMobile ? { once: true, margin: "-30px" } : undefined}
     >
-      {/* Glow effect behind card - always visible on mobile */}
+      {/* Glow effect behind card */}
       <motion.div
-        className={`absolute -inset-4 rounded-3xl transition-opacity duration-500 blur-2xl ${isMobile ? 'opacity-50' : 'opacity-0 group-hover:opacity-100'}`}
+        className="absolute -inset-4 rounded-3xl blur-2xl"
         style={{
           background: `radial-gradient(circle at center, ${step.color}30 0%, transparent 70%)`,
         }}
+        initial={{ opacity: 0 }}
+        whileInView={isMobile ? { opacity: 0.5 } : undefined}
+        whileHover={!isMobile ? { opacity: 1 } : undefined}
+        animate={desktopActive ? { opacity: 1 } : (!isMobile ? { opacity: 0 } : undefined)}
+        viewport={isMobile ? { once: true, margin: "-50px" } : undefined}
+        transition={{ duration: 0.5 }}
       />
 
       <div className="relative flex items-center gap-4 md:gap-10">
@@ -113,13 +117,19 @@ const StepCard = ({ step, index, isActive, onHover, onLeave, isMobile }: StepCar
         >
           <motion.span
             className="font-display font-bold text-4xl md:text-7xl lg:text-8xl"
-            style={{
-              color: showActive ? step.color : "rgba(255,255,255,0.15)",
-              textShadow: showActive ? `0 0 40px ${step.color}50` : "none",
-            }}
-            animate={{
-              color: showActive ? step.color : "rgba(255,255,255,0.15)",
-            }}
+            initial={{ color: "rgba(255,255,255,0.15)", textShadow: "none" }}
+            whileInView={isMobile ? { 
+              color: step.color, 
+              textShadow: `0 0 40px ${step.color}50` 
+            } : undefined}
+            animate={desktopActive ? { 
+              color: step.color, 
+              textShadow: `0 0 40px ${step.color}50` 
+            } : (!isMobile ? { 
+              color: "rgba(255,255,255,0.15)", 
+              textShadow: "none" 
+            } : undefined)}
+            viewport={isMobile ? { once: true, margin: "-50px" } : undefined}
             transition={{ duration: 0.3 }}
           >
             {step.number}
@@ -131,16 +141,19 @@ const StepCard = ({ step, index, isActive, onHover, onLeave, isMobile }: StepCar
           className="flex-1 relative overflow-hidden rounded-xl md:rounded-2xl border backdrop-blur-sm"
           style={{
             background: "linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%)",
-            borderColor: showActive ? step.color : "rgba(255,255,255,0.08)",
           }}
+          initial={{ borderColor: "rgba(255,255,255,0.08)", boxShadow: "none" }}
+          whileInView={isMobile ? {
+            borderColor: step.color,
+            boxShadow: `0 15px 40px -15px ${step.color}30`,
+          } : undefined}
           whileHover={!isMobile ? {
             scale: 1.02,
             rotateY: isEven ? 2 : -2,
+            borderColor: step.color,
             boxShadow: `0 30px 60px -20px ${step.color}40`,
           } : undefined}
-          animate={isMobile ? {
-            boxShadow: `0 15px 40px -15px ${step.color}30`,
-          } : undefined}
+          viewport={isMobile ? { once: true, margin: "-50px" } : undefined}
           transition={{ duration: 0.4, ease: "easeOut" }}
         >
           {/* Top gradient bar */}
@@ -149,7 +162,10 @@ const StepCard = ({ step, index, isActive, onHover, onLeave, isMobile }: StepCar
             style={{
               background: `linear-gradient(90deg, transparent, ${step.color}, transparent)`,
             }}
-            animate={{ opacity: showActive ? 1 : 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={isMobile ? { opacity: 1 } : undefined}
+            animate={desktopActive ? { opacity: 1 } : (!isMobile ? { opacity: 0 } : undefined)}
+            viewport={isMobile ? { once: true, margin: "-50px" } : undefined}
             transition={{ duration: 0.3 }}
           />
 
@@ -157,76 +173,46 @@ const StepCard = ({ step, index, isActive, onHover, onLeave, isMobile }: StepCar
             {/* Content */}
             <div className="flex-1">
               <motion.h3
-                className="text-base md:text-2xl font-display font-bold mb-1 md:mb-3 transition-colors duration-300"
-                style={{ color: showActive ? step.color : "#fff" }}
+                className="text-base md:text-2xl font-display font-bold mb-1 md:mb-3"
+                initial={{ color: "#fff" }}
+                whileInView={isMobile ? { color: step.color } : undefined}
+                animate={desktopActive ? { color: step.color } : (!isMobile ? { color: "#fff" } : undefined)}
+                viewport={isMobile ? { once: true, margin: "-50px" } : undefined}
+                transition={{ duration: 0.3 }}
               >
                 {step.title}
               </motion.h3>
-              <p className={`text-white/60 leading-relaxed text-xs md:text-lg ${isMobile ? 'text-white/70' : 'group-hover:text-white/80'} transition-colors duration-300 line-clamp-2`}>
+              <motion.p 
+                className="leading-relaxed text-xs md:text-lg line-clamp-2"
+                initial={{ color: "rgba(255,255,255,0.6)" }}
+                whileInView={isMobile ? { color: "rgba(255,255,255,0.8)" } : undefined}
+                whileHover={!isMobile ? { color: "rgba(255,255,255,0.8)" } : undefined}
+                viewport={isMobile ? { once: true, margin: "-50px" } : undefined}
+                transition={{ duration: 0.3 }}
+              >
                 {step.description}
-              </p>
+              </motion.p>
             </div>
 
             {/* Right: Icon without background, animated */}
             <motion.div
               className="flex-shrink-0"
-              animate={{
-                rotate: showActive && !isMobile ? [0, 10, -10, 0] : 0,
-                scale: showActive ? (isMobile ? 1.1 : 1.25) : 1,
-              }}
-              transition={{
-                duration: 0.5,
-                ease: "easeInOut",
-              }}
+              initial={{ scale: 1 }}
+              whileInView={isMobile ? { scale: 1.1 } : undefined}
               whileHover={!isMobile ? { scale: 1.3 } : undefined}
+              animate={desktopActive ? { scale: 1.25, rotate: [0, 10, -10, 0] } : (!isMobile ? { scale: 1 } : undefined)}
+              viewport={isMobile ? { once: true, margin: "-50px" } : undefined}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
             >
-              <Icon
-                className="w-6 h-6 md:w-10 md:h-10 transition-colors duration-300"
-                style={{ color: showActive ? step.color : "rgba(255,255,255,0.4)" }}
-              />
-            </motion.div>
-          </div>
-          {/* Top gradient bar */}
-          <motion.div
-            className="absolute top-0 left-0 right-0 h-1"
-            style={{
-              background: `linear-gradient(90deg, transparent, ${step.color}, transparent)`,
-            }}
-            animate={{ opacity: isActive ? 1 : 0 }}
-            transition={{ duration: 0.3 }}
-          />
-
-          <div className="p-6 md:p-8 flex items-center gap-6 min-h-[120px] md:min-h-[140px]">
-            {/* Content */}
-            <div className="flex-1">
-              <motion.h3
-                className="text-xl md:text-2xl font-display font-bold mb-3 transition-colors duration-300"
-                style={{ color: isActive ? step.color : "#fff" }}
+              <motion.div
+                initial={{ color: "rgba(255,255,255,0.4)" }}
+                whileInView={isMobile ? { color: step.color } : undefined}
+                animate={desktopActive ? { color: step.color } : (!isMobile ? { color: "rgba(255,255,255,0.4)" } : undefined)}
+                viewport={isMobile ? { once: true, margin: "-50px" } : undefined}
+                transition={{ duration: 0.3 }}
               >
-                {step.title}
-              </motion.h3>
-              <p className="text-white/60 leading-relaxed text-base md:text-lg group-hover:text-white/80 transition-colors duration-300 line-clamp-2">
-                {step.description}
-              </p>
-            </div>
-
-            {/* Right: Icon without background, animated */}
-            <motion.div
-              className="flex-shrink-0"
-              animate={{
-                rotate: isActive ? [0, 10, -10, 0] : 0,
-                scale: isActive ? 1.25 : 1,
-              }}
-              transition={{
-                duration: 0.5,
-                ease: "easeInOut",
-              }}
-              whileHover={{ scale: 1.3 }}
-            >
-              <Icon
-                className="w-8 h-8 md:w-10 md:h-10 transition-colors duration-300"
-                style={{ color: isActive ? step.color : "rgba(255,255,255,0.4)" }}
-              />
+                <Icon className="w-6 h-6 md:w-10 md:h-10" />
+              </motion.div>
             </motion.div>
           </div>
 

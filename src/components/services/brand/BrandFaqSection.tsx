@@ -64,48 +64,62 @@ interface FaqItemProps {
   index: number;
   isOpen: boolean;
   onToggle: () => void;
+  isMobile: boolean;
 }
 
-const FaqItem = ({ item, index, isOpen, onToggle }: FaqItemProps) => {
+const FaqItem = ({ item, index, isOpen, onToggle, isMobile }: FaqItemProps) => {
   return (
     <motion.div
       variants={itemVariants}
       className="group relative"
     >
-      {/* Animated background glow on hover */}
+      {/* Animated background glow */}
       <motion.div
-        className="absolute -inset-2 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+        className="absolute -inset-2 rounded-2xl"
         style={{
           background: "linear-gradient(135deg, rgba(195, 182, 143, 0.1), rgba(124, 106, 232, 0.05))",
           filter: "blur(20px)",
         }}
+        initial={{ opacity: 0 }}
+        whileInView={isMobile ? { opacity: 0.5 } : undefined}
+        whileHover={!isMobile ? { opacity: 1 } : undefined}
+        viewport={isMobile ? { once: true, margin: "-30px" } : undefined}
+        transition={{ duration: 0.5 }}
       />
       
       <motion.div
-        className="relative overflow-hidden rounded-xl border transition-all duration-300"
+        className="relative overflow-hidden rounded-xl border"
+        initial={{ 
+          borderColor: "rgba(195, 182, 143, 0.2)",
+          boxShadow: "0 4px 20px -10px rgba(0, 0, 0, 0.1)"
+        }}
+        whileInView={isMobile ? { 
+          boxShadow: "0 10px 25px -10px rgba(195, 182, 143, 0.25)"
+        } : undefined}
+        whileHover={!isMobile ? { 
+          scale: 1.01,
+          boxShadow: "0 20px 40px -15px rgba(195, 182, 143, 0.25)",
+        } : undefined}
+        animate={isOpen ? {
+          borderColor: "#C3B68F",
+          boxShadow: "0 20px 40px -15px rgba(195, 182, 143, 0.3)"
+        } : undefined}
+        viewport={isMobile ? { once: true, margin: "-30px" } : undefined}
+        transition={{ duration: 0.3 }}
         style={{
-          borderColor: isOpen ? "#C3B68F" : "rgba(195, 182, 143, 0.2)",
           background: isOpen 
             ? "linear-gradient(135deg, rgba(255,255,255,0.98), rgba(195, 182, 143, 0.05))" 
             : "rgba(255,255,255,0.6)",
-          boxShadow: isOpen 
-            ? "0 20px 40px -15px rgba(195, 182, 143, 0.3)" 
-            : "0 4px 20px -10px rgba(0, 0, 0, 0.1)",
         }}
-        whileHover={{ 
-          scale: 1.01,
-          boxShadow: "0 20px 40px -15px rgba(195, 182, 143, 0.25)",
-        }}
-        transition={{ duration: 0.3 }}
       >
         {/* Question button */}
         <button
           onClick={onToggle}
-          className="w-full px-6 py-5 flex items-center gap-4 text-left"
+          className="w-full px-4 md:px-6 py-4 md:py-5 flex items-center gap-3 md:gap-4 text-left"
         >
           {/* Number badge */}
           <motion.div
-            className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm"
+            className="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center font-bold text-xs md:text-sm"
             style={{
               background: isOpen 
                 ? "linear-gradient(135deg, #C3B68F, #a89860)" 
@@ -123,7 +137,7 @@ const FaqItem = ({ item, index, isOpen, onToggle }: FaqItemProps) => {
 
           {/* Question text */}
           <span
-            className="flex-1 font-bricolage text-base md:text-lg font-medium transition-colors duration-300"
+            className="flex-1 font-bricolage text-sm md:text-lg font-medium transition-colors duration-300"
             style={{ color: isOpen ? "#C3B68F" : "#2D284D" }}
           >
             {item.question}
@@ -157,7 +171,7 @@ const FaqItem = ({ item, index, isOpen, onToggle }: FaqItemProps) => {
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] as const }}
             >
-              <div className="px-6 pb-6 pl-20">
+              <div className="px-4 md:px-6 pb-4 md:pb-6 pl-14 md:pl-20">
                 <motion.div
                   initial={{ y: -10, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
@@ -167,7 +181,7 @@ const FaqItem = ({ item, index, isOpen, onToggle }: FaqItemProps) => {
                 >
                   {/* Decorative line */}
                   <motion.div
-                    className="absolute -left-6 top-0 bottom-0 w-0.5 rounded-full"
+                    className="absolute -left-4 md:-left-6 top-0 bottom-0 w-0.5 rounded-full"
                     style={{ background: "linear-gradient(to bottom, #C3B68F, transparent)" }}
                     initial={{ scaleY: 0 }}
                     animate={{ scaleY: 1 }}
@@ -192,6 +206,7 @@ const FaqItem = ({ item, index, isOpen, onToggle }: FaqItemProps) => {
 
 export const BrandFaqSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const isMobile = useIsMobile();
 
   const handleToggle = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -228,7 +243,7 @@ export const BrandFaqSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <motion.div
-          className="text-center mb-12 md:mb-16"
+          className="text-center mb-8 md:mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -236,7 +251,7 @@ export const BrandFaqSection = () => {
         >
           {/* Badge */}
           <motion.div
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6"
+            className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full mb-4 md:mb-6"
             style={{
               background: "linear-gradient(135deg, rgba(195, 182, 143, 0.15), rgba(195, 182, 143, 0.05))",
               border: "1px solid rgba(195, 182, 143, 0.3)",
@@ -246,15 +261,15 @@ export const BrandFaqSection = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            <Sparkles className="w-4 h-4" style={{ color: "#C3B68F" }} />
-            <span className="text-sm font-medium" style={{ color: "#C3B68F" }}>
+            <Sparkles className="w-3 h-3 md:w-4 md:h-4" style={{ color: "#C3B68F" }} />
+            <span className="text-xs md:text-sm font-medium" style={{ color: "#C3B68F" }}>
               Questions fréquentes
             </span>
           </motion.div>
 
           {/* Title */}
           <h2
-            className="font-bricolage text-2xl md:text-3xl lg:text-4xl font-bold mb-4"
+            className="font-bricolage text-xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4"
             style={{ color: "#2D284D" }}
           >
             Des réponses à vos questions
@@ -263,7 +278,7 @@ export const BrandFaqSection = () => {
           </h2>
           
           <p
-            className="max-w-2xl mx-auto text-base md:text-lg"
+            className="max-w-2xl mx-auto text-xs md:text-lg"
             style={{ color: "rgba(45, 40, 77, 0.7)" }}
           >
             Questions fréquentes sur la création de logo et d'identité visuelle avec NOVA VISIO.
@@ -287,6 +302,7 @@ export const BrandFaqSection = () => {
                 index={index}
                 isOpen={openIndex === index}
                 onToggle={() => handleToggle(index)}
+                isMobile={isMobile}
               />
             ))}
           </div>
@@ -300,6 +316,7 @@ export const BrandFaqSection = () => {
                 index={index + 3}
                 isOpen={openIndex === index + 3}
                 onToggle={() => handleToggle(index + 3)}
+                isMobile={isMobile}
               />
             ))}
           </div>

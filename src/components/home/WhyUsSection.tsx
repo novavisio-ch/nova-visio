@@ -138,26 +138,49 @@ export function WhyUsSection() {
             <motion.div 
               key={index} 
               className="group relative"
-              variants={isMobile ? mobileCardVariants : cardVariants}
-              whileInView={isMobile ? "visible" : undefined}
-              viewport={isMobile ? { once: true, margin: "-30px" } : undefined}
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-30px" }}
             >
               {/* Card */}
               <motion.div 
-                className="relative h-full p-4 sm:p-5 md:p-8 rounded-xl md:rounded-2xl bg-card/50 backdrop-blur-sm border border-border/50 overflow-hidden transition-all duration-500"
-                whileHover={!isMobile ? { 
-                  y: -8,
+                className="relative h-full p-4 sm:p-5 md:p-8 rounded-xl md:rounded-2xl bg-card/50 backdrop-blur-sm border overflow-hidden"
+                initial={{ 
+                  borderColor: "rgba(255,255,255,0.1)",
+                  boxShadow: "none"
+                }}
+                whileInView={isMobile ? { 
+                  borderColor: "rgba(195, 182, 143, 0.4)",
                   boxShadow: "0 20px 40px -15px rgba(195, 182, 143, 0.3)"
                 } : undefined}
-                animate={isMobile ? {
-                  boxShadow: "0 10px 30px -10px rgba(195, 182, 143, 0.2)"
+                whileHover={!isMobile ? { 
+                  y: -8,
+                  borderColor: "rgba(195, 182, 143, 0.5)",
+                  boxShadow: "0 20px 40px -15px rgba(195, 182, 143, 0.3)"
                 } : undefined}
+                viewport={isMobile ? { once: true, margin: "-50px" } : undefined}
+                transition={{ duration: 0.5 }}
               >
-                {/* Gradient background - always visible on mobile */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${reason.gradient} ${isMobile ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'} transition-opacity duration-500`} />
+                {/* Gradient background */}
+                <motion.div 
+                  className={`absolute inset-0 bg-gradient-to-br ${reason.gradient}`}
+                  initial={{ opacity: 0 }}
+                  whileInView={isMobile ? { opacity: 1 } : undefined}
+                  whileHover={!isMobile ? { opacity: 1 } : undefined}
+                  viewport={isMobile ? { once: true, margin: "-50px" } : undefined}
+                  transition={{ duration: 0.5 }}
+                />
                 
-                {/* Decorative corner accent - always visible on mobile */}
-                <div className={`absolute top-0 right-0 w-12 md:w-20 h-12 md:h-20 bg-gradient-to-br from-primary/10 to-transparent rounded-bl-full ${isMobile ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'} transition-opacity duration-500`} />
+                {/* Decorative corner accent */}
+                <motion.div 
+                  className="absolute top-0 right-0 w-12 md:w-20 h-12 md:h-20 bg-gradient-to-br from-primary/10 to-transparent rounded-bl-full"
+                  initial={{ opacity: 0 }}
+                  whileInView={isMobile ? { opacity: 1 } : undefined}
+                  whileHover={!isMobile ? { opacity: 1 } : undefined}
+                  viewport={isMobile ? { once: true, margin: "-50px" } : undefined}
+                  transition={{ duration: 0.5 }}
+                />
                 
                 {/* Content */}
                 <div className="relative z-10 text-center">
@@ -167,14 +190,27 @@ export function WhyUsSection() {
                   </span>
 
                   {/* Icon */}
-                  <div className="mb-2 md:mb-6">
-                    <reason.icon className={`w-6 h-6 md:w-10 md:h-10 text-primary mx-auto transition-transform duration-300 ${isMobile ? 'scale-110' : 'group-hover:scale-125'}`} />
-                  </div>
+                  <motion.div 
+                    className="mb-2 md:mb-6"
+                    whileInView={isMobile ? { scale: 1.1 } : undefined}
+                    whileHover={!isMobile ? { scale: 1.25 } : undefined}
+                    viewport={isMobile ? { once: true, margin: "-50px" } : undefined}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <reason.icon className="w-6 h-6 md:w-10 md:h-10 text-primary mx-auto" />
+                  </motion.div>
                   
                   {/* Title */}
-                  <h3 className={`text-sm md:text-lg font-bold mb-1 md:mb-3 ${isMobile ? 'text-primary' : 'group-hover:text-primary'} transition-colors duration-300 whitespace-pre-line`}>
+                  <motion.h3 
+                    className="text-sm md:text-lg font-bold mb-1 md:mb-3 whitespace-pre-line"
+                    initial={{ color: "inherit" }}
+                    whileInView={isMobile ? { color: "hsl(var(--primary))" } : undefined}
+                    whileHover={!isMobile ? { color: "hsl(var(--primary))" } : undefined}
+                    viewport={isMobile ? { once: true, margin: "-50px" } : undefined}
+                    transition={{ duration: 0.3 }}
+                  >
                     {reason.title}
-                  </h3>
+                  </motion.h3>
                   
                   {/* Description */}
                   <p className="text-muted-foreground text-xs md:text-base lg:text-lg leading-relaxed">
@@ -182,11 +218,13 @@ export function WhyUsSection() {
                   </p>
                 </div>
                 
-                {/* Bottom accent line - always visible on mobile */}
+                {/* Bottom accent line */}
                 <motion.div 
                   className="absolute bottom-0 left-0 right-0 h-0.5 md:h-1 bg-gradient-to-r from-transparent via-primary to-transparent"
-                  initial={{ scaleX: isMobile ? 1 : 0 }}
+                  initial={{ scaleX: 0 }}
+                  whileInView={isMobile ? { scaleX: 1 } : undefined}
                   whileHover={!isMobile ? { scaleX: 1 } : undefined}
+                  viewport={isMobile ? { once: true, margin: "-50px" } : undefined}
                   transition={{ duration: 0.4 }}
                 />
               </motion.div>

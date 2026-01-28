@@ -133,14 +133,31 @@ export function StepsSection() {
               return (
                 <motion.div
                   key={step.number}
-                  variants={isMobile ? mobileCardVariants : cardVariants}
+                  variants={cardVariants}
                   className="group relative"
-                  whileInView={isMobile ? "visible" : undefined}
-                  viewport={isMobile ? { once: true, margin: "-20px" } : undefined}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, margin: "-20px" }}
                 >
                   {/* Card */}
-                  <div
-                    className={`relative h-full p-4 md:p-6 rounded-xl md:rounded-2xl border border-white/10 bg-gradient-to-b ${step.color} backdrop-blur-sm transition-all duration-500 ${isMobile ? 'border-primary/30 shadow-[0_0_30px_-10px_#C3B68F]' : 'group-hover:border-primary/50 group-hover:shadow-[0_0_50px_-12px_#C3B68F] group-hover:-translate-y-2'}`}
+                  <motion.div
+                    className={`relative h-full p-4 md:p-6 rounded-xl md:rounded-2xl border bg-gradient-to-b ${step.color} backdrop-blur-sm`}
+                    initial={{ 
+                      borderColor: "rgba(255,255,255,0.1)",
+                      boxShadow: "none",
+                      y: 0
+                    }}
+                    whileInView={isMobile ? { 
+                      borderColor: "rgba(195, 182, 143, 0.4)",
+                      boxShadow: "0 0 30px -10px #C3B68F"
+                    } : undefined}
+                    whileHover={!isMobile ? { 
+                      borderColor: "rgba(195, 182, 143, 0.5)",
+                      boxShadow: "0 0 50px -12px #C3B68F",
+                      y: -8
+                    } : undefined}
+                    viewport={isMobile ? { once: true, margin: "-30px" } : undefined}
+                    transition={{ duration: 0.5 }}
                   >
                     {/* Large number */}
                     <span className="text-3xl md:text-6xl font-bold text-primary/80 leading-none mb-2 md:mb-4 block">
@@ -148,9 +165,15 @@ export function StepsSection() {
                     </span>
 
                     {/* Icon */}
-                    <div className="mb-2 md:mb-4">
-                      <Icon className={`w-6 h-6 md:w-8 md:h-8 text-primary transition-transform duration-300 ${isMobile ? 'scale-110' : 'group-hover:scale-125'}`} />
-                    </div>
+                    <motion.div 
+                      className="mb-2 md:mb-4"
+                      whileInView={isMobile ? { scale: 1.1 } : undefined}
+                      whileHover={!isMobile ? { scale: 1.25 } : undefined}
+                      viewport={isMobile ? { once: true, margin: "-30px" } : undefined}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <Icon className="w-6 h-6 md:w-8 md:h-8 text-primary" />
+                    </motion.div>
 
                     {/* Title */}
                     <h3 className="text-sm md:text-xl font-bold text-foreground mb-0.5 md:mb-1 leading-tight">
@@ -189,14 +212,7 @@ export function StepsSection() {
                         </motion.div>
                       </div>
                     )}
-                  </div>
-
-                  {/* Mobile connector line - hidden on 2-col grid */}
-                  {index < steps.length - 1 && index % 2 === 1 && (
-                    <div className="hidden flex justify-center py-2">
-                      <div className="w-px h-6 bg-gradient-to-b from-primary/50 to-transparent" />
-                    </div>
-                  )}
+                  </motion.div>
                 </motion.div>
               );
             })}
