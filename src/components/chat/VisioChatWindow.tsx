@@ -213,7 +213,7 @@ export function VisioChatWindow({ onClose }: VisioChatWindowProps) {
       exit={{ opacity: 0, y: 20, scale: 0.95 }}
       transition={{ type: "spring", stiffness: 300, damping: 30 }}
       className={cn(
-        "fixed z-50 backdrop-blur-2xl bg-card/70 border border-white/15 shadow-[0_8px_32px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.1)] overflow-hidden flex flex-col",
+        "fixed z-50 backdrop-blur-2xl bg-white border border-gray-200 shadow-[0_8px_32px_rgba(0,0,0,0.15)] overflow-hidden flex flex-col",
         // Desktop: floating window anchored to right
         "md:bottom-24 md:right-6 md:left-auto md:top-auto md:w-[380px] md:h-[550px] md:max-h-[80vh] md:rounded-2xl",
         // Mobile: anchored to right with max width
@@ -223,26 +223,20 @@ export function VisioChatWindow({ onClose }: VisioChatWindowProps) {
     >
       {/* Header */}
       <div
-        className="px-4 py-3 border-b border-border/30 flex-shrink-0"
+        className="px-4 py-3 border-b border-gray-200 flex-shrink-0"
         style={{
-          background:
-            "linear-gradient(135deg, hsl(252 30% 18% / 0.95), hsl(252 30% 12% / 0.95))",
+          background: "linear-gradient(135deg, hsl(43 35% 67%), hsl(40 28% 55%))",
         }}
       >
         <div className="flex items-center gap-3">
-          <div
-            className="w-9 h-9 rounded-full flex-shrink-0 flex items-center justify-center"
-            style={{
-              background: "linear-gradient(135deg, hsl(43 35% 67%), hsl(40 28% 55%))",
-            }}
-          >
-            <Sparkles className="w-4 h-4 text-background" />
+          <div className="w-9 h-9 rounded-full flex-shrink-0 flex items-center justify-center bg-white/20">
+            <Sparkles className="w-4 h-4 text-gray-900" />
           </div>
           <div className="min-w-0 flex-1">
-            <h3 className="font-display text-base font-semibold text-foreground truncate">
+            <h3 className="font-display text-base font-semibold text-gray-900 truncate">
               Parler avec Visio
             </h3>
-            <p className="text-xs text-muted-foreground line-clamp-2">
+            <p className="text-xs text-gray-800 line-clamp-2">
               Questions sur Nova Visio, les offres ou le fonctionnement du studio ?
             </p>
           </div>
@@ -251,11 +245,7 @@ export function VisioChatWindow({ onClose }: VisioChatWindowProps) {
 
       {/* Messages */}
       <div
-        className="flex-1 overflow-y-auto p-4 space-y-4 min-h-0"
-        style={{
-          background:
-            "linear-gradient(180deg, hsl(252 30% 15% / 0.5), hsl(252 30% 10% / 0.5))",
-        }}
+        className="flex-1 overflow-y-auto p-4 space-y-4 min-h-0 bg-gray-50"
       >
         {messages.length === 0 && (
           <motion.div
@@ -267,12 +257,12 @@ export function VisioChatWindow({ onClose }: VisioChatWindowProps) {
               className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
               style={{
                 background:
-                  "linear-gradient(135deg, hsl(43 35% 67% / 0.2), hsl(40 28% 55% / 0.1))",
+                  "linear-gradient(135deg, hsl(43 35% 67%), hsl(40 28% 55%))",
               }}
             >
-              <Bot className="w-8 h-8 text-primary" />
+              <Bot className="w-8 h-8 text-gray-900" />
             </div>
-            <p className="text-muted-foreground text-sm mb-4">
+            <p className="text-gray-600 text-sm mb-4">
               Bonjour ! Je suis Visio, l'assistant du studio Nova Visio.
               <br />
               Comment puis-je vous aider ?
@@ -286,7 +276,7 @@ export function VisioChatWindow({ onClose }: VisioChatWindowProps) {
                 <button
                   key={suggestion}
                   onClick={() => streamChat(suggestion)}
-                  className="px-3 py-1.5 text-xs rounded-full border border-primary/30 text-primary hover:bg-primary/10 transition-colors"
+                  className="px-3 py-1.5 text-xs rounded-full border border-amber-600/50 text-amber-700 hover:bg-amber-50 transition-colors"
                 >
                   {suggestion}
                 </button>
@@ -313,7 +303,7 @@ export function VisioChatWindow({ onClose }: VisioChatWindowProps) {
                     "linear-gradient(135deg, hsl(43 35% 67%), hsl(40 28% 55%))",
                 }}
               >
-                <Bot className="w-4 h-4 text-background" />
+                <Bot className="w-4 h-4 text-gray-900" />
               </div>
             )}
 
@@ -321,34 +311,34 @@ export function VisioChatWindow({ onClose }: VisioChatWindowProps) {
               className={cn(
                 "max-w-[80%] rounded-2xl px-4 py-3",
                 message.role === "user"
-                  ? "bg-primary text-primary-foreground rounded-br-md"
-                  : "bg-secondary/80 text-foreground rounded-bl-md"
+                  ? "bg-amber-600 text-white rounded-br-md"
+                  : "bg-white text-gray-800 rounded-bl-md shadow-sm border border-gray-100"
               )}
             >
               {message.role === "assistant" ? (
                 <>
-                  <div className="prose prose-sm prose-invert max-w-none text-sm leading-relaxed">
+                  <div className="prose prose-sm max-w-none text-sm leading-relaxed text-gray-800">
                     <ReactMarkdown
                       components={{
                         p: ({ children }) => (
-                          <p className="mb-2 last:mb-0">{children}</p>
+                          <p className="mb-2 last:mb-0 text-gray-800">{children}</p>
                         ),
                         ul: ({ children }) => (
-                          <ul className="list-disc pl-4 mb-2">{children}</ul>
+                          <ul className="list-disc pl-4 mb-2 text-gray-800">{children}</ul>
                         ),
                         ol: ({ children }) => (
-                          <ol className="list-decimal pl-4 mb-2">{children}</ol>
+                          <ol className="list-decimal pl-4 mb-2 text-gray-800">{children}</ol>
                         ),
-                        li: ({ children }) => <li className="mb-1">{children}</li>,
+                        li: ({ children }) => <li className="mb-1 text-gray-800">{children}</li>,
                         strong: ({ children }) => (
-                          <strong className="text-primary font-semibold">
+                          <strong className="text-amber-700 font-semibold">
                             {children}
                           </strong>
                         ),
                         a: ({ href, children }) => (
                           <a
                             href={href}
-                            className="text-primary underline hover:text-primary/80"
+                            className="text-amber-600 underline hover:text-amber-700"
                             target="_blank"
                             rel="noopener noreferrer"
                           >
@@ -362,7 +352,7 @@ export function VisioChatWindow({ onClose }: VisioChatWindowProps) {
                   </div>
                   {/* CTA Buttons */}
                   {message.ctaButtons && message.ctaButtons.length > 0 && (
-                    <div className="flex flex-wrap gap-2 mt-3 pt-3 border-t border-border/30">
+                    <div className="flex flex-wrap gap-2 mt-3 pt-3 border-t border-gray-200">
                       {message.ctaButtons.map((cta, index) => (
                         <Link
                           key={index}
@@ -387,8 +377,8 @@ export function VisioChatWindow({ onClose }: VisioChatWindowProps) {
             </div>
 
             {message.role === "user" && (
-              <div className="w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center bg-secondary">
-                <User className="w-4 h-4 text-foreground" />
+              <div className="w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center bg-amber-100">
+                <User className="w-4 h-4 text-amber-700" />
               </div>
             )}
           </motion.div>
@@ -407,10 +397,10 @@ export function VisioChatWindow({ onClose }: VisioChatWindowProps) {
                   "linear-gradient(135deg, hsl(43 35% 67%), hsl(40 28% 55%))",
               }}
             >
-              <Bot className="w-4 h-4 text-background" />
+              <Bot className="w-4 h-4 text-gray-900" />
             </div>
-            <div className="bg-secondary/80 rounded-2xl rounded-bl-md px-4 py-3">
-              <Loader2 className="w-4 h-4 animate-spin text-primary" />
+            <div className="bg-white rounded-2xl rounded-bl-md px-4 py-3 shadow-sm border border-gray-100">
+              <Loader2 className="w-4 h-4 animate-spin text-amber-600" />
             </div>
           </motion.div>
         )}
@@ -421,11 +411,7 @@ export function VisioChatWindow({ onClose }: VisioChatWindowProps) {
       {/* Input */}
       <form
         onSubmit={handleSubmit}
-        className="p-4 border-t border-border/30"
-        style={{
-          background:
-            "linear-gradient(135deg, hsl(252 30% 18% / 0.95), hsl(252 30% 12% / 0.95))",
-        }}
+        className="p-4 border-t border-gray-200 bg-white"
       >
         <div className="flex gap-2">
           <textarea
@@ -435,7 +421,7 @@ export function VisioChatWindow({ onClose }: VisioChatWindowProps) {
             onKeyDown={handleKeyDown}
             placeholder="Posez votre question..."
             rows={1}
-            className="flex-1 resize-none bg-secondary/50 border border-border/30 rounded-xl px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50"
+            className="flex-1 resize-none bg-gray-100 border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-500/50 focus:border-amber-500/50"
             disabled={isLoading}
           />
           <Button
