@@ -197,8 +197,8 @@ const ServiceCard = ({
       backgroundSize: "200% 200%"
     }} animate={isMobile ? inViewVariants : {}} />
 
-      {/* Badge */}
-      {service.badge && <motion.div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10" initial={{
+      {/* Badge - centered on card */}
+      {service.badge && <motion.div className="absolute -top-3 left-0 right-0 flex justify-center z-10" initial={{
       opacity: 0,
       y: -10,
       scale: 0.8
