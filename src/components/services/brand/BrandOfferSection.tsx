@@ -226,12 +226,13 @@ export const BrandOfferSection = () => {
                     variants={itemVariants}
                     className="flex items-start gap-3 group/item"
                   >
-                    <div
-                      className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 transition-transform duration-300 group-hover/item:scale-110"
-                      style={{ background: "linear-gradient(135deg, #DCCB99 0%, #C3B68F 100%)" }}
-                    >
-                      <Check className="w-3.5 h-3.5 text-[#2D284D]" />
-                    </div>
+                    <Check 
+                      className="w-5 h-5 flex-shrink-0 mt-0.5 transition-all duration-300 group-hover/item:scale-125"
+                      style={{ 
+                        color: "#C3B68F",
+                        filter: "drop-shadow(0 0 4px rgba(195, 182, 143, 0.5))"
+                      }}
+                    />
                     <span style={{ color: "#2D284D" }}>
                       <strong>{item.text}</strong>{" "}
                       <span style={{ opacity: 0.7 }}>{item.highlight}</span>
