@@ -3,7 +3,7 @@ import { CheckCircle, Monitor, Rocket, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { useIsMobile } from "@/hooks/use-mobile";
+import { useIsTabletOrMobile } from "@/hooks/use-mobile";
 interface BenefitItem {
   text: string;
   bold: string;
@@ -310,7 +310,7 @@ const OfferCard = ({
     </motion.div>;
 };
 export const WebOfferSection = () => {
-  const isMobile = useIsMobile();
+  const isMobile = useIsTabletOrMobile();
 
   return <section className="py-16 md:py-32 bg-white overflow-hidden">
       <div className="container max-w-6xl mx-auto px-4">

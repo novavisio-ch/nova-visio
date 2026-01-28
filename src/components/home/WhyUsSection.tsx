@@ -1,6 +1,6 @@
 import { MessageCircle, Users, Shield, Star } from "lucide-react";
 import { motion } from "framer-motion";
-import { useIsMobile } from "@/hooks/use-mobile";
+import { useIsTabletOrMobile } from "@/hooks/use-mobile";
 
 const reasons = [
   {
@@ -77,7 +77,7 @@ const mobileCardVariants = {
 };
 
 export function WhyUsSection() {
-  const isMobile = useIsMobile();
+  const isMobile = useIsTabletOrMobile();
 
   return (
     <section className="py-12 md:py-20 lg:py-28 relative overflow-hidden px-4">

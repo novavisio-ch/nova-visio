@@ -2,7 +2,7 @@ import { CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { useIsMobile } from "@/hooks/use-mobile";
+import { useIsTabletOrMobile } from "@/hooks/use-mobile";
 
 interface Benefit {
   text: string;
@@ -169,7 +169,7 @@ function ServiceCard({
   );
 }
 export function ServicesSection() {
-  const isMobile = useIsMobile();
+  const isMobile = useIsTabletOrMobile();
 
   return <section className="py-12 md:py-20 lg:py-28 px-4">
       <div className="container">

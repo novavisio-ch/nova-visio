@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Sparkles } from "lucide-react";
-import { useIsMobile } from "@/hooks/use-mobile";
+import { useIsTabletOrMobile } from "@/hooks/use-mobile";
 
 const faqItems = [
   {
@@ -206,7 +206,7 @@ const FaqItem = ({ item, index, isOpen, onToggle, isMobile }: FaqItemProps) => {
 
 export const BrandFaqSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const isMobile = useIsMobile();
+  const isMobile = useIsTabletOrMobile();
 
   const handleToggle = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
