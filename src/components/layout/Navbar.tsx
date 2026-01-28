@@ -13,6 +13,7 @@ import {
 
 const mainNavLinks = [
   { href: "/", label: "Accueil" },
+  { href: "/tarifs", label: "Tarifs" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];
@@ -117,6 +118,17 @@ export function Navbar() {
             )}
           </div>
 
+          {/* Tarifs */}
+          <Link
+            to="/tarifs"
+            className={cn(
+              "font-medium transition-colors hover:text-primary text-sm xl:text-base whitespace-nowrap",
+              location.pathname === "/tarifs" ? "text-primary" : "text-foreground/70"
+            )}
+          >
+            Tarifs
+          </Link>
+
           {/* Blog */}
           <Link
             to="/blog"
@@ -217,6 +229,17 @@ export function Navbar() {
                 </div>
               )}
             </div>
+
+            {/* Tarifs */}
+            <Link
+              to="/tarifs"
+              className={cn(
+                "text-sm sm:text-body-md font-medium transition-colors py-2",
+                location.pathname === "/tarifs" ? "text-primary" : "text-foreground/70"
+              )}
+            >
+              Tarifs
+            </Link>
 
             {/* Blog */}
             <Link
