@@ -10,7 +10,7 @@ import { Send, Clock, MessageSquare } from "lucide-react";
 import { motion } from "framer-motion";
 import { supabase } from "@/integrations/supabase/client";
 import { z } from "zod";
-import { useIsMobile } from "@/hooks/use-mobile";
+import { useIsTabletOrMobile } from "@/hooks/use-mobile";
 
 // Validation schema
 const contactSchema = z.object({
@@ -25,7 +25,7 @@ type ContactFormData = z.infer<typeof contactSchema>;
 
 const Contact = () => {
   const { toast } = useToast();
-  const isMobile = useIsMobile();
+  const isMobile = useIsTabletOrMobile();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<Partial<Record<keyof ContactFormData, string>>>({});
   const [formData, setFormData] = useState({

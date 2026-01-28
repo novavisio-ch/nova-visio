@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { MessageCircle, Search, Lightbulb, PenTool, Package, HeartHandshake, Sparkles, ArrowRight } from "lucide-react";
-import { useIsMobile } from "@/hooks/use-mobile";
+import { useIsTabletOrMobile } from "@/hooks/use-mobile";
 
 const steps = [
   {
@@ -251,7 +251,7 @@ const StepCard = ({ step, index, isActive, onHover, onLeave, isMobile }: StepCar
 
 export const BrandStepsSection = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
-  const isMobile = useIsMobile();
+  const isMobile = useIsTabletOrMobile();
 
   return (
     <section

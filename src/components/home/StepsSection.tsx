@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { MessageCircle, Search, Palette, Layout, Rocket } from "lucide-react";
-import { useIsMobile } from "@/hooks/use-mobile";
+import { useIsTabletOrMobile } from "@/hooks/use-mobile";
 
 const steps = [
   {
@@ -83,7 +83,7 @@ const mobileCardVariants = {
 };
 
 export function StepsSection() {
-  const isMobile = useIsMobile();
+  const isMobile = useIsTabletOrMobile();
 
   return (
     <section className="py-12 md:py-20 lg:py-28 px-4 overflow-hidden">
