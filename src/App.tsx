@@ -9,6 +9,7 @@ import { VisioChatBubble } from "@/components/chat/VisioChatBubble";
 import Index from "./pages/Index";
 import SiteWeb from "./pages/SiteWeb";
 import IdentiteVisuelle from "./pages/IdentiteVisuelle";
+import Tarifs from "./pages/Tarifs";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/site-web" element={<SiteWeb />} />
           <Route path="/identite-visuelle" element={<IdentiteVisuelle />} />
+          <Route path="/tarifs" element={<Tarifs />} />
           <Route path="/a-propos" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
