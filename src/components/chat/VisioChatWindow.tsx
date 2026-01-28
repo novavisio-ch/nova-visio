@@ -233,10 +233,10 @@ export function VisioChatWindow({ onClose }: VisioChatWindowProps) {
             <Sparkles className="w-4 h-4 text-gray-900" />
           </div>
           <div className="min-w-0 flex-1">
-            <h3 className="font-display text-base font-semibold text-gray-900 truncate">
+            <h3 className="font-display text-lg font-bold text-gray-900 truncate">
               Parler avec Visio
             </h3>
-            <p className="text-xs text-gray-800 line-clamp-2">
+            <p className="text-sm font-medium text-gray-800 line-clamp-2">
               Questions sur Nova Visio, les offres ou le fonctionnement du studio ?
             </p>
           </div>
@@ -262,8 +262,8 @@ export function VisioChatWindow({ onClose }: VisioChatWindowProps) {
             >
               <Bot className="w-8 h-8 text-gray-900" />
             </div>
-            <p className="text-gray-600 text-sm mb-4">
-              Bonjour ! Je suis Visio, l'assistant du studio Nova Visio.
+            <p className="text-gray-700 text-base font-medium mb-4">
+              Bonjour ! Je suis <strong className="font-bold text-gray-900">Visio</strong>, l'assistant du studio Nova Visio.
               <br />
               Comment puis-je vous aider ?
             </p>
@@ -276,7 +276,7 @@ export function VisioChatWindow({ onClose }: VisioChatWindowProps) {
                 <button
                   key={suggestion}
                   onClick={() => streamChat(suggestion)}
-                  className="px-3 py-1.5 text-xs rounded-full border border-amber-600/50 text-amber-700 hover:bg-amber-50 transition-colors"
+                  className="px-3 py-2 text-sm font-semibold rounded-full border border-amber-600/50 text-amber-700 hover:bg-amber-50 transition-colors"
                 >
                   {suggestion}
                 </button>
@@ -317,28 +317,28 @@ export function VisioChatWindow({ onClose }: VisioChatWindowProps) {
             >
               {message.role === "assistant" ? (
                 <>
-                  <div className="prose prose-sm max-w-none text-sm leading-relaxed text-gray-800">
+                  <div className="prose prose-base max-w-none text-base leading-relaxed text-gray-800">
                     <ReactMarkdown
                       components={{
                         p: ({ children }) => (
-                          <p className="mb-2 last:mb-0 text-gray-800">{children}</p>
+                          <p className="mb-2 last:mb-0 text-gray-800 text-base">{children}</p>
                         ),
                         ul: ({ children }) => (
-                          <ul className="list-disc pl-4 mb-2 text-gray-800">{children}</ul>
+                          <ul className="list-disc pl-4 mb-2 text-gray-800 text-base">{children}</ul>
                         ),
                         ol: ({ children }) => (
-                          <ol className="list-decimal pl-4 mb-2 text-gray-800">{children}</ol>
+                          <ol className="list-decimal pl-4 mb-2 text-gray-800 text-base">{children}</ol>
                         ),
-                        li: ({ children }) => <li className="mb-1 text-gray-800">{children}</li>,
+                        li: ({ children }) => <li className="mb-1 text-gray-800 text-base">{children}</li>,
                         strong: ({ children }) => (
-                          <strong className="text-amber-700 font-semibold">
+                          <strong className="text-amber-700 font-bold text-base">
                             {children}
                           </strong>
                         ),
                         a: ({ href, children }) => (
                           <a
                             href={href}
-                            className="text-amber-600 underline hover:text-amber-700"
+                            className="text-amber-600 underline hover:text-amber-700 font-semibold"
                             target="_blank"
                             rel="noopener noreferrer"
                           >
@@ -358,21 +358,21 @@ export function VisioChatWindow({ onClose }: VisioChatWindowProps) {
                           key={index}
                           to={cta.url}
                           onClick={onClose}
-                          className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-full transition-all duration-200 hover:scale-105"
+                          className="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-bold rounded-full transition-all duration-200 hover:scale-105"
                           style={{
                             background: "linear-gradient(135deg, hsl(43 35% 67%), hsl(40 28% 55%))",
                             color: "hsl(230 78% 9%)",
                           }}
                         >
                           {cta.label}
-                          <ArrowRight className="w-3 h-3" />
+                          <ArrowRight className="w-3.5 h-3.5" />
                         </Link>
                       ))}
                     </div>
                   )}
                 </>
               ) : (
-                <p className="text-sm leading-relaxed">{message.content}</p>
+                <p className="text-base font-medium leading-relaxed">{message.content}</p>
               )}
             </div>
 
@@ -421,7 +421,7 @@ export function VisioChatWindow({ onClose }: VisioChatWindowProps) {
             onKeyDown={handleKeyDown}
             placeholder="Posez votre question..."
             rows={1}
-            className="flex-1 resize-none bg-gray-100 border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-500/50 focus:border-amber-500/50"
+            className="flex-1 resize-none bg-gray-100 border border-gray-200 rounded-xl px-4 py-3 text-base font-medium text-gray-800 placeholder:text-gray-500 placeholder:font-normal focus:outline-none focus:ring-2 focus:ring-amber-500/50 focus:border-amber-500/50"
             disabled={isLoading}
           />
           <Button
