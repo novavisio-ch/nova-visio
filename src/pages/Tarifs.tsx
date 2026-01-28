@@ -2,6 +2,7 @@ import { Layout } from "@/components/layout/Layout";
 import { motion } from "framer-motion";
 import { Monitor, Rocket, Palette, Filter, FileText, ShoppingBag, Layout as LayoutIcon, Printer, Package, ArrowRight, Check, Crown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 
 const mainServices = [
@@ -132,19 +133,11 @@ const ServiceCard = ({
     >
       {/* Badge */}
       {service.badge && (
-        <div 
-          className="absolute -top-3 left-1/2 -translate-x-1/2 z-10 px-4 py-1.5 rounded-t-xl text-xs font-bold uppercase tracking-wider flex items-center gap-1.5"
-          style={{
-            background: isGold 
-              ? "linear-gradient(135deg, #DCCB99 0%, #C3B68F 100%)" 
-              : "linear-gradient(135deg, #9D8DF0 0%, #7C6AE8 100%)",
-            color: "#1f1a3d",
-            borderBottomLeftRadius: 0,
-            borderBottomRightRadius: 0,
-          }}
-        >
-          {service.badge === "Best-seller" && <Crown className="w-3 h-3" />}
-          {service.badge}
+        <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
+          <Badge className="flex items-center gap-1.5 uppercase tracking-wider">
+            {service.badge === "Best-seller" && <Crown className="w-3 h-3" />}
+            {service.badge}
+          </Badge>
         </div>
       )}
       
