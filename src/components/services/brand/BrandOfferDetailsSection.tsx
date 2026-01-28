@@ -345,16 +345,15 @@ export const BrandOfferDetailsSection = () => {
                   {/* Header */}
                   <div className="relative flex items-start gap-4 mb-6">
                     <motion.div 
-                      className="flex-shrink-0 p-3 rounded-xl transition-all duration-300"
-                      style={{ 
-                        background: `${category.accentColor}15`,
-                        border: `1px solid ${category.accentColor}30`
-                      }}
-                      whileHover={{ scale: 1.1, rotate: 5 }}
+                      className="flex-shrink-0"
+                      whileHover={{ scale: 1.2, rotate: 10 }}
                     >
                       <CategoryIcon 
-                        className="w-6 h-6 transition-transform duration-300 group-hover:scale-110" 
-                        style={{ color: category.accentColor }} 
+                        className="w-7 h-7 transition-all duration-300 group-hover:scale-110" 
+                        style={{ 
+                          color: category.accentColor,
+                          filter: `drop-shadow(0 0 8px ${category.accentColor}60)`
+                        }} 
                       />
                     </motion.div>
                     
