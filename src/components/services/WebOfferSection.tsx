@@ -147,19 +147,20 @@ const OfferCard = ({
         transition={{ duration: 0.4 }}
       />
 
-      {/* Centered top badge for gold variant - "cut" by border */}
+      {/* Centered top badge for gold variant - rounded top, flat bottom on border */}
       {isGold && (
         <motion.div 
-          className="absolute left-1/2 -translate-x-1/2 -top-4 z-10 px-5 py-2 rounded-b-xl text-xs font-semibold shadow-lg"
+          className="absolute left-1/2 -translate-x-1/2 top-0 z-10 px-5 py-2 text-xs font-semibold shadow-lg"
           style={{
             background: "linear-gradient(135deg, #DCCB99 0%, #C3B68F 100%)",
             color: "#2D284D",
-            borderBottomLeftRadius: "12px",
-            borderBottomRightRadius: "12px",
-            borderTopLeftRadius: "0",
-            borderTopRightRadius: "0"
+            borderTopLeftRadius: "12px",
+            borderTopRightRadius: "12px",
+            borderBottomLeftRadius: "0",
+            borderBottomRightRadius: "0",
+            transform: "translateX(-50%) translateY(-100%)"
           }}
-          initial={{ y: -20, opacity: 0 }}
+          initial={{ y: 10, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5, duration: 0.5, type: "spring" }}
