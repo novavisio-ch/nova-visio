@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { PackDigitalBranding } from "@/components/tarifs/PackDigitalBranding";
+
 const mainServices = [{
   id: "site-vitrine",
   icon: Monitor,
@@ -499,10 +501,31 @@ const Tarifs = () => {
           </motion.div>
 
           {/* Main Services Grid */}
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-20 md:mb-28" style={{
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-16 md:mb-20" style={{
           perspective: "1200px"
         }}>
             {mainServices.map((service, index) => <ServiceCard key={service.id} service={service} index={index} />)}
+          </div>
+
+          {/* Packs Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-10 md:mb-12"
+          >
+            <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
+              Nos packs <span className="text-[#C3B68F]">tout-en-un</span>
+            </h2>
+            <p className="text-white/50 max-w-xl mx-auto">
+              Des offres <strong className="text-white font-medium">clé en main</strong> qui combinent plusieurs services pour un accompagnement <strong className="text-[#C3B68F] font-medium">complet</strong>.
+            </p>
+          </motion.div>
+
+          {/* Pack Digital & Branding */}
+          <div className="mb-20 md:mb-28">
+            <PackDigitalBranding />
           </div>
 
           {/* Complementary Services */}
