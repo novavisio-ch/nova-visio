@@ -75,7 +75,7 @@ export function Navbar() {
           <Link
             to="/"
             className={cn(
-              "font-medium transition-colors hover:text-primary text-sm xl:text-display-sm whitespace-nowrap",
+              "font-medium transition-colors hover:text-primary text-sm xl:text-base whitespace-nowrap",
               location.pathname === "/" ? "text-primary" : "text-foreground/70"
             )}
           >
@@ -90,7 +90,7 @@ export function Navbar() {
           >
             <button
               className={cn(
-                "font-medium transition-colors hover:text-primary text-sm xl:text-display-sm inline-flex items-center gap-1 outline-none whitespace-nowrap",
+                "font-medium transition-colors hover:text-primary text-sm xl:text-base inline-flex items-center gap-1 outline-none whitespace-nowrap",
                 isServicesActive ? "text-primary" : "text-foreground/70"
               )}
             >
@@ -121,7 +121,7 @@ export function Navbar() {
           <Link
             to="/blog"
             className={cn(
-              "font-medium transition-colors hover:text-primary text-sm xl:text-display-sm whitespace-nowrap",
+              "font-medium transition-colors hover:text-primary text-sm xl:text-base whitespace-nowrap",
               location.pathname === "/blog" ? "text-primary" : "text-foreground/70"
             )}
           >
@@ -132,7 +132,7 @@ export function Navbar() {
           <Link
             to="/a-propos"
             className={cn(
-              "font-medium transition-colors hover:text-primary text-sm xl:text-display-sm whitespace-nowrap",
+              "font-medium transition-colors hover:text-primary text-sm xl:text-base whitespace-nowrap",
               location.pathname === "/a-propos" ? "text-primary" : "text-foreground/70"
             )}
           >
@@ -143,7 +143,7 @@ export function Navbar() {
           <Link
             to="/contact"
             className={cn(
-              "font-medium transition-colors hover:text-primary text-sm xl:text-display-sm whitespace-nowrap",
+              "font-medium transition-colors hover:text-primary text-sm xl:text-base whitespace-nowrap",
               location.pathname === "/contact" ? "text-primary" : "text-foreground/70"
             )}
           >
