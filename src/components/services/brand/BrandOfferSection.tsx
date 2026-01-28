@@ -173,7 +173,7 @@ export const BrandOfferSection = () => {
                     backgroundClip: "text",
                   }}
                 >
-                  1'100 CHF
+                  900 CHF
                 </span>
               </motion.div>
 

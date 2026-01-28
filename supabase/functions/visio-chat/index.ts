@@ -78,7 +78,7 @@ Le studio dispose de certifications en IA générative (IBM, Google Cloud), prom
 
 ## TARIFS ET OFFRES
 
-### Site vitrine - dès 1'800 CHF
+### Site vitrine - dès 1'500 CHF
 - 6 à 8 pages structurées (accueil, services, à propos, contact…).
 - Design professionnel sur-mesure qui renforce votre crédibilité.
 - Site modifiable par vous, sans compétences techniques.
@@ -94,7 +94,7 @@ Le studio dispose de certifications en IA générative (IBM, Google Cloud), prom
 - Parfaite pour tester une idée ou générer des leads rapidement.
 - Intégration facile avec vos outils marketing (emailing, ads…).
 
-### Identité visuelle complète - dès 1'100 CHF
+### Identité visuelle complète - dès 900 CHF
 - Clarification de votre positionnement et de votre univers pour une identité qui vous ressemble.
 - Moodboard et 2 directions créatives pour choisir l'ambiance qui vous correspond vraiment.
 - Logo sur-mesure + déclinaisons + icône pour une utilisation fluide sur tous vos supports.
