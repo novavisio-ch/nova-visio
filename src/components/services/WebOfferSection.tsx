@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { CheckCircle, Monitor, Rocket, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -105,209 +104,237 @@ const OfferCard = ({
   price,
   isMobile
 }: OfferCardProps) => {
-  const [isHovered, setIsHovered] = useState(false);
   const isGold = variant === "gold";
-  const borderColor = isGold ? "#C3B68F" : "#7C6AE8";
   const accentColor = isGold ? "#C3B68F" : "#7C6AE8";
-  const glowColor = isGold ? "#C3B68F" : "#7C6AE8";
   const badgeGradient = isGold ? "linear-gradient(135deg, #DCCB99 0%, #C3B68F 100%)" : "linear-gradient(135deg, #9B8AFF 0%, #7C6AE8 100%)";
   const buttonGradient = isGold ? "linear-gradient(135deg, #DCCB99 0%, #C3B68F 100%)" : "linear-gradient(135deg, #9B8AFF 0%, #7C6AE8 100%)";
-  const bgGradient = isGold ? "radial-gradient(ellipse at top right, rgba(195,182,143,0.08) 0%, transparent 50%)" : "radial-gradient(ellipse at top right, rgba(124,106,232,0.08) 0%, transparent 50%)";
   
-  // Couleurs dynamiques selon hover/mobile
-  const textColor = isMobile ? "#FFFFFF" : (isHovered ? "#FFFFFF" : "#2D284D");
-  const textMutedColor = isMobile ? "rgba(255,255,255,0.7)" : (isHovered ? "rgba(255,255,255,0.7)" : "rgba(45,40,77,0.7)");
-  const cardBg = isMobile ? "linear-gradient(135deg, #000000 0%, #1F1A3D 100%)" : (isHovered ? "linear-gradient(135deg, #000000 0%, #1F1A3D 100%)" : "white");
-  
-  return <motion.div 
-    initial={{
-      opacity: 0,
-      y: 50,
-      rotateY: index === 0 ? -5 : 5
-    }} 
-    whileInView={{
-      opacity: 1,
-      y: 0,
-      rotateY: 0
-    }} 
-    viewport={{
-      once: true,
-      margin: "-50px"
-    }} 
-    transition={{
-      duration: 0.7,
-      delay: index * 0.2,
-      ease: "easeOut"
-    }} 
-    whileHover={!isMobile ? {
-      y: -8,
-      transition: {
-        duration: 0.3
-      }
-    } : undefined} 
-    className="group relative h-full" 
-    style={{
-      perspective: "1000px"
-    }}
-    onMouseEnter={!isMobile ? () => setIsHovered(true) : undefined}
-    onMouseLeave={!isMobile ? () => setIsHovered(false) : undefined}
-  >
-      {/* Glow effect */}
-      <div className="absolute -inset-1 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl" style={{
-      background: `${glowColor}30`
-    }} />
+  return (
+    <motion.div 
+      initial={{ opacity: 0, y: 50, scale: 0.95 }} 
+      whileInView={{ opacity: 1, y: 0, scale: 1 }} 
+      viewport={{ once: true, margin: "-50px" }} 
+      transition={{ duration: 0.7, delay: index * 0.2, ease: "easeOut" }} 
+      whileHover={!isMobile ? { y: -12, scale: 1.02 } : undefined} 
+      className="group relative h-full"
+    >
+      {/* Animated gradient border */}
+      <motion.div 
+        className="absolute -inset-[2px] rounded-3xl opacity-60 group-hover:opacity-100 transition-opacity duration-500"
+        style={{
+          background: isGold 
+            ? "linear-gradient(135deg, #C3B68F, #DCCB99, #C3B68F, #A69A6E)" 
+            : "linear-gradient(135deg, #7C6AE8, #9B8AFF, #7C6AE8, #5B4BC7)",
+          backgroundSize: "300% 300%"
+        }}
+        animate={{
+          backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
+        }}
+        transition={{
+          duration: 5,
+          repeat: Infinity,
+          ease: "linear"
+        }}
+      />
+      
+      {/* Glow effect on hover */}
+      <motion.div 
+        className="absolute -inset-4 rounded-3xl blur-2xl pointer-events-none"
+        style={{ background: `${accentColor}20` }}
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileHover={!isMobile ? { opacity: 1, scale: 1 } : undefined}
+        whileInView={isMobile ? { opacity: 0.5, scale: 1 } : undefined}
+        transition={{ duration: 0.4 }}
+      />
 
-      {/* Floating top-right badge for gold variant - outside card for visibility */}
+      {/* Floating top-right badge for gold variant */}
       {isGold && (
-        <div className="absolute -top-3 right-6 z-10 px-4 py-1.5 rounded-full text-xs font-semibold shadow-md" style={{
-          background: "linear-gradient(135deg, #DCCB99 0%, #C3B68F 100%)",
-          color: "#2D284D"
-        }}>
+        <motion.div 
+          className="absolute -top-3 right-6 z-10 px-4 py-1.5 rounded-full text-xs font-semibold shadow-lg"
+          style={{
+            background: "linear-gradient(135deg, #DCCB99 0%, #C3B68F 100%)",
+            color: "#2D284D"
+          }}
+          initial={{ y: -10, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5, duration: 0.5, type: "spring" }}
+          whileHover={!isMobile ? { scale: 1.1, y: -2 } : undefined}
+        >
           Best-seller
-        </div>
+        </motion.div>
       )}
 
       <div 
-        className="relative flex flex-col items-start text-left p-8 md:p-10 rounded-3xl border-2 transition-all duration-500 h-full overflow-hidden" 
-        style={{
-          borderColor,
-          background: cardBg
-        }}
+        className="relative flex flex-col items-start text-left p-8 md:p-10 rounded-3xl bg-white h-full overflow-hidden"
       >
+        {/* Floating decorative particles */}
+        <motion.div
+          className="absolute top-10 right-10 w-2 h-2 rounded-full pointer-events-none"
+          style={{ background: accentColor }}
+          animate={{ y: [0, -10, 0], opacity: [0.3, 0.7, 0.3] }}
+          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute top-20 right-20 w-1.5 h-1.5 rounded-full pointer-events-none"
+          style={{ background: accentColor }}
+          animate={{ y: [0, -8, 0], opacity: [0.2, 0.5, 0.2] }}
+          transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+        />
+        <motion.div
+          className="absolute bottom-32 left-10 w-1 h-1 rounded-full pointer-events-none"
+          style={{ background: accentColor }}
+          animate={{ y: [0, -6, 0], opacity: [0.2, 0.4, 0.2] }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+        />
+
         {/* Title + Badge row */}
-        <motion.div initial={{
-        opacity: 0,
-        y: 20
-      }} whileInView={{
-        opacity: 1,
-        y: 0
-      }} viewport={{
-        once: true
-      }} transition={{
-        duration: 0.5,
-        delay: 0.3 + index * 0.2
-      }} className="flex items-center gap-3 mb-4">
-          <h3 className="text-3xl md:text-4xl font-display font-bold transition-colors duration-500" style={{
-          color: textColor
-        }}>
+        <motion.div 
+          initial={{ opacity: 0, x: -20 }} 
+          whileInView={{ opacity: 1, x: 0 }} 
+          viewport={{ once: true }} 
+          transition={{ duration: 0.5, delay: 0.3 + index * 0.2 }} 
+          className="flex items-center gap-3 mb-4"
+        >
+          <h3 className="text-3xl md:text-4xl font-display font-bold text-[#2D284D]">
             {title}
           </h3>
-          <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide" style={{
-          background: badgeGradient,
-          color: "#2D284D"
-        }}>
+          <motion.span 
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide"
+            style={{ background: badgeGradient, color: "#2D284D" }}
+            whileHover={!isMobile ? { scale: 1.05 } : undefined}
+          >
             <Sparkles className="w-3 h-3" />
             {isGold ? "Sur-mesure" : "Starter"}
-          </span>
+          </motion.span>
         </motion.div>
 
         {/* Description */}
-        <motion.p initial={{
-        opacity: 0,
-        y: 20
-      }} whileInView={{
-        opacity: 1,
-        y: 0
-      }} viewport={{
-        once: true
-      }} transition={{
-        duration: 0.5,
-        delay: 0.4 + index * 0.2
-      }} className="mb-6 text-base leading-relaxed transition-colors duration-500" style={{
-        color: textMutedColor
-      }}>
+        <motion.p 
+          initial={{ opacity: 0, y: 20 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          viewport={{ once: true }} 
+          transition={{ duration: 0.5, delay: 0.4 + index * 0.2 }} 
+          className="mb-6 text-base leading-relaxed text-[#2D284D]/70"
+        >
           {description}
         </motion.p>
 
-        {/* Price display */}
-        {price && <motion.div initial={{
-        opacity: 0,
-        y: 20
-      }} whileInView={{
-        opacity: 1,
-        y: 0
-      }} viewport={{
-        once: true
-      }} transition={{
-        duration: 0.5,
-        delay: 0.5 + index * 0.2
-      }} className="mb-6">
-            <span className="text-sm transition-colors duration-500" style={{
-          color: textMutedColor
-        }}>
-              dès
-            </span>
-            <div className="text-4xl md:text-5xl font-bold" style={{
-          color: accentColor
-        }}>
+        {/* Price display with animated underline */}
+        {price && (
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }} 
+            whileInView={{ opacity: 1, y: 0 }} 
+            viewport={{ once: true }} 
+            transition={{ duration: 0.5, delay: 0.5 + index * 0.2 }} 
+            className="mb-6 relative"
+          >
+            <span className="text-sm text-[#2D284D]/60">dès</span>
+            <motion.div 
+              className="text-4xl md:text-5xl font-bold"
+              style={{ color: accentColor }}
+              whileHover={!isMobile ? { scale: 1.05, x: 5 } : undefined}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
               {price}
-            </div>
-            
-          </motion.div>}
+            </motion.div>
+            <motion.div 
+              className="h-0.5 mt-1 rounded-full"
+              style={{ background: `linear-gradient(90deg, ${accentColor}, transparent)` }}
+              initial={{ width: 0 }}
+              whileInView={{ width: "60%" }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.7 + index * 0.2 }}
+            />
+          </motion.div>
+        )}
 
-        {/* Divider */}
-        <div className="w-full h-px mb-6" style={{
-        background: `${accentColor}30`
-      }} />
-
-        {/* Section title */}
-        
+        {/* Divider with gradient */}
+        <motion.div 
+          className="w-full h-px mb-6"
+          style={{ background: `linear-gradient(90deg, ${accentColor}50, transparent)` }}
+          initial={{ scaleX: 0, originX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.6 + index * 0.2 }}
+        />
 
         {/* Benefits list */}
-        <motion.ul className="space-y-4 mb-10 w-full flex-grow" initial="hidden" whileInView="visible" viewport={{
-        once: true
-      }} variants={{
-        visible: {
-          transition: {
-            staggerChildren: 0.08,
-            delayChildren: 0.6 + index * 0.2
-          }
-        }
-      }}>
-          {benefits.map((benefit, benefitIndex) => <motion.li key={benefitIndex} variants={benefitVariants} className="flex items-start gap-3 group/item">
-              <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 transition-transform duration-300 group-hover/item:scale-110" style={{
-            background: buttonGradient
-          }}>
+        <motion.ul 
+          className="space-y-4 mb-10 w-full flex-grow" 
+          initial="hidden" 
+          whileInView="visible" 
+          viewport={{ once: true }} 
+          variants={{
+            visible: {
+              transition: { staggerChildren: 0.08, delayChildren: 0.6 + index * 0.2 }
+            }
+          }}
+        >
+          {benefits.map((benefit, benefitIndex) => (
+            <motion.li 
+              key={benefitIndex} 
+              variants={benefitVariants} 
+              className="flex items-start gap-3 group/item"
+              whileHover={!isMobile ? { x: 5 } : undefined}
+            >
+              <motion.div 
+                className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
+                style={{ background: buttonGradient }}
+                whileHover={!isMobile ? { scale: 1.2, rotate: 10 } : undefined}
+                transition={{ type: "spring", stiffness: 400 }}
+              >
                 <CheckCircle className="w-4 h-4 text-[#2D284D]" />
-              </div>
-              <span className="text-sm leading-relaxed transition-colors duration-500" style={{
-            color: isMobile ? "rgba(255,255,255,0.85)" : (isHovered ? "rgba(255,255,255,0.85)" : "rgba(45,40,77,0.85)")
-          }}>
+              </motion.div>
+              <span className="text-sm leading-relaxed text-[#2D284D]/85">
                 {formatBenefit(benefit)}
               </span>
-            </motion.li>)}
+            </motion.li>
+          ))}
         </motion.ul>
 
-        {/* CTA Button */}
-        <motion.div initial={{
-        opacity: 0,
-        y: 20
-      }} whileInView={{
-        opacity: 1,
-        y: 0
-      }} viewport={{
-        once: true
-      }} transition={{
-        duration: 0.5,
-        delay: 0.9 + index * 0.2
-      }} className="mt-auto w-full">
-          <Button asChild size="lg" className="w-full rounded-xl px-8 py-6 text-base font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg border-0" style={{
-          background: buttonGradient,
-          color: "#2D284D"
-        }}>
-            <Link to="/contact">{ctaText}</Link>
+        {/* CTA Button with shine effect */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          viewport={{ once: true }} 
+          transition={{ duration: 0.5, delay: 0.9 + index * 0.2 }} 
+          className="mt-auto w-full relative overflow-hidden rounded-xl"
+        >
+          <Button 
+            asChild 
+            size="lg" 
+            className="w-full rounded-xl px-8 py-6 text-base font-semibold transition-all duration-300 border-0 relative overflow-hidden group/btn" 
+            style={{ background: buttonGradient, color: "#2D284D" }}
+          >
+            <Link to="/contact">
+              <span className="relative z-10">{ctaText}</span>
+              {/* Shine effect */}
+              <motion.div
+                className="absolute inset-0 opacity-0 group-hover/btn:opacity-100"
+                style={{
+                  background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent)",
+                  transform: "translateX(-100%)"
+                }}
+                whileHover={{ transform: "translateX(100%)" }}
+                transition={{ duration: 0.6 }}
+              />
+            </Link>
           </Button>
         </motion.div>
 
-        {/* Decorative corners */}
-        <div className="absolute top-0 right-0 w-32 h-32 opacity-30 pointer-events-none" style={{
-        background: `radial-gradient(circle at top right, ${accentColor}20 0%, transparent 70%)`
-      }} />
-        <div className="absolute bottom-0 left-0 w-24 h-24 opacity-20 pointer-events-none" style={{
-        background: `radial-gradient(circle at bottom left, ${accentColor}20 0%, transparent 70%)`
-      }} />
+        {/* Decorative gradient corners */}
+        <div 
+          className="absolute top-0 right-0 w-40 h-40 opacity-20 pointer-events-none"
+          style={{ background: `radial-gradient(circle at top right, ${accentColor}40 0%, transparent 60%)` }}
+        />
+        <div 
+          className="absolute bottom-0 left-0 w-32 h-32 opacity-15 pointer-events-none"
+          style={{ background: `radial-gradient(circle at bottom left, ${accentColor}30 0%, transparent 60%)` }}
+        />
       </div>
-    </motion.div>;
+    </motion.div>
+  );
 };
 export const WebOfferSection = () => {
   const isMobile = useIsTabletOrMobile();
