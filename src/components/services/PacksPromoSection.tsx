@@ -24,19 +24,19 @@ const packs = [
 const themeStyles = {
   gold: {
     iconColor: "text-[#C3B68F]",
-    borderColor: "border-[#C3B68F]/30",
-    hoverBorder: "hover:border-[#C3B68F]/60",
+    borderColor: "#C3B68F",
     gradient: "from-[#C3B68F]/10 to-transparent",
     priceGradient: "from-[#DCCB99] to-[#C3B68F]",
-    shadow: "rgba(195, 182, 143, 0.3)",
+    shadow: "rgba(195, 182, 143, 0.35)",
+    glowColor: "rgba(195, 182, 143, 0.4)",
   },
   purple: {
     iconColor: "text-[#9D8DF0]",
-    borderColor: "border-[#9D8DF0]/30",
-    hoverBorder: "hover:border-[#9D8DF0]/60",
+    borderColor: "#9D8DF0",
     gradient: "from-[#9D8DF0]/10 to-transparent",
     priceGradient: "from-[#9D8DF0] to-[#7C6AE8]",
-    shadow: "rgba(124, 106, 232, 0.3)",
+    shadow: "rgba(124, 106, 232, 0.35)",
+    glowColor: "rgba(124, 106, 232, 0.4)",
   },
 };
 
@@ -76,28 +76,84 @@ export function PacksPromoSection() {
             return (
               <motion.div
                 key={pack.title}
-                initial={{ opacity: 0, y: 30, rotateX: 10 }}
-                whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+                initial={{ 
+                  opacity: 0, 
+                  y: 40, 
+                  rotateX: 15,
+                  borderColor: `${styles.borderColor}4D`
+                }}
+                whileInView={{ 
+                  opacity: 1, 
+                  y: 0, 
+                  rotateX: 0,
+                  borderColor: isMobile ? styles.borderColor : `${styles.borderColor}4D`,
+                  boxShadow: isMobile ? `0 0 30px -10px ${styles.shadow}` : "none"
+                }}
                 whileHover={
                   !isMobile
                     ? {
-                        y: -6,
-                        boxShadow: `0 15px 40px -10px ${styles.shadow}`,
+                        y: -8,
+                        borderColor: styles.borderColor,
+                        boxShadow: `0 0 40px -10px ${styles.shadow}`,
                       }
                     : undefined
                 }
                 viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`relative p-5 md:p-6 rounded-xl border ${styles.borderColor} ${styles.hoverBorder} bg-gradient-to-br ${styles.gradient} backdrop-blur-sm transition-colors duration-300`}
+                transition={{ duration: 0.6, delay: index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+                className={`group relative p-5 md:p-6 rounded-xl border bg-gradient-to-br ${styles.gradient} backdrop-blur-sm overflow-hidden`}
                 style={{ perspective: "1000px" }}
               >
-                <div className="flex items-start gap-4">
+                {/* Animated gradient border */}
+                <motion.div
+                  className="absolute -inset-[1px] rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                  style={{
+                    background: `linear-gradient(135deg, ${styles.borderColor} 0%, transparent 50%, ${styles.borderColor} 100%)`,
+                    backgroundSize: "200% 200%",
+                  }}
+                  animate={{
+                    backgroundPosition: ["0% 0%", "100% 100%", "0% 0%"],
+                  }}
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "linear",
+                  }}
+                />
+
+                {/* Floating particles */}
+                <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                  {[...Array(3)].map((_, i) => (
+                    <motion.div
+                      key={i}
+                      className="absolute w-1 h-1 rounded-full"
+                      style={{
+                        background: styles.borderColor,
+                        left: `${15 + i * 35}%`,
+                        top: `${20 + i * 25}%`,
+                      }}
+                      animate={{
+                        y: [0, -15, 0],
+                        opacity: [0.2, 0.5, 0.2],
+                      }}
+                      transition={{
+                        duration: 2.5 + i * 0.5,
+                        repeat: Infinity,
+                        delay: i * 0.3,
+                      }}
+                    />
+                  ))}
+                </div>
+
+                {/* Content */}
+                <div className="relative z-10 flex items-start gap-4">
                   <motion.div
-                    whileHover={{ scale: 1.1, rotate: pack.theme === "purple" ? -180 : 0 }}
-                    transition={{ duration: 0.4 }}
-                    className={`p-2.5 rounded-lg bg-background/50 ${styles.iconColor}`}
+                    whileHover={{ scale: 1.2, rotate: pack.theme === "purple" ? -180 : 15 }}
+                    transition={{ duration: 0.4, type: "spring", stiffness: 200 }}
+                    className={`${styles.iconColor} flex-shrink-0`}
                   >
-                    <Icon className="w-5 h-5" />
+                    <Icon className="w-6 h-6 md:w-7 md:h-7 transition-all duration-300 group-hover:drop-shadow-[0_0_8px_var(--glow)]" 
+                      style={{ "--glow": styles.glowColor } as React.CSSProperties}
+                    />
                   </motion.div>
                   <div className="flex-1">
                     <h3 className="font-display text-lg md:text-xl font-bold text-foreground mb-1">
@@ -137,10 +193,18 @@ export function PacksPromoSection() {
               <Button
                 variant="gold-outline"
                 size="lg"
-                className="group"
+                className="group relative overflow-hidden"
               >
-                Découvrir tous nos packs
-                <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+                <span className="relative z-10 flex items-center">
+                  Découvrir tous nos packs
+                  <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+                </span>
+                {/* Shine effect */}
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full"
+                  animate={{ x: ["100%", "-100%"] }}
+                  transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
+                />
               </Button>
             </motion.div>
           </Link>
