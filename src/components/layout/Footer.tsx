@@ -24,6 +24,12 @@ export function Footer() {
             <Link to="/identite-visuelle" className="hover:text-primary transition-colors">
               Logo & identité
             </Link>
+            <Link to="/tarifs" className="hover:text-primary transition-colors">
+              Tarifs
+            </Link>
+            <Link to="/blog" className="hover:text-primary transition-colors">
+              Blog
+            </Link>
             <Link to="/a-propos" className="hover:text-primary transition-colors">
               À Propos
             </Link>
