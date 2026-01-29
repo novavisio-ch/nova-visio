@@ -269,9 +269,16 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-sm md:text-display-sm mb-0.5 md:mb-1">Sans pression</h3>
-                  <p className="text-[11px] sm:text-body-sm text-muted-foreground">
-                    Discussion constructive, solutions adaptées.
-                  </p>
+                  <ul className="text-[11px] sm:text-body-sm text-muted-foreground space-y-0.5">
+                    <li className="flex items-start gap-1.5">
+                      <span className="text-primary mt-0.5">•</span>
+                      <span>Discussion constructive</span>
+                    </li>
+                    <li className="flex items-start gap-1.5">
+                      <span className="text-primary mt-0.5">•</span>
+                      <span>Solutions adaptées</span>
+                    </li>
+                  </ul>
                 </div>
               </motion.div>
             </div>
