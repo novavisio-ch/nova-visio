@@ -82,6 +82,13 @@ export const siteContent: ContentSection[] = [
     content: `Notre façon de travailler : De l'identité visuelle à la création de votre site internet, nous offrons des solutions complètes et modulables.`,
     keywords: ["travail", "méthode", "processus", "façon"]
   },
+  {
+    id: "about-international",
+    title: "Clients internationaux",
+    category: "about",
+    content: `Nos clients à travers le monde : Nova Visio accompagne des entrepreneurs et entreprises dans plusieurs pays. Nous travaillons avec des clients en Suisse (notre base principale), en France, au Maroc, aux Émirats Arabes Unis (UAE), aux États-Unis et au Qatar. Ce rayonnement international témoigne de notre capacité à nous adapter à différents contextes culturels et marchés.`,
+    keywords: ["international", "pays", "suisse", "france", "maroc", "émirats", "usa", "qatar", "monde", "clients"]
+  },
 
   // === COMPÉTENCES ===
   {
