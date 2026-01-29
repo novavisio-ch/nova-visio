@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MessageCircle, X } from "lucide-react";
+import { X } from "lucide-react";
 import { VisioChatWindow } from "./VisioChatWindow";
+import visioRobot from "@/assets/visio-robot.png";
 
 export function VisioChatBubble() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,11 +19,12 @@ export function VisioChatBubble() {
       {/* Floating Bubble */}
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 right-6 z-50 w-14 h-14 md:w-16 md:h-16 rounded-full shadow-lg flex items-center justify-center glow-gold"
+        className="fixed bottom-6 right-6 z-50 w-16 h-16 md:w-18 md:h-18 rounded-full shadow-lg flex items-center justify-center overflow-hidden"
         style={{
-          background: "linear-gradient(135deg, hsl(43 35% 67%), hsl(40 28% 55%))",
+          background: "linear-gradient(135deg, hsl(43 35% 72%), hsl(40 28% 60%))",
+          boxShadow: "0 4px 20px rgba(195, 182, 143, 0.4), 0 0 40px rgba(195, 182, 143, 0.2)",
         }}
-        whileHover={{ scale: 1.05 }}
+        whileHover={{ scale: 1.08 }}
         whileTap={{ scale: 0.95 }}
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
@@ -33,44 +35,77 @@ export function VisioChatBubble() {
           {isOpen ? (
             <motion.div
               key="close"
-              initial={{ rotate: -90, opacity: 0 }}
-              animate={{ rotate: 0, opacity: 1 }}
-              exit={{ rotate: 90, opacity: 0 }}
+              initial={{ rotate: -90, opacity: 0, scale: 0.5 }}
+              animate={{ rotate: 0, opacity: 1, scale: 1 }}
+              exit={{ rotate: 90, opacity: 0, scale: 0.5 }}
               transition={{ duration: 0.2 }}
+              className="flex items-center justify-center"
             >
-              <X className="w-6 h-6 md:w-7 md:h-7 text-background" />
+              <X className="w-7 h-7 text-gray-900" />
             </motion.div>
           ) : (
             <motion.div
-              key="chat"
-              initial={{ rotate: 90, opacity: 0 }}
-              animate={{ rotate: 0, opacity: 1 }}
-              exit={{ rotate: -90, opacity: 0 }}
-              transition={{ duration: 0.2 }}
+              key="robot"
+              initial={{ scale: 0.5, opacity: 0 }}
+              animate={{ 
+                scale: 1, 
+                opacity: 1,
+                y: [0, -3, 0]
+              }}
+              exit={{ scale: 0.5, opacity: 0 }}
+              transition={{ 
+                scale: { duration: 0.2 },
+                opacity: { duration: 0.2 },
+                y: { duration: 2, repeat: Infinity, ease: "easeInOut" }
+              }}
+              className="w-11 h-11 md:w-12 md:h-12"
             >
-              <MessageCircle className="w-6 h-6 md:w-7 md:h-7 text-background" />
+              <img 
+                src={visioRobot} 
+                alt="Visio" 
+                className="w-full h-full object-contain drop-shadow-md"
+              />
             </motion.div>
           )}
         </AnimatePresence>
 
         {/* Pulse animation when closed */}
         {!isOpen && (
-          <motion.span
-            className="absolute inset-0 rounded-full"
-            style={{
-              background: "linear-gradient(135deg, hsl(43 35% 67% / 0.4), hsl(40 28% 55% / 0.4))",
-            }}
-            initial={{ scale: 1, opacity: 0.5 }}
-            animate={{
-              scale: [1, 1.3, 1.3],
-              opacity: [0.5, 0, 0],
-            }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              ease: "easeOut",
-            }}
-          />
+          <>
+            <motion.span
+              className="absolute inset-0 rounded-full"
+              style={{
+                background: "linear-gradient(135deg, hsl(43 35% 67% / 0.3), hsl(40 28% 55% / 0.3))",
+              }}
+              initial={{ scale: 1, opacity: 0.5 }}
+              animate={{
+                scale: [1, 1.4, 1.4],
+                opacity: [0.5, 0, 0],
+              }}
+              transition={{
+                duration: 2.5,
+                repeat: Infinity,
+                ease: "easeOut",
+              }}
+            />
+            <motion.span
+              className="absolute inset-0 rounded-full"
+              style={{
+                background: "linear-gradient(135deg, hsl(43 35% 67% / 0.2), hsl(40 28% 55% / 0.2))",
+              }}
+              initial={{ scale: 1, opacity: 0.3 }}
+              animate={{
+                scale: [1, 1.6, 1.6],
+                opacity: [0.3, 0, 0],
+              }}
+              transition={{
+                duration: 2.5,
+                repeat: Infinity,
+                ease: "easeOut",
+                delay: 0.3,
+              }}
+            />
+          </>
         )}
       </motion.button>
     </>

@@ -1,10 +1,11 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
-import { Send, Bot, User, Loader2, Sparkles, ArrowRight } from "lucide-react";
+import { Send, User, Loader2, Sparkles, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import ReactMarkdown from "react-markdown";
 import { Link } from "react-router-dom";
+import visioRobot from "@/assets/visio-robot.png";
 
 interface CtaButton {
   label: string;
@@ -206,6 +207,12 @@ export function VisioChatWindow({ onClose }: VisioChatWindowProps) {
     }
   };
 
+  const suggestions = [
+    "Quels services proposez-vous ?",
+    "Combien coûte un site web ?",
+    "Quelle est la durée d'un projet ?",
+  ];
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20, scale: 0.95 }}
@@ -215,28 +222,38 @@ export function VisioChatWindow({ onClose }: VisioChatWindowProps) {
       className={cn(
         "fixed z-50 backdrop-blur-2xl bg-white border border-gray-200 shadow-[0_8px_32px_rgba(0,0,0,0.15)] overflow-hidden flex flex-col",
         // Desktop: floating window anchored to right
-        "md:bottom-24 md:right-6 md:left-auto md:top-auto md:w-[380px] md:h-[550px] md:max-h-[80vh] md:rounded-2xl",
+        "md:bottom-24 md:right-6 md:left-auto md:top-auto md:w-[400px] md:h-[580px] md:max-h-[80vh] md:rounded-2xl",
         // Mobile: anchored to right with max width
         "bottom-20 right-4 left-4 top-auto h-[70vh] max-h-[500px] rounded-2xl",
-        "sm:left-auto sm:w-[360px]"
+        "sm:left-auto sm:w-[380px]"
       )}
     >
       {/* Header */}
       <div
-        className="px-4 py-3 border-b border-gray-200 flex-shrink-0"
+        className="px-5 py-4 border-b border-gray-200 flex-shrink-0"
         style={{
           background: "linear-gradient(135deg, hsl(43 35% 67%), hsl(40 28% 55%))",
         }}
       >
         <div className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-full flex-shrink-0 flex items-center justify-center bg-white/20">
-            <Sparkles className="w-4 h-4 text-gray-900" />
-          </div>
+          <motion.div 
+            className="w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center bg-white/30 backdrop-blur-sm shadow-inner"
+            animate={{ 
+              y: [0, -2, 0],
+            }}
+            transition={{ 
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          >
+            <Sparkles className="w-5 h-5 text-gray-900" />
+          </motion.div>
           <div className="min-w-0 flex-1">
             <h3 className="font-display text-lg font-bold text-gray-900 truncate">
               Parler avec Visio
             </h3>
-            <p className="text-sm font-medium text-gray-800 line-clamp-2">
+            <p className="text-sm font-medium text-gray-800/90 line-clamp-2">
               Questions sur Nova Visio, les offres ou le fonctionnement du studio ?
             </p>
           </div>
@@ -245,70 +262,111 @@ export function VisioChatWindow({ onClose }: VisioChatWindowProps) {
 
       {/* Messages */}
       <div
-        className="flex-1 overflow-y-auto p-4 space-y-4 min-h-0 bg-gray-50"
+        className="flex-1 overflow-y-auto p-4 space-y-4 min-h-0 bg-gradient-to-b from-gray-50 to-white"
       >
         {messages.length === 0 && (
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-center py-8"
+            className="text-center py-6"
           >
-            <div
-              className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
-              style={{
-                background:
-                  "linear-gradient(135deg, hsl(43 35% 67%), hsl(40 28% 55%))",
+            {/* Robot mascot */}
+            <motion.div 
+              className="w-24 h-24 mx-auto mb-4"
+              animate={{ 
+                y: [0, -8, 0],
+                rotate: [0, 2, -2, 0]
+              }}
+              transition={{ 
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut"
               }}
             >
-              <Bot className="w-8 h-8 text-gray-900" />
-            </div>
-            <p className="text-gray-700 text-base font-medium mb-4">
+              <img 
+                src={visioRobot} 
+                alt="Visio" 
+                className="w-full h-full object-contain drop-shadow-lg"
+              />
+            </motion.div>
+
+            <motion.p 
+              className="text-gray-700 text-base font-medium mb-6"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+            >
               Bonjour ! Je suis <strong className="font-bold text-gray-900">Visio</strong>, l'assistant du studio Nova Visio.
               <br />
               Comment puis-je vous aider ?
-            </p>
-            <div className="flex flex-wrap justify-center gap-2">
-              {[
-                "Quels services proposez-vous ?",
-                "Combien coûte un site web ?",
-                "Quelle est la durée d'un projet ?",
-              ].map((suggestion) => (
-                <button
+            </motion.p>
+
+            {/* Suggestion buttons - improved visibility */}
+            <div className="flex flex-col gap-2.5 max-w-xs mx-auto">
+              {suggestions.map((suggestion, index) => (
+                <motion.button
                   key={suggestion}
                   onClick={() => streamChat(suggestion)}
-                  className="px-3 py-2 text-sm font-semibold rounded-full transition-colors hover:opacity-80"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.3 + index * 0.1 }}
+                  whileHover={{ scale: 1.02, x: 4 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="group relative px-4 py-3 text-sm font-semibold rounded-xl transition-all duration-300 text-left overflow-hidden"
                   style={{ 
-                    border: "1px solid #C3B68F",
-                    color: "#C3B68F"
+                    background: "linear-gradient(135deg, rgba(195, 182, 143, 0.15), rgba(195, 182, 143, 0.05))",
+                    border: "2px solid #C3B68F",
+                    color: "#8B7B4F"
                   }}
                 >
-                  {suggestion}
-                </button>
+                  {/* Hover background effect */}
+                  <motion.div 
+                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    style={{
+                      background: "linear-gradient(135deg, rgba(195, 182, 143, 0.3), rgba(195, 182, 143, 0.1))",
+                    }}
+                  />
+                  
+                  <span className="relative z-10 flex items-center justify-between">
+                    {suggestion}
+                    <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1" />
+                  </span>
+                </motion.button>
               ))}
             </div>
           </motion.div>
         )}
 
-        {messages.map((message) => (
+        {messages.map((message, msgIndex) => (
           <motion.div
             key={message.id}
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: msgIndex * 0.05 }}
             className={cn(
               "flex gap-3",
               message.role === "user" ? "justify-end" : "justify-start"
             )}
           >
             {message.role === "assistant" && (
-              <div
-                className="w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center"
-                style={{
-                  background:
-                    "linear-gradient(135deg, hsl(43 35% 67%), hsl(40 28% 55%))",
+              <motion.div
+                className="w-9 h-9 rounded-full flex-shrink-0 overflow-hidden bg-gray-100"
+                animate={{ 
+                  y: [0, -2, 0],
+                }}
+                transition={{ 
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: msgIndex * 0.2
                 }}
               >
-                <Bot className="w-4 h-4 text-gray-900" />
-              </div>
+                <img 
+                  src={visioRobot} 
+                  alt="Visio" 
+                  className="w-full h-full object-contain scale-125"
+                />
+              </motion.div>
             )}
 
             <div
@@ -339,7 +397,7 @@ export function VisioChatWindow({ onClose }: VisioChatWindowProps) {
                         ),
                         li: ({ children }) => <li className="mb-1 text-gray-800 text-base">{children}</li>,
                         strong: ({ children }) => (
-                          <strong className="font-bold text-base" style={{ color: "#C3B68F" }}>
+                          <strong className="font-bold text-base" style={{ color: "#8B7B4F" }}>
                             {children}
                           </strong>
                         ),
@@ -347,7 +405,7 @@ export function VisioChatWindow({ onClose }: VisioChatWindowProps) {
                           <a
                             href={href}
                             className="underline font-semibold"
-                            style={{ color: "#C3B68F" }}
+                            style={{ color: "#8B7B4F" }}
                             target="_blank"
                             rel="noopener noreferrer"
                           >
@@ -387,7 +445,7 @@ export function VisioChatWindow({ onClose }: VisioChatWindowProps) {
 
             {message.role === "user" && (
               <div 
-                className="w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center"
+                className="w-9 h-9 rounded-full flex-shrink-0 flex items-center justify-center shadow-sm"
                 style={{ background: "linear-gradient(135deg, #DCCB99, #C3B68F)" }}
               >
                 <User className="w-4 h-4 text-gray-900" />
@@ -402,17 +460,41 @@ export function VisioChatWindow({ onClose }: VisioChatWindowProps) {
             animate={{ opacity: 1, y: 0 }}
             className="flex gap-3 justify-start"
           >
-            <div
-              className="w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center"
-              style={{
-                background:
-                  "linear-gradient(135deg, hsl(43 35% 67%), hsl(40 28% 55%))",
+            <motion.div
+              className="w-9 h-9 rounded-full flex-shrink-0 overflow-hidden bg-gray-100"
+              animate={{ 
+                y: [0, -3, 0],
+              }}
+              transition={{ 
+                duration: 1,
+                repeat: Infinity,
+                ease: "easeInOut"
               }}
             >
-              <Bot className="w-4 h-4 text-gray-900" />
-            </div>
+              <img 
+                src={visioRobot} 
+                alt="Visio" 
+                className="w-full h-full object-contain scale-125"
+              />
+            </motion.div>
             <div className="bg-white rounded-2xl rounded-bl-md px-4 py-3 shadow-sm border border-gray-100">
-              <Loader2 className="w-4 h-4 animate-spin text-amber-600" />
+              <div className="flex gap-1.5">
+                {[0, 1, 2].map((i) => (
+                  <motion.span
+                    key={i}
+                    className="w-2 h-2 rounded-full bg-amber-500"
+                    animate={{ 
+                      y: [0, -4, 0],
+                      opacity: [0.5, 1, 0.5]
+                    }}
+                    transition={{ 
+                      duration: 0.6,
+                      repeat: Infinity,
+                      delay: i * 0.15
+                    }}
+                  />
+                ))}
+              </div>
             </div>
           </motion.div>
         )}
@@ -433,14 +515,14 @@ export function VisioChatWindow({ onClose }: VisioChatWindowProps) {
             onKeyDown={handleKeyDown}
             placeholder="Posez votre question..."
             rows={1}
-            className="flex-1 resize-none bg-gray-100 border border-gray-200 rounded-xl px-4 py-3 text-base font-medium text-gray-800 placeholder:text-gray-500 placeholder:font-normal focus:outline-none focus:ring-2 focus:ring-amber-500/50 focus:border-amber-500/50"
+            className="flex-1 resize-none bg-gray-100 border border-gray-200 rounded-xl px-4 py-3 text-base font-medium text-gray-800 placeholder:text-gray-500 placeholder:font-normal focus:outline-none focus:ring-2 focus:ring-amber-500/50 focus:border-amber-500/50 transition-all duration-200"
             disabled={isLoading}
           />
           <Button
             type="submit"
             variant="gold"
             size="icon"
-            className="h-12 w-12 rounded-xl"
+            className="h-12 w-12 rounded-xl shadow-md hover:shadow-lg transition-shadow"
             disabled={!input.trim() || isLoading}
           >
             {isLoading ? (
