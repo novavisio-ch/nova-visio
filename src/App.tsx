@@ -16,6 +16,7 @@ import Blog from "./pages/Blog";
 import BlogArticle5Erreurs from "./pages/BlogArticle5Erreurs";
 import BlogArticleClarifierOffre from "./pages/BlogArticleClarifierOffre";
 import BlogArticleCouleurs from "./pages/BlogArticleCouleurs";
+import MentionsLegales from "./pages/MentionsLegales";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -38,6 +39,7 @@ const App = () => (
           <Route path="/blog/5-erreurs-site-web" element={<BlogArticle5Erreurs />} />
           <Route path="/blog/clarifier-offre-avant-site-web" element={<BlogArticleClarifierOffre />} />
           <Route path="/blog/choisir-couleurs-marque" element={<BlogArticleCouleurs />} />
+          <Route path="/mentions-legales" element={<MentionsLegales />} />
           {/* Redirect old /services route to /site-web */}
           <Route path="/services" element={<SiteWeb />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

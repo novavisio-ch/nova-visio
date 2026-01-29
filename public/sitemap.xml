@@ -72,4 +72,12 @@
     <priority>0.8</priority>
   </url>
   
+  <!-- Mentions légales -->
+  <url>
+    <loc>https://nova-visio.lovable.app/mentions-legales</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
 </urlset>
