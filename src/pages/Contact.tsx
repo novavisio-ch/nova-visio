@@ -118,7 +118,7 @@ const Contact = () => {
               Parlons de votre <span className="text-gradient-gold">projet</span>
             </h1>
             <p className="text-sm sm:text-base md:text-body-lg text-muted-foreground leading-relaxed">
-              Un premier échange, sans engagement de votre part, est le meilleur moyen de débuter. Nous sommes là pour écouter et vous proposer des pistes concrètes.
+              Nous sommes là pour écouter et vous proposer des pistes concrètes.
             </p>
           </div>
         </div>
