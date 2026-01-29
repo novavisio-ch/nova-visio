@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Eye, Feather, Sparkles, Handshake, Target, Heart } from "lucide-react";
 import { motion } from "framer-motion";
 import { SkillsSection } from "@/components/about/SkillsSection";
+import { ClientLocationsSection } from "@/components/about/ClientLocationsSection";
 const values = [{
   icon: Sparkles,
   title: "Clarté",
@@ -206,6 +207,9 @@ const About = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Client Locations Section */}
+      <ClientLocationsSection />
 
       {/* Skills & Certifications Section */}
       <SkillsSection />
