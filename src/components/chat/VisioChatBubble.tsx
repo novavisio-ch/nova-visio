@@ -19,7 +19,7 @@ export function VisioChatBubble() {
       {/* Floating Bubble */}
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 right-6 z-50 w-16 h-16 md:w-18 md:h-18 rounded-full shadow-lg flex items-center justify-center overflow-hidden"
+        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 w-14 h-14 sm:w-16 sm:h-16 rounded-full shadow-lg flex items-center justify-center overflow-hidden"
         style={{
           background: "linear-gradient(135deg, hsl(43 35% 72%), hsl(40 28% 60%))",
           boxShadow: "0 4px 20px rgba(195, 182, 143, 0.4), 0 0 40px rgba(195, 182, 143, 0.2)",
@@ -41,7 +41,7 @@ export function VisioChatBubble() {
               transition={{ duration: 0.2 }}
               className="flex items-center justify-center"
             >
-              <X className="w-7 h-7 text-gray-900" />
+              <X className="w-6 h-6 sm:w-7 sm:h-7 text-gray-900" />
             </motion.div>
           ) : (
             <motion.div
@@ -58,7 +58,7 @@ export function VisioChatBubble() {
                 opacity: { duration: 0.2 },
                 y: { duration: 2, repeat: Infinity, ease: "easeInOut" }
               }}
-              className="w-11 h-11 md:w-12 md:h-12"
+              className="w-9 h-9 sm:w-11 sm:h-11"
             >
               <img 
                 src={visioRobot} 
