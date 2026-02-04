@@ -44,7 +44,7 @@ export function BrandIdentityHero() {
 
           {/* Main Title */}
           <h1
-            className="text-display-lg md:text-display-xl mb-8 animate-fade-up leading-tight"
+            className="text-2xl sm:text-3xl md:text-display-lg lg:text-display-xl mb-4 md:mb-8 animate-fade-up leading-tight"
             style={{ animationDelay: "0.1s" }}
           >
             Une identité visuelle claire pour{" "}
@@ -53,7 +53,7 @@ export function BrandIdentityHero() {
 
           {/* Intro Paragraph */}
           <p
-            className="text-body-lg text-muted-foreground max-w-3xl mx-auto mb-8 animate-fade-up leading-relaxed"
+            className="text-sm sm:text-base md:text-body-lg text-muted-foreground max-w-3xl mx-auto mb-6 md:mb-8 animate-fade-up leading-relaxed"
             style={{ animationDelay: "0.15s" }}
           >
             Nous créons des identités visuelles sur mesure : logo, couleurs, typographies et règles d'usage,
@@ -62,13 +62,13 @@ export function BrandIdentityHero() {
 
           {/* Bullet Points */}
           <ul
-            className="space-y-3 mb-10 animate-fade-up inline-block text-left"
+            className="space-y-2 md:space-y-3 mb-8 md:mb-10 animate-fade-up inline-block text-left"
             style={{ animationDelay: "0.2s" }}
           >
             {bulletPoints.map((point, index) => (
-              <li key={index} className="flex items-start gap-3">
-                <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                <span className="text-body-md text-muted-foreground">{point}</span>
+              <li key={index} className="flex items-start gap-2 md:gap-3">
+                <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-primary flex-shrink-0 mt-0.5" />
+                <span className="text-sm sm:text-base md:text-body-md text-muted-foreground">{point}</span>
               </li>
             ))}
           </ul>

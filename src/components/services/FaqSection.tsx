@@ -279,7 +279,7 @@ export const FaqSection = () => {
 
           {/* Title */}
           <h2
-            className="font-bricolage text-xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4"
+            className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-display-lg font-bold mb-3 md:mb-4"
             style={{ color: "#2D284D" }}
           >
             Des réponses à vos questions
@@ -288,7 +288,7 @@ export const FaqSection = () => {
           </h2>
           
           <p
-            className="max-w-2xl mx-auto text-xs md:text-lg"
+            className="max-w-2xl mx-auto text-sm sm:text-base md:text-lg"
             style={{ color: "rgba(45, 40, 77, 0.7)" }}
           >
             Une sélection de questions que l'on nous pose souvent avant de

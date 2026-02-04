@@ -458,7 +458,7 @@ const Tarifs = () => {
           }}>
               Nos tarifs
             </motion.span>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            <h1 className="font-display text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6">
               <motion.span initial={{
               opacity: 0,
               y: 20
@@ -489,7 +489,7 @@ const Tarifs = () => {
                 adaptées à vos besoins
               </motion.span>
             </h1>
-            <motion.p className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto" initial={{
+            <motion.p className="text-sm sm:text-base md:text-xl text-white/60 max-w-2xl mx-auto" initial={{
             opacity: 0
           }} animate={{
             opacity: 1
