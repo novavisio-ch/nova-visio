@@ -301,7 +301,7 @@ export const BrandStepsSection = () => {
       <div className="container max-w-5xl mx-auto px-4 relative z-10">
         {/* Header */}
         <motion.div
-          className="text-center mb-16 md:mb-20"
+          className="text-center mb-10 md:mb-20"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -309,7 +309,7 @@ export const BrandStepsSection = () => {
         >
           {/* Badge */}
           <motion.div
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6"
+            className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full mb-4 md:mb-6"
             style={{
               background: "linear-gradient(135deg, rgba(195, 182, 143, 0.1), rgba(195, 182, 143, 0.02))",
               border: "1px solid rgba(195, 182, 143, 0.2)",
@@ -319,15 +319,15 @@ export const BrandStepsSection = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            <Sparkles className="w-4 h-4" style={{ color: "#C3B68F" }} />
-            <span className="text-sm font-medium" style={{ color: "#C3B68F" }}>
+            <Sparkles className="w-3 h-3 md:w-4 md:h-4" style={{ color: "#C3B68F" }} />
+            <span className="text-xs md:text-sm font-medium" style={{ color: "#C3B68F" }}>
               Processus créatif
             </span>
           </motion.div>
 
           {/* Title */}
           <motion.h2
-            className="text-display-md md:text-display-lg text-white mb-6"
+            className="text-2xl sm:text-3xl md:text-display-lg text-white mb-4 md:mb-6"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -340,7 +340,7 @@ export const BrandStepsSection = () => {
 
           {/* Description */}
           <motion.p
-            className="text-body-lg text-white/60 max-w-2xl mx-auto leading-relaxed"
+            className="text-sm sm:text-base md:text-body-lg text-white/60 max-w-2xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

@@ -321,7 +321,7 @@ export const WebStepsSection = () => {
 
           {/* Title */}
           <motion.h2
-            className="text-xl md:text-display-lg text-white mb-4 md:mb-6"
+            className="text-2xl sm:text-3xl md:text-display-lg text-white mb-4 md:mb-6"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -334,7 +334,7 @@ export const WebStepsSection = () => {
 
           {/* Description */}
           <motion.p
-            className="text-sm md:text-body-lg text-white/60 max-w-2xl mx-auto leading-relaxed"
+            className="text-sm sm:text-base md:text-body-lg text-white/60 max-w-2xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

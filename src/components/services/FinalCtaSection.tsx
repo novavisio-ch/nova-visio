@@ -5,30 +5,23 @@ import { ArrowRight } from "lucide-react";
 export const FinalCtaSection = () => {
   return (
     <section
-      className="py-24 md:py-32"
+      className="py-16 md:py-24 lg:py-32 px-4"
       style={{
         background: "linear-gradient(135deg, #000000 0%, #1f1a3d 100%)",
       }}
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto">
         <div className="mx-auto max-w-3xl text-center">
           {/* Title */}
-          <h2 className="mb-6 font-bricolage text-3xl font-bold leading-tight text-white md:text-4xl lg:text-5xl">
+          <h2 className="mb-4 md:mb-6 font-display text-2xl sm:text-3xl md:text-display-lg lg:text-display-xl font-bold leading-tight text-white">
             Faites de votre présence en ligne un{" "}
-            <span
-              style={{
-                background: "linear-gradient(180deg, #DCCB99 0%, #C3B68F 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}
-            >
+            <span className="text-gradient-gold">
               catalyseur de croissance.
             </span>
           </h2>
 
           {/* Subtitle */}
-          <p className="mx-auto mb-10 max-w-2xl text-base leading-relaxed text-gray-300 md:text-lg">
+          <p className="mx-auto mb-8 md:mb-10 max-w-2xl text-sm sm:text-base md:text-lg leading-relaxed text-muted-foreground">
             Un site clair, une identité forte et des parcours bien pensés
             peuvent transformer votre activité. Le rôle de NOVA VISIO : vous
             aider à aligner tout cela, sans complexifier votre quotidien.
