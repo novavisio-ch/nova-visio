@@ -29,7 +29,7 @@ export default function MentionsLegales() {
                 <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
                   <li><span className="font-medium text-foreground">Nom / raison sociale :</span> Nova Visio</li>
                   <li><span className="font-medium text-foreground">Forme juridique :</span> Entreprise individuelle</li>
-                  <li><span className="font-medium text-foreground">Personne responsable :</span> …</li>
+                  
                   <li><span className="font-medium text-foreground">Adresse postale :</span>Adresse postale : </li>
                   <li><span className="font-medium text-foreground">Numéro de TVA :</span> Non assujetti à la TVA.</li>
                 </ul>
