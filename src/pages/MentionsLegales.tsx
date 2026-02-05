@@ -1,16 +1,18 @@
 import { Layout } from "@/components/layout/Layout";
 import { motion } from "framer-motion";
-
 export default function MentionsLegales() {
-  return (
-    <Layout>
+  return <Layout>
       <div className="min-h-screen bg-background py-16 md:py-24">
         <div className="container max-w-4xl px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} animate={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.6
+        }}>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-12 text-center">
               Mentions légales
             </h1>
@@ -28,7 +30,7 @@ export default function MentionsLegales() {
                   <li><span className="font-medium text-foreground">Nom / raison sociale :</span> Nova Visio</li>
                   <li><span className="font-medium text-foreground">Forme juridique :</span> Entreprise individuelle</li>
                   <li><span className="font-medium text-foreground">Personne responsable :</span> …</li>
-                  <li><span className="font-medium text-foreground">Adresse postale :</span> …</li>
+                  <li><span className="font-medium text-foreground">Adresse postale :</span>Adresse postale : 1226 Thônex - Suiss</li>
                   <li><span className="font-medium text-foreground">Numéro de TVA :</span> Non assujetti à la TVA.</li>
                 </ul>
               </section>
@@ -55,12 +57,7 @@ export default function MentionsLegales() {
                   <li><span className="font-medium text-foreground">Hébergeur :</span> GoDaddy.com, LLC</li>
                   <li><span className="font-medium text-foreground">Adresse :</span> 2155 E. GoDaddy Way, Tempe, AZ 85284, USA</li>
                   <li><span className="font-medium text-foreground">Site web :</span>{" "}
-                    <a 
-                      href="https://www.godaddy.com" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-primary hover:underline"
-                    >
+                    <a href="https://www.godaddy.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
                       https://www.godaddy.com
                     </a>
                   </li>
@@ -116,6 +113,5 @@ export default function MentionsLegales() {
           </motion.div>
         </div>
       </div>
-    </Layout>
-  );
+    </Layout>;
 }
