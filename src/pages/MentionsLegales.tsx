@@ -30,7 +30,7 @@ export default function MentionsLegales() {
                   <li><span className="font-medium text-foreground">Nom / raison sociale :</span> Nova Visio</li>
                   <li><span className="font-medium text-foreground">Forme juridique :</span> Entreprise individuelle</li>
                   
-                  <li><span className="font-medium text-foreground">Adresse postale :</span>Adresse postale : </li>
+                  <li><span className="font-medium text-foreground">Adresse postale :</span>Adresse postale : 1226 Thônex - Suisse</li>
                   <li><span className="font-medium text-foreground">Numéro de TVA :</span> Non assujetti à la TVA.</li>
                 </ul>
               </section>
