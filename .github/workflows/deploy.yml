@@ -1,4 +1,4 @@
-name: Deploy website to Hostinger
+name: Build and Deploy to Hostinger
 
 on:
   push:
@@ -6,31 +6,32 @@ on:
       - main
 
 jobs:
-  web-deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install Node
+      - name: Use Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
-      - name: Build site
+      - name: Build project
         run: npm run build
 
-      - name: Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+      - name: Deploy dist to Hostinger via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
+          protocol: ftp
           port: 21
-          local-dir: dist/
-          server-dir: /public_html/
+          local-dir: dist
+          server-dir: public_html
+          dangerous-clean-slate: true
