@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import blogSiteVitrineLanding from "@/assets/blog/site-vitrine-vs-landing-page.jpg";
 
 const blogPosts = [
   {
