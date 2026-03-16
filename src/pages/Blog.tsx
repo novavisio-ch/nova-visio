@@ -1,8 +1,18 @@
 import { Layout } from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { ArrowRight, Calendar } from "lucide-react";
+import blogSiteVitrineLanding from "@/assets/blog/site-vitrine-vs-landing-page.jpg";
 
 const blogPosts = [
+  {
+    id: 4,
+    slug: "site-vitrine-vs-landing-page",
+    tag: "Article",
+    title: "Site vitrine vs landing page : quel format choisir pour votre activité ?",
+    excerpt: "Nous comparons clairement les deux formats et vous aidons à faire le choix le plus adapté à votre activité.",
+    date: "2 Fév 2026",
+    image: blogSiteVitrineLanding,
+  },
   {
     id: 3,
     slug: "choisir-couleurs-marque",

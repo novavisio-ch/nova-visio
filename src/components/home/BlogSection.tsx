@@ -1,7 +1,16 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import blogSiteVitrineLanding from "@/assets/blog/site-vitrine-vs-landing-page.jpg";
 
 const blogPosts = [
+  {
+    id: 4,
+    slug: "/blog/site-vitrine-vs-landing-page",
+    tag: "Article",
+    title: "Site vitrine vs landing page : quel format choisir pour votre activité ?",
+    linkText: "Lire l'article",
+    image: blogSiteVitrineLanding,
+  },
   {
     id: 3,
     slug: "/blog/choisir-couleurs-marque",
@@ -17,14 +26,6 @@ const blogPosts = [
     title: "5 erreurs courantes qui plombent votre site web (et comment les éviter)",
     linkText: "Lire l'article",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&q=80",
-  },
-  {
-    id: 2,
-    slug: "/blog/clarifier-offre-avant-site-web",
-    tag: "Article",
-    title: "Clarifier votre offre avant de créer votre site web",
-    linkText: "Lire l'article",
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop&q=80",
   },
 ];
 
