@@ -13,8 +13,6 @@ import Autoplay from "embla-carousel-autoplay";
 import projectHobbyz from "@/assets/showcase/carousel-hobbyz.png";
 import projectSimplia from "@/assets/showcase/carousel-simplia.png";
 import projectSynergieGraphic from "@/assets/showcase/carousel-synergiegraphic.png";
-import projectKfServices from "@/assets/showcase/carousel-kfservices.png";
-
 const projects = [
   {
     image: projectHobbyz,
@@ -26,10 +24,6 @@ const projects = [
   },
   {
     image: projectSynergieGraphic,
-    label: "Site vitrine",
-  },
-  {
-    image: projectKfServices,
     label: "Site vitrine",
   },
 ];
