@@ -41,7 +41,7 @@ export default function MentionsLegales() {
                   2. Direction de la publication
                 </h2>
                 <p className="text-muted-foreground">
-                  Responsable de la publication : …, en qualité de propriétaire de Nova Visio.
+                  Responsable de la publication : le propriétaire de Nova Visio.
                 </p>
               </section>
 
@@ -54,11 +54,11 @@ export default function MentionsLegales() {
                   Le site est hébergé par :
                 </p>
                 <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
-                  <li><span className="font-medium text-foreground">Hébergeur :</span> Hostinger International Ltd.</li>
-                  <li><span className="font-medium text-foreground">Adresse :</span> 61 Lordou Vironos Street, 6023 Larnaca, Chypre</li>
+                  <li><span className="font-medium text-foreground">Hébergeur :</span> GoDaddy.com, LLC</li>
+                  <li><span className="font-medium text-foreground">Adresse :</span> 2155 E. GoDaddy Way, Tempe, AZ 85284, USA</li>
                   <li><span className="font-medium text-foreground">Site web :</span>{" "}
-                    <a href="https://www.hostinger.fr" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                      https://www.hostinger.fr
+                    <a href="https://www.godaddy.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                      https://www.godaddy.com
                     </a>
                   </li>
                 </ul>
