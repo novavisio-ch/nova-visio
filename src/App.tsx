@@ -16,6 +16,7 @@ import Blog from "./pages/Blog";
 import BlogArticle5Erreurs from "./pages/BlogArticle5Erreurs";
 import BlogArticleClarifierOffre from "./pages/BlogArticleClarifierOffre";
 import BlogArticleCouleurs from "./pages/BlogArticleCouleurs";
+import BlogArticleSiteVitrineLanding from "./pages/BlogArticleSiteVitrineLanding";
 import MentionsLegales from "./pages/MentionsLegales";
 import NotFound from "./pages/NotFound";
 
