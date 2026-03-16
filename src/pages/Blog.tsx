@@ -2,8 +2,18 @@ import { Layout } from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { ArrowRight, Calendar } from "lucide-react";
 import blogSiteVitrineLanding from "@/assets/blog/site-vitrine-vs-landing-page.jpg";
+import blogLogoIdentite from "@/assets/blog/logo-identite-visuelle.jpg";
 
 const blogPosts = [
+  {
+    id: 5,
+    slug: "logo-identite-visuelle",
+    tag: "Article",
+    title: "Pourquoi votre logo n'est pas \"juste un dessin\" : l'impact d'une bonne identité visuelle",
+    excerpt: "Un logo bien pensé influence directement la confiance, la perception de votre prix et la mémorisation de votre marque.",
+    date: "9 Mar 2026",
+    image: blogLogoIdentite,
+  },
   {
     id: 4,
     slug: "site-vitrine-vs-landing-page",

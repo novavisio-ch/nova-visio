@@ -1,8 +1,17 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import blogSiteVitrineLanding from "@/assets/blog/site-vitrine-vs-landing-page.jpg";
+import blogLogoIdentite from "@/assets/blog/logo-identite-visuelle.jpg";
 
 const blogPosts = [
+  {
+    id: 5,
+    slug: "/blog/logo-identite-visuelle",
+    tag: "Article",
+    title: "Pourquoi votre logo n'est pas \"juste un dessin\" : l'impact d'une bonne identité visuelle",
+    linkText: "Lire l'article",
+    image: blogLogoIdentite,
+  },
   {
     id: 4,
     slug: "/blog/site-vitrine-vs-landing-page",
@@ -18,14 +27,6 @@ const blogPosts = [
     title: "Comment choisir les couleurs de votre marque",
     linkText: "Lire l'article",
     image: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=600&h=400&fit=crop&q=80",
-  },
-  {
-    id: 1,
-    slug: "/blog/5-erreurs-site-web",
-    tag: "Article",
-    title: "5 erreurs courantes qui plombent votre site web (et comment les éviter)",
-    linkText: "Lire l'article",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&q=80",
   },
 ];
 

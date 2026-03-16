@@ -17,6 +17,7 @@ import BlogArticle5Erreurs from "./pages/BlogArticle5Erreurs";
 import BlogArticleClarifierOffre from "./pages/BlogArticleClarifierOffre";
 import BlogArticleCouleurs from "./pages/BlogArticleCouleurs";
 import BlogArticleSiteVitrineLanding from "./pages/BlogArticleSiteVitrineLanding";
+import BlogArticleLogoIdentite from "./pages/BlogArticleLogoIdentite";
 import MentionsLegales from "./pages/MentionsLegales";
 import NotFound from "./pages/NotFound";
 
