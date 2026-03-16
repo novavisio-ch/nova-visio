@@ -11,7 +11,7 @@ const blogPosts = [
     title: "Site vitrine vs landing page : quel format choisir pour votre activité ?",
     excerpt: "Nous comparons clairement les deux formats et vous aidons à faire le choix le plus adapté à votre activité.",
     date: "2 Fév 2026",
-    image: "/src/assets/blog/site-vitrine-vs-landing-page.jpg",
+    image: blogSiteVitrineLanding,
   },
   {
     id: 3,

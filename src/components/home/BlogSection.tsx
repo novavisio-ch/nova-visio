@@ -9,7 +9,7 @@ const blogPosts = [
     tag: "Article",
     title: "Site vitrine vs landing page : quel format choisir pour votre activité ?",
     linkText: "Lire l'article",
-    image: "/src/assets/blog/site-vitrine-vs-landing-page.jpg",
+    image: blogSiteVitrineLanding,
   },
   {
     id: 3,
