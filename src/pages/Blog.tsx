@@ -1,6 +1,7 @@
 import { Layout } from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { ArrowRight, Calendar } from "lucide-react";
+import blogSiteVitrineLanding from "@/assets/blog/site-vitrine-vs-landing-page.jpg";
 
 const blogPosts = [
   {
