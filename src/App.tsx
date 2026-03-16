@@ -42,6 +42,7 @@ const App = () => (
           <Route path="/blog/clarifier-offre-avant-site-web" element={<BlogArticleClarifierOffre />} />
           <Route path="/blog/choisir-couleurs-marque" element={<BlogArticleCouleurs />} />
           <Route path="/blog/site-vitrine-vs-landing-page" element={<BlogArticleSiteVitrineLanding />} />
+          <Route path="/blog/logo-identite-visuelle" element={<BlogArticleLogoIdentite />} />
           <Route path="/mentions-legales" element={<MentionsLegales />} />
           {/* Redirect old /services route to /site-web */}
           <Route path="/services" element={<SiteWeb />} />
