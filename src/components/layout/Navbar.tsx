@@ -4,6 +4,8 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import novavisioLogo from "@/assets/novavisio-logo.svg";
+import { ThemeToggle } from "@/components/ThemeToggle";
+import { useTheme } from "@/hooks/use-theme";
 import {
   DropdownMenu,
   DropdownMenuContent,
