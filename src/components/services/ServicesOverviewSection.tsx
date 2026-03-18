@@ -190,10 +190,10 @@ export const ServicesOverviewSection = () => {
                     </motion.span>
                     
                     {/* Icon */}
-                    <motion.div className={`
-                        transition-all duration-300
-                        ${isHovered ? "text-[#C3B68F]" : "text-gray-600"}
-                      `} animate={{
+                     <motion.div className={`
+                         transition-all duration-300
+                         ${isHovered ? "text-[#C3B68F]" : "text-muted-foreground"}
+                       `} animate={{
                   rotate: isHovered ? 12 : 0,
                   scale: isHovered ? 1.25 : 1
                 }} transition={{
