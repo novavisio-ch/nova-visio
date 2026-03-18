@@ -285,7 +285,7 @@ export function PackRefonteGlobale() {
                     transition={{ delay: i * 0.05 + 0.3 }}
                   >
                     <Check className="w-4 h-4 text-[#9D8DF0] mt-0.5 flex-shrink-0" />
-                    <span className="text-white/80 text-sm font-medium">{item}</span>
+                    <span className="text-foreground-medium text-sm font-medium">{item}</span>
                   </motion.li>
                 ))}
               </ul>
