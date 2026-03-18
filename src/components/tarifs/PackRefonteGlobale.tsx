@@ -214,7 +214,7 @@ export function PackRefonteGlobale() {
               borderColor: "rgba(124, 106, 232, 0.2)",
             }}
           >
-            <h4 className="font-display text-lg md:text-xl font-bold text-white mb-4 flex items-center gap-3">
+            <h4 className="font-display text-lg md:text-xl font-bold text-foreground mb-4 flex items-center gap-3">
               <Check className="w-5 h-5 text-[#9D8DF0]" />
               En résumé
             </h4>
