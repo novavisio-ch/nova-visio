@@ -204,7 +204,7 @@ const OfferCard = ({
           transition={{ duration: 0.5, delay: 0.3 + index * 0.2 }} 
           className="flex items-center gap-3 mb-4"
         >
-          <h3 className="text-3xl md:text-4xl font-display font-bold text-[#2D284D]">
+          <h3 className="text-3xl md:text-4xl font-display font-bold text-foreground">
             {title}
           </h3>
           <motion.span 
