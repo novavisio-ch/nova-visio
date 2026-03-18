@@ -210,7 +210,7 @@
 
 @layer utilities {
   .text-body {
-    color: hsl(0 0% 88%);
+    color: hsl(var(--text-body));
   }
 
   .animate-fade-up {

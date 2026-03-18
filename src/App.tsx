@@ -26,34 +26,36 @@ const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/site-web" element={<SiteWeb />} />
-          <Route path="/identite-visuelle" element={<IdentiteVisuelle />} />
-          <Route path="/tarifs" element={<Tarifs />} />
-          <Route path="/a-propos" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/5-erreurs-site-web" element={<BlogArticle5Erreurs />} />
-          <Route path="/blog/clarifier-offre-avant-site-web" element={<BlogArticleClarifierOffre />} />
-          <Route path="/blog/choisir-couleurs-marque" element={<BlogArticleCouleurs />} />
-          <Route path="/blog/site-vitrine-vs-landing-page" element={<BlogArticleSiteVitrineLanding />} />
-          <Route path="/blog/logo-identite-visuelle" element={<BlogArticleLogoIdentite />} />
-          <Route path="/mentions-legales" element={<MentionsLegales />} />
-          {/* Redirect old /services route to /site-web */}
-          <Route path="/services" element={<SiteWeb />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-        <VisioChatBubble />
-        <CookieConsent />
-      </BrowserRouter>
-    </TooltipProvider>
+    <ThemeProvider>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <ScrollToTop />
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/site-web" element={<SiteWeb />} />
+            <Route path="/identite-visuelle" element={<IdentiteVisuelle />} />
+            <Route path="/tarifs" element={<Tarifs />} />
+            <Route path="/a-propos" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/5-erreurs-site-web" element={<BlogArticle5Erreurs />} />
+            <Route path="/blog/clarifier-offre-avant-site-web" element={<BlogArticleClarifierOffre />} />
+            <Route path="/blog/choisir-couleurs-marque" element={<BlogArticleCouleurs />} />
+            <Route path="/blog/site-vitrine-vs-landing-page" element={<BlogArticleSiteVitrineLanding />} />
+            <Route path="/blog/logo-identite-visuelle" element={<BlogArticleLogoIdentite />} />
+            <Route path="/mentions-legales" element={<MentionsLegales />} />
+            {/* Redirect old /services route to /site-web */}
+            <Route path="/services" element={<SiteWeb />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+          <VisioChatBubble />
+          <CookieConsent />
+        </BrowserRouter>
+      </TooltipProvider>
+    </ThemeProvider>
   </QueryClientProvider>
 );
 
