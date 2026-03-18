@@ -17,43 +17,41 @@ const secondaryServices = [{
   description: "Nous mettons en place des boutiques en ligne adaptées à la taille de votre activité, avec un parcours d'achat lisible et des produits présentés de manière professionnelle."
 }];
 export const ComplementaryServicesSection = () => {
-  return <section className="py-20 md:py-28" style={{
-    background: "linear-gradient(135deg, #000000 0%, #1f1a3d 100%)"
-  }}>
+  return <section className="py-20 md:py-28 section-gradient-main">
       <div className="container mx-auto px-4 max-w-6xl">
         {/* Section Header */}
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             Services complémentaires.
           </h2>
-          <p className="text-lg text-white/70 max-w-2xl mx-auto">
+          <p className="text-lg text-foreground-medium max-w-2xl mx-auto">
             Des services additionnels pour renforcer votre image et compléter votre site web.
           </p>
         </div>
 
         {/* Main Card - Identité visuelle */}
-        <div className="group mb-10 md:mb-14 rounded-2xl border border-[#C3B68F]/40 bg-[#0a0f2c]/80 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_rgba(195,182,143,0.25)] hover:scale-[1.01]">
+        <div className="group mb-10 md:mb-14 rounded-2xl border border-[#C3B68F]/40 bg-card/80 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_rgba(195,182,143,0.25)] hover:scale-[1.01]">
           <div className="grid md:grid-cols-2 gap-0">
             {/* Text Content */}
-            <div className="p-8 md:p-10 lg:p-12 flex flex-col justify-center bg-white">
-              <h3 className="font-display text-2xl md:text-3xl font-bold text-[#1f1a3d] mb-4">
+            <div className="p-8 md:p-10 lg:p-12 flex flex-col justify-center section-white">
+              <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
                 Identité visuelle
               </h3>
-              <p className="text-[#1f1a3d]/80 mb-6 leading-relaxed">
+              <p className="text-foreground-medium mb-6 leading-relaxed">
                 Nous concevons ou faisons évoluer votre identité visuelle pour qu'elle soit claire, reconnaissable et cohérente sur votre site, vos réseaux sociaux et vos supports de communication.
               </p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#C3B68F] mt-2 flex-shrink-0" />
-                  <span className="text-[#1f1a3d]/70">Logo, palette de couleurs et typographies adaptés à votre univers.</span>
+                  <span className="text-foreground-medium">Logo, palette de couleurs et typographies adaptés à votre univers.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#C3B68F] mt-2 flex-shrink-0" />
-                  <span className="text-[#1f1a3d]/70">Charte graphique et règles d'usage pour garder la même image partout.</span>
+                  <span className="text-foreground-medium">Charte graphique et règles d'usage pour garder la même image partout.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#C3B68F] mt-2 flex-shrink-0" />
-                  <span className="text-[#1f1a3d]/70">Déclinaisons pour votre site, vos réseaux sociaux et vos supports imprimés.</span>
+                  <span className="text-foreground-medium">Déclinaisons pour votre site, vos réseaux sociaux et vos supports imprimés.</span>
                 </li>
               </ul>
               <a href="/identite-visuelle" className="inline-flex items-center gap-2 text-[#C3B68F] font-medium group/link hover:gap-3 transition-all duration-300">
@@ -62,7 +60,7 @@ export const ComplementaryServicesSection = () => {
               </a>
             </div>
             {/* Image */}
-            <div className="relative h-64 md:h-auto bg-white">
+            <div className="relative h-64 md:h-auto section-white">
               <img src={identityMockup} alt="Moodboard identité visuelle" className="absolute inset-0 w-full h-full object-cover" />
             </div>
           </div>
@@ -72,14 +70,14 @@ export const ComplementaryServicesSection = () => {
         <div className="grid md:grid-cols-3 gap-6">
           {secondaryServices.map(service => {
           const Icon = service.icon;
-          return <div key={service.id} className="group rounded-xl border border-[#C3B68F]/30 backdrop-blur-sm p-6 md:p-8 transition-all duration-300 hover:shadow-[0_0_25px_rgba(195,182,143,0.2)] hover:scale-[1.02] hover:border-[#C3B68F]/50" style={{ background: "linear-gradient(135deg, #000000 0%, #1f1a3d 100%)" }}>
+          return <div key={service.id} className="group rounded-xl border border-[#C3B68F]/30 backdrop-blur-sm p-6 md:p-8 transition-all duration-300 hover:shadow-[0_0_25px_rgba(195,182,143,0.2)] hover:scale-[1.02] hover:border-[#C3B68F]/50 section-gradient-main">
                 <div className="mb-5">
                   <Icon className="w-8 h-8 text-[#C3B68F]" />
                 </div>
-                <h4 className="font-display text-xl font-bold text-white mb-3">
+                <h4 className="font-display text-xl font-bold text-foreground mb-3">
                   {service.title}
                 </h4>
-                <p className="text-white/70 text-sm leading-relaxed">
+                <p className="text-foreground-medium text-sm leading-relaxed">
                   {service.description}
                 </p>
               </div>;
