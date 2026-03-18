@@ -23,7 +23,7 @@ export const WebCreationContent = () => {
 
           {/* Text Column - Right */}
           <div className="order-2 lg:order-2 space-y-6">
-            <h2 className="font-display text-3xl md:text-4xl lg:text-[2.5rem] font-bold leading-tight text-gray-900">
+            <h2 className="font-display text-3xl md:text-4xl lg:text-[2.5rem] font-bold leading-tight text-foreground">
               Un site web ne se limite pas au design : c'est un outil sur mesure pour faire grandir votre activité.
             </h2>
 
