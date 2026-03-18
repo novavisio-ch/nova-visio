@@ -6,7 +6,7 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
+  :root, .dark {
     /* Dark premium palette */
     --background: 0 0% 0%;
     --background-end: 249 40% 17%;
@@ -45,11 +45,55 @@
     --gold-dark: 40 28% 55%;
     --text-body: 0 0% 88%;
     --glass-bg: 252 30% 23%;
+
+    /* Theme-specific backgrounds */
+    --body-bg: linear-gradient(135deg, #000000 0%, #1F1A3D 100%);
+    --noise-opacity: 0.015;
   }
 
-  .dark {
-    --background: 0 0% 0%;
-    --foreground: 0 0% 94%;
+  .light {
+    /* Light harmonized palette – warm cream/beige tones */
+    --background: 40 20% 96%;
+    --background-end: 40 15% 92%;
+    --foreground: 249 40% 17%;
+
+    --card: 40 15% 94%;
+    --card-foreground: 249 40% 17%;
+
+    --popover: 40 15% 96%;
+    --popover-foreground: 249 40% 17%;
+
+    /* Gold accent – slightly deeper for contrast on light */
+    --primary: 40 35% 52%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 40 12% 90%;
+    --secondary-foreground: 249 40% 17%;
+
+    --muted: 40 10% 88%;
+    --muted-foreground: 249 20% 45%;
+
+    --accent: 40 35% 52%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 40 15% 82%;
+    --input: 40 12% 88%;
+    --ring: 40 35% 52%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --gold: 40 35% 52%;
+    --gold-dark: 38 30% 42%;
+    --text-body: 249 20% 30%;
+    --glass-bg: 40 15% 92%;
+
+    /* Theme-specific backgrounds */
+    --body-bg: linear-gradient(135deg, #F5F0E8 0%, #EDE6D8 50%, #E8E0D2 100%);
+    --noise-opacity: 0.02;
   }
 }
 
