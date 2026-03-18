@@ -585,11 +585,11 @@ const Tarifs = () => {
             ease: "linear"
           }} />
 
-            <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-4">
+            <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
               Vous avez un <span className="text-[#C3B68F]">projet</span> en tête ?
             </h3>
-            <p className="text-white/60 mb-8 max-w-lg mx-auto">
-              Discutons ensemble de vos besoins pour vous proposer une <strong className="text-white font-medium">solution adaptée</strong> à votre situation.
+            <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
+              Discutons ensemble de vos besoins pour vous proposer une <strong className="text-foreground font-medium">solution adaptée</strong> à votre situation.
             </p>
             <motion.div whileHover={{
             scale: 1.05
