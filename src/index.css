@@ -108,10 +108,15 @@
 
   body {
     @apply font-body text-body antialiased;
-    background: var(--body-bg);
+    background: linear-gradient(135deg, #000000 0%, #1F1A3D 100%);
     background-attachment: fixed;
     min-height: 100vh;
-    transition: background 0.5s ease;
+    transition: background 0.6s ease;
+  }
+
+  .light body,
+  body:is(.light *) {
+    background: linear-gradient(135deg, #F5F0E8 0%, #EDE6D8 50%, #E8E0D2 100%);
   }
 
   h1, h2, h3, h4, h5, h6 {
