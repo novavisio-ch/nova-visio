@@ -107,9 +107,9 @@ export const ServicesOverviewSection = () => {
           </motion.div>
           
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-            Nos services de{" "}
+             Nos services de{" "}
             <span className="relative">
-              <span className="text-gradient-gold">création web</span>
+              <span className="text-gradient-gold">création web.</span>
               <motion.span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-[#C3B68F] to-[#DCCB99] rounded-full" initial={{
               scaleX: 0
             }} whileInView={{

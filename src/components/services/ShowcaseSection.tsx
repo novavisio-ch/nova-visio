@@ -85,8 +85,8 @@ export const ShowcaseSection = () => {
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-display-md text-gray-900 mb-4">
-            Quelques projets réalisés par{" "}
-            <span className="text-gradient-gold">NOVA VISIO</span>
+             Quelques projets réalisés par{" "}
+            <span className="text-gradient-gold">NOVA VISIO.</span>
           </h2>
           <p className="text-body-md text-gray-600 max-w-2xl mx-auto">
             Sites web, pages de vente et interfaces d'applications conçus sur mesure pour nos clients.

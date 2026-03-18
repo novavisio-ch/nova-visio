@@ -486,7 +486,7 @@ const Tarifs = () => {
               WebkitTextFillColor: "transparent",
               backgroundClip: "text"
             }}>
-                adaptées à vos besoins
+                adaptées à vos besoins.
               </motion.span>
             </h1>
             <motion.p className="text-sm sm:text-base md:text-xl text-white/60 max-w-2xl mx-auto" initial={{
@@ -517,7 +517,7 @@ const Tarifs = () => {
             className="text-center mb-10 md:mb-12"
           >
             <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
-              Nos packs <span className="text-[#C3B68F]">tout-en-un</span>
+              Nos packs <span className="text-[#C3B68F]">tout-en-un.</span>
             </h2>
             <p className="text-white/50 max-w-xl mx-auto">
               Des offres <strong className="text-white font-medium">clé en main</strong> qui combinent plusieurs services pour un accompagnement <strong className="text-[#C3B68F] font-medium">complet</strong>.
@@ -547,7 +547,7 @@ const Tarifs = () => {
           duration: 0.6
         }} className="text-center mb-10 md:mb-12">
             <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
-              Services complémentaires
+              Services complémentaires.
             </h2>
             <p className="text-white/50 max-w-xl mx-auto">
               Des prestations additionnelles pour <strong className="text-white font-medium">compléter votre projet</strong> et renforcer votre image.

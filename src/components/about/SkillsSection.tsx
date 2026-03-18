@@ -238,7 +238,7 @@ export const SkillsSection = () => {
                 }}
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
               >
-                certifications
+                 certifications.
               </motion.span>
               <motion.span
                 className="absolute -bottom-3 left-0 right-0 h-1 rounded-full bg-gradient-to-r from-transparent via-[#C3B68F] to-transparent"

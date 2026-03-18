@@ -49,7 +49,7 @@ export function BenefitsSection() {
             transition={{ duration: 0.6 }}
           >
             <span className="text-slate-900">Vos </span>
-            <span className="text-accent">bénéfices</span>
+            <span className="text-accent">bénéfices.</span>
             
           </motion.h2>
           

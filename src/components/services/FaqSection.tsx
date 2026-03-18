@@ -282,9 +282,9 @@ export const FaqSection = () => {
             className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-display-lg font-bold mb-3 md:mb-4"
             style={{ color: "#2D284D" }}
           >
-            Des réponses à vos questions
+             Des réponses à vos questions
             <br />
-            <span className="text-gradient-gold">sur la création de site web</span>
+            <span className="text-gradient-gold">sur la création de site web.</span>
           </h2>
           
           <p
