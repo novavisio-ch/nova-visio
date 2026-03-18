@@ -62,7 +62,7 @@ const headerVariants: Variants = {
 
 export const BrandBenefitsSection = () => {
   return (
-    <section className="py-20 md:py-28 bg-gray-50">
+    <section className="py-20 md:py-28 bg-secondary">
       <div className="container max-w-5xl mx-auto px-4">
         {/* Header */}
         <motion.div 
