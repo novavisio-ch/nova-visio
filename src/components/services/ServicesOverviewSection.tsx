@@ -313,7 +313,7 @@ export const ServicesOverviewSection = () => {
                 </div>
                 
                 {/* CTA */}
-                <a href="/contact" className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full font-semibold text-sm text-gray-900 transition-all duration-300 hover:gap-3 hover:shadow-lg hover:shadow-[#C3B68F]/25 w-full" style={{
+                <a href="/contact" className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full font-semibold text-sm text-foreground transition-all duration-300 hover:gap-3 hover:shadow-lg hover:shadow-[#C3B68F]/25 w-full" style={{
                 background: "linear-gradient(135deg, #DCCB99 0%, #C3B68F 100%)"
               }}>
                   Discuter de votre projet
