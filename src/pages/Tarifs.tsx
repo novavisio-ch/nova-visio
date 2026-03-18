@@ -223,8 +223,7 @@ const ServiceCard = ({
           </Badge>
         </motion.div>}
       
-      <div className="relative h-full rounded-2xl border p-6 md:p-8 transition-all duration-500 overflow-hidden" style={{
-      background: "linear-gradient(180deg, rgba(15,15,20,0.95) 0%, rgba(10,10,15,0.98) 100%)",
+      <div className="relative h-full rounded-2xl border p-6 md:p-8 transition-all duration-500 overflow-hidden card-dark-surface" style={{
       borderColor: isGold ? "rgba(195, 182, 143, 0.3)" : "rgba(124, 106, 232, 0.3)"
     }}>
         {/* Floating particles */}
