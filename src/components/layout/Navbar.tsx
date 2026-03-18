@@ -283,9 +283,12 @@ export function Navbar() {
               Contact
             </Link>
 
-            <Button variant="gold" size="default" className="mt-3 sm:mt-4 w-full" asChild>
-              <Link to="/contact">Parlons de votre projet</Link>
-            </Button>
+            <div className="flex items-center justify-between mt-3 sm:mt-4 gap-3">
+              <ThemeToggle />
+              <Button variant="gold" size="default" className="flex-1" asChild>
+                <Link to="/contact">Parlons de votre projet</Link>
+              </Button>
+            </div>
           </div>
         </div>
       )}
