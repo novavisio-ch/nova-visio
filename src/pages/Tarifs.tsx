@@ -17,7 +17,7 @@ const mainServices = [{
   badge: "Best-seller",
   variant: "gold" as const,
   description: <>
-        Une présence en ligne <strong className="text-white font-semibold">sur-mesure</strong>, pensée pour vos objectifs, qui donne <strong className="text-[#C3B68F] font-medium">confiance à vos clients</strong>.
+        Une présence en ligne <strong className="text-foreground font-semibold">sur-mesure</strong>, pensée pour vos objectifs, qui donne <strong className="text-[#C3B68F] font-medium">confiance à vos clients</strong>.
       </>,
   features: [{
     text: "6 à 8 pages",
