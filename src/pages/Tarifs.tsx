@@ -487,7 +487,7 @@ const Tarifs = () => {
                 adaptées à vos besoins.
               </motion.span>
             </h1>
-            <motion.p className="text-sm sm:text-base md:text-xl text-white/60 max-w-2xl mx-auto" initial={{
+            <motion.p className="text-sm sm:text-base md:text-xl text-muted-foreground max-w-2xl mx-auto" initial={{
             opacity: 0
           }} animate={{
             opacity: 1
