@@ -158,8 +158,8 @@ export const BrandOfferSection = () => {
                 transition={{ duration: 0.6, delay: 0.45 }}
                 className="mb-8"
               >
-                <span className="text-sm" style={{ color: "#2D284D", opacity: 0.6 }}>
-                  dès
+                 <span className="text-sm text-muted-foreground">
+                   dès
                 </span>
                 <span
                   className="ml-2 text-4xl md:text-5xl font-display font-bold"
