@@ -27,7 +27,7 @@ export const WebCreationContent = () => {
               Un site web ne se limite pas au design : c'est un outil sur mesure pour faire grandir votre activité.
             </h2>
 
-            <div className="space-y-5 text-gray-700 font-body text-lg leading-relaxed">
+            <div className="space-y-5 text-muted-foreground font-body text-lg leading-relaxed">
               <p>
                 Un bon site ne sert pas seulement à "faire joli". Il doit aider vos visiteurs à comprendre qui vous êtes, ce que vous proposez et pourquoi ils devraient vous faire confiance, avec une esthétique qui vous ressemble vraiment.
               </p>

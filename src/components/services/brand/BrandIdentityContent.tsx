@@ -27,7 +27,7 @@ export const BrandIdentityContent = () => {
               Votre identité visuelle ne se résume pas à un logo.
             </h2>
 
-            <div className="space-y-5 text-gray-700 font-body text-lg leading-relaxed">
+            <div className="space-y-5 text-muted-foreground font-body text-lg leading-relaxed">
               <p>
                 Un logo seul ne suffit pas à créer une image de marque forte. Votre identité visuelle, 
                 c'est l'ensemble des éléments qui permettent à vos clients de vous reconnaître immédiatement, 

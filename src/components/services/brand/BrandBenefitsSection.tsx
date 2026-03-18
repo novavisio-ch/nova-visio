@@ -103,7 +103,7 @@ export const BrandBenefitsSection = () => {
                   <h3 className="font-display text-lg font-semibold text-foreground mb-1">
                     {benefit.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">{benefit.description}</p>
+                  <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
                 </div>
               </div>
             </motion.div>
