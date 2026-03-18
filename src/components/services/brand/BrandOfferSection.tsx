@@ -49,7 +49,7 @@ export const BrandOfferSection = () => {
            >
             Notre offre.
           </h2>
-          <p className="text-sm sm:text-base md:text-xl max-w-2xl mx-auto" style={{ color: "#2D284D", opacity: 0.7 }}>
+          <p className="text-sm sm:text-base md:text-xl max-w-2xl mx-auto text-muted-foreground">
             Un pack complet pour construire une identité
             <br className="hidden md:block" />
             <strong style={{ color: "#C3B68F" }}>unique et mémorable</strong>
