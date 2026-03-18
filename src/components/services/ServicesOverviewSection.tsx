@@ -275,7 +275,7 @@ export const ServicesOverviewSection = () => {
                     <span className="text-xs font-medium text-[#C3B68F] uppercase tracking-wider">En résumé</span>
                   </div>
                   
-                  <h3 className="font-display text-xl md:text-2xl font-bold text-white mb-3 leading-tight">
+                  <h3 className="font-display text-xl md:text-2xl font-bold text-background mb-3 leading-tight">
                     Un accompagnement complet,{" "}
                     <span className="text-[#C3B68F]">de la stratégie à la conversion</span>
                   </h3>
