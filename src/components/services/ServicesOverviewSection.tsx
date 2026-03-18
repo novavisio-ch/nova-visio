@@ -159,10 +159,10 @@ export const ServicesOverviewSection = () => {
             y: -8
           }}>
                 {/* Card background */}
-                <div className={`
-                    absolute inset-0 transition-all duration-500
-                    ${isHovered ? "bg-gray-900" : "bg-white border border-gray-100"}
-                  `} />
+                 <div className={`
+                     absolute inset-0 transition-all duration-500
+                     ${isHovered ? "bg-[hsl(var(--foreground))]" : "bg-card border border-border"}
+                   `} />
                 
                 {/* Gradient overlay on hover */}
                 <motion.div className={`absolute inset-0 bg-gradient-to-br ${service.gradient}`} initial={{
