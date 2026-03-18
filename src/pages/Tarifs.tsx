@@ -118,7 +118,7 @@ const complementaryServices = [{
   icon: FileText,
   title: "Blog & contenus",
   description: <>
-        Structuration de votre blog pour <strong className="text-white font-semibold">valoriser votre expertise</strong> et améliorer votre <strong className="text-[#C3B68F] font-medium">SEO</strong>.
+        Structuration de votre blog pour <strong className="text-foreground font-semibold">valoriser votre expertise</strong> et améliorer votre <strong className="text-[#C3B68F] font-medium">SEO</strong>.
       </>,
   price: "Sur devis"
 }, {
