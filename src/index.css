@@ -262,6 +262,10 @@
     --border: 60 5% 86%;
     --secondary: 60 5% 93%;
     --secondary-foreground: 249 40% 17%;
+    --text-body: 249 20% 30%;
+  }
+  .section-white .text-gradient-gold {
+    background-image: linear-gradient(135deg, hsl(38 40% 42%), hsl(35 35% 32%));
   }
   .light .section-white {
     background: hsl(60 5% 97%);
