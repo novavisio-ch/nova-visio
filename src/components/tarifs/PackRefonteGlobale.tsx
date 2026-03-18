@@ -100,9 +100,8 @@ export function PackRefonteGlobale() {
 
       {/* Main Pack Card */}
       <div
-        className="relative h-full rounded-3xl border overflow-hidden transition-all duration-500"
+        className="relative h-full rounded-3xl border overflow-hidden transition-all duration-500 card-dark-surface"
         style={{
-          background: "linear-gradient(180deg, rgba(15,15,20,0.95) 0%, rgba(10,10,15,0.98) 100%)",
           borderColor: "rgba(124, 106, 232, 0.3)",
         }}
       >
