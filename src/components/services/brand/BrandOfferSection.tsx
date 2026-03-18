@@ -99,7 +99,7 @@ export const BrandOfferSection = () => {
           </motion.div>
 
           <div
-            className="group relative flex flex-col md:flex-row gap-8 md:gap-12 items-stretch p-8 md:p-12 rounded-3xl border-2 bg-white transition-all duration-500 hover:shadow-[0_0_60px_-15px_#C3B68F]"
+            className="group relative flex flex-col md:flex-row gap-8 md:gap-12 items-stretch p-8 md:p-12 rounded-3xl border-2 bg-card transition-all duration-500 hover:shadow-[0_0_60px_-15px_#C3B68F]"
             style={{ borderColor: "#C3B68F" }}
           >
             {/* Left Column - Title and Description */}
