@@ -34,7 +34,7 @@ const itemVariants = {
 
 export const BrandOfferSection = () => {
   return (
-    <section className="py-20 md:py-28 bg-white overflow-hidden">
+    <section className="py-20 md:py-28 section-white overflow-hidden">
       <div className="container max-w-5xl mx-auto px-4">
         {/* Section Title */}
         <motion.div

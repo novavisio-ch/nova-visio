@@ -286,10 +286,9 @@ export const FaqSection = () => {
             <span className="text-gradient-gold">sur la création de site web.</span>
           </h2>
           
-          <p
-            className="max-w-2xl mx-auto text-sm sm:text-base md:text-lg"
-            style={{ color: "rgba(45, 40, 77, 0.7)" }}
-          >
+           <p
+             className="max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-muted-foreground"
+           >
             Une sélection de questions que l'on nous pose souvent avant de
             lancer un projet avec NOVA VISIO.
           </p>

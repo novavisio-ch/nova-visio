@@ -339,7 +339,7 @@ const OfferCard = ({
 export const WebOfferSection = () => {
   const isMobile = useIsTabletOrMobile();
 
-  return <section className="py-16 md:py-32 bg-white overflow-hidden">
+  return <section className="py-16 md:py-32 section-white overflow-hidden">
       <div className="container max-w-6xl mx-auto px-4">
         {/* Section Title */}
         <motion.div initial={{

@@ -88,7 +88,7 @@ export const ShowcaseSection = () => {
              Quelques projets réalisés par{" "}
             <span className="text-gradient-gold">NOVA VISIO.</span>
           </h2>
-          <p className="text-body-md text-gray-600 max-w-2xl mx-auto">
+          <p className="text-body-md text-muted-foreground max-w-2xl mx-auto">
             Sites web, pages de vente et interfaces d'applications conçus sur mesure pour nos clients.
           </p>
         </div>
