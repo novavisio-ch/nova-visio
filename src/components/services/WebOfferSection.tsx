@@ -237,7 +237,7 @@ const OfferCard = ({
             transition={{ duration: 0.5, delay: 0.5 + index * 0.2 }} 
             className="mb-6 relative"
           >
-            <span className="text-sm text-[#2D284D]/60">dès</span>
+            <span className="text-sm text-muted-foreground">dès</span>
             <motion.div 
               className="text-4xl md:text-5xl font-bold"
               style={{ color: accentColor }}
