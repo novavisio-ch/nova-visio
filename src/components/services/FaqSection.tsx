@@ -116,11 +116,11 @@ const FaqItem = ({ item, index, isOpen, onToggle, isMobile }: FaqItemProps) => {
         } : undefined}
         viewport={isMobile ? { once: true, margin: "-30px" } : undefined}
         transition={{ duration: 0.3 }}
-        style={{
-          background: isOpen 
-            ? "linear-gradient(135deg, rgba(255,255,255,0.98), rgba(195, 182, 143, 0.05))" 
-            : "rgba(255,255,255,0.6)",
-        }}
+         style={{
+           background: isOpen 
+             ? "linear-gradient(135deg, hsl(var(--card)), rgba(195, 182, 143, 0.05))" 
+             : "hsl(var(--card))",
+         }}
       >
         {/* Question button */}
         <button
