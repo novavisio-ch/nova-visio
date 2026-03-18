@@ -81,7 +81,7 @@ const mainServices = [{
   badge: "Sur-mesure",
   variant: "gold" as const,
   description: <>
-        Une identité visuelle <strong className="text-white font-semibold">complète et cohérente</strong> pour être <strong className="text-[#C3B68F] font-medium">reconnu et vous démarquer</strong>.
+        Une identité visuelle <strong className="text-foreground font-semibold">complète et cohérente</strong> pour être <strong className="text-[#C3B68F] font-medium">reconnu et vous démarquer</strong>.
       </>,
   features: [{
     text: "Logo sur-mesure +",
