@@ -16,8 +16,8 @@ export function HeroSection() {
           <h1 className="text-2xl sm:text-3xl md:text-display-lg lg:text-display-xl mb-4 md:mb-6 animate-fade-up leading-tight" style={{
           animationDelay: "0.1s"
         }}>
-            Nous créons votre site et votre image de marque pour vous aider à{" "}
-            <span className="text-gradient-gold">vendre + et simplement</span>.
+            Nous créons votre site et votre identité visuelle pour{" "}
+            <span className="text-gradient-gold">rendre vos ventes plus faciles</span>.
           </h1>
 
           <p className="max-w-2xl mx-auto mb-8 md:mb-10 animate-fade-up font-sans text-sm sm:text-base md:text-xl lg:text-2xl font-light text-white/90 leading-relaxed" style={{
