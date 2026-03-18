@@ -136,10 +136,10 @@ const FaqItem = ({ item, index, isOpen, onToggle, isMobile }: FaqItemProps) => {
           </motion.div>
 
           {/* Question text */}
-          <span
-            className="flex-1 font-bricolage text-sm md:text-lg font-medium transition-colors duration-300"
-            style={{ color: isOpen ? "#C3B68F" : "#2D284D" }}
-          >
+           <span
+             className="flex-1 font-bricolage text-sm md:text-lg font-medium transition-colors duration-300"
+             style={{ color: isOpen ? "#C3B68F" : "hsl(var(--foreground))" }}
+           >
             {item.question}
           </span>
 
