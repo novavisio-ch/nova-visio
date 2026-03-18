@@ -84,7 +84,7 @@ export const ShowcaseSection = () => {
       <div className="container">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-display-md text-gray-900 mb-4">
+          <h2 className="text-display-md text-foreground mb-4">
              Quelques projets réalisés par{" "}
             <span className="text-gradient-gold">NOVA VISIO.</span>
           </h2>
