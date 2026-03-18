@@ -396,9 +396,7 @@ const ComplementaryCard = ({
 const Tarifs = () => {
   return <Layout>
       {/* Hero Section */}
-      <section className="relative py-20 md:py-28 overflow-hidden" style={{
-      background: "linear-gradient(135deg, #0a0a0a 0%, #1f1a3d 50%, #0a0a0a 100%)"
-    }}>
+      <section className="relative py-20 md:py-28 overflow-hidden section-gradient-hero-alt">
         {/* Animated background decorations */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <motion.div className="absolute top-20 left-10 w-72 h-72 rounded-full blur-[120px] opacity-20" style={{
