@@ -198,10 +198,9 @@ const FaqItem = ({ item, index, isOpen, onToggle, isMobile }: FaqItemProps) => {
                     transition={{ duration: 0.4, delay: 0.2 }}
                   />
                   
-                  <p
-                    className="text-sm md:text-base leading-relaxed"
-                    style={{ color: "rgba(45, 40, 77, 0.8)" }}
-                  >
+                   <p
+                     className="text-sm md:text-base leading-relaxed text-muted-foreground"
+                   >
                     {item.answer}
                   </p>
                 </motion.div>
