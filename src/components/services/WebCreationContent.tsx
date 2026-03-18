@@ -5,7 +5,7 @@ import { LogosSection } from "@/components/home/LogosSection";
 
 export const WebCreationContent = () => {
   return (
-    <section className="bg-white py-20 lg:py-28">
+    <section className="bg-card py-20 lg:py-28">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Image Column - Left */}
@@ -23,11 +23,11 @@ export const WebCreationContent = () => {
 
           {/* Text Column - Right */}
           <div className="order-2 lg:order-2 space-y-6">
-            <h2 className="font-display text-3xl md:text-4xl lg:text-[2.5rem] font-bold leading-tight text-gray-900">
+            <h2 className="font-display text-3xl md:text-4xl lg:text-[2.5rem] font-bold leading-tight text-foreground">
               Un site web ne se limite pas au design : c'est un outil sur mesure pour faire grandir votre activité.
             </h2>
 
-            <div className="space-y-5 text-gray-700 font-body text-lg leading-relaxed">
+            <div className="space-y-5 text-muted-foreground font-body text-lg leading-relaxed">
               <p>
                 Un bon site ne sert pas seulement à "faire joli". Il doit aider vos visiteurs à comprendre qui vous êtes, ce que vous proposez et pourquoi ils devraient vous faire confiance, avec une esthétique qui vous ressemble vraiment.
               </p>

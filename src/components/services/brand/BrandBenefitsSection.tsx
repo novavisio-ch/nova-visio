@@ -62,7 +62,7 @@ const headerVariants: Variants = {
 
 export const BrandBenefitsSection = () => {
   return (
-    <section className="py-20 md:py-28 bg-gray-50">
+    <section className="py-20 md:py-28 bg-secondary">
       <div className="container max-w-5xl mx-auto px-4">
         {/* Header */}
         <motion.div 
@@ -72,11 +72,11 @@ export const BrandBenefitsSection = () => {
           viewport={{ once: true, margin: "-100px" }}
           variants={headerVariants}
         >
-          <h2 className="text-display-md text-gray-900 mb-4">
+          <h2 className="text-display-md text-foreground mb-4">
              Vos bénéfices avec une{" "}
             <span className="text-gradient-gold">identité visuelle claire.</span>
           </h2>
-          <p className="text-body-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-body-lg text-muted-foreground max-w-2xl mx-auto">
             Une identité visuelle professionnelle simplifie votre quotidien et renforce la perception de votre marque.
             <br className="hidden md:block" />
             {" "}
@@ -95,15 +95,15 @@ export const BrandBenefitsSection = () => {
             <motion.div
               key={index}
               variants={cardVariants}
-              className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md hover:border-[#C3B68F]/30 transition-all duration-300"
+              className="bg-card p-6 rounded-xl border border-border shadow-sm hover:shadow-md hover:border-[#C3B68F]/30 transition-all duration-300"
             >
               <div className="flex items-start gap-4">
                 <CheckCircle className="w-6 h-6 text-[#C3B68F] flex-shrink-0 mt-0.5" />
                 <div>
-                  <h3 className="font-display text-lg font-semibold text-gray-900 mb-1">
+                  <h3 className="font-display text-lg font-semibold text-foreground mb-1">
                     {benefit.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">{benefit.description}</p>
+                  <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
                 </div>
               </div>
             </motion.div>
