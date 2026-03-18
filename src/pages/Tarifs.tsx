@@ -300,8 +300,8 @@ const ServiceCard = ({
               <Check className="w-4 h-4 mt-0.5 flex-shrink-0" style={{
             color: isGold ? "#C3B68F" : "#9D8DF0"
           }} />
-              <span className="text-white/70 text-sm">
-                {feature.text} <strong className="text-white font-medium">{feature.highlight}</strong>
+              <span className="text-foreground-medium text-sm">
+                {feature.text} <strong className="text-foreground font-medium">{feature.highlight}</strong>
               </span>
             </motion.li>)}
         </ul>
