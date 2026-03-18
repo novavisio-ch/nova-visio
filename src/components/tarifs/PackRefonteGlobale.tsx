@@ -156,9 +156,9 @@ export function PackRefonteGlobale() {
             >
               Reprenez le contrôle de votre image
             </p>
-            <p className="text-white/60 max-w-2xl mx-auto text-base md:text-lg leading-relaxed mb-6">
-              Une refonte <strong className="text-white font-semibold">cohérente</strong> de votre identité visuelle et de votre site web pour{" "}
-              <strong className="text-[#9D8DF0] font-semibold">aligner votre image</strong> avec le niveau réel de votre activité.
+             <p className="text-muted-foreground max-w-2xl mx-auto text-base md:text-lg leading-relaxed mb-6">
+               Une refonte <strong className="text-foreground font-semibold">cohérente</strong> de votre identité visuelle et de votre site web pour{" "}
+               <strong className="text-[#9D8DF0] font-semibold">aligner votre image</strong> avec le niveau réel de votre activité.
             </p>
 
             {/* Price with animated underline */}
