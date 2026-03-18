@@ -208,6 +208,57 @@
   .container-narrow {
     @apply max-w-5xl mx-auto px-6;
   }
+
+  /* Theme-aware section backgrounds */
+  .section-gradient-main {
+    background: linear-gradient(135deg, #000000 0%, #1f1a3d 100%);
+  }
+  .light .section-gradient-main {
+    background: linear-gradient(135deg, #F5F0E8 0%, #EDE6D8 100%);
+  }
+
+  .section-gradient-steps {
+    background: linear-gradient(180deg, #0a0a12 0%, #1a1530 50%, #0a0a12 100%);
+  }
+  .light .section-gradient-steps {
+    background: linear-gradient(180deg, #F5F0E8 0%, #E8E0D2 50%, #F5F0E8 100%);
+  }
+
+  .section-gradient-hero-alt {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1f1a3d 50%, #0a0a0a 100%);
+  }
+  .light .section-gradient-hero-alt {
+    background: linear-gradient(135deg, #F5F0E8 0%, #EDE6D8 50%, #F5F0E8 100%);
+  }
+
+  .section-skills-bg {
+    background: radial-gradient(ellipse 80% 50% at 50% 0%, #1f1a3d 0%, #0a0a0f 100%);
+  }
+  .light .section-skills-bg {
+    background: radial-gradient(ellipse 80% 50% at 50% 0%, #E8E0D2 0%, #F5F0E8 100%);
+  }
+
+  .card-dark-surface {
+    background: linear-gradient(180deg, rgba(15,15,20,0.95) 0%, rgba(10,10,15,0.98) 100%);
+  }
+  .light .card-dark-surface {
+    background: linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(248,245,238,0.98) 100%);
+  }
+
+  .card-glass-surface {
+    background: linear-gradient(135deg, hsla(252, 30%, 18%, 0.7) 0%, hsla(252, 30%, 12%, 0.7) 100%);
+  }
+  .light .card-glass-surface {
+    background: linear-gradient(135deg, hsla(40, 20%, 96%, 0.9) 0%, hsla(40, 15%, 92%, 0.9) 100%);
+  }
+
+  /* White sections that should adapt to theme */
+  .section-white {
+    @apply bg-white;
+  }
+  .light .section-white {
+    background: hsl(40 15% 94%);
+  }
 }
 
 @layer utilities {
