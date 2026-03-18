@@ -95,7 +95,7 @@ export const BrandBenefitsSection = () => {
             <motion.div
               key={index}
               variants={cardVariants}
-              className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md hover:border-[#C3B68F]/30 transition-all duration-300"
+              className="bg-card p-6 rounded-xl border border-border shadow-sm hover:shadow-md hover:border-[#C3B68F]/30 transition-all duration-300"
             >
               <div className="flex items-start gap-4">
                 <CheckCircle className="w-6 h-6 text-[#C3B68F] flex-shrink-0 mt-0.5" />
