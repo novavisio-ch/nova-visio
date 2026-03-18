@@ -259,7 +259,21 @@
   .light .section-white {
     background: hsl(60 5% 97%);
   }
-}
+
+  /* Article card background */
+  .article-card {
+    @apply bg-card rounded-2xl shadow-lg;
+  }
+
+  /* Article callout boxes */
+  .article-callout {
+    @apply bg-secondary rounded-xl;
+  }
+
+  .article-recap {
+    background: linear-gradient(to bottom right, hsl(var(--secondary)), hsl(var(--muted)));
+    @apply rounded-xl;
+  }
 
 @layer utilities {
   .text-body {
