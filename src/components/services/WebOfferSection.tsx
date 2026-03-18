@@ -284,7 +284,7 @@ const OfferCard = ({
                 whileHover={!isMobile ? { scale: 1.2, rotate: 10 } : undefined}
                 transition={{ type: "spring", stiffness: 400 }}
               >
-                <CheckCircle className="w-4 h-4 text-[#2D284D]" />
+                <CheckCircle className="w-4 h-4 text-foreground" />
               </motion.div>
               <span className="text-sm leading-relaxed text-[#2D284D]/85">
                 {formatBenefit(benefit)}
