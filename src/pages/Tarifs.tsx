@@ -495,7 +495,7 @@ const Tarifs = () => {
             delay: 0.7,
             duration: 0.6
           }}>
-              Des prestations <strong className="text-white font-medium">sur-mesure</strong> pour renforcer votre <strong className="text-[#C3B68F] font-medium">présence en ligne</strong> et votre image de marque.
+              Des prestations <strong className="text-foreground font-medium">sur-mesure</strong> pour renforcer votre <strong className="text-[#C3B68F] font-medium">présence en ligne</strong> et votre image de marque.
             </motion.p>
           </motion.div>
 
