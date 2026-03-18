@@ -138,7 +138,7 @@ function ServiceCard({
       </h3>
 
       {/* Description */}
-      <p className="mb-4 md:mb-8 max-w-sm text-white text-sm sm:text-base md:text-display-sm text-center leading-relaxed">
+      <p className="mb-4 md:mb-8 max-w-sm text-foreground-medium text-sm sm:text-base md:text-display-sm text-center leading-relaxed">
         {description}
       </p>
 
