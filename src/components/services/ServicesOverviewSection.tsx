@@ -306,9 +306,9 @@ export const ServicesOverviewSection = () => {
                       <div className="font-display text-xl md:text-2xl font-bold text-[#C3B68F]">
                         {stat.value}
                       </div>
-                      <div className="text-xs text-gray-400">
-                        {stat.label}
-                      </div>
+                       <div className="text-xs text-background/60">
+                         {stat.label}
+                       </div>
                     </motion.div>)}
                 </div>
                 
