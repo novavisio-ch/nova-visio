@@ -486,7 +486,7 @@ const Tarifs = () => {
               WebkitTextFillColor: "transparent",
               backgroundClip: "text"
             }}>
-                adaptées à vos besoins
+                adaptées à vos besoins.
               </motion.span>
             </h1>
             <motion.p className="text-sm sm:text-base md:text-xl text-white/60 max-w-2xl mx-auto" initial={{
