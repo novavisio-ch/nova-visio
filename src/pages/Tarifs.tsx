@@ -142,7 +142,7 @@ const complementaryServices = [{
   icon: Printer,
   title: "Supports imprimés",
   description: <>
-        <strong className="text-white font-semibold">Cartes de visite</strong>, flyers, dépliants et documents de présentation <strong className="text-[#C3B68F] font-medium">professionnels</strong>.
+        <strong className="text-foreground font-semibold">Cartes de visite</strong>, flyers, dépliants et documents de présentation <strong className="text-[#C3B68F] font-medium">professionnels</strong>.
       </>,
   price: "Sur devis"
 }, {
