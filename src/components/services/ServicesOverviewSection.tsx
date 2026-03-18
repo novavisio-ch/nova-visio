@@ -106,7 +106,7 @@ export const ServicesOverviewSection = () => {
             <span className="text-sm font-medium text-[#C3B68F]">Nos expertises</span>
           </motion.div>
           
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
              Nos services de{" "}
             <span className="relative">
               <span className="text-gradient-gold">création web.</span>
