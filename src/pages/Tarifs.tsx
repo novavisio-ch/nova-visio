@@ -17,7 +17,7 @@ const mainServices = [{
   badge: "Best-seller",
   variant: "gold" as const,
   description: <>
-        Une présence en ligne <strong className="text-white font-semibold">sur-mesure</strong>, pensée pour vos objectifs, qui donne <strong className="text-[#C3B68F] font-medium">confiance à vos clients</strong>.
+        Une présence en ligne <strong className="text-foreground font-semibold">sur-mesure</strong>, pensée pour vos objectifs, qui donne <strong className="text-[#C3B68F] font-medium">confiance à vos clients</strong>.
       </>,
   features: [{
     text: "6 à 8 pages",
@@ -49,7 +49,7 @@ const mainServices = [{
   badge: "Starter",
   variant: "purple" as const,
   description: <>
-        Une page <strong className="text-white font-semibold">unique et percutante</strong>, conçue pour <strong className="text-[#9D8DF0] font-medium">convertir vos visiteurs</strong> en prospects.
+        Une page <strong className="text-foreground font-semibold">unique et percutante</strong>, conçue pour <strong className="text-[#9D8DF0] font-medium">convertir vos visiteurs</strong> en prospects.
       </>,
   features: [{
     text: "Page unique",
@@ -81,7 +81,7 @@ const mainServices = [{
   badge: "Sur-mesure",
   variant: "gold" as const,
   description: <>
-        Une identité visuelle <strong className="text-white font-semibold">complète et cohérente</strong> pour être <strong className="text-[#C3B68F] font-medium">reconnu et vous démarquer</strong>.
+        Une identité visuelle <strong className="text-foreground font-semibold">complète et cohérente</strong> pour être <strong className="text-[#C3B68F] font-medium">reconnu et vous démarquer</strong>.
       </>,
   features: [{
     text: "Logo sur-mesure +",
@@ -110,7 +110,7 @@ const complementaryServices = [{
   icon: Filter,
   title: "Tunnels de vente",
   description: <>
-        Parcours guidés depuis la <strong className="text-white font-semibold">découverte</strong> de votre offre jusqu'à <strong className="text-[#C3B68F] font-medium">l'action</strong>.
+        Parcours guidés depuis la <strong className="text-foreground font-semibold">découverte</strong> de votre offre jusqu'à <strong className="text-[#C3B68F] font-medium">l'action</strong>.
       </>,
   price: "Sur devis"
 }, {
@@ -118,7 +118,7 @@ const complementaryServices = [{
   icon: FileText,
   title: "Blog & contenus",
   description: <>
-        Structuration de votre blog pour <strong className="text-white font-semibold">valoriser votre expertise</strong> et améliorer votre <strong className="text-[#C3B68F] font-medium">SEO</strong>.
+        Structuration de votre blog pour <strong className="text-foreground font-semibold">valoriser votre expertise</strong> et améliorer votre <strong className="text-[#C3B68F] font-medium">SEO</strong>.
       </>,
   price: "Sur devis"
 }, {
@@ -126,7 +126,7 @@ const complementaryServices = [{
   icon: ShoppingBag,
   title: "Boutiques en ligne",
   description: <>
-        Boutiques <strong className="text-white font-semibold">e-commerce</strong> adaptées avec un <strong className="text-[#C3B68F] font-medium">parcours d'achat clair</strong>.
+        Boutiques <strong className="text-foreground font-semibold">e-commerce</strong> adaptées avec un <strong className="text-[#C3B68F] font-medium">parcours d'achat clair</strong>.
       </>,
   price: "Sur devis"
 }, {
@@ -142,7 +142,7 @@ const complementaryServices = [{
   icon: Printer,
   title: "Supports imprimés",
   description: <>
-        <strong className="text-white font-semibold">Cartes de visite</strong>, flyers, dépliants et documents de présentation <strong className="text-[#C3B68F] font-medium">professionnels</strong>.
+        <strong className="text-foreground font-semibold">Cartes de visite</strong>, flyers, dépliants et documents de présentation <strong className="text-[#C3B68F] font-medium">professionnels</strong>.
       </>,
   price: "Sur devis"
 }, {
@@ -150,7 +150,7 @@ const complementaryServices = [{
   icon: Package,
   title: "Brand kit digital",
   description: <>
-        Kit <strong className="text-white font-semibold">clé en main</strong> avec visuels, templates et <strong className="text-[#C3B68F] font-medium">guide d'utilisation</strong>.
+        Kit <strong className="text-foreground font-semibold">clé en main</strong> avec visuels, templates et <strong className="text-[#C3B68F] font-medium">guide d'utilisation</strong>.
       </>,
   price: "Sur devis"
 }];
@@ -223,8 +223,7 @@ const ServiceCard = ({
           </Badge>
         </motion.div>}
       
-      <div className="relative h-full rounded-2xl border p-6 md:p-8 transition-all duration-500 overflow-hidden" style={{
-      background: "linear-gradient(180deg, rgba(15,15,20,0.95) 0%, rgba(10,10,15,0.98) 100%)",
+      <div className="relative h-full rounded-2xl border p-6 md:p-8 transition-all duration-500 overflow-hidden card-dark-surface" style={{
       borderColor: isGold ? "rgba(195, 182, 143, 0.3)" : "rgba(124, 106, 232, 0.3)"
     }}>
         {/* Floating particles */}
@@ -257,10 +256,10 @@ const ServiceCard = ({
           }} />
           </motion.div>
           <div>
-            <h3 className="font-display text-xl md:text-2xl font-bold text-white">
+            <h3 className="font-display text-xl md:text-2xl font-bold text-foreground">
               {service.title}
             </h3>
-            <p className="text-sm text-white/50">{service.subtitle}</p>
+            <p className="text-sm text-muted-foreground">{service.subtitle}</p>
           </div>
         </div>
 
@@ -268,7 +267,7 @@ const ServiceCard = ({
         <motion.div className="mb-5 relative inline-block" whileHover={{
         scale: 1.02
       }}>
-          <span className="text-sm text-white/50">dès </span>
+          <span className="text-sm text-muted-foreground">dès </span>
           <span className="text-3xl md:text-4xl font-display font-bold" style={{
           background: isGold ? "linear-gradient(135deg, #C3B68F 0%, #DCCB99 50%, #a89860 100%)" : "linear-gradient(135deg, #9D8DF0 0%, #B8A9F5 50%, #7C6AE8 100%)",
           WebkitBackgroundClip: "text",
@@ -301,8 +300,8 @@ const ServiceCard = ({
               <Check className="w-4 h-4 mt-0.5 flex-shrink-0" style={{
             color: isGold ? "#C3B68F" : "#9D8DF0"
           }} />
-              <span className="text-white/70 text-sm">
-                {feature.text} <strong className="text-white font-medium">{feature.highlight}</strong>
+              <span className="text-foreground-medium text-sm">
+                {feature.text} <strong className="text-foreground font-medium">{feature.highlight}</strong>
               </span>
             </motion.li>)}
         </ul>
@@ -359,9 +358,7 @@ const ComplementaryCard = ({
   }} transition={{
     duration: 0.4,
     delay: index * 0.08
-  }} className="group rounded-xl border border-[#C3B68F]/20 p-5 md:p-6 transition-all duration-300 hover:border-[#C3B68F]/50 relative overflow-hidden" style={{
-    background: "linear-gradient(180deg, rgba(15,15,20,0.9) 0%, rgba(10,10,15,0.95) 100%)"
-  }}>
+  }} className="group rounded-xl border border-[#C3B68F]/20 p-5 md:p-6 transition-all duration-300 hover:border-[#C3B68F]/50 relative overflow-hidden card-dark-surface">
       {/* Hover gradient overlay */}
       <motion.div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" style={{
       background: "radial-gradient(circle at 30% 30%, rgba(195, 182, 143, 0.08) 0%, transparent 60%)"
@@ -379,14 +376,14 @@ const ComplementaryCard = ({
         </motion.div>
         <div className="flex-1">
           <div className="flex items-start justify-between gap-2 mb-2">
-            <h4 className="font-display text-lg font-semibold text-white group-hover:text-[#C3B68F] transition-colors duration-300">
+            <h4 className="font-display text-lg font-semibold text-foreground group-hover:text-[#C3B68F] transition-colors duration-300">
               {service.title}
             </h4>
             <span className="text-xs font-medium text-[#C3B68F]/80 whitespace-nowrap px-2 py-0.5 rounded-full border border-[#C3B68F]/30">
               {service.price}
             </span>
           </div>
-          <p className="text-white/50 text-sm leading-relaxed">
+          <p className="text-muted-foreground text-sm leading-relaxed">
             {service.description}
           </p>
         </div>
@@ -396,9 +393,7 @@ const ComplementaryCard = ({
 const Tarifs = () => {
   return <Layout>
       {/* Hero Section */}
-      <section className="relative py-20 md:py-28 overflow-hidden" style={{
-      background: "linear-gradient(135deg, #0a0a0a 0%, #1f1a3d 50%, #0a0a0a 100%)"
-    }}>
+      <section className="relative py-20 md:py-28 overflow-hidden section-gradient-hero-alt">
         {/* Animated background decorations */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <motion.div className="absolute top-20 left-10 w-72 h-72 rounded-full blur-[120px] opacity-20" style={{
@@ -458,7 +453,7 @@ const Tarifs = () => {
           }}>
               Nos tarifs
             </motion.span>
-            <h1 className="font-display text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6">
+            <h1 className="font-display text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 md:mb-6">
               <motion.span initial={{
               opacity: 0,
               y: 20
@@ -489,7 +484,7 @@ const Tarifs = () => {
                 adaptées à vos besoins.
               </motion.span>
             </h1>
-            <motion.p className="text-sm sm:text-base md:text-xl text-white/60 max-w-2xl mx-auto" initial={{
+            <motion.p className="text-sm sm:text-base md:text-xl text-muted-foreground max-w-2xl mx-auto" initial={{
             opacity: 0
           }} animate={{
             opacity: 1
@@ -497,7 +492,7 @@ const Tarifs = () => {
             delay: 0.7,
             duration: 0.6
           }}>
-              Des prestations <strong className="text-white font-medium">sur-mesure</strong> pour renforcer votre <strong className="text-[#C3B68F] font-medium">présence en ligne</strong> et votre image de marque.
+              Des prestations <strong className="text-foreground font-medium">sur-mesure</strong> pour renforcer votre <strong className="text-[#C3B68F] font-medium">présence en ligne</strong> et votre image de marque.
             </motion.p>
           </motion.div>
 
@@ -516,11 +511,11 @@ const Tarifs = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-10 md:mb-12"
           >
-            <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
+            <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4">
               Nos packs <span className="text-[#C3B68F]">tout-en-un.</span>
             </h2>
-            <p className="text-white/50 max-w-xl mx-auto">
-              Des offres <strong className="text-white font-medium">clé en main</strong> qui combinent plusieurs services pour un accompagnement <strong className="text-[#C3B68F] font-medium">complet</strong>.
+            <p className="text-muted-foreground max-w-xl mx-auto">
+              Des offres <strong className="text-foreground font-medium">clé en main</strong> qui combinent plusieurs services pour un accompagnement <strong className="text-[#C3B68F] font-medium">complet</strong>.
             </p>
           </motion.div>
 
@@ -546,11 +541,11 @@ const Tarifs = () => {
         }} transition={{
           duration: 0.6
         }} className="text-center mb-10 md:mb-12">
-            <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
+            <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4">
               Services complémentaires.
             </h2>
-            <p className="text-white/50 max-w-xl mx-auto">
-              Des prestations additionnelles pour <strong className="text-white font-medium">compléter votre projet</strong> et renforcer votre image.
+            <p className="text-muted-foreground max-w-xl mx-auto">
+              Des prestations additionnelles pour <strong className="text-foreground font-medium">compléter votre projet</strong> et renforcer votre image.
             </p>
           </motion.div>
 
@@ -587,11 +582,11 @@ const Tarifs = () => {
             ease: "linear"
           }} />
 
-            <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-4">
+            <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
               Vous avez un <span className="text-[#C3B68F]">projet</span> en tête ?
             </h3>
-            <p className="text-white/60 mb-8 max-w-lg mx-auto">
-              Discutons ensemble de vos besoins pour vous proposer une <strong className="text-white font-medium">solution adaptée</strong> à votre situation.
+            <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
+              Discutons ensemble de vos besoins pour vous proposer une <strong className="text-foreground font-medium">solution adaptée</strong> à votre situation.
             </p>
             <motion.div whileHover={{
             scale: 1.05

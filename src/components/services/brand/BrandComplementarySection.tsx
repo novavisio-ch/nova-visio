@@ -5,7 +5,7 @@ const services = [{
   icon: Layout,
   title: "Templates réseaux sociaux",
   description: <>
-        <strong className="text-white font-semibold">Posts, stories et bannières</strong> aux couleurs de votre marque, prêts à être personnalisés dans <strong className="text-[#C3B68F] font-medium">Canva ou Figma</strong>. Idéal pour garder une <strong className="text-white font-semibold">communication régulière et cohérente</strong> sans repartir de zéro.
+        <strong className="text-foreground font-semibold">Posts, stories et bannières</strong> aux couleurs de votre marque, prêts à être personnalisés dans <strong className="text-[#C3B68F] font-medium">Canva ou Figma</strong>. Idéal pour garder une <strong className="text-foreground font-semibold">communication régulière et cohérente</strong> sans repartir de zéro.
       </>,
   accentColor: "#C3B68F",
   delay: 0
@@ -14,7 +14,7 @@ const services = [{
   icon: Printer,
   title: "Supports imprimés",
   description: <>
-        <strong className="text-white font-semibold">Cartes de visite</strong> (design et impression) et supports papier essentiels : <strong className="text-[#9D8DF0] font-medium">flyers A5, dépliants A4, documents de présentation</strong>. Une <strong className="text-white font-semibold">expérience de marque cohérente</strong>, du web au physique.
+        <strong className="text-foreground font-semibold">Cartes de visite</strong> (design et impression) et supports papier essentiels : <strong className="text-[#9D8DF0] font-medium">flyers A5, dépliants A4, documents de présentation</strong>. Une <strong className="text-foreground font-semibold">expérience de marque cohérente</strong>, du web au physique.
       </>,
   accentColor: "#9D8DF0",
   delay: 0.1
@@ -23,7 +23,7 @@ const services = [{
   icon: Package,
   title: "Brand kit digital & contenus",
   description: <>
-        Photo de profil, bannières, templates de posts et stories, visuels de newsletter, réunis dans un <strong className="text-white font-semibold">kit clé en main</strong>. Avec un <strong className="text-[#C3B68F] font-medium">mini guide PDF</strong> et un <strong className="text-white font-semibold">accompagnement éditorial</strong> pour des textes alignés à votre identité.
+        Photo de profil, bannières, templates de posts et stories, visuels de newsletter, réunis dans un <strong className="text-foreground font-semibold">kit clé en main</strong>. Avec un <strong className="text-[#C3B68F] font-medium">mini guide PDF</strong> et un <strong className="text-foreground font-semibold">accompagnement éditorial</strong> pour des textes alignés à votre identité.
       </>,
   accentColor: "#C3B68F",
   delay: 0.2
@@ -31,9 +31,7 @@ const services = [{
 export const BrandComplementarySection = () => {
   return <section className="relative py-20 md:py-28 overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0" style={{
-      background: "linear-gradient(135deg, #000000 0%, #1f1a3d 100%)"
-    }} />
+      <div className="absolute inset-0 section-gradient-main" />
 
       {/* Decorative Grid */}
       <div className="absolute inset-0 opacity-[0.03]" style={{
@@ -96,7 +94,7 @@ export const BrandComplementarySection = () => {
             <span className="text-sm font-medium text-[#C3B68F]">Extensions disponibles</span>
           </motion.div>
 
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-5">
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-5">
              Services{" "}
             <span className="relative inline-block">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#C3B68F] via-[#DCCB99] to-[#C3B68F]">
@@ -114,7 +112,7 @@ export const BrandComplementarySection = () => {
             }} />
             </span>
           </h2>
-          <p className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             Des extensions pour exploiter pleinement votre nouvelle identité visuelle.
           </p>
         </motion.div>
@@ -146,16 +144,14 @@ export const BrandComplementarySection = () => {
             }} />
 
                 {/* Card */}
-                <div className="relative h-full rounded-2xl border border-white/10 backdrop-blur-xl p-6 md:p-8 transition-all duration-500 group-hover:border-[#C3B68F]/40 group-hover:translate-y-[-4px] group-hover:shadow-[0_20px_40px_-15px_rgba(195,182,143,0.3)]" style={{
-              background: "linear-gradient(135deg, hsla(252, 30%, 18%, 0.7) 0%, hsla(252, 30%, 12%, 0.7) 100%)"
-            }}>
+                <div className="relative h-full rounded-2xl border border-border/30 backdrop-blur-xl p-6 md:p-8 transition-all duration-500 group-hover:border-[#C3B68F]/40 group-hover:translate-y-[-4px] group-hover:shadow-[0_20px_40px_-15px_rgba(195,182,143,0.3)] card-glass-surface">
                   {/* Decorative Corner */}
                   <div className="absolute top-0 right-0 w-24 h-24 opacity-10 group-hover:opacity-20 transition-opacity duration-500" style={{
                 background: `radial-gradient(circle at top right, ${service.accentColor} 0%, transparent 70%)`
               }} />
 
                   {/* Large Number */}
-                  <motion.span className="absolute top-4 right-6 font-display text-7xl md:text-8xl font-bold text-white/[0.03] group-hover:text-white/[0.06] transition-all duration-500 select-none" initial={{
+                  <motion.span className="absolute top-4 right-6 font-display text-7xl md:text-8xl font-bold text-foreground/[0.03] group-hover:text-foreground/[0.06] transition-all duration-500 select-none" initial={{
                 opacity: 0,
                 x: 20
               }} whileInView={{
@@ -202,12 +198,12 @@ export const BrandComplementarySection = () => {
                   </motion.div>
 
                   {/* Title */}
-                  <h4 className="font-display text-xl md:text-2xl font-bold text-white mb-4 group-hover:text-[#C3B68F] transition-colors duration-300">
+                  <h4 className="font-display text-xl md:text-2xl font-bold text-foreground mb-4 group-hover:text-[#C3B68F] transition-colors duration-300">
                     {service.title}
                   </h4>
 
                   {/* Description */}
-                  <p className="text-white/60 text-sm md:text-base leading-relaxed group-hover:text-white/70 transition-colors duration-300">
+                  <p className="text-muted-foreground text-sm md:text-base leading-relaxed group-hover:text-foreground-medium transition-colors duration-300">
                     {service.description}
                   </p>
 
@@ -230,9 +226,6 @@ export const BrandComplementarySection = () => {
               </motion.div>;
         })}
         </div>
-
-        {/* Bottom Decorative Element */}
-        
       </div>
     </section>;
 };

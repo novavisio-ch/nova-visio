@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { MessageCircle, Search, Layers, Palette, Rocket, Sparkles, ArrowRight } from "lucide-react";
 import { useIsTabletOrMobile } from "@/hooks/use-mobile";
+import { useTheme } from "@/hooks/use-theme";
 
 const steps = [
   {
@@ -77,15 +78,24 @@ interface StepCardProps {
   onHover: () => void;
   onLeave: () => void;
   isMobile: boolean;
+  isDark: boolean;
 }
 
-const StepCard = ({ step, index, isActive, onHover, onLeave, isMobile }: StepCardProps) => {
+const StepCard = ({ step, index, isActive, onHover, onLeave, isMobile, isDark }: StepCardProps) => {
   const Icon = step.icon;
   const isEven = index % 2 === 0;
-  
-  // Desktop uses hover state, mobile uses whileInView
   const desktopActive = !isMobile && isActive;
   
+  const textDefault = isDark ? "#fff" : "hsl(249, 40%, 17%)";
+  const textMuted = isDark ? "rgba(255,255,255,0.6)" : "rgba(31,26,61,0.6)";
+  const textMutedHover = isDark ? "rgba(255,255,255,0.8)" : "rgba(31,26,61,0.8)";
+  const textSubtle = isDark ? "rgba(255,255,255,0.15)" : "rgba(31,26,61,0.15)";
+  const iconMuted = isDark ? "rgba(255,255,255,0.4)" : "rgba(31,26,61,0.4)";
+  const cardBg = isDark 
+    ? "linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%)"
+    : "linear-gradient(135deg, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0.01) 100%)";
+  const borderDefault = isDark ? "rgba(255,255,255,0.08)" : "rgba(0,0,0,0.08)";
+
   return (
     <motion.div
       variants={cardVariants}
@@ -94,7 +104,6 @@ const StepCard = ({ step, index, isActive, onHover, onLeave, isMobile }: StepCar
       onMouseLeave={!isMobile ? onLeave : undefined}
       style={{ perspective: "1000px" }}
     >
-      {/* Glow effect behind card */}
       <motion.div
         className="absolute -inset-4 rounded-3xl blur-2xl"
         style={{
@@ -109,7 +118,6 @@ const StepCard = ({ step, index, isActive, onHover, onLeave, isMobile }: StepCar
       />
 
       <div className="relative flex items-center gap-4 md:gap-10">
-        {/* Left: Large number without background - fixed width for alignment */}
         <motion.div
           className="flex-shrink-0 relative w-12 md:w-24 lg:w-28 flex items-center justify-center"
           whileHover={!isMobile ? { scale: 1.1 } : undefined}
@@ -117,7 +125,7 @@ const StepCard = ({ step, index, isActive, onHover, onLeave, isMobile }: StepCar
         >
           <motion.span
             className="font-display font-bold text-4xl md:text-7xl lg:text-8xl"
-            initial={{ color: "rgba(255,255,255,0.15)", textShadow: "none" }}
+            initial={{ color: textSubtle, textShadow: "none" }}
             whileInView={isMobile ? { 
               color: step.color, 
               textShadow: `0 0 40px ${step.color}50` 
@@ -126,7 +134,7 @@ const StepCard = ({ step, index, isActive, onHover, onLeave, isMobile }: StepCar
               color: step.color, 
               textShadow: `0 0 40px ${step.color}50` 
             } : (!isMobile ? { 
-              color: "rgba(255,255,255,0.15)", 
+              color: textSubtle, 
               textShadow: "none" 
             } : undefined)}
             viewport={isMobile ? { once: true, margin: "-50px" } : undefined}
@@ -136,13 +144,10 @@ const StepCard = ({ step, index, isActive, onHover, onLeave, isMobile }: StepCar
           </motion.span>
         </motion.div>
 
-        {/* Main card */}
         <motion.div
           className="flex-1 relative overflow-hidden rounded-xl md:rounded-2xl border backdrop-blur-sm"
-          style={{
-            background: "linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%)",
-          }}
-          initial={{ borderColor: "rgba(255,255,255,0.08)", boxShadow: "none" }}
+          style={{ background: cardBg }}
+          initial={{ borderColor: borderDefault, boxShadow: "none" }}
           whileInView={isMobile ? {
             borderColor: step.color,
             boxShadow: `0 15px 40px -15px ${step.color}30`,
@@ -156,7 +161,6 @@ const StepCard = ({ step, index, isActive, onHover, onLeave, isMobile }: StepCar
           viewport={isMobile ? { once: true, margin: "-50px" } : undefined}
           transition={{ duration: 0.4, ease: "easeOut" }}
         >
-          {/* Top gradient bar */}
           <motion.div
             className="absolute top-0 left-0 right-0 h-0.5 md:h-1"
             style={{
@@ -170,13 +174,12 @@ const StepCard = ({ step, index, isActive, onHover, onLeave, isMobile }: StepCar
           />
 
           <div className="p-4 md:p-8 flex items-center gap-4 md:gap-6 min-h-[80px] md:min-h-[140px]">
-            {/* Content */}
             <div className="flex-1">
               <motion.h3
                 className="text-base md:text-2xl font-display font-bold mb-1 md:mb-3"
-                initial={{ color: "#fff" }}
+                initial={{ color: textDefault }}
                 whileInView={isMobile ? { color: step.color } : undefined}
-                animate={desktopActive ? { color: step.color } : (!isMobile ? { color: "#fff" } : undefined)}
+                animate={desktopActive ? { color: step.color } : (!isMobile ? { color: textDefault } : undefined)}
                 viewport={isMobile ? { once: true, margin: "-50px" } : undefined}
                 transition={{ duration: 0.3 }}
               >
@@ -184,9 +187,9 @@ const StepCard = ({ step, index, isActive, onHover, onLeave, isMobile }: StepCar
               </motion.h3>
               <motion.p 
                 className="leading-relaxed text-xs md:text-lg line-clamp-2"
-                initial={{ color: "rgba(255,255,255,0.6)" }}
-                whileInView={isMobile ? { color: "rgba(255,255,255,0.8)" } : undefined}
-                whileHover={!isMobile ? { color: "rgba(255,255,255,0.8)" } : undefined}
+                initial={{ color: textMuted }}
+                whileInView={isMobile ? { color: textMutedHover } : undefined}
+                whileHover={!isMobile ? { color: textMutedHover } : undefined}
                 viewport={isMobile ? { once: true, margin: "-50px" } : undefined}
                 transition={{ duration: 0.3 }}
               >
@@ -194,7 +197,6 @@ const StepCard = ({ step, index, isActive, onHover, onLeave, isMobile }: StepCar
               </motion.p>
             </div>
 
-            {/* Right: Icon without background, animated */}
             <motion.div
               className="flex-shrink-0"
               initial={{ scale: 1 }}
@@ -205,9 +207,9 @@ const StepCard = ({ step, index, isActive, onHover, onLeave, isMobile }: StepCar
               transition={{ duration: 0.5, ease: "easeInOut" }}
             >
               <motion.div
-                initial={{ color: "rgba(255,255,255,0.4)" }}
+                initial={{ color: iconMuted }}
                 whileInView={isMobile ? { color: step.color } : undefined}
-                animate={desktopActive ? { color: step.color } : (!isMobile ? { color: "rgba(255,255,255,0.4)" } : undefined)}
+                animate={desktopActive ? { color: step.color } : (!isMobile ? { color: iconMuted } : undefined)}
                 viewport={isMobile ? { once: true, margin: "-50px" } : undefined}
                 transition={{ duration: 0.3 }}
               >
@@ -216,7 +218,6 @@ const StepCard = ({ step, index, isActive, onHover, onLeave, isMobile }: StepCar
             </motion.div>
           </div>
 
-          {/* Decorative corner elements */}
           <div
             className="absolute bottom-0 right-0 w-32 h-32 pointer-events-none opacity-20"
             style={{
@@ -226,7 +227,6 @@ const StepCard = ({ step, index, isActive, onHover, onLeave, isMobile }: StepCar
         </motion.div>
       </div>
 
-      {/* Connector line to next card */}
       {index < steps.length - 1 && (
         <motion.div
           className="absolute left-7 md:left-10 -bottom-6 md:-bottom-8 w-0.5 h-6 md:h-8"
@@ -246,15 +246,11 @@ const StepCard = ({ step, index, isActive, onHover, onLeave, isMobile }: StepCar
 export const WebStepsSection = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const isMobile = useIsTabletOrMobile();
+  const { theme } = useTheme();
+  const isDark = theme === "dark";
 
   return (
-    <section
-      className="py-20 md:py-32 relative overflow-hidden"
-      style={{
-        background: "linear-gradient(180deg, #0a0a12 0%, #1a1530 50%, #0a0a12 100%)",
-      }}
-    >
-      {/* Animated background grid */}
+    <section className="py-20 md:py-32 relative overflow-hidden section-gradient-steps">
       <div className="absolute inset-0 pointer-events-none opacity-30">
         <div
           className="absolute inset-0"
@@ -268,16 +264,12 @@ export const WebStepsSection = () => {
         />
       </div>
 
-      {/* Floating orbs */}
       <motion.div
         className="absolute top-20 left-10 w-64 h-64 rounded-full pointer-events-none"
         style={{
           background: "radial-gradient(circle, rgba(195, 182, 143, 0.08) 0%, transparent 60%)",
         }}
-        animate={{
-          y: [0, -30, 0],
-          scale: [1, 1.1, 1],
-        }}
+        animate={{ y: [0, -30, 0], scale: [1, 1.1, 1] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
@@ -285,15 +277,11 @@ export const WebStepsSection = () => {
         style={{
           background: "radial-gradient(circle, rgba(124, 106, 232, 0.08) 0%, transparent 60%)",
         }}
-        animate={{
-          y: [0, 30, 0],
-          scale: [1.1, 1, 1.1],
-        }}
+        animate={{ y: [0, 30, 0], scale: [1.1, 1, 1.1] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
       />
 
       <div className="container max-w-5xl mx-auto px-4 relative z-10">
-        {/* Header */}
         <motion.div
           className="text-center mb-10 md:mb-20"
           initial={{ opacity: 0, y: 30 }}
@@ -301,7 +289,6 @@ export const WebStepsSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          {/* Badge */}
           <motion.div
             className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full mb-4 md:mb-6"
             style={{
@@ -319,9 +306,8 @@ export const WebStepsSection = () => {
             </span>
           </motion.div>
 
-          {/* Title */}
           <motion.h2
-            className="text-2xl sm:text-3xl md:text-display-lg text-white mb-4 md:mb-6"
+            className="text-2xl sm:text-3xl md:text-display-lg text-foreground mb-4 md:mb-6"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -332,9 +318,8 @@ export const WebStepsSection = () => {
             <span className="text-gradient-gold"> votre site web.</span>
           </motion.h2>
 
-          {/* Description */}
           <motion.p
-            className="text-sm sm:text-base md:text-body-lg text-white/60 max-w-2xl mx-auto leading-relaxed"
+            className="text-sm sm:text-base md:text-body-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -345,7 +330,6 @@ export const WebStepsSection = () => {
           </motion.p>
         </motion.div>
 
-        {/* Steps Timeline */}
         <motion.div
           className="space-y-6 md:space-y-8"
           variants={containerVariants}
@@ -362,11 +346,11 @@ export const WebStepsSection = () => {
               onHover={() => setActiveIndex(index)}
               onLeave={() => setActiveIndex(null)}
               isMobile={isMobile}
+              isDark={isDark}
             />
           ))}
         </motion.div>
 
-        {/* Bottom CTA */}
         <motion.div
           className="mt-16 text-center"
           initial={{ opacity: 0, y: 20 }}
@@ -388,13 +372,10 @@ export const WebStepsSection = () => {
             <motion.div
               className="w-3 h-3 rounded-full"
               style={{ background: "#C3B68F" }}
-              animate={{
-                scale: [1, 1.2, 1],
-                opacity: [1, 0.7, 1],
-              }}
+              animate={{ scale: [1, 1.2, 1], opacity: [1, 0.7, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
             />
-            <span className="text-white/80 font-medium">
+            <span className="text-foreground-strong font-medium">
               Durée moyenne : <span style={{ color: "#C3B68F" }}>4 à 8 semaines</span>
             </span>
             <motion.div

@@ -1,5 +1,31 @@
 import { CheckCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useIsTabletOrMobile } from "@/hooks/use-mobile";
+
+interface Benefit {
+  text: string;
+  highlight: string;
+}
+
+const webBenefits: Benefit[] = [
+  { text: "Gagnez en crédibilité", highlight: "dès les premières secondes" },
+  { text: "Convertissez vos visiteurs", highlight: "en clients qualifiés" },
+  { text: "Présentez vos offres", highlight: "avec clarté et impact" },
+  { text: "Soyez visible sur Google", highlight: "grâce au référencement naturel" },
+  { text: "Modifiez votre contenu", highlight: "en toute autonomie" },
+  { text: "Un site rapide et fluide", highlight: "sur mobile comme sur ordinateur" },
+];
+
+const brandBenefits: Benefit[] = [
+  { text: "Soyez reconnu", highlight: "au premier coup d'œil" },
+  { text: "Inspirez confiance", highlight: "avant même de parler" },
+  { text: "Une image cohérente", highlight: "sur tous vos supports" },
+  { text: "Démarquez-vous", highlight: "de vos concurrents" },
+  { text: "Un logo professionnel", highlight: "déclinable partout" },
+  { text: "Une charte graphique", highlight: "simple à appliquer" },
+];
 
 const benefits = [
   {
@@ -37,7 +63,7 @@ const itemVariants = {
 };
 
 export function BenefitsSection() {
-  return <section className="bg-white py-12 md:py-20 lg:py-28 px-4">
+  return <section className="section-white py-12 md:py-20 lg:py-28 px-4">
       <div className="container max-w-6xl">
         <div className="text-left">
           {/* Title */}
@@ -48,14 +74,14 @@ export function BenefitsSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-slate-900">Vos </span>
+            <span className="text-foreground">Vos </span>
             <span className="text-accent">bénéfices.</span>
             
           </motion.h2>
           
           {/* Subtitle */}
           <motion.p 
-            className="text-sm sm:text-base md:text-xl lg:text-2xl text-slate-600 mb-6 md:mb-12 lg:mb-16 max-w-3xl leading-relaxed text-center mx-auto font-bold"
+            className="text-sm sm:text-base md:text-xl lg:text-2xl text-muted-foreground mb-6 md:mb-12 lg:mb-16 max-w-3xl leading-relaxed text-center mx-auto font-bold"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -81,8 +107,8 @@ export function BenefitsSection() {
                 <div className="flex-shrink-0 mt-0.5 md:mt-1">
                   <CheckCircle className="w-4 h-4 md:w-6 md:h-6 lg:w-7 lg:h-7 text-accent" strokeWidth={2} />
                 </div>
-                <p className="text-xs sm:text-sm md:text-lg lg:text-xl text-slate-800 leading-relaxed">
-                  {benefit.text}<span className="font-bold text-slate-900">{benefit.highlight}</span>{benefit.rest}
+                <p className="text-xs sm:text-sm md:text-lg lg:text-xl text-foreground-medium leading-relaxed">
+                  {benefit.text}<span className="font-bold text-foreground">{benefit.highlight}</span>{benefit.rest}
                 </p>
               </motion.div>
             ))}
