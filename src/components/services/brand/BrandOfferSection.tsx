@@ -44,10 +44,9 @@ export const BrandOfferSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12 md:mb-16"
         >
-          <h2
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-display-lg font-display font-bold mb-4"
-            style={{ color: "#2D284D" }}
-          >
+           <h2
+             className="text-2xl sm:text-3xl md:text-4xl lg:text-display-lg font-display font-bold mb-4 text-foreground"
+           >
             Notre offre.
           </h2>
           <p className="text-sm sm:text-base md:text-xl max-w-2xl mx-auto" style={{ color: "#2D284D", opacity: 0.7 }}>
