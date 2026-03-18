@@ -256,10 +256,10 @@ const ServiceCard = ({
           }} />
           </motion.div>
           <div>
-            <h3 className="font-display text-xl md:text-2xl font-bold text-white">
+            <h3 className="font-display text-xl md:text-2xl font-bold text-foreground">
               {service.title}
             </h3>
-            <p className="text-sm text-white/50">{service.subtitle}</p>
+            <p className="text-sm text-muted-foreground">{service.subtitle}</p>
           </div>
         </div>
 
