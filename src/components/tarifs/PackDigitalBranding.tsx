@@ -41,34 +41,17 @@ export function PackDigitalBranding() {
   const isMobile = useIsMobile();
   
   const cardVariants = {
-    hidden: {
-      opacity: 0,
-      y: 40,
-      rotateX: 15,
-    },
+    hidden: { opacity: 0, y: 40, rotateX: 15 },
     visible: {
-      opacity: 1,
-      y: 0,
-      rotateX: 0,
-      transition: {
-        duration: 0.6,
-        ease: [0.25, 0.46, 0.45, 0.94] as const,
-      },
+      opacity: 1, y: 0, rotateX: 0,
+      transition: { duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] as const },
     },
   };
 
-  const hoverVariants = isMobile
-    ? {}
-    : {
-        y: -8,
-        boxShadow: "0 20px 60px -15px rgba(195, 182, 143, 0.4), 0 0 40px rgba(195, 182, 143, 0.15)",
-      };
-
-  const inViewVariants = isMobile
-    ? {
-        boxShadow: "0 15px 40px -10px rgba(195, 182, 143, 0.3)",
-      }
-    : {};
+  const hoverVariants = isMobile ? {} : {
+    y: -8,
+    boxShadow: "0 20px 60px -15px rgba(195, 182, 143, 0.4), 0 0 40px rgba(195, 182, 143, 0.15)",
+  };
 
   return (
     <motion.div
@@ -80,23 +63,16 @@ export function PackDigitalBranding() {
       className="relative group"
       style={{ perspective: "1000px" }}
     >
-      {/* Animated border glow */}
       <motion.div
         className="absolute -inset-[1px] rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
         style={{
           background: "linear-gradient(135deg, #C3B68F 0%, transparent 50%, #9D8DF0 100%)",
           backgroundSize: "200% 200%",
         }}
-        animate={isMobile ? inViewVariants : {}}
       />
 
-      {/* Main Pack Card */}
-      <div
-        className="relative h-full rounded-3xl border overflow-hidden transition-all duration-500"
-        style={{
-          background: "linear-gradient(180deg, rgba(15,15,20,0.95) 0%, rgba(10,10,15,0.98) 100%)",
-          borderColor: "rgba(195, 182, 143, 0.3)",
-        }}
+      <div className="relative h-full rounded-3xl border overflow-hidden transition-all duration-500 card-dark-surface"
+        style={{ borderColor: "rgba(195, 182, 143, 0.3)" }}
       >
         {/* Floating particles */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -109,15 +85,8 @@ export function PackDigitalBranding() {
                 left: `${20 + i * 30}%`,
                 top: `${30 + i * 20}%`,
               }}
-              animate={{
-                y: [0, -20, 0],
-                opacity: [0.2, 0.6, 0.2],
-              }}
-              transition={{
-                duration: 3 + i,
-                repeat: Infinity,
-                delay: i * 0.5,
-              }}
+              animate={{ y: [0, -20, 0], opacity: [0.2, 0.6, 0.2] }}
+              transition={{ duration: 3 + i, repeat: Infinity, delay: i * 0.5 }}
             />
           ))}
         </div>
@@ -126,26 +95,19 @@ export function PackDigitalBranding() {
           {/* Header */}
           <div className="text-center mb-8 md:mb-10">
             <div className="flex items-center justify-center gap-4 mb-6">
-              <motion.div
-                whileHover={{ scale: 1.15, rotate: 5 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
+              <motion.div whileHover={{ scale: 1.15, rotate: 5 }} transition={{ type: "spring", stiffness: 300 }}>
                 <Palette className="w-8 h-8 text-[#C3B68F] transition-all duration-300 group-hover:drop-shadow-[0_0_12px_rgba(195,182,143,0.5)]" />
               </motion.div>
-              <span className="text-2xl text-white/30">+</span>
-              <motion.div
-                whileHover={{ scale: 1.15, rotate: -5 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
+              <span className="text-2xl text-muted-foreground">+</span>
+              <motion.div whileHover={{ scale: 1.15, rotate: -5 }} transition={{ type: "spring", stiffness: 300 }}>
                 <Monitor className="w-8 h-8 text-[#9D8DF0] transition-all duration-300 group-hover:drop-shadow-[0_0_12px_rgba(124,106,232,0.5)]" />
               </motion.div>
             </div>
 
-            <h3 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3">
+            <h3 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-3">
               Pack Digital & Branding
             </h3>
-            <p
-              className="text-xl md:text-2xl font-bold mb-4"
+            <p className="text-xl md:text-2xl font-bold mb-4"
               style={{
                 background: "linear-gradient(135deg, #C3B68F 0%, #9D8DF0 100%)",
                 WebkitBackgroundClip: "text",
@@ -155,16 +117,14 @@ export function PackDigitalBranding() {
             >
               Identité de marque & site vitrine
             </p>
-            <p className="text-white/60 max-w-2xl mx-auto text-base md:text-lg leading-relaxed mb-6">
-              Une identité visuelle <strong className="text-white font-semibold">sur-mesure</strong> et un site vitrine complet de{" "}
+            <p className="text-muted-foreground max-w-2xl mx-auto text-base md:text-lg leading-relaxed mb-6">
+              Une identité visuelle <strong className="text-foreground font-semibold">sur-mesure</strong> et un site vitrine complet de{" "}
               <strong className="text-[#C3B68F] font-semibold">6 à 8 pages</strong>, conçus ensemble pour une présence en ligne{" "}
-              <strong className="text-white font-semibold">cohérente et professionnelle</strong>.
+              <strong className="text-foreground font-semibold">cohérente et professionnelle</strong>.
             </p>
 
-            {/* Price with animated underline */}
             <motion.div className="inline-block" whileHover={{ scale: 1.02 }}>
-              <span
-                className="text-4xl md:text-5xl font-display font-bold"
+              <span className="text-4xl md:text-5xl font-display font-bold"
                 style={{
                   background: "linear-gradient(135deg, #C3B68F 0%, #DCCB99 50%, #a89860 100%)",
                   WebkitBackgroundClip: "text",
@@ -179,7 +139,7 @@ export function PackDigitalBranding() {
 
           {/* Target Audience */}
           <div className="mb-8 md:mb-10">
-            <h4 className="font-display text-lg md:text-xl font-bold text-white mb-5 flex items-center gap-3">
+            <h4 className="font-display text-lg md:text-xl font-bold text-foreground mb-5 flex items-center gap-3">
               <Star className="w-5 h-5 text-[#C3B68F]" />
               À qui s'adresse ce pack ?
             </h4>
@@ -198,7 +158,7 @@ export function PackDigitalBranding() {
                     style={{ background: "rgba(195, 182, 143, 0.03)" }}
                   >
                     <Icon className="w-6 h-6 text-[#C3B68F] mb-3" />
-                    <p className="text-white/70 text-sm leading-relaxed">{item.text}</p>
+                    <p className="text-foreground-medium text-sm leading-relaxed">{item.text}</p>
                   </motion.div>
                 );
               })}
@@ -207,13 +167,12 @@ export function PackDigitalBranding() {
 
           {/* What you get - Two columns */}
           <div className="mb-8 md:mb-10">
-            <h4 className="font-display text-lg md:text-xl font-bold text-white mb-5 flex items-center gap-3">
+            <h4 className="font-display text-lg md:text-xl font-bold text-foreground mb-5 flex items-center gap-3">
               <Package className="w-5 h-5 text-[#C3B68F]" />
               Ce que vous obtenez
             </h4>
 
             <div className="grid md:grid-cols-2 gap-4 md:gap-6">
-              {/* Branding Section */}
               <motion.div
                 whileHover={{ y: -4, boxShadow: "0 15px 40px -10px rgba(195, 182, 143, 0.2)" }}
                 className="p-5 md:p-6 rounded-xl border border-[#C3B68F]/30 hover:border-[#C3B68F]/50 transition-colors duration-300"
@@ -225,22 +184,19 @@ export function PackDigitalBranding() {
                 </div>
                 <ul className="space-y-2.5">
                   {brandingHighlights.map((item, i) => (
-                    <motion.li
-                      key={i}
-                      className="flex items-start gap-2.5"
+                    <motion.li key={i} className="flex items-start gap-2.5"
                       initial={{ opacity: 0, x: -10 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: i * 0.05 + 0.3 }}
                     >
                       <Check className="w-4 h-4 text-[#C3B68F] mt-0.5 flex-shrink-0" />
-                      <span className="text-white/80 text-sm font-medium">{item}</span>
+                      <span className="text-foreground-strong text-sm font-medium">{item}</span>
                     </motion.li>
                   ))}
                 </ul>
               </motion.div>
 
-              {/* Web Section */}
               <motion.div
                 whileHover={{ y: -4, boxShadow: "0 15px 40px -10px rgba(124, 106, 232, 0.2)" }}
                 className="p-5 md:p-6 rounded-xl border border-[#9D8DF0]/30 hover:border-[#9D8DF0]/50 transition-colors duration-300"
@@ -252,16 +208,14 @@ export function PackDigitalBranding() {
                 </div>
                 <ul className="space-y-2.5">
                   {webHighlights.map((item, i) => (
-                    <motion.li
-                      key={i}
-                      className="flex items-start gap-2.5"
+                    <motion.li key={i} className="flex items-start gap-2.5"
                       initial={{ opacity: 0, x: -10 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: i * 0.05 + 0.3 }}
                     >
                       <Check className="w-4 h-4 text-[#9D8DF0] mt-0.5 flex-shrink-0" />
-                      <span className="text-white/80 text-sm font-medium">{item}</span>
+                      <span className="text-foreground-strong text-sm font-medium">{item}</span>
                     </motion.li>
                   ))}
                 </ul>
@@ -269,13 +223,11 @@ export function PackDigitalBranding() {
             </div>
           </div>
 
-          {/* CTA with shine effect */}
-          <div className="text-center pt-6 border-t border-white/10">
+          {/* CTA */}
+          <div className="text-center pt-6 border-t border-border/30">
             <Link to="/contact">
               <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                <Button
-                  size="lg"
-                  className="px-8 group/btn relative overflow-hidden"
+                <Button size="lg" className="px-8 group/btn relative overflow-hidden"
                   style={{
                     background: "linear-gradient(135deg, #C3B68F 0%, #9D8DF0 100%)",
                     color: "#1f1a3d",

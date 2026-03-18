@@ -21,9 +21,9 @@ const skills: Skill[] = [
     title: "IA & stratégie digitale",
     description: (
       <>
-        Parcours certifiants autour de <strong className="text-white font-semibold">l'IA générative</strong> et de son usage en marketing digital.
+        Parcours certifiants autour de <strong className="text-foreground font-semibold">l'IA générative</strong> et de son usage en marketing digital.
         <br className="hidden sm:block" />
-        <span className="text-white/60">Utiliser l'IA pour analyser, optimiser et structurer vos contenus, sans jamais remplacer le regard humain.</span>
+        <span className="text-muted-foreground">Utiliser l'IA pour analyser, optimiser et structurer vos contenus, sans jamais remplacer le regard humain.</span>
       </>
     ),
     accentColor: "#C3B68F",
@@ -36,9 +36,9 @@ const skills: Skill[] = [
     title: "Prompting & assistants IA",
     description: (
       <>
-        Formations dédiées au <strong className="text-white font-semibold">prompting avancé</strong> et à la création d'<strong className="text-[#C3B68F] font-medium">assistants IA sur mesure</strong>.
+        Formations dédiées au <strong className="text-foreground font-semibold">prompting avancé</strong> et à la création d'<strong className="text-[#C3B68F] font-medium">assistants IA sur mesure</strong>.
         <br className="hidden sm:block" />
-        <span className="text-white/60">Poser les bonnes questions aux bons outils pour gagner en clarté, en vitesse et en qualité.</span>
+        <span className="text-muted-foreground">Poser les bonnes questions aux bons outils pour gagner en clarté, en vitesse et en qualité.</span>
       </>
     ),
     accentColor: "#9D8DF0",
@@ -51,9 +51,9 @@ const skills: Skill[] = [
     title: "Marketing de contenu & SEO",
     description: (
       <>
-        Certifications en <strong className="text-white font-semibold">stratégie de content marketing</strong> et en croissance organique.
+        Certifications en <strong className="text-foreground font-semibold">stratégie de content marketing</strong> et en croissance organique.
         <br className="hidden sm:block" />
-        <span className="text-white/60">Des textes pensés pour vos clients, structurés pour les moteurs de recherche et les outils d'IA.</span>
+        <span className="text-muted-foreground">Des textes pensés pour vos clients, structurés pour les moteurs de recherche et les outils d'IA.</span>
       </>
     ),
     accentColor: "#C3B68F",
@@ -66,9 +66,9 @@ const skills: Skill[] = [
     title: "Social media & contenu de marque",
     description: (
       <>
-        Cours spécialisés en <strong className="text-white font-semibold">social media marketing</strong> et stratégie de contenu.
+        Cours spécialisés en <strong className="text-foreground font-semibold">social media marketing</strong> et stratégie de contenu.
         <br className="hidden sm:block" />
-        <span className="text-white/60">Décliner votre identité sur des posts, stories et campagnes cohérentes avec votre site.</span>
+        <span className="text-muted-foreground">Décliner votre identité sur des posts, stories et campagnes cohérentes avec votre site.</span>
       </>
     ),
     accentColor: "#9D8DF0",
@@ -81,9 +81,9 @@ const skills: Skill[] = [
     title: "Utilisation responsable de l'IA",
     description: (
       <>
-        Certifications sur les <strong className="text-white font-semibold">bonnes pratiques</strong>, limites et <strong className="text-[#C3B68F] font-medium">éthique de l'IA</strong>.
+        Certifications sur les <strong className="text-foreground font-semibold">bonnes pratiques</strong>, limites et <strong className="text-[#C3B68F] font-medium">éthique de l'IA</strong>.
         <br className="hidden sm:block" />
-        <span className="text-white/60">L'IA est un co‑équipier : elle accélère le travail, mais les décisions restent humaines.</span>
+        <span className="text-muted-foreground">L'IA est un co‑équipier : elle accélère le travail, mais les décisions restent humaines.</span>
       </>
     ),
     accentColor: "#C3B68F",
@@ -127,12 +127,7 @@ export const SkillsSection = () => {
     <section className="relative py-20 md:py-32 overflow-hidden">
       {/* Dynamic Background */}
       <div className="absolute inset-0">
-        <div 
-          className="absolute inset-0"
-          style={{
-            background: "radial-gradient(ellipse 80% 50% at 50% 0%, #1f1a3d 0%, #0a0a0f 100%)",
-          }}
-        />
+        <div className="absolute inset-0 section-skills-bg" />
         {/* Animated gradient mesh */}
         <motion.div
           className="absolute inset-0 opacity-30"
@@ -161,11 +156,7 @@ export const SkillsSection = () => {
           background: "radial-gradient(circle, rgba(195, 182, 143, 0.15) 0%, transparent 70%)",
           filter: "blur(40px)",
         }}
-        animate={{
-          y: [0, -40, 0],
-          x: [0, 20, 0],
-          scale: [1, 1.2, 1],
-        }}
+        animate={{ y: [0, -40, 0], x: [0, 20, 0], scale: [1, 1.2, 1] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
@@ -174,11 +165,7 @@ export const SkillsSection = () => {
           background: "radial-gradient(circle, rgba(124, 106, 232, 0.12) 0%, transparent 70%)",
           filter: "blur(60px)",
         }}
-        animate={{
-          y: [0, 30, 0],
-          x: [0, -30, 0],
-          scale: [1, 1.15, 1],
-        }}
+        animate={{ y: [0, 30, 0], x: [0, -30, 0], scale: [1, 1.15, 1] }}
         transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 2 }}
       />
       <motion.div
@@ -219,7 +206,7 @@ export const SkillsSection = () => {
           </motion.div>
 
           <motion.h2 
-            className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
+            className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -251,7 +238,7 @@ export const SkillsSection = () => {
           </motion.h2>
           
           <motion.p 
-            className="text-lg md:text-xl text-white/50 max-w-2xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -272,7 +259,6 @@ export const SkillsSection = () => {
         >
           {skills.map((skill, index) => {
             const Icon = skill.icon;
-            // First card spans 2 columns on large screens
             const isLarge = index === 0;
             
             return (
@@ -303,10 +289,7 @@ export const SkillsSection = () => {
 
                 {/* Card */}
                 <div
-                  className="relative h-full rounded-3xl border border-white/[0.08] backdrop-blur-2xl p-6 md:p-8 overflow-hidden transition-all duration-500 group-hover:border-white/20 group-hover:shadow-[0_30px_60px_-20px_rgba(195,182,143,0.2)]"
-                  style={{
-                    background: "linear-gradient(145deg, rgba(30, 25, 50, 0.9) 0%, rgba(15, 12, 25, 0.95) 100%)",
-                  }}
+                  className="relative h-full rounded-3xl border border-border/20 backdrop-blur-2xl p-6 md:p-8 overflow-hidden transition-all duration-500 group-hover:border-border/40 group-hover:shadow-[0_30px_60px_-20px_rgba(195,182,143,0.2)] card-glass-surface"
                 >
                   {/* Decorative Background Elements */}
                   <div 
@@ -398,9 +381,9 @@ export const SkillsSection = () => {
 
                     {/* Title */}
                     <motion.h4 
-                      className="font-display text-xl md:text-2xl font-bold text-white mb-4 group-hover:text-transparent group-hover:bg-clip-text transition-all duration-500"
+                      className="font-display text-xl md:text-2xl font-bold text-foreground mb-4 group-hover:text-transparent group-hover:bg-clip-text transition-all duration-500"
                       style={{
-                        backgroundImage: `linear-gradient(135deg, white 0%, ${skill.accentColor} 100%)`,
+                        backgroundImage: `linear-gradient(135deg, hsl(var(--foreground)) 0%, ${skill.accentColor} 100%)`,
                         WebkitBackgroundClip: "text",
                         backgroundClip: "text",
                       }}
@@ -409,7 +392,7 @@ export const SkillsSection = () => {
                     </motion.h4>
 
                     {/* Description */}
-                    <p className="text-white/60 text-sm md:text-base leading-relaxed mb-6 group-hover:text-white/75 transition-colors duration-500">
+                    <p className="text-muted-foreground text-sm md:text-base leading-relaxed mb-6 group-hover:text-foreground-medium transition-colors duration-500">
                       {skill.description}
                     </p>
 
@@ -436,13 +419,14 @@ export const SkillsSection = () => {
 
         {/* Disclaimer */}
         <motion.p
-          className="text-center text-xs text-white/25 mt-12 md:mt-16 max-w-2xl mx-auto leading-relaxed"
+          className="text-center text-xs text-muted-foreground mt-12 md:mt-16 max-w-2xl mx-auto leading-relaxed"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
         >
-          Les logos cités font référence aux programmes de formation suivis. Nova Visio n'est pas affilié officiellement à ces marques.
+          Les certifications présentées ont été obtenues via des plateformes d'enseignement en ligne reconnues.
+          Elles attestent d'un apprentissage structuré et validé, sans impliquer d'emploi ou de partenariat avec les organisations citées.
         </motion.p>
       </div>
     </section>

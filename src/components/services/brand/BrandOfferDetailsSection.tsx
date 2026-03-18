@@ -21,6 +21,64 @@ import {
   MessageCircle
 } from "lucide-react";
 
+interface Props {
+  className?: string;
+}
+
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.12,
+      delayChildren: 0.2
+    }
+  }
+};
+
+const cardVariants: Variants = {
+  hidden: { 
+    opacity: 0, 
+    y: 40,
+    scale: 0.95,
+    rotateX: -10
+  },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    scale: 1,
+    rotateX: 0,
+    transition: {
+      duration: 0.6,
+      ease: [0.25, 0.46, 0.45, 0.94]
+    }
+  }
+};
+
+const itemVariants: Variants = {
+  hidden: { opacity: 0, x: -20 },
+  visible: { 
+    opacity: 1, 
+    x: 0,
+    transition: {
+      duration: 0.4,
+      ease: "easeOut"
+    }
+  }
+};
+
+const headerVariants: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    transition: {
+      duration: 0.7,
+      ease: "easeOut"
+    }
+  }
+};
+
 interface OfferCategory {
   icon: React.ElementType;
   title: string;
@@ -123,7 +181,7 @@ const offerCategories: OfferCategory[] = [
   },
   {
     icon: BookOpen,
-    title: "Une charte claire pour ne plus se demander \"comment utiliser mon logo ?\"",
+    title: "Une charte claire pour ne plus se demander \\\"comment utiliser mon logo ?\\\"",
     gradient: "from-[#C3B68F]/20 to-transparent",
     accentColor: "#C3B68F",
     items: [
@@ -192,65 +250,9 @@ const offerCategories: OfferCategory[] = [
   }
 ];
 
-const containerVariants: Variants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.12,
-      delayChildren: 0.2
-    }
-  }
-};
-
-const cardVariants: Variants = {
-  hidden: { 
-    opacity: 0, 
-    y: 40,
-    scale: 0.95,
-    rotateX: -10
-  },
-  visible: { 
-    opacity: 1, 
-    y: 0,
-    scale: 1,
-    rotateX: 0,
-    transition: {
-      duration: 0.6,
-      ease: [0.25, 0.46, 0.45, 0.94]
-    }
-  }
-};
-
-const itemVariants: Variants = {
-  hidden: { opacity: 0, x: -20 },
-  visible: { 
-    opacity: 1, 
-    x: 0,
-    transition: {
-      duration: 0.4,
-      ease: "easeOut"
-    }
-  }
-};
-
-const headerVariants: Variants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { 
-    opacity: 1, 
-    y: 0,
-    transition: {
-      duration: 0.7,
-      ease: "easeOut"
-    }
-  }
-};
-
 export const BrandOfferDetailsSection = () => {
   return (
-    <section className="py-20 md:py-28 relative overflow-hidden" style={{
-      background: "linear-gradient(135deg, #000000 0%, #1f1a3d 100%)"
-    }}>
+    <section className="py-20 md:py-28 relative overflow-hidden section-gradient-main">
       {/* Decorative background elements */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-[#C3B68F]/10 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-40 right-10 w-96 h-96 bg-[#7C6AE8]/10 rounded-full blur-[150px] pointer-events-none" />
@@ -258,7 +260,7 @@ export const BrandOfferDetailsSection = () => {
       
       {/* Grid pattern overlay */}
       <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: `linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)`,
+        backgroundImage: `linear-gradient(hsl(var(--foreground) / 0.1) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--foreground) / 0.1) 1px, transparent 1px)`,
         backgroundSize: '60px 60px'
       }} />
 
@@ -272,15 +274,15 @@ export const BrandOfferDetailsSection = () => {
           variants={headerVariants}
         >
           <motion.div 
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-6"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-foreground/5 border border-border/30 backdrop-blur-sm mb-6"
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           >
             <Sparkles className="w-4 h-4 text-[#C3B68F]" />
-            <span className="text-sm text-white/80">Tout ce qui est inclus</span>
+            <span className="text-sm text-foreground-strong">Tout ce qui est inclus</span>
           </motion.div>
           
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Votre identité visuelle,{" "}
             <span style={{
               background: "linear-gradient(135deg, #DCCB99 0%, #C3B68F 100%)",
@@ -292,7 +294,7 @@ export const BrandOfferDetailsSection = () => {
             </span>
           </h2>
           
-          <p className="text-lg text-white/60 max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Chaque élément est pensé pour vous donner une image professionnelle, cohérente et facile à déployer.
           </p>
         </motion.div>
@@ -327,7 +329,7 @@ export const BrandOfferDetailsSection = () => {
                 
                 {/* Card */}
                 <div 
-                  className="relative p-6 md:p-8 rounded-2xl border border-white/10 backdrop-blur-sm bg-white/[0.03] h-full transition-all duration-500 group-hover:border-white/20 group-hover:bg-white/[0.05]"
+                  className="relative p-6 md:p-8 rounded-2xl border border-border/30 backdrop-blur-sm bg-foreground/[0.03] h-full transition-all duration-500 group-hover:border-border/50 group-hover:bg-foreground/[0.05]"
                 >
                   {/* Background gradient */}
                   <div 
@@ -357,7 +359,7 @@ export const BrandOfferDetailsSection = () => {
                       />
                     </motion.div>
                     
-                    <h3 className="font-display text-xl md:text-2xl font-bold text-white leading-tight pt-1">
+                    <h3 className="font-display text-xl md:text-2xl font-bold text-foreground leading-tight pt-1">
                       {category.title}
                     </h3>
                   </div>
@@ -368,8 +370,6 @@ export const BrandOfferDetailsSection = () => {
                     variants={containerVariants}
                   >
                     {category.items.map((item, itemIndex) => {
-                      const ItemIcon = item.icon;
-                      
                       return (
                         <motion.li
                           key={itemIndex}
@@ -383,7 +383,7 @@ export const BrandOfferDetailsSection = () => {
                             />
                           </div>
                           <div className="flex-1">
-                            <p className="text-white/70 text-sm md:text-base leading-relaxed">
+                            <p className="text-foreground-medium text-sm md:text-base leading-relaxed">
                               {item.text}
                               {item.highlight && (
                                 <span 
@@ -413,17 +413,17 @@ export const BrandOfferDetailsSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.5 }}
         >
-          <div className="flex items-center gap-3 px-6 py-3 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm">
+          <div className="flex items-center gap-3 px-6 py-3 rounded-full bg-foreground/5 border border-border/30 backdrop-blur-sm">
             <div className="flex -space-x-2">
               <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#C3B68F] to-[#A89B6F] flex items-center justify-center">
-                <Sparkles className="w-4 h-4 text-[#1f1a3d]" />
+                <Sparkles className="w-4 h-4 text-primary-foreground" />
               </div>
               <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#7C6AE8] to-[#5B4BC7] flex items-center justify-center">
                 <Crown className="w-4 h-4 text-white" />
               </div>
             </div>
-            <span className="text-sm text-white/70">
-              <span className="font-semibold text-white">7 piliers</span> pour une identité complète
+            <span className="text-sm text-foreground-medium">
+              <span className="font-semibold text-foreground">7 piliers</span> pour une identité complète
             </span>
           </div>
         </motion.div>
