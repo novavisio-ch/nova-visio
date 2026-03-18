@@ -267,7 +267,7 @@ const ServiceCard = ({
         <motion.div className="mb-5 relative inline-block" whileHover={{
         scale: 1.02
       }}>
-          <span className="text-sm text-white/50">dès </span>
+          <span className="text-sm text-muted-foreground">dès </span>
           <span className="text-3xl md:text-4xl font-display font-bold" style={{
           background: isGold ? "linear-gradient(135deg, #C3B68F 0%, #DCCB99 50%, #a89860 100%)" : "linear-gradient(135deg, #9D8DF0 0%, #B8A9F5 50%, #7C6AE8 100%)",
           WebkitBackgroundClip: "text",
