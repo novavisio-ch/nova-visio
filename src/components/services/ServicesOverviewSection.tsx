@@ -123,7 +123,7 @@ export const ServicesOverviewSection = () => {
             </span>
           </h2>
           
-          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Une approche complète pour concevoir des expériences web 
             qui convertissent et marquent les esprits.
           </p>
