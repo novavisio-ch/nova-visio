@@ -52,25 +52,25 @@
   }
 
   .light {
-    /* Light harmonized palette – warm cream/beige tones */
-    --background: 40 20% 96%;
-    --background-end: 40 15% 92%;
+    /* Light palette – subtle off-white */
+    --background: 60 7% 98%;
+    --background-end: 60 5% 96%;
     --foreground: 249 40% 17%;
 
-    --card: 40 15% 94%;
+    --card: 60 5% 96%;
     --card-foreground: 249 40% 17%;
 
-    --popover: 40 15% 96%;
+    --popover: 60 7% 98%;
     --popover-foreground: 249 40% 17%;
 
     /* Gold accent – slightly deeper for contrast on light */
     --primary: 40 35% 52%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 40 12% 90%;
+    --secondary: 60 5% 93%;
     --secondary-foreground: 249 40% 17%;
 
-    --muted: 40 10% 88%;
+    --muted: 60 4% 91%;
     --muted-foreground: 249 20% 45%;
 
     --accent: 40 35% 52%;
@@ -79,8 +79,8 @@
     --destructive: 0 62% 50%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 40 15% 82%;
-    --input: 40 12% 88%;
+    --border: 60 5% 86%;
+    --input: 60 4% 91%;
     --ring: 40 35% 52%;
 
     --radius: 0.75rem;
@@ -89,10 +89,10 @@
     --gold: 40 35% 52%;
     --gold-dark: 38 30% 42%;
     --text-body: 249 20% 30%;
-    --glass-bg: 40 15% 92%;
+    --glass-bg: 60 5% 95%;
 
     /* Theme-specific backgrounds */
-    --body-bg: linear-gradient(135deg, #F5F0E8 0%, #EDE6D8 50%, #E8E0D2 100%);
+    --body-bg: linear-gradient(135deg, #FAFAF8 0%, #F7F7F5 50%, #F5F5F3 100%);
     --noise-opacity: 0.02;
   }
 }
@@ -115,7 +115,7 @@
   }
 
   html.light body {
-    background: linear-gradient(135deg, #F5F0E8 0%, #EDE6D8 50%, #E8E0D2 100%);
+    background: linear-gradient(135deg, #FAFAF8 0%, #F7F7F5 50%, #F5F5F3 100%);
   }
 
   h1, h2, h3, h4, h5, h6 {
