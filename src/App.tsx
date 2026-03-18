@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { CookieConsent } from "@/components/CookieConsent";
 import { VisioChatBubble } from "@/components/chat/VisioChatBubble";
+import { ThemeProvider } from "@/hooks/use-theme";
 import Index from "./pages/Index";
 import SiteWeb from "./pages/SiteWeb";
 import IdentiteVisuelle from "./pages/IdentiteVisuelle";
