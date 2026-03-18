@@ -159,7 +159,7 @@ function ServiceCard({
         <Button 
           variant={theme === "gold" ? "gold-outline" : "outline"} 
           size="lg" 
-          className={`w-full sm:w-auto text-sm md:text-base ${theme === "purple" ? "border-[#7C6AE8] text-[#7C6AE8] hover:bg-[#7C6AE8] hover:text-white" : ""}`}
+          className={`w-full sm:w-auto text-sm md:text-base ${theme === "purple" ? "border-[#7C6AE8] text-[#7C6AE8] hover:bg-[#7C6AE8] hover:text-background" : ""}`}
           asChild
         >
           <Link to={ctaLink}>{ctaText}</Link>

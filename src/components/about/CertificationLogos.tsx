@@ -118,8 +118,8 @@ const logoWidths: Record<LogoType, string> = {
 
 export const CertificationBadge = ({ logos }: CertificationBadgeProps) => {
   return (
-    <div className="mt-5 pt-4 border-t border-white/10">
-      <p className="text-xs text-white/40 mb-3">Formations suivies via :</p>
+    <div className="mt-5 pt-4 border-t border-foreground/10">
+      <p className="text-xs text-foreground-subtle mb-3">Formations suivies via :</p>
       <div className="flex items-center gap-4 flex-wrap">
         {logos.map((logoKey, index) => {
           const LogoComponent = logoComponents[logoKey];

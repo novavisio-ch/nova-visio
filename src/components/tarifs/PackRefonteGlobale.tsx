@@ -293,7 +293,7 @@ export function PackRefonteGlobale() {
           </div>
 
           {/* CTA with shine effect */}
-          <div className="text-center pt-6 border-t border-white/10">
+          <div className="text-center pt-6 border-t border-foreground/10">
             <Link to="/contact">
               <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                 <Button
