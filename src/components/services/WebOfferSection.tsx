@@ -174,7 +174,7 @@ const OfferCard = ({
       )}
 
       <div 
-        className="relative flex flex-col items-start text-left p-8 md:p-10 rounded-3xl bg-white h-full overflow-hidden"
+        className="relative flex flex-col items-start text-left p-8 md:p-10 rounded-3xl bg-card h-full overflow-hidden"
       >
         {/* Floating decorative particles */}
         <motion.div
