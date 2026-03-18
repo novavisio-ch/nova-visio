@@ -333,9 +333,9 @@ export const BrandStepsSection = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
           >
-            Notre méthode pour
+             Notre méthode pour
             <br className="hidden md:block" />
-            <span className="text-gradient-gold">votre identité visuelle</span>
+            <span className="text-gradient-gold">votre identité visuelle.</span>
           </motion.h2>
 
           {/* Description */}

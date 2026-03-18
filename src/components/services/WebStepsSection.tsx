@@ -327,9 +327,9 @@ export const WebStepsSection = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
           >
-            Notre méthode pour
+             Notre méthode pour
             <br className="hidden md:block" />
-            <span className="text-gradient-gold"> votre site web</span>
+            <span className="text-gradient-gold"> votre site web.</span>
           </motion.h2>
 
           {/* Description */}

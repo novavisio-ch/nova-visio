@@ -547,7 +547,7 @@ const Tarifs = () => {
           duration: 0.6
         }} className="text-center mb-10 md:mb-12">
             <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
-              Services complémentaires
+              Services complémentaires.
             </h2>
             <p className="text-white/50 max-w-xl mx-auto">
               Des prestations additionnelles pour <strong className="text-white font-medium">compléter votre projet</strong> et renforcer votre image.

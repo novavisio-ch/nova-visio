@@ -375,7 +375,7 @@ export const WebOfferSection = () => {
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-display-lg font-display font-bold mb-3 md:mb-4" style={{
           color: "#2D284D"
         }}>
-            Nos offres web
+            Nos offres web.
           </h2>
           <p className="text-sm sm:text-base md:text-xl max-w-2xl mx-auto" style={{
           color: "#2D284D",

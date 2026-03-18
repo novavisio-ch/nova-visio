@@ -115,7 +115,7 @@ const Contact = () => {
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-2xl sm:text-3xl md:text-display-lg lg:text-display-xl mb-4 md:mb-6 leading-tight">
-              Parlons de votre <span className="text-gradient-gold">projet</span>
+              Parlons de votre <span className="text-gradient-gold">projet.</span>
             </h1>
             <p className="text-sm sm:text-base md:text-body-lg text-muted-foreground leading-relaxed">
               Nous sommes là pour écouter et vous proposer des pistes concrètes.

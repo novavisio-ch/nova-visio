@@ -14,7 +14,7 @@ export default function MentionsLegales() {
           duration: 0.6
         }}>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-12 text-center">
-              Mentions légales
+              Mentions légales.
             </h1>
 
             <div className="bg-card rounded-2xl shadow-lg p-8 md:p-12 space-y-10">

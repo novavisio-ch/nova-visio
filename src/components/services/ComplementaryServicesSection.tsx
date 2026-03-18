@@ -24,7 +24,7 @@ export const ComplementaryServicesSection = () => {
         {/* Section Header */}
         <div className="text-center mb-12 md:mb-16">
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-            Services complémentaires
+            Services complémentaires.
           </h2>
           <p className="text-lg text-white/70 max-w-2xl mx-auto">
             Des services additionnels pour renforcer votre image et compléter votre site web.

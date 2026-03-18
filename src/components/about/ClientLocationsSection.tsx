@@ -72,8 +72,8 @@ export function ClientLocationsSection() {
           </motion.div>
 
           <h2 className="text-xl sm:text-2xl md:text-display-md mb-3 md:mb-4 leading-tight">
-            Nos clients à travers le{" "}
-            <span className="text-gradient-gold">monde</span>
+             Nos clients à travers le{" "}
+            <span className="text-gradient-gold">monde.</span>
           </h2>
           <p className="text-sm md:text-base text-muted-foreground max-w-xl mx-auto">
             Nous accompagnons des entrepreneurs et entreprises dans plusieurs pays
