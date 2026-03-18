@@ -150,7 +150,7 @@ const complementaryServices = [{
   icon: Package,
   title: "Brand kit digital",
   description: <>
-        Kit <strong className="text-white font-semibold">clé en main</strong> avec visuels, templates et <strong className="text-[#C3B68F] font-medium">guide d'utilisation</strong>.
+        Kit <strong className="text-foreground font-semibold">clé en main</strong> avec visuels, templates et <strong className="text-[#C3B68F] font-medium">guide d'utilisation</strong>.
       </>,
   price: "Sur devis"
 }];
