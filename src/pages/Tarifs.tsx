@@ -49,7 +49,7 @@ const mainServices = [{
   badge: "Starter",
   variant: "purple" as const,
   description: <>
-        Une page <strong className="text-white font-semibold">unique et percutante</strong>, conçue pour <strong className="text-[#9D8DF0] font-medium">convertir vos visiteurs</strong> en prospects.
+        Une page <strong className="text-foreground font-semibold">unique et percutante</strong>, conçue pour <strong className="text-[#9D8DF0] font-medium">convertir vos visiteurs</strong> en prospects.
       </>,
   features: [{
     text: "Page unique",
