@@ -223,7 +223,7 @@ const OfferCard = ({
           whileInView={{ opacity: 1, y: 0 }} 
           viewport={{ once: true }} 
           transition={{ duration: 0.5, delay: 0.4 + index * 0.2 }} 
-          className="mb-6 text-base leading-relaxed text-[#2D284D]/70"
+          className="mb-6 text-base leading-relaxed text-muted-foreground"
         >
           {description}
         </motion.p>
