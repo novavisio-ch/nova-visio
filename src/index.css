@@ -166,8 +166,8 @@
   }
 
   .light .glass-card {
-    background: hsla(40, 20%, 98%, 0.85);
-    border: 1px solid hsla(40, 15%, 80%, 0.4);
+    background: hsla(60, 7%, 99%, 0.85);
+    border: 1px solid hsla(60, 5%, 86%, 0.4);
     box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.06);
   }
 
