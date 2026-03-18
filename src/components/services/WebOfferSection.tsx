@@ -362,13 +362,11 @@ export const WebOfferSection = () => {
         }} transition={{
           duration: 0.5,
           delay: 0.1
-        }} className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full glass-card mb-4 md:mb-6" style={{
-          background: "rgba(45,40,77,0.05)"
-        }}>
-            <span className="text-xs md:text-sm font-medium" style={{
-            color: "#2D284D"
-          }}>
-              💎 Offres sur mesure
+           }} className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full glass-card mb-4 md:mb-6" style={{
+           background: "rgba(45,40,77,0.05)"
+         }}>
+             <span className="text-xs md:text-sm font-medium text-foreground">
+               💎 Offres sur mesure
             </span>
           </motion.div>
           
