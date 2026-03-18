@@ -274,6 +274,7 @@
     background: linear-gradient(to bottom right, hsl(var(--secondary)), hsl(var(--muted)));
     @apply rounded-xl;
   }
+}
 
 @layer utilities {
   .text-body {
