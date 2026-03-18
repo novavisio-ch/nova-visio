@@ -177,10 +177,10 @@ export const ServicesOverviewSection = () => {
                 <div className={`relative z-10 p-6 md:p-8 ${isLarge ? "lg:p-10" : ""}`}>
                   <div className="flex items-start justify-between mb-8">
                     {/* Number */}
-                    <motion.span className={`
-                        font-display text-5xl md:text-6xl font-bold transition-colors duration-300
-                        ${isHovered ? "text-white/20" : "text-gray-100"}
-                      `} animate={{
+                     <motion.span className={`
+                         font-display text-5xl md:text-6xl font-bold transition-colors duration-300
+                         ${isHovered ? "text-background/20" : "text-muted/50"}
+                       `} animate={{
                   scale: isHovered ? 1.1 : 1,
                   x: isHovered ? 10 : 0
                 }} transition={{
