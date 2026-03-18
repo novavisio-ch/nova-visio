@@ -119,7 +119,7 @@ function ServiceCard({
       </span>
 
       {/* Title */}
-      <h3 className="text-lg sm:text-xl md:text-display-sm lg:text-display-md text-white mb-2 md:mb-4 text-center leading-tight">
+      <h3 className="text-lg sm:text-xl md:text-display-sm lg:text-display-md text-foreground mb-2 md:mb-4 text-center leading-tight">
         {title.includes(" et ") ? (
           <>
             {title.split(" et ")[0]}
