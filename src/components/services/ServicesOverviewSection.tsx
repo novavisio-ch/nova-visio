@@ -57,7 +57,7 @@ const containerVariants = {
 export const ServicesOverviewSection = () => {
   const [hoveredService, setHoveredService] = useState<string | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
-  return <section className="py-20 md:py-32 bg-gradient-to-b from-gray-50 via-white to-gray-50 overflow-hidden relative">
+  return <section className="py-20 md:py-32 section-white overflow-hidden relative">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div className="absolute top-20 left-10 w-72 h-72 bg-[#C3B68F]/10 rounded-full blur-3xl" animate={{
