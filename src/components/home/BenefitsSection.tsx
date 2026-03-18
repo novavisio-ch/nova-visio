@@ -74,14 +74,14 @@ export function BenefitsSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-foreground">Vos </span>
-            <span className="text-accent">bénéfices.</span>
+            <span className="text-[#2D284D]">Vos </span>
+            <span className="text-[#C9BC8F]">bénéfices.</span>
             
           </motion.h2>
           
           {/* Subtitle */}
           <motion.p 
-            className="text-sm sm:text-base md:text-xl lg:text-2xl text-muted-foreground mb-6 md:mb-12 lg:mb-16 max-w-3xl leading-relaxed text-center mx-auto font-bold"
+            className="text-sm sm:text-base md:text-xl lg:text-2xl text-[#5a5577] mb-6 md:mb-12 lg:mb-16 max-w-3xl leading-relaxed text-center mx-auto font-bold"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -105,10 +105,10 @@ export function BenefitsSection() {
                 transition={{ delay: index * 0.1 }}
               >
                 <div className="flex-shrink-0 mt-0.5 md:mt-1">
-                  <CheckCircle className="w-4 h-4 md:w-6 md:h-6 lg:w-7 lg:h-7 text-accent" strokeWidth={2} />
+                  <CheckCircle className="w-4 h-4 md:w-6 md:h-6 lg:w-7 lg:h-7 text-[#C9BC8F]" strokeWidth={2} />
                 </div>
-                <p className="text-xs sm:text-sm md:text-lg lg:text-xl text-foreground-medium leading-relaxed">
-                  {benefit.text}<span className="font-bold text-foreground">{benefit.highlight}</span>{benefit.rest}
+                <p className="text-xs sm:text-sm md:text-lg lg:text-xl text-[#6b6487] leading-relaxed">
+                  {benefit.text}<span className="font-bold text-[#2D284D]">{benefit.highlight}</span>{benefit.rest}
                 </p>
               </motion.div>
             ))}
