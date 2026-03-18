@@ -286,7 +286,7 @@ const OfferCard = ({
               >
                 <CheckCircle className="w-4 h-4 text-foreground" />
               </motion.div>
-              <span className="text-sm leading-relaxed text-[#2D284D]/85">
+              <span className="text-sm leading-relaxed text-muted-foreground">
                 {formatBenefit(benefit)}
               </span>
             </motion.li>
