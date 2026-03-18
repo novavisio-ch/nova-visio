@@ -121,14 +121,13 @@ export const BrandOfferSection = () => {
               </motion.span>
 
               {/* Title */}
-              <motion.h3
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6 leading-tight"
-                style={{ color: "#2D284D" }}
-              >
+               <motion.h3
+                 initial={{ opacity: 0, y: 20 }}
+                 whileInView={{ opacity: 1, y: 0 }}
+                 viewport={{ once: true }}
+                 transition={{ duration: 0.6, delay: 0.3 }}
+                 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6 leading-tight text-foreground"
+               >
                 Logo & identité
                 <br />
                 <span
