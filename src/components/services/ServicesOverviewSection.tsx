@@ -219,10 +219,10 @@ export const ServicesOverviewSection = () => {
                     </span>
                     
                     {/* Description */}
-                    <p className={`
-                        mt-4 text-sm md:text-base leading-relaxed transition-colors duration-300
-                        ${isHovered ? "text-gray-300" : "text-gray-500"}
-                      `}>
+                     <p className={`
+                         mt-4 text-sm md:text-base leading-relaxed transition-colors duration-300
+                         ${isHovered ? "text-background/70" : "text-muted-foreground"}
+                       `}>
                       {service.description}
                     </p>
                   </div>
