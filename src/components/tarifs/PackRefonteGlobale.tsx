@@ -198,7 +198,7 @@ export function PackRefonteGlobale() {
                     style={{ background: "rgba(124, 106, 232, 0.03)" }}
                   >
                     <Icon className="w-6 h-6 text-[#9D8DF0] mb-3" />
-                    <p className="text-white/70 text-sm leading-relaxed">{item.text}</p>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{item.text}</p>
                   </motion.div>
                 );
               })}
