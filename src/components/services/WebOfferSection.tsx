@@ -305,7 +305,7 @@ const OfferCard = ({
             asChild 
             size="lg" 
             className="w-full rounded-xl px-8 py-6 text-base font-semibold transition-all duration-300 border-0 relative overflow-hidden group/btn" 
-            style={{ background: buttonGradient, color: "#2D284D" }}
+            style={{ background: buttonGradient, color: "hsl(var(--card-foreground))" }}
           >
             <Link to="/contact">
               <span className="relative z-10">{ctaText}</span>
