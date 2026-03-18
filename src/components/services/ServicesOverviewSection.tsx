@@ -299,10 +299,10 @@ export const ServicesOverviewSection = () => {
                 }, {
                   value: "24h",
                   label: "Réponse"
-                }].map((stat, index) => <motion.div key={index} className="text-center p-3 rounded-xl bg-white/5 border border-white/10" whileHover={{
-                  scale: 1.05,
-                  backgroundColor: "rgba(255,255,255,0.08)"
-                }}>
+                 }].map((stat, index) => <motion.div key={index} className="text-center p-3 rounded-xl bg-background/5 border border-background/10" whileHover={{
+                   scale: 1.05,
+                   backgroundColor: "rgba(255,255,255,0.08)"
+                 }}>
                       <div className="font-display text-xl md:text-2xl font-bold text-[#C3B68F]">
                         {stat.value}
                       </div>
