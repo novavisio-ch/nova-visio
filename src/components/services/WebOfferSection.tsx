@@ -246,14 +246,6 @@ const OfferCard = ({
             >
               {price}
             </motion.div>
-            <motion.div 
-              className="h-0.5 mt-1 rounded-full"
-              style={{ background: `linear-gradient(90deg, ${accentColor}, transparent)` }}
-              initial={{ width: 0 }}
-              whileInView={{ width: "60%" }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.7 + index * 0.2 }}
-            />
           </motion.div>
         )}
 
