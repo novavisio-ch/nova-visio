@@ -230,7 +230,7 @@ export const BrandOfferSection = () => {
                         filter: "drop-shadow(0 0 4px rgba(195, 182, 143, 0.5))"
                       }}
                     />
-                    <span style={{ color: "#2D284D" }}>
+                    <span className="text-foreground">
                       <strong>{item.text}</strong>{" "}
                       <span style={{ opacity: 0.7 }}>{item.highlight}</span>
                     </span>
