@@ -376,7 +376,7 @@ const ComplementaryCard = ({
         </motion.div>
         <div className="flex-1">
           <div className="flex items-start justify-between gap-2 mb-2">
-            <h4 className="font-display text-lg font-semibold text-white group-hover:text-[#C3B68F] transition-colors duration-300">
+            <h4 className="font-display text-lg font-semibold text-foreground group-hover:text-[#C3B68F] transition-colors duration-300">
               {service.title}
             </h4>
             <span className="text-xs font-medium text-[#C3B68F]/80 whitespace-nowrap px-2 py-0.5 rounded-full border border-[#C3B68F]/30">
