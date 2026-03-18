@@ -100,7 +100,7 @@ export const BrandBenefitsSection = () => {
               <div className="flex items-start gap-4">
                 <CheckCircle className="w-6 h-6 text-[#C3B68F] flex-shrink-0 mt-0.5" />
                 <div>
-                  <h3 className="font-display text-lg font-semibold text-gray-900 mb-1">
+                  <h3 className="font-display text-lg font-semibold text-foreground mb-1">
                     {benefit.title}
                   </h3>
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>
