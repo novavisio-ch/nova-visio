@@ -268,10 +268,9 @@ export const BrandFaqSection = () => {
           </motion.div>
 
           {/* Title */}
-          <h2
-            className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-display-lg font-bold mb-3 md:mb-4"
-            style={{ color: "#2D284D" }}
-          >
+           <h2
+             className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-display-lg font-bold mb-3 md:mb-4 text-foreground"
+           >
              Des réponses à vos questions
             <br />
             <span className="text-gradient-gold">sur l'identité visuelle.</span>
