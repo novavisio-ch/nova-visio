@@ -142,7 +142,7 @@ export function PackRefonteGlobale() {
               </motion.div>
             </div>
 
-            <h3 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3">
+            <h3 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-3">
               Pack Refonte Globale
             </h3>
             <p
@@ -156,9 +156,9 @@ export function PackRefonteGlobale() {
             >
               Reprenez le contrôle de votre image
             </p>
-            <p className="text-white/60 max-w-2xl mx-auto text-base md:text-lg leading-relaxed mb-6">
-              Une refonte <strong className="text-white font-semibold">cohérente</strong> de votre identité visuelle et de votre site web pour{" "}
-              <strong className="text-[#9D8DF0] font-semibold">aligner votre image</strong> avec le niveau réel de votre activité.
+             <p className="text-muted-foreground max-w-2xl mx-auto text-base md:text-lg leading-relaxed mb-6">
+               Une refonte <strong className="text-foreground font-semibold">cohérente</strong> de votre identité visuelle et de votre site web pour{" "}
+               <strong className="text-[#9D8DF0] font-semibold">aligner votre image</strong> avec le niveau réel de votre activité.
             </p>
 
             {/* Price with animated underline */}
@@ -179,7 +179,7 @@ export function PackRefonteGlobale() {
 
           {/* Target Audience */}
           <div className="mb-8 md:mb-10">
-            <h4 className="font-display text-lg md:text-xl font-bold text-white mb-5 flex items-center gap-3">
+            <h4 className="font-display text-lg md:text-xl font-bold text-foreground mb-5 flex items-center gap-3">
               <Users className="w-5 h-5 text-[#9D8DF0]" />
               À qui s'adresse ce pack ?
             </h4>
@@ -198,7 +198,7 @@ export function PackRefonteGlobale() {
                     style={{ background: "rgba(124, 106, 232, 0.03)" }}
                   >
                     <Icon className="w-6 h-6 text-[#9D8DF0] mb-3" />
-                    <p className="text-white/70 text-sm leading-relaxed">{item.text}</p>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{item.text}</p>
                   </motion.div>
                 );
               })}
@@ -214,7 +214,7 @@ export function PackRefonteGlobale() {
               borderColor: "rgba(124, 106, 232, 0.2)",
             }}
           >
-            <h4 className="font-display text-lg md:text-xl font-bold text-white mb-4 flex items-center gap-3">
+            <h4 className="font-display text-lg md:text-xl font-bold text-foreground mb-4 flex items-center gap-3">
               <Check className="w-5 h-5 text-[#9D8DF0]" />
               En résumé
             </h4>
@@ -229,7 +229,7 @@ export function PackRefonteGlobale() {
                   transition={{ delay: i * 0.05 + 0.3 }}
                 >
                   <Check className="w-4 h-4 text-[#9D8DF0] mt-0.5 flex-shrink-0" />
-                  <span className="text-white/80 text-sm font-medium">{bullet}</span>
+                  <span className="text-foreground-medium text-sm font-medium">{bullet}</span>
                 </motion.li>
               ))}
             </ul>
@@ -258,7 +258,7 @@ export function PackRefonteGlobale() {
                     transition={{ delay: i * 0.05 + 0.3 }}
                   >
                     <Check className="w-4 h-4 text-[#C3B68F] mt-0.5 flex-shrink-0" />
-                    <span className="text-white/80 text-sm font-medium">{item}</span>
+                     <span className="text-foreground-medium text-sm font-medium">{item}</span>
                   </motion.li>
                 ))}
               </ul>
@@ -285,7 +285,7 @@ export function PackRefonteGlobale() {
                     transition={{ delay: i * 0.05 + 0.3 }}
                   >
                     <Check className="w-4 h-4 text-[#9D8DF0] mt-0.5 flex-shrink-0" />
-                    <span className="text-white/80 text-sm font-medium">{item}</span>
+                    <span className="text-foreground-medium text-sm font-medium">{item}</span>
                   </motion.li>
                 ))}
               </ul>
@@ -293,7 +293,7 @@ export function PackRefonteGlobale() {
           </div>
 
           {/* CTA with shine effect */}
-          <div className="text-center pt-6 border-t border-white/10">
+          <div className="text-center pt-6 border-t border-foreground/10">
             <Link to="/contact">
               <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                 <Button

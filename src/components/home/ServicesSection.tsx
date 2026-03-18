@@ -119,7 +119,7 @@ function ServiceCard({
       </span>
 
       {/* Title */}
-      <h3 className="text-lg sm:text-xl md:text-display-sm lg:text-display-md text-white mb-2 md:mb-4 text-center leading-tight">
+      <h3 className="text-lg sm:text-xl md:text-display-sm lg:text-display-md text-foreground mb-2 md:mb-4 text-center leading-tight">
         {title.includes(" et ") ? (
           <>
             {title.split(" et ")[0]}
@@ -138,7 +138,7 @@ function ServiceCard({
       </h3>
 
       {/* Description */}
-      <p className="mb-4 md:mb-8 max-w-sm text-white text-sm sm:text-base md:text-display-sm text-center leading-relaxed">
+      <p className="mb-4 md:mb-8 max-w-sm text-foreground-medium text-sm sm:text-base md:text-display-sm text-center leading-relaxed">
         {description}
       </p>
 
@@ -159,7 +159,7 @@ function ServiceCard({
         <Button 
           variant={theme === "gold" ? "gold-outline" : "outline"} 
           size="lg" 
-          className={`w-full sm:w-auto text-sm md:text-base ${theme === "purple" ? "border-[#7C6AE8] text-[#7C6AE8] hover:bg-[#7C6AE8] hover:text-white" : ""}`}
+          className={`w-full sm:w-auto text-sm md:text-base ${theme === "purple" ? "border-[#7C6AE8] text-[#7C6AE8] hover:bg-[#7C6AE8] hover:text-background" : ""}`}
           asChild
         >
           <Link to={ctaLink}>{ctaText}</Link>

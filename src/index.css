@@ -155,8 +155,8 @@
   }
 
   .light .glass {
-    background: hsla(40, 15%, 96%, 0.8);
-    border: 1px solid hsla(40, 15%, 82%, 0.5);
+    background: hsla(60, 7%, 98%, 0.8);
+    border: 1px solid hsla(60, 5%, 86%, 0.5);
   }
 
   .glass-card {
@@ -166,8 +166,8 @@
   }
 
   .light .glass-card {
-    background: hsla(40, 20%, 98%, 0.85);
-    border: 1px solid hsla(40, 15%, 80%, 0.4);
+    background: hsla(60, 7%, 99%, 0.85);
+    border: 1px solid hsla(60, 5%, 86%, 0.4);
     box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.06);
   }
 
@@ -214,42 +214,42 @@
     background: linear-gradient(135deg, #000000 0%, #1f1a3d 100%);
   }
   .light .section-gradient-main {
-    background: linear-gradient(135deg, #F5F0E8 0%, #EDE6D8 100%);
+    background: linear-gradient(135deg, #FAFAF8 0%, #F5F5F3 100%);
   }
 
   .section-gradient-steps {
     background: linear-gradient(180deg, #0a0a12 0%, #1a1530 50%, #0a0a12 100%);
   }
   .light .section-gradient-steps {
-    background: linear-gradient(180deg, #F5F0E8 0%, #E8E0D2 50%, #F5F0E8 100%);
+    background: linear-gradient(180deg, #FAFAF8 0%, #F5F5F3 50%, #FAFAF8 100%);
   }
 
   .section-gradient-hero-alt {
     background: linear-gradient(135deg, #0a0a0a 0%, #1f1a3d 50%, #0a0a0a 100%);
   }
   .light .section-gradient-hero-alt {
-    background: linear-gradient(135deg, #F5F0E8 0%, #EDE6D8 50%, #F5F0E8 100%);
+    background: linear-gradient(135deg, #FAFAF8 0%, #F7F7F5 50%, #FAFAF8 100%);
   }
 
   .section-skills-bg {
     background: radial-gradient(ellipse 80% 50% at 50% 0%, #1f1a3d 0%, #0a0a0f 100%);
   }
   .light .section-skills-bg {
-    background: radial-gradient(ellipse 80% 50% at 50% 0%, #E8E0D2 0%, #F5F0E8 100%);
+    background: radial-gradient(ellipse 80% 50% at 50% 0%, #F5F5F3 0%, #FAFAF8 100%);
   }
 
   .card-dark-surface {
     background: linear-gradient(180deg, rgba(15,15,20,0.95) 0%, rgba(10,10,15,0.98) 100%);
   }
   .light .card-dark-surface {
-    background: linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(248,245,238,0.98) 100%);
+    background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(250,250,248,0.98) 100%);
   }
 
   .card-glass-surface {
     background: linear-gradient(135deg, hsla(252, 30%, 18%, 0.7) 0%, hsla(252, 30%, 12%, 0.7) 100%);
   }
   .light .card-glass-surface {
-    background: linear-gradient(135deg, hsla(40, 20%, 96%, 0.9) 0%, hsla(40, 15%, 92%, 0.9) 100%);
+    background: linear-gradient(135deg, hsla(60, 7%, 98%, 0.9) 0%, hsla(60, 5%, 96%, 0.9) 100%);
   }
 
   /* White sections that should adapt to theme */
@@ -257,7 +257,7 @@
     @apply bg-white;
   }
   .light .section-white {
-    background: hsl(40 15% 94%);
+    background: hsl(60 5% 97%);
   }
 }
 

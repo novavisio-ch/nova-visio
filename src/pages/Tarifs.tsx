@@ -280,7 +280,7 @@ const ServiceCard = ({
         </motion.div>
 
         {/* Description */}
-        <p className="text-white/60 text-sm mb-6 leading-relaxed">
+        <p className="text-muted-foreground text-sm mb-6 leading-relaxed">
           {service.description}
         </p>
 

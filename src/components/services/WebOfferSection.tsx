@@ -174,7 +174,7 @@ const OfferCard = ({
       )}
 
       <div 
-        className="relative flex flex-col items-start text-left p-8 md:p-10 rounded-3xl bg-white h-full overflow-hidden"
+        className="relative flex flex-col items-start text-left p-8 md:p-10 rounded-3xl bg-card h-full overflow-hidden"
       >
         {/* Floating decorative particles */}
         <motion.div
@@ -204,7 +204,7 @@ const OfferCard = ({
           transition={{ duration: 0.5, delay: 0.3 + index * 0.2 }} 
           className="flex items-center gap-3 mb-4"
         >
-          <h3 className="text-3xl md:text-4xl font-display font-bold text-[#2D284D]">
+          <h3 className="text-3xl md:text-4xl font-display font-bold text-foreground">
             {title}
           </h3>
           <motion.span 
@@ -223,7 +223,7 @@ const OfferCard = ({
           whileInView={{ opacity: 1, y: 0 }} 
           viewport={{ once: true }} 
           transition={{ duration: 0.5, delay: 0.4 + index * 0.2 }} 
-          className="mb-6 text-base leading-relaxed text-[#2D284D]/70"
+          className="mb-6 text-base leading-relaxed text-muted-foreground"
         >
           {description}
         </motion.p>
@@ -237,7 +237,7 @@ const OfferCard = ({
             transition={{ duration: 0.5, delay: 0.5 + index * 0.2 }} 
             className="mb-6 relative"
           >
-            <span className="text-sm text-[#2D284D]/60">dès</span>
+            <span className="text-sm text-muted-foreground">dès</span>
             <motion.div 
               className="text-4xl md:text-5xl font-bold"
               style={{ color: accentColor }}
@@ -284,9 +284,9 @@ const OfferCard = ({
                 whileHover={!isMobile ? { scale: 1.2, rotate: 10 } : undefined}
                 transition={{ type: "spring", stiffness: 400 }}
               >
-                <CheckCircle className="w-4 h-4 text-[#2D284D]" />
+                <CheckCircle className="w-4 h-4 text-foreground" />
               </motion.div>
-              <span className="text-sm leading-relaxed text-[#2D284D]/85">
+              <span className="text-sm leading-relaxed text-muted-foreground">
                 {formatBenefit(benefit)}
               </span>
             </motion.li>
@@ -305,7 +305,7 @@ const OfferCard = ({
             asChild 
             size="lg" 
             className="w-full rounded-xl px-8 py-6 text-base font-semibold transition-all duration-300 border-0 relative overflow-hidden group/btn" 
-            style={{ background: buttonGradient, color: "#2D284D" }}
+            style={{ background: buttonGradient, color: "hsl(var(--card-foreground))" }}
           >
             <Link to="/contact">
               <span className="relative z-10">{ctaText}</span>
@@ -339,7 +339,7 @@ const OfferCard = ({
 export const WebOfferSection = () => {
   const isMobile = useIsTabletOrMobile();
 
-  return <section className="py-16 md:py-32 bg-white overflow-hidden">
+  return <section className="py-16 md:py-32 section-white overflow-hidden">
       <div className="container max-w-6xl mx-auto px-4">
         {/* Section Title */}
         <motion.div initial={{
@@ -362,25 +362,18 @@ export const WebOfferSection = () => {
         }} transition={{
           duration: 0.5,
           delay: 0.1
-        }} className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full glass-card mb-4 md:mb-6" style={{
-          background: "rgba(45,40,77,0.05)"
-        }}>
-            <span className="text-xs md:text-sm font-medium" style={{
-            color: "#2D284D"
-          }}>
-              💎 Offres sur mesure
+           }} className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full glass-card mb-4 md:mb-6" style={{
+           background: "rgba(45,40,77,0.05)"
+         }}>
+             <span className="text-xs md:text-sm font-medium text-foreground">
+               💎 Offres sur mesure
             </span>
           </motion.div>
           
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-display-lg font-display font-bold mb-3 md:mb-4" style={{
-          color: "#2D284D"
-        }}>
-            Nos offres web.
-          </h2>
-          <p className="text-sm sm:text-base md:text-xl max-w-2xl mx-auto" style={{
-          color: "#2D284D",
-          opacity: 0.7
-        }}>
+           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-display-lg font-display font-bold mb-3 md:mb-4 text-foreground">
+             Nos offres web.
+           </h2>
+           <p className="text-sm sm:text-base md:text-xl max-w-2xl mx-auto text-muted-foreground">
             Deux formats adaptés à vos objectifs,
             <br className="hidden md:block" />
             une même <strong style={{

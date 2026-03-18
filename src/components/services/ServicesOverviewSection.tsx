@@ -57,7 +57,7 @@ const containerVariants = {
 export const ServicesOverviewSection = () => {
   const [hoveredService, setHoveredService] = useState<string | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
-  return <section className="py-20 md:py-32 bg-gradient-to-b from-gray-50 via-white to-gray-50 overflow-hidden relative">
+  return <section className="py-20 md:py-32 section-white overflow-hidden relative">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div className="absolute top-20 left-10 w-72 h-72 bg-[#C3B68F]/10 rounded-full blur-3xl" animate={{
@@ -106,7 +106,7 @@ export const ServicesOverviewSection = () => {
             <span className="text-sm font-medium text-[#C3B68F]">Nos expertises</span>
           </motion.div>
           
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
              Nos services de{" "}
             <span className="relative">
               <span className="text-gradient-gold">création web.</span>
@@ -123,7 +123,7 @@ export const ServicesOverviewSection = () => {
             </span>
           </h2>
           
-          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Une approche complète pour concevoir des expériences web 
             qui convertissent et marquent les esprits.
           </p>
@@ -159,10 +159,10 @@ export const ServicesOverviewSection = () => {
             y: -8
           }}>
                 {/* Card background */}
-                <div className={`
-                    absolute inset-0 transition-all duration-500
-                    ${isHovered ? "bg-gray-900" : "bg-white border border-gray-100"}
-                  `} />
+                 <div className={`
+                     absolute inset-0 transition-all duration-500
+                     ${isHovered ? "bg-[hsl(var(--foreground))]" : "bg-card border border-border"}
+                   `} />
                 
                 {/* Gradient overlay on hover */}
                 <motion.div className={`absolute inset-0 bg-gradient-to-br ${service.gradient}`} initial={{
@@ -177,10 +177,10 @@ export const ServicesOverviewSection = () => {
                 <div className={`relative z-10 p-6 md:p-8 ${isLarge ? "lg:p-10" : ""}`}>
                   <div className="flex items-start justify-between mb-8">
                     {/* Number */}
-                    <motion.span className={`
-                        font-display text-5xl md:text-6xl font-bold transition-colors duration-300
-                        ${isHovered ? "text-white/20" : "text-gray-100"}
-                      `} animate={{
+                     <motion.span className={`
+                         font-display text-5xl md:text-6xl font-bold transition-colors duration-300
+                         ${isHovered ? "text-background/20" : "text-muted/50"}
+                       `} animate={{
                   scale: isHovered ? 1.1 : 1,
                   x: isHovered ? 10 : 0
                 }} transition={{
@@ -190,10 +190,10 @@ export const ServicesOverviewSection = () => {
                     </motion.span>
                     
                     {/* Icon */}
-                    <motion.div className={`
-                        transition-all duration-300
-                        ${isHovered ? "text-[#C3B68F]" : "text-gray-600"}
-                      `} animate={{
+                     <motion.div className={`
+                         transition-all duration-300
+                         ${isHovered ? "text-[#C3B68F]" : "text-muted-foreground"}
+                       `} animate={{
                   rotate: isHovered ? 12 : 0,
                   scale: isHovered ? 1.25 : 1
                 }} transition={{
@@ -205,10 +205,10 @@ export const ServicesOverviewSection = () => {
 
                   {/* Title & Description */}
                   <div className="mb-6">
-                    <h3 className={`
-                        font-display text-2xl md:text-3xl font-bold transition-colors duration-300 leading-tight
-                        ${isHovered ? "text-white" : "text-gray-900"}
-                      `}>
+                     <h3 className={`
+                         font-display text-2xl md:text-3xl font-bold transition-colors duration-300 leading-tight
+                         ${isHovered ? "text-background" : "text-foreground"}
+                       `}>
                       {service.title}
                     </h3>
                     <span className={`
@@ -219,10 +219,10 @@ export const ServicesOverviewSection = () => {
                     </span>
                     
                     {/* Description */}
-                    <p className={`
-                        mt-4 text-sm md:text-base leading-relaxed transition-colors duration-300
-                        ${isHovered ? "text-gray-300" : "text-gray-500"}
-                      `}>
+                     <p className={`
+                         mt-4 text-sm md:text-base leading-relaxed transition-colors duration-300
+                         ${isHovered ? "text-background/70" : "text-muted-foreground"}
+                       `}>
                       {service.description}
                     </p>
                   </div>
@@ -275,12 +275,12 @@ export const ServicesOverviewSection = () => {
                     <span className="text-xs font-medium text-[#C3B68F] uppercase tracking-wider">En résumé</span>
                   </div>
                   
-                  <h3 className="font-display text-xl md:text-2xl font-bold text-white mb-3 leading-tight">
+                  <h3 className="font-display text-xl md:text-2xl font-bold text-background mb-3 leading-tight">
                     Un accompagnement complet,{" "}
                     <span className="text-[#C3B68F]">de la stratégie à la conversion</span>
                   </h3>
                   
-                  <p className="text-gray-400 text-sm md:text-base leading-relaxed mb-6">
+                  <p className="text-background/60 text-sm md:text-base leading-relaxed mb-6">
                     Des outils de croissance pensés pour clarifier votre message et transformer vos visiteurs en clients.
                   </p>
                 </div>
@@ -299,21 +299,21 @@ export const ServicesOverviewSection = () => {
                 }, {
                   value: "24h",
                   label: "Réponse"
-                }].map((stat, index) => <motion.div key={index} className="text-center p-3 rounded-xl bg-white/5 border border-white/10" whileHover={{
-                  scale: 1.05,
-                  backgroundColor: "rgba(255,255,255,0.08)"
-                }}>
+                 }].map((stat, index) => <motion.div key={index} className="text-center p-3 rounded-xl bg-background/5 border border-background/10" whileHover={{
+                   scale: 1.05,
+                   backgroundColor: "rgba(255,255,255,0.08)"
+                 }}>
                       <div className="font-display text-xl md:text-2xl font-bold text-[#C3B68F]">
                         {stat.value}
                       </div>
-                      <div className="text-xs text-gray-400">
-                        {stat.label}
-                      </div>
+                       <div className="text-xs text-background/60">
+                         {stat.label}
+                       </div>
                     </motion.div>)}
                 </div>
                 
                 {/* CTA */}
-                <a href="/contact" className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full font-semibold text-sm text-gray-900 transition-all duration-300 hover:gap-3 hover:shadow-lg hover:shadow-[#C3B68F]/25 w-full" style={{
+                <a href="/contact" className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full font-semibold text-sm text-foreground transition-all duration-300 hover:gap-3 hover:shadow-lg hover:shadow-[#C3B68F]/25 w-full" style={{
                 background: "linear-gradient(135deg, #DCCB99 0%, #C3B68F 100%)"
               }}>
                   Discuter de votre projet

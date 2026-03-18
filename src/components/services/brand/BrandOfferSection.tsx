@@ -34,7 +34,7 @@ const itemVariants = {
 
 export const BrandOfferSection = () => {
   return (
-    <section className="py-20 md:py-28 bg-white overflow-hidden">
+    <section className="py-20 md:py-28 section-white overflow-hidden">
       <div className="container max-w-5xl mx-auto px-4">
         {/* Section Title */}
         <motion.div
@@ -44,13 +44,12 @@ export const BrandOfferSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12 md:mb-16"
         >
-          <h2
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-display-lg font-display font-bold mb-4"
-            style={{ color: "#2D284D" }}
-          >
+           <h2
+             className="text-2xl sm:text-3xl md:text-4xl lg:text-display-lg font-display font-bold mb-4 text-foreground"
+           >
             Notre offre.
           </h2>
-          <p className="text-sm sm:text-base md:text-xl max-w-2xl mx-auto" style={{ color: "#2D284D", opacity: 0.7 }}>
+          <p className="text-sm sm:text-base md:text-xl max-w-2xl mx-auto text-muted-foreground">
             Un pack complet pour construire une identité
             <br className="hidden md:block" />
             <strong style={{ color: "#C3B68F" }}>unique et mémorable</strong>
@@ -100,7 +99,7 @@ export const BrandOfferSection = () => {
           </motion.div>
 
           <div
-            className="group relative flex flex-col md:flex-row gap-8 md:gap-12 items-stretch p-8 md:p-12 rounded-3xl border-2 bg-white transition-all duration-500 hover:shadow-[0_0_60px_-15px_#C3B68F]"
+            className="group relative flex flex-col md:flex-row gap-8 md:gap-12 items-stretch p-8 md:p-12 rounded-3xl border-2 bg-card transition-all duration-500 hover:shadow-[0_0_60px_-15px_#C3B68F]"
             style={{ borderColor: "#C3B68F" }}
           >
             {/* Left Column - Title and Description */}
@@ -122,14 +121,13 @@ export const BrandOfferSection = () => {
               </motion.span>
 
               {/* Title */}
-              <motion.h3
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6 leading-tight"
-                style={{ color: "#2D284D" }}
-              >
+               <motion.h3
+                 initial={{ opacity: 0, y: 20 }}
+                 whileInView={{ opacity: 1, y: 0 }}
+                 viewport={{ once: true }}
+                 transition={{ duration: 0.6, delay: 0.3 }}
+                 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6 leading-tight text-foreground"
+               >
                 Logo & identité
                 <br />
                 <span
@@ -146,9 +144,8 @@ export const BrandOfferSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="mb-6 text-lg md:text-xl leading-relaxed"
-                style={{ color: "#2D284D", opacity: 0.8 }}
-              >
+                 className="mb-6 text-lg md:text-xl leading-relaxed text-muted-foreground"
+               >
                 Une identité visuelle professionnelle pour être reconnu
                 et inspirer <strong style={{ color: "#C3B68F" }}>confiance au premier regard</strong>.
               </motion.p>
@@ -161,8 +158,8 @@ export const BrandOfferSection = () => {
                 transition={{ duration: 0.6, delay: 0.45 }}
                 className="mb-8"
               >
-                <span className="text-sm" style={{ color: "#2D284D", opacity: 0.6 }}>
-                  dès
+                 <span className="text-sm text-muted-foreground">
+                   dès
                 </span>
                 <span
                   className="ml-2 text-4xl md:text-5xl font-display font-bold"
@@ -233,7 +230,7 @@ export const BrandOfferSection = () => {
                         filter: "drop-shadow(0 0 4px rgba(195, 182, 143, 0.5))"
                       }}
                     />
-                    <span style={{ color: "#2D284D" }}>
+                    <span className="text-foreground">
                       <strong>{item.text}</strong>{" "}
                       <span style={{ opacity: 0.7 }}>{item.highlight}</span>
                     </span>

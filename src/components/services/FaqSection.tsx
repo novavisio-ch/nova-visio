@@ -116,11 +116,11 @@ const FaqItem = ({ item, index, isOpen, onToggle, isMobile }: FaqItemProps) => {
         } : undefined}
         viewport={isMobile ? { once: true, margin: "-30px" } : undefined}
         transition={{ duration: 0.3 }}
-        style={{
-          background: isOpen 
-            ? "linear-gradient(135deg, rgba(255,255,255,0.98), rgba(195, 182, 143, 0.05))" 
-            : "rgba(255,255,255,0.6)",
-        }}
+         style={{
+           background: isOpen 
+             ? "linear-gradient(135deg, hsl(var(--card)), rgba(195, 182, 143, 0.05))" 
+             : "hsl(var(--card))",
+         }}
       >
         {/* Question button */}
         <button
@@ -146,10 +146,10 @@ const FaqItem = ({ item, index, isOpen, onToggle, isMobile }: FaqItemProps) => {
           </motion.div>
 
           {/* Question text */}
-          <span
-            className="flex-1 font-bricolage text-sm md:text-lg font-medium transition-colors duration-300"
-            style={{ color: isOpen ? "#C3B68F" : "#2D284D" }}
-          >
+           <span
+             className="flex-1 font-bricolage text-sm md:text-lg font-medium transition-colors duration-300"
+             style={{ color: isOpen ? "#C3B68F" : "hsl(var(--foreground))" }}
+           >
             {item.question}
           </span>
 
@@ -198,10 +198,9 @@ const FaqItem = ({ item, index, isOpen, onToggle, isMobile }: FaqItemProps) => {
                     transition={{ duration: 0.4, delay: 0.2 }}
                   />
                   
-                  <p
-                    className="text-sm md:text-base leading-relaxed"
-                    style={{ color: "rgba(45, 40, 77, 0.8)" }}
-                  >
+                   <p
+                     className="text-sm md:text-base leading-relaxed text-muted-foreground"
+                   >
                     {item.answer}
                   </p>
                 </motion.div>
@@ -223,7 +222,7 @@ export const FaqSection = () => {
   };
 
   return (
-    <section className="relative py-20 md:py-28 overflow-hidden" style={{ background: "linear-gradient(180deg, #fff 0%, #faf9f7 100%)" }}>
+    <section className="relative py-20 md:py-28 overflow-hidden section-white">
       {/* Decorative background elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <motion.div
@@ -278,19 +277,17 @@ export const FaqSection = () => {
           </motion.div>
 
           {/* Title */}
-          <h2
-            className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-display-lg font-bold mb-3 md:mb-4"
-            style={{ color: "#2D284D" }}
-          >
+           <h2
+             className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-display-lg font-bold mb-3 md:mb-4 text-foreground"
+           >
              Des réponses à vos questions
             <br />
             <span className="text-gradient-gold">sur la création de site web.</span>
           </h2>
           
-          <p
-            className="max-w-2xl mx-auto text-sm sm:text-base md:text-lg"
-            style={{ color: "rgba(45, 40, 77, 0.7)" }}
-          >
+           <p
+             className="max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-muted-foreground"
+           >
             Une sélection de questions que l'on nous pose souvent avant de
             lancer un projet avec NOVA VISIO.
           </p>

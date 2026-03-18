@@ -79,16 +79,16 @@ export const ShowcaseSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="py-20 md:py-28 bg-white"
+      className="py-20 md:py-28 section-white"
     >
       <div className="container">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-display-md text-gray-900 mb-4">
+          <h2 className="text-display-md text-foreground mb-4">
              Quelques projets réalisés par{" "}
             <span className="text-gradient-gold">NOVA VISIO.</span>
           </h2>
-          <p className="text-body-md text-gray-600 max-w-2xl mx-auto">
+          <p className="text-body-md text-muted-foreground max-w-2xl mx-auto">
             Sites web, pages de vente et interfaces d'applications conçus sur mesure pour nos clients.
           </p>
         </div>
