@@ -142,7 +142,7 @@ export function PackRefonteGlobale() {
               </motion.div>
             </div>
 
-            <h3 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3">
+            <h3 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-3">
               Pack Refonte Globale
             </h3>
             <p
