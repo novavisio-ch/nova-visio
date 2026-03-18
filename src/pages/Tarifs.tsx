@@ -383,7 +383,7 @@ const ComplementaryCard = ({
               {service.price}
             </span>
           </div>
-          <p className="text-white/50 text-sm leading-relaxed">
+          <p className="text-muted-foreground text-sm leading-relaxed">
             {service.description}
           </p>
         </div>
