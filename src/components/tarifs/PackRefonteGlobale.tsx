@@ -179,7 +179,7 @@ export function PackRefonteGlobale() {
 
           {/* Target Audience */}
           <div className="mb-8 md:mb-10">
-            <h4 className="font-display text-lg md:text-xl font-bold text-white mb-5 flex items-center gap-3">
+            <h4 className="font-display text-lg md:text-xl font-bold text-foreground mb-5 flex items-center gap-3">
               <Users className="w-5 h-5 text-[#9D8DF0]" />
               À qui s'adresse ce pack ?
             </h4>
