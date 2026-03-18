@@ -213,7 +213,7 @@ export const BrandFaqSection = () => {
   };
 
   return (
-    <section className="relative py-20 md:py-28 overflow-hidden" style={{ background: "linear-gradient(180deg, #fff 0%, #faf9f7 100%)" }}>
+    <section className="relative py-20 md:py-28 overflow-hidden section-white">
       {/* Decorative background elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <motion.div
