@@ -514,11 +514,11 @@ const Tarifs = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-10 md:mb-12"
           >
-            <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
+            <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4">
               Nos packs <span className="text-[#C3B68F]">tout-en-un.</span>
             </h2>
-            <p className="text-white/50 max-w-xl mx-auto">
-              Des offres <strong className="text-white font-medium">clé en main</strong> qui combinent plusieurs services pour un accompagnement <strong className="text-[#C3B68F] font-medium">complet</strong>.
+            <p className="text-muted-foreground max-w-xl mx-auto">
+              Des offres <strong className="text-foreground font-medium">clé en main</strong> qui combinent plusieurs services pour un accompagnement <strong className="text-[#C3B68F] font-medium">complet</strong>.
             </p>
           </motion.div>
 
