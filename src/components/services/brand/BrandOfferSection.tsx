@@ -144,9 +144,8 @@ export const BrandOfferSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="mb-6 text-lg md:text-xl leading-relaxed"
-                style={{ color: "#2D284D", opacity: 0.8 }}
-              >
+                 className="mb-6 text-lg md:text-xl leading-relaxed text-muted-foreground"
+               >
                 Une identité visuelle professionnelle pour être reconnu
                 et inspirer <strong style={{ color: "#C3B68F" }}>confiance au premier regard</strong>.
               </motion.p>
