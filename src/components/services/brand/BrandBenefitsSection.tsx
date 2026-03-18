@@ -72,7 +72,7 @@ export const BrandBenefitsSection = () => {
           viewport={{ once: true, margin: "-100px" }}
           variants={headerVariants}
         >
-          <h2 className="text-display-md text-gray-900 mb-4">
+          <h2 className="text-display-md text-foreground mb-4">
              Vos bénéfices avec une{" "}
             <span className="text-gradient-gold">identité visuelle claire.</span>
           </h2>
