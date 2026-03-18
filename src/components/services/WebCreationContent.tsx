@@ -5,7 +5,7 @@ import { LogosSection } from "@/components/home/LogosSection";
 
 export const WebCreationContent = () => {
   return (
-    <section className="bg-white py-20 lg:py-28">
+    <section className="bg-card py-20 lg:py-28">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Image Column - Left */}
