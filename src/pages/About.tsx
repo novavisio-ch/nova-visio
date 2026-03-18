@@ -148,7 +148,7 @@ const About = () => {
             transition: {
               duration: 0.3
             }
-          }} className={`p-4 sm:p-5 md:p-6 rounded-2xl md:rounded-3xl border border-border/30 backdrop-blur-sm cursor-pointer transition-colors duration-300 hover:border-primary/40 group ${index === 0 ? "bg-gradient-to-br from-[#2a2550]/80 to-[#1a1535]/60" : index === 1 ? "bg-gradient-to-br from-[#252040]/80 to-[#15122a]/60" : index === 2 ? "bg-gradient-to-br from-[#1f1a3d]/80 to-[#12101f]/60" : "bg-gradient-to-br from-[#2d2855]/80 to-[#1c1838]/60"}`}>
+          }} className="p-4 sm:p-5 md:p-6 rounded-2xl md:rounded-3xl border border-border/30 backdrop-blur-sm cursor-pointer transition-colors duration-300 hover:border-primary/40 group card-glass-surface">
                 <motion.div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl flex items-center justify-center mb-3 md:mb-4" whileHover={{
               rotate: 360,
               transition: {
