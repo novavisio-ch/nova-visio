@@ -67,17 +67,14 @@ export function Navbar() {
     >
       <nav className="w-full px-4 md:px-6 lg:px-12 flex items-center justify-between">
         {/* Logo - Left */}
-        <Link to="/" className="text-white hover:text-[#c1b58e] transition-colors flex-shrink-0">
+        <Link to="/" className="hover:opacity-80 transition-opacity flex-shrink-0">
           <img
             src={novavisioLogo}
             alt="NOVA VISIO"
-            className="h-7 md:h-10 w-auto"
-            style={{ filter: "brightness(0) invert(1)" }}
-            onMouseEnter={(e) =>
-              (e.currentTarget.style.filter =
-                "brightness(0) saturate(100%) invert(76%) sepia(14%) saturate(746%) hue-rotate(9deg) brightness(91%) contrast(88%)")
-            }
-            onMouseLeave={(e) => (e.currentTarget.style.filter = "brightness(0) invert(1)")}
+            className="h-7 md:h-10 w-auto transition-all duration-300"
+            style={{ filter: logoFilter }}
+            onMouseEnter={(e) => (e.currentTarget.style.filter = logoHoverFilter)}
+            onMouseLeave={(e) => (e.currentTarget.style.filter = logoFilter)}
           />
         </Link>
 
