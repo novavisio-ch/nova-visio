@@ -119,7 +119,7 @@ export const MaintenanceCard = () => {
         </motion.div>
 
         <p className="text-xs text-muted-foreground mb-6">
-          Sans engagement — résiliable à tout moment
+          Sans engagement - résiliable à tout moment
         </p>
 
         {/* Features */}

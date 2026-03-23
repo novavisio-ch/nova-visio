@@ -79,7 +79,7 @@ const BlogArticleSiteVitrineLanding = () => {
                 ))}
               </ul>
               <div className="article-callout p-6 border-l-4 border-primary mb-6">
-                <p className="text-sm text-muted-foreground italic">👉 Objectif principal : obtenir une action précise — appel, formulaire, devis, inscription, téléchargement d'un guide.</p>
+                <p className="text-sm text-muted-foreground italic">👉 Objectif principal : obtenir une action précise - appel, formulaire, devis, inscription, téléchargement d'un guide.</p>
               </div>
               <p className="text-lg text-muted-foreground leading-relaxed mb-2 font-semibold">👉 Idéal pour :</p>
               <ul className="space-y-3 mb-6">

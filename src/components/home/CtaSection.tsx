@@ -21,7 +21,7 @@ export function CtaSection() {
           <p className="text-body text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed mb-8 md:mb-10 text-muted-foreground max-w-xl mx-auto text-center">
             Réservez un appel découverte gratuit de 15 minutes.
             On fait le point sur votre situation et on vous propose
-            une solution concrète — sans engagement.
+            une solution concrète - sans engagement.
           </p>
 
           {/* CTA Buttons */}
