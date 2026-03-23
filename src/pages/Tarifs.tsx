@@ -103,8 +103,8 @@ const mainServices = [{
     text: "Fichiers",
     highlight: "prêts à l'emploi"
   }],
-  cta: "Découvrir l'offre",
-  link: "/identite-visuelle"
+  cta: "Démarrer ce projet",
+  link: "/contact?sujet=identite-visuelle"
 }];
 const complementaryServices = [{
   id: "tunnels",
