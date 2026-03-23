@@ -31,12 +31,7 @@ export function Navbar() {
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const location = useLocation();
-  const { theme } = useTheme();
-  const isLight = theme === "light";
-
-  const logoFilter = isLight
-    ? "brightness(0) saturate(100%) invert(20%) sepia(15%) saturate(800%) hue-rotate(220deg) brightness(95%) contrast(90%)"
-    : "brightness(0) invert(1)";
+  const logoFilter = "brightness(0) invert(1)";
   const logoHoverFilter = "brightness(0) saturate(100%) invert(76%) sepia(14%) saturate(746%) hue-rotate(9deg) brightness(91%) contrast(88%)";
 
   useEffect(() => {
