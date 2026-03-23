@@ -1,12 +1,5 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Check } from "lucide-react";
-
-const reassurances = [
-  "Aucun engagement obligatoire à la fin de l'échange.",
-  "Un regard structuré sur votre situation actuelle.",
-  "Des pistes concrètes pour avancer sereinement.",
-];
 
 export function CtaSection() {
   return (
@@ -26,30 +19,27 @@ export function CtaSection() {
 
           {/* Subtitle */}
           <p className="text-body text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed mb-8 md:mb-10 text-muted-foreground max-w-xl mx-auto text-center">
-            Vous avez un projet ou une activité, mais votre site, votre image
-            ou vos réseaux ne reflètent pas encore votre valeur. Prenons un moment
-            pour faire le point, calmement, et voir ce qui peut être simplifié.
+            Réservez un appel découverte gratuit de 15 minutes.
+            On fait le point sur votre situation et on vous propose
+            une solution concrète — sans engagement.
           </p>
 
-          {/* Reassurance bullets */}
-          <ul className="space-y-3 md:space-y-4 mb-8 md:mb-10 inline-block text-left">
-            {reassurances.map((item, index) => (
-              <li key={index} className="flex items-center gap-2 md:gap-3">
-                <Check className="w-4 h-4 md:w-5 md:h-5 text-primary flex-shrink-0" />
-                <span className="text-muted-foreground text-sm md:text-base">{item}</span>
-              </li>
-            ))}
-          </ul>
-
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 mb-4">
             <Button asChild variant="gold" size="lg" className="w-full sm:w-auto">
-              <Link to="/contact">Parler de votre projet</Link>
+              <Link to="/contact?sujet=appel-decouverte">
+                Réserver un appel gratuit →
+              </Link>
             </Button>
             <Button asChild variant="gold-outline" size="lg" className="w-full sm:w-auto">
-              <a href="mailto:contact@novavisio.ch">Nous écrire par mail</a>
+              <Link to="/tarifs">Voir nos tarifs →</Link>
             </Button>
           </div>
+
+          {/* Phone number */}
+          <p className="text-xs sm:text-sm text-muted-foreground">
+            📞 Ou appelez-nous directement : +41 XX XXX XX XX
+          </p>
         </div>
       </div>
     </section>
