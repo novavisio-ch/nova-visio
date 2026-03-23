@@ -280,7 +280,7 @@ export const ServicesOverviewSection = () => {
                     <span className="text-[#C3B68F]">de la stratégie à la conversion</span>
                   </h3>
                   
-                  <p className="text-background/60 text-sm md:text-base leading-relaxed mb-6">
+                  <p className="text-white/60 text-sm md:text-base leading-relaxed mb-6">
                     Des outils de croissance pensés pour clarifier votre message et transformer vos visiteurs en clients.
                   </p>
                 </div>
