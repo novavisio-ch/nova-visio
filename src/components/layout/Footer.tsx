@@ -1,14 +1,9 @@
 import { Link } from "react-router-dom";
 import novavisioLogo from "@/assets/novavisio-logo.svg";
-import { useTheme } from "@/hooks/use-theme";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
-  const { theme } = useTheme();
-  const isLight = theme === "light";
-  const logoFilter = isLight
-    ? "brightness(0) saturate(100%) invert(20%) sepia(15%) saturate(800%) hue-rotate(220deg) brightness(95%) contrast(90%)"
-    : "brightness(0) invert(1)";
+  const logoFilter = "brightness(0) invert(1)";
   const logoHoverFilter = "brightness(0) saturate(100%) invert(76%) sepia(14%) saturate(746%) hue-rotate(9deg) brightness(91%) contrast(88%)";
 
   return <footer className="border-t border-border/30 py-8 md:py-12 mt-auto px-4">

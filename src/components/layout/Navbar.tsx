@@ -4,8 +4,6 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import novavisioLogo from "@/assets/novavisio-logo.svg";
-import { ThemeToggle } from "@/components/ThemeToggle";
-import { useTheme } from "@/hooks/use-theme";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -31,12 +29,7 @@ export function Navbar() {
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const location = useLocation();
-  const { theme } = useTheme();
-  const isLight = theme === "light";
-
-  const logoFilter = isLight
-    ? "brightness(0) saturate(100%) invert(20%) sepia(15%) saturate(800%) hue-rotate(220deg) brightness(95%) contrast(90%)"
-    : "brightness(0) invert(1)";
+  const logoFilter = "brightness(0) invert(1)";
   const logoHoverFilter = "brightness(0) saturate(100%) invert(76%) sepia(14%) saturate(746%) hue-rotate(9deg) brightness(91%) contrast(88%)";
 
   useEffect(() => {
@@ -59,9 +52,7 @@ export function Navbar() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
         isScrolled 
-          ? isLight
-            ? "py-2 md:py-3 bg-white/70 backdrop-blur-2xl border-b border-border/30 shadow-[0_4px_20px_rgba(0,0,0,0.06)]"
-            : "py-2 md:py-3 bg-card/60 backdrop-blur-2xl border-b border-white/15 shadow-[0_8px_32px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.1)]" 
+          ? "py-2 md:py-3 bg-card/60 backdrop-blur-2xl border-b border-white/15 shadow-[0_8px_32px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.1)]" 
           : "py-3 md:py-5 bg-transparent"
       )}
     >
@@ -171,9 +162,8 @@ export function Navbar() {
           </Link>
         </div>
 
-        {/* CTA Button + Theme Toggle - Right */}
+        {/* CTA Button - Right */}
         <div className="hidden lg:flex items-center gap-3 flex-shrink-0">
-          <ThemeToggle />
           <Button variant="gold" size="default" asChild>
             <Link to="/contact">Parlons de votre projet</Link>
           </Button>
@@ -283,8 +273,7 @@ export function Navbar() {
               Contact
             </Link>
 
-            <div className="flex items-center justify-between mt-3 sm:mt-4 gap-3">
-              <ThemeToggle />
+            <div className="flex items-center justify-center mt-3 sm:mt-4 gap-3">
               <Button variant="gold" size="default" className="flex-1" asChild>
                 <Link to="/contact">Parlons de votre projet</Link>
               </Button>
