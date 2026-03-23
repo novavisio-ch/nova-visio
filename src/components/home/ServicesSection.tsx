@@ -207,6 +207,7 @@ export function ServicesSection() {
             ctaLink="/site-web" 
             theme="gold"
             isMobile={isMobile}
+            price="dès 1'500 CHF"
           />
           <ServiceCard 
             title="Identité visuelle & logo" 
@@ -216,6 +217,7 @@ export function ServicesSection() {
             ctaLink="/identite-visuelle" 
             theme="purple"
             isMobile={isMobile}
+            price="dès 900 CHF"
           />
         </div>
       </div>

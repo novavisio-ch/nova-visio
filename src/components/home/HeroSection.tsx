@@ -23,8 +23,10 @@ export function HeroSection() {
           <p className="max-w-2xl mx-auto mb-8 md:mb-10 animate-fade-up font-sans text-sm sm:text-base md:text-xl lg:text-2xl font-light text-foreground-strong leading-relaxed" style={{
           animationDelay: "0.2s"
         }}>
-            Simplifiez votre présence en ligne avec NOVA VISIO : un site web clair et une identité visuelle
-            professionnelle cohérente pour que vos clients vous comprennent et achètent sans effort.
+            Vous êtes artisan, indépendant ou gérez une petite entreprise ?
+            Nova Visio crée votre site vitrine et votre identité visuelle
+            pour que vos clients vous trouvent, vous fassent confiance
+            et vous contactent — dès 1'500 CHF.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 animate-fade-up" style={{

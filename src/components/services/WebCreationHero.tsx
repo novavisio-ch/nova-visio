@@ -74,16 +74,32 @@ export function WebCreationHero() {
             ))}
           </ul>
 
+          {/* Price badge */}
+          <div
+            className="animate-fade-up mb-6 md:mb-8"
+            style={{ animationDelay: "0.22s" }}
+          >
+            <span className="inline-block px-4 py-1.5 rounded-full text-sm md:text-base font-medium" style={{
+              background: "rgba(195, 182, 143, 0.15)",
+              color: "#C3B68F",
+              border: "1px solid rgba(195, 182, 143, 0.3)"
+            }}>
+              Site vitrine dès 1'500 CHF — Livraison en 7 à 14 jours
+            </span>
+          </div>
+
           {/* CTA */}
           <div 
-            className="animate-fade-up"
+            className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 animate-fade-up"
             style={{ animationDelay: "0.25s" }}
           >
             <Button variant="gold" size="lg" asChild>
-              <Link to="/contact">
-                Discutons de votre projet
-                <ArrowRight className="w-5 h-5 ml-1" />
+              <Link to="/contact?sujet=appel-decouverte">
+                Réserver un appel gratuit →
               </Link>
+            </Button>
+            <Button variant="gold-outline" size="lg" asChild>
+              <Link to="/tarifs">Voir les tarifs →</Link>
             </Button>
           </div>
         </div>

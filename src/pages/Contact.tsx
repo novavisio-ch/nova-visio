@@ -239,6 +239,11 @@ const Contact = () => {
                   </>
                 )}
               </Button>
+
+              {/* Reassurance */}
+              <p className="text-center text-xs sm:text-sm text-muted-foreground mt-4">
+                ✓ Réponse sous 24h &nbsp;&nbsp; ✓ Sans engagement &nbsp;&nbsp; ✓ Appel en français
+              </p>
             </form>
 
             {/* What happens next */}
