@@ -121,7 +121,7 @@ function ServiceCard({
       </span>
 
       {/* Title */}
-      <h3 className="text-lg sm:text-xl md:text-display-sm lg:text-display-md text-foreground mb-2 md:mb-4 text-center leading-tight">
+      <h3 className="text-lg sm:text-xl md:text-display-sm lg:text-display-md text-foreground mb-1 md:mb-2 text-center leading-tight">
         {title.includes(" et ") ? (
           <>
             {title.split(" et ")[0]}
@@ -138,6 +138,11 @@ function ServiceCard({
           title
         )}
       </h3>
+
+      {/* Price */}
+      {price && (
+        <p className="text-sm md:text-base font-medium text-[#C3B68F] mb-2 md:mb-4">{price}</p>
+      )}
 
       {/* Description */}
       <p className="mb-4 md:mb-8 max-w-sm text-foreground-medium text-sm sm:text-base md:text-display-sm text-center leading-relaxed">
