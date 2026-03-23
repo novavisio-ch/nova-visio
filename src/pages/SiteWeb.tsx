@@ -8,6 +8,7 @@ import { PacksPromoSection } from "@/components/services/PacksPromoSection";
 import { WebStepsSection } from "@/components/services/WebStepsSection";
 import { FaqSection } from "@/components/services/FaqSection";
 import { FinalCtaSection } from "@/components/services/FinalCtaSection";
+import { MaintenanceBlock } from "@/components/services/MaintenanceBlock";
 
 const SiteWeb = () => {
   return (
@@ -35,6 +36,11 @@ const SiteWeb = () => {
 
       {/* FAQ Section */}
       <FaqSection />
+
+      {/* Maintenance Block */}
+      <MaintenanceBlock
+        text="Votre site est livré, mais votre présence en ligne ne s'arrête pas là. Mises à jour, modifications de contenu, suivi des performances — notre suivi mensuel à 89 CHF/mois prend le relais pour que votre site reste un outil efficace dans la durée."
+      />
 
       {/* Final CTA Section */}
       <FinalCtaSection />

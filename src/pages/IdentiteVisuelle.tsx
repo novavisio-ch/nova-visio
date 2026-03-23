@@ -9,6 +9,7 @@ import { BrandStepsSection } from "@/components/services/brand/BrandStepsSection
 import { BrandComplementarySection } from "@/components/services/brand/BrandComplementarySection";
 import { BrandFaqSection } from "@/components/services/brand/BrandFaqSection";
 import { BrandFinalCtaSection } from "@/components/services/brand/BrandFinalCtaSection";
+import { MaintenanceBlock } from "@/components/services/MaintenanceBlock";
 
 const IdentiteVisuelle = () => {
   return (
@@ -39,6 +40,11 @@ const IdentiteVisuelle = () => {
 
       {/* FAQ Section */}
       <BrandFaqSection />
+
+      {/* Maintenance Block */}
+      <MaintenanceBlock
+        text="Votre identité est livrée — maintenant déployez-la sans vous perdre dans les détails techniques. Notre suivi mensuel à 89 CHF/mois veille sur votre présence en ligne et vous libère pour vous concentrer sur votre métier."
+      />
 
       {/* Final CTA Section */}
       <BrandFinalCtaSection />

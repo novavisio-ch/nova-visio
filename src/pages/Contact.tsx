@@ -4,8 +4,9 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { useSearchParams } from "react-router-dom";
 import { Send, Clock, MessageSquare } from "lucide-react";
 import { motion } from "framer-motion";
 import { supabase } from "@/integrations/supabase/client";
@@ -28,6 +29,7 @@ const Contact = () => {
   const isMobile = useIsTabletOrMobile();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<Partial<Record<keyof ContactFormData, string>>>({});
+  const [searchParams] = useSearchParams();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -35,6 +37,13 @@ const Contact = () => {
     projectType: "",
     message: "",
   });
+
+  useEffect(() => {
+    const sujet = searchParams.get("sujet");
+    if (sujet) {
+      setFormData((prev) => ({ ...prev, projectType: sujet }));
+    }
+  }, [searchParams]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -196,6 +205,8 @@ const Contact = () => {
                     <SelectItem value="templates-social">Templates réseaux sociaux</SelectItem>
                     <SelectItem value="supports-print">Supports imprimés</SelectItem>
                     <SelectItem value="brand-kit">Brand kit digital</SelectItem>
+                    <SelectItem value="maintenance">Suivi & Maintenance</SelectItem>
+                    <SelectItem value="forfait-actif">Forfait Actif</SelectItem>
                     <SelectItem value="other">Autre</SelectItem>
                   </SelectContent>
                 </Select>

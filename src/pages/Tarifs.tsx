@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { PackDigitalBranding } from "@/components/tarifs/PackDigitalBranding";
 import { PackRefonteGlobale } from "@/components/tarifs/PackRefonteGlobale";
+import { MaintenanceTarifsSection } from "@/components/tarifs/MaintenanceTarifsSection";
 
 const mainServices = [{
   id: "site-vitrine",
@@ -502,6 +503,9 @@ const Tarifs = () => {
         }}>
             {mainServices.map((service, index) => <ServiceCard key={service.id} service={service} index={index} />)}
           </div>
+
+          {/* Maintenance Section */}
+          <MaintenanceTarifsSection />
 
           {/* Packs Section */}
           <motion.div
