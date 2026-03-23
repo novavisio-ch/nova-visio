@@ -9,6 +9,7 @@ import { BrandStepsSection } from "@/components/services/brand/BrandStepsSection
 import { BrandComplementarySection } from "@/components/services/brand/BrandComplementarySection";
 import { BrandFaqSection } from "@/components/services/brand/BrandFaqSection";
 import { BrandFinalCtaSection } from "@/components/services/brand/BrandFinalCtaSection";
+import { MaintenanceBlock } from "@/components/services/MaintenanceBlock";
 
 const IdentiteVisuelle = () => {
   return (
