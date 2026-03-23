@@ -12,6 +12,7 @@ import { motion } from "framer-motion";
 import { supabase } from "@/integrations/supabase/client";
 import { z } from "zod";
 import { useIsTabletOrMobile } from "@/hooks/use-mobile";
+import { ZcalEmbed } from "@/components/ZcalEmbed";
 
 // Validation schema
 const contactSchema = z.object({
