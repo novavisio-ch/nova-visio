@@ -52,9 +52,7 @@ export function Navbar() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
         isScrolled 
-          ? isLight
-            ? "py-2 md:py-3 bg-white/70 backdrop-blur-2xl border-b border-border/30 shadow-[0_4px_20px_rgba(0,0,0,0.06)]"
-            : "py-2 md:py-3 bg-card/60 backdrop-blur-2xl border-b border-white/15 shadow-[0_8px_32px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.1)]" 
+          ? "py-2 md:py-3 bg-card/60 backdrop-blur-2xl border-b border-white/15 shadow-[0_8px_32px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.1)]" 
           : "py-3 md:py-5 bg-transparent"
       )}
     >
