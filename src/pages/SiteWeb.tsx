@@ -8,6 +8,7 @@ import { PacksPromoSection } from "@/components/services/PacksPromoSection";
 import { WebStepsSection } from "@/components/services/WebStepsSection";
 import { FaqSection } from "@/components/services/FaqSection";
 import { FinalCtaSection } from "@/components/services/FinalCtaSection";
+import { MaintenanceBlock } from "@/components/services/MaintenanceBlock";
 
 const SiteWeb = () => {
   return (
