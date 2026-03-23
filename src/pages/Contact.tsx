@@ -205,6 +205,8 @@ const Contact = () => {
                     <SelectItem value="templates-social">Templates réseaux sociaux</SelectItem>
                     <SelectItem value="supports-print">Supports imprimés</SelectItem>
                     <SelectItem value="brand-kit">Brand kit digital</SelectItem>
+                    <SelectItem value="maintenance">Suivi & Maintenance</SelectItem>
+                    <SelectItem value="forfait-actif">Forfait Actif</SelectItem>
                     <SelectItem value="other">Autre</SelectItem>
                   </SelectContent>
                 </Select>

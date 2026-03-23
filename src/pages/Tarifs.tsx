@@ -504,6 +504,9 @@ const Tarifs = () => {
             {mainServices.map((service, index) => <ServiceCard key={service.id} service={service} index={index} />)}
           </div>
 
+          {/* Maintenance Section */}
+          <MaintenanceTarifsSection />
+
           {/* Packs Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
