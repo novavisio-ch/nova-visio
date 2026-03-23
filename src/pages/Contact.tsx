@@ -297,13 +297,11 @@ const Contact = () => {
 
             {/* Zcal Booking Widget */}
             <div className="mt-10 md:mt-14">
-              <h2 className="text-lg md:text-xl font-semibold text-center mb-4">
+              <h2 className="text-lg md:text-xl font-semibold text-center mb-6">
                 Ou réservez directement un <span className="text-primary">créneau</span>
               </h2>
-              <div className="glass-card p-4 md:p-6 overflow-hidden">
-                <div className="zcal-inline-widget">
-                  <a href="https://zcal.co/i/eLFAiBiU">Appel découverte - Nova Visio - Schedule a meeting</a>
-                </div>
+              <div className="zcal-inline-widget">
+                <a href="https://zcal.co/i/eLFAiBiU">Appel découverte - Nova Visio - Schedule a meeting</a>
               </div>
             </div>
           </div>
