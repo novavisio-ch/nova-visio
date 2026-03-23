@@ -37,6 +37,7 @@ interface ServiceCardProps {
   ctaLink: string;
   theme: ColorTheme;
   isMobile: boolean;
+  price?: string;
 }
 
 const themeStyles = {
