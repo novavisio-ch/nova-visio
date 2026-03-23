@@ -161,7 +161,7 @@ export const ServicesOverviewSection = () => {
                 {/* Card background */}
                  <div className={`
                      absolute inset-0 transition-all duration-500
-                     ${isHovered ? "bg-[hsl(var(--foreground))]" : "bg-card border border-border"}
+                     ${isHovered ? "bg-[#1f1a3d]" : "bg-card border border-border"}
                    `} />
                 
                 {/* Gradient overlay on hover */}
@@ -179,7 +179,7 @@ export const ServicesOverviewSection = () => {
                     {/* Number */}
                      <motion.span className={`
                          font-display text-5xl md:text-6xl font-bold transition-colors duration-300
-                         ${isHovered ? "text-background/20" : "text-muted/50"}
+                         ${isHovered ? "text-white/20" : "text-foreground/15"}
                        `} animate={{
                   scale: isHovered ? 1.1 : 1,
                   x: isHovered ? 10 : 0
@@ -207,7 +207,7 @@ export const ServicesOverviewSection = () => {
                   <div className="mb-6">
                      <h3 className={`
                          font-display text-2xl md:text-3xl font-bold transition-colors duration-300 leading-tight
-                         ${isHovered ? "text-background" : "text-foreground"}
+                         ${isHovered ? "text-white" : "text-foreground"}
                        `}>
                       {service.title}
                     </h3>
@@ -221,7 +221,7 @@ export const ServicesOverviewSection = () => {
                     {/* Description */}
                      <p className={`
                          mt-4 text-sm md:text-base leading-relaxed transition-colors duration-300
-                         ${isHovered ? "text-background/70" : "text-muted-foreground"}
+                         ${isHovered ? "text-white/70" : "text-muted-foreground"}
                        `}>
                       {service.description}
                     </p>
@@ -275,12 +275,12 @@ export const ServicesOverviewSection = () => {
                     <span className="text-xs font-medium text-[#C3B68F] uppercase tracking-wider">En résumé</span>
                   </div>
                   
-                  <h3 className="font-display text-xl md:text-2xl font-bold text-background mb-3 leading-tight">
+                  <h3 className="font-display text-xl md:text-2xl font-bold text-white mb-3 leading-tight">
                     Un accompagnement complet,{" "}
                     <span className="text-[#C3B68F]">de la stratégie à la conversion</span>
                   </h3>
                   
-                  <p className="text-background/60 text-sm md:text-base leading-relaxed mb-6">
+                  <p className="text-white/60 text-sm md:text-base leading-relaxed mb-6">
                     Des outils de croissance pensés pour clarifier votre message et transformer vos visiteurs en clients.
                   </p>
                 </div>
@@ -299,14 +299,14 @@ export const ServicesOverviewSection = () => {
                 }, {
                   value: "24h",
                   label: "Réponse"
-                 }].map((stat, index) => <motion.div key={index} className="text-center p-3 rounded-xl bg-background/5 border border-background/10" whileHover={{
+                 }].map((stat, index) => <motion.div key={index} className="text-center p-3 rounded-xl bg-white/5 border border-white/10" whileHover={{
                    scale: 1.05,
                    backgroundColor: "rgba(255,255,255,0.08)"
                  }}>
                       <div className="font-display text-xl md:text-2xl font-bold text-[#C3B68F]">
                         {stat.value}
                       </div>
-                       <div className="text-xs text-background/60">
+                       <div className="text-xs text-white/60">
                          {stat.label}
                        </div>
                     </motion.div>)}
