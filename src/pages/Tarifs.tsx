@@ -71,8 +71,8 @@ const mainServices = [{
     text: "Responsive sur",
     highlight: "tous écrans"
   }],
-  cta: "Découvrir l'offre",
-  link: "/site-web"
+  cta: "Démarrer ce projet",
+  link: "/contact?sujet=landing-page"
 }, {
   id: "identite-visuelle",
   icon: Palette,
