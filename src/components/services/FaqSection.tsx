@@ -6,7 +6,7 @@ import { useIsTabletOrMobile } from "@/hooks/use-mobile";
 const faqItems = [
   {
     question: "Combien de temps faut‑il pour créer un site web ?",
-    answer: "La durée dépend de la taille du site et du niveau de préparation de votre contenu. En moyenne, un site vitrine simple demande entre 4 et 8 semaines, de la clarification du projet jusqu'à la mise en ligne.",
+    answer: "En moyenne, un site vitrine est livré en 7 à 14 jours, de la clarification du projet jusqu'à la mise en ligne. Ce délai peut varier légèrement selon la complexité et la rapidité de vos retours.",
   },
   {
     question: "Est‑ce que je dois déjà avoir mon logo et mon identité visuelle ?",
@@ -18,7 +18,7 @@ const faqItems = [
   },
   {
     question: "Est‑ce que vous vous occupez de l'hébergement et du nom de domaine ?",
-    answer: "Nous pouvons vous conseiller sur le choix de l'hébergeur et du nom de domaine, et vous aider à les configurer. L'hébergement et le nom de domaine restent à votre nom, pour que vous gardiez le contrôle sur vos accès.",
+    answer: "Oui, l'hébergement et la gestion du nom de domaine sont inclus dans notre offre de suivi mensuel. Tout est géré pour vous, sans que vous ayez à vous en occuper.",
   },
   {
     question: "Est‑ce que le site sera adapté au mobile ?",
@@ -30,11 +30,11 @@ const faqItems = [
   },
   {
     question: "Proposez‑vous des paiements en plusieurs fois ?",
-    answer: "Oui, selon le montant du projet, il est possible de répartir le paiement en plusieurs étapes (par exemple : acompte au lancement, paiement intermédiaire, solde à la mise en ligne).",
+    answer: "Oui, selon le montant du projet, il est possible de répartir le paiement en plusieurs étapes (par exemple : acompte au lancement, solde à la mise en ligne).",
   },
   {
     question: "Que se passe‑t‑il si j'ai déjà un site, mais que je veux le refondre ?",
-    answer: "Nous analysons d'abord votre site actuel (structure, contenus, performance, image), puis nous décidons ensemble s'il est plus pertinent de partir d'une base existante ou de repartir sur une nouvelle structure plus claire.",
+    answer: "Nous analysons d'abord votre site actuel (structure, contenus, performance, image), puis nous décidons ensemble s'il est plus pertinent de partir d'une base existante ou de repartir sur une nouvelle structure plus claire. Le délai reste similaire : 7 à 14 jours.",
   },
   {
     question: "Est‑ce que vous vous occupez aussi du SEO ?",
@@ -42,7 +42,7 @@ const faqItems = [
   },
   {
     question: "Comment se passe le suivi après la mise en ligne ?",
-    answer: "Après la mise en ligne, une phase d'ajustements est prévue. Nous pouvons ensuite mettre en place un accompagnement ponctuel ou régulier pour faire évoluer votre site, ajouter des pages ou améliorer certains parcours au fil du temps.",
+    answer: "Après la mise en ligne, une phase d'ajustements est prévue. Notre suivi mensuel à 89 CHF/mois prend ensuite le relais : mises à jour, modifications de contenu, sauvegardes et support réactif sous 48h.",
   },
 ];
 
