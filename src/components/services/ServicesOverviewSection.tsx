@@ -179,7 +179,7 @@ export const ServicesOverviewSection = () => {
                     {/* Number */}
                      <motion.span className={`
                          font-display text-5xl md:text-6xl font-bold transition-colors duration-300
-                         ${isHovered ? "text-background/20" : "text-muted/50"}
+                         ${isHovered ? "text-white/20" : "text-foreground/15"}
                        `} animate={{
                   scale: isHovered ? 1.1 : 1,
                   x: isHovered ? 10 : 0
