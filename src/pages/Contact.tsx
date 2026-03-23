@@ -300,9 +300,7 @@ const Contact = () => {
               <h2 className="text-lg md:text-xl font-semibold text-center mb-6">
                 Ou réservez directement un <span className="text-primary">créneau</span>
               </h2>
-              <div className="zcal-inline-widget">
-                <a href="https://zcal.co/i/eLFAiBiU">Appel découverte - Nova Visio - Schedule a meeting</a>
-              </div>
+              <ZcalEmbed />
             </div>
           </div>
         </div>
