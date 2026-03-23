@@ -39,8 +39,8 @@ const mainServices = [{
     text: "12 mois de",
     highlight: "support inclus"
   }],
-  cta: "Découvrir l'offre",
-  link: "/site-web"
+  cta: "Démarrer ce projet",
+  link: "/contact?sujet=site-vitrine"
 }, {
   id: "landing-page",
   icon: Rocket,
