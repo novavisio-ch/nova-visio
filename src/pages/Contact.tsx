@@ -29,6 +29,7 @@ const Contact = () => {
   const isMobile = useIsTabletOrMobile();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<Partial<Record<keyof ContactFormData, string>>>({});
+  const [searchParams] = useSearchParams();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -36,6 +37,13 @@ const Contact = () => {
     projectType: "",
     message: "",
   });
+
+  useEffect(() => {
+    const sujet = searchParams.get("sujet");
+    if (sujet) {
+      setFormData((prev) => ({ ...prev, projectType: sujet }));
+    }
+  }, [searchParams]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
