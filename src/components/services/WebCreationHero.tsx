@@ -84,7 +84,7 @@ export function WebCreationHero() {
               color: "#C3B68F",
               border: "1px solid rgba(195, 182, 143, 0.3)"
             }}>
-              Site vitrine dès 1'500 CHF — Livraison en 7 à 14 jours
+              Site vitrine dès 1'500 CHF - Livraison en 7 à 14 jours
             </span>
           </div>
 

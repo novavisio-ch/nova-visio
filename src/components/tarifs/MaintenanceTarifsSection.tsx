@@ -43,7 +43,7 @@ export const MaintenanceTarifsSection = () => {
           </span>
         </h2>
         <p className="text-muted-foreground max-w-xl mx-auto">
-          Votre site est en ligne — maintenant il faut qu'il continue à
+          Votre site est en ligne - maintenant il faut qu'il continue à
           travailler pour vous. Notre suivi mensuel s'en charge.
         </p>
       </motion.div>
@@ -68,7 +68,7 @@ export const MaintenanceTarifsSection = () => {
           <strong className="text-foreground font-medium">
             Actif à 149 CHF/mois
           </strong>{" "}
-          est disponible — inclut 3h de modifications mensuelles, mise à jour de
+          est disponible - inclut 3h de modifications mensuelles, mise à jour de
           contenu et support prioritaire sous 24h.
         </p>
         <Link
