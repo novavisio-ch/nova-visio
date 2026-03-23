@@ -234,7 +234,7 @@ const Contact = () => {
                   "Envoi en cours..."
                 ) : (
                   <>
-                    Envoyer mon message
+                    Envoyer ma demande
                     <Send className="w-4 h-4 md:w-5 md:h-5 ml-2" />
                   </>
                 )}
