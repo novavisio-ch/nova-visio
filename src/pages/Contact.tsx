@@ -124,10 +124,12 @@ const Contact = () => {
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-2xl sm:text-3xl md:text-display-lg lg:text-display-xl mb-4 md:mb-6 leading-tight">
-              Parlons de votre <span className="text-gradient-gold">projet.</span>
+              Réservons <span className="text-gradient-gold">15 minutes.</span>
             </h1>
-            <p className="text-sm sm:text-base md:text-body-lg text-muted-foreground leading-relaxed">
-              Nous sommes là pour écouter et vous proposer des pistes concrètes.
+            <p className="text-sm sm:text-base md:text-body-lg text-muted-foreground leading-relaxed max-w-xl mx-auto">
+              Un appel gratuit pour faire le point sur votre situation
+              et voir si on peut travailler ensemble.
+              Pas de discours commercial, juste une conversation utile.
             </p>
           </div>
         </div>
@@ -193,22 +195,16 @@ const Contact = () => {
                   <SelectTrigger className="bg-input/50 border-border/50 focus:border-primary text-foreground text-sm md:text-base">
                     <SelectValue placeholder="Sélectionnez un type de projet" />
                   </SelectTrigger>
-                  <SelectContent className="bg-background border-border">
-                    <SelectItem value="site-vitrine">Site vitrine</SelectItem>
-                    <SelectItem value="landing-page">Landing page</SelectItem>
-                    <SelectItem value="identite-visuelle">Identité visuelle</SelectItem>
-                    <SelectItem value="pack-digital-branding">Pack Digital & Branding</SelectItem>
-                    <SelectItem value="pack-refonte-globale">Pack Refonte Globale</SelectItem>
-                    <SelectItem value="tunnel-vente">Tunnel de vente</SelectItem>
-                    <SelectItem value="blog">Blog & contenus</SelectItem>
-                    <SelectItem value="ecommerce">Boutique en ligne</SelectItem>
-                    <SelectItem value="templates-social">Templates réseaux sociaux</SelectItem>
-                    <SelectItem value="supports-print">Supports imprimés</SelectItem>
-                    <SelectItem value="brand-kit">Brand kit digital</SelectItem>
-                    <SelectItem value="maintenance">Suivi & Maintenance</SelectItem>
-                    <SelectItem value="forfait-actif">Forfait Actif</SelectItem>
-                    <SelectItem value="other">Autre</SelectItem>
-                  </SelectContent>
+                   <SelectContent className="bg-background border-border">
+                     <SelectItem value="appel-decouverte">Appel découverte gratuit (15 min)</SelectItem>
+                     <SelectItem value="site-vitrine">Site vitrine</SelectItem>
+                     <SelectItem value="landing-page">Landing page</SelectItem>
+                     <SelectItem value="identite-visuelle">Identité visuelle & logo</SelectItem>
+                     <SelectItem value="pack-digital-branding">Pack Digital & Branding</SelectItem>
+                     <SelectItem value="pack-refonte-globale">Pack Refonte Globale</SelectItem>
+                     <SelectItem value="maintenance">Suivi & Maintenance</SelectItem>
+                     <SelectItem value="other">Autre / Question</SelectItem>
+                   </SelectContent>
                 </Select>
               </div>
 
@@ -238,11 +234,16 @@ const Contact = () => {
                   "Envoi en cours..."
                 ) : (
                   <>
-                    Envoyer mon message
+                    Envoyer ma demande
                     <Send className="w-4 h-4 md:w-5 md:h-5 ml-2" />
                   </>
                 )}
               </Button>
+
+              {/* Reassurance */}
+              <p className="text-center text-xs sm:text-sm text-muted-foreground mt-4">
+                ✓ Réponse sous 24h &nbsp;&nbsp; ✓ Sans engagement &nbsp;&nbsp; ✓ Appel en français
+              </p>
             </form>
 
             {/* What happens next */}

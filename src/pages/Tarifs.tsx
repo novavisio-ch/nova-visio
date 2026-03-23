@@ -39,8 +39,8 @@ const mainServices = [{
     text: "12 mois de",
     highlight: "support inclus"
   }],
-  cta: "Découvrir l'offre",
-  link: "/site-web"
+  cta: "Démarrer ce projet",
+  link: "/contact?sujet=site-vitrine"
 }, {
   id: "landing-page",
   icon: Rocket,
@@ -71,8 +71,8 @@ const mainServices = [{
     text: "Responsive sur",
     highlight: "tous écrans"
   }],
-  cta: "Découvrir l'offre",
-  link: "/site-web"
+  cta: "Démarrer ce projet",
+  link: "/contact?sujet=landing-page"
 }, {
   id: "identite-visuelle",
   icon: Palette,
@@ -103,8 +103,8 @@ const mainServices = [{
     text: "Fichiers",
     highlight: "prêts à l'emploi"
   }],
-  cta: "Découvrir l'offre",
-  link: "/identite-visuelle"
+  cta: "Démarrer ce projet",
+  link: "/contact?sujet=identite-visuelle"
 }];
 const complementaryServices = [{
   id: "tunnels",
@@ -497,11 +497,43 @@ const Tarifs = () => {
             </motion.p>
           </motion.div>
 
+          {/* Reassurance bar */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mb-10 md:mb-14 px-4 py-4 md:py-5 rounded-xl border border-border/30 backdrop-blur-sm card-glass-surface"
+          >
+            <div className="flex items-center gap-2">
+              <span className="text-lg">🇨🇭</span>
+              <span className="text-sm text-muted-foreground">Basé en Suisse, actif en France</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-lg">⚡</span>
+              <span className="text-sm text-muted-foreground">Livraison en 7 à 14 jours</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-lg">💬</span>
+              <span className="text-sm text-muted-foreground">Appel découverte gratuit inclus</span>
+            </div>
+          </motion.div>
+
           {/* Main Services Grid */}
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-16 md:mb-20" style={{
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-6 md:mb-8" style={{
           perspective: "1200px"
         }}>
             {mainServices.map((service, index) => <ServiceCard key={service.id} service={service} index={index} />)}
+          </div>
+
+          {/* Complementary link */}
+          <div className="text-center mb-16 md:mb-20">
+            <Link
+              to="/contact?sujet=services-complementaires"
+              className="text-sm text-muted-foreground hover:text-primary transition-colors"
+            >
+              + Services complémentaires disponibles sur demande →
+            </Link>
           </div>
 
           {/* Maintenance Section */}
@@ -531,30 +563,6 @@ const Tarifs = () => {
           {/* Pack Refonte Globale */}
           <div className="mb-20 md:mb-28">
             <PackRefonteGlobale />
-          </div>
-
-          {/* Complementary Services */}
-          <motion.div initial={{
-          opacity: 0,
-          y: 20
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} viewport={{
-          once: true
-        }} transition={{
-          duration: 0.6
-        }} className="text-center mb-10 md:mb-12">
-            <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4">
-              Services complémentaires.
-            </h2>
-            <p className="text-muted-foreground max-w-xl mx-auto">
-              Des prestations additionnelles pour <strong className="text-foreground font-medium">compléter votre projet</strong> et renforcer votre image.
-            </p>
-          </motion.div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-16 md:mb-20">
-            {complementaryServices.map((service, index) => <ComplementaryCard key={service.id} service={service} index={index} />)}
           </div>
 
           {/* CTA Section */}

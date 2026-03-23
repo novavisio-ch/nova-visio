@@ -376,7 +376,7 @@ export const WebStepsSection = () => {
               transition={{ duration: 2, repeat: Infinity }}
             />
             <span className="text-foreground-strong font-medium">
-              Durée moyenne : <span style={{ color: "#C3B68F" }}>4 à 8 semaines</span>
+              Durée moyenne : <span style={{ color: "#C3B68F" }}>7 à 14 jours</span>
             </span>
             <motion.div
               className="flex items-center gap-1 text-sm"
