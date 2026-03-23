@@ -171,9 +171,8 @@ export function Navbar() {
           </Link>
         </div>
 
-        {/* CTA Button + Theme Toggle - Right */}
+        {/* CTA Button - Right */}
         <div className="hidden lg:flex items-center gap-3 flex-shrink-0">
-          <ThemeToggle />
           <Button variant="gold" size="default" asChild>
             <Link to="/contact">Parlons de votre projet</Link>
           </Button>
