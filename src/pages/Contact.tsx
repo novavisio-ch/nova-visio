@@ -124,10 +124,12 @@ const Contact = () => {
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-2xl sm:text-3xl md:text-display-lg lg:text-display-xl mb-4 md:mb-6 leading-tight">
-              Parlons de votre <span className="text-gradient-gold">projet.</span>
+              Réservons <span className="text-gradient-gold">15 minutes.</span>
             </h1>
-            <p className="text-sm sm:text-base md:text-body-lg text-muted-foreground leading-relaxed">
-              Nous sommes là pour écouter et vous proposer des pistes concrètes.
+            <p className="text-sm sm:text-base md:text-body-lg text-muted-foreground leading-relaxed max-w-xl mx-auto">
+              Un appel gratuit pour faire le point sur votre situation
+              et voir si on peut travailler ensemble.
+              Pas de discours commercial, juste une conversation utile.
             </p>
           </div>
         </div>
