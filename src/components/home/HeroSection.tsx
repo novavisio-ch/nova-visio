@@ -9,8 +9,8 @@ export function HeroSection() {
       <div className="container relative">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full glass-card mb-6 md:mb-8 animate-fade-up">
-            <Sparkles className="w-3.5 h-3.5 md:w-4 md:h-4 text-primary" />
-            <span className="text-xs md:text-body-sm text-muted-foreground">Made in Switzerland</span>
+            <span className="text-xs md:text-body-sm text-primary">✦</span>
+            <span className="text-xs md:text-body-sm text-muted-foreground">Made in Switzerland — Pour artisans, indépendants & petites entreprises</span>
           </div>
 
           <h1 className="text-2xl sm:text-3xl md:text-display-lg lg:text-display-xl mb-4 md:mb-6 animate-fade-up leading-tight" style={{
