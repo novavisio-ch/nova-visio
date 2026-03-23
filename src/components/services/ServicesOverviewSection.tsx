@@ -207,7 +207,7 @@ export const ServicesOverviewSection = () => {
                   <div className="mb-6">
                      <h3 className={`
                          font-display text-2xl md:text-3xl font-bold transition-colors duration-300 leading-tight
-                         ${isHovered ? "text-background" : "text-foreground"}
+                         ${isHovered ? "text-white" : "text-foreground"}
                        `}>
                       {service.title}
                     </h3>
