@@ -282,8 +282,7 @@ export function Navbar() {
               Contact
             </Link>
 
-            <div className="flex items-center justify-between mt-3 sm:mt-4 gap-3">
-              <ThemeToggle />
+            <div className="flex items-center justify-center mt-3 sm:mt-4 gap-3">
               <Button variant="gold" size="default" className="flex-1" asChild>
                 <Link to="/contact">Parlons de votre projet</Link>
               </Button>
