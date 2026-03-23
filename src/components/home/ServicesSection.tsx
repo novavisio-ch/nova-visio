@@ -83,7 +83,8 @@ function ServiceCard({
   ctaText,
   ctaLink,
   theme,
-  isMobile
+  isMobile,
+  price
 }: ServiceCardProps) {
   const styles = themeStyles[theme];
   const borderColor = theme === "gold" ? "#C3B68F" : "#7C6AE8";
