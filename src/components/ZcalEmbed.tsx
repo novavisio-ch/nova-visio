@@ -24,5 +24,5 @@ export const ZcalEmbed = () => {
     };
   }, []);
 
-  return <div ref={containerRef} className="w-full min-h-[600px]" />;
+  return <div ref={containerRef} className="w-full min-h-[600px] rounded-xl overflow-hidden" />;
 };
