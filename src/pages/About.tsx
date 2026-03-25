@@ -119,8 +119,10 @@ const About = () => {
                 <span className="text-xs md:text-sm font-medium text-primary uppercase tracking-wider">Vision</span>
               </div>
               <p className="text-foreground/90 leading-relaxed text-sm sm:text-base md:text-lg lg:text-xl">
-                Créer des solutions visuelles qui marquent les esprits, en offrant une approche sur-mesure, pensée et centrée sur une idée forte :{" "}
-                <span className="text-primary font-semibold">nos clients sont nos partenaires</span>.
+                Nous ne sommes pas une agence qui vous vend un site et disparaît. 
+                Chaque projet est un vrai partenariat : nous apprenons votre métier, nous comprenons vos clients, 
+                et nous créons des outils qui{" "}
+                <span className="text-primary font-semibold">vous rapportent concrètement</span>.
               </p>
             </motion.div>
 
