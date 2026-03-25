@@ -102,7 +102,7 @@ export const ShowcaseSection = () => {
           }}
         >
           <div
-            className="relative rounded-2xl md:rounded-3xl overflow-hidden border border-[#C3B68F]/20"
+            className="relative rounded-2xl md:rounded-3xl overflow-hidden"
             style={{
               boxShadow: "0 0 60px rgba(195, 182, 143, 0.15), 0 0 120px rgba(195, 182, 143, 0.05)",
             }}
