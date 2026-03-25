@@ -190,7 +190,7 @@ export function PackRefonteGlobale() {
                     whileHover={{ y: -4, boxShadow: "0 10px 30px -10px rgba(124, 106, 232, 0.25)" }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
-                    className="p-4 rounded-xl border border-[#9D8DF0]/20 hover:border-[#9D8DF0]/40 transition-colors duration-300"
+                    className="p-4 rounded-xl transition-colors duration-300"
                     style={{ background: "rgba(124, 106, 232, 0.03)" }}
                   >
                     <Icon className="w-6 h-6 text-[#9D8DF0] mb-3" />
