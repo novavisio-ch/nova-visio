@@ -108,7 +108,7 @@
 
   body {
     @apply font-body text-body antialiased;
-    background: linear-gradient(135deg, #000000 0%, #1F1A3D 100%);
+    background: #0B0B0F;
     background-attachment: fixed;
     min-height: 100vh;
     transition: background 0.6s ease;
