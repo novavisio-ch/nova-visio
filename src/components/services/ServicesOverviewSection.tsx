@@ -270,7 +270,7 @@ export const ServicesOverviewSection = () => {
               <div className="relative z-10 p-6 md:p-8 h-full flex flex-col justify-between">
                 {/* Header */}
                 <div>
-                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#C3B68F]/20 border border-[#C3B68F]/30 mb-4">
+                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#C3B68F]/20 mb-4">
                     <Sparkles className="w-3.5 h-3.5 text-[#C3B68F]" />
                     <span className="text-xs font-medium text-[#C3B68F] uppercase tracking-wider">En résumé</span>
                   </div>
