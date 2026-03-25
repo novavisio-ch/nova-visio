@@ -113,7 +113,7 @@ export const BrandComplementarySection = () => {
             </span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Des extensions pour exploiter pleinement votre nouvelle identité visuelle.
+            Pour exploiter votre nouvelle identité à fond, sans jongler entre 5 outils.
           </p>
         </motion.div>
 
