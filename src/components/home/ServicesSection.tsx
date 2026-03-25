@@ -92,7 +92,7 @@ function ServiceCard({
   
   return (
     <motion.div 
-      className={`group relative flex flex-col items-center text-center p-4 sm:p-6 md:p-8 lg:p-10 rounded-xl md:rounded-2xl bg-gradient-to-br ${styles.accentGradient} backdrop-blur-sm border`}
+      className={`group relative flex flex-col items-center text-center p-4 sm:p-6 md:p-8 lg:p-10 rounded-xl md:rounded-2xl bg-gradient-to-br ${styles.accentGradient} backdrop-blur-sm`}
       variants={cardVariants}
       initial={{ 
         opacity: 0, 
