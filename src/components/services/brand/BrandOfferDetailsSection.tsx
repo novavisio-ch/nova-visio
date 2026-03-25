@@ -274,7 +274,7 @@ export const BrandOfferDetailsSection = () => {
           variants={headerVariants}
         >
           <motion.div 
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-foreground/5 border border-border/30 backdrop-blur-sm mb-6"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-foreground/5 backdrop-blur-sm mb-6"
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           >
