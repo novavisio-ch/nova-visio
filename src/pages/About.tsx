@@ -8,19 +8,19 @@ import { ClientLocationsSection } from "@/components/about/ClientLocationsSectio
 const values = [{
   icon: Sparkles,
   title: "Clarté",
-  description: "Des solutions simples et compréhensibles."
+  description: "On dit les choses simplement. Pas de jargon, pas de blabla."
 }, {
   icon: Eye,
   title: "Structure",
-  description: "Une approche méthodique et organisée."
+  description: "Chaque décision de design a une raison. Rien n'est là par hasard."
 }, {
   icon: Feather,
   title: "Simplicité",
-  description: "L'essentiel, sans superflu."
+  description: "Moins de superflu, plus d'impact. L'essentiel, bien exécuté."
 }, {
   icon: Handshake,
   title: "Pédagogie",
-  description: "Nous vous accompagnons et vous formons."
+  description: "On vous explique tout. Vous restez maître de votre image."
 }];
 const containerVariants = {
   hidden: {
