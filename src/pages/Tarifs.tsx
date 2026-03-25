@@ -592,7 +592,7 @@ const Tarifs = () => {
             ease: "linear"
           }} />
 
-            <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+            <h3 className="font-display text-3xl md:text-3xl font-bold text-foreground mb-4">
               Vous savez ce qu'il vous faut ? <span className="text-[#C3B68F]">On en parle.</span>
             </h3>
             <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
