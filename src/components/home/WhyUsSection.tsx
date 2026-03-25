@@ -150,7 +150,6 @@ export function WhyUsSection() {
                   boxShadow: "none"
                 }}
                 whileInView={isMobile ? { 
-                  borderColor: "rgba(195, 182, 143, 0.4)",
                   boxShadow: "0 20px 40px -15px rgba(195, 182, 143, 0.3)"
                 } : undefined}
                 whileHover={!isMobile ? { 
