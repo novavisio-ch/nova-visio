@@ -30,14 +30,14 @@ export const BrandIdentityContent = () => {
             <div className="space-y-5 text-muted-foreground font-body text-lg leading-relaxed">
               <p>
                 Votre identité visuelle, c'est ce qui fait que vos clients vous reconnaissent 
-                en un coup d'œil — sur votre site, vos réseaux, vos cartes de visite. 
+                en un coup d'œil - sur votre site, vos réseaux, vos cartes de visite. 
                 Un logo seul ne suffit pas. Il faut un système cohérent qui inspire confiance 
                 avant même que vous ayez dit un mot.
               </p>
 
               <p>
                 On crée des identités conçues pour durer et s'adapter facilement à tous vos supports. 
-                Pas de gadgets, pas de tendances éphémères — une image claire et professionnelle 
+                Pas de gadgets, pas de tendances éphémères - une image claire et professionnelle 
                 que vous pouvez déployer sans nous rappeler à chaque fois.
               </p>
             </div>

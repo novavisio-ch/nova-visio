@@ -21,7 +21,7 @@ const services = [{
   id: "webdesign",
   title: "Webdesign",
   subtitle: "& UX/UI",
-  description: "Des interfaces qui ne font pas juste \"beau\" — elles sont lisibles, intuitives et pensées pour convertir.",
+  description: "Des interfaces qui ne font pas juste \"beau\" - elles sont lisibles, intuitives et pensées pour convertir.",
   icon: Layers,
   number: "03",
   gradient: "from-violet-500/20 via-purple-500/10 to-transparent"
@@ -37,7 +37,7 @@ const services = [{
   id: "conversion",
   title: "Systèmes",
   subtitle: "de conversion",
-  description: "Formulaires, tunnels, automatisations — pour que vos visiteurs ne restent pas de simples visiteurs.",
+  description: "Formulaires, tunnels, automatisations - pour que vos visiteurs ne restent pas de simples visiteurs.",
   icon: TrendingUp,
   number: "05",
   gradient: "from-emerald-500/20 via-green-500/10 to-transparent"

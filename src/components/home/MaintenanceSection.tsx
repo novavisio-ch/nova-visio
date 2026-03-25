@@ -43,7 +43,7 @@ export const MaintenanceSection = () => {
           </h2>
 
           <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-            Mises à jour, modifications, performances — on s'occupe de tout
+            Mises à jour, modifications, performances - on s'occupe de tout
             pour que votre site continue à{" "}
             <strong className="text-foreground font-medium">travailler pour vous</strong>.
           </p>

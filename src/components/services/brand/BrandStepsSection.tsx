@@ -15,7 +15,7 @@ const steps = [
   {
     number: "02",
     title: "On analyse ce qui existe",
-    description: "Votre logo actuel, vos couleurs, vos supports — on identifie ce qui marche et ce qui doit évoluer.",
+    description: "Votre logo actuel, vos couleurs, vos supports - on identifie ce qui marche et ce qui doit évoluer.",
     icon: Search,
     color: "#7C6AE8",
   },
@@ -29,7 +29,7 @@ const steps = [
   {
     number: "04",
     title: "On crée et on ajuste",
-    description: "Logo, couleurs, typos — tout prend forme. On itère ensemble jusqu'à ce que ce soit parfait.",
+    description: "Logo, couleurs, typos - tout prend forme. On itère ensemble jusqu'à ce que ce soit parfait.",
     icon: PenTool,
     color: "#7C6AE8",
   },

@@ -15,7 +15,7 @@ const steps = [
     number: "02",
     title: "On diagnostique",
     subtitle: "votre situation",
-    description: "On analyse ce qui existe — site, image, messages — et on identifie ce qui doit changer.",
+    description: "On analyse ce qui existe - site, image, messages - et on identifie ce qui doit changer.",
     icon: Search,
     color: "from-purple-500/20 to-purple-500/5",
   },

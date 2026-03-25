@@ -30,14 +30,14 @@ export const WebCreationContent = () => {
             <div className="space-y-5 text-muted-foreground font-body text-lg leading-relaxed">
               <p>
                 Vos prospects arrivent sur votre site. En 3 secondes, ils décident de rester ou de partir. 
-                Ce qui fait la différence ? Pas les animations ou les effets — mais une structure qui dit clairement 
+                Ce qui fait la différence ? Pas les animations ou les effets - mais une structure qui dit clairement 
                 <strong className="text-foreground"> qui vous êtes, ce que vous proposez, et pourquoi vous faire confiance</strong>.
               </p>
 
               <p>
                 Nous partons de votre activité, de vos vrais objectifs, et nous construisons un site 
                 où chaque page a un rôle précis : rassurer, guider, convaincre. Le design est au service du parcours, 
-                pas l'inverse. Résultat : vos visiteurs comprennent votre offre et passent à l'action — 
+                pas l'inverse. Résultat : vos visiteurs comprennent votre offre et passent à l'action - 
                 prise de contact, demande de devis, achat.
               </p>
             </div>

@@ -129,7 +129,7 @@ const Contact = () => {
             </h1>
             <p className="text-sm sm:text-base md:text-body-lg text-muted-foreground leading-relaxed max-w-xl mx-auto">
               Un appel gratuit pour faire le point sur votre situation.
-              Pas de pitch commercial — juste une conversation honnête
+              Pas de pitch commercial - juste une conversation honnête
               pour voir si on peut vous aider.
             </p>
           </div>

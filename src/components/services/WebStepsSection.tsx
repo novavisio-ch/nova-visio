@@ -17,7 +17,7 @@ const steps = [
     number: "02",
     title: "On analyse l'existant",
     description:
-      "Votre site actuel, votre concurrence, vos forces — on identifie ce qui marche et ce qui coince.",
+      "Votre site actuel, votre concurrence, vos forces - on identifie ce qui marche et ce qui coince.",
     icon: Search,
     color: "#7C6AE8",
   },
