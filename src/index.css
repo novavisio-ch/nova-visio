@@ -161,8 +161,8 @@
 
   .glass-card {
     @apply backdrop-blur-lg rounded-2xl;
-    background: hsla(252, 30%, 18%, 0.5);
-    border: 1px solid hsla(252, 30%, 35%, 0.2);
+    background: hsla(240, 18%, 9%, 0.8);
+    border: 1px solid hsla(240, 18%, 18%, 0.2);
   }
 
   .light .glass-card {
