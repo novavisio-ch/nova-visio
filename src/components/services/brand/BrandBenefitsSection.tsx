@@ -3,20 +3,20 @@ import { motion, Variants } from "framer-motion";
 
 const benefits = [
   {
-    title: "Reconnaissance immédiate",
-    description: "Vos clients vous reconnaissent en un coup d'œil, quel que soit le support."
+    title: "On vous reconnaît",
+    description: "Vos clients savent que c'est vous avant même de lire votre nom."
   },
   {
-    title: "Image professionnelle",
-    description: "Votre image inspire plus de confiance et de professionnalisme."
+    title: "Vous inspirez confiance",
+    description: "Une image pro dit \"je prends mon activité au sérieux\" — sans avoir à le dire."
   },
   {
-    title: "Gain de temps",
-    description: "Vos supports sont plus simples à créer, car les règles sont claires."
+    title: "Vous gagnez du temps",
+    description: "Fini de vous demander quelle couleur ou quelle typo utiliser. Tout est défini."
   },
   {
-    title: "Cohérence dans la durée",
-    description: "Votre communication est cohérente (site, réseaux, documents)."
+    title: "Ça reste cohérent",
+    description: "Site, réseaux, documents — même image partout, sans effort."
   }
 ];
 
