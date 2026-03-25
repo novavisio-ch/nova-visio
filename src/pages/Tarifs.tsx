@@ -77,12 +77,12 @@ const mainServices = [{
   id: "identite-visuelle",
   icon: Palette,
   title: "Identité visuelle",
-  subtitle: "Votre image de marque",
+  subtitle: "Fini le logo bricolé",
   price: "900",
   badge: "Sur-mesure",
   variant: "gold" as const,
   description: <>
-        Une identité visuelle <strong className="text-foreground font-semibold">complète et cohérente</strong> pour être <strong className="text-[#C3B68F] font-medium">reconnu et vous démarquer</strong>.
+        Logo, couleurs, typos, charte graphique - tout ce qu'il faut pour être <strong className="text-[#C3B68F] font-medium">reconnu au premier regard</strong>.
       </>,
   features: [{
     text: "Logo sur-mesure +",
