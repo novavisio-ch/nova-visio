@@ -111,7 +111,7 @@ const complementaryServices = [{
   icon: Filter,
   title: "Tunnels de vente",
   description: <>
-        Parcours guidés depuis la <strong className="text-foreground font-semibold">découverte</strong> de votre offre jusqu'à <strong className="text-[#C3B68F] font-medium">l'action</strong>.
+        Des parcours qui guident vos visiteurs de la <strong className="text-foreground font-semibold">découverte</strong> jusqu'au <strong className="text-[#C3B68F] font-medium">passage à l'action</strong>.
       </>,
   price: "Sur devis"
 }, {
