@@ -93,7 +93,7 @@ export function PacksPromoSection() {
                   !isMobile
                     ? {
                         y: -8,
-                        borderColor: styles.borderColor,
+                        borderColor: "transparent",
                         boxShadow: `0 0 40px -10px ${styles.shadow}`,
                       }
                     : undefined
