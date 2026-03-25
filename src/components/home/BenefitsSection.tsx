@@ -31,7 +31,7 @@ const benefits = [
   {
     text: "Vos clients comprennent ",
     highlight: "en quelques secondes",
-    rest: " ce que vous faites — plus besoin d'expliquer 10 fois."
+    rest: " ce que vous faites - plus besoin d'expliquer 10 fois."
   },
   {
     text: "Vous avez une ",
@@ -41,7 +41,7 @@ const benefits = [
   {
     text: "Vous ",
     highlight: "attirez les bons clients",
-    rest: " — ceux qui comprennent votre valeur et ne négocient pas vos prix."
+    rest: " - ceux qui comprennent votre valeur et ne négocient pas vos prix."
   },
   {
     text: "Votre ",

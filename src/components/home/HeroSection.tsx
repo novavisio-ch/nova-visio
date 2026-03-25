@@ -23,7 +23,7 @@ export function HeroSection() {
           <p className="max-w-2xl mx-auto mb-8 md:mb-10 animate-fade-up font-sans text-sm sm:text-base md:text-xl lg:text-2xl font-light text-foreground-strong leading-relaxed" style={{
           animationDelay: "0.2s"
         }}>
-            Site vitrine, landing page, identité visuelle — nous créons
+            Site vitrine, landing page, identité visuelle - nous créons
             les outils qui font que vos prospects vous trouvent,
             vous comprennent et vous contactent. Dès 900 CHF.
           </p>

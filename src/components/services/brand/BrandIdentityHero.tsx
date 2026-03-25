@@ -6,7 +6,7 @@ import photoshopIcon from "@/assets/icons/photoshop.svg";
 
 const bulletPoints = [
   "Un logo qui fonctionne en grand comme en petit, sur écran comme sur papier.",
-  "Des couleurs et typos choisies pour vous — pas piochées au hasard.",
+  "Des couleurs et typos choisies pour vous - pas piochées au hasard.",
   "Des règles simples pour garder la même image partout, sans se prendre la tête.",
 ];
 
@@ -56,7 +56,7 @@ export function BrandIdentityHero() {
             className="text-sm sm:text-base md:text-body-lg text-muted-foreground max-w-3xl mx-auto mb-6 md:mb-8 animate-fade-up leading-relaxed"
             style={{ animationDelay: "0.15s" }}
           >
-            Logo, couleurs, typographies, charte graphique — on crée tout de A à Z
+            Logo, couleurs, typographies, charte graphique - on crée tout de A à Z
             pour que votre marque soit reconnaissable, cohérente et utilisable partout.
           </p>
 

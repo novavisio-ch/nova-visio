@@ -20,7 +20,7 @@ export function CtaSection() {
           {/* Subtitle */}
           <p className="text-body text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed mb-8 md:mb-10 text-muted-foreground max-w-xl mx-auto text-center">
             Un appel gratuit, sans engagement. On fait le point sur votre situation
-            et on vous dit honnêtement si on peut vous aider — ou pas.
+            et on vous dit honnêtement si on peut vous aider - ou pas.
           </p>
 
           {/* CTA Buttons */}

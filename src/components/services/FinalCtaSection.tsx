@@ -16,7 +16,7 @@ export const FinalCtaSection = () => {
 
           <p className="mx-auto mb-8 md:mb-10 max-w-2xl text-sm sm:text-base md:text-lg leading-relaxed text-muted-foreground">
             15 minutes d'appel gratuit. On regarde ensemble ce qui bloque
-            et on vous propose une solution claire — sans engagement.
+            et on vous propose une solution claire - sans engagement.
           </p>
 
           <Button

@@ -96,7 +96,7 @@ const About = () => {
                 <span className="text-xs md:text-sm font-medium text-primary uppercase tracking-wider">Le déclic</span>
               </div>
               <p className="text-sm sm:text-base md:text-body-lg text-foreground/90 leading-relaxed mb-3 md:mb-4">
-                Tout est parti d'un constat frustrant : des artisans, des indépendants, des petites entreprises avec des offres solides — mais une présence en ligne qui ne leur rendait pas justice.
+                Tout est parti d'un constat frustrant : des artisans, des indépendants, des petites entreprises avec des offres solides - mais une présence en ligne qui ne leur rendait pas justice.
               </p>
               <p className="text-sm md:text-base text-foreground/70 leading-relaxed">
                 Sites bricolés sur des templates, logos faits "par un ami", pages qui n'expliquent même pas clairement ce qu'ils font. 
@@ -179,7 +179,7 @@ const About = () => {
                 <span className="text-xs md:text-sm font-medium text-primary uppercase tracking-wider">Notre mission</span>
               </div>
               <p className="text-sm sm:text-base md:text-body-lg text-foreground/90 leading-relaxed">
-                Identité visuelle, site web, supports de communication — nous ne faisons pas tout, mais ce que nous faisons, nous le faisons bien.{" "}
+                Identité visuelle, site web, supports de communication - nous ne faisons pas tout, mais ce que nous faisons, nous le faisons bien.{" "}
                 <span className="text-primary font-semibold">Chaque projet repart avec des outils concrets</span>, pas des promesses en l'air.
               </p>
             </motion.div>

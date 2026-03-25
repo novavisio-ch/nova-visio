@@ -6,7 +6,7 @@ import webflowIcon from "@/assets/icons/webflow.png";
 
 const bulletPoints = [
   "Des pages structurées qui expliquent clairement votre offre.",
-  "Un design qui rassure vos prospects — pas qui vous flatte.",
+  "Un design qui rassure vos prospects - pas qui vous flatte.",
   "Un site que vous pouvez modifier vous-même, sans appeler un développeur.",
 ];
 
@@ -57,7 +57,7 @@ export function WebCreationHero() {
             style={{ animationDelay: "0.15s" }}
           >
             Un site vitrine qui dit clairement ce que vous faites, pourquoi on devrait vous faire confiance, 
-            et comment travailler avec vous. Sans animations inutiles, sans blabla — juste un site qui convertit.
+            et comment travailler avec vous. Sans animations inutiles, sans blabla - juste un site qui convertit.
           </p>
 
           {/* Bullet Points */}

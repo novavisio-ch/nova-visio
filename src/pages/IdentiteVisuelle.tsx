@@ -43,7 +43,7 @@ const IdentiteVisuelle = () => {
 
       {/* Maintenance Block */}
       <MaintenanceBlock
-        text="Votre identité est livrée — maintenant déployez-la sans vous perdre dans les détails techniques. Notre suivi mensuel à 89 CHF/mois veille sur votre présence en ligne pendant que vous vous concentrez sur votre métier."
+        text="Votre identité est livrée - maintenant déployez-la sans vous perdre dans les détails techniques. Notre suivi mensuel à 89 CHF/mois veille sur votre présence en ligne pendant que vous vous concentrez sur votre métier."
       />
 
       {/* Final CTA Section */}

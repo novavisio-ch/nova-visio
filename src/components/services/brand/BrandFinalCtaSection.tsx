@@ -16,7 +16,7 @@ export const BrandFinalCtaSection = () => {
 
           <p className="mx-auto mb-8 md:mb-10 max-w-2xl text-sm sm:text-base md:text-lg leading-relaxed text-muted-foreground">
             15 minutes d'appel gratuit pour en discuter. On vous dira franchement
-            si une refonte vaut le coup — ou pas.
+            si une refonte vaut le coup - ou pas.
           </p>
 
           <Button

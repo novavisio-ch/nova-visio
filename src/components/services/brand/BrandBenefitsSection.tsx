@@ -8,7 +8,7 @@ const benefits = [
   },
   {
     title: "Vous inspirez confiance",
-    description: "Une image pro dit \"je prends mon activité au sérieux\" — sans avoir à le dire."
+    description: "Une image pro dit \"je prends mon activité au sérieux\" - sans avoir à le dire."
   },
   {
     title: "Vous gagnez du temps",
@@ -16,7 +16,7 @@ const benefits = [
   },
   {
     title: "Ça reste cohérent",
-    description: "Site, réseaux, documents — même image partout, sans effort."
+    description: "Site, réseaux, documents - même image partout, sans effort."
   }
 ];
 
