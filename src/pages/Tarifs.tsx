@@ -357,7 +357,7 @@ const ComplementaryCard = ({
   }} transition={{
     duration: 0.4,
     delay: index * 0.08
-  }} className="group rounded-xl border border-[#C3B68F]/20 p-5 md:p-6 transition-all duration-300 hover:border-[#C3B68F]/50 relative overflow-hidden card-dark-surface">
+  }} className="group rounded-xl p-5 md:p-6 transition-all duration-300 relative overflow-hidden card-dark-surface">
       {/* Hover gradient overlay */}
       <motion.div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" style={{
       background: "radial-gradient(circle at 30% 30%, rgba(195, 182, 143, 0.08) 0%, transparent 60%)"
