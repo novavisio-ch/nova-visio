@@ -8,19 +8,19 @@ import { ClientLocationsSection } from "@/components/about/ClientLocationsSectio
 const values = [{
   icon: Sparkles,
   title: "Clarté",
-  description: "Des solutions simples et compréhensibles."
+  description: "On dit les choses simplement. Pas de jargon, pas de blabla."
 }, {
   icon: Eye,
   title: "Structure",
-  description: "Une approche méthodique et organisée."
+  description: "Chaque décision de design a une raison. Rien n'est là par hasard."
 }, {
   icon: Feather,
   title: "Simplicité",
-  description: "L'essentiel, sans superflu."
+  description: "Moins de superflu, plus d'impact. L'essentiel, bien exécuté."
 }, {
   icon: Handshake,
   title: "Pédagogie",
-  description: "Nous vous accompagnons et vous formons."
+  description: "On vous explique tout. Vous restez maître de votre image."
 }];
 const containerVariants = {
   hidden: {
@@ -68,7 +68,7 @@ const About = () => {
               À <span className="text-gradient-gold">Propos.</span>
             </h1>
             <p className="text-sm sm:text-base md:text-body-lg text-muted-foreground">
-              Au-delà de la confusion digitale, il y a la clarté.
+              On a créé NOVA VISIO parce que trop d'entrepreneurs méritent mieux qu'un site bâclé sur un template générique.
             </p>
           </motion.div>
         </div>
@@ -93,13 +93,14 @@ const About = () => {
                 <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg md:rounded-xl flex items-center justify-center">
                   <Heart className="w-4 h-4 md:w-5 md:h-5 text-primary" />
                 </div>
-                <span className="text-xs md:text-sm font-medium text-primary uppercase tracking-wider">Notre histoire</span>
+                <span className="text-xs md:text-sm font-medium text-primary uppercase tracking-wider">Le déclic</span>
               </div>
               <p className="text-sm sm:text-base md:text-body-lg text-foreground/90 leading-relaxed mb-3 md:mb-4">
-                NOVA VISIO est né d'un constat simple : beaucoup d'entrepreneurs se sentent perdus face au digital.
+                Tout est parti d'un constat frustrant : des artisans, des indépendants, des petites entreprises avec des offres solides — mais une présence en ligne qui ne leur rendait pas justice.
               </p>
               <p className="text-sm md:text-base text-foreground/70 leading-relaxed">
-                Entre les multiples plateformes, les tendances changeantes et le jargon technique, créer une présence en ligne cohérente peut sembler insurmontable. Nous sommes là pour simplifier tout cela.
+                Sites bricolés sur des templates, logos faits "par un ami", pages qui n'expliquent même pas clairement ce qu'ils font. 
+                Nous avons créé NOVA VISIO pour leur donner les mêmes armes que les grands : une image claire, un site qui travaille pour eux, et un accompagnement sans jargon.
               </p>
             </motion.div>
 
@@ -118,8 +119,10 @@ const About = () => {
                 <span className="text-xs md:text-sm font-medium text-primary uppercase tracking-wider">Vision</span>
               </div>
               <p className="text-foreground/90 leading-relaxed text-sm sm:text-base md:text-lg lg:text-xl">
-                Créer des solutions visuelles qui marquent les esprits, en offrant une approche sur-mesure, pensée et centrée sur une idée forte :{" "}
-                <span className="text-primary font-semibold">nos clients sont nos partenaires</span>.
+                Nous ne sommes pas une agence qui vous vend un site et disparaît. 
+                Chaque projet est un vrai partenariat : nous apprenons votre métier, nous comprenons vos clients, 
+                et nous créons des outils qui{" "}
+                <span className="text-primary font-semibold">vous rapportent concrètement</span>.
               </p>
             </motion.div>
 
@@ -176,8 +179,8 @@ const About = () => {
                 <span className="text-xs md:text-sm font-medium text-primary uppercase tracking-wider">Notre mission</span>
               </div>
               <p className="text-sm sm:text-base md:text-body-lg text-foreground/90 leading-relaxed">
-                Nous accompagnons les marques locales et internationales dans la création d'identités fortes, de contenus impactants et de sites web performants.{" "}
-                <span className="text-primary font-semibold">Chaque projet est une collaboration unique</span>, et notre mission est de le sublimer.
+                Identité visuelle, site web, supports de communication — nous ne faisons pas tout, mais ce que nous faisons, nous le faisons bien.{" "}
+                <span className="text-primary font-semibold">Chaque projet repart avec des outils concrets</span>, pas des promesses en l'air.
               </p>
             </motion.div>
 
@@ -191,10 +194,11 @@ const About = () => {
           }} className="md:col-span-2 lg:col-span-3 p-5 sm:p-6 md:p-8 lg:p-12 rounded-2xl md:rounded-3xl bg-gradient-to-r from-secondary/60 via-secondary/40 to-primary/10 border border-border/30 backdrop-blur-sm cursor-pointer">
               <div className="max-w-3xl mx-auto text-center">
                 <h2 className="text-xl sm:text-2xl md:text-display-md mb-4 md:mb-6 leading-tight">
-                  Notre façon de <span className="text-gradient-gold">travailler.</span>
+                  Comment on <span className="text-gradient-gold">travaille.</span>
                 </h2>
                 <p className="text-sm sm:text-base md:text-body-lg leading-relaxed mb-6 md:mb-8 text-accent">
-                  De l'identité visuelle à la création de votre site internet, nous offrons des solutions complètes et modulables.
+                  Pas de tunnel de vente à rallonge. Un appel, un diagnostic, une proposition claire. 
+                  Et si on n'est pas la bonne solution pour vous, on vous le dit.
                 </p>
                 <Button variant="gold" size="lg" className="w-full sm:w-auto" asChild>
                   <Link to="/contact">
