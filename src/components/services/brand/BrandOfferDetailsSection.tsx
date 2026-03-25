@@ -413,7 +413,7 @@ export const BrandOfferDetailsSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.5 }}
         >
-          <div className="flex items-center gap-3 px-6 py-3 rounded-full bg-foreground/5 border border-border/30 backdrop-blur-sm">
+          <div className="flex items-center gap-3 px-6 py-3 rounded-full bg-foreground/5 backdrop-blur-sm">
             <div className="flex -space-x-2">
               <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#C3B68F] to-[#A89B6F] flex items-center justify-center">
                 <Sparkles className="w-4 h-4 text-primary-foreground" />

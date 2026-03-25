@@ -88,7 +88,7 @@ const About = () => {
             transition: {
               duration: 0.3
             }
-          }} className="md:col-span-2 lg:col-span-2 p-5 sm:p-6 md:p-8 lg:p-10 rounded-2xl md:rounded-3xl bg-gradient-to-br from-secondary/80 to-secondary/40 border border-border/30 backdrop-blur-sm cursor-pointer">
+          }} className="md:col-span-2 lg:col-span-2 p-5 sm:p-6 md:p-8 lg:p-10 rounded-2xl md:rounded-3xl bg-gradient-to-br from-secondary/80 to-secondary/40 backdrop-blur-sm cursor-pointer">
               <div className="flex items-center gap-2 md:gap-3 mb-4 md:mb-6">
                 <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg md:rounded-xl flex items-center justify-center">
                   <Heart className="w-4 h-4 md:w-5 md:h-5 text-primary" />
@@ -111,7 +111,7 @@ const About = () => {
             transition: {
               duration: 0.3
             }
-          }} className="p-5 sm:p-6 md:p-8 rounded-2xl md:rounded-3xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/20 backdrop-blur-sm cursor-pointer">
+          }} className="p-5 sm:p-6 md:p-8 rounded-2xl md:rounded-3xl bg-gradient-to-br from-primary/20 to-primary/5 backdrop-blur-sm cursor-pointer">
               <div className="flex items-center gap-2 md:gap-3 mb-4 md:mb-6">
                 <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg md:rounded-xl flex items-center justify-center">
                   <Target className="w-4 h-4 md:w-5 md:h-5 text-primary" />
@@ -151,7 +151,7 @@ const About = () => {
             transition: {
               duration: 0.3
             }
-          }} className="p-4 sm:p-5 md:p-6 rounded-2xl md:rounded-3xl border border-border/30 backdrop-blur-sm cursor-pointer transition-colors duration-300 hover:border-primary/40 group card-glass-surface">
+          }} className="p-4 sm:p-5 md:p-6 rounded-2xl md:rounded-3xl backdrop-blur-sm cursor-pointer transition-colors duration-300 group card-glass-surface">
                 <motion.div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl flex items-center justify-center mb-3 md:mb-4" whileHover={{
               rotate: 360,
               transition: {
@@ -167,11 +167,11 @@ const About = () => {
             {/* Mission Block - Wide - Slide up & Border glow */}
             <motion.div variants={itemVariants} whileHover={{
             y: -6,
-            borderColor: "hsl(var(--primary) / 0.5)",
+            boxShadow: "0 20px 40px -15px hsl(var(--primary) / 0.3)",
             transition: {
               duration: 0.3
             }
-          }} className="md:col-span-2 p-5 sm:p-6 md:p-8 lg:p-10 rounded-2xl md:rounded-3xl card-glass-surface border border-border/30 backdrop-blur-sm cursor-pointer">
+           }} className="md:col-span-2 p-5 sm:p-6 md:p-8 lg:p-10 rounded-2xl md:rounded-3xl card-glass-surface backdrop-blur-sm cursor-pointer">
               <div className="flex items-center gap-2 md:gap-3 mb-4 md:mb-6">
                 <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg md:rounded-xl flex items-center justify-center">
                   <Sparkles className="w-4 h-4 md:w-5 md:h-5 text-primary" />
@@ -191,7 +191,7 @@ const About = () => {
             transition: {
               duration: 0.4
             }
-          }} className="md:col-span-2 lg:col-span-3 p-5 sm:p-6 md:p-8 lg:p-12 rounded-2xl md:rounded-3xl bg-gradient-to-r from-secondary/60 via-secondary/40 to-primary/10 border border-border/30 backdrop-blur-sm cursor-pointer">
+          }} className="md:col-span-2 lg:col-span-3 p-5 sm:p-6 md:p-8 lg:p-12 rounded-2xl md:rounded-3xl bg-gradient-to-r from-secondary/60 via-secondary/40 to-primary/10 backdrop-blur-sm cursor-pointer">
               <div className="max-w-3xl mx-auto text-center">
                 <h2 className="text-xl sm:text-2xl md:text-display-md mb-4 md:mb-6 leading-tight">
                   Comment on <span className="text-gradient-gold">travaille.</span>

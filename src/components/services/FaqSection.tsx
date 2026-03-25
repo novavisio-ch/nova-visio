@@ -98,9 +98,8 @@ const FaqItem = ({ item, index, isOpen, onToggle, isMobile }: FaqItemProps) => {
       />
       
       <motion.div
-        className="relative overflow-hidden rounded-xl border"
+        className="relative overflow-hidden rounded-xl"
         initial={{ 
-          borderColor: "rgba(195, 182, 143, 0.2)",
           boxShadow: "0 4px 20px -10px rgba(0, 0, 0, 0.1)"
         }}
         whileInView={isMobile ? { 
@@ -111,7 +110,6 @@ const FaqItem = ({ item, index, isOpen, onToggle, isMobile }: FaqItemProps) => {
           boxShadow: "0 20px 40px -15px rgba(195, 182, 143, 0.25)",
         } : undefined}
         animate={isOpen ? {
-          borderColor: "#C3B68F",
           boxShadow: "0 20px 40px -15px rgba(195, 182, 143, 0.3)"
         } : undefined}
         viewport={isMobile ? { once: true, margin: "-30px" } : undefined}

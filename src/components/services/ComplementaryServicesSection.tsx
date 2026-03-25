@@ -30,7 +30,7 @@ export const ComplementaryServicesSection = () => {
         </div>
 
         {/* Main Card - Identité visuelle */}
-        <div className="group mb-10 md:mb-14 rounded-2xl border border-[#C3B68F]/40 bg-card/80 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_rgba(195,182,143,0.25)] hover:scale-[1.01]">
+        <div className="group mb-10 md:mb-14 rounded-2xl bg-card/80 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_rgba(195,182,143,0.25)] hover:scale-[1.01]">
           <div className="grid md:grid-cols-2 gap-0">
             {/* Text Content */}
             <div className="p-8 md:p-10 lg:p-12 flex flex-col justify-center section-white">
@@ -70,7 +70,7 @@ export const ComplementaryServicesSection = () => {
         <div className="grid md:grid-cols-3 gap-6">
           {secondaryServices.map(service => {
           const Icon = service.icon;
-          return <div key={service.id} className="group rounded-xl border border-[#C3B68F]/30 backdrop-blur-sm p-6 md:p-8 transition-all duration-300 hover:shadow-[0_0_25px_rgba(195,182,143,0.2)] hover:scale-[1.02] hover:border-[#C3B68F]/50 section-gradient-main">
+          return <div key={service.id} className="group rounded-xl backdrop-blur-sm p-6 md:p-8 transition-all duration-300 hover:shadow-[0_0_25px_rgba(195,182,143,0.2)] hover:scale-[1.02] section-gradient-main">
                 <div className="mb-5">
                   <Icon className="w-8 h-8 text-[#C3B68F]" />
                 </div>

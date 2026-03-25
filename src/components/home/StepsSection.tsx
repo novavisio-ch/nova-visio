@@ -141,18 +141,15 @@ export function StepsSection() {
                 >
                   {/* Card */}
                   <motion.div
-                    className={`relative h-full p-4 md:p-6 rounded-xl md:rounded-2xl border bg-gradient-to-b ${step.color} backdrop-blur-sm`}
+                    className={`relative h-full p-4 md:p-6 rounded-xl md:rounded-2xl bg-gradient-to-b ${step.color} backdrop-blur-sm`}
                     initial={{ 
-                      borderColor: "rgba(255,255,255,0.1)",
                       boxShadow: "none",
                       y: 0
                     }}
                     whileInView={isMobile ? { 
-                      borderColor: "rgba(195, 182, 143, 0.4)",
                       boxShadow: "0 0 30px -10px #C3B68F"
                     } : undefined}
                     whileHover={!isMobile ? { 
-                      borderColor: "rgba(195, 182, 143, 0.5)",
                       boxShadow: "0 0 50px -12px #C3B68F",
                       y: -8
                     } : undefined}

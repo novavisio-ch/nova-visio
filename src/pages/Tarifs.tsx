@@ -501,7 +501,7 @@ const Tarifs = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mb-10 md:mb-14 px-4 py-4 md:py-5 rounded-xl border border-border/30 backdrop-blur-sm card-glass-surface"
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mb-10 md:mb-14 px-4 py-4 md:py-5 rounded-xl backdrop-blur-sm card-glass-surface"
           >
             <div className="flex items-center gap-2">
               <span className="text-lg">🇨🇭</span>
