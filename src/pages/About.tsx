@@ -194,10 +194,11 @@ const About = () => {
           }} className="md:col-span-2 lg:col-span-3 p-5 sm:p-6 md:p-8 lg:p-12 rounded-2xl md:rounded-3xl bg-gradient-to-r from-secondary/60 via-secondary/40 to-primary/10 border border-border/30 backdrop-blur-sm cursor-pointer">
               <div className="max-w-3xl mx-auto text-center">
                 <h2 className="text-xl sm:text-2xl md:text-display-md mb-4 md:mb-6 leading-tight">
-                  Notre façon de <span className="text-gradient-gold">travailler.</span>
+                  Comment on <span className="text-gradient-gold">travaille.</span>
                 </h2>
                 <p className="text-sm sm:text-base md:text-body-lg leading-relaxed mb-6 md:mb-8 text-accent">
-                  De l'identité visuelle à la création de votre site internet, nous offrons des solutions complètes et modulables.
+                  Pas de tunnel de vente à rallonge. Un appel, un diagnostic, une proposition claire. 
+                  Et si on n'est pas la bonne solution pour vous, on vous le dit.
                 </p>
                 <Button variant="gold" size="lg" className="w-full sm:w-auto" asChild>
                   <Link to="/contact">
