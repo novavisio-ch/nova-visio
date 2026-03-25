@@ -91,7 +91,7 @@ export const ServicesOverviewSection = () => {
       }} transition={{
         duration: 0.6
       }}>
-          <motion.div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#C3B68F]/10 border border-[#C3B68F]/20 mb-6" initial={{
+          <motion.div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#C3B68F]/10 mb-6" initial={{
           opacity: 0,
           scale: 0.9
         }} whileInView={{
