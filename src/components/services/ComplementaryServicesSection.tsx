@@ -25,7 +25,7 @@ export const ComplementaryServicesSection = () => {
             Services complémentaires.
           </h2>
           <p className="text-lg text-foreground-medium max-w-2xl mx-auto">
-            Des services additionnels pour renforcer votre image et compléter votre site web.
+            Pour aller plus loin, selon vos besoins.
           </p>
         </div>
 
