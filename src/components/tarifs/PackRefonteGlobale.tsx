@@ -100,10 +100,7 @@ export function PackRefonteGlobale() {
 
       {/* Main Pack Card */}
       <div
-        className="relative h-full rounded-3xl border overflow-hidden transition-all duration-500 card-dark-surface"
-        style={{
-          borderColor: "rgba(124, 106, 232, 0.3)",
-        }}
+        className="relative h-full rounded-3xl overflow-hidden transition-all duration-500 card-dark-surface"
       >
         {/* Floating particles */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
