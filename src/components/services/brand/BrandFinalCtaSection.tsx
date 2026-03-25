@@ -8,15 +8,15 @@ export const BrandFinalCtaSection = () => {
       <div className="container mx-auto">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="mb-4 md:mb-6 font-display text-2xl sm:text-3xl md:text-display-lg lg:text-display-xl font-bold leading-tight text-foreground">
-            Prêt à clarifier{" "}
+            Marre de votre image{" "}
             <span className="text-gradient-gold">
-              l'image de votre marque ?
+              actuelle ?
             </span>
           </h2>
 
           <p className="mx-auto mb-8 md:mb-10 max-w-2xl text-sm sm:text-base md:text-lg leading-relaxed text-muted-foreground">
-            Une identité visuelle claire et cohérente peut transformer la perception de votre activité.
-            Discutons de votre projet pour créer une image qui vous ressemble.
+            15 minutes d'appel gratuit pour en discuter. On vous dira franchement
+            si une refonte vaut le coup — ou pas.
           </p>
 
           <Button
