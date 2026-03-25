@@ -86,7 +86,7 @@ export function PacksPromoSection() {
                   opacity: 1, 
                   y: 0, 
                   rotateX: 0,
-                  borderColor: isMobile ? styles.borderColor : `${styles.borderColor}4D`,
+                  borderColor: "transparent",
                   boxShadow: isMobile ? `0 0 30px -10px ${styles.shadow}` : "none"
                 }}
                 whileHover={
