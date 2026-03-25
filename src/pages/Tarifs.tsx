@@ -13,12 +13,12 @@ const mainServices = [{
   id: "site-vitrine",
   icon: Monitor,
   title: "Site vitrine",
-  subtitle: "Votre vitrine digitale",
+  subtitle: "Votre meilleur commercial",
   price: "1'500",
   badge: "Best-seller",
   variant: "gold" as const,
   description: <>
-        Une présence en ligne <strong className="text-foreground font-semibold">sur-mesure</strong>, pensée pour vos objectifs, qui donne <strong className="text-[#C3B68F] font-medium">confiance à vos clients</strong>.
+        Un site qui dit clairement ce que vous faites et qui donne <strong className="text-[#C3B68F] font-medium">envie de vous contacter</strong>.
       </>,
   features: [{
     text: "6 à 8 pages",
@@ -45,12 +45,12 @@ const mainServices = [{
   id: "landing-page",
   icon: Rocket,
   title: "Landing page",
-  subtitle: "Une page, un objectif",
+  subtitle: "Un message, une action",
   price: "900",
   badge: "Starter",
   variant: "purple" as const,
   description: <>
-        Une page <strong className="text-foreground font-semibold">unique et percutante</strong>, conçue pour <strong className="text-[#9D8DF0] font-medium">convertir vos visiteurs</strong> en prospects.
+        Une seule page, un seul objectif : que vos visiteurs <strong className="text-[#9D8DF0] font-medium">passent à l'action</strong>.
       </>,
   features: [{
     text: "Page unique",
@@ -77,12 +77,12 @@ const mainServices = [{
   id: "identite-visuelle",
   icon: Palette,
   title: "Identité visuelle",
-  subtitle: "Votre image de marque",
+  subtitle: "Fini le logo bricolé",
   price: "900",
   badge: "Sur-mesure",
   variant: "gold" as const,
   description: <>
-        Une identité visuelle <strong className="text-foreground font-semibold">complète et cohérente</strong> pour être <strong className="text-[#C3B68F] font-medium">reconnu et vous démarquer</strong>.
+        Logo, couleurs, typos, charte graphique - tout ce qu'il faut pour être <strong className="text-[#C3B68F] font-medium">reconnu au premier regard</strong>.
       </>,
   features: [{
     text: "Logo sur-mesure +",
@@ -111,7 +111,7 @@ const complementaryServices = [{
   icon: Filter,
   title: "Tunnels de vente",
   description: <>
-        Parcours guidés depuis la <strong className="text-foreground font-semibold">découverte</strong> de votre offre jusqu'à <strong className="text-[#C3B68F] font-medium">l'action</strong>.
+        Des parcours qui guident vos visiteurs de la <strong className="text-foreground font-semibold">découverte</strong> jusqu'au <strong className="text-[#C3B68F] font-medium">passage à l'action</strong>.
       </>,
   price: "Sur devis"
 }, {
@@ -119,7 +119,7 @@ const complementaryServices = [{
   icon: FileText,
   title: "Blog & contenus",
   description: <>
-        Structuration de votre blog pour <strong className="text-foreground font-semibold">valoriser votre expertise</strong> et améliorer votre <strong className="text-[#C3B68F] font-medium">SEO</strong>.
+        Un blog structuré pour <strong className="text-foreground font-semibold">montrer que vous savez de quoi vous parlez</strong> et booster votre <strong className="text-[#C3B68F] font-medium">visibilité Google</strong>.
       </>,
   price: "Sur devis"
 }, {
@@ -127,7 +127,7 @@ const complementaryServices = [{
   icon: ShoppingBag,
   title: "Boutiques en ligne",
   description: <>
-        Boutiques <strong className="text-foreground font-semibold">e-commerce</strong> adaptées avec un <strong className="text-[#C3B68F] font-medium">parcours d'achat clair</strong>.
+        Une boutique en ligne <strong className="text-foreground font-semibold">simple et efficace</strong>, avec un <strong className="text-[#C3B68F] font-medium">parcours d'achat qui ne perd personne</strong>.
       </>,
   price: "Sur devis"
 }, {
@@ -465,7 +465,7 @@ const Tarifs = () => {
               delay: 0.3,
               duration: 0.6
             }} className="block">
-                Des offres claires,
+                Pas de mauvaise surprise.
               </motion.span>
               <motion.span initial={{
               opacity: 0,
@@ -482,7 +482,7 @@ const Tarifs = () => {
               WebkitTextFillColor: "transparent",
               backgroundClip: "text"
             }}>
-                adaptées à vos besoins.
+                Des prix clairs, point.
               </motion.span>
             </h1>
             <motion.p className="text-sm sm:text-base md:text-xl text-muted-foreground max-w-2xl mx-auto" initial={{
@@ -493,7 +493,7 @@ const Tarifs = () => {
             delay: 0.7,
             duration: 0.6
           }}>
-              Des prestations <strong className="text-foreground font-medium">sur-mesure</strong> pour renforcer votre <strong className="text-[#C3B68F] font-medium">présence en ligne</strong> et votre image de marque.
+              Vous savez exactement ce que vous payez et ce que vous obtenez. Pas de frais cachés, pas d'options qui s'ajoutent en cours de route.
             </motion.p>
           </motion.div>
 
@@ -548,10 +548,10 @@ const Tarifs = () => {
             className="text-center mb-10 md:mb-12"
           >
             <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4">
-              Nos packs <span className="text-[#C3B68F]">tout-en-un.</span>
+              Tout en un ? <span className="text-[#C3B68F]">On a ce qu'il faut.</span>
             </h2>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Des offres <strong className="text-foreground font-medium">clé en main</strong> qui combinent plusieurs services pour un accompagnement <strong className="text-[#C3B68F] font-medium">complet</strong>.
+              Site + identité visuelle dans une seule offre. Moins de prestataires, plus de cohérence, et un <strong className="text-[#C3B68F] font-medium">meilleur prix</strong>.
             </p>
           </motion.div>
 
@@ -595,10 +595,10 @@ const Tarifs = () => {
           }} />
 
             <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
-              Vous avez un <span className="text-[#C3B68F]">projet</span> en tête ?
+              Vous savez ce qu'il vous faut ? <span className="text-[#C3B68F]">On en parle.</span>
             </h3>
             <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
-              Discutons ensemble de vos besoins pour vous proposer une <strong className="text-foreground font-medium">solution adaptée</strong> à votre situation.
+              15 min d'appel gratuit. On fait le point et on vous dit honnêtement quelle offre correspond à votre situation.
             </p>
             <motion.div whileHover={{
             scale: 1.05

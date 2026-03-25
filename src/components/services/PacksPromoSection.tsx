@@ -8,14 +8,14 @@ const packs = [
   {
     icon: Package,
     title: "Pack Digital & Branding",
-    description: "Identité visuelle + site web complet pour lancer votre activité avec une image cohérente.",
+    description: "Logo + identité visuelle + site web complet. Un seul interlocuteur, une image cohérente dès le départ.",
     price: "2'200 CHF",
     theme: "gold" as const,
   },
   {
     icon: RefreshCw,
     title: "Pack Refonte Globale",
-    description: "Audit + repositionnement de marque + modernisation de votre site pour reprendre le contrôle.",
+    description: "Audit complet + nouvelle identité + refonte de site. Pour remettre votre image à la hauteur.",
     price: "2'600 CHF",
     theme: "purple" as const,
   },
@@ -63,7 +63,7 @@ export function PacksPromoSection() {
             <span className="text-gradient-gold">complète</span> ?
           </h2>
           <p className="text-sm md:text-body-lg text-muted-foreground max-w-2xl mx-auto">
-            Nos packs combinent identité visuelle et création web pour une image cohérente et professionnelle.
+            Identité visuelle + site web dans une seule offre. Moins de prestataires, plus de cohérence.
           </p>
         </motion.div>
 

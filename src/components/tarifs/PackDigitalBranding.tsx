@@ -7,15 +7,15 @@ import { useIsMobile } from "@/hooks/use-mobile";
 const targetAudience = [
   {
     icon: Users,
-    text: "Aux indépendants, studios et petites entreprises qui souhaitent lancer ou refondre leur image avec une identité claire et un site web professionnel.",
+    text: "Indépendants et petites entreprises qui veulent lancer ou refondre leur image avec une identité claire et un site pro - sans multiplier les prestataires.",
   },
   {
     icon: Package,
-    text: "Aux projets qui veulent éviter de multiplier les prestataires et recherchent un accompagnement global : branding + site, dans une seule offre.",
+    text: "Projets qui veulent tout dans une seule offre : branding + site, un seul interlocuteur, zéro prise de tête.",
   },
   {
     icon: Clock,
-    text: "Aux personnes qui manquent de temps et veulent un parcours cadré, des livrables prêts à l'emploi et un résultat facilement utilisable au quotidien.",
+    text: "Personnes qui manquent de temps et veulent un parcours cadré, des livrables prêts à l'emploi et un résultat utilisable immédiatement.",
   },
 ];
 
@@ -118,9 +118,8 @@ export function PackDigitalBranding() {
               Identité de marque & site vitrine
             </p>
             <p className="text-muted-foreground max-w-2xl mx-auto text-base md:text-lg leading-relaxed mb-6">
-              Une identité visuelle <strong className="text-foreground font-semibold">sur-mesure</strong> et un site vitrine complet de{" "}
-              <strong className="text-[#C3B68F] font-semibold">6 à 8 pages</strong>, conçus ensemble pour une présence en ligne{" "}
-              <strong className="text-foreground font-semibold">cohérente et professionnelle</strong>.
+              Votre identité visuelle <strong className="text-foreground font-semibold">sur-mesure</strong> et un site vitrine complet de{" "}
+              <strong className="text-[#C3B68F] font-semibold">6 à 8 pages</strong>, pensés ensemble pour que tout soit cohérent dès le départ. Pas de raccord à faire après.
             </p>
 
             <motion.div className="inline-block" whileHover={{ scale: 1.02 }}>

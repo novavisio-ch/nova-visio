@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const deliverables = [
-  { text: "Clarification de votre positionnement et de votre univers", highlight: "pour une identité qui vous ressemble." },
-  { text: "Moodboard et 2 directions créatives", highlight: "pour choisir l'ambiance qui vous correspond vraiment." },
-  { text: "Logo sur-mesure + déclinaisons + icône", highlight: "pour une utilisation fluide sur tous vos supports." },
-  { text: "Palette de couleurs, typographies et éléments graphiques", highlight: "pour un univers cohérent et facile à appliquer." },
-  { text: "Brandboard + charte graphique", highlight: "pour savoir exactement comment utiliser votre identité." },
+  { text: "Clarification de votre positionnement et de votre univers", highlight: "pour une identité qui vous ressemble - pas un logo passe-partout." },
+  { text: "Moodboard et 2 directions créatives", highlight: "pour choisir l'ambiance qui vous correspond, en toute connaissance de cause." },
+  { text: "Logo sur-mesure + déclinaisons + icône", highlight: "pour une utilisation fluide partout, sans bidouillage." },
+  { text: "Palette de couleurs, typographies et éléments graphiques", highlight: "pour un univers cohérent et facile à appliquer au quotidien." },
+  { text: "Brandboard + charte graphique", highlight: "pour savoir exactement comment utiliser votre identité, sans se poser de questions." },
   { text: "Fichiers prêts à l'emploi + 250 cartes de visite", highlight: "signature email et visuels pour un réseau social inclus." },
 ];
 

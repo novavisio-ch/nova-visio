@@ -29,7 +29,7 @@ export const MaintenanceTarifsSection = () => {
         </motion.span>
 
         <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4">
-          Après le lancement,{" "}
+          Votre site est en ligne.{" "}
           <span
             style={{
               background:
@@ -39,12 +39,11 @@ export const MaintenanceTarifsSection = () => {
               backgroundClip: "text",
             }}
           >
-            on reste là.
+            Maintenant, il faut qu'il le reste.
           </span>
         </h2>
         <p className="text-muted-foreground max-w-xl mx-auto">
-          Votre site est en ligne - maintenant il faut qu'il continue à
-          travailler pour vous. Notre suivi mensuel s'en charge.
+          Mises à jour, modifs de contenu, performances - on s'en occupe pour que votre site continue à bosser pendant que vous faites votre métier.
         </p>
       </motion.div>
 
@@ -60,16 +59,15 @@ export const MaintenanceTarifsSection = () => {
         style={{ borderColor: "rgba(195, 182, 143, 0.2)" }}
       >
         <h4 className="font-display text-sm font-semibold text-foreground mb-2">
-          Besoin de plus ?
+          Besoin de plus de modifications ?
         </h4>
         <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-          Pour les projets avec des besoins réguliers en contenu ou en évolutions
-          fréquentes, un forfait{" "}
+          Pour les projets avec des besoins réguliers en contenu ou en évolutions,
+          le forfait{" "}
           <strong className="text-foreground font-medium">
             Actif à 149 CHF/mois
           </strong>{" "}
-          est disponible - inclut 3h de modifications mensuelles, mise à jour de
-          contenu et support prioritaire sous 24h.
+          inclut 3h de modifs par mois, mise à jour de contenu et support prioritaire sous 24h.
         </p>
         <Link
           to="/contact?sujet=forfait-actif"

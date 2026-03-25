@@ -7,15 +7,15 @@ import { useIsMobile } from "@/hooks/use-mobile";
 const targetAudience = [
   {
     icon: History,
-    text: "Marques déjà lancées qui ne se reconnaissent plus dans leur identité actuelle.",
+    text: "Votre logo date de 5 ans et vous ne vous reconnaissez plus dedans.",
   },
   {
     icon: TrendingUp,
-    text: "Sites en ligne depuis plusieurs années, devenus peu lisibles, datés ou peu efficaces.",
+    text: "Votre site est en ligne depuis des années et il a l'air de... ça se voit.",
   },
   {
     icon: Users,
-    text: "Entreprises qui ont évolué (positionnement, offres, cible) et ont besoin d'une mise à jour globale cohérente.",
+    text: "Votre activité a évolué (offres, cible, positionnement) mais votre image est restée en 2019.",
   },
 ];
 
@@ -156,8 +156,8 @@ export function PackRefonteGlobale() {
               Reprenez le contrôle de votre image
             </p>
              <p className="text-muted-foreground max-w-2xl mx-auto text-base md:text-lg leading-relaxed mb-6">
-               Une refonte <strong className="text-foreground font-semibold">cohérente</strong> de votre identité visuelle et de votre site web pour{" "}
-               <strong className="text-[#9D8DF0] font-semibold">aligner votre image</strong> avec le niveau réel de votre activité.
+               On remet tout à plat : votre identité et votre site. Pour que votre image en ligne soit enfin{" "}
+               <strong className="text-[#9D8DF0] font-semibold">à la hauteur de votre activité</strong>.
             </p>
 
             {/* Price with animated underline */}

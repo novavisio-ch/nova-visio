@@ -94,156 +94,156 @@ interface OfferCategory {
 const offerCategories: OfferCategory[] = [
   {
     icon: Target,
-    title: "Une identité qui reflète vraiment qui vous êtes",
+    title: "On part de vous, pas d'un template",
     gradient: "from-[#C3B68F]/20 to-transparent",
     accentColor: "#C3B68F",
     items: [
       {
         icon: FileText,
-        text: "Un questionnaire de brief structuré pour clarifier votre activité, vos valeurs, votre cible et vos objectifs.",
-        highlight: "une identité qui vous ressemble vraiment"
+        text: "Un brief structuré pour clarifier qui vous êtes, ce que vous faites et à qui vous parlez.",
+        highlight: "une identité qui vous ressemble, pas un logo générique"
       },
       {
         icon: Eye,
-        text: "Une analyse de votre positionnement et de votre univers concurrentiel.",
-        highlight: "vous démarquer plutôt qu'à ressembler à tout le monde"
+        text: "Analyse de votre positionnement et de vos concurrents.",
+        highlight: "vous démarquer au lieu de ressembler à tout le monde"
       },
       {
         icon: Compass,
-        text: "2 à 3 mots-clés d'univers (ex. minimal, chaleureux, premium) qui servent de boussole à toutes les décisions graphiques.",
-        highlight: "évitent les identités incohérentes"
+        text: "2 à 3 mots-clés d'univers (ex. minimal, chaleureux, premium) pour guider toutes les décisions graphiques.",
+        highlight: "fini les identités incohérentes"
       }
     ]
   },
   {
     icon: Palette,
-    title: "Un univers visuel cohérent et assumé",
+    title: "Un univers visuel qui tient la route",
     gradient: "from-[#7C6AE8]/20 to-transparent",
     accentColor: "#7C6AE8",
     items: [
       {
         icon: Layers,
-        text: "Un moodboard clair pour valider ensemble l'ambiance visuelle avant de passer au logo.",
-        highlight: "limite les allers-retours et les malentendus"
+        text: "Un moodboard pour valider l'ambiance avant de toucher au logo.",
+        highlight: "moins d'allers-retours, moins de malentendus"
       },
       {
         icon: Sparkles,
-        text: "Deux directions créatives d'univers pour choisir la voie qui vous correspond le mieux, en conscience.",
-        highlight: "plutôt que de subir une proposition unique"
+        text: "Deux directions créatives pour choisir celle qui vous correspond vraiment.",
+        highlight: "vous choisissez en conscience, pas par défaut"
       }
     ]
   },
   {
     icon: Crown,
-    title: "Un logo pensé pour durer",
+    title: "Un logo qui marche partout",
     gradient: "from-[#C3B68F]/20 to-transparent",
     accentColor: "#C3B68F",
     items: [
       {
         icon: Sparkles,
-        text: "Un logo principal sur-mesure, conçu pour fonctionner aussi bien sur écran que sur papier.",
-        highlight: "l'utiliser partout sans questions techniques"
+        text: "Un logo principal sur-mesure, aussi bien sur écran que sur papier.",
+        highlight: "utilisable partout sans bidouillage"
       },
       {
         icon: Layers,
-        text: "Des déclinaisons de logo (secondaire, simplifiée, horizontal/vertical, noir & blanc).",
+        text: "Déclinaisons (secondaire, simplifiée, horizontal/vertical, noir & blanc).",
         highlight: "lisible et reconnaissable dans tous les formats"
       },
       {
         icon: Target,
-        text: "Un pictogramme ou monogramme dédié pour vos avatars, favicons et réseaux sociaux.",
-        highlight: "identité forte même dans les petits espaces"
+        text: "Un pictogramme dédié pour vos avatars, favicons et réseaux sociaux.",
+        highlight: "identité forte même en tout petit"
       }
     ]
   },
   {
     icon: Type,
-    title: "Des codes visuels clairs et faciles à appliquer",
+    title: "Des codes visuels clairs et faciles à utiliser",
     gradient: "from-[#7C6AE8]/20 to-transparent",
     accentColor: "#7C6AE8",
     items: [
       {
         icon: Palette,
-        text: "Une palette de couleurs complète avec recommandations d'usage.",
-        highlight: "image cohérente sur tous vos supports"
+        text: "Une palette de couleurs complète avec des recommandations d'usage concrètes.",
+        highlight: "la même image partout, sans se poser de questions"
       },
       {
         icon: Type,
-        text: "Un choix de typographies (titres, textes, accents) avec hiérarchie d'utilisation.",
-        highlight: "supports lisibles, harmonieux et professionnels"
+        text: "Des typographies choisies (titres, textes, accents) avec une hiérarchie claire.",
+        highlight: "des supports lisibles et harmonieux"
       },
       {
         icon: Sparkles,
         text: "Des éléments graphiques complémentaires (formes, motifs, fonds).",
-        highlight: "supports qui ont l'air de votre marque"
+        highlight: "vos supports ont l'air de votre marque"
       }
     ]
   },
   {
     icon: BookOpen,
-    title: "Une charte claire pour ne plus se demander \\\"comment utiliser mon logo ?\\\"",
+    title: "Une charte pour ne plus jamais se demander \"comment j'utilise mon logo ?\"",
     gradient: "from-[#C3B68F]/20 to-transparent",
     accentColor: "#C3B68F",
     items: [
       {
         icon: FileText,
-        text: "Un brandboard synthétique qui rassemble en une page vos éléments clés.",
+        text: "Un brandboard synthétique qui rassemble vos éléments clés en une page.",
         highlight: "pratique pour vous et vos partenaires"
       },
       {
         icon: Shield,
-        text: "Une mini charte graphique avec règles d'utilisation, tailles minimales, marges de sécurité.",
-        highlight: "éviter les erreurs qui affaiblissent votre image"
+        text: "Une mini charte avec règles d'utilisation, tailles minimales, marges de sécurité.",
+        highlight: "fini les erreurs qui abîment votre image"
       }
     ]
   },
   {
     icon: Package,
-    title: "Des supports prêts à utiliser immédiatement",
+    title: "Des supports prêts à l'emploi - tout de suite",
     gradient: "from-[#7C6AE8]/20 to-transparent",
     accentColor: "#7C6AE8",
     items: [
       {
         icon: Layers,
-        text: "Tous les fichiers nécessaires fournis dans les bons formats (PNG, JPEG, SVG/PDF vectoriel).",
-        highlight: "utilisation fluide avec imprimeurs et outils en ligne"
+        text: "Tous les fichiers dans les bons formats (PNG, JPEG, SVG/PDF vectoriel).",
+        highlight: "ça marche avec vos imprimeurs et vos outils en ligne"
       },
       {
         icon: Printer,
-        text: "Une carte de visite professionnelle prête à l'impression.",
-        highlight: "impression cohérente dès le premier contact"
+        text: "250 cartes de visite prêtes à l'impression.",
+        highlight: "une image pro dès le premier contact"
       },
       {
         icon: Mail,
-        text: "Une signature email personnalisée et des visuels pour un réseau social.",
-        highlight: "homogénéiser votre image sur les canaux visibles"
+        text: "Signature email + visuels pour un réseau social inclus.",
+        highlight: "la même image sur tous vos canaux"
       }
     ]
   },
   {
     icon: HeartHandshake,
-    title: "Un accompagnement qui sécurise vos décisions",
+    title: "On ne vous lâche pas après la livraison",
     gradient: "from-[#C3B68F]/20 to-transparent",
     accentColor: "#C3B68F",
     items: [
       {
         icon: Video,
-        text: "Une présentation guidée des pistes (en visio ou document commenté).",
-        highlight: "comprendre les choix et valider en confiance"
+        text: "Présentation guidée des pistes (en visio ou document commenté).",
+        highlight: "vous comprenez les choix et vous validez en confiance"
       },
       {
         icon: RefreshCcw,
         text: "2 à 3 séries d'allers-retours incluses sur la piste choisie.",
-        highlight: "identité dans laquelle vous vous reconnaissez"
+        highlight: "une identité dans laquelle vous vous reconnaissez"
       },
       {
         icon: Shield,
-        text: "Une cession de droits d'exploitation du logo.",
-        highlight: "utiliser sereinement sur vos supports"
+        text: "Cession de droits d'exploitation du logo incluse.",
+        highlight: "utilisez-le sereinement sur tous vos supports"
       },
       {
         icon: MessageCircle,
-        text: "Un accompagnement post-livraison pour vos questions d'usage.",
+        text: "Accompagnement post-livraison pour vos questions d'usage.",
         highlight: "pas seul(e) au moment de déployer votre image"
       }
     ]
@@ -295,7 +295,7 @@ export const BrandOfferDetailsSection = () => {
           </h2>
           
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Chaque élément est pensé pour vous donner une image professionnelle, cohérente et facile à déployer.
+            Chaque élément est là pour une raison. Pas de superflu, que de l'utile.
           </p>
         </motion.div>
 

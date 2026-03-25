@@ -39,7 +39,7 @@ const SiteWeb = () => {
 
       {/* Maintenance Block */}
       <MaintenanceBlock
-        text="Votre site est livré - mais votre présence en ligne ne s'arrête pas là. Mises à jour, modifs de contenu, suivi des performances : notre suivi mensuel à 89 CHF/mois prend le relais pour que votre site reste un outil qui bosse."
+        text="Votre site est livré - mais votre présence en ligne ne s'arrête pas là. Mises à jour, modifs de contenu, suivi des performances : notre suivi mensuel à 89 CHF/mois prend le relais pour que votre site reste un outil qui bosse pour vous."
       />
 
       {/* Final CTA Section */}

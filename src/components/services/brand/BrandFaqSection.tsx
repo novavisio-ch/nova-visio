@@ -7,32 +7,32 @@ const faqItems = [
   {
     question: "Combien de temps faut-il pour créer une identité visuelle complète ?",
     answer:
-      "En général, comptez entre 3 et 6 semaines selon la complexité du projet. Ce délai inclut les phases de découverte, d'exploration créative, les itérations et la finalisation des livrables.",
+      "Entre 3 et 6 semaines selon la complexité. Ce délai inclut la découverte, l'exploration créative, les itérations et la livraison de tous les fichiers. On ne bâcle rien.",
   },
   {
     question: "Quels fichiers vais-je recevoir à la fin du projet ?",
     answer:
-      "Vous recevrez votre logo dans tous les formats nécessaires (PNG, SVG, PDF), les fichiers sources éditables, votre palette de couleurs avec les codes, les typographies recommandées, et une charte graphique PDF qui résume toutes les règles d'usage.",
+      "Votre logo dans tous les formats (PNG, SVG, PDF), les fichiers sources, votre palette de couleurs avec les codes, les typos recommandées, et une charte graphique PDF qui résume tout. Bref, tout ce qu'il faut pour être autonome.",
   },
   {
     question: "Est-ce que vous partez de zéro ou pouvez-vous moderniser un logo existant ?",
     answer:
-      "Les deux sont possibles. Nous pouvons créer une identité entièrement nouvelle ou partir de votre logo existant pour le moderniser et le compléter avec une identité visuelle cohérente.",
+      "Les deux. On peut créer une identité de A à Z ou partir de votre logo actuel pour le moderniser. On vous dira franchement ce qui vaut le coup d'être gardé - et ce qui doit changer.",
   },
   {
     question: "Est-ce que l'identité inclut les visuels pour les réseaux sociaux ?",
     answer:
-      "La prestation de base inclut les déclinaisons du logo pour les réseaux sociaux (photos de profil, bannières). Les templates de posts et stories sont proposés en option dans nos services complémentaires.",
+      "L'offre de base inclut les déclinaisons du logo pour les réseaux (profil, bannières). Les templates de posts et stories, c'est en option dans nos services complémentaires.",
   },
   {
     question: "Combien de propositions de logo vais-je voir ?",
     answer:
-      "Nous présentons généralement 2 à 3 directions créatives distinctes lors de la phase d'exploration. Une fois une direction choisie, nous travaillons ensemble sur les ajustements jusqu'à la version finale.",
+      "On présente 2 à 3 directions créatives bien distinctes. Une fois que vous avez choisi la vôtre, on ajuste ensemble jusqu'à ce que ce soit parfait.",
   },
   {
     question: "Puis-je utiliser mon identité visuelle sur tous mes supports ?",
     answer:
-      "Absolument. L'identité est conçue pour fonctionner sur tous vos supports : site web, réseaux sociaux, cartes de visite, documents, signalétique, etc. La charte graphique vous guide pour chaque utilisation.",
+      "Oui, c'est le but. L'identité fonctionne partout : site, réseaux, cartes de visite, docs, signalétique... La charte graphique vous guide pour chaque usage.",
   },
 ];
 

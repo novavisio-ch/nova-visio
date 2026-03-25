@@ -6,43 +6,43 @@ import { useIsTabletOrMobile } from "@/hooks/use-mobile";
 const faqItems = [
   {
     question: "Combien de temps faut‑il pour créer un site web ?",
-    answer: "En moyenne, un site vitrine est livré en 7 à 14 jours, de la clarification du projet jusqu'à la mise en ligne. Ce délai peut varier légèrement selon la complexité et la rapidité de vos retours.",
+    answer: "Entre 7 et 14 jours en moyenne, du brief à la mise en ligne. Ça dépend de la complexité et de la vitesse de vos retours - mais on ne traîne pas.",
   },
   {
     question: "Est‑ce que je dois déjà avoir mon logo et mon identité visuelle ?",
-    answer: "Ce n'est pas obligatoire. Si vous avez déjà une identité, nous la reprenons et l'adaptons au web. Si ce n'est pas le cas, nous pouvons d'abord créer ou clarifier votre identité visuelle, puis construire le site à partir de ces bases.",
+    answer: "Pas obligatoire. Si vous en avez une, on la reprend. Sinon, on peut d'abord créer votre identité visuelle puis construire le site dessus. Dans les deux cas, le résultat sera cohérent.",
   },
   {
     question: "Est‑ce que je pourrai modifier mon site moi‑même ensuite ?",
-    answer: "Oui. Les sites sont conçus pour que vous puissiez mettre à jour vos textes, images et certains blocs de contenu sans compétences techniques avancées. Une courte prise en main est prévue à la fin du projet.",
+    answer: "Oui. Vos textes, vos images, certains blocs de contenu - vous pouvez tout mettre à jour sans compétences techniques. On vous montre comment faire avant de vous laisser les clés.",
   },
   {
     question: "Est‑ce que vous vous occupez de l'hébergement et du nom de domaine ?",
-    answer: "Oui, l'hébergement et la gestion du nom de domaine sont inclus dans notre offre de suivi mensuel. Tout est géré pour vous, sans que vous ayez à vous en occuper.",
+    answer: "Oui, tout est inclus dans notre suivi mensuel. Hébergement, domaine, mises à jour - vous n'avez rien à gérer.",
   },
   {
     question: "Est‑ce que le site sera adapté au mobile ?",
-    answer: "Oui, tous les sites sont pensés en responsive. Le design et la structure sont travaillés pour être lisibles et efficaces sur ordinateur, tablette et smartphone.",
+    answer: "Évidemment. Tous nos sites sont pensés mobile-first. Le design fonctionne sur téléphone, tablette et ordinateur - pas juste \"ça s'affiche\", mais ça rend bien.",
   },
   {
     question: "Est‑ce que vous faites aussi le texte du site ?",
-    answer: "Nous pouvons vous accompagner sur la structure des pages et vous guider pour rédiger des textes clairs et orientés résultats. Selon vos besoins, nous pouvons également proposer une prestation de rédaction plus complète.",
+    answer: "On vous guide sur la structure et les messages clés. On peut aussi rédiger pour vous si besoin - l'important c'est que chaque page dise ce qu'il faut, de la bonne façon.",
   },
   {
     question: "Proposez‑vous des paiements en plusieurs fois ?",
-    answer: "Oui, selon le montant du projet, il est possible de répartir le paiement en plusieurs étapes (par exemple : acompte au lancement, solde à la mise en ligne).",
+    answer: "Oui. On peut découper le paiement en étapes (acompte au démarrage, solde à la livraison). On en discute au moment du devis.",
   },
   {
     question: "Que se passe‑t‑il si j'ai déjà un site, mais que je veux le refondre ?",
-    answer: "Nous analysons d'abord votre site actuel (structure, contenus, performance, image), puis nous décidons ensemble s'il est plus pertinent de partir d'une base existante ou de repartir sur une nouvelle structure plus claire. Le délai reste similaire : 7 à 14 jours.",
+    answer: "On analyse votre site actuel - ce qui marche, ce qui ne marche pas - et on décide ensemble si on repart de zéro ou si on améliore l'existant. Même délai : 7 à 14 jours.",
   },
   {
     question: "Est‑ce que vous vous occupez aussi du SEO ?",
-    answer: "Nous travaillons le référencement \"de base\" : structure des pages, titres, hiérarchie des contenus, bonnes pratiques techniques et rédactionnelles. Pour une stratégie SEO avancée, nous pouvons vous orienter ou compléter avec des actions spécifiques.",
+    answer: "On intègre les bonnes pratiques SEO de base : structure, titres, hiérarchie, performance. Pour une stratégie SEO avancée (mots-clés, backlinks, contenu), on peut compléter ou vous orienter.",
   },
   {
     question: "Comment se passe le suivi après la mise en ligne ?",
-    answer: "Après la mise en ligne, une phase d'ajustements est prévue. Notre suivi mensuel à 89 CHF/mois prend ensuite le relais : mises à jour, modifications de contenu, sauvegardes et support réactif sous 48h.",
+    answer: "Phase d'ajustements incluse après la livraison. Ensuite, notre suivi mensuel (89 CHF/mois) prend le relais : mises à jour, modifications, sauvegardes et support sous 48h.",
   },
 ];
 

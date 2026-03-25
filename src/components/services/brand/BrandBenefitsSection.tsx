@@ -77,7 +77,7 @@ export const BrandBenefitsSection = () => {
             <span className="text-gradient-gold">pour vous.</span>
           </h2>
           <p className="text-body-lg text-muted-foreground max-w-2xl mx-auto">
-            Concrètement, une identité visuelle bien faite simplifie votre quotidien et change la façon dont vos clients vous perçoivent.
+            Une bonne identité visuelle, ça simplifie votre quotidien et ça change la façon dont vos clients vous perçoivent. Concrètement.
           </p>
         </motion.div>
 

@@ -4,17 +4,17 @@ const secondaryServices = [{
   id: "funnels",
   icon: Filter,
   title: "Tunnels de vente",
-  description: "Nous concevons des parcours simples pour guider vos visiteurs depuis la découverte de votre offre jusqu'à la prise de rendez-vous ou à l'achat, en cohérence avec votre site et votre identité."
+  description: "Des parcours simples qui guident vos visiteurs du \"je découvre\" au \"je prends rendez-vous\". Pas de usine à gaz - juste un chemin clair vers l'action."
 }, {
   id: "blog",
   icon: FileText,
   title: "Blog & contenus",
-  description: "Nous structurons votre blog et vos pages de contenus pour valoriser votre expertise, améliorer votre référencement et offrir à vos visiteurs des ressources claires et utiles."
+  description: "Un blog structuré qui montre que vous savez de quoi vous parlez, booste votre référencement et donne à vos visiteurs des raisons de revenir."
 }, {
   id: "ecommerce",
   icon: ShoppingBag,
   title: "Boutiques en ligne",
-  description: "Nous mettons en place des boutiques en ligne adaptées à la taille de votre activité, avec un parcours d'achat lisible et des produits présentés de manière professionnelle."
+  description: "Une boutique adaptée à votre taille, avec un parcours d'achat lisible et des produits bien présentés. Pas besoin de Shopify pour 20 produits."
 }];
 export const ComplementaryServicesSection = () => {
   return <section className="py-20 md:py-28 section-gradient-main">
@@ -25,7 +25,7 @@ export const ComplementaryServicesSection = () => {
             Services complémentaires.
           </h2>
           <p className="text-lg text-foreground-medium max-w-2xl mx-auto">
-            Des services additionnels pour renforcer votre image et compléter votre site web.
+            Pour aller plus loin, selon vos besoins.
           </p>
         </div>
 
@@ -38,7 +38,7 @@ export const ComplementaryServicesSection = () => {
                 Identité visuelle
               </h3>
               <p className="text-foreground-medium mb-6 leading-relaxed">
-                Nous concevons ou faisons évoluer votre identité visuelle pour qu'elle soit claire, reconnaissable et cohérente sur votre site, vos réseaux sociaux et vos supports de communication.
+                On crée ou on fait évoluer votre identité pour qu'elle soit claire, reconnaissable et cohérente partout - site, réseaux, supports print. Pas de logo fait sur Canva.
               </p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-3">
