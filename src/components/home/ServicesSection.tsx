@@ -189,11 +189,11 @@ export function ServicesSection() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-xl sm:text-2xl md:text-display-md mb-2 md:mb-4 leading-tight">
-             Deux services pour structurer votre{" "}
-            <span className="text-gradient-gold">présence en ligne.</span>
+             Deux services. Un seul objectif :{" "}
+            <span className="text-gradient-gold">que vos clients vous choisissent.</span>
           </h2>
           <p className="text-xs sm:text-sm md:text-body-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            NOVA VISIO vous accompagne sur les deux bases essentielles de votre image en ligne : un site clair et une identité visuelle professionnelle.
+            Un site qui explique clairement ce que vous faites. Une identité qui inspire confiance au premier regard.
           </p>
         </motion.div>
 
