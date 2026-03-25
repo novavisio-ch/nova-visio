@@ -38,7 +38,7 @@ export const ComplementaryServicesSection = () => {
                 Identité visuelle
               </h3>
               <p className="text-foreground-medium mb-6 leading-relaxed">
-                Nous concevons ou faisons évoluer votre identité visuelle pour qu'elle soit claire, reconnaissable et cohérente sur votre site, vos réseaux sociaux et vos supports de communication.
+                On crée ou on fait évoluer votre identité pour qu'elle soit claire, reconnaissable et cohérente partout - site, réseaux, supports print. Pas de logo fait sur Canva.
               </p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-3">

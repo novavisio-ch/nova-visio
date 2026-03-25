@@ -118,9 +118,8 @@ export function PackDigitalBranding() {
               Identité de marque & site vitrine
             </p>
             <p className="text-muted-foreground max-w-2xl mx-auto text-base md:text-lg leading-relaxed mb-6">
-              Une identité visuelle <strong className="text-foreground font-semibold">sur-mesure</strong> et un site vitrine complet de{" "}
-              <strong className="text-[#C3B68F] font-semibold">6 à 8 pages</strong>, conçus ensemble pour une présence en ligne{" "}
-              <strong className="text-foreground font-semibold">cohérente et professionnelle</strong>.
+              Votre identité visuelle <strong className="text-foreground font-semibold">sur-mesure</strong> et un site vitrine complet de{" "}
+              <strong className="text-[#C3B68F] font-semibold">6 à 8 pages</strong>, pensés ensemble pour que tout soit cohérent dès le départ. Pas de raccord à faire après.
             </p>
 
             <motion.div className="inline-block" whileHover={{ scale: 1.02 }}>

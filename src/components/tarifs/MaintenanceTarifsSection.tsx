@@ -59,16 +59,15 @@ export const MaintenanceTarifsSection = () => {
         style={{ borderColor: "rgba(195, 182, 143, 0.2)" }}
       >
         <h4 className="font-display text-sm font-semibold text-foreground mb-2">
-          Besoin de plus ?
+          Besoin de plus de modifications ?
         </h4>
         <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-          Pour les projets avec des besoins réguliers en contenu ou en évolutions
-          fréquentes, un forfait{" "}
+          Pour les projets avec des besoins réguliers en contenu ou en évolutions,
+          le forfait{" "}
           <strong className="text-foreground font-medium">
             Actif à 149 CHF/mois
           </strong>{" "}
-          est disponible - inclut 3h de modifications mensuelles, mise à jour de
-          contenu et support prioritaire sous 24h.
+          inclut 3h de modifs par mois, mise à jour de contenu et support prioritaire sous 24h.
         </p>
         <Link
           to="/contact?sujet=forfait-actif"
