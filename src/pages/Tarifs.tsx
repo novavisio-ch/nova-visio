@@ -13,12 +13,12 @@ const mainServices = [{
   id: "site-vitrine",
   icon: Monitor,
   title: "Site vitrine",
-  subtitle: "Votre vitrine digitale",
+  subtitle: "Votre meilleur commercial",
   price: "1'500",
   badge: "Best-seller",
   variant: "gold" as const,
   description: <>
-        Une présence en ligne <strong className="text-foreground font-semibold">sur-mesure</strong>, pensée pour vos objectifs, qui donne <strong className="text-[#C3B68F] font-medium">confiance à vos clients</strong>.
+        Un site qui dit clairement ce que vous faites et qui donne <strong className="text-[#C3B68F] font-medium">envie de vous contacter</strong>.
       </>,
   features: [{
     text: "6 à 8 pages",
