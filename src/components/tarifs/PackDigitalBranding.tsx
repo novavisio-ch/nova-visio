@@ -152,7 +152,7 @@ export function PackDigitalBranding() {
                     whileHover={{ y: -4, boxShadow: "0 10px 30px -10px rgba(195, 182, 143, 0.25)" }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
-                    className="p-4 rounded-xl border border-[#C3B68F]/20 hover:border-[#C3B68F]/40 transition-colors duration-300"
+                    className="p-4 rounded-xl transition-colors duration-300"
                     style={{ background: "rgba(195, 182, 143, 0.03)" }}
                   >
                     <Icon className="w-6 h-6 text-[#C3B68F] mb-3" />
