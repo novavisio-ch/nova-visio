@@ -203,11 +203,10 @@ export function PackRefonteGlobale() {
 
           {/* Summary bullets */}
           <motion.div
-            className="mb-8 md:mb-10 p-5 md:p-6 rounded-xl border hover:border-[#9D8DF0]/40 transition-colors duration-300"
+            className="mb-8 md:mb-10 p-5 md:p-6 rounded-xl transition-colors duration-300"
             whileHover={{ y: -4, boxShadow: "0 15px 40px -10px rgba(124, 106, 232, 0.2)" }}
             style={{
               background: "linear-gradient(135deg, rgba(124, 106, 232, 0.05) 0%, rgba(195, 182, 143, 0.05) 100%)",
-              borderColor: "rgba(124, 106, 232, 0.2)",
             }}
           >
             <h4 className="font-display text-lg md:text-xl font-bold text-foreground mb-4 flex items-center gap-3">
