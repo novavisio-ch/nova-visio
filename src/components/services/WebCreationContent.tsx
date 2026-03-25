@@ -24,24 +24,21 @@ export const WebCreationContent = () => {
           {/* Text Column - Right */}
           <div className="order-2 lg:order-2 space-y-6">
             <h2 className="font-display text-3xl md:text-4xl lg:text-[2.5rem] font-bold leading-tight text-foreground">
-              Un site web ne se limite pas au design : c'est un outil sur mesure pour faire grandir votre activité.
+              Un beau site qui ne vend pas, c'est juste une jolie vitrine vide.
             </h2>
 
             <div className="space-y-5 text-muted-foreground font-body text-lg leading-relaxed">
               <p>
-                Un bon site ne sert pas seulement à "faire joli". Il doit aider vos visiteurs à comprendre qui vous êtes, ce que vous proposez et pourquoi ils devraient vous faire confiance, avec une esthétique qui vous ressemble vraiment.
+                Vos prospects arrivent sur votre site. En 3 secondes, ils décident de rester ou de partir. 
+                Ce qui fait la différence ? Pas les animations ou les effets — mais une structure qui dit clairement 
+                <strong className="text-foreground"> qui vous êtes, ce que vous proposez, et pourquoi vous faire confiance</strong>.
               </p>
 
               <p>
-                Chez NOVA VISIO, chaque projet de création web est pensé sur mesure : nous partons de vos envies, de votre univers visuel et de votre façon de travailler, puis nous les traduisons dans une structure de pages, des messages et une expérience de navigation alignés sur une stratégie claire.
-              </p>
-
-              <p>
-                Notre priorité : créer un site unique, cohérent avec votre identité et vos objectifs, qui rassure vos prospects et leur donne envie de passer à l'étape suivante (prise de contact, demande de devis, achat). L'originalité visuelle reste au service d'un parcours réfléchi, pas l'inverse.
-              </p>
-
-              <p>
-                C'est avec cette logique que nous abordons chaque projet de création de site vitrine ou de landing page, en combinant vos souhaits esthétiques avec une stratégie digitale solide.
+                Nous partons de votre activité, de vos vrais objectifs, et nous construisons un site 
+                où chaque page a un rôle précis : rassurer, guider, convaincre. Le design est au service du parcours, 
+                pas l'inverse. Résultat : vos visiteurs comprennent votre offre et passent à l'action — 
+                prise de contact, demande de devis, achat.
               </p>
             </div>
 
