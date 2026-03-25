@@ -452,7 +452,7 @@ const Tarifs = () => {
           }}>
               Nos tarifs
             </motion.span>
-            <h1 className="font-display text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 md:mb-6">
+            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 md:mb-6">
               <motion.span initial={{
               opacity: 0,
               y: 20
@@ -545,7 +545,7 @@ const Tarifs = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-10 md:mb-12"
           >
-            <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4">
+            <h2 className="font-display text-3xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4">
               Tout en un ? <span className="text-[#C3B68F]">On a ce qu'il faut.</span>
             </h2>
             <p className="text-muted-foreground max-w-xl mx-auto">
@@ -592,7 +592,7 @@ const Tarifs = () => {
             ease: "linear"
           }} />
 
-            <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+            <h3 className="font-display text-3xl md:text-3xl font-bold text-foreground mb-4">
               Vous savez ce qu'il vous faut ? <span className="text-[#C3B68F]">On en parle.</span>
             </h3>
             <p className="text-muted-foreground mb-8 max-w-lg mx-auto">

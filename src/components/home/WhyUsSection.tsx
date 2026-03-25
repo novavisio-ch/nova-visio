@@ -121,7 +121,7 @@ export function WhyUsSection() {
             <span className="text-[10px] md:text-sm font-medium text-primary">Notre différence</span>
           </motion.div>
           
-          <h2 className="text-xl sm:text-2xl md:text-display-lg mb-2 md:mb-4 leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-display-lg mb-2 md:mb-4 leading-tight">
             Pourquoi choisir <span className="text-gradient-gold">NOVA VISIO</span> ?
           </h2>
         </motion.div>

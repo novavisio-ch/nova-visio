@@ -185,7 +185,7 @@ export function ServicesSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-xl sm:text-2xl md:text-display-md mb-2 md:mb-4 leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-display-md mb-2 md:mb-4 leading-tight">
              Deux services. Un seul objectif :{" "}
             <span className="text-gradient-gold">que vos clients vous choisissent.</span>
           </h2>

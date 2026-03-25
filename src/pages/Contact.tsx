@@ -124,7 +124,7 @@ const Contact = () => {
       <section className="py-12 md:py-16 lg:py-20 px-4">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-2xl sm:text-3xl md:text-display-lg lg:text-display-xl mb-4 md:mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-display-lg lg:text-display-xl mb-4 md:mb-6 leading-tight">
               On se parle <span className="text-gradient-gold">15 minutes ?</span>
             </h1>
             <p className="text-sm sm:text-base md:text-body-lg text-muted-foreground leading-relaxed max-w-xl mx-auto">
