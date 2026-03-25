@@ -8,7 +8,7 @@ const packs = [
   {
     icon: Package,
     title: "Pack Digital & Branding",
-    description: "Identité visuelle + site web complet pour lancer votre activité avec une image cohérente.",
+    description: "Logo + identité visuelle + site web complet. Un seul interlocuteur, une image cohérente dès le départ.",
     price: "2'200 CHF",
     theme: "gold" as const,
   },
