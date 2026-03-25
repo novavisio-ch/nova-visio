@@ -452,7 +452,7 @@ const Tarifs = () => {
           }}>
               Nos tarifs
             </motion.span>
-            <h1 className="font-display text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 md:mb-6">
+            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 md:mb-6">
               <motion.span initial={{
               opacity: 0,
               y: 20
