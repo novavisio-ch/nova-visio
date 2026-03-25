@@ -24,25 +24,21 @@ export const BrandIdentityContent = () => {
           {/* Text Column - Right */}
           <div className="order-2 lg:order-2 space-y-6">
             <h2 className="font-display text-3xl md:text-4xl lg:text-[2.5rem] font-bold leading-tight text-foreground">
-              Votre identité visuelle ne se résume pas à un logo.
+              Un logo sur Canva, ce n'est pas une identité de marque.
             </h2>
 
             <div className="space-y-5 text-muted-foreground font-body text-lg leading-relaxed">
               <p>
-                Un logo seul ne suffit pas à créer une image de marque forte. Votre identité visuelle, 
-                c'est l'ensemble des éléments qui permettent à vos clients de vous reconnaître immédiatement, 
-                quel que soit le support : site web, réseaux sociaux, cartes de visite, ou documents.
+                Votre identité visuelle, c'est ce qui fait que vos clients vous reconnaissent 
+                en un coup d'œil — sur votre site, vos réseaux, vos cartes de visite. 
+                Un logo seul ne suffit pas. Il faut un système cohérent qui inspire confiance 
+                avant même que vous ayez dit un mot.
               </p>
 
               <p>
-                Une identité bien pensée renforce la confiance et la crédibilité. Elle montre que vous 
-                prenez votre activité au sérieux et que vous êtes un professionnel sur lequel on peut compter.
-              </p>
-
-              <p>
-                Chez NOVA VISIO, nous créons des identités visuelles conçues pour durer et s'adapter 
-                facilement à tous vos supports. Notre objectif : vous donner une image claire, cohérente 
-                et professionnelle, sans complexité inutile.
+                On crée des identités conçues pour durer et s'adapter facilement à tous vos supports. 
+                Pas de gadgets, pas de tendances éphémères — une image claire et professionnelle 
+                que vous pouvez déployer sans nous rappeler à chaque fois.
               </p>
             </div>
 
