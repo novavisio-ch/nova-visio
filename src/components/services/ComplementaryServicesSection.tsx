@@ -4,17 +4,17 @@ const secondaryServices = [{
   id: "funnels",
   icon: Filter,
   title: "Tunnels de vente",
-  description: "Nous concevons des parcours simples pour guider vos visiteurs depuis la découverte de votre offre jusqu'à la prise de rendez-vous ou à l'achat, en cohérence avec votre site et votre identité."
+  description: "Des parcours simples qui guident vos visiteurs du \"je découvre\" au \"je prends rendez-vous\". Pas de usine à gaz - juste un chemin clair vers l'action."
 }, {
   id: "blog",
   icon: FileText,
   title: "Blog & contenus",
-  description: "Nous structurons votre blog et vos pages de contenus pour valoriser votre expertise, améliorer votre référencement et offrir à vos visiteurs des ressources claires et utiles."
+  description: "Un blog structuré qui montre que vous savez de quoi vous parlez, booste votre référencement et donne à vos visiteurs des raisons de revenir."
 }, {
   id: "ecommerce",
   icon: ShoppingBag,
   title: "Boutiques en ligne",
-  description: "Nous mettons en place des boutiques en ligne adaptées à la taille de votre activité, avec un parcours d'achat lisible et des produits présentés de manière professionnelle."
+  description: "Une boutique adaptée à votre taille, avec un parcours d'achat lisible et des produits bien présentés. Pas besoin de Shopify pour 20 produits."
 }];
 export const ComplementaryServicesSection = () => {
   return <section className="py-20 md:py-28 section-gradient-main">
