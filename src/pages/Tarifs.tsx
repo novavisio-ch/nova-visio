@@ -595,10 +595,10 @@ const Tarifs = () => {
           }} />
 
             <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
-              Vous avez un <span className="text-[#C3B68F]">projet</span> en tête ?
+              Vous savez ce qu'il vous faut ? <span className="text-[#C3B68F]">On en parle.</span>
             </h3>
             <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
-              Discutons ensemble de vos besoins pour vous proposer une <strong className="text-foreground font-medium">solution adaptée</strong> à votre situation.
+              15 min d'appel gratuit. On fait le point et on vous dit honnêtement quelle offre correspond à votre situation.
             </p>
             <motion.div whileHover={{
             scale: 1.05
