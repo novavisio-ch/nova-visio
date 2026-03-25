@@ -5,9 +5,9 @@ import figmaIcon from "@/assets/icons/figma.png";
 import webflowIcon from "@/assets/icons/webflow.png";
 
 const bulletPoints = [
-  "Architecture claire de vos pages et de vos offres.",
-  "Contenus structurés pour rassurer et guider vos visiteurs.",
-  "Un site modifiable par vous, sans jargon technique.",
+  "Des pages structurées qui expliquent clairement votre offre.",
+  "Un design qui rassure vos prospects — pas qui vous flatte.",
+  "Un site que vous pouvez modifier vous-même, sans appeler un développeur.",
 ];
 
 export function WebCreationHero() {
