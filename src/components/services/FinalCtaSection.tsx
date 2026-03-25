@@ -25,7 +25,7 @@ export const FinalCtaSection = () => {
             className="group rounded-lg px-8 py-6 text-base font-semibold shadow-lg transition-all duration-300 hover:shadow-xl md:text-lg btn-gradient-gold"
           >
             <Link to="/contact">
-              Devenir votre catalyseur
+              Réserver un appel gratuit
               <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
           </Button>

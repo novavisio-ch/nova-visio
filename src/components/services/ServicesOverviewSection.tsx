@@ -276,12 +276,12 @@ export const ServicesOverviewSection = () => {
                   </div>
                   
                   <h3 className="font-display text-xl md:text-2xl font-bold text-white mb-3 leading-tight">
-                    Un accompagnement complet,{" "}
-                    <span className="text-[#C3B68F]">de la stratégie à la conversion</span>
+                    De la stratégie à la conversion,{" "}
+                    <span className="text-[#C3B68F]">tout est couvert</span>
                   </h3>
                   
                   <p className="text-white/60 text-sm md:text-base leading-relaxed mb-6">
-                    Des outils de croissance pensés pour clarifier votre message et transformer vos visiteurs en clients.
+                    Pas besoin de jongler entre 5 prestataires. On gère tout, du premier brief jusqu'aux premiers résultats.
                   </p>
                 </div>
                 
