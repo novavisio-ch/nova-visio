@@ -78,7 +78,7 @@ export const BrandComplementarySection = () => {
         ease: "easeOut"
       }}>
           {/* Badge */}
-          <motion.div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#C3B68F]/30 bg-[#C3B68F]/10 backdrop-blur-sm mb-6" initial={{
+          <motion.div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#C3B68F]/10 backdrop-blur-sm mb-6" initial={{
           opacity: 0,
           scale: 0.8
         }} whileInView={{
