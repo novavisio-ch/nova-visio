@@ -5,41 +5,41 @@ import { useIsTabletOrMobile } from "@/hooks/use-mobile";
 const steps = [
   {
     number: "01",
-    title: "Clarification",
-    subtitle: "du projet",
-    description: "Un premier échange pour comprendre votre activité, vos objectifs et vos contraintes.",
+    title: "On échange",
+    subtitle: "15 min",
+    description: "Un appel gratuit pour comprendre votre activité, vos objectifs et ce qui bloque aujourd'hui.",
     icon: MessageCircle,
     color: "from-primary/20 to-primary/5",
   },
   {
     number: "02",
-    title: "Diagnostic",
-    subtitle: "stratégique",
-    description: "Analyse de votre situation actuelle : image de marque, cohérence visuelle et messages.",
+    title: "On diagnostique",
+    subtitle: "votre situation",
+    description: "On analyse ce qui existe — site, image, messages — et on identifie ce qui doit changer.",
     icon: Search,
     color: "from-purple-500/20 to-purple-500/5",
   },
   {
     number: "03",
-    title: "Fondations",
-    subtitle: "de marque",
-    description: "Définition du positionnement, identité visuelle, tonalité et structure des messages.",
+    title: "On construit",
+    subtitle: "les fondations",
+    description: "Positionnement, identité visuelle, structure des messages. Les bases solides avant le design.",
     icon: Palette,
     color: "from-primary/20 to-primary/5",
   },
   {
     number: "04",
-    title: "Conception",
-    subtitle: "web & UX",
-    description: "Site structuré, lisible et orienté crédibilité avec une expérience utilisateur optimale.",
+    title: "On crée",
+    subtitle: "votre site",
+    description: "Design sur mesure, pages structurées pour convaincre, expérience fluide sur tous les écrans.",
     icon: Layout,
     color: "from-purple-500/20 to-purple-500/5",
   },
   {
     number: "05",
-    title: "Déploiement",
-    subtitle: "& suivi",
-    description: "Mise en ligne et accompagnement pour des outils durables et évolutifs.",
+    title: "On lance",
+    subtitle: "& on suit",
+    description: "Mise en ligne, formation rapide, et suivi mensuel pour que votre site reste un outil efficace.",
     icon: Rocket,
     color: "from-primary/20 to-primary/5",
   },
@@ -97,12 +97,12 @@ export function StepsSection() {
           className="text-center mb-8 md:mb-16 lg:mb-20"
         >
           <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-6 leading-tight">
-            Notre méthode, <span className="text-gradient-gold">étape par étape.</span>
+            Comment ça se passe, <span className="text-gradient-gold">concrètement.</span>
           </h2>
           <p className="text-body text-xs sm:text-sm md:text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed">
-            Chaque projet suit un processus clair. L'objectif : réduire la complexité,
+            Pas de tunnel de vente à rallonge. Un processus simple en 5 étapes,
             <br className="hidden md:block" />
-            structurer vos idées et créer des supports durables.
+            transparent du début à la fin.
           </p>
         </motion.div>
 

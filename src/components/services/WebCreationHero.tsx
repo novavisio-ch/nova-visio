@@ -5,9 +5,9 @@ import figmaIcon from "@/assets/icons/figma.png";
 import webflowIcon from "@/assets/icons/webflow.png";
 
 const bulletPoints = [
-  "Architecture claire de vos pages et de vos offres.",
-  "Contenus structurés pour rassurer et guider vos visiteurs.",
-  "Un site modifiable par vous, sans jargon technique.",
+  "Des pages structurées qui expliquent clairement votre offre.",
+  "Un design qui rassure vos prospects — pas qui vous flatte.",
+  "Un site que vous pouvez modifier vous-même, sans appeler un développeur.",
 ];
 
 export function WebCreationHero() {
@@ -47,8 +47,8 @@ export function WebCreationHero() {
             className="text-2xl sm:text-3xl md:text-display-lg lg:text-display-xl mb-4 md:mb-8 animate-fade-up leading-tight"
             style={{ animationDelay: "0.1s" }}
           >
-            Votre site web{" "}
-            <span className="text-gradient-gold">au service de vos objectifs.</span>
+            Votre site web,{" "}
+            <span className="text-gradient-gold">votre meilleur commercial.</span>
           </h1>
 
           {/* Intro Paragraph */}
@@ -56,9 +56,8 @@ export function WebCreationHero() {
             className="text-sm sm:text-base md:text-body-lg text-muted-foreground max-w-3xl mx-auto mb-6 md:mb-8 animate-fade-up leading-relaxed"
             style={{ animationDelay: "0.15s" }}
           >
-            NOVA VISIO conçoit des sites vitrines et des landing pages pensés pour clarifier votre offre, 
-            renforcer votre crédibilité et rendre la décision simple pour vos prospects. 
-            Pas de surenchère d'effets : un design sobre, lisible et orienté résultats.
+            Un site vitrine qui dit clairement ce que vous faites, pourquoi on devrait vous faire confiance, 
+            et comment travailler avec vous. Sans animations inutiles, sans blabla — juste un site qui convertit.
           </p>
 
           {/* Bullet Points */}

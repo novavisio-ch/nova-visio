@@ -8,16 +8,15 @@ export const FinalCtaSection = () => {
       <div className="container mx-auto">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="mb-4 md:mb-6 font-display text-2xl sm:text-3xl md:text-display-lg lg:text-display-xl font-bold leading-tight text-foreground">
-            Faites de votre présence en ligne un{" "}
+            Prêt à avoir un site qui{" "}
             <span className="text-gradient-gold">
-              catalyseur de croissance.
+              bosse pour vous ?
             </span>
           </h2>
 
           <p className="mx-auto mb-8 md:mb-10 max-w-2xl text-sm sm:text-base md:text-lg leading-relaxed text-muted-foreground">
-            Un site clair, une identité forte et des parcours bien pensés
-            peuvent transformer votre activité. Le rôle de NOVA VISIO : vous
-            aider à aligner tout cela, sans complexifier votre quotidien.
+            15 minutes d'appel gratuit. On regarde ensemble ce qui bloque
+            et on vous propose une solution claire — sans engagement.
           </p>
 
           <Button
@@ -26,7 +25,7 @@ export const FinalCtaSection = () => {
             className="group rounded-lg px-8 py-6 text-base font-semibold shadow-lg transition-all duration-300 hover:shadow-xl md:text-lg btn-gradient-gold"
           >
             <Link to="/contact">
-              Devenir votre catalyseur
+              Réserver un appel gratuit
               <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
           </Button>

@@ -371,12 +371,12 @@ export const WebOfferSection = () => {
           </motion.div>
           
            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-display-lg font-display font-bold mb-3 md:mb-4 text-foreground">
-             Nos offres web.
+             Ce que vous obtenez.
            </h2>
            <p className="text-sm sm:text-base md:text-xl max-w-2xl mx-auto text-muted-foreground">
-            Deux formats adaptés à vos objectifs,
+            Deux formats selon vos besoins,
             <br className="hidden md:block" />
-            une même <strong style={{
+            la même <strong style={{
             color: "#C3B68F"
           }}>exigence de qualité</strong>.
           </p>
@@ -384,8 +384,8 @@ export const WebOfferSection = () => {
 
         {/* Cards Grid */}
         <div className="grid md:grid-cols-2 gap-6 md:gap-10">
-          <OfferCard title="Site vitrine" subtitle="Votre vitrine digitale" description="Une présence en ligne sur‑mesure, pensée pour vos objectifs, qui donne confiance à vos clients et vous génère plus de demandes qualifiées." benefits={siteBenefits} ctaText="Créer mon site vitrine" variant="gold" icon={<Monitor className="w-6 h-6 md:w-8 md:h-8 text-[#2D284D]" />} index={0} price="1'500 CHF" isMobile={isMobile} />
-          <OfferCard title="Landing page" subtitle="Une page, un objectif" description="Une page unique et percutante, conçue sur‑mesure sur votre offre pour convertir vos visiteurs en prospects ou clients." benefits={landingBenefits} ctaText="Créer ma landing page" variant="purple" icon={<Rocket className="w-6 h-6 md:w-8 md:h-8 text-[#2D284D]" />} index={1} price="900 CHF" isMobile={isMobile} />
+          <OfferCard title="Site vitrine" subtitle="Votre vitrine digitale" description="Un site complet qui présente votre activité, vos offres et votre valeur — pour que vos prospects vous contactent au lieu de scroller et partir." benefits={siteBenefits} ctaText="Créer mon site vitrine" variant="gold" icon={<Monitor className="w-6 h-6 md:w-8 md:h-8 text-[#2D284D]" />} index={0} price="1'500 CHF" isMobile={isMobile} />
+          <OfferCard title="Landing page" subtitle="Une page, un objectif" description="Une seule page, un seul objectif : convaincre. Idéale pour un lancement, une offre spécifique ou une campagne pub." benefits={landingBenefits} ctaText="Créer ma landing page" variant="purple" icon={<Rocket className="w-6 h-6 md:w-8 md:h-8 text-[#2D284D]" />} index={1} price="900 CHF" isMobile={isMobile} />
         </div>
 
         {/* Bottom decorative element */}

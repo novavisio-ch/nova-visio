@@ -31,22 +31,22 @@ const benefits = [
   {
     text: "Vos clients comprennent ",
     highlight: "en quelques secondes",
-    rest: " ce que vous faites et comment travailler avec vous."
+    rest: " ce que vous faites — plus besoin d'expliquer 10 fois."
   },
   {
-    text: "Vous bénéficiez d'une ",
-    highlight: "image professionnelle, cohérente et alignée",
-    rest: " sur toutes vos plateformes."
+    text: "Vous avez une ",
+    highlight: "image pro et cohérente",
+    rest: " sur tous vos supports, sans y passer vos soirées."
   },
   {
     text: "Vous ",
-    highlight: "vendez plus facilement",
-    rest: ", sans devoir passer tout votre temps à \"gérer le digital\"."
+    highlight: "attirez les bons clients",
+    rest: " — ceux qui comprennent votre valeur et ne négocient pas vos prix."
   },
   {
     text: "Votre ",
-    highlight: "charge mentale liée au digital diminue",
-    rest: ", vous pouvez vous concentrer sur votre cœur de métier."
+    highlight: "charge mentale digitale diminue",
+    rest: " : tout est en place, vous pouvez bosser sur votre métier."
   }
 ];
 
@@ -87,9 +87,9 @@ export function BenefitsSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            Ce que vous gagnez en clarifiant votre image
+            Ce que vous gagnez concrètement quand votre image
             <br className="hidden sm:block" />
-            et votre présence en ligne avec NOVA VISIO.
+            et votre site font enfin le job.
           </motion.p>
 
           {/* Benefits Grid */}

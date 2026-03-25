@@ -5,26 +5,26 @@ import { useIsTabletOrMobile } from "@/hooks/use-mobile";
 const reasons = [
   {
     icon: MessageCircle,
-    title: "Langage simple",
-    description: "Sans jargon technique, nous vous expliquons tout clairement.",
+    title: "Zéro jargon",
+    description: "On parle comme des humains. Pas de \"synergie UX\" ni de \"paradigme digital\".",
     gradient: "from-primary/20 to-primary/5"
   },
   {
     icon: Users,
-    title: "Accompagnement\npas à pas",
-    description: "Nous vous guidons à chaque étape de votre transformation digitale.",
+    title: "Un vrai\naccompagnement",
+    description: "On ne vous lâche pas après la livraison. On reste là tant que vous avez besoin.",
     gradient: "from-purple-500/20 to-purple-500/5"
   },
   {
     icon: Shield,
-    title: "Clarté et durabilité",
-    description: "La priorité à la clarté et à la durabilité, pas aux solutions miracles.",
+    title: "Qualité > quantité",
+    description: "On prend peu de projets à la fois. Chacun a notre attention complète.",
     gradient: "from-emerald-500/20 to-emerald-500/5"
   },
   {
     icon: Star,
-    title: "Qualité maximale",
-    description: "Un nombre limité de projets simultanés pour une attention totale.",
+    title: "Résultats,\npas promesses",
+    description: "On ne vend pas du rêve. On construit des outils qui travaillent pour vous.",
     gradient: "from-amber-500/20 to-amber-500/5"
   }
 ];

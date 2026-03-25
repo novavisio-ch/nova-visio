@@ -189,11 +189,11 @@ export function ServicesSection() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-xl sm:text-2xl md:text-display-md mb-2 md:mb-4 leading-tight">
-             Deux services pour structurer votre{" "}
-            <span className="text-gradient-gold">présence en ligne.</span>
+             Deux services. Un seul objectif :{" "}
+            <span className="text-gradient-gold">que vos clients vous choisissent.</span>
           </h2>
           <p className="text-xs sm:text-sm md:text-body-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            NOVA VISIO vous accompagne sur les deux bases essentielles de votre image en ligne : un site clair et une identité visuelle professionnelle.
+            Un site qui explique clairement ce que vous faites. Une identité qui inspire confiance au premier regard.
           </p>
         </motion.div>
 
@@ -201,17 +201,17 @@ export function ServicesSection() {
         <div className="grid md:grid-cols-2 gap-4 md:gap-6 lg:gap-8 max-w-5xl mx-auto">
           <ServiceCard 
             title="Site vitrine et landing page" 
-            description="Un site web pensé pour renforcer votre crédibilité et établir la confiance de vos prospects." 
+            description="Vos prospects arrivent, comprennent votre offre en 5 secondes et vous contactent. C'est ça, un bon site." 
             benefits={webBenefits} 
             ctaText="Découvrir nos créations web →" 
             ctaLink="/site-web" 
             theme="gold"
             isMobile={isMobile}
-            price="dès 1'500 CHF"
+            price="dès 900 CHF"
           />
           <ServiceCard 
             title="Identité visuelle & logo" 
-            description="Une identité visuelle professionnelle pour être reconnu et inspirer confiance au premier regard." 
+            description="Fini le logo fait sur Canva. Une vraie identité qui vous démarque et que vous pouvez utiliser partout." 
             benefits={brandBenefits} 
             ctaText="Voir nos identités visuelles →" 
             ctaLink="/identite-visuelle" 

@@ -10,23 +10,22 @@ export function HeroSection() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full glass-card mb-6 md:mb-8 animate-fade-up">
             <span className="text-xs md:text-body-sm text-primary">✦</span>
-            <span className="text-xs md:text-body-sm text-muted-foreground">Made in Switzerland - Pour artisans, indépendants & petites entreprises</span>
+            <span className="text-xs md:text-body-sm text-muted-foreground">Made in Switzerland · Pour artisans, indépendants & petites entreprises</span>
           </div>
 
           <h1 className="text-2xl sm:text-3xl md:text-display-lg lg:text-display-xl mb-4 md:mb-6 animate-fade-up leading-tight" style={{
           animationDelay: "0.1s"
         }}>
-            Nous créons votre site et votre identité visuelle pour{" "}
-            <span className="text-gradient-gold">rendre vos ventes plus faciles</span>.
+            Vos clients ne vous trouvent pas en ligne ?{" "}
+            <span className="text-gradient-gold">On règle ça.</span>
           </h1>
 
           <p className="max-w-2xl mx-auto mb-8 md:mb-10 animate-fade-up font-sans text-sm sm:text-base md:text-xl lg:text-2xl font-light text-foreground-strong leading-relaxed" style={{
           animationDelay: "0.2s"
         }}>
-            Vous êtes artisan, indépendant ou gérez une petite entreprise ?
-            Nova Visio crée votre site vitrine et votre identité visuelle
-            pour que vos clients vous trouvent, vous fassent confiance
-            et vous contactent - dès 1'500 CHF.
+            Site vitrine, landing page, identité visuelle — nous créons
+            les outils qui font que vos prospects vous trouvent,
+            vous comprennent et vous contactent. Dès 900 CHF.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 animate-fade-up" style={{
@@ -34,7 +33,7 @@ export function HeroSection() {
         }}>
             <Button variant="gold" size="lg" className="w-full sm:w-auto" asChild>
               <Link to="/contact">
-                Parler de votre projet
+                Réserver un appel gratuit
                 <ArrowRight className="w-4 h-4 md:w-5 md:h-5 ml-1" />
               </Link>
             </Button>

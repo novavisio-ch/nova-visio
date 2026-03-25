@@ -5,7 +5,7 @@ const services = [{
   id: "strategy",
   title: "Stratégie & architecture",
   subtitle: "de site",
-  description: "Définition de vos objectifs, structure des pages et parcours utilisateur pensés pour guider vos visiteurs vers l'action.",
+  description: "On ne commence jamais par le design. On commence par comprendre ce que vous vendez, à qui, et comment votre site doit guider vos visiteurs.",
   icon: LayoutGrid,
   number: "01",
   gradient: "from-amber-500/20 via-yellow-500/10 to-transparent"
@@ -13,7 +13,7 @@ const services = [{
   id: "identity",
   title: "Identité visuelle",
   subtitle: "appliquée au web",
-  description: "Déclinaison de votre charte graphique sur le web : couleurs, typographies et éléments visuels cohérents.",
+  description: "Vos couleurs, typos et éléments graphiques déclinés sur le web pour une image cohérente du logo à la dernière page.",
   icon: Palette,
   number: "02",
   gradient: "from-rose-500/20 via-pink-500/10 to-transparent"
@@ -21,7 +21,7 @@ const services = [{
   id: "webdesign",
   title: "Webdesign",
   subtitle: "& UX/UI",
-  description: "Interfaces modernes et intuitives, conçues pour offrir une expérience fluide sur tous les écrans.",
+  description: "Des interfaces qui ne font pas juste \"beau\" — elles sont lisibles, intuitives et pensées pour convertir.",
   icon: Layers,
   number: "03",
   gradient: "from-violet-500/20 via-purple-500/10 to-transparent"
@@ -29,7 +29,7 @@ const services = [{
   id: "landing",
   title: "Pages de vente",
   subtitle: "& landing pages",
-  description: "Pages optimisées pour la conversion, avec des arguments clairs et des appels à l'action stratégiques.",
+  description: "Une page, un objectif, un message clair. Des arguments qui convainquent et des CTA qui font cliquer.",
   icon: Rocket,
   number: "04",
   gradient: "from-cyan-500/20 via-blue-500/10 to-transparent"
@@ -37,7 +37,7 @@ const services = [{
   id: "conversion",
   title: "Systèmes",
   subtitle: "de conversion",
-  description: "Tunnels de vente, formulaires et automatisations pour transformer vos visiteurs en clients.",
+  description: "Formulaires, tunnels, automatisations — pour que vos visiteurs ne restent pas de simples visiteurs.",
   icon: TrendingUp,
   number: "05",
   gradient: "from-emerald-500/20 via-green-500/10 to-transparent"
@@ -124,8 +124,8 @@ export const ServicesOverviewSection = () => {
           </h2>
           
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Une approche complète pour concevoir des expériences web 
-            qui convertissent et marquent les esprits.
+            Tout ce qu'il faut pour transformer votre site en un outil
+            qui travaille pendant que vous dormez.
           </p>
         </motion.div>
 
@@ -276,12 +276,12 @@ export const ServicesOverviewSection = () => {
                   </div>
                   
                   <h3 className="font-display text-xl md:text-2xl font-bold text-white mb-3 leading-tight">
-                    Un accompagnement complet,{" "}
-                    <span className="text-[#C3B68F]">de la stratégie à la conversion</span>
+                    De la stratégie à la conversion,{" "}
+                    <span className="text-[#C3B68F]">tout est couvert</span>
                   </h3>
                   
                   <p className="text-white/60 text-sm md:text-base leading-relaxed mb-6">
-                    Des outils de croissance pensés pour clarifier votre message et transformer vos visiteurs en clients.
+                    Pas besoin de jongler entre 5 prestataires. On gère tout, du premier brief jusqu'aux premiers résultats.
                   </p>
                 </div>
                 

@@ -5,9 +5,9 @@ import illustratorIcon from "@/assets/icons/illustrator.svg";
 import photoshopIcon from "@/assets/icons/photoshop.svg";
 
 const bulletPoints = [
-  "Un logo clair et mémorable, adapté à tous vos supports.",
-  "Une palette de couleurs cohérente avec votre positionnement.",
-  "Des règles d'usage simples pour une image constante.",
+  "Un logo qui fonctionne en grand comme en petit, sur écran comme sur papier.",
+  "Des couleurs et typos choisies pour vous — pas piochées au hasard.",
+  "Des règles simples pour garder la même image partout, sans se prendre la tête.",
 ];
 
 export function BrandIdentityHero() {
@@ -47,8 +47,8 @@ export function BrandIdentityHero() {
             className="text-2xl sm:text-3xl md:text-display-lg lg:text-display-xl mb-4 md:mb-8 animate-fade-up leading-tight"
             style={{ animationDelay: "0.1s" }}
           >
-            Une identité visuelle claire pour{" "}
-            <span className="text-gradient-gold">rendre votre marque mémorable.</span>
+            Fini le logo bricolé.{" "}
+            <span className="text-gradient-gold">Place à une vraie identité.</span>
           </h1>
 
           {/* Intro Paragraph */}
@@ -56,8 +56,8 @@ export function BrandIdentityHero() {
             className="text-sm sm:text-base md:text-body-lg text-muted-foreground max-w-3xl mx-auto mb-6 md:mb-8 animate-fade-up leading-relaxed"
             style={{ animationDelay: "0.15s" }}
           >
-            Nous créons des identités visuelles sur mesure : logo, couleurs, typographies et règles d'usage,
-            pour que votre marque soit cohérente sur votre site, vos réseaux sociaux et vos supports.
+            Logo, couleurs, typographies, charte graphique — on crée tout de A à Z
+            pour que votre marque soit reconnaissable, cohérente et utilisable partout.
           </p>
 
           {/* Bullet Points */}

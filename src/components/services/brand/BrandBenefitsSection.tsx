@@ -3,20 +3,20 @@ import { motion, Variants } from "framer-motion";
 
 const benefits = [
   {
-    title: "Reconnaissance immédiate",
-    description: "Vos clients vous reconnaissent en un coup d'œil, quel que soit le support."
+    title: "On vous reconnaît",
+    description: "Vos clients savent que c'est vous avant même de lire votre nom."
   },
   {
-    title: "Image professionnelle",
-    description: "Votre image inspire plus de confiance et de professionnalisme."
+    title: "Vous inspirez confiance",
+    description: "Une image pro dit \"je prends mon activité au sérieux\" — sans avoir à le dire."
   },
   {
-    title: "Gain de temps",
-    description: "Vos supports sont plus simples à créer, car les règles sont claires."
+    title: "Vous gagnez du temps",
+    description: "Fini de vous demander quelle couleur ou quelle typo utiliser. Tout est défini."
   },
   {
-    title: "Cohérence dans la durée",
-    description: "Votre communication est cohérente (site, réseaux, documents)."
+    title: "Ça reste cohérent",
+    description: "Site, réseaux, documents — même image partout, sans effort."
   }
 ];
 
@@ -73,13 +73,11 @@ export const BrandBenefitsSection = () => {
           variants={headerVariants}
         >
           <h2 className="text-display-md text-foreground mb-4">
-             Vos bénéfices avec une{" "}
-            <span className="text-gradient-gold">identité visuelle claire.</span>
+             Ce que ça change{" "}
+            <span className="text-gradient-gold">pour vous.</span>
           </h2>
           <p className="text-body-lg text-muted-foreground max-w-2xl mx-auto">
-            Une identité visuelle professionnelle simplifie votre quotidien et renforce la perception de votre marque.
-            <br className="hidden md:block" />
-            {" "}
+            Concrètement, une identité visuelle bien faite simplifie votre quotidien et change la façon dont vos clients vous perçoivent.
           </p>
         </motion.div>
 

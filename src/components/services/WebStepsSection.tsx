@@ -7,41 +7,41 @@ import { useTheme } from "@/hooks/use-theme";
 const steps = [
   {
     number: "01",
-    title: "Clarification du projet",
+    title: "On clarifie votre projet",
     description:
-      "Nous échangeons pour comprendre votre activité, vos objectifs et les besoins de vos visiteurs.",
+      "Un appel pour comprendre votre activité, vos objectifs et ce que vos visiteurs doivent retenir.",
     icon: MessageCircle,
     color: "#C3B68F",
   },
   {
     number: "02",
-    title: "Diagnostic",
+    title: "On analyse l'existant",
     description:
-      "Analyse de votre situation actuelle : site existant, concurrence, forces et points à améliorer.",
+      "Votre site actuel, votre concurrence, vos forces — on identifie ce qui marche et ce qui coince.",
     icon: Search,
     color: "#7C6AE8",
   },
   {
     number: "03",
-    title: "Fondations",
+    title: "On pose l'architecture",
     description:
-      "Définition de l'architecture du site, des messages clés et de la structure des pages.",
+      "Structure des pages, messages clés, parcours utilisateur. Tout est défini avant de toucher au design.",
     icon: Layers,
     color: "#C3B68F",
   },
   {
     number: "04",
-    title: "Conception web",
+    title: "On crée votre site",
     description:
-      "Création des maquettes, design sur mesure et développement de votre site.",
+      "Maquettes, design sur mesure, développement. Vous validez à chaque étape.",
     icon: Palette,
     color: "#7C6AE8",
   },
   {
     number: "05",
-    title: "Déploiement & accompagnement",
+    title: "On met en ligne & on vous forme",
     description:
-      "Mise en ligne, formation à l'utilisation et accompagnement pour les premiers ajustements.",
+      "Votre site est live. On vous montre comment le modifier et on reste là pour les ajustements.",
     icon: Rocket,
     color: "#C3B68F",
   },
@@ -313,9 +313,9 @@ export const WebStepsSection = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
           >
-             Notre méthode pour
+           Notre méthode,
             <br className="hidden md:block" />
-            <span className="text-gradient-gold"> votre site web.</span>
+            <span className="text-gradient-gold">en 5 étapes concrètes.</span>
           </motion.h2>
 
           <motion.p
@@ -325,8 +325,8 @@ export const WebStepsSection = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
           >
-            Un processus clair et structuré, de la première discussion
-            jusqu'à la mise en ligne de votre site.
+            De l'appel découverte à la mise en ligne,
+            vous savez exactement où on en est à chaque instant.
           </motion.p>
         </motion.div>
 

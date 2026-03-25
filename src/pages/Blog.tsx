@@ -60,11 +60,11 @@ const Blog = () => {
         <div className="container-narrow">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Ressources et <span className="text-gradient-gold">articles.</span>
+              On partage ce qu'on <span className="text-gradient-gold">sait.</span>
             </h1>
             <p className="text-body text-base sm:text-lg md:text-xl leading-relaxed">
-              Une sélection de contenus pour vous aider à clarifier votre présence en ligne,
-              structurer vos offres et mieux utiliser le digital.
+              Des articles concrets pour prendre de meilleures décisions
+              sur votre site, votre image et votre présence en ligne.
             </p>
           </div>
         </div>

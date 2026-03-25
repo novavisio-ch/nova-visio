@@ -85,11 +85,11 @@ export const ShowcaseSection = () => {
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-display-md text-foreground mb-4">
-             Quelques projets réalisés par{" "}
-            <span className="text-gradient-gold">NOVA VISIO.</span>
+             Des sites qu'on a réellement{" "}
+            <span className="text-gradient-gold">livrés.</span>
           </h2>
           <p className="text-body-md text-muted-foreground max-w-2xl mx-auto">
-            Sites web, pages de vente et interfaces d'applications conçus sur mesure pour nos clients.
+            Pas de maquettes Dribbble. De vrais projets, pour de vrais clients, avec de vrais résultats.
           </p>
         </div>
 
