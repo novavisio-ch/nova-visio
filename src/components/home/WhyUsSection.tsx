@@ -111,7 +111,7 @@ export function WhyUsSection() {
           transition={{ duration: 0.6 }}
         >
           <motion.div
-            className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-primary/10 border border-primary/20 mb-3 md:mb-6"
+            className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-primary/10 mb-3 md:mb-6"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -145,18 +145,15 @@ export function WhyUsSection() {
             >
               {/* Card */}
               <motion.div 
-                className="relative h-full p-4 sm:p-5 md:p-8 rounded-xl md:rounded-2xl bg-card/50 backdrop-blur-sm border overflow-hidden"
+                className="relative h-full p-4 sm:p-5 md:p-8 rounded-xl md:rounded-2xl bg-card/50 backdrop-blur-sm overflow-hidden"
                 initial={{ 
-                  borderColor: "rgba(255,255,255,0.1)",
                   boxShadow: "none"
                 }}
                 whileInView={isMobile ? { 
-                  borderColor: "rgba(195, 182, 143, 0.4)",
                   boxShadow: "0 20px 40px -15px rgba(195, 182, 143, 0.3)"
                 } : undefined}
                 whileHover={!isMobile ? { 
                   y: -8,
-                  borderColor: "rgba(195, 182, 143, 0.5)",
                   boxShadow: "0 20px 40px -15px rgba(195, 182, 143, 0.3)"
                 } : undefined}
                 viewport={isMobile ? { once: true, margin: "-50px" } : undefined}

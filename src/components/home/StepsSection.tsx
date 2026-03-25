@@ -194,7 +194,7 @@ export function StepsSection() {
                           whileInView={{ opacity: 1, x: 0 }}
                           viewport={{ once: true }}
                           transition={{ delay: 0.3 + index * 0.15 }}
-                          className="w-6 h-6 rounded-full bg-background border border-primary/30 flex items-center justify-center"
+                          className="w-6 h-6 rounded-full bg-background flex items-center justify-center"
                         >
                           <svg
                             className="w-3 h-3 text-primary"
@@ -227,7 +227,7 @@ export function StepsSection() {
           transition={{ delay: 0.8, duration: 0.5 }}
           className="mt-8 md:mt-16 flex justify-center"
         >
-          <div className="flex items-center gap-2 md:gap-3 px-4 md:px-6 py-2 md:py-3 rounded-full border border-primary/30 bg-primary/5 backdrop-blur-sm">
+          <div className="flex items-center gap-2 md:gap-3 px-4 md:px-6 py-2 md:py-3 rounded-full bg-primary/5 backdrop-blur-sm">
             <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-primary animate-pulse" />
             <span className="text-body text-[10px] md:text-sm">Processus transparent et collaboratif</span>
           </div>

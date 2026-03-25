@@ -100,10 +100,7 @@ export function PackRefonteGlobale() {
 
       {/* Main Pack Card */}
       <div
-        className="relative h-full rounded-3xl border overflow-hidden transition-all duration-500 card-dark-surface"
-        style={{
-          borderColor: "rgba(124, 106, 232, 0.3)",
-        }}
+        className="relative h-full rounded-3xl overflow-hidden transition-all duration-500 card-dark-surface"
       >
         {/* Floating particles */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -193,7 +190,7 @@ export function PackRefonteGlobale() {
                     whileHover={{ y: -4, boxShadow: "0 10px 30px -10px rgba(124, 106, 232, 0.25)" }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
-                    className="p-4 rounded-xl border border-[#9D8DF0]/20 hover:border-[#9D8DF0]/40 transition-colors duration-300"
+                    className="p-4 rounded-xl transition-colors duration-300"
                     style={{ background: "rgba(124, 106, 232, 0.03)" }}
                   >
                     <Icon className="w-6 h-6 text-[#9D8DF0] mb-3" />
@@ -206,11 +203,10 @@ export function PackRefonteGlobale() {
 
           {/* Summary bullets */}
           <motion.div
-            className="mb-8 md:mb-10 p-5 md:p-6 rounded-xl border hover:border-[#9D8DF0]/40 transition-colors duration-300"
+            className="mb-8 md:mb-10 p-5 md:p-6 rounded-xl transition-colors duration-300"
             whileHover={{ y: -4, boxShadow: "0 15px 40px -10px rgba(124, 106, 232, 0.2)" }}
             style={{
               background: "linear-gradient(135deg, rgba(124, 106, 232, 0.05) 0%, rgba(195, 182, 143, 0.05) 100%)",
-              borderColor: "rgba(124, 106, 232, 0.2)",
             }}
           >
             <h4 className="font-display text-lg md:text-xl font-bold text-foreground mb-4 flex items-center gap-3">
@@ -239,7 +235,7 @@ export function PackRefonteGlobale() {
             {/* Branding Section */}
             <motion.div
               whileHover={{ y: -4, boxShadow: "0 15px 40px -10px rgba(195, 182, 143, 0.2)" }}
-              className="p-5 md:p-6 rounded-xl border border-[#C3B68F]/30 hover:border-[#C3B68F]/50 transition-colors duration-300"
+              className="p-5 md:p-6 rounded-xl transition-colors duration-300"
               style={{ background: "rgba(195, 182, 143, 0.03)" }}
             >
               <div className="flex items-center gap-3 mb-4">
@@ -266,7 +262,7 @@ export function PackRefonteGlobale() {
             {/* Web Section */}
             <motion.div
               whileHover={{ y: -4, boxShadow: "0 15px 40px -10px rgba(124, 106, 232, 0.2)" }}
-              className="p-5 md:p-6 rounded-xl border border-[#9D8DF0]/30 hover:border-[#9D8DF0]/50 transition-colors duration-300"
+              className="p-5 md:p-6 rounded-xl transition-colors duration-300"
               style={{ background: "rgba(124, 106, 232, 0.03)" }}
             >
               <div className="flex items-center gap-3 mb-4">
@@ -292,7 +288,7 @@ export function PackRefonteGlobale() {
           </div>
 
           {/* CTA with shine effect */}
-          <div className="text-center pt-6 border-t border-foreground/10">
+          <div className="text-center pt-6">
             <Link to="/contact">
               <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                 <Button

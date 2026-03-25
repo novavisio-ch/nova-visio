@@ -71,8 +71,7 @@ export function PackDigitalBranding() {
         }}
       />
 
-      <div className="relative h-full rounded-3xl border overflow-hidden transition-all duration-500 card-dark-surface"
-        style={{ borderColor: "rgba(195, 182, 143, 0.3)" }}
+      <div className="relative h-full rounded-3xl overflow-hidden transition-all duration-500 card-dark-surface"
       >
         {/* Floating particles */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -153,7 +152,7 @@ export function PackDigitalBranding() {
                     whileHover={{ y: -4, boxShadow: "0 10px 30px -10px rgba(195, 182, 143, 0.25)" }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
-                    className="p-4 rounded-xl border border-[#C3B68F]/20 hover:border-[#C3B68F]/40 transition-colors duration-300"
+                    className="p-4 rounded-xl transition-colors duration-300"
                     style={{ background: "rgba(195, 182, 143, 0.03)" }}
                   >
                     <Icon className="w-6 h-6 text-[#C3B68F] mb-3" />
@@ -174,7 +173,7 @@ export function PackDigitalBranding() {
             <div className="grid md:grid-cols-2 gap-4 md:gap-6">
               <motion.div
                 whileHover={{ y: -4, boxShadow: "0 15px 40px -10px rgba(195, 182, 143, 0.2)" }}
-                className="p-5 md:p-6 rounded-xl border border-[#C3B68F]/30 hover:border-[#C3B68F]/50 transition-colors duration-300"
+                className="p-5 md:p-6 rounded-xl transition-colors duration-300"
                 style={{ background: "rgba(195, 182, 143, 0.03)" }}
               >
                 <div className="flex items-center gap-3 mb-4">
@@ -198,7 +197,7 @@ export function PackDigitalBranding() {
 
               <motion.div
                 whileHover={{ y: -4, boxShadow: "0 15px 40px -10px rgba(124, 106, 232, 0.2)" }}
-                className="p-5 md:p-6 rounded-xl border border-[#9D8DF0]/30 hover:border-[#9D8DF0]/50 transition-colors duration-300"
+                className="p-5 md:p-6 rounded-xl transition-colors duration-300"
                 style={{ background: "rgba(124, 106, 232, 0.03)" }}
               >
                 <div className="flex items-center gap-3 mb-4">
@@ -223,7 +222,7 @@ export function PackDigitalBranding() {
           </div>
 
           {/* CTA */}
-          <div className="text-center pt-6 border-t border-border/30">
+          <div className="text-center pt-6">
             <Link to="/contact">
               <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                 <Button size="lg" className="px-8 group/btn relative overflow-hidden"

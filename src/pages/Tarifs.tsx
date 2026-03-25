@@ -224,9 +224,7 @@ const ServiceCard = ({
           </Badge>
         </motion.div>}
       
-      <div className="relative h-full rounded-2xl border p-6 md:p-8 transition-all duration-500 overflow-hidden card-dark-surface" style={{
-      borderColor: isGold ? "rgba(195, 182, 143, 0.3)" : "rgba(124, 106, 232, 0.3)"
-    }}>
+      <div className="relative h-full rounded-2xl p-6 md:p-8 transition-all duration-500 overflow-hidden card-dark-surface">
         {/* Floating particles */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {[...Array(3)].map((_, i) => <motion.div key={i} className="absolute w-1 h-1 rounded-full" style={{
@@ -359,7 +357,7 @@ const ComplementaryCard = ({
   }} transition={{
     duration: 0.4,
     delay: index * 0.08
-  }} className="group rounded-xl border border-[#C3B68F]/20 p-5 md:p-6 transition-all duration-300 hover:border-[#C3B68F]/50 relative overflow-hidden card-dark-surface">
+  }} className="group rounded-xl p-5 md:p-6 transition-all duration-300 relative overflow-hidden card-dark-surface">
       {/* Hover gradient overlay */}
       <motion.div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" style={{
       background: "radial-gradient(circle at 30% 30%, rgba(195, 182, 143, 0.08) 0%, transparent 60%)"
@@ -380,7 +378,7 @@ const ComplementaryCard = ({
             <h4 className="font-display text-lg font-semibold text-foreground group-hover:text-[#C3B68F] transition-colors duration-300">
               {service.title}
             </h4>
-            <span className="text-xs font-medium text-[#C3B68F]/80 whitespace-nowrap px-2 py-0.5 rounded-full border border-[#C3B68F]/30">
+            <span className="text-xs font-medium text-[#C3B68F]/80 whitespace-nowrap px-2 py-0.5 rounded-full">
               {service.price}
             </span>
           </div>

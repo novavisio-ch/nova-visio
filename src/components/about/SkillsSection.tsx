@@ -189,7 +189,7 @@ export const SkillsSection = () => {
         >
           {/* Floating Badge */}
           <motion.div
-            className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full border border-[#C3B68F]/40 bg-gradient-to-r from-[#C3B68F]/20 to-[#C3B68F]/5 backdrop-blur-md mb-8"
+            className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-gradient-to-r from-[#C3B68F]/20 to-[#C3B68F]/5 backdrop-blur-md mb-8"
             initial={{ opacity: 0, scale: 0.8, y: 20 }}
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
             viewport={{ once: true }}
@@ -289,7 +289,7 @@ export const SkillsSection = () => {
 
                 {/* Card */}
                 <div
-                  className="relative h-full rounded-3xl border border-border/20 backdrop-blur-2xl p-6 md:p-8 overflow-hidden transition-all duration-500 group-hover:border-border/40 group-hover:shadow-[0_30px_60px_-20px_rgba(195,182,143,0.2)] card-glass-surface"
+                  className="relative h-full rounded-3xl backdrop-blur-2xl p-6 md:p-8 overflow-hidden transition-all duration-500 group-hover:shadow-[0_30px_60px_-20px_rgba(195,182,143,0.2)] card-glass-surface"
                 >
                   {/* Decorative Background Elements */}
                   <div 

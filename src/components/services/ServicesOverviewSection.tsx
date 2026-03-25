@@ -91,7 +91,7 @@ export const ServicesOverviewSection = () => {
       }} transition={{
         duration: 0.6
       }}>
-          <motion.div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#C3B68F]/10 border border-[#C3B68F]/20 mb-6" initial={{
+          <motion.div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#C3B68F]/10 mb-6" initial={{
           opacity: 0,
           scale: 0.9
         }} whileInView={{
@@ -161,7 +161,7 @@ export const ServicesOverviewSection = () => {
                 {/* Card background */}
                  <div className={`
                      absolute inset-0 transition-all duration-500
-                     ${isHovered ? "bg-[#1f1a3d]" : "bg-card border border-border"}
+                     ${isHovered ? "bg-[#1f1a3d]" : "bg-card"}
                    `} />
                 
                 {/* Gradient overlay on hover */}
@@ -270,7 +270,7 @@ export const ServicesOverviewSection = () => {
               <div className="relative z-10 p-6 md:p-8 h-full flex flex-col justify-between">
                 {/* Header */}
                 <div>
-                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#C3B68F]/20 border border-[#C3B68F]/30 mb-4">
+                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#C3B68F]/20 mb-4">
                     <Sparkles className="w-3.5 h-3.5 text-[#C3B68F]" />
                     <span className="text-xs font-medium text-[#C3B68F] uppercase tracking-wider">En résumé</span>
                   </div>
@@ -299,7 +299,7 @@ export const ServicesOverviewSection = () => {
                 }, {
                   value: "24h",
                   label: "Réponse"
-                 }].map((stat, index) => <motion.div key={index} className="text-center p-3 rounded-xl bg-white/5 border border-white/10" whileHover={{
+                 }].map((stat, index) => <motion.div key={index} className="text-center p-3 rounded-xl bg-white/5" whileHover={{
                    scale: 1.05,
                    backgroundColor: "rgba(255,255,255,0.08)"
                  }}>

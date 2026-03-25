@@ -18,7 +18,7 @@ export const MaintenanceTarifsSection = () => {
           style={{
             background: "rgba(195, 182, 143, 0.15)",
             color: "#C3B68F",
-            border: "1px solid rgba(195, 182, 143, 0.3)",
+            border: "none",
           }}
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}

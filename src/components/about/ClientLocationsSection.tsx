@@ -59,7 +59,7 @@ export function ClientLocationsSection() {
           transition={{ duration: 0.6 }}
         >
           <motion.div
-            className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-primary/10 border border-primary/20 mb-4 md:mb-6"
+            className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-primary/10 mb-4 md:mb-6"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -99,7 +99,7 @@ export function ClientLocationsSection() {
               }}
               className="group relative"
             >
-              <div className="flex flex-col items-center gap-3 p-4 md:p-6 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/30 hover:border-primary/40 transition-all duration-300">
+              <div className="flex flex-col items-center gap-3 p-4 md:p-6 rounded-2xl bg-card/50 backdrop-blur-sm transition-all duration-300">
                 {/* Flag with floating animation */}
                 <motion.span
                   className="text-4xl md:text-5xl lg:text-6xl"

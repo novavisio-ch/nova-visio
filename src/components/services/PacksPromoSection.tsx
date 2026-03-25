@@ -54,7 +54,7 @@ export function PacksPromoSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#C3B68F]/10 to-[#9D8DF0]/10 border border-[#C3B68F]/20 mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#C3B68F]/10 to-[#9D8DF0]/10 mb-4">
             <Sparkles className="w-4 h-4 text-[#C3B68F]" />
             <span className="text-sm font-medium text-foreground">Offres combinées</span>
           </div>
@@ -80,27 +80,27 @@ export function PacksPromoSection() {
                   opacity: 0, 
                   y: 40, 
                   rotateX: 15,
-                  borderColor: `${styles.borderColor}4D`
+                  borderColor: `transparent`
                 }}
                 whileInView={{ 
                   opacity: 1, 
                   y: 0, 
                   rotateX: 0,
-                  borderColor: isMobile ? styles.borderColor : `${styles.borderColor}4D`,
+                  borderColor: "transparent",
                   boxShadow: isMobile ? `0 0 30px -10px ${styles.shadow}` : "none"
                 }}
                 whileHover={
                   !isMobile
                     ? {
                         y: -8,
-                        borderColor: styles.borderColor,
+                        borderColor: "transparent",
                         boxShadow: `0 0 40px -10px ${styles.shadow}`,
                       }
                     : undefined
                 }
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.6, delay: index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
-                className={`group relative p-5 md:p-6 rounded-xl border bg-gradient-to-br ${styles.gradient} backdrop-blur-sm overflow-hidden`}
+                className={`group relative p-5 md:p-6 rounded-xl bg-gradient-to-br ${styles.gradient} backdrop-blur-sm overflow-hidden`}
                 style={{ perspective: "1000px" }}
               >
                 {/* Animated gradient border */}
