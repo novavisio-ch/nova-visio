@@ -124,8 +124,8 @@ export const ServicesOverviewSection = () => {
           </h2>
           
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Une approche complète pour concevoir des expériences web 
-            qui convertissent et marquent les esprits.
+            Tout ce qu'il faut pour transformer votre site en un outil
+            qui travaille pendant que vous dormez.
           </p>
         </motion.div>
 
