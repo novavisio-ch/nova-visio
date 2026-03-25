@@ -150,8 +150,8 @@
   }
 
   .dark .glass {
-    background: hsla(252, 30%, 23%, 0.7);
-    border: 1px solid hsla(252, 30%, 35%, 0.3);
+    background: hsla(240, 18%, 12%, 0.7);
+    border: 1px solid hsla(240, 18%, 20%, 0.3);
   }
 
   .light .glass {
