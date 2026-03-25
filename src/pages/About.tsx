@@ -111,7 +111,7 @@ const About = () => {
             transition: {
               duration: 0.3
             }
-          }} className="p-5 sm:p-6 md:p-8 rounded-2xl md:rounded-3xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/20 backdrop-blur-sm cursor-pointer">
+          }} className="p-5 sm:p-6 md:p-8 rounded-2xl md:rounded-3xl bg-gradient-to-br from-primary/20 to-primary/5 backdrop-blur-sm cursor-pointer">
               <div className="flex items-center gap-2 md:gap-3 mb-4 md:mb-6">
                 <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg md:rounded-xl flex items-center justify-center">
                   <Target className="w-4 h-4 md:w-5 md:h-5 text-primary" />
