@@ -161,7 +161,7 @@ export const ServicesOverviewSection = () => {
                 {/* Card background */}
                  <div className={`
                      absolute inset-0 transition-all duration-500
-                     ${isHovered ? "bg-[#1f1a3d]" : "bg-card"}
+                     ${isHovered ? "bg-[#0B0B0F]" : "bg-card"}
                    `} />
                 
                 {/* Gradient overlay on hover */}

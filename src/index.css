@@ -47,7 +47,7 @@
     --glass-bg: 252 30% 23%;
 
     /* Theme-specific backgrounds */
-    --body-bg: linear-gradient(135deg, #000000 0%, #1F1A3D 100%);
+    --body-bg: #0B0B0F;
     --noise-opacity: 0.015;
   }
 
@@ -108,7 +108,7 @@
 
   body {
     @apply font-body text-body antialiased;
-    background: linear-gradient(135deg, #000000 0%, #1F1A3D 100%);
+    background: #0B0B0F;
     background-attachment: fixed;
     min-height: 100vh;
     transition: background 0.6s ease;
@@ -211,28 +211,28 @@
 
   /* Theme-aware section backgrounds */
   .section-gradient-main {
-    background: linear-gradient(135deg, #000000 0%, #1f1a3d 100%);
+    background: #0B0B0F;
   }
   .light .section-gradient-main {
     background: linear-gradient(135deg, #FAFAF8 0%, #F5F5F3 100%);
   }
 
   .section-gradient-steps {
-    background: linear-gradient(180deg, #0a0a12 0%, #1a1530 50%, #0a0a12 100%);
+    background: #0B0B0F;
   }
   .light .section-gradient-steps {
     background: linear-gradient(180deg, #FAFAF8 0%, #F5F5F3 50%, #FAFAF8 100%);
   }
 
   .section-gradient-hero-alt {
-    background: linear-gradient(135deg, #0a0a0a 0%, #1f1a3d 50%, #0a0a0a 100%);
+    background: #0B0B0F;
   }
   .light .section-gradient-hero-alt {
     background: linear-gradient(135deg, #FAFAF8 0%, #F7F7F5 50%, #FAFAF8 100%);
   }
 
   .section-skills-bg {
-    background: radial-gradient(ellipse 80% 50% at 50% 0%, #1f1a3d 0%, #0a0a0f 100%);
+    background: #0B0B0F;
   }
   .light .section-skills-bg {
     background: radial-gradient(ellipse 80% 50% at 50% 0%, #F5F5F3 0%, #FAFAF8 100%);
