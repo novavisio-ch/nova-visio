@@ -235,7 +235,7 @@ export function PackRefonteGlobale() {
             {/* Branding Section */}
             <motion.div
               whileHover={{ y: -4, boxShadow: "0 15px 40px -10px rgba(195, 182, 143, 0.2)" }}
-              className="p-5 md:p-6 rounded-xl border border-[#C3B68F]/30 hover:border-[#C3B68F]/50 transition-colors duration-300"
+              className="p-5 md:p-6 rounded-xl transition-colors duration-300"
               style={{ background: "rgba(195, 182, 143, 0.03)" }}
             >
               <div className="flex items-center gap-3 mb-4">
