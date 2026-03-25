@@ -29,7 +29,7 @@ export const MaintenanceTarifsSection = () => {
         </motion.span>
 
         <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4">
-          Après le lancement,{" "}
+          Votre site est en ligne.{" "}
           <span
             style={{
               background:
@@ -39,12 +39,11 @@ export const MaintenanceTarifsSection = () => {
               backgroundClip: "text",
             }}
           >
-            on reste là.
+            Maintenant, il faut qu'il le reste.
           </span>
         </h2>
         <p className="text-muted-foreground max-w-xl mx-auto">
-          Votre site est en ligne - maintenant il faut qu'il continue à
-          travailler pour vous. Notre suivi mensuel s'en charge.
+          Mises à jour, modifs de contenu, performances - on s'en occupe pour que votre site continue à bosser pendant que vous faites votre métier.
         </p>
       </motion.div>
 
