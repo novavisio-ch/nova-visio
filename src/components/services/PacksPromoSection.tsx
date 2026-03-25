@@ -15,7 +15,7 @@ const packs = [
   {
     icon: RefreshCw,
     title: "Pack Refonte Globale",
-    description: "Audit + repositionnement de marque + modernisation de votre site pour reprendre le contrôle.",
+    description: "Audit complet + nouvelle identité + refonte de site. Pour remettre votre image à la hauteur.",
     price: "2'600 CHF",
     theme: "purple" as const,
   },
