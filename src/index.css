@@ -246,7 +246,7 @@
   }
 
   .card-glass-surface {
-    background: linear-gradient(135deg, hsla(252, 30%, 18%, 0.7) 0%, hsla(252, 30%, 12%, 0.7) 100%);
+    background: hsla(240, 18%, 9%, 0.9);
   }
   .light .card-glass-surface {
     background: linear-gradient(135deg, hsla(60, 7%, 98%, 0.9) 0%, hsla(60, 5%, 96%, 0.9) 100%);
