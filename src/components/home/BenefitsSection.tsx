@@ -87,9 +87,9 @@ export function BenefitsSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            Ce que vous gagnez en clarifiant votre image
+            Ce que vous gagnez concrètement quand votre image
             <br className="hidden sm:block" />
-            et votre présence en ligne avec NOVA VISIO.
+            et votre site font enfin le job.
           </motion.p>
 
           {/* Benefits Grid */}

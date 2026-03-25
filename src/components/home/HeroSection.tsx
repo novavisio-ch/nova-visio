@@ -33,7 +33,7 @@ export function HeroSection() {
         }}>
             <Button variant="gold" size="lg" className="w-full sm:w-auto" asChild>
               <Link to="/contact">
-                Parler de votre projet
+                Réserver un appel gratuit
                 <ArrowRight className="w-4 h-4 md:w-5 md:h-5 ml-1" />
               </Link>
             </Button>

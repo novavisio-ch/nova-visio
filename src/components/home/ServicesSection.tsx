@@ -201,17 +201,17 @@ export function ServicesSection() {
         <div className="grid md:grid-cols-2 gap-4 md:gap-6 lg:gap-8 max-w-5xl mx-auto">
           <ServiceCard 
             title="Site vitrine et landing page" 
-            description="Un site web pensé pour renforcer votre crédibilité et établir la confiance de vos prospects." 
+            description="Vos prospects arrivent, comprennent votre offre en 5 secondes et vous contactent. C'est ça, un bon site." 
             benefits={webBenefits} 
             ctaText="Découvrir nos créations web →" 
             ctaLink="/site-web" 
             theme="gold"
             isMobile={isMobile}
-            price="dès 1'500 CHF"
+            price="dès 900 CHF"
           />
           <ServiceCard 
             title="Identité visuelle & logo" 
-            description="Une identité visuelle professionnelle pour être reconnu et inspirer confiance au premier regard." 
+            description="Fini le logo fait sur Canva. Une vraie identité qui vous démarque et que vous pouvez utiliser partout." 
             benefits={brandBenefits} 
             ctaText="Voir nos identités visuelles →" 
             ctaLink="/identite-visuelle" 
