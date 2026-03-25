@@ -145,17 +145,15 @@ const StepCard = ({ step, index, isActive, onHover, onLeave, isMobile, isDark }:
         </motion.div>
 
         <motion.div
-          className="flex-1 relative overflow-hidden rounded-xl md:rounded-2xl border backdrop-blur-sm"
+          className="flex-1 relative overflow-hidden rounded-xl md:rounded-2xl backdrop-blur-sm"
           style={{ background: cardBg }}
-          initial={{ borderColor: borderDefault, boxShadow: "none" }}
+          initial={{ boxShadow: "none" }}
           whileInView={isMobile ? {
-            borderColor: step.color,
             boxShadow: `0 15px 40px -15px ${step.color}30`,
           } : undefined}
           whileHover={!isMobile ? {
             scale: 1.02,
             rotateY: isEven ? 2 : -2,
-            borderColor: step.color,
             boxShadow: `0 30px 60px -20px ${step.color}40`,
           } : undefined}
           viewport={isMobile ? { once: true, margin: "-50px" } : undefined}

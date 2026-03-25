@@ -24,8 +24,7 @@ export const MaintenanceBlock = ({ text }: MaintenanceBlockProps) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="rounded-2xl border p-6 md:p-8 card-glass-surface"
-          style={{ borderColor: "rgba(195, 182, 143, 0.2)" }}
+          className="rounded-2xl p-6 md:p-8 card-glass-surface"
         >
           <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-4">
             Et après la livraison ?

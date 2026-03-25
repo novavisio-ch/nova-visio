@@ -98,18 +98,15 @@ function ServiceCard({
         opacity: 0, 
         y: 40, 
         scale: 0.95,
-        borderColor: `${borderColor}4D`,
         boxShadow: "none"
       }}
       whileInView={{ 
         opacity: 1, 
         y: 0, 
         scale: 1,
-        borderColor: isMobile ? borderColor : `${borderColor}4D`,
         boxShadow: isMobile ? `0 0 30px -10px ${shadowColor}` : "none"
       }}
       whileHover={!isMobile ? {
-        borderColor: borderColor,
         boxShadow: `0 0 40px -10px ${shadowColor}`
       } : undefined}
       viewport={{ once: true, margin: "-50px" }}

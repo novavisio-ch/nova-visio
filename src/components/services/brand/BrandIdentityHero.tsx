@@ -36,7 +36,7 @@ export function BrandIdentityHero() {
             </div>
             
             {/* Adobe Photoshop Badge */}
-            <div className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-full bg-[#31A8FF]/10 border border-[#31A8FF]/30">
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-full bg-[#31A8FF]/10">
               <img src={photoshopIcon} alt="Adobe Photoshop" className="w-4 h-4" />
               <span className="text-xs font-medium text-[#31A8FF]">Photoshop</span>
             </div>
