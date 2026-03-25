@@ -45,12 +45,12 @@ const mainServices = [{
   id: "landing-page",
   icon: Rocket,
   title: "Landing page",
-  subtitle: "Une page, un objectif",
+  subtitle: "Un message, une action",
   price: "900",
   badge: "Starter",
   variant: "purple" as const,
   description: <>
-        Une page <strong className="text-foreground font-semibold">unique et percutante</strong>, conçue pour <strong className="text-[#9D8DF0] font-medium">convertir vos visiteurs</strong> en prospects.
+        Une seule page, un seul objectif : que vos visiteurs <strong className="text-[#9D8DF0] font-medium">passent à l'action</strong>.
       </>,
   features: [{
     text: "Page unique",
