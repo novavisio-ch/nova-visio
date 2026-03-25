@@ -54,7 +54,7 @@ export function PacksPromoSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#C3B68F]/10 to-[#9D8DF0]/10 border border-[#C3B68F]/20 mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#C3B68F]/10 to-[#9D8DF0]/10 mb-4">
             <Sparkles className="w-4 h-4 text-[#C3B68F]" />
             <span className="text-sm font-medium text-foreground">Offres combinées</span>
           </div>
