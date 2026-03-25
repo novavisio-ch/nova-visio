@@ -194,7 +194,7 @@ export function StepsSection() {
                           whileInView={{ opacity: 1, x: 0 }}
                           viewport={{ once: true }}
                           transition={{ delay: 0.3 + index * 0.15 }}
-                          className="w-6 h-6 rounded-full bg-background border border-primary/30 flex items-center justify-center"
+                          className="w-6 h-6 rounded-full bg-background flex items-center justify-center"
                         >
                           <svg
                             className="w-3 h-3 text-primary"
