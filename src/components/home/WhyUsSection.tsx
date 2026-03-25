@@ -147,7 +147,6 @@ export function WhyUsSection() {
               <motion.div 
                 className="relative h-full p-4 sm:p-5 md:p-8 rounded-xl md:rounded-2xl bg-card/50 backdrop-blur-sm overflow-hidden"
                 initial={{ 
-                  borderColor: "rgba(255,255,255,0.1)",
                   boxShadow: "none"
                 }}
                 whileInView={isMobile ? { 
