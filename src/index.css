@@ -211,7 +211,7 @@
 
   /* Theme-aware section backgrounds */
   .section-gradient-main {
-    background: linear-gradient(135deg, #000000 0%, #1f1a3d 100%);
+    background: #0B0B0F;
   }
   .light .section-gradient-main {
     background: linear-gradient(135deg, #FAFAF8 0%, #F5F5F3 100%);
