@@ -7,15 +7,15 @@ import { useIsMobile } from "@/hooks/use-mobile";
 const targetAudience = [
   {
     icon: Users,
-    text: "Aux indépendants, studios et petites entreprises qui souhaitent lancer ou refondre leur image avec une identité claire et un site web professionnel.",
+    text: "Indépendants et petites entreprises qui veulent lancer ou refondre leur image avec une identité claire et un site pro - sans multiplier les prestataires.",
   },
   {
     icon: Package,
-    text: "Aux projets qui veulent éviter de multiplier les prestataires et recherchent un accompagnement global : branding + site, dans une seule offre.",
+    text: "Projets qui veulent tout dans une seule offre : branding + site, un seul interlocuteur, zéro prise de tête.",
   },
   {
     icon: Clock,
-    text: "Aux personnes qui manquent de temps et veulent un parcours cadré, des livrables prêts à l'emploi et un résultat facilement utilisable au quotidien.",
+    text: "Personnes qui manquent de temps et veulent un parcours cadré, des livrables prêts à l'emploi et un résultat utilisable immédiatement.",
   },
 ];
 
