@@ -179,8 +179,8 @@ const About = () => {
                 <span className="text-xs md:text-sm font-medium text-primary uppercase tracking-wider">Notre mission</span>
               </div>
               <p className="text-sm sm:text-base md:text-body-lg text-foreground/90 leading-relaxed">
-                Nous accompagnons les marques locales et internationales dans la création d'identités fortes, de contenus impactants et de sites web performants.{" "}
-                <span className="text-primary font-semibold">Chaque projet est une collaboration unique</span>, et notre mission est de le sublimer.
+                Identité visuelle, site web, supports de communication — nous ne faisons pas tout, mais ce que nous faisons, nous le faisons bien.{" "}
+                <span className="text-primary font-semibold">Chaque projet repart avec des outils concrets</span>, pas des promesses en l'air.
               </p>
             </motion.div>
 
