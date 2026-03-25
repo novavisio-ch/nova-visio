@@ -27,7 +27,7 @@ export const MaintenanceSection = () => {
             🔄 Suivi continu
           </motion.span>
 
-          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 md:mb-6">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 md:mb-6">
             Un site livré, c'est bien.{" "}
             <span
               style={{

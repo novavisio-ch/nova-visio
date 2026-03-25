@@ -12,7 +12,7 @@ export function CtaSection() {
       <div className="container max-w-5xl mx-auto relative z-10">
         <div className="max-w-2xl mx-auto text-center">
           {/* Title */}
-          <h2 className="text-2xl sm:text-3xl md:text-display-lg lg:text-display-xl mb-4 md:mb-6 leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-display-lg lg:text-display-xl mb-4 md:mb-6 leading-tight">
             Vous avez un projet ?{" "}
             <span className="text-gradient-gold">Parlons-en 15 minutes.</span>
           </h2>

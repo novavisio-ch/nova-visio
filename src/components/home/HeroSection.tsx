@@ -13,7 +13,7 @@ export function HeroSection() {
             <span className="text-xs md:text-body-sm text-muted-foreground">Made in Switzerland · Pour artisans, indépendants & petites entreprises</span>
           </div>
 
-          <h1 className="text-2xl sm:text-3xl md:text-display-lg lg:text-display-xl mb-4 md:mb-6 animate-fade-up leading-tight" style={{
+          <h1 className="text-3xl sm:text-4xl md:text-display-lg lg:text-display-xl mb-4 md:mb-6 animate-fade-up leading-tight" style={{
           animationDelay: "0.1s"
         }}>
             Vos clients ne vous trouvent pas en ligne ?{" "}

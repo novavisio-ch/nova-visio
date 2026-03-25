@@ -58,7 +58,7 @@ export function PacksPromoSection() {
             <Sparkles className="w-4 h-4 text-[#C3B68F]" />
             <span className="text-sm font-medium text-foreground">Offres combinées</span>
           </div>
-          <h2 className="text-xl sm:text-2xl md:text-display-md mb-3 leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-display-md mb-3 leading-tight">
             Besoin d'une solution{" "}
             <span className="text-gradient-gold">complète</span> ?
           </h2>

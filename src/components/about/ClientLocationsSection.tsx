@@ -71,7 +71,7 @@ export function ClientLocationsSection() {
             </span>
           </motion.div>
 
-          <h2 className="text-xl sm:text-2xl md:text-display-md mb-3 md:mb-4 leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-display-md mb-3 md:mb-4 leading-tight">
              Nos clients à travers le{" "}
             <span className="text-gradient-gold">monde.</span>
           </h2>

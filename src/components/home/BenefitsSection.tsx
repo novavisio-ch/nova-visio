@@ -68,7 +68,7 @@ export function BenefitsSection() {
         <div className="text-left">
           {/* Title */}
           <motion.h2 
-            className="text-xl sm:text-2xl md:text-display-lg lg:text-display-xl font-bold mb-3 md:mb-6 text-center leading-tight"
+            className="text-2xl sm:text-3xl md:text-display-lg lg:text-display-xl font-bold mb-3 md:mb-6 text-center leading-tight"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

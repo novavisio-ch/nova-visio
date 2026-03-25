@@ -7,7 +7,7 @@ export const BrandFinalCtaSection = () => {
     <section className="py-16 md:py-24 lg:py-32 px-4 section-gradient-main">
       <div className="container mx-auto">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="mb-4 md:mb-6 font-display text-2xl sm:text-3xl md:text-display-lg lg:text-display-xl font-bold leading-tight text-foreground">
+          <h2 className="mb-4 md:mb-6 font-display text-3xl sm:text-4xl md:text-display-lg lg:text-display-xl font-bold leading-tight text-foreground">
             Marre de votre image{" "}
             <span className="text-gradient-gold">
               actuelle ?

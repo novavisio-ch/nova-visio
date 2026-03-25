@@ -44,7 +44,7 @@ export function BrandIdentityHero() {
 
           {/* Main Title */}
           <h1
-            className="text-2xl sm:text-3xl md:text-display-lg lg:text-display-xl mb-4 md:mb-8 animate-fade-up leading-tight"
+            className="text-3xl sm:text-4xl md:text-display-lg lg:text-display-xl mb-4 md:mb-8 animate-fade-up leading-tight"
             style={{ animationDelay: "0.1s" }}
           >
             Fini le logo bricolé.{" "}
