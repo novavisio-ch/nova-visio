@@ -295,7 +295,7 @@ export const BrandOfferDetailsSection = () => {
           </h2>
           
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Chaque élément est pensé pour vous donner une image professionnelle, cohérente et facile à déployer.
+            Chaque élément est là pour une raison. Pas de superflu, que de l'utile.
           </p>
         </motion.div>
 

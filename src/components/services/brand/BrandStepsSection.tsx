@@ -295,8 +295,8 @@ export const BrandStepsSection = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
           >
-            Un processus créatif structuré, de la découverte de votre marque
-            jusqu'à la livraison de votre identité complète.
+            De la découverte de votre marque jusqu'aux fichiers finaux,
+            vous savez exactement où on en est à chaque étape.
           </motion.p>
         </motion.div>
 

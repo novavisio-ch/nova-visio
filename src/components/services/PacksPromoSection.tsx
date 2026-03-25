@@ -63,7 +63,7 @@ export function PacksPromoSection() {
             <span className="text-gradient-gold">complète</span> ?
           </h2>
           <p className="text-sm md:text-body-lg text-muted-foreground max-w-2xl mx-auto">
-            Nos packs combinent identité visuelle et création web pour une image cohérente et professionnelle.
+            Identité visuelle + site web dans une seule offre. Moins de prestataires, plus de cohérence.
           </p>
         </motion.div>
 
