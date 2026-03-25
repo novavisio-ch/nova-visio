@@ -329,7 +329,7 @@ export const BrandOfferDetailsSection = () => {
                 
                 {/* Card */}
                 <div 
-                  className="relative p-6 md:p-8 rounded-2xl border border-border/30 backdrop-blur-sm bg-foreground/[0.03] h-full transition-all duration-500 group-hover:border-border/50 group-hover:bg-foreground/[0.05]"
+                  className="relative p-6 md:p-8 rounded-2xl backdrop-blur-sm bg-foreground/[0.03] h-full transition-all duration-500 group-hover:bg-foreground/[0.05]"
                 >
                   {/* Background gradient */}
                   <div 

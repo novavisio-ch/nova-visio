@@ -289,7 +289,7 @@ export const SkillsSection = () => {
 
                 {/* Card */}
                 <div
-                  className="relative h-full rounded-3xl border border-border/20 backdrop-blur-2xl p-6 md:p-8 overflow-hidden transition-all duration-500 group-hover:border-border/40 group-hover:shadow-[0_30px_60px_-20px_rgba(195,182,143,0.2)] card-glass-surface"
+                  className="relative h-full rounded-3xl backdrop-blur-2xl p-6 md:p-8 overflow-hidden transition-all duration-500 group-hover:shadow-[0_30px_60px_-20px_rgba(195,182,143,0.2)] card-glass-surface"
                 >
                   {/* Decorative Background Elements */}
                   <div 

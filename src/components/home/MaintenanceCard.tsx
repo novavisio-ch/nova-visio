@@ -59,8 +59,7 @@ export const MaintenanceCard = () => {
       </motion.div>
 
       <div
-        className="relative h-full rounded-2xl border p-6 md:p-8 transition-all duration-500 overflow-hidden card-dark-surface"
-        style={{ borderColor: "rgba(195, 182, 143, 0.3)" }}
+        className="relative h-full rounded-2xl p-6 md:p-8 transition-all duration-500 overflow-hidden card-dark-surface"
       >
         {/* Floating particles */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">

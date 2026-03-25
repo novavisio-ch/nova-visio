@@ -144,7 +144,7 @@ export const BrandComplementarySection = () => {
             }} />
 
                 {/* Card */}
-                <div className="relative h-full rounded-2xl border border-border/30 backdrop-blur-xl p-6 md:p-8 transition-all duration-500 group-hover:border-[#C3B68F]/40 group-hover:translate-y-[-4px] group-hover:shadow-[0_20px_40px_-15px_rgba(195,182,143,0.3)] card-glass-surface">
+                <div className="relative h-full rounded-2xl backdrop-blur-xl p-6 md:p-8 transition-all duration-500 group-hover:translate-y-[-4px] group-hover:shadow-[0_20px_40px_-15px_rgba(195,182,143,0.3)] card-glass-surface">
                   {/* Decorative Corner */}
                   <div className="absolute top-0 right-0 w-24 h-24 opacity-10 group-hover:opacity-20 transition-opacity duration-500" style={{
                 background: `radial-gradient(circle at top right, ${service.accentColor} 0%, transparent 70%)`

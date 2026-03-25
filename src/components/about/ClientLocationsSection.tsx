@@ -99,7 +99,7 @@ export function ClientLocationsSection() {
               }}
               className="group relative"
             >
-              <div className="flex flex-col items-center gap-3 p-4 md:p-6 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/30 hover:border-primary/40 transition-all duration-300">
+              <div className="flex flex-col items-center gap-3 p-4 md:p-6 rounded-2xl bg-card/50 backdrop-blur-sm transition-all duration-300">
                 {/* Flag with floating animation */}
                 <motion.span
                   className="text-4xl md:text-5xl lg:text-6xl"
