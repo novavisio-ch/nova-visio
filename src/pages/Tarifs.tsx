@@ -127,7 +127,7 @@ const complementaryServices = [{
   icon: ShoppingBag,
   title: "Boutiques en ligne",
   description: <>
-        Boutiques <strong className="text-foreground font-semibold">e-commerce</strong> adaptées avec un <strong className="text-[#C3B68F] font-medium">parcours d'achat clair</strong>.
+        Une boutique en ligne <strong className="text-foreground font-semibold">simple et efficace</strong>, avec un <strong className="text-[#C3B68F] font-medium">parcours d'achat qui ne perd personne</strong>.
       </>,
   price: "Sur devis"
 }, {
