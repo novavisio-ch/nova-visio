@@ -222,7 +222,7 @@ export function PackDigitalBranding() {
           </div>
 
           {/* CTA */}
-          <div className="text-center pt-6 border-t border-border/30">
+          <div className="text-center pt-6">
             <Link to="/contact">
               <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                 <Button size="lg" className="px-8 group/btn relative overflow-hidden"

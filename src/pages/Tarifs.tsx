@@ -378,7 +378,7 @@ const ComplementaryCard = ({
             <h4 className="font-display text-lg font-semibold text-foreground group-hover:text-[#C3B68F] transition-colors duration-300">
               {service.title}
             </h4>
-            <span className="text-xs font-medium text-[#C3B68F]/80 whitespace-nowrap px-2 py-0.5 rounded-full border border-[#C3B68F]/30">
+            <span className="text-xs font-medium text-[#C3B68F]/80 whitespace-nowrap px-2 py-0.5 rounded-full">
               {service.price}
             </span>
           </div>

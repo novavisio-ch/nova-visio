@@ -100,7 +100,7 @@ export function PacksPromoSection() {
                 }
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.6, delay: index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
-                className={`group relative p-5 md:p-6 rounded-xl border bg-gradient-to-br ${styles.gradient} backdrop-blur-sm overflow-hidden`}
+                className={`group relative p-5 md:p-6 rounded-xl bg-gradient-to-br ${styles.gradient} backdrop-blur-sm overflow-hidden`}
                 style={{ perspective: "1000px" }}
               >
                 {/* Animated gradient border */}

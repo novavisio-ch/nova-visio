@@ -299,7 +299,7 @@ export const ServicesOverviewSection = () => {
                 }, {
                   value: "24h",
                   label: "Réponse"
-                 }].map((stat, index) => <motion.div key={index} className="text-center p-3 rounded-xl bg-white/5 border border-white/10" whileHover={{
+                 }].map((stat, index) => <motion.div key={index} className="text-center p-3 rounded-xl bg-white/5" whileHover={{
                    scale: 1.05,
                    backgroundColor: "rgba(255,255,255,0.08)"
                  }}>
