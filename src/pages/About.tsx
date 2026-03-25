@@ -64,7 +64,7 @@ const About = () => {
         }} transition={{
           duration: 0.6
         }} className="max-w-3xl mx-auto text-center">
-            <h1 className="text-2xl sm:text-3xl md:text-display-lg lg:text-display-xl mb-4 md:mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-display-lg lg:text-display-xl mb-4 md:mb-6 leading-tight">
               À <span className="text-gradient-gold">Propos.</span>
             </h1>
             <p className="text-sm sm:text-base md:text-body-lg text-muted-foreground">
