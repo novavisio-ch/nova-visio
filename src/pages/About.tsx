@@ -68,7 +68,7 @@ const About = () => {
               À <span className="text-gradient-gold">Propos.</span>
             </h1>
             <p className="text-sm sm:text-base md:text-body-lg text-muted-foreground">
-              Au-delà de la confusion digitale, il y a la clarté.
+              On a créé NOVA VISIO parce que trop d'entrepreneurs méritent mieux qu'un site bâclé sur un template générique.
             </p>
           </motion.div>
         </div>
