@@ -88,7 +88,7 @@ const About = () => {
             transition: {
               duration: 0.3
             }
-          }} className="md:col-span-2 lg:col-span-2 p-5 sm:p-6 md:p-8 lg:p-10 rounded-2xl md:rounded-3xl bg-gradient-to-br from-secondary/80 to-secondary/40 border border-border/30 backdrop-blur-sm cursor-pointer">
+          }} className="md:col-span-2 lg:col-span-2 p-5 sm:p-6 md:p-8 lg:p-10 rounded-2xl md:rounded-3xl bg-gradient-to-br from-secondary/80 to-secondary/40 backdrop-blur-sm cursor-pointer">
               <div className="flex items-center gap-2 md:gap-3 mb-4 md:mb-6">
                 <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg md:rounded-xl flex items-center justify-center">
                   <Heart className="w-4 h-4 md:w-5 md:h-5 text-primary" />
