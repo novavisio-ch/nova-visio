@@ -154,7 +154,6 @@ export function WhyUsSection() {
                 } : undefined}
                 whileHover={!isMobile ? { 
                   y: -8,
-                  borderColor: "rgba(195, 182, 143, 0.5)",
                   boxShadow: "0 20px 40px -15px rgba(195, 182, 143, 0.3)"
                 } : undefined}
                 viewport={isMobile ? { once: true, margin: "-50px" } : undefined}
