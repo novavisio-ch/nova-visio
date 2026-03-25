@@ -71,8 +71,7 @@ export function PackDigitalBranding() {
         }}
       />
 
-      <div className="relative h-full rounded-3xl border overflow-hidden transition-all duration-500 card-dark-surface"
-        style={{ borderColor: "rgba(195, 182, 143, 0.3)" }}
+      <div className="relative h-full rounded-3xl overflow-hidden transition-all duration-500 card-dark-surface"
       >
         {/* Floating particles */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
