@@ -30,7 +30,7 @@ export const ComplementaryServicesSection = () => {
         </div>
 
         {/* Main Card - Identité visuelle */}
-        <div className="group mb-10 md:mb-14 rounded-2xl border border-[#C3B68F]/40 bg-card/80 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_rgba(195,182,143,0.25)] hover:scale-[1.01]">
+        <div className="group mb-10 md:mb-14 rounded-2xl bg-card/80 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_rgba(195,182,143,0.25)] hover:scale-[1.01]">
           <div className="grid md:grid-cols-2 gap-0">
             {/* Text Content */}
             <div className="p-8 md:p-10 lg:p-12 flex flex-col justify-center section-white">
