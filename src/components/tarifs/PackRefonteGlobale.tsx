@@ -7,15 +7,15 @@ import { useIsMobile } from "@/hooks/use-mobile";
 const targetAudience = [
   {
     icon: History,
-    text: "Marques déjà lancées qui ne se reconnaissent plus dans leur identité actuelle.",
+    text: "Votre logo date de 5 ans et vous ne vous reconnaissez plus dedans.",
   },
   {
     icon: TrendingUp,
-    text: "Sites en ligne depuis plusieurs années, devenus peu lisibles, datés ou peu efficaces.",
+    text: "Votre site est en ligne depuis des années et il a l'air de... ça se voit.",
   },
   {
     icon: Users,
-    text: "Entreprises qui ont évolué (positionnement, offres, cible) et ont besoin d'une mise à jour globale cohérente.",
+    text: "Votre activité a évolué (offres, cible, positionnement) mais votre image est restée en 2019.",
   },
 ];
 
