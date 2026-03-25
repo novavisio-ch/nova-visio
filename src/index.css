@@ -47,7 +47,7 @@
     --glass-bg: 252 30% 23%;
 
     /* Theme-specific backgrounds */
-    --body-bg: linear-gradient(135deg, #000000 0%, #1F1A3D 100%);
+    --body-bg: #0B0B0F;
     --noise-opacity: 0.015;
   }
 
