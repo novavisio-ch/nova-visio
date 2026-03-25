@@ -465,7 +465,7 @@ const Tarifs = () => {
               delay: 0.3,
               duration: 0.6
             }} className="block">
-                Des offres claires,
+                Pas de mauvaise surprise.
               </motion.span>
               <motion.span initial={{
               opacity: 0,
@@ -482,7 +482,7 @@ const Tarifs = () => {
               WebkitTextFillColor: "transparent",
               backgroundClip: "text"
             }}>
-                adaptées à vos besoins.
+                Des prix clairs, point.
               </motion.span>
             </h1>
             <motion.p className="text-sm sm:text-base md:text-xl text-muted-foreground max-w-2xl mx-auto" initial={{
@@ -493,7 +493,7 @@ const Tarifs = () => {
             delay: 0.7,
             duration: 0.6
           }}>
-              Des prestations <strong className="text-foreground font-medium">sur-mesure</strong> pour renforcer votre <strong className="text-[#C3B68F] font-medium">présence en ligne</strong> et votre image de marque.
+              Vous savez exactement ce que vous payez et ce que vous obtenez. Pas de frais cachés, pas d'options qui s'ajoutent en cours de route.
             </motion.p>
           </motion.div>
 
