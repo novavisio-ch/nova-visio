@@ -80,7 +80,7 @@ export function PacksPromoSection() {
                   opacity: 0, 
                   y: 40, 
                   rotateX: 15,
-                  borderColor: `${styles.borderColor}4D`
+                  borderColor: `transparent`
                 }}
                 whileInView={{ 
                   opacity: 1, 
