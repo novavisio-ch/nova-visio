@@ -218,7 +218,7 @@
   }
 
   .section-gradient-steps {
-    background: linear-gradient(180deg, #0a0a12 0%, #1a1530 50%, #0a0a12 100%);
+    background: #0B0B0F;
   }
   .light .section-gradient-steps {
     background: linear-gradient(180deg, #FAFAF8 0%, #F5F5F3 50%, #FAFAF8 100%);
