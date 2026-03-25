@@ -189,7 +189,7 @@ export const SkillsSection = () => {
         >
           {/* Floating Badge */}
           <motion.div
-            className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full border border-[#C3B68F]/40 bg-gradient-to-r from-[#C3B68F]/20 to-[#C3B68F]/5 backdrop-blur-md mb-8"
+            className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-gradient-to-r from-[#C3B68F]/20 to-[#C3B68F]/5 backdrop-blur-md mb-8"
             initial={{ opacity: 0, scale: 0.8, y: 20 }}
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
             viewport={{ once: true }}
