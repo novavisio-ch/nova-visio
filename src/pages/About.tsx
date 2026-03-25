@@ -93,13 +93,14 @@ const About = () => {
                 <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg md:rounded-xl flex items-center justify-center">
                   <Heart className="w-4 h-4 md:w-5 md:h-5 text-primary" />
                 </div>
-                <span className="text-xs md:text-sm font-medium text-primary uppercase tracking-wider">Notre histoire</span>
+                <span className="text-xs md:text-sm font-medium text-primary uppercase tracking-wider">Le déclic</span>
               </div>
               <p className="text-sm sm:text-base md:text-body-lg text-foreground/90 leading-relaxed mb-3 md:mb-4">
-                NOVA VISIO est né d'un constat simple : beaucoup d'entrepreneurs se sentent perdus face au digital.
+                Tout est parti d'un constat frustrant : des artisans, des indépendants, des petites entreprises avec des offres solides — mais une présence en ligne qui ne leur rendait pas justice.
               </p>
               <p className="text-sm md:text-base text-foreground/70 leading-relaxed">
-                Entre les multiples plateformes, les tendances changeantes et le jargon technique, créer une présence en ligne cohérente peut sembler insurmontable. Nous sommes là pour simplifier tout cela.
+                Sites bricolés sur des templates, logos faits "par un ami", pages qui n'expliquent même pas clairement ce qu'ils font. 
+                Nous avons créé NOVA VISIO pour leur donner les mêmes armes que les grands : une image claire, un site qui travaille pour eux, et un accompagnement sans jargon.
               </p>
             </motion.div>
 
