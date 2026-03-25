@@ -5,9 +5,9 @@ import illustratorIcon from "@/assets/icons/illustrator.svg";
 import photoshopIcon from "@/assets/icons/photoshop.svg";
 
 const bulletPoints = [
-  "Un logo clair et mémorable, adapté à tous vos supports.",
-  "Une palette de couleurs cohérente avec votre positionnement.",
-  "Des règles d'usage simples pour une image constante.",
+  "Un logo qui fonctionne en grand comme en petit, sur écran comme sur papier.",
+  "Des couleurs et typos choisies pour vous — pas piochées au hasard.",
+  "Des règles simples pour garder la même image partout, sans se prendre la tête.",
 ];
 
 export function BrandIdentityHero() {
