@@ -47,8 +47,8 @@ export function BrandIdentityHero() {
             className="text-3xl sm:text-4xl md:text-display-lg lg:text-display-xl mb-4 md:mb-8 animate-fade-up leading-tight"
             style={{ animationDelay: "0.1s" }}
           >
-            Fini le logo bricolé.{" "}
-            <span className="text-gradient-gold">Place à une vraie identité.</span>
+            Votre image.{" "}
+            <span className="text-gradient-gold">Enfin à la hauteur.</span>
           </h1>
 
           {/* Intro Paragraph */}
