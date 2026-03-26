@@ -279,7 +279,7 @@
 
   /* Article card background */
   .article-card {
-    @apply bg-card rounded-2xl shadow-lg;
+    @apply bg-white rounded-2xl shadow-lg text-gray-800;
   }
 
   /* Article callout boxes */
