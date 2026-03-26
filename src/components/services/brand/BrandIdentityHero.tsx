@@ -56,8 +56,8 @@ export function BrandIdentityHero() {
             className="text-sm sm:text-base md:text-body-lg text-muted-foreground max-w-3xl mx-auto mb-6 md:mb-8 animate-fade-up leading-relaxed"
             style={{ animationDelay: "0.15s" }}
           >
-            Logo, couleurs, typographies, charte graphique - on crée tout de A à Z
-            pour que votre marque soit reconnaissable, cohérente et utilisable partout.
+            Logo, couleurs, typographies, charte graphique. Tout est créé de A à Z
+            pour une marque reconnaissable, cohérente et utilisable partout.
           </p>
 
           {/* Bullet Points */}

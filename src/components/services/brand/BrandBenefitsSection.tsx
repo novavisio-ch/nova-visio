@@ -73,11 +73,11 @@ export const BrandBenefitsSection = () => {
           variants={headerVariants}
         >
           <h2 className="text-display-md text-foreground mb-4">
-             Ce que ça change{" "}
-            <span className="text-gradient-gold">pour vous.</span>
+             L'impact.{" "}
+            <span className="text-gradient-gold">Immédiat.</span>
           </h2>
           <p className="text-body-lg text-muted-foreground max-w-2xl mx-auto">
-            Une bonne identité visuelle, ça simplifie votre quotidien et ça change la façon dont vos clients vous perçoivent. Concrètement.
+            Une identité qui simplifie votre quotidien et change la perception de vos clients.
           </p>
         </motion.div>
 

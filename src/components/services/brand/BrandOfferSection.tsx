@@ -47,12 +47,10 @@ export const BrandOfferSection = () => {
            <h2
              className="text-2xl sm:text-3xl md:text-4xl lg:text-display-lg font-display font-bold mb-4 text-foreground"
            >
-            Notre offre.
+            Tout est dedans.
           </h2>
           <p className="text-sm sm:text-base md:text-xl max-w-2xl mx-auto text-muted-foreground">
-            Un pack complet pour construire une identité
-            <br className="hidden md:block" />
-            <strong style={{ color: "#C3B68F" }}>unique et mémorable</strong>
+            Une identité <strong style={{ color: "#C3B68F" }}>unique et mémorable</strong>. Clé en main.
           </p>
         </motion.div>
 

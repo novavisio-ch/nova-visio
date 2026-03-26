@@ -283,19 +283,19 @@ export const BrandOfferDetailsSection = () => {
           </motion.div>
           
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Votre identité visuelle,{" "}
+            7 piliers.{" "}
             <span style={{
               background: "linear-gradient(135deg, #DCCB99 0%, #C3B68F 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text"
             }}>
-              complète et clé en main
+              Rien de superflu.
             </span>
           </h2>
           
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Chaque élément est là pour une raison. Pas de superflu, que de l'utile.
+            Chaque élément a sa raison d'être. Que de l'utile.
           </p>
         </motion.div>
 
