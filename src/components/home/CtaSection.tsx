@@ -13,7 +13,9 @@ export function CtaSection() {
         <div className="max-w-2xl mx-auto text-center">
           {/* Title */}
           <h2 className="text-3xl sm:text-4xl md:text-display-lg lg:text-display-xl mb-4 md:mb-6 leading-tight">
-            15 minutes.{" "}
+            15 minutes.
+            <br className="md:hidden" />
+            <span className="hidden md:inline">{" "}</span>
             <span className="text-gradient-gold">Sans engagement.</span>
           </h2>
 
