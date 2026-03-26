@@ -47,8 +47,8 @@ export function BrandIdentityHero() {
             className="text-3xl sm:text-4xl md:text-display-lg lg:text-display-xl mb-4 md:mb-8 animate-fade-up leading-tight"
             style={{ animationDelay: "0.1s" }}
           >
-            Fini le logo bricolé.{" "}
-            <span className="text-gradient-gold">Place à une vraie identité.</span>
+            Votre image.{" "}
+            <span className="text-gradient-gold">Enfin à la hauteur.</span>
           </h1>
 
           {/* Intro Paragraph */}
@@ -56,8 +56,8 @@ export function BrandIdentityHero() {
             className="text-sm sm:text-base md:text-body-lg text-muted-foreground max-w-3xl mx-auto mb-6 md:mb-8 animate-fade-up leading-relaxed"
             style={{ animationDelay: "0.15s" }}
           >
-            Logo, couleurs, typographies, charte graphique - on crée tout de A à Z
-            pour que votre marque soit reconnaissable, cohérente et utilisable partout.
+            Logo, couleurs, typographies, charte graphique. Tout est créé de A à Z
+            pour une marque reconnaissable, cohérente et utilisable partout.
           </p>
 
           {/* Bullet Points */}

@@ -278,16 +278,15 @@ export const FaqSection = () => {
            <h2
              className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-display-lg font-bold mb-3 md:mb-4 text-foreground"
            >
-             Des réponses à vos questions
+             Vos questions.
             <br />
-            <span className="text-gradient-gold">sur la création de site web.</span>
+            <span className="text-gradient-gold">Nos réponses.</span>
           </h2>
           
            <p
              className="max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-muted-foreground"
            >
-            Une sélection de questions que l'on nous pose souvent avant de
-            lancer un projet avec NOVA VISIO.
+            Tout ce qu'on nous demande avant de lancer un projet web.
           </p>
         </motion.div>
 

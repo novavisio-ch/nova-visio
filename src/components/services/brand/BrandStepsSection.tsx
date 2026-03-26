@@ -283,9 +283,9 @@ export const BrandStepsSection = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
           >
-             Notre méthode pour
+             De l'idée au logo.
             <br className="hidden md:block" />
-            <span className="text-gradient-gold">votre identité visuelle.</span>
+            <span className="text-gradient-gold">Étape par étape.</span>
           </motion.h2>
 
           <motion.p
@@ -295,8 +295,7 @@ export const BrandStepsSection = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
           >
-            De la découverte de votre marque jusqu'aux fichiers finaux,
-            vous savez exactement où on en est à chaque étape.
+            Vous savez exactement où on en est. À chaque étape.
           </motion.p>
         </motion.div>
 

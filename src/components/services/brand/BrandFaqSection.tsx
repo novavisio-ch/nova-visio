@@ -268,15 +268,15 @@ export const BrandFaqSection = () => {
            <h2
              className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-display-lg font-bold mb-3 md:mb-4 text-foreground"
            >
-             Des réponses à vos questions
+             Vos questions.
             <br />
-            <span className="text-gradient-gold">sur l'identité visuelle.</span>
+            <span className="text-gradient-gold">Nos réponses.</span>
           </h2>
           
            <p
              className="max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-muted-foreground"
            >
-            Questions fréquentes sur la création de logo et d'identité visuelle avec NOVA VISIO.
+            Tout ce qu'on nous demande avant de lancer une identité visuelle.
           </p>
         </motion.div>
 

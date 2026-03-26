@@ -85,11 +85,11 @@ export const ShowcaseSection = () => {
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-display-md text-foreground mb-4">
-             Des sites qu'on a réellement{" "}
-            <span className="text-gradient-gold">livrés.</span>
+             Livrés. En ligne.{" "}
+            <span className="text-gradient-gold">Pour de vrai.</span>
           </h2>
           <p className="text-body-md text-muted-foreground max-w-2xl mx-auto">
-            Pas de maquettes Dribbble. De vrais projets, pour de vrais clients, avec de vrais résultats.
+            Pas de maquettes Dribbble. De vrais projets, de vrais résultats.
           </p>
         </div>
 

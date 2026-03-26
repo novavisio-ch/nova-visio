@@ -47,8 +47,8 @@ export function WebCreationHero() {
             className="text-3xl sm:text-4xl md:text-display-lg lg:text-display-xl mb-4 md:mb-8 animate-fade-up leading-tight"
             style={{ animationDelay: "0.1s" }}
           >
-            Votre site web,{" "}
-            <span className="text-gradient-gold">votre meilleur commercial.</span>
+            Votre site.{" "}
+            <span className="text-gradient-gold">Votre meilleur commercial.</span>
           </h1>
 
           {/* Intro Paragraph */}
@@ -56,8 +56,8 @@ export function WebCreationHero() {
             className="text-sm sm:text-base md:text-body-lg text-muted-foreground max-w-3xl mx-auto mb-6 md:mb-8 animate-fade-up leading-relaxed"
             style={{ animationDelay: "0.15s" }}
           >
-            Un site vitrine qui dit clairement ce que vous faites, pourquoi on devrait vous faire confiance, 
-            et comment travailler avec vous. Sans animations inutiles, sans blabla - juste un site qui convertit.
+            Ce que vous faites, pourquoi vous faire confiance, comment travailler avec vous.
+            Un site qui convertit. Point.
           </p>
 
           {/* Bullet Points */}

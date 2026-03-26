@@ -97,12 +97,10 @@ export function StepsSection() {
           className="text-center mb-8 md:mb-16 lg:mb-20"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-6 leading-tight">
-            Comment ça se passe, <span className="text-gradient-gold">concrètement.</span>
+            5 étapes. <span className="text-gradient-gold">Zéro flou.</span>
           </h2>
           <p className="text-body text-xs sm:text-sm md:text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed">
-            Pas de tunnel de vente à rallonge. Un processus simple en 5 étapes,
-            <br className="hidden md:block" />
-            transparent du début à la fin.
+            Un processus simple, transparent du début à la fin.
           </p>
         </motion.div>
 

@@ -371,14 +371,12 @@ export const WebOfferSection = () => {
           </motion.div>
           
            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-display-lg font-display font-bold mb-3 md:mb-4 text-foreground">
-             Ce que vous obtenez.
+             Tout est inclus.
            </h2>
            <p className="text-sm sm:text-base md:text-xl max-w-2xl mx-auto text-muted-foreground">
-            Deux formats selon vos besoins,
-            <br className="hidden md:block" />
-            la même <strong style={{
+            Deux formats. La même <strong style={{
             color: "#C3B68F"
-          }}>exigence de qualité</strong>.
+          }}>exigence</strong>.
           </p>
         </motion.div>
 

@@ -95,10 +95,10 @@ export const BrandComplementarySection = () => {
           </motion.div>
 
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-5">
-             Services{" "}
+             Aller{" "}
             <span className="relative inline-block">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#C3B68F] via-[#DCCB99] to-[#C3B68F]">
-                complémentaires.
+                plus loin.
               </span>
               <motion.span className="absolute -bottom-2 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#C3B68F] to-transparent" initial={{
               scaleX: 0
@@ -113,7 +113,7 @@ export const BrandComplementarySection = () => {
             </span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Pour exploiter votre nouvelle identité à fond, sans jongler entre 5 outils.
+            Exploitez votre identité à fond. Sans jongler entre 5 outils.
           </p>
         </motion.div>
 

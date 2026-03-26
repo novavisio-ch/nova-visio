@@ -463,8 +463,8 @@ const Tarifs = () => {
               delay: 0.3,
               duration: 0.6
             }} className="block">
-                Pas de mauvaise surprise.
-              </motion.span>
+                 Transparence totale.
+               </motion.span>
               <motion.span initial={{
               opacity: 0,
               y: 20
@@ -480,7 +480,7 @@ const Tarifs = () => {
               WebkitTextFillColor: "transparent",
               backgroundClip: "text"
             }}>
-                Des prix clairs, point.
+                Des prix clairs. Point.
               </motion.span>
             </h1>
             <motion.p className="text-sm sm:text-base md:text-xl text-muted-foreground max-w-2xl mx-auto" initial={{
@@ -491,7 +491,7 @@ const Tarifs = () => {
             delay: 0.7,
             duration: 0.6
           }}>
-              Vous savez exactement ce que vous payez et ce que vous obtenez. Pas de frais cachés, pas d'options qui s'ajoutent en cours de route.
+               Vous savez ce que vous payez. Pas de frais cachés, pas de surprises.
             </motion.p>
           </motion.div>
 

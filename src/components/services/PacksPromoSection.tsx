@@ -59,11 +59,11 @@ export function PacksPromoSection() {
             <span className="text-sm font-medium text-foreground">Offres combinées</span>
           </div>
           <h2 className="text-2xl sm:text-3xl md:text-display-md mb-3 leading-tight">
-            Besoin d'une solution{" "}
-            <span className="text-gradient-gold">complète</span> ?
+            Tout-en-un.{" "}
+            <span className="text-gradient-gold">Sans compromis.</span>
           </h2>
           <p className="text-sm md:text-body-lg text-muted-foreground max-w-2xl mx-auto">
-            Identité visuelle + site web dans une seule offre. Moins de prestataires, plus de cohérence.
+            Identité visuelle + site web. Une seule offre, une image cohérente.
           </p>
         </motion.div>
 

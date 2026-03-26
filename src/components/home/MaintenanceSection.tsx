@@ -28,7 +28,7 @@ export const MaintenanceSection = () => {
           </motion.span>
 
           <h2 className="font-display text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 md:mb-6">
-            Un site livré, c'est bien.{" "}
+            Livré.{" "}
             <span
               style={{
                 background:
@@ -38,13 +38,13 @@ export const MaintenanceSection = () => {
                 backgroundClip: "text",
               }}
             >
-              Un site qui reste au top, c'est mieux.
+              Puis suivi.
             </span>
           </h2>
 
           <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-            Mises à jour, modifications, performances - on s'occupe de tout
-            pour que votre site continue à{" "}
+            Mises à jour, performances, modifications.
+            Votre site continue à{" "}
             <strong className="text-foreground font-medium">travailler pour vous</strong>.
           </p>
         </motion.div>
