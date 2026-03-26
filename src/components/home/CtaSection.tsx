@@ -40,10 +40,6 @@ export function CtaSection() {
             </Button>
           </div>
 
-          {/* Phone number */}
-          <p className="text-xs sm:text-sm text-muted-foreground">
-            📞 Ou appelez-nous directement : +41 XX XXX XX XX
-          </p>
         </div>
       </div>
     </section>
