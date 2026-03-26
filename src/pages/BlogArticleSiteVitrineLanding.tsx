@@ -36,14 +36,14 @@ const BlogArticleSiteVitrineLanding = () => {
 
             <div className="mb-12">
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Vous vous demandez sans doute si votre entreprise a besoin d'un site vitrine complet ou d'une simple landing page. Dans cet article, nous comparons clairement les deux formats et vous aidons à faire le choix le plus adapté à votre activité, que vous soyez artisan, TPE ou PME en Suisse romande.
+                Vous vous demandez sans doute si votre entreprise a besoin d'un <strong>site vitrine complet</strong> ou d'une simple <strong>landing page</strong>. Dans cet article, nous comparons clairement les deux formats et vous aidons à faire le choix le plus adapté à votre activité.
               </p>
             </div>
 
-            {/* Section 1 - Site vitrine */}
+            {/* Site vitrine */}
             <div className="mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">C'est quoi un site vitrine ?</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">Un site vitrine est une présence en ligne complète qui présente votre entreprise, vos services, vos valeurs et votre équipe. Il contient généralement plusieurs pages :</p>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">Un site vitrine est une <strong>présence en ligne complète</strong> qui présente votre entreprise, vos services, vos valeurs et votre équipe. Il contient généralement plusieurs pages :</p>
               <ul className="space-y-3 mb-6">
                 {["une page d'accueil,", "une page « À propos »,", "une page « Services » ou « Réalisations »,", "une page contact,", "et parfois une page blog ou une page de témoignages."].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
@@ -53,7 +53,7 @@ const BlogArticleSiteVitrineLanding = () => {
                 ))}
               </ul>
               <div className="article-callout p-6 border-l-4 border-primary mb-6">
-                <p className="text-sm text-muted-foreground italic">👉 Objectif principal : informer le client, rassurer et montrer votre sérieux sur le long terme.</p>
+                <p className="text-sm text-muted-foreground italic">👉 Objectif principal : <strong>informer le client, rassurer</strong> et montrer votre sérieux sur le long terme.</p>
               </div>
               <p className="text-lg text-muted-foreground leading-relaxed mb-2 font-semibold">👉 Idéal pour :</p>
               <ul className="space-y-3 mb-6">
@@ -66,10 +66,10 @@ const BlogArticleSiteVitrineLanding = () => {
               </ul>
             </div>
 
-            {/* Section 2 - Landing page */}
+            {/* Landing page */}
             <div className="mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">C'est quoi une landing page ?</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">Une landing page (ou "page de capture") est une page unique, ultra ciblée, conçue pour convertir les visiteurs en clients. Elle est souvent créée pour :</p>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">Une landing page (ou "page de capture") est une <strong>page unique, ultra ciblée</strong>, conçue pour <strong>convertir les visiteurs en clients</strong>. Elle est souvent créée pour :</p>
               <ul className="space-y-3 mb-6">
                 {["un seul service principal,", "une offre spéciale,", "une campagne publicitaire (Google Ads, Facebook, etc.)."].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
@@ -79,7 +79,7 @@ const BlogArticleSiteVitrineLanding = () => {
                 ))}
               </ul>
               <div className="article-callout p-6 border-l-4 border-primary mb-6">
-                <p className="text-sm text-muted-foreground italic">👉 Objectif principal : obtenir une action précise - appel, formulaire, devis, inscription, téléchargement d'un guide.</p>
+                <p className="text-sm text-muted-foreground italic">👉 Objectif principal : obtenir <strong>une action précise</strong> - appel, formulaire, devis, inscription, téléchargement d'un guide.</p>
               </div>
               <p className="text-lg text-muted-foreground leading-relaxed mb-2 font-semibold">👉 Idéal pour :</p>
               <ul className="space-y-3 mb-6">
@@ -92,7 +92,7 @@ const BlogArticleSiteVitrineLanding = () => {
               </ul>
             </div>
 
-            {/* Section 3 - Comparaison */}
+            {/* Comparaison */}
             <div className="mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">Site vitrine vs landing page : comparaison claire</h2>
               <div className="overflow-x-auto mb-6">
@@ -123,75 +123,107 @@ const BlogArticleSiteVitrineLanding = () => {
               </div>
             </div>
 
-            {/* Section 4 - Quand choisir site vitrine */}
+            {/* Quand choisir site vitrine */}
             <div className="mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">Quand choisir un site vitrine ?</h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">Pensez au site vitrine si :</p>
               <ul className="space-y-3 mb-6">
-                {["vous proposez plusieurs activités ou services différents,", "vous souhaitez développer une image de marque durable,", "vous voulez expliquer votre processus, votre expertise et vos valeurs,", "vous prévoyez d'ajouter un blog ou des contenus réguliers pour attirer du trafic organique."].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
-                    <span className="text-lg text-muted-foreground">{item}</span>
-                  </li>
-                ))}
+                <li className="flex items-start gap-3">
+                  <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+                  <span className="text-lg text-muted-foreground">vous proposez <strong>plusieurs activités ou services</strong> différents,</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+                  <span className="text-lg text-muted-foreground">vous souhaitez développer une <strong>image de marque durable</strong>,</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+                  <span className="text-lg text-muted-foreground">vous voulez expliquer votre <strong>processus, votre expertise</strong> et vos valeurs,</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+                  <span className="text-lg text-muted-foreground">vous prévoyez d'ajouter un <strong>blog ou des contenus réguliers</strong> pour attirer du trafic organique.</span>
+                </li>
               </ul>
               <div className="article-callout p-6 border-l-4 border-primary">
-                <p className="text-sm text-muted-foreground italic">💡 Le site vitrine est particulièrement adapté pour les entreprises qui veulent se positionner comme un partenaire de confiance sur le long terme.</p>
+                <p className="text-sm text-muted-foreground italic">💡 Le site vitrine est particulièrement adapté pour les entreprises qui veulent se positionner comme un <strong>partenaire de confiance</strong> sur le long terme.</p>
               </div>
             </div>
 
-            {/* Section 5 - Quand choisir landing page */}
+            {/* Quand choisir landing page */}
             <div className="mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">Quand choisir une landing page ?</h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">Optez plutôt pour une landing page si :</p>
               <ul className="space-y-3 mb-6">
-                {["votre activité se concentre sur un seul service principal (ex. : plomberie d'urgence, chauffage, rénovation),", "vous voulez surtout obtenir des appels ou des demandes de devis rapidement,", "vous lancez une offre spéciale ou une promotion limitée dans le temps,", "vous utilisez des publicités en ligne (Google Ads, Facebook Ads) et avez besoin d'une page ultra ciblée."].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
-                    <span className="text-lg text-muted-foreground">{item}</span>
-                  </li>
-                ))}
+                <li className="flex items-start gap-3">
+                  <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+                  <span className="text-lg text-muted-foreground">votre activité se concentre sur <strong>un seul service principal</strong>,</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+                  <span className="text-lg text-muted-foreground">vous voulez surtout obtenir <strong>des appels ou des demandes de devis</strong> rapidement,</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+                  <span className="text-lg text-muted-foreground">vous lancez une <strong>offre spéciale</strong> ou une promotion limitée dans le temps,</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+                  <span className="text-lg text-muted-foreground">vous utilisez des <strong>publicités en ligne</strong> et avez besoin d'une page ultra ciblée.</span>
+                </li>
               </ul>
               <div className="article-callout p-6 border-l-4 border-primary">
-                <p className="text-sm text-muted-foreground italic">💡 La landing page est idéale pour transformer le trafic en clients concrets, sans charger votre visiteur avec trop d'informations.</p>
+                <p className="text-sm text-muted-foreground italic">💡 La landing page est idéale pour <strong>transformer le trafic en clients concrets</strong>, sans charger votre visiteur avec trop d'informations.</p>
               </div>
             </div>
 
-            {/* Section 6 - Cas pratique */}
+            {/* Cas pratique */}
             <div className="mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">Un cas pratique : artisan vs cabinet</h2>
               <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4">Exemple 1 – Plombier</h3>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-4">Un plombier qui veut surtout des appels d'urgence peut se contenter d'une landing page claire avec :</p>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-4">Un plombier qui veut surtout des <strong>appels d'urgence</strong> peut se contenter d'une landing page claire avec :</p>
               <ul className="space-y-3 mb-8">
-                {["son service principal,", "un numéro de téléphone gros et visible,", "un formulaire de rendez‑vous rapide,", "une zone de zones de chantier (ex. « interventions à Genève, Lausanne, Nyon »)."].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
-                    <span className="text-lg text-muted-foreground">{item}</span>
-                  </li>
-                ))}
+                <li className="flex items-start gap-3">
+                  <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+                  <span className="text-lg text-muted-foreground">son <strong>service principal</strong>,</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+                  <span className="text-lg text-muted-foreground">un <strong>numéro de téléphone</strong> gros et visible,</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+                  <span className="text-lg text-muted-foreground">un <strong>formulaire de rendez‑vous</strong> rapide,</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+                  <span className="text-lg text-muted-foreground">une <strong>zone d'intervention</strong> (ex. « Genève, Lausanne, Nyon »).</span>
+                </li>
               </ul>
               <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4">Exemple 2 – Bureau d'architecture</h3>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">Un bureau d'architecture, qui parle de projet global, de processus, de valeurs et de réalisations, aura plus besoin d'un site vitrine complet avec plusieurs pages et une vraie narration de marque.</p>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">Un bureau d'architecture, qui parle de <strong>projet global</strong>, de processus, de valeurs et de réalisations, aura plus besoin d'un <strong>site vitrine complet</strong> avec plusieurs pages et une vraie narration de marque.</p>
             </div>
 
-            {/* Section 7 - Combiner les deux */}
+            {/* Combiner les deux */}
             <div className="mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">Peut‑on combiner les deux ?</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-4">Oui ! Beaucoup d'entreprises utilisent une landing page dynamique pour leurs campagnes (publicités, offres spéciales) et un site vitrine comme base de leur présence en ligne. Par exemple :</p>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-4">Oui ! Beaucoup d'entreprises utilisent une <strong>landing page dynamique</strong> pour leurs campagnes et un <strong>site vitrine</strong> comme base de leur présence en ligne. Par exemple :</p>
               <ul className="space-y-3 mb-6">
-                {["votre site vitrine reste votre « maison » principale,", "vos landing pages sont vos « portes d'entrée » ciblées pour que les clients puissent agir rapidement."].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
-                    <span className="text-lg text-muted-foreground">{item}</span>
-                  </li>
-                ))}
+                <li className="flex items-start gap-3">
+                  <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+                  <span className="text-lg text-muted-foreground">votre site vitrine reste votre <strong>« maison » principale</strong>,</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+                  <span className="text-lg text-muted-foreground">vos landing pages sont vos <strong>« portes d'entrée » ciblées</strong> pour que les clients puissent agir rapidement.</span>
+                </li>
               </ul>
             </div>
 
-            {/* Section 8 - Comment choisir */}
+            {/* Comment choisir */}
             <div className="mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">Comment faire le bon choix pour votre activité ?</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">Posez‑vous ces 3 questions simples :</p>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">Posez‑vous ces <strong>3 questions simples</strong> :</p>
               <div className="article-recap p-6 md:p-8 mb-6">
                 <ul className="space-y-4">
                   {["Offrez‑vous un service unique ou plusieurs services ?", "Voulez‑vous surtout attirer des appels rapides ou développer une image de marque durable ?", "Planifiez‑vous des campagnes publicitaires en ligne ?"].map((q, i) => (
@@ -202,20 +234,26 @@ const BlogArticleSiteVitrineLanding = () => {
                   ))}
                 </ul>
               </div>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-4">Si vous avez surtout besoin de transformer le trafic en clients, une landing page est souvent la solution la plus efficace. Si vous voulez montrer votre expertise et votre crédibilité, un site vitrine est le format le plus adapté.</p>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-4">Si vous avez surtout besoin de <strong>transformer le trafic en clients</strong>, une landing page est souvent la solution la plus efficace. Si vous voulez montrer votre <strong>expertise et votre crédibilité</strong>, un site vitrine est le format le plus adapté.</p>
             </div>
 
-            {/* Section 9 - CTA */}
+            {/* CTA */}
             <div className="mb-8">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">Besoin d'aide pour choisir ou créer votre site ?</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-4">Chez Nova Visio, nous accompagnons les artisans et petites entreprises à définir le format le plus adapté à leur activité : site vitrine, landing page ou les deux. Vous pouvez nous confier :</p>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-4">Chez Nova Visio, nous accompagnons les artisans et petites entreprises à définir le <strong>format le plus adapté</strong> à leur activité : site vitrine, landing page ou les deux. Vous pouvez nous confier :</p>
               <ul className="space-y-3 mb-8">
-                {["la création de votre landing page optimisée pour la conversion,", "la mise en place d'un site vitrine professionnel et clair,", "ou encore l'optimisation de vos pages existantes pour qu'elles génèrent plus de clients."].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
-                    <span className="text-lg text-muted-foreground">{item}</span>
-                  </li>
-                ))}
+                <li className="flex items-start gap-3">
+                  <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+                  <span className="text-lg text-muted-foreground">la création de votre <strong>landing page optimisée</strong> pour la conversion,</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+                  <span className="text-lg text-muted-foreground">la mise en place d'un <strong>site vitrine professionnel</strong> et clair,</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+                  <span className="text-lg text-muted-foreground">ou encore <strong>l'optimisation de vos pages existantes</strong> pour qu'elles génèrent plus de clients.</span>
+                </li>
               </ul>
               <div className="text-center">
                 <Button asChild size="lg" variant="gold" className="text-base px-8 py-6">
