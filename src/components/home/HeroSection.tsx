@@ -16,8 +16,8 @@ export function HeroSection() {
           <h1 className="text-3xl sm:text-4xl md:text-display-lg lg:text-display-xl mb-4 md:mb-6 animate-fade-up leading-tight" style={{
           animationDelay: "0.1s"
         }}>
-            Vos clients ne vous trouvent pas en ligne ?{" "}
-            <span className="text-gradient-gold">On règle ça.</span>
+            Vos clients vous cherchent.{" "}
+            <span className="text-gradient-gold">Faites-vous trouver.</span>
           </h1>
 
           <p className="max-w-2xl mx-auto mb-8 md:mb-10 animate-fade-up font-sans text-sm sm:text-base md:text-xl lg:text-2xl font-light text-foreground-strong leading-relaxed" style={{
