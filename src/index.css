@@ -294,7 +294,8 @@
 
   /* Article callout boxes */
   .article-callout {
-    @apply bg-secondary rounded-xl;
+    @apply rounded-xl;
+    background-color: #f3f4f6;
   }
 
   .article-recap {
