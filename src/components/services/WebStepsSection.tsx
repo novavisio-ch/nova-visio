@@ -312,7 +312,7 @@ export const WebStepsSection = () => {
             transition={{ delay: 0.3 }}
           >
            Du brief au lancement.
-            <br className="hidden md:block" />
+            <br />
             <span className="text-gradient-gold">5 étapes.</span>
           </motion.h2>
 
@@ -323,7 +323,9 @@ export const WebStepsSection = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
           >
-            Vous savez exactement où on en est. À chaque instant.
+            Vous savez exactement où on en est.
+            <br className="md:hidden" />
+            À chaque instant.
           </motion.p>
         </motion.div>
 

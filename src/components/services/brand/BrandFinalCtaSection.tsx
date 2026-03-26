@@ -8,14 +8,17 @@ export const BrandFinalCtaSection = () => {
       <div className="container mx-auto">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="mb-4 md:mb-6 font-display text-3xl sm:text-4xl md:text-display-lg lg:text-display-xl font-bold leading-tight text-foreground">
-            Votre image mérite{" "}
-            <span className="text-gradient-gold">
-              mieux.
-            </span>
+            Votre image mérite
+            <br className="md:hidden" />
+            <span className="hidden md:inline">{" "}</span>
+            <span className="text-gradient-gold">mieux.</span>
           </h2>
 
           <p className="mx-auto mb-8 md:mb-10 max-w-2xl text-sm sm:text-base md:text-lg leading-relaxed text-muted-foreground">
-            15 minutes d'appel gratuit. On vous dit franchement
+            15 minutes d'appel gratuit.
+            <br className="md:hidden" />
+            On vous dit franchement
+            <br className="md:hidden" />
             si une refonte vaut le coup.
           </p>
 

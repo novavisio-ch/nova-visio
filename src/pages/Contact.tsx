@@ -125,10 +125,16 @@ const Contact = () => {
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl md:text-display-lg lg:text-display-xl mb-4 md:mb-6 leading-tight">
-              Parlons-en. <span className="text-gradient-gold">15 minutes.</span>
+              Parlons-en.
+              <br className="md:hidden" />
+              <span className="hidden md:inline"> </span>
+              <span className="text-gradient-gold">15 minutes.</span>
             </h1>
             <p className="text-sm sm:text-base md:text-body-lg text-muted-foreground leading-relaxed max-w-xl mx-auto">
-              On fait le point sur votre situation. Pas de pitch commercial.
+              On fait le point sur votre situation.
+              <br className="md:hidden" />
+              Pas de pitch commercial.
+              <br className="md:hidden" />
               Juste une conversation honnête.
             </p>
           </div>

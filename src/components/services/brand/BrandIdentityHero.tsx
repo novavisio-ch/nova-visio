@@ -47,7 +47,9 @@ export function BrandIdentityHero() {
             className="text-3xl sm:text-4xl md:text-display-lg lg:text-display-xl mb-4 md:mb-8 animate-fade-up leading-tight"
             style={{ animationDelay: "0.1s" }}
           >
-            Votre image.{" "}
+            Votre image.
+            <br className="md:hidden" />
+            <span className="hidden md:inline">{" "}</span>
             <span className="text-gradient-gold">Enfin à la hauteur.</span>
           </h1>
 
@@ -56,8 +58,15 @@ export function BrandIdentityHero() {
             className="text-sm sm:text-base md:text-body-lg text-muted-foreground max-w-3xl mx-auto mb-6 md:mb-8 animate-fade-up leading-relaxed"
             style={{ animationDelay: "0.15s" }}
           >
-            Logo, couleurs, typographies, charte graphique. Tout est créé de A à Z
-            pour une marque reconnaissable, cohérente et utilisable partout.
+            Logo, couleurs, typographies,
+            <br className="md:hidden" />
+            charte graphique.
+            <br className="md:hidden" />
+            Tout est créé de A à Z pour une marque
+            <br className="md:hidden" />
+            reconnaissable, cohérente
+            <br className="sm:hidden" />
+            et utilisable partout.
           </p>
 
           {/* Bullet Points */}

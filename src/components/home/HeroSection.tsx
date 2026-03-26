@@ -16,7 +16,9 @@ export function HeroSection() {
           <h1 className="text-3xl sm:text-4xl md:text-display-lg lg:text-display-xl mb-4 md:mb-6 animate-fade-up leading-tight" style={{
           animationDelay: "0.1s"
         }}>
-            Vos clients vous cherchent.{" "}
+            Vos clients vous cherchent.
+            <br className="md:hidden" />
+            <span className="hidden md:inline">{" "}</span>
             <span className="text-gradient-gold">Faites-vous trouver.</span>
           </h1>
 
@@ -24,7 +26,10 @@ export function HeroSection() {
           animationDelay: "0.2s"
         }}>
             Site vitrine, landing page, identité visuelle.
-            Les outils pour être vu, compris et contacté. Dès 900 CHF.
+            <br className="md:hidden" />
+            Les outils pour être vu, compris
+            <br className="md:hidden" />
+            et contacté. Dès 900 CHF.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 animate-fade-up" style={{

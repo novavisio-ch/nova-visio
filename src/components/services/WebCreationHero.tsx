@@ -47,7 +47,9 @@ export function WebCreationHero() {
             className="text-3xl sm:text-4xl md:text-display-lg lg:text-display-xl mb-4 md:mb-8 animate-fade-up leading-tight"
             style={{ animationDelay: "0.1s" }}
           >
-            Votre site.{" "}
+            Votre site.
+            <br className="md:hidden" />
+            <span className="hidden md:inline">{" "}</span>
             <span className="text-gradient-gold">Votre meilleur commercial.</span>
           </h1>
 
@@ -56,7 +58,12 @@ export function WebCreationHero() {
             className="text-sm sm:text-base md:text-body-lg text-muted-foreground max-w-3xl mx-auto mb-6 md:mb-8 animate-fade-up leading-relaxed"
             style={{ animationDelay: "0.15s" }}
           >
-            Ce que vous faites, pourquoi vous faire confiance, comment travailler avec vous.
+            Ce que vous faites,
+            <br className="md:hidden" />
+            pourquoi vous faire confiance,
+            <br className="md:hidden" />
+            comment travailler avec vous.
+            <br className="sm:hidden" />
             Un site qui convertit. Point.
           </p>
 

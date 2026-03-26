@@ -186,7 +186,9 @@ export function ServicesSection() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-2xl sm:text-3xl md:text-display-md mb-2 md:mb-4 leading-tight">
-             Deux expertises.{" "}
+             Deux expertises.
+            <br className="md:hidden" />
+            <span className="hidden md:inline">{" "}</span>
             <span className="text-gradient-gold">Un seul objectif.</span>
           </h2>
           <p className="text-xs sm:text-sm md:text-body-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">

@@ -284,7 +284,7 @@ export const BrandStepsSection = () => {
             transition={{ delay: 0.3 }}
           >
              De l'idée au logo.
-            <br className="hidden md:block" />
+            <br />
             <span className="text-gradient-gold">Étape par étape.</span>
           </motion.h2>
 
@@ -295,7 +295,9 @@ export const BrandStepsSection = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
           >
-            Vous savez exactement où on en est. À chaque étape.
+            Vous savez exactement où on en est.
+            <br className="md:hidden" />
+            À chaque étape.
           </motion.p>
         </motion.div>
 

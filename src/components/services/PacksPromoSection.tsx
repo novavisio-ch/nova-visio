@@ -59,7 +59,9 @@ export function PacksPromoSection() {
             <span className="text-sm font-medium text-foreground">Offres combinées</span>
           </div>
           <h2 className="text-2xl sm:text-3xl md:text-display-md mb-3 leading-tight">
-            Tout-en-un.{" "}
+            Tout-en-un.
+            <br className="md:hidden" />
+            <span className="hidden md:inline">{" "}</span>
             <span className="text-gradient-gold">Sans compromis.</span>
           </h2>
           <p className="text-sm md:text-body-lg text-muted-foreground max-w-2xl mx-auto">

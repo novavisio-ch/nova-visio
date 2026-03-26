@@ -95,7 +95,9 @@ export const BrandComplementarySection = () => {
           </motion.div>
 
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-5">
-             Aller{" "}
+             Aller
+            <br className="md:hidden" />
+            <span className="hidden md:inline">{" "}</span>
             <span className="relative inline-block">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#C3B68F] via-[#DCCB99] to-[#C3B68F]">
                 plus loin.

@@ -122,7 +122,10 @@ export function WhyUsSection() {
           </motion.div>
           
           <h2 className="text-2xl sm:text-3xl md:text-display-lg mb-2 md:mb-4 leading-tight">
-            NOVA VISIO. <span className="text-gradient-gold">La différence.</span>
+            NOVA VISIO.
+            <br className="md:hidden" />
+            <span className="hidden md:inline"> </span>
+            <span className="text-gradient-gold">La différence.</span>
           </h2>
         </motion.div>
 
