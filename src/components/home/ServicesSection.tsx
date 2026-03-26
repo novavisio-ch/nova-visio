@@ -14,7 +14,6 @@ const webBenefits: Benefit[] = [
   { text: "Convertissez vos visiteurs", highlight: "en clients qualifiés" },
   { text: "Présentez vos offres", highlight: "avec clarté et impact" },
   { text: "Soyez visible sur Google", highlight: "grâce au référencement naturel" },
-  { text: "Modifiez votre contenu", highlight: "en toute autonomie" },
   { text: "Un site rapide et fluide", highlight: "sur mobile comme sur ordinateur" },
 ];
 
