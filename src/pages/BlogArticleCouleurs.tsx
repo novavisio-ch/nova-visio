@@ -263,23 +263,23 @@ const BlogArticleCouleurs = () => {
                 <ul className="space-y-4">
                   <li className="flex items-start gap-4">
                     <span className="w-8 h-8 bg-primary text-background rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">1</span>
-                    <span className="text-lg text-muted-foreground">Partir de la personnalité de votre marque, pas uniquement de vos goûts.</span>
+                    <span className="text-lg text-muted-foreground">Partir de <strong>la personnalité de votre marque</strong>, pas uniquement de vos goûts.</span>
                   </li>
                   <li className="flex items-start gap-4">
                     <span className="w-8 h-8 bg-primary text-background rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">2</span>
-                    <span className="text-lg text-muted-foreground">Définir des rôles clairs pour chaque couleur : principale, secondaires, accent, neutres.</span>
+                    <span className="text-lg text-muted-foreground">Définir des <strong>rôles clairs</strong> pour chaque couleur : principale, secondaires, accent, neutres.</span>
                   </li>
                   <li className="flex items-start gap-4">
                     <span className="w-8 h-8 bg-primary text-background rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">3</span>
-                    <span className="text-lg text-muted-foreground">Prioriser la lisibilité et le contraste, surtout pour les textes.</span>
+                    <span className="text-lg text-muted-foreground">Prioriser <strong>la lisibilité et le contraste</strong>, surtout pour les textes.</span>
                   </li>
                   <li className="flex items-start gap-4">
                     <span className="w-8 h-8 bg-primary text-background rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">4</span>
-                    <span className="text-lg text-muted-foreground">Tenir compte des codes de votre secteur sans devenir une copie de vos concurrents.</span>
+                    <span className="text-lg text-muted-foreground">Tenir compte des <strong>codes de votre secteur</strong> sans devenir une copie de vos concurrents.</span>
                   </li>
                   <li className="flex items-start gap-4">
                     <span className="w-8 h-8 bg-primary text-background rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">5</span>
-                    <span className="text-lg text-muted-foreground">Tester vos couleurs en situation réelle avant de les figer.</span>
+                    <span className="text-lg text-muted-foreground"><strong>Tester vos couleurs</strong> en situation réelle avant de les figer.</span>
                   </li>
                 </ul>
               </div>
