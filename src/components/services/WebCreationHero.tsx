@@ -47,7 +47,9 @@ export function WebCreationHero() {
             className="text-3xl sm:text-4xl md:text-display-lg lg:text-display-xl mb-4 md:mb-8 animate-fade-up leading-tight"
             style={{ animationDelay: "0.1s" }}
           >
-            Votre site.{" "}
+            Votre site.
+            <br className="md:hidden" />
+            <span className="hidden md:inline">{" "}</span>
             <span className="text-gradient-gold">Votre meilleur commercial.</span>
           </h1>
 
