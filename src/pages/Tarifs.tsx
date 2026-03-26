@@ -491,7 +491,7 @@ const Tarifs = () => {
             delay: 0.7,
             duration: 0.6
           }}>
-              Vous savez exactement ce que vous payez et ce que vous obtenez. Pas de frais cachés, pas d'options qui s'ajoutent en cours de route.
+               Vous savez ce que vous payez. Pas de frais cachés, pas de surprises.
             </motion.p>
           </motion.div>
 
