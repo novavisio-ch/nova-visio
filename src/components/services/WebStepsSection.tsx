@@ -323,8 +323,7 @@ export const WebStepsSection = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
           >
-            De l'appel découverte à la mise en ligne,
-            vous savez exactement où on en est à chaque instant.
+            Vous savez exactement où on en est. À chaque instant.
           </motion.p>
         </motion.div>
 

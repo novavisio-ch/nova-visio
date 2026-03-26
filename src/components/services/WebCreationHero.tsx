@@ -56,8 +56,8 @@ export function WebCreationHero() {
             className="text-sm sm:text-base md:text-body-lg text-muted-foreground max-w-3xl mx-auto mb-6 md:mb-8 animate-fade-up leading-relaxed"
             style={{ animationDelay: "0.15s" }}
           >
-            Un site vitrine qui dit clairement ce que vous faites, pourquoi on devrait vous faire confiance, 
-            et comment travailler avec vous. Sans animations inutiles, sans blabla - juste un site qui convertit.
+            Ce que vous faites, pourquoi vous faire confiance, comment travailler avec vous.
+            Un site qui convertit. Point.
           </p>
 
           {/* Bullet Points */}
