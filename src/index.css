@@ -279,7 +279,17 @@
 
   /* Article card background */
   .article-card {
-    @apply bg-white rounded-2xl shadow-lg text-gray-800;
+    @apply bg-white rounded-2xl shadow-lg;
+    color: #1f2937;
+  }
+  .article-card .text-muted-foreground {
+    color: #4b5563 !important;
+  }
+  .article-card .text-foreground {
+    color: #1f2937 !important;
+  }
+  .article-card .text-primary {
+    color: #D1C084 !important;
   }
 
   /* Article callout boxes */
