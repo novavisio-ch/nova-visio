@@ -13,14 +13,13 @@ export function CtaSection() {
         <div className="max-w-2xl mx-auto text-center">
           {/* Title */}
           <h2 className="text-3xl sm:text-4xl md:text-display-lg lg:text-display-xl mb-4 md:mb-6 leading-tight">
-            Vous avez un projet ?{" "}
-            <span className="text-gradient-gold">Parlons-en 15 minutes.</span>
+            15 minutes.{" "}
+            <span className="text-gradient-gold">Sans engagement.</span>
           </h2>
 
           {/* Subtitle */}
           <p className="text-body text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed mb-8 md:mb-10 text-muted-foreground max-w-xl mx-auto text-center">
-            Un appel gratuit, sans engagement. On fait le point sur votre situation
-            et on vous dit honnêtement si on peut vous aider - ou pas.
+            On fait le point sur votre situation. On vous dit franchement si on peut vous aider.
           </p>
 
           {/* CTA Buttons */}

@@ -122,7 +122,7 @@ export function WhyUsSection() {
           </motion.div>
           
           <h2 className="text-2xl sm:text-3xl md:text-display-lg mb-2 md:mb-4 leading-tight">
-            Pourquoi choisir <span className="text-gradient-gold">NOVA VISIO</span> ?
+            NOVA VISIO. <span className="text-gradient-gold">La différence.</span>
           </h2>
         </motion.div>
 

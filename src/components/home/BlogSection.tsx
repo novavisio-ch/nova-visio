@@ -37,11 +37,10 @@ export function BlogSection() {
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            On partage ce qu'on <span className="text-gradient-gold">sait.</span>
+            On partage. On <span className="text-gradient-gold">éclaire.</span>
           </h2>
           <p className="text-body text-lg md:text-xl max-w-3xl mx-auto leading-relaxed text-center">
-            Des articles concrets pour vous aider à prendre de meilleures décisions
-            sur votre site, votre image et votre présence en ligne.
+            Des articles concrets sur votre site, votre image et votre présence en ligne.
           </p>
         </div>
 

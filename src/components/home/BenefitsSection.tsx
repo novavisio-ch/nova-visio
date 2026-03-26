@@ -87,9 +87,9 @@ export function BenefitsSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            Ce que vous gagnez concrètement quand votre image
+            Quand votre image et votre site
             <br className="hidden sm:block" />
-            et votre site font enfin le job.
+            font enfin le job.
           </motion.p>
 
           {/* Benefits Grid */}
