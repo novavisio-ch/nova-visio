@@ -291,7 +291,7 @@ const BlogArticle5Erreurs = () => {
                       <span className="w-8 h-8 bg-primary text-background rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">
                         {index + 1}
                       </span>
-                      <span className="text-lg text-muted-foreground">{erreur}</span>
+                      <span className="text-lg text-muted-foreground"><strong>{erreur}</strong></span>
                     </li>
                   ))}
                 </ul>

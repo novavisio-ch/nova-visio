@@ -197,7 +197,7 @@ const BlogArticleSiteVitrineLanding = () => {
                   {["Offrez‑vous un service unique ou plusieurs services ?", "Voulez‑vous surtout attirer des appels rapides ou développer une image de marque durable ?", "Planifiez‑vous des campagnes publicitaires en ligne ?"].map((q, i) => (
                     <li key={i} className="flex items-start gap-4">
                       <span className="w-8 h-8 bg-primary text-background rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">{i + 1}</span>
-                      <span className="text-lg text-muted-foreground">{q}</span>
+                      <span className="text-lg text-muted-foreground"><strong>{q}</strong></span>
                     </li>
                   ))}
                 </ul>
