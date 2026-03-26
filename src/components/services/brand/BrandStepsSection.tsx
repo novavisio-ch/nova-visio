@@ -295,7 +295,9 @@ export const BrandStepsSection = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
           >
-            Vous savez exactement où on en est. À chaque étape.
+            Vous savez exactement où on en est.
+            <br className="md:hidden" />
+            À chaque étape.
           </motion.p>
         </motion.div>
 

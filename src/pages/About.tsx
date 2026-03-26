@@ -68,7 +68,9 @@ const About = () => {
               Qui sommes-<span className="text-gradient-gold">nous.</span>
             </h1>
             <p className="text-sm sm:text-base md:text-body-lg text-muted-foreground">
-              Trop d'entrepreneurs méritent mieux qu'un site bâclé sur un template générique.
+              Trop d'entrepreneurs méritent mieux
+              <br className="md:hidden" />
+              qu'un site bâclé sur un template générique.
             </p>
           </motion.div>
         </div>

@@ -26,7 +26,10 @@ export function HeroSection() {
           animationDelay: "0.2s"
         }}>
             Site vitrine, landing page, identité visuelle.
-            Les outils pour être vu, compris et contacté. Dès 900 CHF.
+            <br className="md:hidden" />
+            Les outils pour être vu, compris
+            <br className="md:hidden" />
+            et contacté. Dès 900 CHF.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 animate-fade-up" style={{

@@ -74,9 +74,10 @@ export function BenefitsSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-[#2D284D]">Ce que ça change. </span>
+            <span className="text-[#2D284D]">Ce que ça change.</span>
+            <br className="md:hidden" />
+            <span className="hidden md:inline"> </span>
             <span className="text-[#C9BC8F]">Concrètement.</span>
-            
           </motion.h2>
           
           {/* Subtitle */}

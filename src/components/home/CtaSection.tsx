@@ -21,7 +21,11 @@ export function CtaSection() {
 
           {/* Subtitle */}
           <p className="text-body text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed mb-8 md:mb-10 text-muted-foreground max-w-xl mx-auto text-center">
-            On fait le point sur votre situation. On vous dit franchement si on peut vous aider.
+            On fait le point sur votre situation.
+            <br className="md:hidden" />
+            On vous dit franchement
+            <br className="md:hidden" />
+            si on peut vous aider.
           </p>
 
           {/* CTA Buttons */}
