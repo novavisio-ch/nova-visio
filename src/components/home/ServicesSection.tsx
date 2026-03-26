@@ -150,7 +150,6 @@ function ServiceCard({
       <ul className="space-y-1.5 md:space-y-3 mb-4 md:mb-8 text-left w-full max-w-sm">
         {benefits.map((benefit, index) => (
           <li key={index} className="flex items-start gap-2 md:gap-3">
-            <CheckCircle className={`w-4 h-4 md:w-5 md:h-5 ${styles.iconColor} mt-0.5 flex-shrink-0`} />
             <span className="text-muted-foreground text-xs sm:text-sm md:text-lg lg:text-xl leading-relaxed">
               {benefit.text} <strong className="text-foreground">{benefit.highlight}</strong>
             </span>
