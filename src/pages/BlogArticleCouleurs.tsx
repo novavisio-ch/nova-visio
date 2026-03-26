@@ -9,35 +9,19 @@ const BlogArticleCouleurs = () => {
       {/* Hero Section */}
       <section className="py-12 md:py-20">
         <div className="container-narrow">
-          {/* Back Link */}
-          <Link
-            to="/blog"
-            className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-8"
-          >
+          <Link to="/blog" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-8">
             <ArrowLeft className="w-4 h-4" />
             Retour aux articles
           </Link>
-
-          {/* Article Header */}
           <div className="max-w-4xl">
             <div className="flex items-center gap-4 text-sm text-muted-foreground mb-6">
-              <span className="px-3 py-1 bg-primary/20 text-primary rounded-full font-medium">
-                Article
-              </span>
-              <div className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                <span>5 Jan 2026</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4" />
-                <span>10 min de lecture</span>
-              </div>
+              <span className="px-3 py-1 bg-primary/20 text-primary rounded-full font-medium">Article</span>
+              <div className="flex items-center gap-2"><Calendar className="w-4 h-4" /><span>5 Jan 2026</span></div>
+              <div className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>10 min de lecture</span></div>
             </div>
-
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Comment choisir les couleurs de votre marque
             </h1>
-
             <h2 className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
               Des couleurs bien choisies rendent votre marque plus mémorable, plus lisible… et plus désirable.
             </h2>
@@ -50,31 +34,31 @@ const BlogArticleCouleurs = () => {
         <div className="container-narrow">
           <article className="max-w-4xl article-card p-6 md:p-10 lg:p-12">
             
-            {/* Section 1 - Introduction */}
+            {/* Section 1 */}
             <div className="mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
                 Pourquoi vos couleurs ne sont pas qu'une question de goût
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Beaucoup d'entrepreneurs choisissent les couleurs de leur marque "au feeling" : un bleu qu'ils aiment bien, un beige vu chez un concurrent, un vert parce que "ça fait écolo". Le problème, c'est qu'une palette choisie uniquement au goût personnel ne traduit pas forcément votre positionnement ni la personnalité de votre marque. Vos couleurs parlent pour vous avant même que quelqu'un lise un mot sur votre site. Bien les choisir, c'est aligner ce que vous montrez avec ce que vous voulez réellement transmettre.
+                Beaucoup d'entrepreneurs choisissent les couleurs de leur marque <strong>"au feeling"</strong> : un bleu qu'ils aiment bien, un beige vu chez un concurrent, un vert parce que "ça fait écolo". Le problème, c'est qu'une palette choisie uniquement au goût personnel <strong>ne traduit pas forcément votre positionnement</strong> ni la personnalité de votre marque. Vos couleurs <strong>parlent pour vous</strong> avant même que quelqu'un lise un mot sur votre site. Bien les choisir, c'est aligner ce que vous montrez avec ce que vous voulez réellement transmettre.
               </p>
               <div className="article-callout p-6 border-l-4 border-primary">
                 <p className="text-sm text-muted-foreground italic">
-                  💡 Vos couleurs donnent le ton de votre marque avant même que l'on lise votre message.
+                  💡 Vos couleurs donnent le ton de votre marque <strong>avant même que l'on lise votre message</strong>.
                 </p>
               </div>
             </div>
 
-            {/* Section 2 - Étape 1 */}
+            {/* Section 2 */}
             <div className="mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
                 Traduire votre personnalité en ambiance colorée
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-                Avant de parler de teintes précises, il faut clarifier la personnalité de votre marque. Est-elle plutôt sérieuse ou accessible, minimaliste ou expressive, premium ou conviviale ? Les mêmes couleurs ne raconteront pas la même histoire pour un cabinet de conseil B2B, un studio créatif ou une marque de bien-être.
+                Avant de parler de teintes précises, il faut <strong>clarifier la personnalité de votre marque</strong>. Est-elle plutôt sérieuse ou accessible, minimaliste ou expressive, premium ou conviviale ? Les mêmes couleurs ne raconteront pas la même histoire pour un cabinet de conseil B2B, un studio créatif ou une marque de bien-être.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                L'idée n'est pas de coller à des stéréotypes rigides ("le bleu pour le sérieux, le vert pour le bio"), mais d'identifier l'ambiance globale : douce, contrastée, lumineuse, sombre, vibrante, etc. C'est cette ambiance qui servira de guide pour sélectionner ensuite les nuances.
+                L'idée n'est pas de coller à des stéréotypes rigides ("le bleu pour le sérieux, le vert pour le bio"), mais d'identifier <strong>l'ambiance globale</strong> : douce, contrastée, lumineuse, sombre, vibrante, etc. C'est cette ambiance qui servira de guide pour sélectionner ensuite les nuances.
               </p>
 
               <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4">
@@ -83,35 +67,35 @@ const BlogArticleCouleurs = () => {
               <ul className="space-y-3 mb-6">
                 <li className="flex items-start gap-3">
                   <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
-                  <span className="text-lg text-muted-foreground">3 mots pour décrire votre marque (ex : chaleureux, structuré, audacieux).</span>
+                  <span className="text-lg text-muted-foreground"><strong>3 mots</strong> pour décrire votre marque (ex : chaleureux, structuré, audacieux).</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
-                  <span className="text-lg text-muted-foreground">Comment voulez-vous que vos clients se sentent au contact de votre marque (rassurés, inspirés, boostés, apaisés) ?</span>
+                  <span className="text-lg text-muted-foreground">Comment voulez-vous que vos clients <strong>se sentent</strong> au contact de votre marque (rassurés, inspirés, boostés, apaisés) ?</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
-                  <span className="text-lg text-muted-foreground">Où vous situez-vous plutôt : minimaliste ou coloré, classique ou original, discret ou assumé ?</span>
+                  <span className="text-lg text-muted-foreground">Où vous situez-vous plutôt : <strong>minimaliste ou coloré</strong>, classique ou original, discret ou assumé ?</span>
                 </li>
               </ul>
 
               <div className="article-callout p-6 border-l-4 border-primary">
                 <p className="text-sm text-muted-foreground italic">
-                  💡 Une ambiance claire vous aide à choisir des couleurs cohérentes, pas juste "jolies".
+                  💡 Une ambiance claire vous aide à choisir des couleurs <strong>cohérentes</strong>, pas juste "jolies".
                 </p>
               </div>
             </div>
 
-            {/* Section 3 - Étape 2 */}
+            {/* Section 3 */}
             <div className="mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
                 Couleur principale, secondaire, d'accent : qui fait quoi ?
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-                Une bonne palette ne se résume pas à une seule couleur. En général, on distingue une couleur principale (celle qui incarne le plus votre marque), une ou deux couleurs secondaires (pour les fonds, sections, éléments visuels) et une couleur d'accent (pour les boutons, liens, éléments importants). Chacune a un rôle précis dans l'interface et dans votre communication.
+                Une bonne palette ne se résume pas à une seule couleur. En général, on distingue une <strong>couleur principale</strong> (celle qui incarne le plus votre marque), une ou deux <strong>couleurs secondaires</strong> (pour les fonds, sections, éléments visuels) et une <strong>couleur d'accent</strong> (pour les boutons, liens, éléments importants). Chacune a un rôle précis dans l'interface et dans votre communication.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Si tout est de la même couleur, rien ne ressort. Si vous utilisez trop de couleurs différentes, l'ensemble devient brouillon. L'équilibre vient de la hiérarchie : certaines couleurs structurent, d'autres soutiennent, une ou deux attirent l'attention.
+                Si tout est de la même couleur, <strong>rien ne ressort</strong>. Si vous utilisez trop de couleurs différentes, l'ensemble devient brouillon. L'équilibre vient de la <strong>hiérarchie</strong> : certaines couleurs structurent, d'autres soutiennent, une ou deux attirent l'attention.
               </p>
 
               <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4">
@@ -138,21 +122,21 @@ const BlogArticleCouleurs = () => {
 
               <div className="article-callout p-6 border-l-4 border-primary">
                 <p className="text-sm text-muted-foreground italic">
-                  💡 Une palette structurée aide votre site et vos supports à rester cohérents sur la durée.
+                  💡 Une palette <strong>structurée</strong> aide votre site et vos supports à rester cohérents sur la durée.
                 </p>
               </div>
             </div>
 
-            {/* Section 4 - Étape 3 */}
+            {/* Section 4 */}
             <div className="mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
                 Priorité absolue : que ce soit lisible
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-                On peut aimer les couleurs très claires, les pastels ou les contrastes subtils, mais si votre texte devient difficile à lire, vos visiteurs décrochent. Un titre gris clair sur un fond beige peut être élégant dans un moodboard, mais pénible à lire sur un écran de téléphone. La lisibilité doit toujours passer avant le "joli".
+                On peut aimer les couleurs très claires, les pastels ou les contrastes subtils, mais si votre texte devient <strong>difficile à lire</strong>, vos visiteurs décrochent. Un titre gris clair sur un fond beige peut être élégant dans un moodboard, mais pénible à lire sur un écran de téléphone. La <strong>lisibilité</strong> doit toujours passer avant le "joli".
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Un bon contraste entre texte et fond améliore aussi l'accessibilité : personnes malvoyantes, écrans peu lumineux, vision rapide sur mobile. C'est un point souvent oublié, mais qui impacte directement l'expérience utilisateur et la perception de votre professionnalisme.
+                Un bon <strong>contraste entre texte et fond</strong> améliore aussi l'accessibilité : personnes malvoyantes, écrans peu lumineux, vision rapide sur mobile. C'est un point souvent oublié, mais qui impacte directement <strong>l'expérience utilisateur</strong> et la perception de votre professionnalisme.
               </p>
 
               <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4">
@@ -161,35 +145,35 @@ const BlogArticleCouleurs = () => {
               <ul className="space-y-3 mb-6">
                 <li className="flex items-start gap-3">
                   <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
-                  <span className="text-lg text-muted-foreground">Utiliser des couleurs suffisamment foncées pour les textes (en particulier les textes longs).</span>
+                  <span className="text-lg text-muted-foreground">Utiliser des couleurs <strong>suffisamment foncées</strong> pour les textes (en particulier les textes longs).</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
-                  <span className="text-lg text-muted-foreground">Éviter les textes importants sur des photos très chargées ou des dégradés compliqués.</span>
+                  <span className="text-lg text-muted-foreground">Éviter les textes importants sur des <strong>photos très chargées</strong> ou des dégradés compliqués.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
-                  <span className="text-lg text-muted-foreground">Tester vos palettes sur différents supports : écran d'ordinateur, smartphone, tablette, en conditions de lumière variées.</span>
+                  <span className="text-lg text-muted-foreground"><strong>Tester vos palettes</strong> sur différents supports : écran d'ordinateur, smartphone, tablette, en conditions de lumière variées.</span>
                 </li>
               </ul>
 
               <div className="article-callout p-6 border-l-4 border-primary">
                 <p className="text-sm text-muted-foreground italic">
-                  💡 Une palette réussie, ce sont des couleurs belles sur le moodboard et lisibles en situation réelle.
+                  💡 Une palette réussie, ce sont des couleurs belles sur le moodboard et <strong>lisibles en situation réelle</strong>.
                 </p>
               </div>
             </div>
 
-            {/* Section 5 - Étape 4 */}
+            {/* Section 5 */}
             <div className="mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
                 Se positionner sans copier
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-                Chaque secteur a ses codes : le bleu rassurant dans le B2B, le vert dans l'éco-responsable, les pastels dans le bien-être, les tons sombres et dorés dans le luxe. Ignorer complètement ces codes peut rendre votre marque difficile à lire, mais les copier à l'identique peut vous rendre interchangeable.
+                Chaque secteur a ses <strong>codes visuels</strong> : le bleu rassurant dans le B2B, le vert dans l'éco-responsable, les pastels dans le bien-être, les tons sombres et dorés dans le luxe. Ignorer complètement ces codes peut rendre votre marque difficile à lire, mais <strong>les copier à l'identique</strong> peut vous rendre interchangeable.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                L'objectif est de trouver un équilibre : utiliser les codes quand ils aident à faire passer le bon message, tout en introduisant des nuances ou des associations de couleurs qui vous différencient. Vous n'avez pas besoin de réinventer la roue, mais vous pouvez ajuster sa couleur.
+                L'objectif est de trouver un <strong>équilibre</strong> : utiliser les codes quand ils aident à faire passer le bon message, tout en introduisant des nuances ou des associations de couleurs qui <strong>vous différencient</strong>. Vous n'avez pas besoin de réinventer la roue, mais vous pouvez ajuster sa couleur.
               </p>
 
               <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4">
@@ -198,35 +182,35 @@ const BlogArticleCouleurs = () => {
               <ul className="space-y-3 mb-6">
                 <li className="flex items-start gap-3">
                   <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
-                  <span className="text-lg text-muted-foreground">Listez les sites de 5 à 10 concurrents directs : quelles couleurs reviennent le plus ?</span>
+                  <span className="text-lg text-muted-foreground">Listez les sites de <strong>5 à 10 concurrents</strong> directs : quelles couleurs reviennent le plus ?</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
-                  <span className="text-lg text-muted-foreground">Notez ce que vous aimez et ce que vous trouvez brouillon ou cliché.</span>
+                  <span className="text-lg text-muted-foreground">Notez ce que vous aimez et ce que vous trouvez <strong>brouillon ou cliché</strong>.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
-                  <span className="text-lg text-muted-foreground">Demandez-vous : dans ce paysage, où est-ce que j'ai envie de me placer (plus minimaliste, plus chaleureux, plus audacieux) ?</span>
+                  <span className="text-lg text-muted-foreground">Demandez-vous : dans ce paysage, <strong>où est-ce que j'ai envie de me placer</strong> (plus minimaliste, plus chaleureux, plus audacieux) ?</span>
                 </li>
               </ul>
 
               <div className="article-callout p-6 border-l-4 border-primary">
                 <p className="text-sm text-muted-foreground italic">
-                  💡 Respecter les codes de votre secteur tout en trouvant votre propre place visuelle.
+                  💡 Respecter les codes de votre secteur tout en trouvant <strong>votre propre place visuelle</strong>.
                 </p>
               </div>
             </div>
 
-            {/* Section 6 - Étape 5 */}
+            {/* Section 6 */}
             <div className="mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
                 Ne vous arrêtez pas au moodboard
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-                Une palette peut sembler parfaite dans un document, mais se révéler peu pratique une fois appliquée sur votre site, vos posts et vos documents. C'est normal : les couleurs vivent différemment selon les contextes, les surfaces, les typographies utilisées.
+                Une palette peut sembler parfaite dans un document, mais se révéler <strong>peu pratique</strong> une fois appliquée sur votre site, vos posts et vos documents. C'est normal : les couleurs vivent différemment selon les contextes, les surfaces, les typographies utilisées.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Avant de figer vos choix, testez vos couleurs sur quelques maquettes : une page d'accueil, un post de réseau social, une slide de présentation, un visuel de newsletter. Si vous sentez que vous forcez constamment pour faire fonctionner la palette, c'est qu'elle a besoin d'ajustements.
+                Avant de figer vos choix, <strong>testez vos couleurs</strong> sur quelques maquettes : une page d'accueil, un post de réseau social, une slide de présentation, un visuel de newsletter. Si vous sentez que vous forcez constamment pour faire fonctionner la palette, c'est qu'elle a besoin d'ajustements.
               </p>
 
               <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4">
@@ -235,21 +219,21 @@ const BlogArticleCouleurs = () => {
               <ul className="space-y-3 mb-6">
                 <li className="flex items-start gap-3">
                   <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
-                  <span className="text-lg text-muted-foreground">Un bloc "hero" de page d'accueil avec titre, sous-titre et bouton.</span>
+                  <span className="text-lg text-muted-foreground">Un bloc <strong>"hero"</strong> de page d'accueil avec titre, sous-titre et bouton.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
-                  <span className="text-lg text-muted-foreground">Un post type "annonce" ou "conseil" pour les réseaux sociaux.</span>
+                  <span className="text-lg text-muted-foreground">Un post type <strong>"annonce" ou "conseil"</strong> pour les réseaux sociaux.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
-                  <span className="text-lg text-muted-foreground">Un visuel simple de newsletter ou d'email de bienvenue.</span>
+                  <span className="text-lg text-muted-foreground">Un visuel simple de <strong>newsletter ou d'email</strong> de bienvenue.</span>
                 </li>
               </ul>
 
               <div className="article-callout p-6 border-l-4 border-primary">
                 <p className="text-sm text-muted-foreground italic">
-                  💡 Ce n'est qu'en contexte que vous voyez si votre palette soutient vraiment vos contenus.
+                  💡 Ce n'est qu'<strong>en contexte</strong> que vous voyez si votre palette soutient vraiment vos contenus.
                 </p>
               </div>
             </div>
@@ -291,10 +275,10 @@ const BlogArticleCouleurs = () => {
                 Des couleurs qui vous ressemblent et qui durent
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-                Choisir les couleurs de votre marque, ce n'est pas chercher "la couleur à la mode du moment", c'est construire un langage visuel qui va vous accompagner sur le long terme. Une bonne palette vous aide à être reconnaissable, cohérent·e sur tous vos supports et aligné·e avec ce que vous voulez réellement transmettre.
+                Choisir les couleurs de votre marque, ce n'est pas chercher "la couleur à la mode du moment", c'est construire un <strong>langage visuel</strong> qui va vous accompagner sur le long terme. Une bonne palette vous aide à être <strong>reconnaissable</strong>, cohérent·e sur tous vos supports et aligné·e avec ce que vous voulez réellement transmettre.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                Si vous hésitez entre plusieurs palettes, ou si vous avez l'impression que vos couleurs actuelles ne reflètent plus vraiment qui vous êtes, c'est probablement le bon moment de faire le point. Avec Nova Visio, nous vous aidons à clarifier la personnalité de votre marque et à construire une identité visuelle (couleurs, typographies, univers) qui soutient votre site et votre communication sur la durée.
+                Si vous hésitez entre plusieurs palettes, ou si vous avez l'impression que vos couleurs actuelles <strong>ne reflètent plus vraiment qui vous êtes</strong>, c'est probablement le bon moment de faire le point. Avec Nova Visio, nous vous aidons à clarifier la personnalité de votre marque et à construire une identité visuelle qui soutient votre site et votre communication sur la durée.
               </p>
 
               <div className="text-center">
