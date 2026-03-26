@@ -53,10 +53,16 @@ const SITE_CONTENT = `
 NOVA VISIO est un studio suisse qui crée des sites web et des identités visuelles pour aider les entrepreneurs et petites entreprises à vendre plus et simplement. Notre mission est de simplifier votre présence en ligne avec un site web clair et une identité visuelle professionnelle cohérente pour que vos clients vous comprennent et achètent sans effort. Made in Switzerland.
 
 ## Pourquoi choisir Nova Visio
-- Langage simple : Sans jargon technique, nous vous expliquons tout clairement.
-- Accompagnement pas à pas : Nous vous guidons à chaque étape de votre transformation digitale.
-- Clarté et durabilité : La priorité à la clarté et à la durabilité, pas aux solutions miracles.
-- Qualité maximale : Un nombre limité de projets simultanés pour une attention totale.
+- Zéro jargon : On parle comme des humains. Pas de "synergie UX" ni de "paradigme digital".
+- Un vrai accompagnement : On ne vous lâche pas après la livraison. On reste là tant que vous avez besoin.
+- Qualité > quantité : On prend peu de projets à la fois. Chacun a notre attention complète.
+- Résultats, pas promesses : On ne vend pas du rêve. On construit des outils qui travaillent pour vous.
+
+## Ce que ça change concrètement pour le client
+- Vos clients comprennent en quelques secondes ce que vous faites - plus besoin d'expliquer 10 fois.
+- Vous avez une image pro et cohérente sur tous vos supports, sans y passer vos soirées.
+- Vous attirez les bons clients - ceux qui comprennent votre valeur et ne négocient pas vos prix.
+- Votre charge mentale digitale diminue : tout est en place, vous pouvez bosser sur votre métier.
 
 ## Notre histoire
 NOVA VISIO est né d'un constat simple : beaucoup d'entrepreneurs se sentent perdus face au digital. Entre les multiples plateformes, les tendances changeantes et le jargon technique, créer une présence en ligne cohérente peut sembler insurmontable. Nous sommes là pour simplifier tout cela.
@@ -65,10 +71,10 @@ NOVA VISIO est né d'un constat simple : beaucoup d'entrepreneurs se sentent per
 Créer des solutions visuelles qui marquent les esprits, en offrant une approche sur-mesure, pensée et centrée sur une idée forte : nos clients sont nos partenaires.
 
 ## Valeurs
-- Clarté : Des solutions simples et compréhensibles.
-- Structure : Une approche méthodique et organisée.
-- Simplicité : L'essentiel, sans superflu.
-- Pédagogie : Nous vous accompagnons et vous formons.
+- Clarté : On dit les choses simplement. Pas de jargon, pas de blabla.
+- Structure : Chaque décision de design a une raison. Rien n'est là par hasard.
+- Simplicité : Moins de superflu, plus d'impact. L'essentiel, bien exécuté.
+- Pédagogie : On vous explique tout. Vous restez maître de votre image.
 
 ## Mission
 Nous accompagnons les marques locales et internationales dans la création d'identités fortes, de contenus impactants et de sites web performants. Chaque projet est une collaboration unique.
@@ -78,64 +84,105 @@ Le studio dispose de certifications en IA générative (IBM, Google Cloud), prom
 
 ## TARIFS ET OFFRES
 
-### Site vitrine - dès 1'500 CHF
-- 6 à 8 pages structurées (accueil, services, à propos, contact…).
-- Design professionnel sur-mesure qui renforce votre crédibilité.
-- Site modifiable par vous, sans compétences techniques.
-- Optimisé pour le référencement naturel (SEO).
-- Responsive : parfaitement lisible sur tous les écrans.
+### Site vitrine - dès 1'500 CHF (Best-seller) - Livraison en 7 à 14 jours
+Un site qui dit clairement ce que vous faites et qui donne envie de vous contacter.
+- 6 à 8 pages structurées.
+- Design professionnel sur-mesure.
+- Optimisé pour le SEO.
+- Responsive sur tous écrans.
+- Site modifiable par vous.
 - 12 mois de support inclus.
+Détails de l'offre complète :
+- Structure claire orientée conversion (prise de contact, devis, réservation).
+- Rédaction complète de vos pages clés + FAQ.
+- Design sur-mesure, aligné avec votre identité visuelle et vos photos.
+- Site responsive, optimisé pour le SEO et le chargement rapide.
+- Mise en ligne clé en main + guide d'utilisation + 12 mois de support inclus.
+- Suivi des performances (statistiques de visites).
+- Base évolutive : faites évoluer votre site sans tout recommencer.
 
-### Landing page - dès 900 CHF
-- Une page unique et percutante, conçue sur-mesure pour convertir vos visiteurs en prospects ou clients.
-- Message ultra-clair orienté vers l'action immédiate.
-- Idéale pour une offre spécifique, un lancement ou une campagne.
-- Structure optimisée pour capter l'attention et guider vers le CTA.
-- Parfaite pour tester une idée ou générer des leads rapidement.
-- Intégration facile avec vos outils marketing (emailing, ads…).
+### Landing page - dès 900 CHF - Livraison en 7 à 14 jours
+Une seule page, un seul objectif : que vos visiteurs passent à l'action.
+- Page unique orientée conversion.
+- Message ultra-clair.
+- Structure optimisée CTA.
+- Idéale pour lancements.
+- Intégration outils marketing.
+- Responsive sur tous écrans.
+Détails de l'offre complète :
+- Brief structuré pour clarifier votre offre, votre cible et l'objectif de la page.
+- Structure et rédaction complètes, optimisées pour la conversion.
+- Design sur-mesure, responsive, aligné avec votre identité visuelle.
+- Formulaire intégré + suivi des conversions.
+- Mise en ligne clé en main + mini guide PDF + 30 jours de support inclus.
+- Variante A/B sur l'accroche ou le bloc héro.
+- Intégration avec vos outils marketing (emailing, publicités, CRM…).
+- Chargement ultra-rapide et SEO optimisé.
 
 ### Identité visuelle complète - dès 900 CHF
-- Clarification de votre positionnement et de votre univers pour une identité qui vous ressemble.
-- Moodboard et 2 directions créatives pour choisir l'ambiance qui vous correspond vraiment.
-- Logo sur-mesure + déclinaisons + icône pour une utilisation fluide sur tous vos supports.
-- Palette de couleurs, typographies et éléments graphiques pour un univers cohérent et facile à appliquer.
+Logo, couleurs, typos, charte graphique - tout ce qu'il faut pour être reconnu au premier regard.
+- Logo sur-mesure + déclinaisons.
+- Palette de couleurs.
+- Typographies définies.
+- Charte graphique complète.
+- 250 cartes de visite incluses.
+- Fichiers prêts à l'emploi.
+Détails de l'offre complète :
+- Clarification de votre positionnement et de votre univers - pas un logo passe-partout.
+- Moodboard et 2 directions créatives pour choisir l'ambiance qui vous correspond.
+- Logo sur-mesure + déclinaisons + icône pour une utilisation fluide partout.
+- Palette de couleurs, typographies et éléments graphiques pour un univers cohérent.
 - Brandboard + charte graphique pour savoir exactement comment utiliser votre identité.
 - Fichiers prêts à l'emploi + 250 cartes de visite, signature email et visuels pour un réseau social inclus.
 
-## Services complémentaires
-- Tunnels de vente : parcours pour guider vos visiteurs vers l'achat.
-- Blog & contenus : structure de blog pour valoriser votre expertise.
-- Boutique en ligne : intégration e-commerce simple.
-- Templates réseaux sociaux : posts et stories aux couleurs de votre marque.
-- Supports imprimés : cartes de visite, flyers, dépliants.
-- Brand kit digital : kit complet avec guide PDF et accompagnement.
+### Suivi & Maintenance - dès 89 CHF/mois (Best-seller, sans engagement)
+Votre site reste performant, sans effort de votre part. Inclus automatiquement à la fin de chaque projet.
+- Hébergement & nom de domaine géré.
+- Mises à jour techniques & sécurité.
+- Sauvegardes automatiques hebdomadaires.
+- 1h de modifications de contenu par mois.
+- Rapport mensuel de performance (visites, contacts).
+- Support réactif sous 48h.
+Sans engagement - résiliable à tout moment.
+Forfait Actif (149 CHF/mois) : pour les projets avec des besoins réguliers, inclut 3h de modifs par mois, mise à jour de contenu et support prioritaire sous 24h.
 
-## FAQ - Durée site web
-En moyenne, un site vitrine simple demande entre 4 et 8 semaines, de la clarification du projet jusqu'à la mise en ligne.
+### Packs combinés
+- Pack Digital & Branding : 2'200 CHF (identité visuelle + site web).
+- Pack Refonte Globale : 2'600 CHF (refonte complète identité + site).
 
-## FAQ - Durée identité visuelle
-Comptez entre 3 et 6 semaines selon la complexité du projet.
+## Services complémentaires (sur devis)
+- Tunnels de vente : des parcours qui guident vos visiteurs de la découverte jusqu'au passage à l'action.
+- Blog & contenus : un blog structuré pour montrer que vous savez de quoi vous parlez et booster votre visibilité Google.
+- Boutiques en ligne : une boutique en ligne simple et efficace, avec un parcours d'achat qui ne perd personne.
+- Templates réseaux sociaux : posts, stories et bannières aux couleurs de votre marque, prêts dans Canva ou Figma.
+- Supports imprimés : cartes de visite, flyers, dépliants et documents de présentation professionnels.
+- Brand kit digital : kit clé en main avec visuels, templates et guide d'utilisation.
 
-## FAQ - Modifier son site
-Les sites sont conçus pour que vous puissiez mettre à jour vos textes et images sans compétences techniques. Une prise en main est prévue à la fin du projet.
+## FAQ - Site Web
+- Combien de temps faut-il pour créer un site web ? Entre 7 et 14 jours en moyenne, du brief à la mise en ligne.
+- Est-ce que je dois déjà avoir mon logo et mon identité visuelle ? Pas obligatoire. On peut d'abord créer votre identité visuelle puis construire le site dessus.
+- Est-ce que je pourrai modifier mon site moi-même ensuite ? Oui. Textes, images, blocs de contenu - vous pouvez tout mettre à jour sans compétences techniques.
+- Est-ce que vous vous occupez de l'hébergement et du nom de domaine ? Oui, tout est inclus dans le suivi mensuel.
+- Est-ce que le site sera adapté au mobile ? Évidemment. Tous nos sites sont pensés mobile-first.
+- Est-ce que vous faites aussi le texte du site ? On vous guide sur la structure et les messages clés. On peut aussi rédiger pour vous si besoin.
+- Proposez-vous des paiements en plusieurs fois ? Oui. Acompte au démarrage, solde à la livraison.
+- Que se passe-t-il si j'ai déjà un site, mais que je veux le refondre ? On analyse votre site actuel et on décide ensemble si on repart de zéro ou si on améliore l'existant. Même délai : 7 à 14 jours.
+- Est-ce que vous vous occupez aussi du SEO ? On intègre les bonnes pratiques SEO de base. Pour une stratégie SEO avancée, on peut compléter ou vous orienter.
+- Comment se passe le suivi après la mise en ligne ? Phase d'ajustements incluse après la livraison. Ensuite, le suivi mensuel (89 CHF/mois) prend le relais.
 
-## FAQ - Hébergement
-Nous conseillons sur l'hébergeur et le nom de domaine. Ils restent à votre nom pour que vous gardiez le contrôle.
-
-## FAQ - Site responsive
-Tous les sites sont responsive : lisibles sur ordinateur, tablette et smartphone.
-
-## FAQ - Paiement
-Paiement en plusieurs fois possible : acompte au lancement, paiement intermédiaire, solde à la mise en ligne.
-
-## FAQ - SEO
-Nous travaillons le référencement de base : structure, titres, hiérarchie, bonnes pratiques techniques et rédactionnelles.
+## FAQ - Identité visuelle
+- Combien de temps faut-il pour créer une identité visuelle complète ? Entre 3 et 6 semaines selon la complexité.
+- Quels fichiers vais-je recevoir à la fin du projet ? Logo dans tous les formats (PNG, SVG, PDF), fichiers sources, palette de couleurs avec les codes, typos recommandées, et charte graphique PDF.
+- Est-ce que vous partez de zéro ou pouvez-vous moderniser un logo existant ? Les deux. On peut créer de A à Z ou moderniser un logo actuel.
+- Est-ce que l'identité inclut les visuels pour les réseaux sociaux ? L'offre de base inclut les déclinaisons du logo pour les réseaux (profil, bannières). Les templates de posts et stories sont en option.
+- Combien de propositions de logo vais-je voir ? 2 à 3 directions créatives bien distinctes. Puis ajustements jusqu'à la version parfaite.
+- Puis-je utiliser mon identité visuelle sur tous mes supports ? Oui, c'est le but. L'identité fonctionne partout : site, réseaux, cartes de visite, docs, signalétique...
 
 ## Contact
 Pour discuter de votre projet, utilisez le formulaire sur la page Contact du site novavisio.ch. Nous répondons sous 24-48h.
 
 ## Blog
-Le blog propose des articles sur le web, l'identité visuelle et la stratégie digitale : "5 erreurs courantes qui plombent votre site web", "Clarifier votre offre avant de créer votre site", "Comment choisir les couleurs de votre marque".
+Le blog propose des articles sur le web, l'identité visuelle et la stratégie digitale : "5 erreurs courantes qui plombent votre site web", "Clarifier votre offre avant de créer votre site", "Comment choisir les couleurs de votre marque", "Site vitrine vs landing page : lequel choisir ?", "Logo et identité visuelle : quelle différence ?".
 `;
 
 serve(async (req) => {
