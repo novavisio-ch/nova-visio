@@ -64,11 +64,11 @@ const About = () => {
         }} transition={{
           duration: 0.6
         }} className="max-w-3xl mx-auto text-center">
-            <h1 className="text-3xl sm:text-4xl md:text-display-lg lg:text-display-xl mb-4 md:mb-6 leading-tight">
-              À <span className="text-gradient-gold">Propos.</span>
+             <h1 className="text-3xl sm:text-4xl md:text-display-lg lg:text-display-xl mb-4 md:mb-6 leading-tight">
+              Qui sommes-<span className="text-gradient-gold">nous.</span>
             </h1>
             <p className="text-sm sm:text-base md:text-body-lg text-muted-foreground">
-              On a créé NOVA VISIO parce que trop d'entrepreneurs méritent mieux qu'un site bâclé sur un template générique.
+              Trop d'entrepreneurs méritent mieux qu'un site bâclé sur un template générique.
             </p>
           </motion.div>
         </div>
