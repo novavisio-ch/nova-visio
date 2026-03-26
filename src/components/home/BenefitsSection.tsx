@@ -74,8 +74,8 @@ export function BenefitsSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-[#2D284D]">Vos </span>
-            <span className="text-[#C9BC8F]">bénéfices.</span>
+            <span className="text-[#2D284D]">Ce que ça change. </span>
+            <span className="text-[#C9BC8F]">Concrètement.</span>
             
           </motion.h2>
           
