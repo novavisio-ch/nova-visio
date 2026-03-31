@@ -29,7 +29,7 @@ export function HeroSection() {
             <br className="md:hidden" />
             Les outils pour être vu, compris{" "}
             <br className="md:hidden" />
-            et contacté. Dès 900 CHF.
+            et contacté. Dès <strong className="font-semibold">900 CHF</strong>.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 animate-fade-up" style={{
