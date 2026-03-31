@@ -55,8 +55,7 @@ const Recommandation = () => {
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 md:mb-6 leading-tight">
               Recommandez.
-              <br className="md:hidden" />
-              <span className="hidden md:inline"> </span>
+              <br />
               <span className="text-gradient-gold">Gagnez 100 €.</span>
             </h1>
 
