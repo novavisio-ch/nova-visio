@@ -244,7 +244,9 @@ export const SkillsSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            Des bases solides en design, marketing et IA pour créer des identités et des sites qui fonctionnent vraiment.
+            Des bases solides en <strong className="text-foreground font-medium">design, marketing et IA</strong>{" "}
+            <br className="md:hidden" />
+            pour créer des identités et des sites qui <strong className="text-foreground font-medium">fonctionnent vraiment</strong>.
           </motion.p>
         </motion.div>
 

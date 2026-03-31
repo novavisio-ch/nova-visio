@@ -61,9 +61,9 @@ const Recommandation = () => {
 
             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               Vous êtes satisfait de votre site ?{" "}
-              Faites-en profiter votre réseau. Pour chaque nouveau client{" "}
-              que vous nous envoyez, on vous offre <strong className="text-foreground">100 €</strong>.{" "}
-              Simple, transparent, gagnant-gagnant.
+              <br className="md:hidden" />
+              Faites-en profiter votre réseau. Pour chaque <strong className="text-foreground">nouveau client</strong>,{" "}
+              on vous offre <strong className="text-foreground">100 €</strong>.
             </p>
           </motion.div>
         </div>
@@ -88,7 +88,9 @@ const Recommandation = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            Pas de formulaire compliqué. Pas de conditions cachées.
+            Pas de formulaire compliqué.{" "}
+            <br className="md:hidden" />
+            Pas de <strong className="text-foreground font-medium">conditions cachées</strong>.
           </motion.p>
 
           <div className="grid md:grid-cols-3 gap-4 md:gap-8">
@@ -135,7 +137,9 @@ const Recommandation = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            Tout est clair dès le départ.
+            <strong className="text-foreground font-medium">Tout est clair</strong>{" "}
+            <br className="md:hidden" />
+            dès le départ.
           </motion.p>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8">
@@ -176,8 +180,9 @@ const Recommandation = () => {
               Prêt à recommander ?
             </h2>
             <p className="text-sm sm:text-base md:text-lg text-muted-foreground mb-8 md:mb-10 max-w-xl mx-auto">
-              Contactez-nous pour nous transmettre{" "}
-              le nom de la personne que vous recommandez.
+              Contactez-nous pour nous <strong className="text-foreground font-medium">transmettre le nom</strong>{" "}
+              <br className="md:hidden" />
+              de la personne que vous recommandez.
             </p>
             <Button asChild variant="gold" size="lg">
               <Link to="/contact?sujet=recommandation">

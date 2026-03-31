@@ -323,9 +323,9 @@ export const WebStepsSection = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
           >
-            Vous savez exactement où on en est.{" "}
+            Vous savez <strong className="text-foreground font-medium">exactement</strong> où on en est.{" "}
             <br className="md:hidden" />
-            À chaque instant.
+            À <strong className="text-foreground font-medium">chaque instant</strong>.
           </motion.p>
         </motion.div>
 

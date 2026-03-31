@@ -15,11 +15,9 @@ export const FinalCtaSection = () => {
           </h2>
 
           <p className="mx-auto mb-8 md:mb-10 max-w-2xl text-sm sm:text-base md:text-lg leading-relaxed text-muted-foreground">
-            15 minutes d'appel gratuit.{" "}
+            <strong className="text-foreground font-medium">15 minutes</strong> d'appel gratuit.{" "}
             <br className="md:hidden" />
-            On regarde ce qui bloque{" "}
-            <br className="md:hidden" />
-            et on propose une solution claire.
+            On regarde ce qui bloque et on propose une <strong className="text-foreground font-medium">solution claire</strong>.
           </p>
 
           <Button

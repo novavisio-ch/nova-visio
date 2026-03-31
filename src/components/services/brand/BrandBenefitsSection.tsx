@@ -77,7 +77,9 @@ export const BrandBenefitsSection = () => {
             <span className="text-gradient-gold">Immédiat.</span>
           </h2>
           <p className="text-body-lg text-muted-foreground max-w-2xl mx-auto">
-            Une identité qui simplifie votre quotidien et change la perception de vos clients.
+            Une identité qui <strong className="text-foreground font-medium">simplifie votre quotidien</strong>{" "}
+            <br className="md:hidden" />
+            et change la <strong className="text-foreground font-medium">perception</strong> de vos clients.
           </p>
         </motion.div>
 

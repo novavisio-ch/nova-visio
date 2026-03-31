@@ -15,11 +15,9 @@ export const BrandFinalCtaSection = () => {
           </h2>
 
           <p className="mx-auto mb-8 md:mb-10 max-w-2xl text-sm sm:text-base md:text-lg leading-relaxed text-muted-foreground">
-            15 minutes d'appel gratuit.{" "}
+            <strong className="text-foreground font-medium">15 minutes</strong> d'appel gratuit.{" "}
             <br className="md:hidden" />
-            On vous dit franchement{" "}
-            <br className="md:hidden" />
-            si une refonte vaut le coup.
+            On vous dit franchement si une <strong className="text-foreground font-medium">refonte vaut le coup</strong>.
           </p>
 
           <Button

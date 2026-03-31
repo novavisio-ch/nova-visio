@@ -295,9 +295,9 @@ export const BrandStepsSection = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
           >
-            Vous savez exactement où on en est.{" "}
+            Vous savez <strong className="text-foreground font-medium">exactement</strong> où on en est.{" "}
             <br className="md:hidden" />
-            À chaque étape.
+            À <strong className="text-foreground font-medium">chaque étape</strong>.
           </motion.p>
         </motion.div>
 

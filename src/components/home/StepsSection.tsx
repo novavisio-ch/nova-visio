@@ -100,7 +100,9 @@ export function StepsSection() {
             5 étapes. <span className="text-gradient-gold">Zéro flou.</span>
           </h2>
           <p className="text-body text-xs sm:text-sm md:text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed">
-            Un processus simple, transparent du début à la fin.
+            Un processus <strong className="text-foreground font-medium">simple</strong>,{" "}
+            <br className="md:hidden" />
+            <strong className="text-foreground font-medium">transparent</strong> du début à la fin.
           </p>
         </motion.div>
 

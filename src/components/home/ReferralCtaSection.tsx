@@ -26,9 +26,9 @@ export function ReferralCtaSection() {
               <span className="text-gradient-gold">Gagnez 100 €.</span>
             </h3>
             <p className="text-xs sm:text-sm md:text-base text-muted-foreground mb-5 md:mb-8 max-w-lg mx-auto leading-relaxed">
-              Un proche lance son activité ? Parlez-lui de nous.
-              <br className="hidden sm:block" />
-              S'il signe un site web, vous recevez 100 €.
+              Un proche lance son activité ? <strong className="text-foreground font-medium">Parlez-lui de nous</strong>.{" "}
+              <br className="md:hidden" />
+              S'il signe un site web, vous recevez <strong className="text-foreground font-medium">100 €</strong>.
             </p>
             <Button asChild variant="gold" size="default" className="md:px-8">
               <Link to="/recommandation">

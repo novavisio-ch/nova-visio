@@ -40,7 +40,9 @@ export function BlogSection() {
             On partage. On <span className="text-gradient-gold">éclaire.</span>
           </h2>
           <p className="text-body text-lg md:text-xl max-w-3xl mx-auto leading-relaxed text-center">
-            Des articles concrets sur votre site, votre image et votre présence en ligne.
+            Des articles <strong className="text-foreground font-medium">concrets</strong> sur votre site,{" "}
+            <br className="md:hidden" />
+            votre image et votre <strong className="text-foreground font-medium">présence en ligne</strong>.
           </p>
         </div>
 

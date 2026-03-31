@@ -191,7 +191,9 @@ export function ServicesSection() {
             <span className="text-gradient-gold">Un seul objectif.</span>
           </h2>
           <p className="text-xs sm:text-sm md:text-body-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Être vu. Être compris. Être choisi.
+            <strong className="text-foreground font-medium">Être vu</strong>. <strong className="text-foreground font-medium">Être compris</strong>.{" "}
+            <br className="md:hidden" />
+            <strong className="text-foreground font-medium">Être choisi</strong>.
           </p>
         </motion.div>
 

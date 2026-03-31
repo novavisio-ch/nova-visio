@@ -43,11 +43,9 @@ export const MaintenanceSection = () => {
           </h2>
 
           <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-            Mises à jour, performances,{" "}
+            <strong className="text-foreground font-medium">Mises à jour</strong>, performances, modifications.{" "}
             <br className="md:hidden" />
-            modifications. Votre site continue{" "}
-            <br className="md:hidden" />
-            à <strong className="text-foreground font-medium">travailler pour vous</strong>.
+            Votre site continue à <strong className="text-foreground font-medium">travailler pour vous</strong>.
           </p>
         </motion.div>
 
