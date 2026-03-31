@@ -36,7 +36,7 @@ const skills: Skill[] = [
     title: "Prompting & assistants IA",
     description: (
       <>
-        Formations dédiées au <strong className="text-foreground font-semibold">prompting avancé</strong> et à la création d'<strong className="text-[#C3B68F] font-medium">assistants IA sur mesure</strong>.
+        Formations dédiées au <strong className="text-foreground font-semibold">prompting avancé</strong> et à la création d'<strong className="text-[#C3B68F] font-medium">assistants IA sur mesure</strong>.{" "}
         <br className="hidden sm:block" />
         <span className="text-muted-foreground">Poser les bonnes questions aux bons outils pour gagner en clarté, en vitesse et en qualité.</span>
       </>
