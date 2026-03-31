@@ -14,6 +14,7 @@ import {
 const mainNavLinks = [
   { href: "/", label: "Accueil" },
   { href: "/tarifs", label: "Tarifs" },
+  { href: "/recommandation", label: "Recommandation" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];
