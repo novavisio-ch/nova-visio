@@ -128,7 +128,8 @@ export function VisioChatBubble() {
             />
           </>
         )}
-      </motion.button>
+        </motion.button>
+      </div>
     </>
   );
 }
