@@ -49,6 +49,7 @@ const IdentiteVisuelle = () => {
 
       {/* Final CTA Section */}
       <BrandFinalCtaSection />
+      <ReferralCtaSection />
     </Layout>
   );
 };

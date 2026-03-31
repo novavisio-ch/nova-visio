@@ -219,6 +219,7 @@ const About = () => {
 
       {/* Skills & Certifications Section */}
       <SkillsSection />
+      <ReferralCtaSection />
     </Layout>;
 };
 export default About;

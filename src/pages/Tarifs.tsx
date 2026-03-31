@@ -614,6 +614,7 @@ const Tarifs = () => {
           </motion.div>
         </div>
       </section>
+      <ReferralCtaSection />
     </Layout>;
 };
 export default Tarifs;
