@@ -88,7 +88,9 @@ const Recommandation = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            Pas de formulaire compliqué. Pas de conditions cachées.
+            Pas de formulaire compliqué.{" "}
+            <br className="md:hidden" />
+            Pas de <strong className="text-foreground font-medium">conditions cachées</strong>.
           </motion.p>
 
           <div className="grid md:grid-cols-3 gap-4 md:gap-8">
