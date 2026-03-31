@@ -138,7 +138,7 @@ const Recommandation = () => {
             Tout est clair dès le départ.
           </motion.p>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8">
             {conditions.map((condition, index) => (
               <motion.div
                 key={condition.label}
@@ -146,13 +146,11 @@ const Recommandation = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="relative p-5 md:p-7 rounded-2xl bg-gradient-to-b from-primary/12 to-primary/4 backdrop-blur-sm border border-primary/10 hover:border-primary/25 transition-all duration-300 group"
+                className="relative p-6 md:p-9 rounded-2xl bg-gradient-to-b from-primary/15 to-primary/5 backdrop-blur-sm border border-primary/15 hover:border-primary/30 hover:shadow-[0_0_40px_-12px_hsl(var(--primary)/0.3)] transition-all duration-500 group"
               >
-                <div className="flex items-center gap-3 mb-2 md:mb-3">
-                  <div className="w-2.5 h-2.5 rounded-full bg-primary shrink-0" />
-                  <span className="text-sm md:text-lg font-bold text-primary">{condition.label}</span>
-                </div>
-                <p className="text-xs md:text-sm text-muted-foreground leading-relaxed pl-[22px]">
+                <div className="w-3 h-3 md:w-4 md:h-4 rounded-full bg-primary mb-4 md:mb-5" />
+                <h3 className="text-lg md:text-2xl font-extrabold md:font-bold text-foreground mb-2 md:mb-3">{condition.label}</h3>
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                   {condition.value}
                 </p>
               </motion.div>
