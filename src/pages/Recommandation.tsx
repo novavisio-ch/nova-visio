@@ -1,6 +1,6 @@
 import { Layout } from "@/components/layout/Layout";
 import { motion } from "framer-motion";
-import { Gift, Users, FileCheck, Banknote } from "lucide-react";
+import { Gift, Users, FileCheck, Banknote, Coins, Globe, Clock, CreditCard, Infinity } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -26,11 +26,11 @@ const steps = [
 ];
 
 const conditions = [
-  { label: "Montant", value: "100 € par client signé." },
-  { label: "Projets concernés", value: "Création de site web (hors prestations ponctuelles mineures)." },
-  { label: "Versement", value: "À la mise en ligne du site." },
-  { label: "Modalités", value: "Virement bancaire ou avoir sur une prochaine prestation." },
-  { label: "Limite", value: "Aucune. Recommandez autant de personnes que vous voulez." },
+  { label: "Montant", value: "100 € par client signé.", icon: Coins },
+  { label: "Projets concernés", value: "Création de site web (hors prestations ponctuelles mineures).", icon: Globe },
+  { label: "Versement", value: "À la mise en ligne du site.", icon: Clock },
+  { label: "Modalités", value: "Virement bancaire ou avoir sur une prochaine prestation.", icon: CreditCard },
+  { label: "Limite", value: "Aucune. Recommandez autant de personnes que vous voulez.", icon: Infinity },
 ];
 
 const Recommandation = () => {
@@ -148,7 +148,7 @@ const Recommandation = () => {
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 className="relative p-6 md:p-9 rounded-2xl bg-gradient-to-b from-primary/15 to-primary/5 backdrop-blur-sm border border-primary/15 hover:border-primary/30 hover:shadow-[0_0_40px_-12px_hsl(var(--primary)/0.3)] transition-all duration-500 group"
               >
-                <div className="w-3 h-3 md:w-4 md:h-4 rounded-full bg-primary mb-4 md:mb-5" />
+                <condition.icon className="w-6 h-6 md:w-8 md:h-8 text-primary mb-4 md:mb-5 drop-shadow-[0_0_8px_rgba(195,182,143,0.4)] group-hover:scale-125 transition-transform duration-300" />
                 <h3 className="text-lg md:text-2xl font-extrabold md:font-bold text-foreground mb-2 md:mb-3">{condition.label}</h3>
                 <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                   {condition.value}
