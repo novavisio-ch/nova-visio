@@ -51,7 +51,7 @@ const skills: Skill[] = [
     title: "Marketing de contenu & SEO",
     description: (
       <>
-        Certifications en <strong className="text-foreground font-semibold">stratégie de content marketing</strong> et en croissance organique.
+        Certifications en <strong className="text-foreground font-semibold">stratégie de content marketing</strong> et en croissance organique.{" "}
         <br className="hidden sm:block" />
         <span className="text-muted-foreground">Des textes pensés pour vos clients, structurés pour les moteurs de recherche et les outils d'IA.</span>
       </>
