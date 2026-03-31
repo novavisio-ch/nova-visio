@@ -10,6 +10,7 @@ import { BrandComplementarySection } from "@/components/services/brand/BrandComp
 import { BrandFaqSection } from "@/components/services/brand/BrandFaqSection";
 import { BrandFinalCtaSection } from "@/components/services/brand/BrandFinalCtaSection";
 import { MaintenanceBlock } from "@/components/services/MaintenanceBlock";
+import { ReferralCtaSection } from "@/components/home/ReferralCtaSection";
 
 const IdentiteVisuelle = () => {
   return (
@@ -48,6 +49,7 @@ const IdentiteVisuelle = () => {
 
       {/* Final CTA Section */}
       <BrandFinalCtaSection />
+      <ReferralCtaSection />
     </Layout>
   );
 };

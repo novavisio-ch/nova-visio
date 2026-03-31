@@ -9,6 +9,7 @@ import { WebStepsSection } from "@/components/services/WebStepsSection";
 import { FaqSection } from "@/components/services/FaqSection";
 import { FinalCtaSection } from "@/components/services/FinalCtaSection";
 import { MaintenanceBlock } from "@/components/services/MaintenanceBlock";
+import { ReferralCtaSection } from "@/components/home/ReferralCtaSection";
 
 const SiteWeb = () => {
   return (
@@ -44,6 +45,7 @@ const SiteWeb = () => {
 
       {/* Final CTA Section */}
       <FinalCtaSection />
+      <ReferralCtaSection />
     </Layout>
   );
 };

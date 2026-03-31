@@ -5,6 +5,7 @@ import { ArrowRight, Eye, Feather, Sparkles, Handshake, Target, Heart } from "lu
 import { motion } from "framer-motion";
 import { SkillsSection } from "@/components/about/SkillsSection";
 import { ClientLocationsSection } from "@/components/about/ClientLocationsSection";
+import { ReferralCtaSection } from "@/components/home/ReferralCtaSection";
 const values = [{
   icon: Sparkles,
   title: "Clarté",
@@ -218,6 +219,7 @@ const About = () => {
 
       {/* Skills & Certifications Section */}
       <SkillsSection />
+      <ReferralCtaSection />
     </Layout>;
 };
 export default About;
