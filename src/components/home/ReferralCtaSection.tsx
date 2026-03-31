@@ -14,8 +14,8 @@ export function ReferralCtaSection() {
           transition={{ duration: 0.6 }}
           className="relative p-6 md:p-10 rounded-2xl bg-gradient-to-br from-primary/15 via-primary/8 to-primary/5 backdrop-blur-sm text-center overflow-hidden"
         >
-          <div className="absolute top-4 right-4 md:top-6 md:right-6 opacity-10">
-            <Gift className="w-16 h-16 md:w-24 md:h-24 text-primary" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-10">
+            <Gift className="w-24 h-24 md:w-32 md:h-32 text-primary" />
           </div>
 
           <div className="relative z-10">
