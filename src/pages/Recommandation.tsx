@@ -177,8 +177,7 @@ const Recommandation = () => {
               Prêt à recommander ?
             </h2>
             <p className="text-sm sm:text-base md:text-lg text-muted-foreground mb-8 md:mb-10 max-w-xl mx-auto">
-              Contactez-nous pour nous transmettre
-              <br className="hidden sm:block" />
+              Contactez-nous pour nous transmettre{" "}
               le nom de la personne que vous recommandez.
             </p>
             <Button asChild variant="gold" size="lg">
