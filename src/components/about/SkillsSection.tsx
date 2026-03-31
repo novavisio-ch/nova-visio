@@ -21,7 +21,7 @@ const skills: Skill[] = [
     title: "IA & stratégie digitale",
     description: (
       <>
-        Parcours certifiants autour de <strong className="text-foreground font-semibold">l'IA générative</strong> et de son usage en marketing digital.
+         Parcours certifiants autour de <strong className="text-foreground font-semibold">l'IA générative</strong> et de son usage en marketing digital.{" "}
         <br className="hidden sm:block" />
         <span className="text-muted-foreground">Utiliser l'IA pour analyser, optimiser et structurer vos contenus, sans jamais remplacer le regard humain.</span>
       </>
@@ -36,7 +36,7 @@ const skills: Skill[] = [
     title: "Prompting & assistants IA",
     description: (
       <>
-        Formations dédiées au <strong className="text-foreground font-semibold">prompting avancé</strong> et à la création d'<strong className="text-[#C3B68F] font-medium">assistants IA sur mesure</strong>.
+        Formations dédiées au <strong className="text-foreground font-semibold">prompting avancé</strong> et à la création d'<strong className="text-[#C3B68F] font-medium">assistants IA sur mesure</strong>.{" "}
         <br className="hidden sm:block" />
         <span className="text-muted-foreground">Poser les bonnes questions aux bons outils pour gagner en clarté, en vitesse et en qualité.</span>
       </>
@@ -51,7 +51,7 @@ const skills: Skill[] = [
     title: "Marketing de contenu & SEO",
     description: (
       <>
-        Certifications en <strong className="text-foreground font-semibold">stratégie de content marketing</strong> et en croissance organique.
+        Certifications en <strong className="text-foreground font-semibold">stratégie de content marketing</strong> et en croissance organique.{" "}
         <br className="hidden sm:block" />
         <span className="text-muted-foreground">Des textes pensés pour vos clients, structurés pour les moteurs de recherche et les outils d'IA.</span>
       </>
@@ -66,7 +66,7 @@ const skills: Skill[] = [
     title: "Social media & contenu de marque",
     description: (
       <>
-        Cours spécialisés en <strong className="text-foreground font-semibold">social media marketing</strong> et stratégie de contenu.
+        Cours spécialisés en <strong className="text-foreground font-semibold">social media marketing</strong> et stratégie de contenu.{" "}
         <br className="hidden sm:block" />
         <span className="text-muted-foreground">Décliner votre identité sur des posts, stories et campagnes cohérentes avec votre site.</span>
       </>
@@ -81,7 +81,7 @@ const skills: Skill[] = [
     title: "Utilisation responsable de l'IA",
     description: (
       <>
-        Certifications sur les <strong className="text-foreground font-semibold">bonnes pratiques</strong>, limites et <strong className="text-[#C3B68F] font-medium">éthique de l'IA</strong>.
+        Certifications sur les <strong className="text-foreground font-semibold">bonnes pratiques</strong>, limites et <strong className="text-[#C3B68F] font-medium">éthique de l'IA</strong>.{" "}
         <br className="hidden sm:block" />
         <span className="text-muted-foreground">L'IA est un co‑équipier : elle accélère le travail, mais les décisions restent humaines.</span>
       </>
