@@ -21,6 +21,7 @@ const Index = () => {
       <WhyUsSection />
       <StepsSection />
       <CtaSection />
+      <ReferralCtaSection />
       <BlogSection />
     </Layout>
   );
