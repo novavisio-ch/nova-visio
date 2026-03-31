@@ -20,6 +20,7 @@ import BlogArticleCouleurs from "./pages/BlogArticleCouleurs";
 import BlogArticleSiteVitrineLanding from "./pages/BlogArticleSiteVitrineLanding";
 import BlogArticleLogoIdentite from "./pages/BlogArticleLogoIdentite";
 import MentionsLegales from "./pages/MentionsLegales";
+import Recommandation from "./pages/Recommandation";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
