@@ -120,7 +120,7 @@ const Recommandation = () => {
 
       {/* Conditions */}
       <section className="py-12 md:py-20 lg:py-28 px-4">
-        <div className="container max-w-4xl mx-auto">
+        <div className="container max-w-5xl mx-auto">
           <motion.h2
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-3 md:mb-6 leading-tight"
             initial={{ opacity: 0, y: 20 }}
@@ -142,23 +142,34 @@ const Recommandation = () => {
             dès le départ.
           </motion.p>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8">
-            {conditions.map((condition, index) => (
-              <motion.div
-                key={condition.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="relative p-6 md:p-9 rounded-2xl bg-gradient-to-b from-primary/15 to-primary/5 backdrop-blur-sm border border-primary/15 hover:border-primary/30 hover:shadow-[0_0_40px_-12px_hsl(var(--primary)/0.3)] transition-all duration-500 group"
-              >
-                <condition.icon className="w-6 h-6 md:w-8 md:h-8 text-primary mb-4 md:mb-5 drop-shadow-[0_0_8px_rgba(195,182,143,0.4)] group-hover:scale-125 transition-transform duration-300" />
-                <h3 className="text-lg md:text-2xl font-extrabold md:font-bold text-foreground mb-2 md:mb-3">{condition.label}</h3>
-                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                  {condition.value}
-                </p>
-              </motion.div>
-            ))}
+          {/* Bento grid layout */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 md:gap-5">
+            {conditions.map((condition, index) => {
+              // Bento sizing: first 3 take 2 cols each (fills row), last 2 take 3 cols each (fills row)
+              const colSpan = index < 3 ? "lg:col-span-2" : "lg:col-span-3";
+              return (
+                <motion.div
+                  key={condition.label}
+                  initial={{ opacity: 0, y: 24, scale: 0.97 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.08, ease: [0.25, 0.46, 0.45, 0.94] }}
+                  className={`relative p-6 md:p-8 rounded-2xl bg-[#13131B] hover:shadow-[0_0_50px_-12px_hsl(var(--primary)/0.25)] transition-all duration-500 group ${colSpan}`}
+                >
+                  <div className="flex items-start gap-4 md:gap-5">
+                    <div className="shrink-0 mt-1">
+                      <condition.icon className="w-5 h-5 md:w-6 md:h-6 text-primary drop-shadow-[0_0_8px_rgba(195,182,143,0.4)] group-hover:scale-125 transition-transform duration-300" />
+                    </div>
+                    <div>
+                      <h3 className="text-base md:text-lg font-bold text-foreground mb-1.5">{condition.label}</h3>
+                      <p className="text-sm md:text-[15px] text-muted-foreground leading-relaxed">
+                        {condition.value}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
