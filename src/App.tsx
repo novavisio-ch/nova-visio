@@ -20,6 +20,7 @@ import BlogArticleCouleurs from "./pages/BlogArticleCouleurs";
 import BlogArticleSiteVitrineLanding from "./pages/BlogArticleSiteVitrineLanding";
 import BlogArticleLogoIdentite from "./pages/BlogArticleLogoIdentite";
 import MentionsLegales from "./pages/MentionsLegales";
+import Recommandation from "./pages/Recommandation";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -46,6 +47,7 @@ const App = () => (
             <Route path="/blog/site-vitrine-vs-landing-page" element={<BlogArticleSiteVitrineLanding />} />
             <Route path="/blog/logo-identite-visuelle" element={<BlogArticleLogoIdentite />} />
             <Route path="/mentions-legales" element={<MentionsLegales />} />
+            <Route path="/recommandation" element={<Recommandation />} />
             {/* Redirect old /services route to /site-web */}
             <Route path="/services" element={<SiteWeb />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
