@@ -65,11 +65,10 @@ const About = () => {
           duration: 0.6
         }} className="max-w-3xl mx-auto text-center">
              <h1 className="text-3xl sm:text-4xl md:text-display-lg lg:text-display-xl mb-4 md:mb-6 leading-tight">
-              Qui<br /> sommes-<span className="text-gradient-gold">nous.</span>
+              Qui sommes-<span className="text-gradient-gold">nous.</span>
             </h1>
             <p className="text-sm sm:text-base md:text-body-lg text-muted-foreground">
-              Trop d'entrepreneurs méritent mieux{" "}
-              <br className="md:hidden" />
+              Trop d'entrepreneurs méritent mieux<br />
               qu'un site sur un template générique.
             </p>
           </motion.div>
