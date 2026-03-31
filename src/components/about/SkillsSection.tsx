@@ -66,7 +66,7 @@ const skills: Skill[] = [
     title: "Social media & contenu de marque",
     description: (
       <>
-        Cours spécialisés en <strong className="text-foreground font-semibold">social media marketing</strong> et stratégie de contenu.
+        Cours spécialisés en <strong className="text-foreground font-semibold">social media marketing</strong> et stratégie de contenu.{" "}
         <br className="hidden sm:block" />
         <span className="text-muted-foreground">Décliner votre identité sur des posts, stories et campagnes cohérentes avec votre site.</span>
       </>
