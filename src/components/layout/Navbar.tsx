@@ -129,6 +129,17 @@ export function Navbar() {
             Tarifs
           </Link>
 
+          {/* Recommandation */}
+          <Link
+            to="/recommandation"
+            className={cn(
+              "font-medium transition-colors hover:text-primary text-sm xl:text-base whitespace-nowrap",
+              location.pathname === "/recommandation" ? "text-primary" : "text-foreground/70"
+            )}
+          >
+            Recommandation
+          </Link>
+
           {/* Blog */}
           <Link
             to="/blog"
