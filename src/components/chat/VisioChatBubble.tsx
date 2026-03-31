@@ -16,21 +16,42 @@ export function VisioChatBubble() {
         )}
       </AnimatePresence>
 
-      {/* Floating Bubble */}
-      <motion.button
-        onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 w-14 h-14 sm:w-16 sm:h-16 rounded-full shadow-lg flex items-center justify-center overflow-hidden"
-        style={{
-          background: "linear-gradient(135deg, hsl(43 35% 72%), hsl(40 28% 60%))",
-          boxShadow: "0 4px 20px rgba(195, 182, 143, 0.4), 0 0 40px rgba(195, 182, 143, 0.2)",
-        }}
-        whileHover={{ scale: 1.08 }}
-        whileTap={{ scale: 0.95 }}
-        initial={{ scale: 0, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ type: "spring", stiffness: 260, damping: 20 }}
-        aria-label={isOpen ? "Fermer le chat" : "Parler avec Visio"}
-      >
+      {/* Floating Bubble + Label */}
+      <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex items-center gap-2">
+        {/* Label */}
+        <AnimatePresence>
+          {!isOpen && (
+            <motion.span
+              initial={{ opacity: 0, x: 10, scale: 0.9 }}
+              animate={{ opacity: 1, x: 0, scale: 1 }}
+              exit={{ opacity: 0, x: 10, scale: 0.9 }}
+              transition={{ duration: 0.3 }}
+              className="px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium shadow-md whitespace-nowrap pointer-events-none"
+              style={{
+                background: "linear-gradient(135deg, hsl(43 35% 72%), hsl(40 28% 60%))",
+                color: "hsl(249 30% 15%)",
+              }}
+            >
+              Une question ?
+            </motion.span>
+          )}
+        </AnimatePresence>
+
+        {/* Button */}
+        <motion.button
+          onClick={() => setIsOpen(!isOpen)}
+          className="w-14 h-14 sm:w-16 sm:h-16 rounded-full shadow-lg flex items-center justify-center overflow-hidden relative"
+          style={{
+            background: "linear-gradient(135deg, hsl(43 35% 72%), hsl(40 28% 60%))",
+            boxShadow: "0 4px 20px rgba(195, 182, 143, 0.4), 0 0 40px rgba(195, 182, 143, 0.2)",
+          }}
+          whileHover={{ scale: 1.08 }}
+          whileTap={{ scale: 0.95 }}
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ type: "spring", stiffness: 260, damping: 20 }}
+          aria-label={isOpen ? "Fermer le chat" : "Parler avec Visio"}
+        >
         <AnimatePresence mode="wait">
           {isOpen ? (
             <motion.div
@@ -107,7 +128,8 @@ export function VisioChatBubble() {
             />
           </>
         )}
-      </motion.button>
+        </motion.button>
+      </div>
     </>
   );
 }
