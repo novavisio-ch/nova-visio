@@ -508,6 +508,8 @@ Pour recommander quelqu'un, contactez-nous via la page contact en précisant le 
     keywords: ["recommandation", "parrainage", "100", "euros", "gagner", "récompense", "recommander", "programme"]
   }
 ];
+
+/**
  * Recherche les sections de contenu les plus pertinentes pour une question donnée
  * Utilise une recherche par mots-clés simple
  */
