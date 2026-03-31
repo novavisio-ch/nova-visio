@@ -21,7 +21,7 @@ const skills: Skill[] = [
     title: "IA & stratégie digitale",
     description: (
       <>
-        Parcours certifiants autour de <strong className="text-foreground font-semibold">l'IA générative</strong> et de son usage en marketing digital.
+         Parcours certifiants autour de <strong className="text-foreground font-semibold">l'IA générative</strong> et de son usage en marketing digital.{" "}
         <br className="hidden sm:block" />
         <span className="text-muted-foreground">Utiliser l'IA pour analyser, optimiser et structurer vos contenus, sans jamais remplacer le regard humain.</span>
       </>
