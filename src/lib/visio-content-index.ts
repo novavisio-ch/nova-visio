@@ -27,7 +27,7 @@ export const siteContent: ContentSection[] = [
     id: "home-hero",
     title: "Présentation générale",
     category: "general",
-    content: `NOVA VISIO est un studio suisse qui crée des sites web et des identités visuelles pour aider les entrepreneurs et petites entreprises à vendre plus et simplement. Notre mission est de simplifier votre présence en ligne avec un site web clair et une identité visuelle professionnelle cohérente pour que vos clients vous comprennent et achètent sans effort. Made in Switzerland.`,
+    content: `NOVA VISIO est un studio suisse qui crée des sites web et des identités visuelles pour les entrepreneurs, artisans, indépendants et PME. Notre accroche : "Votre talent mérite d'être vu." Site vitrine, landing page, identité visuelle — les outils pour être vu, compris et contacté. Dès 900 CHF. Made in Switzerland.`,
     keywords: ["nova visio", "studio", "suisse", "site web", "identité visuelle", "présentation"]
   },
   {
