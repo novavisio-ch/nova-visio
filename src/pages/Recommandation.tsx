@@ -26,11 +26,11 @@ const steps = [
 ];
 
 const conditions = [
-  { label: "Montant", value: "100 € par client signé." },
-  { label: "Projets concernés", value: "Création de site web (hors prestations ponctuelles mineures)." },
-  { label: "Versement", value: "À la mise en ligne du site." },
-  { label: "Modalités", value: "Virement bancaire ou avoir sur une prochaine prestation." },
-  { label: "Limite", value: "Aucune. Recommandez autant de personnes que vous voulez." },
+  { label: "Montant", value: "100 € par client signé.", icon: Coins },
+  { label: "Projets concernés", value: "Création de site web (hors prestations ponctuelles mineures).", icon: Globe },
+  { label: "Versement", value: "À la mise en ligne du site.", icon: Clock },
+  { label: "Modalités", value: "Virement bancaire ou avoir sur une prochaine prestation.", icon: CreditCard },
+  { label: "Limite", value: "Aucune. Recommandez autant de personnes que vous voulez.", icon: Infinity },
 ];
 
 const Recommandation = () => {
