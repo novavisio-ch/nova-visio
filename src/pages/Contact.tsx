@@ -131,11 +131,11 @@ const Contact = () => {
               <span className="text-gradient-gold">15 minutes.</span>
             </h1>
             <p className="text-sm sm:text-base md:text-body-lg text-muted-foreground leading-relaxed max-w-xl mx-auto">
-              On fait le point sur votre situation.
+              On fait le point sur <strong className="text-foreground font-medium">votre situation</strong>.{" "}
               <br className="md:hidden" />
-              Pas de pitch commercial.
+              Pas de pitch commercial.{" "}
               <br className="md:hidden" />
-              Juste une conversation honnête.
+              Juste une <strong className="text-foreground font-medium">conversation honnête</strong>.
             </p>
           </div>
         </div>

@@ -81,7 +81,7 @@ const skills: Skill[] = [
     title: "Utilisation responsable de l'IA",
     description: (
       <>
-        Certifications sur les <strong className="text-foreground font-semibold">bonnes pratiques</strong>, limites et <strong className="text-[#C3B68F] font-medium">éthique de l'IA</strong>.
+        Certifications sur les <strong className="text-foreground font-semibold">bonnes pratiques</strong>, limites et <strong className="text-[#C3B68F] font-medium">éthique de l'IA</strong>.{" "}
         <br className="hidden sm:block" />
         <span className="text-muted-foreground">L'IA est un co‑équipier : elle accélère le travail, mais les décisions restent humaines.</span>
       </>
