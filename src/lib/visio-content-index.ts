@@ -454,8 +454,59 @@ Volet Modernisation digitale :
     category: "blog",
     content: `Article : Comment choisir les couleurs de votre marque. Cet article guide les entrepreneurs dans le choix de leur palette de couleurs : comprendre la psychologie des couleurs, créer une harmonie visuelle, et assurer la cohérence sur tous les supports.`,
     keywords: ["couleurs", "palette", "marque", "choix", "harmonie"]
+  },
+  {
+    id: "blog-logo-identite",
+    title: "Article logo et identité visuelle",
+    category: "blog",
+    content: `Article : Pourquoi votre logo n'est pas "juste un dessin" : l'impact d'une bonne identité visuelle. Un logo bien pensé est l'un des piliers de votre identité visuelle et influence directement la confiance, la perception de votre prix et la mémorisation de votre marque.`,
+    keywords: ["logo", "identité visuelle", "dessin", "impact", "marque", "confiance"]
+  },
+  {
+    id: "blog-site-vitrine-landing",
+    title: "Article site vitrine vs landing page",
+    category: "blog",
+    content: `Article : Site vitrine vs landing page : quel format choisir pour votre activité ? Nous comparons clairement les deux formats et vous aidons à faire le choix le plus adapté à votre activité, que vous soyez artisan, TPE ou PME en Suisse romande.`,
+    keywords: ["site vitrine", "landing page", "comparaison", "format", "choix"]
+  },
+
+  // === MAINTENANCE ===
+  {
+    id: "maintenance-offer",
+    title: "Suivi & maintenance mensuel",
+    category: "services",
+    content: `Offre de maintenance mensuelle à 89 CHF/mois. Ce que comprend le suivi mensuel :
+- Hébergement & nom de domaine géré
+- Mises à jour techniques & sécurité
+- Sauvegardes automatiques hebdomadaires
+- 1h de modifications de contenu par mois
+- Rapport mensuel de performance (visites, contacts)
+- Support réactif sous 48h
+Ce forfait garantit que votre site reste performant, à jour et sécurisé après la mise en ligne. Sans engagement de durée minimum.`,
+    keywords: ["maintenance", "suivi", "mensuel", "89", "chf", "hébergement", "mises à jour", "sécurité", "sauvegardes", "support"]
+  },
+
+  // === PROGRAMME DE RECOMMANDATION ===
+  {
+    id: "referral-program",
+    title: "Programme de recommandation",
+    category: "general",
+    content: `Programme de recommandation Nova Visio : Recommandez Nova Visio et gagnez 100 €.
+Comment ça marche en 3 étapes :
+1. Vous recommandez : Parlez de Nova Visio à un entrepreneur, artisan ou PME de votre réseau.
+2. Il signe un projet : Le nouveau client lance un projet de création de site web avec nous.
+3. Vous recevez 100 € : Dès la mise en ligne du site, on vous envoie votre récompense.
+
+Conditions :
+- Montant : 100 € par client signé.
+- Projets concernés : Création de site web (hors prestations ponctuelles mineures).
+- Versement : À la mise en ligne du site.
+- Modalités : Virement bancaire ou avoir sur une prochaine prestation.
+- Limite : Aucune. Recommandez autant de personnes que vous voulez.
+
+Pour recommander quelqu'un, contactez-nous via la page contact en précisant le sujet "recommandation".`,
+    keywords: ["recommandation", "parrainage", "100", "euros", "gagner", "récompense", "recommander", "programme"]
   }
-];
 
 /**
  * Recherche les sections de contenu les plus pertinentes pour une question donnée
