@@ -58,13 +58,13 @@ export function BrandIdentityHero() {
             className="text-sm sm:text-base md:text-body-lg text-muted-foreground max-w-3xl mx-auto mb-6 md:mb-8 animate-fade-up leading-relaxed"
             style={{ animationDelay: "0.15s" }}
           >
-            Logo, couleurs, typographies,
+            Logo, couleurs, typographies,{" "}
             <br className="md:hidden" />
-            charte graphique.
+            charte graphique.{" "}
             <br className="md:hidden" />
-            Tout est créé de A à Z pour une marque
+            Tout est créé de A à Z pour une marque{" "}
             <br className="md:hidden" />
-            reconnaissable, cohérente
+            reconnaissable, cohérente{" "}
             <br className="sm:hidden" />
             et utilisable partout.
           </p>
