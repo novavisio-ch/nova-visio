@@ -138,21 +138,23 @@ const Recommandation = () => {
             Tout est clair dès le départ.
           </motion.p>
 
-          <div className="space-y-3 md:space-y-4">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {conditions.map((condition, index) => (
               <motion.div
                 key={condition.label}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="flex items-start gap-3 md:gap-4 p-4 md:p-6 rounded-xl bg-card/50 backdrop-blur-sm"
+                className="relative p-5 md:p-7 rounded-2xl bg-gradient-to-b from-primary/12 to-primary/4 backdrop-blur-sm border border-primary/10 hover:border-primary/25 transition-all duration-300 group"
               >
-                <div className="flex-shrink-0 w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-primary mt-1.5 md:mt-2" />
-                <div>
-                  <span className="text-sm md:text-base font-bold text-foreground">{condition.label}</span>
-                  <span className="text-sm md:text-base text-muted-foreground"> — {condition.value}</span>
+                <div className="flex items-center gap-3 mb-2 md:mb-3">
+                  <div className="w-2.5 h-2.5 rounded-full bg-primary shrink-0" />
+                  <span className="text-sm md:text-lg font-bold text-primary">{condition.label}</span>
                 </div>
+                <p className="text-xs md:text-sm text-muted-foreground leading-relaxed pl-[22px]">
+                  {condition.value}
+                </p>
               </motion.div>
             ))}
           </div>
