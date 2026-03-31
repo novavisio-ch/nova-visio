@@ -4,6 +4,7 @@ import { Monitor, Rocket, Palette, Filter, FileText, ShoppingBag, Layout as Layo
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
+import { ReferralCtaSection } from "@/components/home/ReferralCtaSection";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { PackDigitalBranding } from "@/components/tarifs/PackDigitalBranding";
 import { PackRefonteGlobale } from "@/components/tarifs/PackRefonteGlobale";
