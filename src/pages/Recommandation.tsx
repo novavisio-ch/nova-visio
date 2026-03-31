@@ -1,6 +1,6 @@
 import { Layout } from "@/components/layout/Layout";
 import { motion } from "framer-motion";
-import { Gift, Users, FileCheck, Banknote } from "lucide-react";
+import { Gift, Users, FileCheck, Banknote, Coins, Globe, Clock, CreditCard, Infinity } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
