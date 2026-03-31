@@ -70,7 +70,7 @@ const About = () => {
             <p className="text-sm sm:text-base md:text-body-lg text-muted-foreground">
               Trop d'entrepreneurs méritent mieux{" "}
               <br className="md:hidden" />
-              qu'un site bâclé sur un template générique.
+              qu'un site sur un template générique.
             </p>
           </motion.div>
         </div>
