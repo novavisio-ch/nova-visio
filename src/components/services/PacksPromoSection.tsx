@@ -65,7 +65,9 @@ export function PacksPromoSection() {
             <span className="text-gradient-gold">Sans compromis.</span>
           </h2>
           <p className="text-sm md:text-body-lg text-muted-foreground max-w-2xl mx-auto">
-            Identité visuelle + site web. Une seule offre, une image cohérente.
+            <strong className="text-foreground font-medium">Identité visuelle + site web</strong>.{" "}
+            <br className="md:hidden" />
+            Une seule offre, une <strong className="text-foreground font-medium">image cohérente</strong>.
           </p>
         </motion.div>
 

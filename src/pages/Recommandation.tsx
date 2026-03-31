@@ -180,8 +180,9 @@ const Recommandation = () => {
               Prêt à recommander ?
             </h2>
             <p className="text-sm sm:text-base md:text-lg text-muted-foreground mb-8 md:mb-10 max-w-xl mx-auto">
-              Contactez-nous pour nous transmettre{" "}
-              le nom de la personne que vous recommandez.
+              Contactez-nous pour nous <strong className="text-foreground font-medium">transmettre le nom</strong>{" "}
+              <br className="md:hidden" />
+              de la personne que vous recommandez.
             </p>
             <Button asChild variant="gold" size="lg">
               <Link to="/contact?sujet=recommandation">

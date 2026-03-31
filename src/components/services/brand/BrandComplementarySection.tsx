@@ -115,7 +115,9 @@ export const BrandComplementarySection = () => {
             </span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Exploitez votre identité à fond. Sans jongler entre 5 outils.
+            Exploitez votre identité <strong className="text-foreground font-medium">à fond</strong>.{" "}
+            <br className="md:hidden" />
+            Sans jongler entre <strong className="text-foreground font-medium">5 outils</strong>.
           </p>
         </motion.div>
 

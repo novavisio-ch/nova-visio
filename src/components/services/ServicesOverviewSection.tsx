@@ -124,8 +124,9 @@ export const ServicesOverviewSection = () => {
           </h2>
           
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Tout ce qu'il faut pour transformer votre site en un outil
-            qui travaille pendant que vous dormez.
+            Tout ce qu'il faut pour transformer votre site{" "}
+            <br className="md:hidden" />
+            en un <strong className="text-foreground font-medium">outil qui travaille</strong> pendant que vous dormez.
           </p>
         </motion.div>
 
