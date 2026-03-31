@@ -137,7 +137,9 @@ const Recommandation = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            Tout est clair dès le départ.
+            <strong className="text-foreground font-medium">Tout est clair</strong>{" "}
+            <br className="md:hidden" />
+            dès le départ.
           </motion.p>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8">
