@@ -61,12 +61,9 @@ const Recommandation = () => {
             </h1>
 
             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Vous êtes satisfait de votre site ?
-              <br className="hidden sm:block" />
-              Faites-en profiter votre réseau. Pour chaque nouveau client
-              <br className="hidden sm:block" />
-              que vous nous envoyez, on vous offre <strong className="text-foreground">100 €</strong>.
-              <br className="hidden md:block" />
+              Vous êtes satisfait de votre site ?{" "}
+              Faites-en profiter votre réseau. Pour chaque nouveau client{" "}
+              que vous nous envoyez, on vous offre <strong className="text-foreground">100 €</strong>.{" "}
               Simple, transparent, gagnant-gagnant.
             </p>
           </motion.div>
@@ -180,8 +177,7 @@ const Recommandation = () => {
               Prêt à recommander ?
             </h2>
             <p className="text-sm sm:text-base md:text-lg text-muted-foreground mb-8 md:mb-10 max-w-xl mx-auto">
-              Contactez-nous pour nous transmettre
-              <br className="hidden sm:block" />
+              Contactez-nous pour nous transmettre{" "}
               le nom de la personne que vous recommandez.
             </p>
             <Button asChild variant="gold" size="lg">
