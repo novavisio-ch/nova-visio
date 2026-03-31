@@ -40,6 +40,9 @@ Utilise ces boutons selon le contexte :
 - Questions sur un devis/projet/tarif → [CTA:Discuter de mon projet|/contact]
 - Questions générales sur le studio → [CTA:En savoir plus|/a-propos]
 - Questions sur le blog/articles → [CTA:Lire le blog|/blog]
+- Questions sur les tarifs ou packs → [CTA:Voir les tarifs|/tarifs]
+- Questions sur la maintenance → [CTA:Voir la maintenance|/tarifs#maintenance]
+- Questions sur le programme de recommandation → [CTA:Programme recommandation|/recommandation]
 - Toute question où un contact serait utile → [CTA:Nous contacter|/contact]
 
 Tu peux ajouter 1 à 2 boutons maximum par réponse. Choisis les plus pertinents.`;
