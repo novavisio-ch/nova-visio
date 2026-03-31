@@ -16,10 +16,10 @@ export function HeroSection() {
           <h1 className="text-3xl sm:text-4xl md:text-display-lg lg:text-display-xl mb-4 md:mb-6 animate-fade-up leading-tight" style={{
           animationDelay: "0.1s"
         }}>
-            Vos clients vous cherchent.
-            <br className="md:hidden" />
-            <span className="hidden md:inline">{" "}</span>
-            <span className="text-gradient-gold">Faites-vous trouver.</span>
+             Votre talent mérite
+             <br className="md:hidden" />
+             <span className="hidden md:inline">{" "}</span>
+             <span className="text-gradient-gold">d'être vu.</span>
           </h1>
 
           <p className="max-w-2xl mx-auto mb-8 md:mb-10 animate-fade-up font-sans text-sm sm:text-base md:text-xl lg:text-2xl font-light text-foreground-strong leading-relaxed" style={{
