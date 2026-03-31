@@ -53,7 +53,7 @@ Tu peux ajouter 1 à 2 boutons maximum par réponse. Choisis les plus pertinents
  */
 const SITE_CONTENT = `
 ## Présentation générale
-NOVA VISIO est un studio suisse qui crée des sites web et des identités visuelles pour aider les entrepreneurs et petites entreprises à vendre plus et simplement. Notre mission est de simplifier votre présence en ligne avec un site web clair et une identité visuelle professionnelle cohérente pour que vos clients vous comprennent et achètent sans effort. Made in Switzerland.
+NOVA VISIO est un studio suisse qui crée des sites web et des identités visuelles pour les entrepreneurs, artisans, indépendants et PME. "Votre talent mérite d'être vu." Site vitrine, landing page, identité visuelle — les outils pour être vu, compris et contacté. Dès 900 CHF. Made in Switzerland.
 
 ## Pourquoi choisir Nova Visio
 - Zéro jargon : On parle comme des humains. Pas de "synergie UX" ni de "paradigme digital".
