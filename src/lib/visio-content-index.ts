@@ -306,8 +306,8 @@ Volet Modernisation digitale :
     id: "faq-web-duration",
     title: "Durée création site web",
     category: "faq",
-    content: `Combien de temps faut-il pour créer un site web ? La durée dépend de la taille du site et du niveau de préparation de votre contenu. En moyenne, un site vitrine simple demande entre 4 et 8 semaines, de la clarification du projet jusqu'à la mise en ligne.`,
-    keywords: ["durée", "temps", "délai", "combien de temps", "semaines"]
+    content: `Combien de temps faut-il pour créer un site web ? La livraison se fait en 7 à 14 jours pour un site vitrine standard. La durée peut varier selon la complexité du projet et le niveau de préparation de votre contenu.`,
+    keywords: ["durée", "temps", "délai", "combien de temps", "semaines", "jours", "7", "14", "rapide", "livraison"]
   },
   {
     id: "faq-web-identity",
