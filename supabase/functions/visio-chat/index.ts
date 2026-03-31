@@ -40,6 +40,9 @@ Utilise ces boutons selon le contexte :
 - Questions sur un devis/projet/tarif → [CTA:Discuter de mon projet|/contact]
 - Questions générales sur le studio → [CTA:En savoir plus|/a-propos]
 - Questions sur le blog/articles → [CTA:Lire le blog|/blog]
+- Questions sur les tarifs ou packs → [CTA:Voir les tarifs|/tarifs]
+- Questions sur la maintenance → [CTA:Voir la maintenance|/tarifs#maintenance]
+- Questions sur le programme de recommandation → [CTA:Programme recommandation|/recommandation]
 - Toute question où un contact serait utile → [CTA:Nous contacter|/contact]
 
 Tu peux ajouter 1 à 2 boutons maximum par réponse. Choisis les plus pertinents.`;
@@ -50,7 +53,7 @@ Tu peux ajouter 1 à 2 boutons maximum par réponse. Choisis les plus pertinents
  */
 const SITE_CONTENT = `
 ## Présentation générale
-NOVA VISIO est un studio suisse qui crée des sites web et des identités visuelles pour aider les entrepreneurs et petites entreprises à vendre plus et simplement. Notre mission est de simplifier votre présence en ligne avec un site web clair et une identité visuelle professionnelle cohérente pour que vos clients vous comprennent et achètent sans effort. Made in Switzerland.
+NOVA VISIO est un studio suisse qui crée des sites web et des identités visuelles pour les entrepreneurs, artisans, indépendants et PME. "Votre talent mérite d'être vu." Site vitrine, landing page, identité visuelle — les outils pour être vu, compris et contacté. Dès 900 CHF. Made in Switzerland.
 
 ## Pourquoi choisir Nova Visio
 - Zéro jargon : On parle comme des humains. Pas de "synergie UX" ni de "paradigme digital".
@@ -179,10 +182,17 @@ Forfait Actif (149 CHF/mois) : pour les projets avec des besoins réguliers, inc
 - Puis-je utiliser mon identité visuelle sur tous mes supports ? Oui, c'est le but. L'identité fonctionne partout : site, réseaux, cartes de visite, docs, signalétique...
 
 ## Contact
-Pour discuter de votre projet, utilisez le formulaire sur la page Contact du site novavisio.ch. Nous répondons sous 24-48h.
+Pour discuter de votre projet, utilisez le formulaire sur la page Contact du site novavisio.ch. Nous répondons sous 24-48h. Vous pouvez aussi réserver un appel gratuit de 15 minutes, sans engagement.
+
+## Programme de recommandation
+Recommandez Nova Visio et gagnez 100 €. Comment ça marche :
+1. Vous parlez de Nova Visio à un entrepreneur, artisan ou PME de votre réseau.
+2. Le nouveau client lance un projet de création de site web avec nous.
+3. Dès la mise en ligne du site, vous recevez 100 € (virement bancaire ou avoir).
+Aucune limite : recommandez autant de personnes que vous voulez.
 
 ## Blog
-Le blog propose des articles sur le web, l'identité visuelle et la stratégie digitale : "5 erreurs courantes qui plombent votre site web", "Clarifier votre offre avant de créer votre site", "Comment choisir les couleurs de votre marque", "Site vitrine vs landing page : lequel choisir ?", "Logo et identité visuelle : quelle différence ?".
+Le blog propose des articles sur le web, l'identité visuelle et la stratégie digitale : "5 erreurs courantes qui plombent votre site web", "Clarifier votre offre avant de créer votre site", "Comment choisir les couleurs de votre marque", "Site vitrine vs landing page : lequel choisir ?", "Pourquoi votre logo n'est pas juste un dessin : l'impact d'une bonne identité visuelle".
 `;
 
 serve(async (req) => {
