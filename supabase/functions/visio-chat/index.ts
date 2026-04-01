@@ -202,7 +202,8 @@ serve(async (req) => {
   }
 
   try {
-    const { messages } = await req.json();
+    const { messages, language } = await req.json();
+    const lang = language === "en" ? "en" : "fr";
     
     if (!messages || !Array.isArray(messages)) {
       return new Response(
