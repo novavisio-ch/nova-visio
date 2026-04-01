@@ -885,7 +885,7 @@ const en: Record<string, string> = {
   "recommandation.conditions.subtitle.bold": "Everything is clear",
   "recommandation.conditions.subtitle": "from the start.",
   "recommandation.c1.label": "Amount",
-  "recommandation.c1.value": "€100 per signed client.",
+  "recommandation.c1.value": "CHF 100 per signed client.",
   "recommandation.c2.label": "Eligible projects",
   "recommandation.c2.value": "Website creation (excluding minor one-off services).",
   "recommandation.c3.label": "Payment",
