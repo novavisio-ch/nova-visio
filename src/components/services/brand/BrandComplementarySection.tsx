@@ -1,235 +1,85 @@
 import { Layout, Printer, Package, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
-const services = [{
-  id: "social",
-  icon: Layout,
-  title: "Templates réseaux sociaux",
-  description: <>
-        <strong className="text-foreground font-semibold">Posts, stories et bannières</strong> aux couleurs de votre marque, prêts à être personnalisés dans <strong className="text-[#C3B68F] font-medium">Canva ou Figma</strong>. Idéal pour garder une <strong className="text-foreground font-semibold">communication régulière et cohérente</strong> sans repartir de zéro.
-      </>,
-  accentColor: "#C3B68F",
-  delay: 0
+import { useLanguage } from "@/hooks/use-language";
+
+const servicesFr = [{
+  id: "social", icon: Layout, title: "Templates réseaux sociaux",
+  description: <><strong className="text-foreground font-semibold">Posts, stories et bannières</strong> aux couleurs de votre marque, prêts à être personnalisés dans <strong className="text-[#C3B68F] font-medium">Canva ou Figma</strong>. Idéal pour garder une <strong className="text-foreground font-semibold">communication régulière et cohérente</strong> sans repartir de zéro.</>,
+  accentColor: "#C3B68F", delay: 0
 }, {
-  id: "print",
-  icon: Printer,
-  title: "Supports imprimés",
-  description: <>
-        <strong className="text-foreground font-semibold">Cartes de visite</strong> (design et impression) et supports papier essentiels : <strong className="text-[#9D8DF0] font-medium">flyers A5, dépliants A4, documents de présentation</strong>. Une <strong className="text-foreground font-semibold">expérience de marque cohérente</strong>, du web au physique.
-      </>,
-  accentColor: "#9D8DF0",
-  delay: 0.1
+  id: "print", icon: Printer, title: "Supports imprimés",
+  description: <><strong className="text-foreground font-semibold">Cartes de visite</strong> (design et impression) et supports papier essentiels : <strong className="text-[#9D8DF0] font-medium">flyers A5, dépliants A4, documents de présentation</strong>. Une <strong className="text-foreground font-semibold">expérience de marque cohérente</strong>, du web au physique.</>,
+  accentColor: "#9D8DF0", delay: 0.1
 }, {
-  id: "brandkit",
-  icon: Package,
-  title: "Brand kit digital & contenus",
-  description: <>
-        Photo de profil, bannières, templates de posts et stories, visuels de newsletter, réunis dans un <strong className="text-foreground font-semibold">kit clé en main</strong>. Avec un <strong className="text-[#C3B68F] font-medium">mini guide PDF</strong> et un <strong className="text-foreground font-semibold">accompagnement éditorial</strong> pour des textes alignés à votre identité.
-      </>,
-  accentColor: "#C3B68F",
-  delay: 0.2
+  id: "brandkit", icon: Package, title: "Brand kit digital & contenus",
+  description: <>Photo de profil, bannières, templates de posts et stories, visuels de newsletter, réunis dans un <strong className="text-foreground font-semibold">kit clé en main</strong>. Avec un <strong className="text-[#C3B68F] font-medium">mini guide PDF</strong> et un <strong className="text-foreground font-semibold">accompagnement éditorial</strong> pour des textes alignés à votre identité.</>,
+  accentColor: "#C3B68F", delay: 0.2
 }];
+
+const servicesEn = [{
+  id: "social", icon: Layout, title: "Social media templates",
+  description: <><strong className="text-foreground font-semibold">Posts, stories and banners</strong> in your brand colours, ready to customise in <strong className="text-[#C3B68F] font-medium">Canva or Figma</strong>. Perfect for maintaining <strong className="text-foreground font-semibold">regular, consistent communication</strong> without starting from scratch.</>,
+  accentColor: "#C3B68F", delay: 0
+}, {
+  id: "print", icon: Printer, title: "Printed materials",
+  description: <><strong className="text-foreground font-semibold">Business cards</strong> (design and printing) and essential print materials: <strong className="text-[#9D8DF0] font-medium">A5 flyers, A4 brochures, presentation documents</strong>. A <strong className="text-foreground font-semibold">cohesive brand experience</strong>, from web to print.</>,
+  accentColor: "#9D8DF0", delay: 0.1
+}, {
+  id: "brandkit", icon: Package, title: "Digital brand kit & content",
+  description: <>Profile picture, banners, post and story templates, newsletter visuals, all in one <strong className="text-foreground font-semibold">turnkey kit</strong>. With a <strong className="text-[#C3B68F] font-medium">mini PDF guide</strong> and <strong className="text-foreground font-semibold">editorial guidance</strong> for copy that matches your identity.</>,
+  accentColor: "#C3B68F", delay: 0.2
+}];
+
 export const BrandComplementarySection = () => {
+  const { language } = useLanguage();
+  const isFr = language === "fr";
+  const services = isFr ? servicesFr : servicesEn;
+
   return <section className="relative py-20 md:py-28 overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 section-gradient-main" />
+    <div className="absolute inset-0 section-gradient-main" />
+    <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: `linear-gradient(rgba(195, 182, 143, 0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(195, 182, 143, 0.5) 1px, transparent 1px)`, backgroundSize: "60px 60px" }} />
+    <motion.div className="absolute top-20 left-[10%] w-64 h-64 rounded-full opacity-20 blur-3xl pointer-events-none" style={{ background: "radial-gradient(circle, #C3B68F 0%, transparent 70%)" }} animate={{ y: [0, -30, 0], scale: [1, 1.1, 1] }} transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }} />
+    <motion.div className="absolute bottom-20 right-[10%] w-48 h-48 rounded-full opacity-15 blur-3xl pointer-events-none" style={{ background: "radial-gradient(circle, #7C6AE8 0%, transparent 70%)" }} animate={{ y: [0, 20, 0], scale: [1, 1.15, 1] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }} />
 
-      {/* Decorative Grid */}
-      <div className="absolute inset-0 opacity-[0.03]" style={{
-      backgroundImage: `linear-gradient(rgba(195, 182, 143, 0.5) 1px, transparent 1px),
-                           linear-gradient(90deg, rgba(195, 182, 143, 0.5) 1px, transparent 1px)`,
-      backgroundSize: "60px 60px"
-    }} />
-
-      {/* Floating Orbs */}
-      <motion.div className="absolute top-20 left-[10%] w-64 h-64 rounded-full opacity-20 blur-3xl pointer-events-none" style={{
-      background: "radial-gradient(circle, #C3B68F 0%, transparent 70%)"
-    }} animate={{
-      y: [0, -30, 0],
-      scale: [1, 1.1, 1]
-    }} transition={{
-      duration: 8,
-      repeat: Infinity,
-      ease: "easeInOut"
-    }} />
-      <motion.div className="absolute bottom-20 right-[10%] w-48 h-48 rounded-full opacity-15 blur-3xl pointer-events-none" style={{
-      background: "radial-gradient(circle, #7C6AE8 0%, transparent 70%)"
-    }} animate={{
-      y: [0, 20, 0],
-      scale: [1, 1.15, 1]
-    }} transition={{
-      duration: 6,
-      repeat: Infinity,
-      ease: "easeInOut",
-      delay: 1
-    }} />
-
-      <div className="container mx-auto px-4 max-w-6xl relative z-10">
-        {/* Section Header */}
-        <motion.div className="text-center mb-14 md:mb-20" initial={{
-        opacity: 0,
-        y: 30
-      }} whileInView={{
-        opacity: 1,
-        y: 0
-      }} viewport={{
-        once: true
-      }} transition={{
-        duration: 0.7,
-        ease: "easeOut"
-      }}>
-          {/* Badge */}
-          <motion.div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#C3B68F]/10 backdrop-blur-sm mb-6" initial={{
-          opacity: 0,
-          scale: 0.8
-        }} whileInView={{
-          opacity: 1,
-          scale: 1
-        }} viewport={{
-          once: true
-        }} transition={{
-          duration: 0.5,
-          delay: 0.2
-        }}>
-            <Sparkles className="w-4 h-4 text-[#C3B68F]" />
-            <span className="text-sm font-medium text-[#C3B68F]">Extensions disponibles</span>
-          </motion.div>
-
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-5">
-             Aller
-            <br className="md:hidden" />
-            <span className="hidden md:inline">{" "}</span>
-            <span className="relative inline-block">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#C3B68F] via-[#DCCB99] to-[#C3B68F]">
-                plus loin.
-              </span>
-              <motion.span className="absolute -bottom-2 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#C3B68F] to-transparent" initial={{
-              scaleX: 0
-            }} whileInView={{
-              scaleX: 1
-            }} viewport={{
-              once: true
-            }} transition={{
-              duration: 0.8,
-              delay: 0.5
-            }} />
-            </span>
-          </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Exploitez votre identité <strong className="text-foreground font-medium">à fond</strong>.{" "}
-            <br className="md:hidden" />
-            Sans jongler entre <strong className="text-foreground font-medium">5 outils</strong>.
-          </p>
+    <div className="container mx-auto px-4 max-w-6xl relative z-10">
+      <motion.div className="text-center mb-14 md:mb-20" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7, ease: "easeOut" }}>
+        <motion.div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#C3B68F]/10 backdrop-blur-sm mb-6" initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.2 }}>
+          <Sparkles className="w-4 h-4 text-[#C3B68F]" />
+          <span className="text-sm font-medium text-[#C3B68F]">{isFr ? "Extensions disponibles" : "Available add-ons"}</span>
         </motion.div>
+        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-5">
+          {isFr ? " Aller" : " Go"}<br className="md:hidden" /><span className="hidden md:inline">{" "}</span>
+          <span className="relative inline-block">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#C3B68F] via-[#DCCB99] to-[#C3B68F]">{isFr ? "plus loin." : "further."}</span>
+            <motion.span className="absolute -bottom-2 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#C3B68F] to-transparent" initial={{ scaleX: 0 }} whileInView={{ scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.5 }} />
+          </span>
+        </h2>
+        <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+          {isFr ? <>Exploitez votre identité <strong className="text-foreground font-medium">à fond</strong>. <br className="md:hidden" />Sans jongler entre <strong className="text-foreground font-medium">5 outils</strong>.</> : <>Make the most of your identity. <br className="md:hidden" />Without juggling <strong className="text-foreground font-medium">5 different tools</strong>.</>}
+        </p>
+      </motion.div>
 
-        {/* Creative Cards Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {services.map((service, index) => {
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        {services.map((service, index) => {
           const Icon = service.icon;
-          return <motion.div key={service.id} className="group relative" initial={{
-            opacity: 0,
-            y: 50,
-            rotateX: -10
-          }} whileInView={{
-            opacity: 1,
-            y: 0,
-            rotateX: 0
-          }} viewport={{
-            once: true
-          }} transition={{
-            duration: 0.7,
-            delay: service.delay,
-            ease: "easeOut"
-          }} style={{
-            perspective: "1000px"
-          }}>
-                {/* Card Glow Effect */}
-                <motion.div className="absolute -inset-[1px] rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm" style={{
-              background: `linear-gradient(135deg, ${service.accentColor}40 0%, transparent 50%, ${service.accentColor}20 100%)`
-            }} />
-
-                {/* Card */}
-                <div className="relative h-full rounded-2xl backdrop-blur-xl p-6 md:p-8 transition-all duration-500 group-hover:translate-y-[-4px] group-hover:shadow-[0_20px_40px_-15px_rgba(195,182,143,0.3)] card-glass-surface">
-                  {/* Decorative Corner */}
-                  <div className="absolute top-0 right-0 w-24 h-24 opacity-10 group-hover:opacity-20 transition-opacity duration-500" style={{
-                background: `radial-gradient(circle at top right, ${service.accentColor} 0%, transparent 70%)`
-              }} />
-
-                  {/* Large Number */}
-                  <motion.span className="absolute top-4 right-6 font-display text-7xl md:text-8xl font-bold text-foreground/[0.03] group-hover:text-foreground/[0.06] transition-all duration-500 select-none" initial={{
-                opacity: 0,
-                x: 20
-              }} whileInView={{
-                opacity: 1,
-                x: 0
-              }} viewport={{
-                once: true
-              }} transition={{
-                duration: 0.5,
-                delay: service.delay + 0.3
-              }}>
-                    {String(index + 1).padStart(2, '0')}
-                  </motion.span>
-
-                  {/* Icon */}
-                  <motion.div className="relative mb-6 inline-flex" whileHover={{
-                scale: 1.1,
-                rotate: 5
-              }} transition={{
-                type: "spring",
-                stiffness: 400
-              }}>
-                    <div className="relative p-4 rounded-xl transition-all duration-500" style={{
-                  background: `linear-gradient(135deg, ${service.accentColor}15 0%, ${service.accentColor}05 100%)`,
-                  border: `1px solid ${service.accentColor}25`
-                }}>
-                      <Icon className="w-7 h-7 transition-all duration-300" style={{
-                    color: service.accentColor
-                  }} />
-                      
-                      {/* Icon Pulse Effect */}
-                      <motion.div className="absolute inset-0 rounded-xl" style={{
-                    border: `1px solid ${service.accentColor}`
-                  }} animate={{
-                    scale: [1, 1.2, 1],
-                    opacity: [0.5, 0, 0.5]
-                  }} transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: index * 0.3
-                  }} />
-                    </div>
-                  </motion.div>
-
-                  {/* Title */}
-                  <h4 className="font-display text-xl md:text-2xl font-bold text-foreground mb-4 group-hover:text-[#C3B68F] transition-colors duration-300">
-                    {service.title}
-                  </h4>
-
-                  {/* Description */}
-                  <p className="text-muted-foreground text-sm md:text-base leading-relaxed group-hover:text-foreground-medium transition-colors duration-300">
-                    {service.description}
-                  </p>
-
-                  {/* Bottom Accent Line */}
-                  <motion.div className="absolute bottom-0 left-8 right-8 h-[2px] rounded-full" style={{
-                background: `linear-gradient(90deg, transparent, ${service.accentColor}50, transparent)`
-              }} initial={{
-                scaleX: 0,
-                opacity: 0
-              }} whileInView={{
-                scaleX: 1,
-                opacity: 1
-              }} viewport={{
-                once: true
-              }} transition={{
-                duration: 0.8,
-                delay: service.delay + 0.4
-              }} />
+          return <motion.div key={service.id} className="group relative" initial={{ opacity: 0, y: 50, rotateX: -10 }} whileInView={{ opacity: 1, y: 0, rotateX: 0 }} viewport={{ once: true }} transition={{ duration: 0.7, delay: service.delay, ease: "easeOut" }} style={{ perspective: "1000px" }}>
+            <motion.div className="absolute -inset-[1px] rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm" style={{ background: `linear-gradient(135deg, ${service.accentColor}40 0%, transparent 50%, ${service.accentColor}20 100%)` }} />
+            <div className="relative h-full rounded-2xl backdrop-blur-xl p-6 md:p-8 transition-all duration-500 group-hover:translate-y-[-4px] group-hover:shadow-[0_20px_40px_-15px_rgba(195,182,143,0.3)] card-glass-surface">
+              <div className="absolute top-0 right-0 w-24 h-24 opacity-10 group-hover:opacity-20 transition-opacity duration-500" style={{ background: `radial-gradient(circle at top right, ${service.accentColor} 0%, transparent 70%)` }} />
+              <motion.span className="absolute top-4 right-6 font-display text-7xl md:text-8xl font-bold text-foreground/[0.03] group-hover:text-foreground/[0.06] transition-all duration-500 select-none" initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: service.delay + 0.3 }}>{String(index + 1).padStart(2, '0')}</motion.span>
+              <motion.div className="relative mb-6 inline-flex" whileHover={{ scale: 1.1, rotate: 5 }} transition={{ type: "spring", stiffness: 400 }}>
+                <div className="relative p-4 rounded-xl transition-all duration-500" style={{ background: `linear-gradient(135deg, ${service.accentColor}15 0%, ${service.accentColor}05 100%)`, border: `1px solid ${service.accentColor}25` }}>
+                  <Icon className="w-7 h-7 transition-all duration-300" style={{ color: service.accentColor }} />
+                  <motion.div className="absolute inset-0 rounded-xl" style={{ border: `1px solid ${service.accentColor}` }} animate={{ scale: [1, 1.2, 1], opacity: [0.5, 0, 0.5] }} transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: index * 0.3 }} />
                 </div>
-              </motion.div>;
+              </motion.div>
+              <h4 className="font-display text-xl md:text-2xl font-bold text-foreground mb-4 group-hover:text-[#C3B68F] transition-colors duration-300">{service.title}</h4>
+              <p className="text-muted-foreground text-sm md:text-base leading-relaxed group-hover:text-foreground-medium transition-colors duration-300">{service.description}</p>
+              <motion.div className="absolute bottom-0 left-8 right-8 h-[2px] rounded-full" style={{ background: `linear-gradient(90deg, transparent, ${service.accentColor}50, transparent)` }} initial={{ scaleX: 0, opacity: 0 }} whileInView={{ scaleX: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: service.delay + 0.4 }} />
+            </div>
+          </motion.div>;
         })}
-        </div>
       </div>
-    </section>;
+    </div>
+  </section>;
 };

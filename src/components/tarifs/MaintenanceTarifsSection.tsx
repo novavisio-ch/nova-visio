@@ -2,79 +2,44 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { MaintenanceCard } from "@/components/home/MaintenanceCard";
+import { useLanguage } from "@/hooks/use-language";
 
 export const MaintenanceTarifsSection = () => {
+  const { language } = useLanguage();
+  const isFr = language === "fr";
+
   return (
     <div className="mb-16 md:mb-20" id="maintenance">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="text-center mb-10 md:mb-12"
-      >
-        <motion.span
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-medium uppercase tracking-wider mb-6"
-          style={{
-            background: "rgba(195, 182, 143, 0.15)",
-            color: "#C3B68F",
-            border: "none",
-          }}
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2, duration: 0.5 }}
-        >
-          🔄 Récurrent
+      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-10 md:mb-12">
+        <motion.span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-medium uppercase tracking-wider mb-6" style={{ background: "rgba(195, 182, 143, 0.15)", color: "#C3B68F", border: "none" }} initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: 0.2, duration: 0.5 }}>
+          🔄 {isFr ? "Récurrent" : "Recurring"}
         </motion.span>
-
         <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4">
-          En ligne.{" "}
-          <span
-            style={{
-              background:
-                "linear-gradient(135deg, #C3B68F 0%, #DCCB99 50%, #a89860 100%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-            }}
-          >
-            Et après.
+          {isFr ? "En ligne." : "Online."}{" "}
+          <span style={{ background: "linear-gradient(135deg, #C3B68F 0%, #DCCB99 50%, #a89860 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
+            {isFr ? "Et après." : "And beyond."}
           </span>
         </h2>
         <p className="text-muted-foreground max-w-xl mx-auto">
-          Mises à jour, performances, modifications. On s'en occupe.
+          {isFr ? "Mises à jour, performances, modifications. On s'en occupe." : "Updates, performance, modifications. We take care of it."}
         </p>
       </motion.div>
 
       <MaintenanceCard />
 
-      {/* Info box */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-        className="max-w-[480px] mx-auto mt-8 rounded-xl p-5 md:p-6 border card-glass-surface"
-        style={{ borderColor: "rgba(195, 182, 143, 0.2)" }}
-      >
+      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.2 }} className="max-w-[480px] mx-auto mt-8 rounded-xl p-5 md:p-6 border card-glass-surface" style={{ borderColor: "rgba(195, 182, 143, 0.2)" }}>
         <h4 className="font-display text-sm font-semibold text-foreground mb-2">
-          Besoin de plus de modifications ?
+          {isFr ? "Besoin de plus de modifications ?" : "Need more modifications?"}
         </h4>
         <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-          Pour les projets avec des besoins réguliers en contenu ou en évolutions,
-          le forfait{" "}
-          <strong className="text-foreground font-medium">
-            Actif à 149 CHF/mois
-          </strong>{" "}
-          inclut 3h de modifs par mois, mise à jour de contenu et support prioritaire sous 24h.
+          {isFr ? (
+            <>Pour les projets avec des besoins réguliers en contenu ou en évolutions, le forfait{" "}<strong className="text-foreground font-medium">Actif à 149 CHF/mois</strong>{" "}inclut 3h de modifs par mois, mise à jour de contenu et support prioritaire sous 24h.</>
+          ) : (
+            <>For projects with ongoing content or development needs, the{" "}<strong className="text-foreground font-medium">Active plan at 149 CHF/month</strong>{" "}includes 3 hours of modifications per month, content updates and priority support within 24 hours.</>
+          )}
         </p>
-        <Link
-          to="/contact?sujet=forfait-actif"
-          className="inline-flex items-center gap-1 text-sm font-medium transition-colors hover:opacity-80"
-          style={{ color: "#C3B68F" }}
-        >
-          Me renseigner sur le forfait Actif
+        <Link to="/contact?sujet=forfait-actif" className="inline-flex items-center gap-1 text-sm font-medium transition-colors hover:opacity-80" style={{ color: "#C3B68F" }}>
+          {isFr ? "Me renseigner sur le forfait Actif" : "Learn more about the Active plan"}
           <ArrowRight className="w-3.5 h-3.5" />
         </Link>
       </motion.div>
