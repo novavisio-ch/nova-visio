@@ -222,8 +222,8 @@ serve(async (req) => {
     }
 
     const langInstruction = lang === "en" 
-      ? "\n\nIMPORTANT: The user is browsing the English version of the site. You MUST respond entirely in English. Use professional, natural English. Do not mix French and English. Use 'you' (formal tone). CTA button labels should also be in English (e.g. [CTA:See Website Offer|/site-web], [CTA:Contact Us|/contact])."
-      : "\n\nIMPORTANT: L'utilisateur consulte la version française du site. Tu DOIS répondre entièrement en français. Utilise le vouvoiement.";
+      ? "\n\nLANGUAGE RULES:\n- The user is browsing the English version of the site. By default, you MUST respond entirely in English.\n- Use professional, natural English. Do not mix French and English.\n- Use 'you' (formal but friendly tone).\n- CTA button labels MUST be in English (e.g. [CTA:See Website Offer|/site-web], [CTA:Contact Us|/contact]).\n- EXCEPTION: If the user writes to you in French (or another language), you may respond in that language to be helpful. But CTA labels should still match the site language (English)."
+      : "\n\nRÈGLES DE LANGUE :\n- L'utilisateur consulte la version française du site. Par défaut, tu DOIS répondre entièrement en français.\n- Utilise le vouvoiement.\n- Les labels des boutons CTA doivent être en français.\n- EXCEPTION : Si l'utilisateur vous écrit dans une autre langue (anglais, etc.), vous pouvez répondre dans cette langue pour être utile. Mais les labels CTA doivent rester en français.";
 
     const fullSystemPrompt = `${SYSTEM_PROMPT}${langInstruction}
 
