@@ -878,7 +878,7 @@ const en: Record<string, string> = {
   "recommandation.s1.desc": "Tell an entrepreneur, craftsperson or SME in your network about Nova Visio.",
   "recommandation.s2.title": "They sign a project",
   "recommandation.s2.desc": "The new client starts a website project with us.",
-  "recommandation.s3.title": "You receive €100",
+  "recommandation.s3.title": "You receive CHF 100",
   "recommandation.s3.desc": "Once the site goes live, we send you your reward.",
   "recommandation.conditions.title": "Straightforward",
   "recommandation.conditions.highlight": "terms.",
