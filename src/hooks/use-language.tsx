@@ -761,7 +761,7 @@ const en: Record<string, string> = {
 
   // ── Referral CTA ──
   "referral.title.1": "Refer Nova Visio.",
-  "referral.title.highlight": "Earn €100.",
+  "referral.title.highlight": "Earn CHF 100.",
   "referral.subtitle.1": "Know someone launching a business?",
   "referral.subtitle.bold1": "Tell them about us",
   "referral.subtitle.2": "If they sign a website project, you receive",
