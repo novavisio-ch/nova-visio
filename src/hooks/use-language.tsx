@@ -765,7 +765,7 @@ const en: Record<string, string> = {
   "referral.subtitle.1": "Know someone launching a business?",
   "referral.subtitle.bold1": "Tell them about us",
   "referral.subtitle.2": "If they sign a website project, you receive",
-  "referral.subtitle.bold2": "€100",
+  "referral.subtitle.bold2": "CHF 100",
   "referral.cta": "Discover the programme →",
 
   // ── Blog Section (Home) ──
