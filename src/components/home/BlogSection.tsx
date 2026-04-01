@@ -2,47 +2,56 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import blogSiteVitrineLanding from "@/assets/blog/site-vitrine-vs-landing-page.jpg";
 import blogLogoIdentite from "@/assets/blog/logo-identite-visuelle.jpg";
-
-const blogPosts = [
-  {
-    id: 5,
-    slug: "/blog/logo-identite-visuelle",
-    tag: "Article",
-    title: "Pourquoi votre logo n'est pas \"juste un dessin\" : l'impact d'une bonne identité visuelle",
-    linkText: "Lire l'article",
-    image: blogLogoIdentite,
-  },
-  {
-    id: 4,
-    slug: "/blog/site-vitrine-vs-landing-page",
-    tag: "Article",
-    title: "Site vitrine vs landing page : quel format choisir pour votre activité ?",
-    linkText: "Lire l'article",
-    image: blogSiteVitrineLanding,
-  },
-  {
-    id: 3,
-    slug: "/blog/choisir-couleurs-marque",
-    tag: "Article",
-    title: "Comment choisir les couleurs de votre marque",
-    linkText: "Lire l'article",
-    image: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=600&h=400&fit=crop&q=80",
-  },
-];
+import { useLanguage } from "@/hooks/use-language";
 
 export function BlogSection() {
+  const { t, language } = useLanguage();
+
+  const blogPosts = [
+    {
+      id: 5,
+      slug: "/blog/logo-identite-visuelle",
+      title: language === "fr"
+        ? "Pourquoi votre logo n'est pas \"juste un dessin\" : l'impact d'une bonne identité visuelle"
+        : "Why your logo isn't \"just a drawing\": the impact of strong brand identity",
+      image: blogLogoIdentite,
+    },
+    {
+      id: 4,
+      slug: "/blog/site-vitrine-vs-landing-page",
+      title: language === "fr"
+        ? "Site vitrine vs landing page : quel format choisir pour votre activité ?"
+        : "Showcase website vs landing page: which format suits your business?",
+      image: blogSiteVitrineLanding,
+    },
+    {
+      id: 3,
+      slug: "/blog/choisir-couleurs-marque",
+      title: language === "fr"
+        ? "Comment choisir les couleurs de votre marque"
+        : "How to choose your brand colours",
+      image: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=600&h=400&fit=crop&q=80",
+    },
+  ];
+
   return (
     <section className="section-padding">
       <div className="container-narrow">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            On partage. On <span className="text-gradient-gold">éclaire.</span>
+            {t("blog.title.1")} <span className="text-gradient-gold">{t("blog.title.highlight")}</span>
           </h2>
           <p className="text-body text-lg md:text-xl max-w-3xl mx-auto leading-relaxed text-center">
-            Des articles <strong className="text-foreground font-medium">concrets</strong> sur votre site,{" "}
-            <br className="md:hidden" />
-            votre image et votre <strong className="text-foreground font-medium">présence en ligne</strong>.
+            {language === "fr" ? (
+              <>Des articles <strong className="text-foreground font-medium">concrets</strong> sur votre site,{" "}
+              <br className="md:hidden" />
+              votre image et votre <strong className="text-foreground font-medium">présence en ligne</strong>.</>
+            ) : (
+              <><strong className="text-foreground font-medium">Practical</strong> articles about your website,{" "}
+              <br className="md:hidden" />
+              your image and your <strong className="text-foreground font-medium">online presence</strong>.</>
+            )}
           </p>
         </div>
 
@@ -61,9 +70,8 @@ export function BlogSection() {
                   alt={post.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                {/* Tag */}
                 <span className="absolute top-4 left-4 px-3 py-1 text-xs font-semibold uppercase tracking-wider bg-primary/90 text-background rounded-full">
-                  {post.tag}
+                  {t("blog.tag")}
                 </span>
               </div>
 
@@ -73,7 +81,7 @@ export function BlogSection() {
                   {post.title}
                 </h3>
                 <span className="inline-flex items-center gap-2 text-primary font-medium text-sm group-hover:gap-3 transition-all duration-300">
-                  {post.linkText}
+                  {t("blog.readArticle")}
                   <ArrowRight className="w-4 h-4" />
                 </span>
               </div>
@@ -87,7 +95,7 @@ export function BlogSection() {
             to="/blog"
             className="inline-flex items-center gap-2 text-body hover:text-primary font-medium transition-all duration-300 hover:gap-3"
           >
-            Voir tous les articles
+            {t("blog.viewAll")}
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
