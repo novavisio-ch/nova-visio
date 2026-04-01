@@ -2,8 +2,11 @@ import { motion } from "framer-motion";
 import { Gift } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { useLanguage } from "@/hooks/use-language";
 
 export function ReferralCtaSection() {
+  const { t } = useLanguage();
+
   return (
     <section className="py-10 md:py-16 px-4">
       <div className="container max-w-4xl mx-auto">
@@ -20,19 +23,19 @@ export function ReferralCtaSection() {
 
           <div className="relative z-10">
             <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 md:mb-4 leading-tight">
-              Recommandez Nova Visio.
+              {t("referral.title.1")}
               <br className="md:hidden" />
               <span className="hidden md:inline"> </span>
-              <span className="text-gradient-gold">Gagnez 100 €.</span>
+              <span className="text-gradient-gold">{t("referral.title.highlight")}</span>
             </h3>
             <p className="text-xs sm:text-sm md:text-base text-muted-foreground mb-5 md:mb-8 max-w-lg mx-auto leading-relaxed">
-              Un proche lance son activité ? <strong className="text-foreground font-medium">Parlez-lui de nous</strong>.{" "}
+              {t("referral.subtitle.1")} <strong className="text-foreground font-medium">{t("referral.subtitle.bold1")}</strong>.{" "}
               <br className="md:hidden" />
-              S'il signe un site web, vous recevez <strong className="text-foreground font-medium">100 €</strong>.
+              {t("referral.subtitle.2")} <strong className="text-foreground font-medium">{t("referral.subtitle.bold2")}</strong>.
             </p>
             <Button asChild variant="gold" size="default" className="md:px-8">
               <Link to="/recommandation">
-                Découvrir le programme →
+                {t("referral.cta")}
               </Link>
             </Button>
           </div>

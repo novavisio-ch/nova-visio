@@ -4,25 +4,8 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import novavisioLogo from "@/assets/novavisio-logo.svg";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-
-const mainNavLinks = [
-  { href: "/", label: "Accueil" },
-  { href: "/tarifs", label: "Tarifs" },
-  { href: "/recommandation", label: "Recommandation" },
-  { href: "/blog", label: "Blog" },
-  { href: "/contact", label: "Contact" },
-];
-
-const servicesLinks = [
-  { href: "/site-web", label: "Site web" },
-  { href: "/identite-visuelle", label: "Logo & identité visuelle" },
-];
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { useLanguage } from "@/hooks/use-language";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,13 +13,17 @@ export function Navbar() {
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const location = useLocation();
+  const { t } = useLanguage();
   const logoFilter = "brightness(0) invert(1)";
   const logoHoverFilter = "brightness(0) saturate(100%) invert(76%) sepia(14%) saturate(746%) hue-rotate(9deg) brightness(91%) contrast(88%)";
 
+  const servicesLinks = [
+    { href: "/site-web", label: t("nav.services.web") },
+    { href: "/identite-visuelle", label: t("nav.services.brand") },
+  ];
+
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -48,6 +35,14 @@ export function Navbar() {
 
   const isServicesActive = location.pathname === "/site-web" || location.pathname === "/identite-visuelle";
 
+  const navLinks = [
+    { href: "/tarifs", label: t("nav.pricing") },
+    { href: "/recommandation", label: t("nav.referral") },
+    { href: "/blog", label: t("nav.blog") },
+    { href: "/a-propos", label: t("nav.about") },
+    { href: "/contact", label: t("nav.contact") },
+  ];
+
   return (
     <header
       className={cn(
@@ -58,7 +53,6 @@ export function Navbar() {
       )}
     >
       <nav className="w-full px-4 md:px-6 lg:px-12 flex items-center justify-between">
-        {/* Logo - Left */}
         <Link to="/" className="hover:opacity-80 transition-opacity flex-shrink-0">
           <img
             src={novavisioLogo}
@@ -70,9 +64,8 @@ export function Navbar() {
           />
         </Link>
 
-        {/* Desktop Navigation - Center */}
+        {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center gap-6 xl:gap-8 absolute left-1/2 -translate-x-1/2">
-          {/* Accueil */}
           <Link
             to="/"
             className={cn(
@@ -80,10 +73,10 @@ export function Navbar() {
               location.pathname === "/" ? "text-primary" : "text-foreground/70"
             )}
           >
-            Accueil
+            {t("nav.home")}
           </Link>
 
-          {/* Services Dropdown - Hover */}
+          {/* Services Dropdown */}
           <div
             className="relative"
             onMouseEnter={() => setIsServicesDropdownOpen(true)}
@@ -95,7 +88,7 @@ export function Navbar() {
                 isServicesActive ? "text-primary" : "text-foreground/70"
               )}
             >
-              Services
+              {t("nav.services")}
               <ChevronDown className={cn("h-4 w-4 transition-transform", isServicesDropdownOpen && "rotate-180")} />
             </button>
             {isServicesDropdownOpen && (
@@ -118,84 +111,45 @@ export function Navbar() {
             )}
           </div>
 
-          {/* Tarifs */}
-          <Link
-            to="/tarifs"
-            className={cn(
-              "font-medium transition-colors hover:text-primary text-sm xl:text-base whitespace-nowrap",
-              location.pathname === "/tarifs" ? "text-primary" : "text-foreground/70"
-            )}
-          >
-            Tarifs
-          </Link>
-
-          {/* Recommandation */}
-          <Link
-            to="/recommandation"
-            className={cn(
-              "font-medium transition-colors hover:text-primary text-sm xl:text-base whitespace-nowrap",
-              location.pathname === "/recommandation" ? "text-primary" : "text-foreground/70"
-            )}
-          >
-            Recommandation
-          </Link>
-
-          {/* Blog */}
-          <Link
-            to="/blog"
-            className={cn(
-              "font-medium transition-colors hover:text-primary text-sm xl:text-base whitespace-nowrap",
-              location.pathname === "/blog" ? "text-primary" : "text-foreground/70"
-            )}
-          >
-            Blog
-          </Link>
-
-          {/* À propos */}
-          <Link
-            to="/a-propos"
-            className={cn(
-              "font-medium transition-colors hover:text-primary text-sm xl:text-base whitespace-nowrap",
-              location.pathname === "/a-propos" ? "text-primary" : "text-foreground/70"
-            )}
-          >
-            À propos
-          </Link>
-
-          {/* Contact */}
-          <Link
-            to="/contact"
-            className={cn(
-              "font-medium transition-colors hover:text-primary text-sm xl:text-base whitespace-nowrap",
-              location.pathname === "/contact" ? "text-primary" : "text-foreground/70"
-            )}
-          >
-            Contact
-          </Link>
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              to={link.href}
+              className={cn(
+                "font-medium transition-colors hover:text-primary text-sm xl:text-base whitespace-nowrap",
+                location.pathname === link.href ? "text-primary" : "text-foreground/70"
+              )}
+            >
+              {link.label}
+            </Link>
+          ))}
         </div>
 
-        {/* CTA Button - Right */}
+        {/* Right side: Language Switcher + CTA */}
         <div className="hidden lg:flex items-center gap-3 flex-shrink-0">
+          <LanguageSwitcher />
           <Button variant="gold" size="default" asChild>
-            <Link to="/contact">Parlons de votre projet</Link>
+            <Link to="/contact">{t("nav.cta")}</Link>
           </Button>
         </div>
 
-        {/* Mobile/Tablet Menu Button */}
-        <button
-          className="lg:hidden text-foreground p-2"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Mobile Menu Button */}
+        <div className="lg:hidden flex items-center gap-2">
+          <LanguageSwitcher />
+          <button
+            className="text-foreground p-2"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
         <div className="lg:hidden glass-card mx-3 mt-2 p-4 sm:p-6 animate-fade-in max-h-[calc(100vh-80px)] overflow-y-auto">
           <div className="flex flex-col gap-2 sm:gap-4">
-            {/* Accueil */}
             <Link
               to="/"
               className={cn(
@@ -203,7 +157,7 @@ export function Navbar() {
                 location.pathname === "/" ? "text-primary" : "text-foreground/70"
               )}
             >
-              Accueil
+              {t("nav.home")}
             </Link>
 
             {/* Services - Expandable */}
@@ -215,13 +169,8 @@ export function Navbar() {
                   isServicesActive ? "text-primary" : "text-foreground/70"
                 )}
               >
-                Services
-                <ChevronDown
-                  className={cn(
-                    "h-4 w-4 transition-transform",
-                    isMobileServicesOpen ? "rotate-180" : ""
-                  )}
-                />
+                {t("nav.services")}
+                <ChevronDown className={cn("h-4 w-4 transition-transform", isMobileServicesOpen ? "rotate-180" : "")} />
               </button>
               {isMobileServicesOpen && (
                 <div className="flex flex-col pl-4 mt-2 gap-1.5 sm:gap-2 border-l border-border/30">
@@ -241,53 +190,22 @@ export function Navbar() {
               )}
             </div>
 
-            {/* Tarifs */}
-            <Link
-              to="/tarifs"
-              className={cn(
-                "text-sm sm:text-body-md font-medium transition-colors py-2",
-                location.pathname === "/tarifs" ? "text-primary" : "text-foreground/70"
-              )}
-            >
-              Tarifs
-            </Link>
-
-            {/* Blog */}
-            <Link
-              to="/blog"
-              className={cn(
-                "text-sm sm:text-body-md font-medium transition-colors py-2",
-                location.pathname === "/blog" ? "text-primary" : "text-foreground/70"
-              )}
-            >
-              Blog
-            </Link>
-
-            {/* À propos */}
-            <Link
-              to="/a-propos"
-              className={cn(
-                "text-sm sm:text-body-md font-medium transition-colors py-2",
-                location.pathname === "/a-propos" ? "text-primary" : "text-foreground/70"
-              )}
-            >
-              À propos
-            </Link>
-
-            {/* Contact */}
-            <Link
-              to="/contact"
-              className={cn(
-                "text-sm sm:text-body-md font-medium transition-colors py-2",
-                location.pathname === "/contact" ? "text-primary" : "text-foreground/70"
-              )}
-            >
-              Contact
-            </Link>
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                to={link.href}
+                className={cn(
+                  "text-sm sm:text-body-md font-medium transition-colors py-2",
+                  location.pathname === link.href ? "text-primary" : "text-foreground/70"
+                )}
+              >
+                {link.label}
+              </Link>
+            ))}
 
             <div className="flex items-center justify-center mt-3 sm:mt-4 gap-3">
               <Button variant="gold" size="default" className="flex-1" asChild>
-                <Link to="/contact">Parlons de votre projet</Link>
+                <Link to="/contact">{t("nav.cta")}</Link>
               </Button>
             </div>
           </div>
