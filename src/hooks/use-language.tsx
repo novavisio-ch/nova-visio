@@ -312,7 +312,7 @@ const fr: Record<string, string> = {
   "recommandation.subtitle.2": "Faites-en profiter votre réseau. Pour chaque",
   "recommandation.subtitle.bold1": "nouveau client",
   "recommandation.subtitle.3": "on vous offre",
-  "recommandation.subtitle.bold2": "100 €",
+  "recommandation.subtitle.bold2": "100 CHF",
   "recommandation.steps.title": "3 étapes.",
   "recommandation.steps.highlight": "Zéro complication.",
   "recommandation.steps.subtitle": "Pas de formulaire compliqué.",
