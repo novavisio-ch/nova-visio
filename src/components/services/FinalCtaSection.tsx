@@ -4,7 +4,8 @@ import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/hooks/use-language";
 
 export const FinalCtaSection = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const isFr = language === "fr";
   return (
     <section className="py-16 md:py-24 lg:py-32 px-4 section-gradient-main">
       <div className="container mx-auto">

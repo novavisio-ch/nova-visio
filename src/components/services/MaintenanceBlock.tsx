@@ -8,7 +8,8 @@ interface MaintenanceBlockProps {
 }
 
 export const MaintenanceBlock = ({ text }: MaintenanceBlockProps) => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const isFr = language === "fr";
   return (
     <section className="relative py-12 md:py-16">
       <div className="container mx-auto px-4 max-w-4xl">
