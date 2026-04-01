@@ -14,23 +14,13 @@ import { supabase } from "@/integrations/supabase/client";
 import { z } from "zod";
 import { useIsTabletOrMobile } from "@/hooks/use-mobile";
 import { ZcalEmbed } from "@/components/ZcalEmbed";
-
-// Validation schema
-const contactSchema = z.object({
-  firstName: z.string().min(1, "Prénom requis").max(50, "50 caractères max").trim(),
-  lastName: z.string().min(1, "Nom requis").max(50, "50 caractères max").trim(),
-  email: z.string().email("Email invalide").max(100, "100 caractères max"),
-  projectType: z.string().optional(),
-  message: z.string().min(10, "Minimum 10 caractères").max(2000, "2000 caractères max").trim(),
-});
-
-type ContactFormData = z.infer<typeof contactSchema>;
+import { useLanguage } from "@/hooks/use-language";
 
 const Contact = () => {
+  const { t } = useLanguage();
   const { toast } = useToast();
   const isMobile = useIsTabletOrMobile();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [errors, setErrors] = useState<Partial<Record<keyof ContactFormData, string>>>({});
   const [searchParams] = useSearchParams();
   const [formData, setFormData] = useState({
     firstName: "",
@@ -49,20 +39,20 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setErrors({});
-    
-    // Validate form data
+
+    const contactSchema = z.object({
+      firstName: z.string().min(1, t("validation.firstName")).max(50, t("validation.max50")).trim(),
+      lastName: z.string().min(1, t("validation.lastName")).max(50, t("validation.max50")).trim(),
+      email: z.string().email(t("validation.email")).max(100, t("validation.max100")),
+      projectType: z.string().optional(),
+      message: z.string().min(10, t("validation.message.min")).max(2000, t("validation.message.max")).trim(),
+    });
+
     const result = contactSchema.safeParse(formData);
     if (!result.success) {
-      const fieldErrors: Partial<Record<keyof ContactFormData, string>> = {};
-      result.error.errors.forEach((err) => {
-        const field = err.path[0] as keyof ContactFormData;
-        fieldErrors[field] = err.message;
-      });
-      setErrors(fieldErrors);
       toast({
-        title: "Erreur de validation",
-        description: "Veuillez corriger les erreurs du formulaire.",
+        title: t("contact.form.validation.title"),
+        description: t("contact.form.validation.desc"),
         variant: "destructive",
       });
       return;
@@ -72,8 +62,6 @@ const Contact = () => {
 
     try {
       const validatedData = result.data;
-      
-      // Save to database
       const { error: dbError } = await supabase
         .from("contact_submissions")
         .insert({
@@ -86,32 +74,23 @@ const Contact = () => {
 
       if (dbError) throw dbError;
 
-      // Send email notification
       const { error: emailError } = await supabase.functions.invoke("send-contact-email", {
         body: validatedData,
       });
 
-      if (emailError) {
-        console.warn("Email notification failed:", emailError);
-      }
+      if (emailError) console.warn("Email notification failed:", emailError);
 
       toast({
-        title: "Message envoyé !",
-        description: "Nous vous répondrons sous 24 à 48 heures.",
+        title: t("contact.form.success.title"),
+        description: t("contact.form.success.desc"),
       });
 
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        projectType: "",
-        message: "",
-      });
+      setFormData({ firstName: "", lastName: "", email: "", projectType: "", message: "" });
     } catch (error) {
       console.error("Error submitting form:", error);
       toast({
-        title: "Erreur",
-        description: "Une erreur est survenue. Veuillez réessayer.",
+        title: t("contact.form.error.title"),
+        description: t("contact.form.error.desc"),
         variant: "destructive",
       });
     } finally {
@@ -121,191 +100,104 @@ const Contact = () => {
 
   return (
     <Layout>
-      {/* Hero */}
       <section className="py-12 md:py-16 lg:py-20 px-4">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl md:text-display-lg lg:text-display-xl mb-4 md:mb-6 leading-tight">
-              Parlons-en.
+              {t("contact.title.1")}
               <br className="md:hidden" />
               <span className="hidden md:inline"> </span>
-              <span className="text-gradient-gold">15 minutes.</span>
+              <span className="text-gradient-gold">{t("contact.title.highlight")}</span>
             </h1>
             <p className="text-sm sm:text-base md:text-body-lg text-muted-foreground leading-relaxed max-w-xl mx-auto">
-              On fait le point sur <strong className="text-foreground font-medium">votre situation</strong>.{" "}
+              {t("contact.subtitle.1")} <strong className="text-foreground font-medium">{t("contact.subtitle.bold1")}</strong>.{" "}
               <br className="md:hidden" />
-              Pas de pitch commercial.{" "}
+              {t("contact.subtitle.2")}{" "}
               <br className="md:hidden" />
-              Juste une <strong className="text-foreground font-medium">conversation honnête</strong>.
+              {t("contact.subtitle.3")} <strong className="text-foreground font-medium">{t("contact.subtitle.bold2")}</strong>.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Contact Form */}
       <section className="pb-12 md:pb-16 lg:pb-20 px-4">
         <div className="container">
           <div className="max-w-2xl mx-auto">
             <form onSubmit={handleSubmit} className="glass-card p-5 sm:p-6 md:p-8 lg:p-10 space-y-4 md:space-y-6">
               <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
                 <div className="space-y-1.5 md:space-y-2">
-                  <Label htmlFor="firstName" className="text-xs sm:text-body-sm text-foreground">
-                    Prénom
-                  </Label>
-                  <Input
-                    id="firstName"
-                    value={formData.firstName}
-                    onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-                    required
-                    className="bg-input/50 border-border/50 focus:border-primary text-foreground placeholder:text-muted-foreground text-sm md:text-base"
-                    placeholder="Votre prénom"
-                  />
+                  <Label htmlFor="firstName" className="text-xs sm:text-body-sm text-foreground">{t("contact.form.firstName")}</Label>
+                  <Input id="firstName" value={formData.firstName} onChange={(e) => setFormData({ ...formData, firstName: e.target.value })} required className="bg-input/50 border-border/50 focus:border-primary text-foreground placeholder:text-muted-foreground text-sm md:text-base" placeholder={t("contact.form.firstName.placeholder")} />
                 </div>
                 <div className="space-y-1.5 md:space-y-2">
-                  <Label htmlFor="lastName" className="text-xs sm:text-body-sm text-foreground">
-                    Nom
-                  </Label>
-                  <Input
-                    id="lastName"
-                    value={formData.lastName}
-                    onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
-                    required
-                    className="bg-input/50 border-border/50 focus:border-primary text-foreground placeholder:text-muted-foreground text-sm md:text-base"
-                    placeholder="Votre nom"
-                  />
+                  <Label htmlFor="lastName" className="text-xs sm:text-body-sm text-foreground">{t("contact.form.lastName")}</Label>
+                  <Input id="lastName" value={formData.lastName} onChange={(e) => setFormData({ ...formData, lastName: e.target.value })} required className="bg-input/50 border-border/50 focus:border-primary text-foreground placeholder:text-muted-foreground text-sm md:text-base" placeholder={t("contact.form.lastName.placeholder")} />
                 </div>
               </div>
 
               <div className="space-y-1.5 md:space-y-2">
-                <Label htmlFor="email" className="text-xs sm:text-body-sm text-foreground">
-                  Email
-                </Label>
-                <Input
-                  id="email"
-                  type="email"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  required
-                  className="bg-input/50 border-border/50 focus:border-primary text-foreground placeholder:text-muted-foreground text-sm md:text-base"
-                  placeholder="votre@email.com"
-                />
+                <Label htmlFor="email" className="text-xs sm:text-body-sm text-foreground">{t("contact.form.email")}</Label>
+                <Input id="email" type="email" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} required className="bg-input/50 border-border/50 focus:border-primary text-foreground placeholder:text-muted-foreground text-sm md:text-base" placeholder={t("contact.form.email.placeholder")} />
               </div>
 
               <div className="space-y-1.5 md:space-y-2">
-                <Label htmlFor="projectType" className="text-xs sm:text-body-sm text-foreground">
-                  Type de projet
-                </Label>
-                <Select
-                  value={formData.projectType}
-                  onValueChange={(value) => setFormData({ ...formData, projectType: value })}
-                >
+                <Label htmlFor="projectType" className="text-xs sm:text-body-sm text-foreground">{t("contact.form.projectType")}</Label>
+                <Select value={formData.projectType} onValueChange={(value) => setFormData({ ...formData, projectType: value })}>
                   <SelectTrigger className="bg-input/50 border-border/50 focus:border-primary text-foreground text-sm md:text-base">
-                    <SelectValue placeholder="Sélectionnez un type de projet" />
+                    <SelectValue placeholder={t("contact.form.projectType.placeholder")} />
                   </SelectTrigger>
-                   <SelectContent className="bg-background border-border">
-                     <SelectItem value="appel-decouverte">Appel découverte gratuit (15 min)</SelectItem>
-                     <SelectItem value="site-vitrine">Site vitrine</SelectItem>
-                     <SelectItem value="landing-page">Landing page</SelectItem>
-                     <SelectItem value="identite-visuelle">Identité visuelle & logo</SelectItem>
-                     <SelectItem value="pack-digital-branding">Pack Digital & Branding</SelectItem>
-                     <SelectItem value="pack-refonte-globale">Pack Refonte Globale</SelectItem>
-                     <SelectItem value="maintenance">Suivi & Maintenance</SelectItem>
-                     <SelectItem value="other">Autre / Question</SelectItem>
-                   </SelectContent>
+                  <SelectContent className="bg-background border-border">
+                    <SelectItem value="appel-decouverte">{t("contact.form.projectType.call")}</SelectItem>
+                    <SelectItem value="site-vitrine">{t("contact.form.projectType.website")}</SelectItem>
+                    <SelectItem value="landing-page">{t("contact.form.projectType.landing")}</SelectItem>
+                    <SelectItem value="identite-visuelle">{t("contact.form.projectType.brand")}</SelectItem>
+                    <SelectItem value="pack-digital-branding">{t("contact.form.projectType.packDigital")}</SelectItem>
+                    <SelectItem value="pack-refonte-globale">{t("contact.form.projectType.packRefonte")}</SelectItem>
+                    <SelectItem value="maintenance">{t("contact.form.projectType.maintenance")}</SelectItem>
+                    <SelectItem value="other">{t("contact.form.projectType.other")}</SelectItem>
+                  </SelectContent>
                 </Select>
               </div>
 
               <div className="space-y-1.5 md:space-y-2">
-                <Label htmlFor="message" className="text-xs sm:text-body-sm text-foreground">
-                  Message
-                </Label>
-                <Textarea
-                  id="message"
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  required
-                  rows={4}
-                  className="bg-input/50 border-border/50 focus:border-primary text-foreground placeholder:text-muted-foreground resize-none text-sm md:text-base"
-                  placeholder="Décrivez votre projet et vos objectifs..."
-                />
+                <Label htmlFor="message" className="text-xs sm:text-body-sm text-foreground">{t("contact.form.message")}</Label>
+                <Textarea id="message" value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} required rows={4} className="bg-input/50 border-border/50 focus:border-primary text-foreground placeholder:text-muted-foreground resize-none text-sm md:text-base" placeholder={t("contact.form.message.placeholder")} />
               </div>
 
-              <Button
-                type="submit"
-                variant="gold"
-                size="lg"
-                className="w-full"
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? (
-                  "Envoi en cours..."
-                ) : (
-                  <>
-                    Envoyer ma demande
-                    <Send className="w-4 h-4 md:w-5 md:h-5 ml-2" />
-                  </>
-                )}
+              <Button type="submit" variant="gold" size="lg" className="w-full" disabled={isSubmitting}>
+                {isSubmitting ? t("contact.form.submitting") : (<>{t("contact.form.submit")}<Send className="w-4 h-4 md:w-5 md:h-5 ml-2" /></>)}
               </Button>
 
-              {/* Reassurance */}
-              <p className="text-center text-xs sm:text-sm text-muted-foreground mt-4">
-                ✓ Réponse sous 24h &nbsp;&nbsp; ✓ Sans engagement &nbsp;&nbsp; ✓ Appel en français
-              </p>
+              <p className="text-center text-xs sm:text-sm text-muted-foreground mt-4">{t("contact.form.reassurance")}</p>
             </form>
 
-            {/* What happens next */}
             <div className="mt-8 md:mt-12 grid sm:grid-cols-2 gap-4 md:gap-6">
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                whileHover={!isMobile ? { y: -6, boxShadow: "0 20px 40px -15px hsl(var(--primary) / 0.2)" } : undefined}
-                animate={isMobile ? { boxShadow: "0 15px 30px -10px hsl(var(--primary) / 0.15)" } : undefined}
-                className="glass-card p-4 md:p-6 flex items-start gap-3 md:gap-4 cursor-pointer"
-              >
+              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }} whileHover={!isMobile ? { y: -6, boxShadow: "0 20px 40px -15px hsl(var(--primary) / 0.2)" } : undefined} animate={isMobile ? { boxShadow: "0 15px 30px -10px hsl(var(--primary) / 0.15)" } : undefined} className="glass-card p-4 md:p-6 flex items-start gap-3 md:gap-4 cursor-pointer">
                 <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Clock className="w-4 h-4 md:w-5 md:h-5 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-sm md:text-display-sm mb-0.5 md:mb-1">Réponse rapide</h3>
-                  <p className="text-[11px] sm:text-body-sm text-muted-foreground">
-                    Nous vous répondrons sous 24 à 48 heures.
-                  </p>
+                  <h3 className="text-sm md:text-display-sm mb-0.5 md:mb-1">{t("contact.whatNext.fast.title")}</h3>
+                  <p className="text-[11px] sm:text-body-sm text-muted-foreground">{t("contact.whatNext.fast.desc")}</p>
                 </div>
               </motion.div>
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                whileHover={!isMobile ? { y: -6, boxShadow: "0 20px 40px -15px hsl(var(--primary) / 0.2)" } : undefined}
-                animate={isMobile ? { boxShadow: "0 15px 30px -10px hsl(var(--primary) / 0.15)" } : undefined}
-                className="glass-card p-4 md:p-6 flex items-start gap-3 md:gap-4 cursor-pointer"
-              >
+              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.2 }} whileHover={!isMobile ? { y: -6, boxShadow: "0 20px 40px -15px hsl(var(--primary) / 0.2)" } : undefined} animate={isMobile ? { boxShadow: "0 15px 30px -10px hsl(var(--primary) / 0.15)" } : undefined} className="glass-card p-4 md:p-6 flex items-start gap-3 md:gap-4 cursor-pointer">
                 <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg flex items-center justify-center flex-shrink-0">
                   <MessageSquare className="w-4 h-4 md:w-5 md:h-5 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-sm md:text-display-sm mb-0.5 md:mb-1">Sans pression</h3>
+                  <h3 className="text-sm md:text-display-sm mb-0.5 md:mb-1">{t("contact.whatNext.noPressure.title")}</h3>
                   <ul className="text-[11px] sm:text-body-sm text-muted-foreground space-y-0.5">
-                    <li className="flex items-start gap-1.5">
-                      <span className="text-primary mt-0.5">•</span>
-                      <span>Discussion constructive</span>
-                    </li>
-                    <li className="flex items-start gap-1.5">
-                      <span className="text-primary mt-0.5">•</span>
-                      <span>Solutions adaptées</span>
-                    </li>
+                    <li className="flex items-start gap-1.5"><span className="text-primary mt-0.5">•</span><span>{t("contact.whatNext.noPressure.item1")}</span></li>
+                    <li className="flex items-start gap-1.5"><span className="text-primary mt-0.5">•</span><span>{t("contact.whatNext.noPressure.item2")}</span></li>
                   </ul>
                 </div>
               </motion.div>
             </div>
 
-            {/* Zcal Booking Widget */}
             <div className="mt-10 md:mt-14">
               <h2 className="text-lg md:text-xl font-semibold text-center mb-6">
-                Ou réservez directement un <span className="text-primary">créneau</span>
+                {t("contact.booking.title")} <span className="text-primary">{t("contact.booking.highlight")}</span>
               </h2>
               <ZcalEmbed />
             </div>
