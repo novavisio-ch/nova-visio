@@ -202,7 +202,8 @@ serve(async (req) => {
   }
 
   try {
-    const { messages } = await req.json();
+    const { messages, language } = await req.json();
+    const lang = language === "en" ? "en" : "fr";
     
     if (!messages || !Array.isArray(messages)) {
       return new Response(
@@ -220,8 +221,11 @@ serve(async (req) => {
       );
     }
 
-    // Build the full system prompt with site content
-    const fullSystemPrompt = `${SYSTEM_PROMPT}
+    const langInstruction = lang === "en" 
+      ? "\n\nIMPORTANT: The user is browsing the English version of the site. You MUST respond entirely in English. Use professional, natural English. Do not mix French and English. Use 'you' (formal tone). CTA button labels should also be in English (e.g. [CTA:See Website Offer|/site-web], [CTA:Contact Us|/contact])."
+      : "\n\nIMPORTANT: L'utilisateur consulte la version française du site. Tu DOIS répondre entièrement en français. Utilise le vouvoiement.";
+
+    const fullSystemPrompt = `${SYSTEM_PROMPT}${langInstruction}
 
 --- CONTENU DU SITE NOVA VISIO ---
 ${SITE_CONTENT}

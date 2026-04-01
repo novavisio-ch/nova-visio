@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import novavisioLogo from "@/assets/novavisio-logo.svg";
+import { useLanguage } from "@/hooks/use-language";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
+  const { t } = useLanguage();
   const logoFilter = "brightness(0) invert(1)";
   const logoHoverFilter = "brightness(0) saturate(100%) invert(76%) sepia(14%) saturate(746%) hue-rotate(9deg) brightness(91%) contrast(88%)";
 
@@ -22,25 +24,25 @@ export function Footer() {
 
           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-8 text-xs sm:text-sm text-muted-foreground">
             <Link to="/site-web" className="hover:text-primary transition-colors">
-              Site web
+              {t("nav.services.web")}
             </Link>
             <Link to="/identite-visuelle" className="hover:text-primary transition-colors">
-              Logo & identité
+              {t("nav.services.brand")}
             </Link>
             <Link to="/tarifs" className="hover:text-primary transition-colors">
-              Tarifs
+              {t("nav.pricing")}
             </Link>
             <Link to="/blog" className="hover:text-primary transition-colors">
-              Blog
+              {t("nav.blog")}
             </Link>
             <Link to="/a-propos" className="hover:text-primary transition-colors">
-              À Propos
+              {t("nav.about")}
             </Link>
             <Link to="/contact" className="hover:text-primary transition-colors">
-              Contact
+              {t("nav.contact")}
             </Link>
             <Link to="/recommandation" className="hover:text-primary transition-colors">
-              Recommandation
+              {t("nav.referral")}
             </Link>
             <Link to="/mentions-legales" className="hover:text-primary transition-colors">
               Mentions légales
@@ -48,7 +50,7 @@ export function Footer() {
           </div>
 
           <p className="text-xs sm:text-sm text-muted-foreground text-center">
-            © {currentYear} NOVA VISIO. Tous droits réservés.
+            © {currentYear} NOVA VISIO. {t("footer.rights")}
           </p>
         </div>
       </div>
