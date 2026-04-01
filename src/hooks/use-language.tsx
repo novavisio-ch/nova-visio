@@ -307,7 +307,7 @@ const fr: Record<string, string> = {
   // ── Recommandation Page ──
   "recommandation.badge": "Programme de recommandation",
   "recommandation.title.1": "Recommandez.",
-  "recommandation.title.highlight": "Gagnez 100 €.",
+  "recommandation.title.highlight": "Gagnez 100 CHF.",
   "recommandation.subtitle.1": "Vous êtes satisfait de votre site ?",
   "recommandation.subtitle.2": "Faites-en profiter votre réseau. Pour chaque",
   "recommandation.subtitle.bold1": "nouveau client",
