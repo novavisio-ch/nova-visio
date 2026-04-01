@@ -491,14 +491,14 @@ Ce forfait garantit que votre site reste performant, à jour et sécurisé aprè
     id: "referral-program",
     title: "Programme de recommandation",
     category: "general",
-    content: `Programme de recommandation Nova Visio : Recommandez Nova Visio et gagnez 100 €.
+    content: `Programme de recommandation Nova Visio : Recommandez Nova Visio et gagnez 100 CHF.
 Comment ça marche en 3 étapes :
 1. Vous recommandez : Parlez de Nova Visio à un entrepreneur, artisan ou PME de votre réseau.
 2. Il signe un projet : Le nouveau client lance un projet de création de site web avec nous.
-3. Vous recevez 100 € : Dès la mise en ligne du site, on vous envoie votre récompense.
+3. Vous recevez 100 CHF : Dès la mise en ligne du site, on vous envoie votre récompense.
 
 Conditions :
-- Montant : 100 € par client signé.
+- Montant : 100 CHF par client signé.
 - Projets concernés : Création de site web (hors prestations ponctuelles mineures).
 - Versement : À la mise en ligne du site.
 - Modalités : Virement bancaire ou avoir sur une prochaine prestation.
