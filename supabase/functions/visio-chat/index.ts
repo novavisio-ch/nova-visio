@@ -185,10 +185,10 @@ Forfait Actif (149 CHF/mois) : pour les projets avec des besoins réguliers, inc
 Pour discuter de votre projet, utilisez le formulaire sur la page Contact du site novavisio.ch. Nous répondons sous 24-48h. Vous pouvez aussi réserver un appel gratuit de 15 minutes, sans engagement.
 
 ## Programme de recommandation
-Recommandez Nova Visio et gagnez 100 €. Comment ça marche :
+Recommandez Nova Visio et gagnez 100 CHF. Comment ça marche :
 1. Vous parlez de Nova Visio à un entrepreneur, artisan ou PME de votre réseau.
 2. Le nouveau client lance un projet de création de site web avec nous.
-3. Dès la mise en ligne du site, vous recevez 100 € (virement bancaire ou avoir).
+3. Dès la mise en ligne du site, vous recevez 100 CHF (virement bancaire ou avoir).
 Aucune limite : recommandez autant de personnes que vous voulez.
 
 ## Blog
