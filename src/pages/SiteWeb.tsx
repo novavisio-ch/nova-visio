@@ -10,40 +10,27 @@ import { FaqSection } from "@/components/services/FaqSection";
 import { FinalCtaSection } from "@/components/services/FinalCtaSection";
 import { MaintenanceBlock } from "@/components/services/MaintenanceBlock";
 import { ReferralCtaSection } from "@/components/home/ReferralCtaSection";
+import { useLanguage } from "@/hooks/use-language";
 
 const SiteWeb = () => {
+  const { language } = useLanguage();
+  const isFr = language === "fr";
+
   return (
     <Layout>
-      {/* Hero Section */}
       <WebCreationHero />
-
-      {/* Content Section - White background (includes LogosSection) */}
       <WebCreationContent />
-
-      {/* Showcase Carousel */}
       <ShowcaseSection />
-
-      {/* Services Overview - Split layout */}
       <ServicesOverviewSection />
-
-      {/* Web Offer Section */}
       <WebOfferSection />
-
-      {/* Packs Promo Section */}
       <PacksPromoSection />
-
-      {/* Web Steps / Timeline */}
       <WebStepsSection />
-
-      {/* FAQ Section */}
       <FaqSection />
-
-      {/* Maintenance Block */}
       <MaintenanceBlock
-        text="Votre site est livré - mais votre présence en ligne ne s'arrête pas là. Mises à jour, modifs de contenu, suivi des performances : notre suivi mensuel à 89 CHF/mois prend le relais pour que votre site reste un outil qui bosse pour vous."
+        text={isFr
+          ? "Votre site est livré - mais votre présence en ligne ne s'arrête pas là. Mises à jour, modifs de contenu, suivi des performances : notre suivi mensuel à 89 CHF/mois prend le relais pour que votre site reste un outil qui bosse pour vous."
+          : "Your website is delivered — but your online presence doesn't stop there. Updates, content changes, performance monitoring: our monthly plan at CHF 89/month takes over so your site keeps working for you."}
       />
-
-      {/* Final CTA Section */}
       <FinalCtaSection />
       <ReferralCtaSection />
     </Layout>
