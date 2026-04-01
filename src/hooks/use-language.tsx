@@ -328,7 +328,7 @@ const fr: Record<string, string> = {
   "recommandation.conditions.subtitle.bold": "Tout est clair",
   "recommandation.conditions.subtitle": "dès le départ.",
   "recommandation.c1.label": "Montant",
-  "recommandation.c1.value": "100 € par client signé.",
+  "recommandation.c1.value": "100 CHF par client signé.",
   "recommandation.c2.label": "Projets concernés",
   "recommandation.c2.value": "Création de site web (hors prestations ponctuelles mineures).",
   "recommandation.c3.label": "Versement",
