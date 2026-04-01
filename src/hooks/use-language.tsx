@@ -208,7 +208,7 @@ const fr: Record<string, string> = {
   "referral.subtitle.1": "Un proche lance son activité ?",
   "referral.subtitle.bold1": "Parlez-lui de nous",
   "referral.subtitle.2": "S'il signe un site web, vous recevez",
-  "referral.subtitle.bold2": "100 €",
+  "referral.subtitle.bold2": "100 CHF",
   "referral.cta": "Découvrir le programme →",
 
   // ── Blog Section (Home) ──
