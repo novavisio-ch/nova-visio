@@ -864,7 +864,7 @@ const en: Record<string, string> = {
   // ── Recommandation Page ──
   "recommandation.badge": "Referral programme",
   "recommandation.title.1": "Refer us.",
-  "recommandation.title.highlight": "Earn €100.",
+  "recommandation.title.highlight": "Earn CHF 100.",
   "recommandation.subtitle.1": "Happy with your website?",
   "recommandation.subtitle.2": "Spread the word. For every",
   "recommandation.subtitle.bold1": "new client",
