@@ -869,7 +869,7 @@ const en: Record<string, string> = {
   "recommandation.subtitle.2": "Spread the word. For every",
   "recommandation.subtitle.bold1": "new client",
   "recommandation.subtitle.3": "we give you",
-  "recommandation.subtitle.bold2": "€100",
+  "recommandation.subtitle.bold2": "CHF 100",
   "recommandation.steps.title": "3 steps.",
   "recommandation.steps.highlight": "Zero hassle.",
   "recommandation.steps.subtitle": "No complicated forms.",
