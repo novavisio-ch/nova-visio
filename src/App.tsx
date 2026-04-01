@@ -7,6 +7,7 @@ import { ScrollToTop } from "@/components/ScrollToTop";
 import { CookieConsent } from "@/components/CookieConsent";
 import { VisioChatBubble } from "@/components/chat/VisioChatBubble";
 import { ThemeProvider } from "@/hooks/use-theme";
+import { LanguageProvider } from "@/hooks/use-language";
 import Index from "./pages/Index";
 import SiteWeb from "./pages/SiteWeb";
 import IdentiteVisuelle from "./pages/IdentiteVisuelle";
