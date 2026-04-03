@@ -141,8 +141,8 @@ const BlogArticleBudgetSiteWeb = () => {
               <div className="article-callout p-6 border-l-4 border-primary">
                 <p className="text-sm text-muted-foreground italic">
                   {isFr
-                    ? <>💡 En Suisse romande, un site vitrine de 3 à 5 pages se situe souvent autour de <strong>1 500 à 3 500 CHF</strong> chez un freelance, puis de <strong>3 500 à 8 000 CHF</strong> en agence selon le niveau de prestation.</>
-                    : <>💡 In French-speaking Switzerland, a 3–5 page showcase site typically costs around <strong>CHF 1,500–3,500</strong> with a freelancer, rising to <strong>CHF 3,500–8,000</strong> with an agency depending on the level of service.</>}
+                    ? <>💡 Ces fourchettes restent des ordres de grandeur. Le budget final dépend toujours du <strong>niveau de personnalisation</strong>, du contenu et de l'accompagnement demandé.</>
+                    : <>💡 These ranges are market benchmarks. The final budget always depends on the <strong>level of customisation</strong>, content and support required.</>}
                 </p>
               </div>
             </div>
