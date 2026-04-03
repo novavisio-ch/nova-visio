@@ -30,7 +30,7 @@ const BlogArticleBudgetSiteWeb = () => {
         {
           num: 1,
           title: "L'artisan local",
-          desc: "Il veut surtout être trouvé, rassurer et permettre une prise de contact rapide. Un site vitrine clair de 3 à 5 pages peut souvent se situer autour de 1 500 à 2 500 € ou 1 500 à 3 500 CHF selon le marché et le prestataire.",
+          desc: "Il veut surtout être trouvé, rassurer et permettre une prise de contact rapide. Un site vitrine clair de 3 à 5 pages peut souvent se situer autour de 1 500 à 3 500 CHF selon le marché et le prestataire.",
         },
         {
           num: 2,
