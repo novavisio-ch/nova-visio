@@ -3,12 +3,25 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Calendar } from "lucide-react";
 import blogSiteVitrineLanding from "@/assets/blog/site-vitrine-vs-landing-page.jpg";
 import blogLogoIdentite from "@/assets/blog/logo-identite-visuelle.jpg";
+import blogBudgetSiteWeb from "@/assets/blog/budget-site-web-professionnel.jpg";
 import { useLanguage } from "@/hooks/use-language";
 
 const Blog = () => {
   const { t, language } = useLanguage();
 
   const blogPosts = [
+    {
+      id: 6,
+      slug: "budget-site-web-professionnel",
+      title: language === "fr"
+        ? "Combien investir dans un site web professionnel quand on est artisan ou indépendant ?"
+        : "How much should you invest in a professional website as a tradesperson or freelancer?",
+      excerpt: language === "fr"
+        ? "Les fourchettes de prix du marché, ce que vous payez vraiment, et comment savoir si votre investissement est rentable."
+        : "Market price ranges, what you're really paying for, and how to know if your investment is worth it.",
+      date: language === "fr" ? "3 Avr 2026" : "3 Apr 2026",
+      image: blogBudgetSiteWeb,
+    },
     {
       id: 5,
       slug: "logo-identite-visuelle",

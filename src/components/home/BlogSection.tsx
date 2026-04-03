@@ -2,12 +2,21 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import blogSiteVitrineLanding from "@/assets/blog/site-vitrine-vs-landing-page.jpg";
 import blogLogoIdentite from "@/assets/blog/logo-identite-visuelle.jpg";
+import blogBudgetSiteWeb from "@/assets/blog/budget-site-web-professionnel.jpg";
 import { useLanguage } from "@/hooks/use-language";
 
 export function BlogSection() {
   const { t, language } = useLanguage();
 
   const blogPosts = [
+    {
+      id: 6,
+      slug: "/blog/budget-site-web-professionnel",
+      title: language === "fr"
+        ? "Combien investir dans un site web professionnel quand on est artisan ou indépendant ?"
+        : "How much should you invest in a professional website as a tradesperson or freelancer?",
+      image: blogBudgetSiteWeb,
+    },
     {
       id: 5,
       slug: "/blog/logo-identite-visuelle",
