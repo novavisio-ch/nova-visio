@@ -2,12 +2,21 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import blogSiteVitrineLanding from "@/assets/blog/site-vitrine-vs-landing-page.jpg";
 import blogLogoIdentite from "@/assets/blog/logo-identite-visuelle.jpg";
+import blogBudgetSiteWeb from "@/assets/blog/budget-site-web-professionnel.jpg";
 import { useLanguage } from "@/hooks/use-language";
 
 export function BlogSection() {
   const { t, language } = useLanguage();
 
   const blogPosts = [
+    {
+      id: 6,
+      slug: "/blog/budget-site-web-professionnel",
+      title: language === "fr"
+        ? "Combien investir dans un site web professionnel quand on est artisan ou indépendant ?"
+        : "How much should you invest in a professional website as a tradesperson or freelancer?",
+      image: blogBudgetSiteWeb,
+    },
     {
       id: 5,
       slug: "/blog/logo-identite-visuelle",
@@ -23,14 +32,6 @@ export function BlogSection() {
         ? "Site vitrine vs landing page : quel format choisir pour votre activité ?"
         : "Showcase website vs landing page: which format suits your business?",
       image: blogSiteVitrineLanding,
-    },
-    {
-      id: 3,
-      slug: "/blog/choisir-couleurs-marque",
-      title: language === "fr"
-        ? "Comment choisir les couleurs de votre marque"
-        : "How to choose your brand colours",
-      image: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=600&h=400&fit=crop&q=80",
     },
   ];
 

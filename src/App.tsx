@@ -20,6 +20,7 @@ import BlogArticleClarifierOffre from "./pages/BlogArticleClarifierOffre";
 import BlogArticleCouleurs from "./pages/BlogArticleCouleurs";
 import BlogArticleSiteVitrineLanding from "./pages/BlogArticleSiteVitrineLanding";
 import BlogArticleLogoIdentite from "./pages/BlogArticleLogoIdentite";
+import BlogArticleBudgetSiteWeb from "./pages/BlogArticleBudgetSiteWeb";
 import MentionsLegales from "./pages/MentionsLegales";
 import Recommandation from "./pages/Recommandation";
 import NotFound from "./pages/NotFound";
@@ -48,6 +49,7 @@ const App = () => (
             <Route path="/blog/choisir-couleurs-marque" element={<BlogArticleCouleurs />} />
             <Route path="/blog/site-vitrine-vs-landing-page" element={<BlogArticleSiteVitrineLanding />} />
             <Route path="/blog/logo-identite-visuelle" element={<BlogArticleLogoIdentite />} />
+            <Route path="/blog/budget-site-web-professionnel" element={<BlogArticleBudgetSiteWeb />} />
             <Route path="/mentions-legales" element={<MentionsLegales />} />
             <Route path="/recommandation" element={<Recommandation />} />
             {/* Redirect old /services route to /site-web */}
