@@ -63,4 +63,4 @@ Allow: /
 Crawl-delay: 2
 
 # Sitemap location
-Sitemap: https://nova-visio.lovable.app/sitemap.xml
+Sitemap: https://novavisio.ch/sitemap.xml
