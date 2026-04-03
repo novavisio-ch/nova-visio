@@ -1144,7 +1144,7 @@ const en: Record<string, string> = {
   "validation.firstName": "First name required",
   "validation.lastName": "Last name required",
   "validation.email": "Invalid email",
-  "validation.message.min": "Minimum 10 characters",
+  "validation.message.min": "Your message must be at least 10 characters. Please briefly describe your project or question.",
   "validation.message.max": "2,000 characters max",
   "validation.max50": "50 characters max",
   "validation.max100": "100 characters max",
