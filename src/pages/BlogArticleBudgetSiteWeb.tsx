@@ -185,8 +185,8 @@ const BlogArticleBudgetSiteWeb = () => {
                     <li key={item.num} className="flex items-start gap-4">
                       <span className="w-8 h-8 bg-primary text-background rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">{item.num}</span>
                       <div>
-                        <span className="text-lg font-bold text-foreground">{item.title}</span>
-                        <p className="text-lg text-muted-foreground mt-1">{item.desc}</p>
+                        <span className="text-lg font-bold text-white">{item.title}</span>
+                        <p className="text-lg text-white/80 mt-1">{item.desc}</p>
                       </div>
                     </li>
                   ))}
