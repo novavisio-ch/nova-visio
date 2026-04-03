@@ -35,7 +35,7 @@ const BlogArticleBudgetSiteWeb = () => {
         {
           num: 2,
           title: "L'indépendant ambitieux",
-          desc: "Un site plus travaillé, avec une image de marque plus forte, un meilleur discours commercial et une structure pensée pour convertir. Enveloppe autour de 2 500 à 4 000 € chez un freelance, parfois davantage selon les visuels et les fonctionnalités.",
+          desc: "Un site plus travaillé, avec une image de marque plus forte, un meilleur discours commercial et une structure pensée pour convertir. Enveloppe autour de 2 500 à 4 500 CHF chez un freelance, parfois davantage selon les visuels et les fonctionnalités.",
         },
         {
           num: 3,
