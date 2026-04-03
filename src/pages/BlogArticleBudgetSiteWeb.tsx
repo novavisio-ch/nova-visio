@@ -206,8 +206,8 @@ const BlogArticleBudgetSiteWeb = () => {
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
                 {isFr
-                  ? <>Imaginons un site à 2 000 €. Si votre panier moyen est de 300 €, il suffit d'environ <strong>7 clients</strong> pour rembourser l'investissement initial. S'il est de 500 €, <strong>4 clients</strong> suffisent déjà.</>
-                  : <>Picture a website costing €2,000. If your average transaction is €300, you only need about <strong>7 clients</strong> to break even. At €500, just <strong>4 clients</strong> cover the cost.</>}
+                  ? <>Imaginons un site à 2 000 CHF. Si votre panier moyen est de 300 CHF, il suffit d'environ <strong>7 clients</strong> pour rembourser l'investissement initial. S'il est de 500 CHF, <strong>4 clients</strong> suffisent déjà.</>
+                  : <>Picture a website costing CHF 2,000. If your average transaction is CHF 300, you only need about <strong>7 clients</strong> to break even. At CHF 500, just <strong>4 clients</strong> cover the cost.</>}
               </p>
               <div className="article-callout p-6 border-l-4 border-primary">
                 <p className="text-sm text-muted-foreground italic">
