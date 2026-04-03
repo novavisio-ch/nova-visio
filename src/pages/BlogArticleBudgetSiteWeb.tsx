@@ -130,13 +130,13 @@ const BlogArticleBudgetSiteWeb = () => {
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
                 {isFr
-                  ? <>En France, les fourchettes observées pour un site vitrine réalisé par un freelance tournent souvent autour de <strong>1 000 à 4 000 €</strong>, avec un cœur de marché fréquent entre <strong>1 500 et 2 500 €</strong> pour un site professionnel de quelques pages.</>
-                  : <>In France, a showcase website built by a freelancer typically falls between <strong>€1,000 and €4,000</strong>, with the sweet spot sitting around <strong>€1,500–2,500</strong> for a professional site of a few pages.</>}
+                  ? <>Les fourchettes observées pour un site vitrine réalisé par un freelance tournent souvent autour de <strong>1 000 à 4 500 CHF</strong>, avec un cœur de marché fréquent entre <strong>1 500 et 3 500 CHF</strong> pour un site professionnel de quelques pages.</>
+                  : <>A showcase website built by a freelancer typically falls between <strong>CHF 1,000 and 4,500</strong>, with the sweet spot sitting around <strong>CHF 1,500–3,500</strong> for a professional site of a few pages.</>}
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
                 {isFr
-                  ? <>En agence, les budgets montent généralement plus haut, souvent entre <strong>1 500 et 5 000 €</strong> pour un projet vitrine classique, et davantage si le besoin est plus poussé ou plus stratégique.</>
-                  : <>With an agency, budgets tend to run higher — typically <strong>€1,500–5,000</strong> for a standard showcase project, and more for complex or strategic requirements.</>}
+                  ? <>En agence, les budgets montent généralement plus haut, souvent entre <strong>3 500 et 8 000 CHF</strong> pour un projet vitrine classique, et davantage si le besoin est plus poussé ou plus stratégique.</>
+                  : <>With an agency, budgets tend to run higher — typically <strong>CHF 3,500–8,000</strong> for a standard showcase project, and more for complex or strategic requirements.</>}
               </p>
               <div className="article-callout p-6 border-l-4 border-primary">
                 <p className="text-sm text-muted-foreground italic">
