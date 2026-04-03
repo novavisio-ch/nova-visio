@@ -52,7 +52,7 @@ const BlogArticleBudgetSiteWeb = () => {
         {
           num: 2,
           title: "The ambitious freelancer",
-          desc: "A more polished site with stronger branding, sharper messaging and a structure designed to convert. Budget usually sits around 2,500–4,000 € with a freelancer — sometimes more depending on visuals and features.",
+          desc: "A more polished site with stronger branding, sharper messaging and a structure designed to convert. Budget usually sits around CHF 2,500–4,500 with a freelancer — sometimes more depending on visuals and features.",
         },
         {
           num: 3,
