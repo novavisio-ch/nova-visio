@@ -50,9 +50,10 @@ const Contact = () => {
 
     const result = contactSchema.safeParse(formData);
     if (!result.success) {
+      const firstError = result.error.errors[0]?.message || t("contact.form.validation.desc");
       toast({
         title: t("contact.form.validation.title"),
-        description: t("contact.form.validation.desc"),
+        description: firstError,
         variant: "destructive",
       });
       return;
