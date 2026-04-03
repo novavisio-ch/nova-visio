@@ -260,7 +260,7 @@ const BlogArticleBudgetSiteWeb = () => {
                     ? "Envie d'estimer le budget adapté à votre projet ?"
                     : "Want to estimate the right budget for your project?"}
                 </p>
-                <p className="text-muted-foreground mb-6">
+                <p className="text-white/80 mb-6">
                   {isFr
                     ? "Discutons ensemble de vos objectifs et trouvons la solution la plus cohérente pour votre activité."
                     : "Let's discuss your goals and find the solution that makes the most sense for your business."}
