@@ -15,18 +15,28 @@
     <meta name="bingbot" content="index, follow" />
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://nova-visio.lovable.app/" />
+    <link rel="canonical" href="https://novavisio.ch/" />
+    
+    <!-- Prevent indexing of lovable.app subdomain -->
+    <script>
+      if (window.location.hostname.includes('lovable.app')) {
+        var meta = document.createElement('meta');
+        meta.name = 'robots';
+        meta.content = 'noindex, nofollow';
+        document.head.appendChild(meta);
+      }
+    </script>
     
     <!-- Language & Region -->
     <meta name="language" content="French" />
     <meta name="geo.region" content="FR" />
     <meta name="geo.placename" content="France" />
-    <link rel="alternate" hreflang="fr" href="https://nova-visio.lovable.app/" />
-    <link rel="alternate" hreflang="x-default" href="https://nova-visio.lovable.app/" />
+    <link rel="alternate" hreflang="fr" href="https://novavisio.ch/" />
+    <link rel="alternate" hreflang="x-default" href="https://novavisio.ch/" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://nova-visio.lovable.app/" />
+    <meta property="og:url" content="https://novavisio.ch/" />
     <meta property="og:site_name" content="NOVA VISIO" />
     <meta property="og:locale" content="fr_FR" />
     
@@ -38,7 +48,7 @@
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://nova-visio.lovable.app/" />
+    <meta name="twitter:url" content="https://novavisio.ch/" />
     
     
     <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/sfVIPz8s2JdrIEEZUVFEdjM3RnD3/social-images/social-1769257401063-novavisio.png" />
@@ -64,7 +74,7 @@
       "@type": "ProfessionalService",
       "name": "NOVA VISIO",
       "description": "Vos clients ne vous trouvent pas en ligne ? On règle ça. Site vitrine, landing page et identité visuelle sur mesure pour artisans, indépendants et PME en Suisse et en France.",
-      "url": "https://nova-visio.lovable.app",
+      "url": "https://novavisio.ch",
       "logo": "https://storage.googleapis.com/gpt-engineer-file-uploads/sfVIPz8s2JdrIEEZUVFEdjM3RnD3/uploads/1769257397499-novavisio.svg",
       "image": "https://storage.googleapis.com/gpt-engineer-file-uploads/sfVIPz8s2JdrIEEZUVFEdjM3RnD3/social-images/social-1769257401063-novavisio.png",
       "priceRange": "€€",
@@ -89,7 +99,7 @@
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "NOVA VISIO",
-      "url": "https://nova-visio.lovable.app",
+      "url": "https://novavisio.ch",
       "description": "Agence de création web et identité visuelle pour entrepreneurs",
       "publisher": {
         "@type": "Organization",
