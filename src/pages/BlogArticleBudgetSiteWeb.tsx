@@ -47,7 +47,7 @@ const BlogArticleBudgetSiteWeb = () => {
         {
           num: 1,
           title: "The local tradesperson",
-          desc: "They primarily need to be found, build trust and make it easy for prospects to get in touch. A clean 3–5 page showcase site typically falls in the 1,500–2,500 € or 1,500–3,500 CHF range, depending on market and provider.",
+          desc: "They primarily need to be found, build trust and make it easy for prospects to get in touch. A clean 3–5 page showcase site typically falls in the CHF 1,500–3,500 range, depending on market and provider.",
         },
         {
           num: 2,
