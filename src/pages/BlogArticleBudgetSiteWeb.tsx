@@ -30,12 +30,12 @@ const BlogArticleBudgetSiteWeb = () => {
         {
           num: 1,
           title: "L'artisan local",
-          desc: "Il veut surtout être trouvé, rassurer et permettre une prise de contact rapide. Un site vitrine clair de 3 à 5 pages peut souvent se situer autour de 1 500 à 2 500 € ou 1 500 à 3 500 CHF selon le marché et le prestataire.",
+          desc: "Il veut surtout être trouvé, rassurer et permettre une prise de contact rapide. Un site vitrine clair de 3 à 5 pages peut souvent se situer autour de 1 500 à 3 500 CHF selon le marché et le prestataire.",
         },
         {
           num: 2,
           title: "L'indépendant ambitieux",
-          desc: "Un site plus travaillé, avec une image de marque plus forte, un meilleur discours commercial et une structure pensée pour convertir. Enveloppe autour de 2 500 à 4 000 € chez un freelance, parfois davantage selon les visuels et les fonctionnalités.",
+          desc: "Un site plus travaillé, avec une image de marque plus forte, un meilleur discours commercial et une structure pensée pour convertir. Enveloppe autour de 2 500 à 4 500 CHF chez un freelance, parfois davantage selon les visuels et les fonctionnalités.",
         },
         {
           num: 3,
@@ -47,12 +47,12 @@ const BlogArticleBudgetSiteWeb = () => {
         {
           num: 1,
           title: "The local tradesperson",
-          desc: "They primarily need to be found, build trust and make it easy for prospects to get in touch. A clean 3–5 page showcase site typically falls in the 1,500–2,500 € or 1,500–3,500 CHF range, depending on market and provider.",
+          desc: "They primarily need to be found, build trust and make it easy for prospects to get in touch. A clean 3–5 page showcase site typically falls in the CHF 1,500–3,500 range, depending on market and provider.",
         },
         {
           num: 2,
           title: "The ambitious freelancer",
-          desc: "A more polished site with stronger branding, sharper messaging and a structure designed to convert. Budget usually sits around 2,500–4,000 € with a freelancer — sometimes more depending on visuals and features.",
+          desc: "A more polished site with stronger branding, sharper messaging and a structure designed to convert. Budget usually sits around CHF 2,500–4,500 with a freelancer — sometimes more depending on visuals and features.",
         },
         {
           num: 3,
@@ -130,19 +130,19 @@ const BlogArticleBudgetSiteWeb = () => {
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
                 {isFr
-                  ? <>En France, les fourchettes observées pour un site vitrine réalisé par un freelance tournent souvent autour de <strong>1 000 à 4 000 €</strong>, avec un cœur de marché fréquent entre <strong>1 500 et 2 500 €</strong> pour un site professionnel de quelques pages.</>
-                  : <>In France, a showcase website built by a freelancer typically falls between <strong>€1,000 and €4,000</strong>, with the sweet spot sitting around <strong>€1,500–2,500</strong> for a professional site of a few pages.</>}
+                  ? <>Les fourchettes observées pour un site vitrine réalisé par un freelance tournent souvent autour de <strong>1 000 à 4 500 CHF</strong>, avec un cœur de marché fréquent entre <strong>1 500 et 3 500 CHF</strong> pour un site professionnel de quelques pages.</>
+                  : <>A showcase website built by a freelancer typically falls between <strong>CHF 1,000 and 4,500</strong>, with the sweet spot sitting around <strong>CHF 1,500–3,500</strong> for a professional site of a few pages.</>}
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
                 {isFr
-                  ? <>En agence, les budgets montent généralement plus haut, souvent entre <strong>1 500 et 5 000 €</strong> pour un projet vitrine classique, et davantage si le besoin est plus poussé ou plus stratégique.</>
-                  : <>With an agency, budgets tend to run higher — typically <strong>€1,500–5,000</strong> for a standard showcase project, and more for complex or strategic requirements.</>}
+                  ? <>En agence, les budgets montent généralement plus haut, souvent entre <strong>3 500 et 8 000 CHF</strong> pour un projet vitrine classique, et davantage si le besoin est plus poussé ou plus stratégique.</>
+                  : <>With an agency, budgets tend to run higher — typically <strong>CHF 3,500–8,000</strong> for a standard showcase project, and more for complex or strategic requirements.</>}
               </p>
               <div className="article-callout p-6 border-l-4 border-primary">
                 <p className="text-sm text-muted-foreground italic">
                   {isFr
-                    ? <>💡 En Suisse romande, un site vitrine de 3 à 5 pages se situe souvent autour de <strong>1 500 à 3 500 CHF</strong> chez un freelance, puis de <strong>3 500 à 8 000 CHF</strong> en agence selon le niveau de prestation.</>
-                    : <>💡 In French-speaking Switzerland, a 3–5 page showcase site typically costs around <strong>CHF 1,500–3,500</strong> with a freelancer, rising to <strong>CHF 3,500–8,000</strong> with an agency depending on the level of service.</>}
+                    ? <>💡 Ces fourchettes restent des ordres de grandeur. Le budget final dépend toujours du <strong>niveau de personnalisation</strong>, du contenu et de l'accompagnement demandé.</>
+                    : <>💡 These ranges are market benchmarks. The final budget always depends on the <strong>level of customisation</strong>, content and support required.</>}
                 </p>
               </div>
             </div>
@@ -206,8 +206,8 @@ const BlogArticleBudgetSiteWeb = () => {
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
                 {isFr
-                  ? <>Imaginons un site à 2 000 €. Si votre panier moyen est de 300 €, il suffit d'environ <strong>7 clients</strong> pour rembourser l'investissement initial. S'il est de 500 €, <strong>4 clients</strong> suffisent déjà.</>
-                  : <>Picture a website costing €2,000. If your average transaction is €300, you only need about <strong>7 clients</strong> to break even. At €500, just <strong>4 clients</strong> cover the cost.</>}
+                  ? <>Imaginons un site à 2 000 CHF. Si votre panier moyen est de 300 CHF, il suffit d'environ <strong>7 clients</strong> pour rembourser l'investissement initial. S'il est de 500 CHF, <strong>4 clients</strong> suffisent déjà.</>
+                  : <>Picture a website costing CHF 2,000. If your average transaction is CHF 300, you only need about <strong>7 clients</strong> to break even. At CHF 500, just <strong>4 clients</strong> cover the cost.</>}
               </p>
               <div className="article-callout p-6 border-l-4 border-primary">
                 <p className="text-sm text-muted-foreground italic">
