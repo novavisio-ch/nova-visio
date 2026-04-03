@@ -255,7 +255,7 @@ const BlogArticleBudgetSiteWeb = () => {
             {/* CTA */}
             <div className="mt-12 pt-8 border-t border-border">
               <div className="article-recap p-6 md:p-8 text-center">
-                <p className="text-xl font-bold text-foreground mb-3">
+                <p className="text-xl font-bold text-white mb-3">
                   {isFr
                     ? "Envie d'estimer le budget adapté à votre projet ?"
                     : "Want to estimate the right budget for your project?"}
