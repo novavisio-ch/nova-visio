@@ -15,7 +15,17 @@
     <meta name="bingbot" content="index, follow" />
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://nova-visio.lovable.app/" />
+    <link rel="canonical" href="https://novavisio.ch/" />
+    
+    <!-- Prevent indexing of lovable.app subdomain -->
+    <script>
+      if (window.location.hostname.includes('lovable.app')) {
+        var meta = document.createElement('meta');
+        meta.name = 'robots';
+        meta.content = 'noindex, nofollow';
+        document.head.appendChild(meta);
+      }
+    </script>
     
     <!-- Language & Region -->
     <meta name="language" content="French" />
