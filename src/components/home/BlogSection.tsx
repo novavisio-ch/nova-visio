@@ -33,14 +33,6 @@ export function BlogSection() {
         : "Showcase website vs landing page: which format suits your business?",
       image: blogSiteVitrineLanding,
     },
-    {
-      id: 3,
-      slug: "/blog/choisir-couleurs-marque",
-      title: language === "fr"
-        ? "Comment choisir les couleurs de votre marque"
-        : "How to choose your brand colours",
-      image: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=600&h=400&fit=crop&q=80",
-    },
   ];
 
   return (
